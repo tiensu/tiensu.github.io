@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <h2>Tổng hợp các thuật toán Deep Learning</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>19 October 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/37_dl_algorithms.png" class="img-fluid w-100 mb-4" alt="Tổng hợp các thuật toán Deep Learning">
+        
+        <div class="content mb-5">
+          <p>Bài viết này nhằm mục đích tổng hợp, tóm tắt lại các thuật toán của Deep Learning, giúp bạn đọc có cái nhìn toàn cảnh và hiểu rõ hơn về Deep Learning.</p>
+<p><strong>1. Deep Learning (DL) là gì?</strong></p>
+<p>Theo <a href="https://en.wikipedia.org/wiki/Deep_learning">Wikipedia</a>: &ldquo;Deep learning (also known as deep structured learning or differential programming) is part of a broader family of machine learning methods based on artificial neural networks with representation learning. Learning can be supervised, semi-supervised or unsupervised&rdquo;.</p>
+<p>Hiểu theo một cách khác thì DL là một tập hợp các thuật toán mô phỏng lại cách thức hoạt động của bộ não của con người trong việc phân tích dữ liệu, nhằm tạo ra các models cái mà được sử dụng cho việc đưa ra quyết định dựa trên dữ liệu đầu vào. Về bản chất, DL bao gồm nhiều layers, mỗi layer có thể coi là một mạng Neural Network (NN).</p>
+<p>Giống như não bộ của con người, NN có chứa các neurons. Mỗi neurons nhận các tín hiệu ở đầu vào, nhân chúng với các trọng số (<em>weights</em>), tổng hợp chúng lại, và sau cùng là áp dụng các hàm kích hoạt (<em>thường là non-linear</em>) lên chúng. Các neurons được sắp xếp thành các layers liên tiếp nhau (<em>stack</em>).</p>
+<p>Các kiến trúc mạng DL đều sử dụng thuật toán [Backpropagation]](<a href="https://tiensu.github.io/blog/19_neural_network_fundamentals_2/">https://tiensu.github.io/blog/19_neural_network_fundamentals_2/</a>) để tính toán và cập nhật các trọng số của nó thông qua quá trình huấn luyện. Về mặt ý tưởng, dữ liệu được đưa vào mạng DL, sinh ra output, so sánh output với giá trị thực tế (<em>sử dụng loss function</em>) rồi điều chỉnh trọng số theo kết quả so sánh đó.</p>
+<p>Việc điều chỉnh trọng số là một quá trình tối ưu, thường sử dụng thuật toán <a href="https://tiensu.github.io/blog/25_optimization_methods_gradient-descent/">SGD</a>. Ngoài SGD, một số thuật toán khác cũng hay được sử dụng. Đó là Adam, Radam, SRMprop.</p>
+<p><strong>2. Các thuật toán DL</strong></p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_dl_algorithms.png">
+</div>
+
+
+<p><em><strong>2.1 Convolution Neural Network (CNN)</strong></em></p>
+<p>CNN sử dụng phép toán <code>tích chập</code> để tạo liên kết giữa các layers trong mạng NN. Mỗi neuron, thay vì kết nối đến tất cả các neurons khác thì sẽ chỉ kết nối đến một vài neurons đại diện. Điều này giúp cho CNN học được các mối liên hệ không gian của dữ liệu tốt hơn.</p>
+<p>Đó là lý do mà vì sao CNN lại được sử dụng rất phổ biến trong các bài toán về Computer Vision như phân loại hình ảnh, phát hiện đối tượng trong ảnh/video, &hellip;</p>
+<p>Một vài kiến trúc mạng CNN kinh điển có thể kể đến như: VGG, ResNet, MobiNet, InceptionNet, Yolo, SSD, &hellip;</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_convolutional-neural-network.png">
+</div>
+
+
+<p><em><strong>2.2 Recurrent Neural Network (RNN)</strong></em></p>
+<p>RNN là thuật toán rất phù hợp với các loại dữ liệu có mối liên hệ về thời gian như <code>time serial forecasting</code> hay trong các bài toán về xử lý ngôn ngữ tự nhiên (<em>NLP</em>), bởi vì một phần output của nó ở thời điể m này được đưa trở lại thành input ở thời điểm tiếp theo. Do cách thức làm việc đặc biệt như vậy mà nó có có năng ghi nhớ được thông tin trong quá khứ và sử dụng những thông tin đó vào việc dự đoán kết quả.</p>
+<p>Một số kiến trúc mạng kinh điển của RNN có thể kể đến như: GRU, LSTM, &hellip;</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_lstm_cll.jpg">
+</div>
+
+
+<p><em><strong>2.3 AutoEncoders</strong></em></p>
+<p>AutoEncoders là kiến trúc mạng bao gồm 2 thành phần: Encoder và Decoder. Encoder nhận input và mã hóa nó thành các vector trong một không gian có số chiều ít hơn. Decoder sử dụng các vertors đó để giải mã (<em>xây dựng lại</em>) nó thành dữ liệu ban đầu.</p>
+<p>AutoEncoders sử dụng chủ yếu trong các bài toán về giảm chiều dữ liệu, nén dữ liệu, &hellip;</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_autoencoder.jpg">
+</div>
+
+
+<p><em><strong>2.4 Generative Adversarial Networks (GAN)</strong></em></p>
+<p>GAN cũng bao gồm 2 thành phần: Generator và Discriminator. Generator sinh ra dữ liệu  giả và Discriminator sẽ cố gắng phân biệt dữ liệu mới sinh ra đó là giả hay thật. Hai thành phần này được huấn luyện cùng với nhau, chúng sẽ cạnh tranh nhau để cuối cùng tạo ra được model GAN tốt nhất.</p>
+<p>GAN được dùng để sinh ra dữ liệu mới từ dữ liệu ban đầu, ví dụ: sinh ra các mẫu thời trang mới, các mẫu nhân vật hoạt hình mới, &hellip;</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_generative-adversarial-networks.png">
+</div>
+
+
+<p><em><strong>2.5 Transformer</strong></em></p>
+<p>Transformer là kiến trúc mạng mới được phát triển và được sử dụng rộng rãi gần đây trong các bài toán NLP khi nó chứng minh được sự vượt trội của nó so với RNN. Có được này là nhờ vào một cơ chế, gọi là Attention, tức là chỉ tập trung và một số vị trí cụ thể thay vì toàn bộ vị trí trong dữ liệu.</p>
+<p>Transformer cũng bao gồm một số bộ encoders và một số bộ decoders được đặt cạnh nhau (<em>stacked</em>) cùng với các lớp attentions.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_transformers.png">
+</div>
+
+
+<p>Hiện nay, BERT và GPT-3 là 2 pre-trained model của transformer được sử dụng rất nhiều trong lĩnh vực NLP.</p>
+<p><em><strong>2.6 Graph Neural Network (GNN)</strong></em></p>
+<p>DL nói chung thường làm việc với dữ liệu có cấu trúc. Tuy nhiên, trong thực tế có rất nhiều dữ liệu ở dạng phi cấu trúc (<em>unstructed data</em>) và được sắp xếp dưới dạng <code>graph</code>. Ví dụ như là mạng xã hội, cấu tạo phân tử trong hóa học, &hellip;</p>
+<p>GNN chính là mạng NN mô hình hóa <code>graph data</code>. Chúng sẽ nhận diện các mối liên kết của các nodes trong graph và output ra các vector đặc trưng của dữ liệu đó, giống như embedding. Output này được sử dụng làm input cho các NN khác.</p>
+<p><strong>3. Các thuật toán DL trong các bài toán Computer Vision &amp; Natural Language Processing</strong></p>
+<p><em><strong>3.1 DL trong CV</strong></em></p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_cv_tasks.jpg">
+</div>
+
+
+<ul>
+<li>Image Classification</li>
+</ul>
+<p>Đây là bài toán nhận diện đối tượng trong ảnh thuộc về class nào. Số lượng class có thể là 2 (<em>binary</em>) hoặc nhiều hơn (<em>multiple</em>).</p>
+<p>Các kiến trúc mạng kinh điển như <a href="https://medium.com/towards-artificial-intelligence/the-architecture-and-implementation-of-vgg-16-b050e5a5920b">VGG (VGG16, VGG19)</a>, <a href="https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035">ResNet</a>, <a href="https://sh-tsang.medium.com/review-inception-v3-1st-runner-up-image-classification-in-ilsvrc-2015-17915421f77c">InceptionNet</a>, <a href="https://arxiv.org/abs/1907.12629">MobiNet</a>, <a href="http://d2l.ai/chapter_convolutional-modern/alexnet.html">AlexNet</a> &hellip; giải quyết rất tốt bài toán này.</p>
+<ul>
+<li>Object Detection</li>
+</ul>
+<p>Đây là bài toán mở rộng của <code>image classification</code> vì không chỉ phân loại mà còn phải định vị được đối tượng trong ảnh.</p>
+<p>Các kiến trúc NN giải quyết vấn đề này bao gồm: Họ <a href="https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e">R-CNN (R-CNN, Fast R-CNN, Faster R-CNN)</a>, <a href="https://pjreddie.com/darknet/yolo/">Yolo (YOLOv2, YOLOv3, YOLOv4)</a>, <a href="https://arxiv.org/abs/1512.02325">SSD</a>, <a href="https://github.com/qubvel/efficientnet">EfficientNet</a>, &hellip;</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_yolo_app.jpg">
+</div>
+
+
+<ul>
+<li>Semantic Segmentation</li>
+</ul>
+<p>Nếu như Image Classification là bài toán gán nhãn cho toàn bộ bức ảnh thì Semantic Segmentation có thể coi là bài toán gán nhãn cho từng pixcel trong ảnh đó. Tất cả các pixel thuộc cùng một class (<em>hay các objects thuộc cùng một class</em>) được coi như là một thực thể (<em>thể hiện bằng màu sắc giống nhau</em>).</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_semseg.jpg">
+</div>
+
+
+<p>Một số kiến trúc mạng như Full Connected Networks <a href="https://d2l.ai/chapter_computer-vision/fcn.html">FCN</a>, <a href="https://github.com/zhixuhao/unet">UNET</a>, &hellip; giải quyết tốt bài toán này.</p>
+<ul>
+<li>Instance Segmentation</li>
+</ul>
+<p>Cũng giống như Semantic Segmentation là gán nhãn cho từng pixel trong ảnh, tuy nhiên Instance Segmentation coi mỗi đối tượng (<em>cùng hoặc khác class</em>) là các thực thể riêng biệt (<em>thể hiện bằng màu sắc khác nhau</em>).</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_instance_seg.png">
+</div>
+
+
+<p>Kiến trúc <a href="https://github.com/matterport/Mask_RCNN">Mask_RCNN</a> nổi tiếng nhất cho viêc giải quyết bài toán này.</p>
+<ul>
+<li>Face Recognition</li>
+</ul>
+<p>Đây là bài toán nhận diện khuôn mặt của người trong video/ảnh. Nó bao gồm 2 công đoạn:
+- Đầu tiên là phát hiện vùng chứa khuôn mặt (<em>bài toán Object Detection</em>),
+- Sau đó nhận diện xem khuôn mặt đó là của ai (<em>bài toán classification</em>)</p>
+<p>Một số thuật toán nổi tiếng giải quyết cho công đoạn 2 là: <a href="https://github.com/davidsandberg/facenet">FaceNet</a>, <a href="https://github.com/ox-vgg/vgg_face2">VGGFace</a>, <a href="https://github.com/ipazc/mtcnn">MTCNN</a>, &hellip; Còn đối với công đoạn 1 có thể sử dụng OpenCV.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_face_reg.jpeg">
+</div>
+
+
+<ul>
+<li>Optical Character Recogniton (OCR)</li>
+</ul>
+<p>Đây là bài toán nhận diện ký tự trong hình ảnh. Tương tự như bài toán Face Detection, nó cũng bao gồm 2 công đoạn:
+- Phát hiện vùng chứa ký tự trong ảnh (<em>bài toán object detection</em>)
+- Nhận diện từng ký tự trong vùng chứa đó.</p>
+<p>Một số thuật toán nổi bật là:
+- Công đoạn 1: <a href="https://github.com/clovaai/CRAFT-pytorch">Craft</a>, Yolo, &hellip;
+- Công đoạn 2: CRNN, &hellip;</p>
+<p>Một số thư viện hỗ trợ bài toán OCR: <a href="https://github.com/tesseract-ocr/tesseract">Tesseract</a>, <a href="https://github.com/JaidedAI/EasyOCR">EasyOCR</a></p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_ocrocr.jpeg">
+</div>
+
+
+<ul>
+<li>Humand Pose</li>
+</ul>
+<p>Humand Pose hay Pose Estimation là bài toán xác định vị trí của các khớp nối của con người trong ảnh/video.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_humand_pose.png">
+</div>
+
+
+<p><a href="https://github.com/tensorflow/tfjs-models/tree/master/posenet">PostNet</a> là thuật toán nối tiếng cho bài toán này.</p>
+<p><em><strong>3.2 DL trong NPL</strong></em></p>
+<ul>
+<li>Các thuật toán Word Embedding</li>
+</ul>
+<p>Word Embedding là quá trình biến đổi các từ thành các vector đại diện, làm đầu vào cho các DL model. Việc biến đổi này có tính đến hoàn cảnh và ngữ nghĩa của từ đó trong câu. Một số thuật toán phổ biến:
+- <a href="https://wiki.pathmind.com/word2vec">Word2Vec</a>: Nó hoạt động theo theo 1 trong 2 cách, dự đoán từ dựa vào những tù xung quanh của nó (<em>CBOW</em>) hoăc dự đoán các từ xung quanh của 1 từ (<em>Skip-Gram</em>). Các từ được đưa vào Word2Vec theo dạng One-hot-encoding.</p>
+<pre><code>
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/19_word2vec.png">
+    </div>
+    
+
+
+- [Glove](https://medium.com/@jonathan_hui/nlp-word-embedding-glove-5e7f523999f6): Là một mô hình khác mở rộng ý tưởng của Word2Vec bằng cách kết hợp nó với các kỹ thuật phân tích thừa số ma trận.
+
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/19_gloveglove.png">
+    </div>
+    
+
+
+- Contextual Word Embeddings: Sử dụng 2 layers bi-directional LSTM để embedding các từ, cho phép tận dụng sự phụ thuộc của nó với các từ trước đó.
+- Transformer: Đây là phương pháp tiên tiến nhất hiện nay, cho phép tập trung vào một vài vị trí cụ thể của từ trong câu thay vì toàn bộ như khi sử dụng LSTM.
+
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/19_transformer.png">
+    </div>
+    
+
+</code></pre>
+<ul>
+<li>Sequence Modeling</li>
+</ul>
+<p>Mô hình này giải quyết hầu hết các bài toán trong NLP như Machine Translation, Speech Recognition, Autocompletion và Sentiment Classification. Nó có khả năng xử lý cả một chuỗi đầu vào thay vì từng từ một.</p>
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/19_sequence.jpeg">
+    </div>
+
+
+<p>Còn rất nhiều kiến trúc, thuật toán, model nữa mà trong bài này chưa thể kể hết được. Nhưng hi vọng qua đây, các bạn cũng có được cái nhìn tổng quát về các thuật toán, model, kiến trúc phổ biến trong các bài toán DL.</p>
+<p>Trong các bài viết tiếp theo đi chi tiết vào một số thụât toán với các ứng dụng cụ thể. Mời các bạn đón đọc!</p>
+<p><strong>4. Tham khảo</strong></p>
+<ul>
+<li><a href="https://d2l.ai/index.html">Dive Into Deep Learning</a></li>
+<li><a href="https://theaisummer.com/Deep-Learning-Algorithms/">AI Summer</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
