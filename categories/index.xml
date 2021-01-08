@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/</link>
+    <description>Recent content in Categories on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Model Deployment</title>
+      <link>https://tiensu.github.io/categories/model-deployment/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/model-deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Classification</title>
+      <link>https://tiensu.github.io/categories/text-classification/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/text-classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Convolution Neural Network</title>
+      <link>https://tiensu.github.io/categories/convolution-neural-network/</link>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/convolution-neural-network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Image Classification</title>
+      <link>https://tiensu.github.io/categories/image-classification/</link>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/image-classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neural Network</title>
+      <link>https://tiensu.github.io/categories/neural-network/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/neural-network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algorithm Optimization</title>
+      <link>https://tiensu.github.io/categories/algorithm-optimization/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/algorithm-optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Artificial Intelligent</title>
+      <link>https://tiensu.github.io/categories/artificial-intelligent/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/artificial-intelligent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ebook</title>
+      <link>https://tiensu.github.io/categories/ebook/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/ebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://tiensu.github.io/categories/deep-learning/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Science</title>
+      <link>https://tiensu.github.io/categories/data-science/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://tiensu.github.io/categories/machine-learning/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XGBoost</title>
+      <link>https://tiensu.github.io/categories/xgboost/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/xgboost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ensemble Learning</title>
+      <link>https://tiensu.github.io/categories/ensemble-learning/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/ensemble-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project Management</title>
+      <link>https://tiensu.github.io/categories/project-management/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/project-management/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

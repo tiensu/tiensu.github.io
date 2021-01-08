@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ML on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/ml/</link>
+    <description>Recent content in ML on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/categories/ml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nghề Data Scientis - Lý thuyết và thực tế - Sự khác biêt</title>
+      <link>https://tiensu.github.io/blog/17_data_scientist_theory_and_real/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/17_data_scientist_theory_and_real/</guid>
+      <description>Bạn thường nghe nói Data Scientist là nghê sexy nhất thế kỷ 21, với mức lương cao ngất ngưởng, tạo ra những sản phầm có tầm ảnh hưởng lớn, được mọi người ngưỡng mộ, blabla.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 14: Tuning Subsample</title>
+      <link>https://tiensu.github.io/blog/16_tuning_subsampling/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/16_tuning_subsampling/</guid>
+      <description>Trong quá trình training, XGBoost thường xuyên phải thực hiện công việc chọn lựa ngẫu nhiên tập dữ liệu con (subsamples) từ tập dữ liệu gốc ban đầu.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 13: Tuning Learning_Rate và số lượng của Decision Tree</title>
+      <link>https://tiensu.github.io/blog/15_tuning_learning_rate_and_number_decition_tree/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/15_tuning_learning_rate_and_number_decition_tree/</guid>
+      <description>Một vấn đề còn tồn tại của XGBoost là khả năng học trên tập dữ liệu huấn luyện một cách rất nhanh chóng.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 12: Tuning số lượng và kích thước của Decision Tree</title>
+      <link>https://tiensu.github.io/blog/14_tuning_number_and_size_decision_tree/</link>
+      <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/14_tuning_number_and_size_decision_tree/</guid>
+      <description>Ý tưởng cơ bản của thuật toán Gradient Boosting là lần lượt thêm các decision trees nối tiếp nhau. Tree thêm vào sau sẽ cố gắng giải quyết những sai sót của tree trước đó.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 11: Train XGBoost model trên AWS</title>
+      <link>https://tiensu.github.io/blog/13_train_xgboost_models_on_aws/</link>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/13_train_xgboost_models_on_aws/</guid>
+      <description>Thư viện XGBoost được thiết kế để tận dụng tối đa sức mạnh của phần cứng hệ thống, bao gồm tất cả CPU cores và bộ nhớ.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 10: Cấu hình Multithreading cho XGBoost model</title>
+      <link>https://tiensu.github.io/blog/12_multithreading-xgboost/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/12_multithreading-xgboost/</guid>
+      <description>Thư viện XGBoost được thiết kế để làm việc h iệu quả vớicơ chế xử lý song song trên nhiều core (multithreading) của phần cứng, cả trong quá trình train và dự đoán.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 9: Cấu hình Early_Stopping cho XGBoost model</title>
+      <link>https://tiensu.github.io/blog/11_early_stopping/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/11_early_stopping/</guid>
+      <description>Overfitting vẫn luôn là một vấn đề làm đau đầu những kỹ sư AI. Trong bài viết này chúng ta sẽ cùng tìm hiểu cách thức monitor (giám sát) performance (hiệu năng) của XGBoost model trong suốt quá trình train.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 8: Lựa chọn features cho XGBoost model</title>
+      <link>https://tiensu.github.io/blog/10_feature-selection/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/10_feature-selection/</guid>
+      <description>Feature selection hay lựa chọn features là một bước tương đối quan trọng trước khi train XGBoost model. Lựa chọn đúng các features sẽ giúp model khái quát hóa vấn đề tốt hơn (low variance) -&amp;gt; đạt độ chính xác cao hơn.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 7: Lưu và sử dụng XGBoost model</title>
+      <link>https://tiensu.github.io/blog/09_save-load-xgboost-model/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/09_save-load-xgboost-model/</guid>
+      <description>Giả sử bạn đã train xong một XGBoost model đạt được độ chính xác rất cao. Câu hỏi đặt ra là làm sao lưu lại model đó để sử dụng về sau (không phải mất công train lại model mỗi khi cần sử dụng)?</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 6: Trực quan hóa XGBoost model</title>
+      <link>https://tiensu.github.io/blog/08_visualize-xgboost-model/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/08_visualize-xgboost-model/</guid>
+      <description>Ta đã biết, XGBoost thực chất là tập hợp gồm nhiều decision tree. Việc thể hiện mỗi decision tree đó trên đồ thì sẽ giúp chúng ta hiểu sâu sắc hơn quá trình boosting khi đưa vào một tập dữ liệu.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 5: Đánh giá hiệu năng của XGBoost model</title>
+      <link>https://tiensu.github.io/blog/07_evaluate-xgbosst-models/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/07_evaluate-xgbosst-models/</guid>
+      <description>Mục đích của việc phát triển mô hình dự đoán là tạo ra một mô hình có độ chính xác cao khi kiểm tra trên bộ dữ liệu độc lập với dữ liệu train (gọi là unseen data).</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 4: Chuẩn bị dữ liệu cho XGBoost model</title>
+      <link>https://tiensu.github.io/blog/06_data-preparation-for-gradient-boosting/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/06_data-preparation-for-gradient-boosting/</guid>
+      <description>XGBoost là một thuật toán thuộc họ Gradient Boosting. Những ưu điểm vượt trội của nó đã được chứng minh qua các cuộc thi trên kaggle.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 3: Xây dựng XGBoost model</title>
+      <link>https://tiensu.github.io/blog/05_build-xgboost-model/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/05_build-xgboost-model/</guid>
+      <description>XGBoost là một thuật toán rất mạnh mẽ, tối ưu hóa về tốc độ và hiệu năng cho việc xây dựng các mô hình dự đoán.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 2: Toàn cảnh về Ensemble Learning - Phần 2</title>
+      <link>https://tiensu.github.io/blog/04_comprehensive_guide_to_ensemble_model_2/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/04_comprehensive_guide_to_ensemble_model_2/</guid>
+      <description>Tiếp tục phần 2 của loạt bài tìm hiểu toàn cảnh về Ensemble Learning, trong phần này ta sẽ đi qua một số thuât toán thuộc nhóm Bagging và Boosting.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 1: Toàn cảnh về Ensemble Learning - Phần 1</title>
+      <link>https://tiensu.github.io/blog/03_comprehensive_guide_to_ensemble_model_1/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/03_comprehensive_guide_to_ensemble_model_1/</guid>
+      <description>1. Giới thiệu về Ensemble Learning
+Giả sử chúng ta có một bài toán phân loại sản phẩm sử dụng ML.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Giới thiệu chuỗi bài viết về thuật toán XGBoost</title>
+      <link>https://tiensu.github.io/blog/02_xgboost-model-serial-introduction/</link>
+      <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/02_xgboost-model-serial-introduction/</guid>
+      <description>XGBoost là một thuật toán rất được quan tâm gần đây vì những ưu điểm vượt trội của nó so với các thuật toán khác.</description>
+    </item>
+    
+    <item>
+      <title>Lưu ý khi lập kế hoạch cho một dự án AI</title>
+      <link>https://tiensu.github.io/blog/01_ai-project-planing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/01_ai-project-planing/</guid>
+      <description>Trong bất kỳ dự án nào, đứng ở góc độ của nhà đầu tư và người quản lý, họ đều muốn biết được mốc thời gian dự án có thể được hoàn thành trước khi thực sự bắt đầu dự án.</description>
+    </item>
+    
+  </channel>
+</rss>

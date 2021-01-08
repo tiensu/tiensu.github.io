@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>
+        Nghề Data Scientis - Lý thuyết và thực tế - Sự khác biêt | ML in Practical
+    </title>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+
+
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css" />
+
+
+
+
+
+    <link rel="stylesheet" href="https://tiensu.github.io/style.min.388cbd0ce358245ec0dfcee3b8889b3cc50e2bb8a5b2bcd40f8bd092ebefb81a.css" integrity="sha256-OIy9DONYJF7A387juIibPMUOK7ilsrzUD4vQkuvvuBo=" />
+
+
+
+
+    <script type="application/javascript">
+        var doNotTrack = false;
+        if (!doNotTrack) {
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-180180568-1', 'auto');
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <header id="header">
+
+        <script type="application/javascript">
+            var doNotTrack = false;
+            if (!doNotTrack) {
+                (function(i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-180180568-1', 'auto');
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview');
+            }
+        </script>
+
+        <div class="header_container">
+            <h1 class="sitetitle">
+                <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a>
+            </h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="https://tiensu.github.io/">Home</a></li>
+
+                    <li>
+                        <a href="/about/">
+
+                            <span>About</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/tags/">
+
+                            <span>Tags</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/archives/">
+
+                            <span>Archives</span>
+                        </a>
+                    </li>
+
+                    <li class="hide-sm"><a href="https://tiensu.github.io/index.xml" type="application/rss+xml">RSS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ['$', '$'],
+                        ['\\(', '\\)']
+                    ],
+                    displayMath: [
+                        ['$$', '$$'],
+                        ['\\[', '\\]']
+                    ],
+                    processEscapes: true,
+                    processEnvironments: true
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                }
+            };
+
+            window.addEventListener('load', (event) => {
+                document.querySelectorAll("mjx-container").forEach(function(x) {
+                    x.parentElement.classList += 'has-jax'
+                })
+            });
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    </header>
+
+
+    <section id="main">
+        <article class="post content">
+            <h2 class="title">Nghề Data Scientis - Lý thuyết và thực tế - Sự khác biêt</h2>
+            <div class="post_content">
+                <p>Bạn thường nghe nói <code>Data Scientist</code> là nghê <code>sexy</code> nhất thế kỷ 21, với mức lương cao ngất ngưởng, tạo ra những sản phầm có tầm ảnh hưởng lớn, được mọi người ngưỡng mộ, blabla. Và thế là bạn quyết định chuyển hướng
+                    sang học làm <code>data scientist</code>. Bạn lao vào học toán (đại số tuyến tính, xác suất thống kê, đạo hàm, tích phân, &hellip;), học lập trình (python, R, &hellip;), học các thuật toán ML, cách sử dụng các thư viện ML. Thậm chí
+                    có bạn còn chơi lớn, học luôn cao học về nghành này vì &ldquo;hình như&rdquo; ngành này yêu cầu phải có trình độ cao học trở lên (bản thân mình chính là 1 ví dụ của trường hợp này, :D). OK, mình không có ý kiến gì về lựa chọn của bạn
+                    cả. Trong bài viết này, mình chỉ muốn chia sẻ một số điều mà mình cảm nhận được sau một thời gian làm trong nghành với danh xưng <code>data scientist</code> này. Những điều này là sự khác biệt giữa lý thuyết các bạn học được và thực
+                    tế công việc mà các bạn sẽ trải qua. Bạn sẽ tìm được cho mình câu trả lời cho câu hỏi &ldquo;Thế nào là một <code>data scientist</code> giỏi? Và thế nào là một <code>data scientist</code> xuất sắc?&quot;.</p>
+                <p><strong>1. &ldquo;Tóm lại, câu chuyện bạn muốn kể là gì?&quot;</strong></p>
+                <p>Một trong những câu hỏi tôi thường nghe sau mỗi lần kết thúc buổi seminar của CEO (hoặc một người nào đó ở vị trí tương đương) là:</p>
+                <p><strong>&ldquo;Tóm lại, câu chuyện bạn muốn kể là gì?&quot;</strong></p>
+                <p>Thú thực, lần đầu tiên khi nghe câu hỏi này, tôi có phần bối rối. Tôi không hiểu tại sao họ lại nhấn mạnh vào &ldquo;câu chuyện&rdquo;? Tại sao họ không hỏi:</p>
+                <ul>
+                    <li>Những gì tôi đã trình bày trong slide.</li>
+                    <li>Kết quả tôi đạt được là gì.</li>
+                    <li>Tôi đã làm như thế nào.</li>
+                    <li>&hellip;</li>
+                </ul>
+                <p>Trước khi thực sự hiểu được sự quan trọng của <code>kỹ năng kể chuyện</code> (<em>telling story</em>), tôi đã trải qua khá nhiều sai lầm &hellip;</p>
+                <p>Hoặc là <code>stackeholders</code> (<em>thường là những người non-techical</em>) không hiểu những gì bạn đang nói, đang trình bày, hoặc là nội dung bạn đang truyền tải chưa đủ để thuyết phục họ, thúc đẩy họ đưa ra quyết định hay hành động
+                    cụ thể nào (<em>take actions</em>) &hellip;</p>
+                <p>Và tôi quyết định cải thiện kỹ năng kể chuyện của mình &hellip;</p>
+                <p>Khi tôi đã đạt được sự tiến bộ nhất đinh, rất nhiều thứ đã thay đổi &hellip;</p>
+                <p><code>Stackeholders</code> đã bắt đầu hiểu những gì mà tôi đang diễn giải. Và họ đã có những hành động cụ thể &hellip;</p>
+                <p>Nếu bạn muốn trở thành môt <code>data scientist</code> giỏi, hãy tập trung vào kiến thức kỹ thuật.</p>
+                <p><em><strong>Còn nếu bạn muốn trở thành một <code>data scientist</code> xuất sắc, hãy tập trung vào kỹ năng kể chuyện.</strong></em></p>
+                <p>Vậy &hellip; làm thế nào để học kỹ năng kể chuyện? Lời khuyên của tôi là hãy học từ <a href="https://www.facebook.com/Vox/">Vox</a>. Họ là những bậc thầy về kỹ năng này, họ luôn luôn có thể giải thích bất kì vấn đề phức tạp nào một cách
+                    rất đơn giản và dễ hiểu. Bạn có thể xem thử video bên dưới của họ. Hãy quan sát cách họ giải thích các hiện tượng và vấn đề xã hội theo cách kể chuyện trực quan nhất để ai ai cũng có thể hiểu được.</p>
+                <!-- raw HTML omitted -->
+
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe src="https://www.youtube-nocookie.com/embed/TPpoJGYlW54" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+                </div>
+
+                <p>Tóm tắt lại một vài lời khuyên rất hay cho chúng ta để nâng cao kỹ năng kể chuyện. Những điều này không chỉ đúng trong phạm vi <code>Deep Learning</code> mà nó còn đúng cho tất cả các lĩnh vực khác.</p>
+                <p><em><strong>𝟏) Lãnh đạo có ít thời gian hơn chúng ta:</strong></em></p>
+                <p>Với vai trò lãnh đạo cấp cao, họ phải xử lý nhiều việc quan trọng hơn.</p>
+                <p>𝑳𝒐̛̀𝒊 𝒌𝒉𝒖𝒚𝒆̂𝒏:</p>
+                <ul>
+                    <li>Hãy đi thẳng vào vấn đề chính</li>
+                    <li>Trình bày ngắn gọn, có cấu trúc rõ ràng</li>
+                    <li>Trình bày xong, hãy đưa ra lời kiến nghị hành động với họ.</li>
+                </ul>
+                <p><em><strong>𝟐) Lãnh đạo dễ mất kiên nhẫn</strong></em></p>
+                <p>Lãnh đạo cấp cao có quá nhiều việc cần phải xử lý một lúc và vì vậy họ dễ mất kiên nhẫn.</p>
+                <p>𝑳𝒐̛̀𝒊 𝒌𝒉𝒖𝒚𝒆̂𝒏:</p>
+                <ul>
+                    <li>Cho họ thông tin tổng quát là bạn sẽ trình bày trong bao lâu.</li>
+                    <li>Nếu bạn trình bày trong 30 phút, thì bạn hãy rút ngắn thời gian nói xuống 15 phút, 15 còn lại để hỏi đáp. Đó là nguyên tắc 50:50.</li>
+                </ul>
+                <p><em><strong>𝟑) Chào đón sự cắt ngang</strong></em></p>
+                <p>Những khán giả cấp cao thường xuyên ngắt ngang giữa chừng những bài thuyết trình.</p>
+                <p>𝑳𝒐̛̀𝒊 𝒌𝒉𝒖𝒚𝒆̂𝒏:</p>
+                <ul>
+                    <li>Chuẩn bị bài với cấu trúc rõ ràng để khi “được chen ngang”, bạn nắm rõ là đang nói phần nào.</li>
+                </ul>
+                <p><em><strong>𝟒) Luôn có các slide phụ lục</strong></em> Nhà lãnh đạo cấp cao cần nghe một bức tranh tổng thể.</p>
+                <p>𝑳𝒐̛̀𝒊 𝒌𝒉𝒖𝒚𝒆̂𝒏:</p>
+                <ul>
+                    <li>Thuyết trình tổng thể về ý tưởng theo một cấu trúc rõ ràng có chủ đích.</li>
+                    <li>Chuẩn bị sẵn các số liệu và phần “phụ lục”. Khi trình bày xong, chia sẻ thêm các số liệu này, hoặc mở lên khi có câu hỏi.</li>
+                </ul>
+                <p><strong>2. Data sạch ư? Mơ đi nhé!</strong></p>
+                <p>Bạn tự hào rằng mình đã từng tham gia rất nhiều cuộc thi trên Kaggle, thâm chí còn leo lên top 10, top 5. Hãy quên điều đó đi, vì các dự án trong thực tế không &ldquo;màu hồng&rdquo; như vậy đâu. Trên Kaggle, bạn đuợc cung cấp sẵn bộ dữ
+                    liệu tương đối đầy đủ và sạch sẽ, còn trên thực tế thì hầu như bạn chỉ được đưa cho một mớ bòng bong hỗ độn. Khách hàng bảo, &ldquo;đấy, bọn tao chỉ có như này, mày dùng như nào thì dùng&rdquo;. Trường hợp xấu hơn, chúng ta bắt đầu
+                    dự án chả có tý data nào cả. Xấu hơn nữa là chúng ta không biết tìm kiếm data ở đâu, tìm kiếm như thế nào &hellip; Quả thực rất khó khăn.</p>
+                <p>Thế mới nói, <code>data collection</code> và <code>data integrity</code> là hai trong số những bước quan trọng nhất của bất kỳ dự án <code>Deep Learning</code> nào. <code>Garbage in, garbage out</code> (<em>đầu vào là rác thì đầu ra cũng là rác</em>),
+                    câu nói này chắc ai làm trong lĩnh vực này đều đã từng nghe. Nhưng có lẽ không phải ai cũng thực sự hiểu được ý nghĩa của nó.</p>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Data_collection">Data collection</a>: tức là thu thập dữ liệu. Để thu thập được dữ liệu thì cần phải hiểu rõ yêu cầu bài toán là gì, dữ liệu nào đã có, dữ liệu nào còn thiếu, cấu trúc của dữ liệu
+                        ra sao, số lượng tối thiểu như thế nào, cần chuẩn bị những công cụ dụng cụ gì để lấy dữ liệu (ví dụ, phải có camera để quay video, chụp ảnh)&hellip; Ngoài ra, không phải lúc nào cũng có thể thu thập đầy đủ dữ liệu ngay từ ban đầu.
+                        Dữ liệu có thể đến trong suốt quá trình phát triển dự án hoặc vận hành sản phẩm. Vì vậy, phải có chiển lựợc quản lý dữ liệu hợp lý để dễ dàng cho viêc sử dụng, báo cáo thống kê về sau.</li>
+                    <li><a href="https://www.talend.com/resources/what-is-data-integrity/">Data integrity</a>: tức là tính toàn vẹn của dữ liệu. Bạn cần phải kiểm tra kỹ lưỡng xem dữ liệu thu được có ý nghĩa hay không, có đầy đủ hay không bằng cách tự đặt
+                        câu hỏi và trả lời, hoặc nhờ sự trợ giúp từ các bên có liên quan và hiểu biết.</li>
+                </ul>
+                <p>Nếu hai bước này làm không tốt thì cho dù bạn có áp dung bao nhiêu kỹ thuật cao siêu của <a href="https://towardsdatascience.com/my-compilation-of-simple-yet-practical-data-cleaning-codes-d692ec20dca8">data clearning</a>, <a href="https://towardsdatascience.com/the-simple-yet-practical-data-visualization-codes-bca99971cdb2">EDA</a>,
+                    và tuning model thì kết qủa cũng sẽ không thể tốt đẹp như bạn mong đơi.</p>
+                <p><strong>3. Soft skills &gt; Technical skills</strong></p>
+                <p>Bạn đã từng tự đặt ra câu hỏi:</p>
+                <p><strong>Những kỹ năng gì cần học để có thể làm việc được trong lĩnh vực <code>Deep Learning</code>?</strong></p>
+                <p>Theo ý kiến cá nhân của tôi, <code>technical skills</code> (lập trình, thống kê, &hellip;) là kỹ năng bắt buộc và nên được ưu tiên học trước tiên khi bắt đầu bước chân vào thế giới <code>Deep Learning</code>.</p>
+                <p>Một khi đã có đủ tự tin về <code>technical skills</code> của mình, chúng ta nên tập trung vào xây dựng và cải thiện <code>soft skills</code> (giao tiếp, làm việc nhóm, kể chuyện, &hellip;). Khi học, bạn thường học một mình, rất ít khi
+                    giao tiếp hoặc làm cùng người khác. Nhưng dự án trong thực tế thường rất lớn, gồm nhiều phần, nhiều công đoạn. Và bạn thường chỉ làm một trong số những công đoạn đó. Nếu bạn là team-leader hay PM, bạn phải giao tiếp với các phòng ban
+                    bộ phận khác để lấy thông tin, trình bày kết quả với lãnh đạo, phân chia nhiệm vụ giữa các thành viên, &hellip; Nếu bạn là nhân viên bình thường thì bạn vẫn cần phải trao đổi với các thành viên khác trong dự án, trình bày giải pháp
+                    kỹ thuật của mình. Rất may là những <code>soft skills</code> này khá giống với những dự án thuộc lĩnh vực khác, nên nếu bạn là người đã có kinh nghiệm làm việc ở những lĩnh vực khác chuyển sang <code>Deep Learning</code> thì bạn không
+                    cần quá lo lắng. Ngược lại, đối với các bạn sinh viên mới ra trường thì cần đặc biệt lưu ý hơn về việc phát triển <code>soft skills</code> của mình.</p>
+                <p>Có một câu nói khá nổi tiếng của <strong>W.Edwards Deming</strong>:</p>
+                <p><strong>&ldquo;Without data you&rsquo;re just another person with an opinion&rdquo;</strong></p>
+                <p>Tạm dich: Nếu không có số liệu chứng minh cụ thể, thì tất cả chỉ là ý kiến, suy đoán của bạn mà thôi. (giống như trong các vụ điều tra, phá án. Lập luận, suy đoán có thuyết phục, hợp lý đi bao nhiêu chăng nữa mà không có bằng chứng cụ
+                    thể thì cũng vô nghĩa, không thể bắt được hung thủ).</p>
+                <p>Áp dụng vào lĩnh vực <code>Deep Learning</code> này thì, có data chỉ là bước đầu tiên. Điều quan trọng là làm thế nào để sử dụng data đó để sinh ra những phán quyết, hành động (<em>business decisions</em>) mà mang lại lợi ích cho tổ chức.</p>
+                <p>Thử thay đổi câu nói trên một chút cho phù hợp với ngữ cảnh:</p>
+                <p><strong>&ldquo;Without storytelling skills you&rsquo;re just another persion with data&rdquo;</strong></p>
+                <p>Bạn có thể phân tích dữ liệu một cách xuất sắc.</p>
+                <p>Bạn có thể tạo ra một model tốt nhất trên thế giới.</p>
+                <p>Bạn thuộc làu làu cuốn <a href="https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670">Code Complete</a> và viết code đẹp như trong phim.</p>
+                <p>Nhưng nếu bạn không thể sử dụng những kết quả đó để thuyết phục <code>stackeholders</code> để đưa ra <code>business decisions</code>, thì những nỗ lực của bạn vẫn chỉ nằm trên những slides PowerPoints mà thôi.</p>
+                <p>Hơi buồn, nhưng đó là sự thật!</p>
+                <p><strong>4. &ldquo;What pattern observed behind?&quot;</strong></p>
+                <p>Đối với hầu hết các bài toán, trừ khi bạn đang làm việc trong một công ty lớn về công nghệ (cutting-edge technology company), những models phức tạp thường không phải lựa chọn đầu tiên để phân tích và dự đoán.</p>
+                <p>Bạn cần phải thực sự hiểu những gì diễn ra đằng sau model và kết quả của chúng ta để thuyết phục các <code>stackeholders</code>, bởi vì họ có thể hỏi bạn:</p>
+                <ul>
+                    <li>Tại sao lại không phát hiện ra lỗi này?</li>
+                    <li>Tại sao lỗi này lại bị nhầm sang lỗi kia?</li>
+                    <li>Tại sao độ chính xác lại thấp như vậy?</li>
+                    <li>Nếu xảy ra trường hợp này thì phải làm như thế nào?</li>
+                    <li>&hellip;</li>
+                </ul>
+                <p><code>Stackeholders</code> không thể &ldquo;nhắm mắt&rdquo; cho sử dụng một model trong các sản phẩm thực tế khi mà họ chưa hiểu rõ (<em>blackbox model</em>), vì như thế nguy cơ thất thoát tiền bạc là rất lớn.</p>
+                <p>Đây có lẽ cũng là một trong những lý do mà các models đơn giản như <code>decision tree</code>, <code>logistic regression</code> hay <code>kNN</code> vần còn còn được sử dụng khá nhiều trong các bài toán công nghiệp.</p>
+                <p><strong>5. Luôn luôn nhìn bức tranh tổng quát</strong></p>
+                <p>Đây có lẽ là một trong những lỗi phổ biến nhất khi bắt đầu với <code>Deep Learning</code>. Mọi người thường quá chú trọng vào việc làm sao train được model tốt, viết code cho đẹp mà không để ý đến việc model sẽ chạy trong thực tế như thế
+                    nào, tốc độ đáp ứng ra sao, &hellip;</p>
+                <p>Nói chung ngay từ lúc bắt đầu dự án <code>Deep Learning</code>, bạn nên nhìn một cách tổng quát bài toán, từ việc hiểu rõ yêu cầu (cả function và non-function), chuẩn bị dữ liệu, huấn luyện model, triển khai model trong thực tế và cập
+                    nhật model. Có được cái nhìn rõ ràng về bức tranh lớn, mạch suy nghĩ và làm việc của bạn sẽ được xuyên suốt từ đầu đến cuối và không bị &ldquo;khớp&rdquo; khi chuyển tiếp giữa các giai đoạn với nhau.</p>
+
+
+                <div style="text-align:center">
+                    <img src="/big_picture.jpg">
+                </div>
+
+
+                <p><strong>6. Kết luận</strong></p>
+                <p>Trong bất kỳ lình vực nào, lý thuyết và thực tế luôn luôn có sự khác biệt. Sự khác biệt này càng rõ hơn trong phạm vi <code>Deep Learning</code> nói riêng. Hiễu được những điều này chính là bạn đã có được cái nhìn về bức tranh lớn của
+                    <code>Deep Learning</code>.</p>
+                <p>Hi vọng những điều chia sẽ trong bài viết này sẽ giúp ích cho các bạn trên con đường chinh phục <code>sexy job</code>. Hẹn gặp lại trong những bài viết sau!</p>
+                <p>Bài viết có tham khảo tại <a href="https://towardsdatascience.com/here-is-what-ive-learned-in-2-years-as-a-data-scientist-e13a24a74a72">tham khảo</a>.</p>
+
+            </div>
+            <div class="info post_meta">
+                <time datetime=2020-10-18T00:00:00Z class="date">Sunday, October 18, 2020</time>
+
+                <ul class="tags">
+
+                    <li> <a href="https://tiensu.github.io/tags/ai">AI</a> </li>
+
+                    <li> <a href="https://tiensu.github.io/tags/ml">ML</a> </li>
+
+                    <li> <a href="https://tiensu.github.io/tags/data-science">Deep Learning</a> </li>
+
+                </ul>
+
+
+            </div>
+            <div class="clearfix"></div>
+        </article>
+
+        <div class="other_posts">
+
+            <a href="https://tiensu.github.io/posts/xgboost/16_tuning_subsampling/" class="prev">XGBoost - Bài 14: Tuning Subsample</a>
+
+
+            <a href="https://tiensu.github.io/posts/18_neural_network_fundamentals_1/" class="next">Neural Network cơ bản (Phần 1)</a>
+
+        </div>
+        <aside id="comments">
+        </aside>
+
+
+    </section>
+
+    <a id="back_to_top" title="Go To Top" href="#">
+        <span>
+    <svg viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"></path>
+    </svg>
+  </span>
+    </a>
+
+    <footer id="footer">
+        <p>
+            <span>&copy; 2020 <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a> </span>
+            <span>Built with <a rel="nofollow" target="_blank" href="https://gohugo.io">Hugo</a></span>
+            <span>Theme by <a rel="nofollow" target="_blank" href="https://github.com/wayjam/hugo-theme-mixedpaper">WayJam</a></span>
+        </p>
+        <script src="https://tiensu.github.io/js/main.min.8b182175f5874aeed0acc0979345c98d4bde22208ec4f36cc1d6e3102acb4b10.js" integrity="sha256-ixghdfWHSu7QrMCXk0XJjUveIiCOxPNswdbjECrLSxA=" crossorigin="anonymous" async></script>
+    </footer>
+
+</body>
+
+</html>

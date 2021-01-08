@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/neural-network"
+          class="text-primary">Neural Network</a>
+        
+        <h2>Xây dựng NN model đơn giản dự đoán giá nhà</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>20 November 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/26_house_prices_pediction.jpg" class="img-fluid w-100 mb-4" alt="Xây dựng NN model đơn giản dự đoán giá nhà">
+        
+        <div class="content mb-5">
+          <p>Sau một số bài về lý thuyết thì hôm nay chúng ta sẽ bắt tay vào thực hành code một bài toán <code>mẫu giáo</code>, áp dụng những lý thuyết mà ta đã tìm hiểu xem sao nhé!</p>
+<p>Thông tin về bài toán và yêu cầu đặt ra như sau:</p>
+<ol>
+<li>Quy tắc tính giá nhà như sau: 50k + 50k/bedroom. Ví dụ: nhà có 1 bedroom thì giá sẽ là 100k, nhà có 2 bedrooms thì giá sẽ là 150k, &hellip;</li>
+<li>Xây dựng một NN model để dự đoán giá tiền của một căn nhà có 7 phòng ngủ.</li>
+<li>So sánh giá của căn nhà đó theo 2 cách: tính theo các thông thường và theo kết quả dự đoán của NN model.</li>
+</ol>
+<p>Mình giả sử là các bạn đã cài sẵn môi trường trên máy tính của các bạn (<em>hoặc các bạn có thể sử dụng colab cũng được.</em>). Chúng ta sẽ sử dụng tensorflow 2.3.0 và numpy 1.18.5</p>
+<p>Đầu tiên, import và kiểm tra thư viện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1</span> <span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+<span style="color:#ae81ff">2</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#ae81ff">3</span> <span style="color:#f92672">import</span> os
+<span style="color:#ae81ff">4</span> <span style="color:#f92672">from</span> tensorflow <span style="color:#f92672">import</span> keras
+<span style="color:#ae81ff">5</span>
+<span style="color:#ae81ff">6</span> <span style="color:#66d9ef">print</span>(tf<span style="color:#f92672">.</span>__version__)
+<span style="color:#ae81ff">7</span> <span style="color:#66d9ef">print</span>(np<span style="color:#f92672">.</span>__version__)
+<span style="color:#ae81ff">8</span> <span style="color:#66d9ef">print</span>(tf<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>list_physical_devices(<span style="color:#e6db74">&#39;GPU&#39;</span>))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">2.3.0
+1.18.5
+<span style="color:#f92672">[</span>PhysicalDevice<span style="color:#f92672">(</span>name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/physical_device:GPU:0&#39;</span>, device_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;GPU&#39;</span><span style="color:#f92672">)]</span>
+</code></pre></div><p>Máy của các bạn có thể không có GPU cũng không sao, vì bài này rất đơn giản nên cũng không cần đến GPU. Các bài sau thì nên có vì như thế thời gian train model sẽ nhanh hơn rất nhiều.</p>
+<p>Tiếp theo, chúng ta sẽ tạo ra dữ liệu huấn luyện dựa theo quy tắc tính giá nhà như trong đề bài:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">9</span>  x_train <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">2.0</span>, <span style="color:#ae81ff">3.0</span>, <span style="color:#ae81ff">4.0</span>, <span style="color:#ae81ff">5.0</span>, <span style="color:#ae81ff">6.0</span>], dtype<span style="color:#f92672">=</span>float)
+<span style="color:#ae81ff">10</span> y_train <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">100.0</span>, <span style="color:#ae81ff">150.0</span>, <span style="color:#ae81ff">200.0</span>, <span style="color:#ae81ff">250.0</span>, <span style="color:#ae81ff">300.0</span>, <span style="color:#ae81ff">350.0</span>], dtype<span style="color:#f92672">=</span>float)
+</code></pre></div><p>Mỗi phần tử của x_train là số phòng ngủ của căn nhà, còn mỗi phần tử của y_train là giá nhà tương ứng với số phòng ngủ đó.</p>
+<p>Bây giờ là lúc chúng ta xây dựng NN model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">11</span> model <span style="color:#f92672">=</span> keras<span style="color:#f92672">.</span>Sequential([
+<span style="color:#ae81ff">12</span>    keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Dense(units<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, input_shape<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>])
+<span style="color:#ae81ff">13</span> ])
+<span style="color:#ae81ff">14</span> model<span style="color:#f92672">.</span>compile(optimizer<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sgd&#39;</span>, lost<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mse&#39;</span>)
+</code></pre></div><p>Dòng 11-13 định nghĩ một NN model với chỉ một layer, một input có kích thước là 1.
+Dòng 14, model được compiled, sử thuật toán tối ưu <a href="https://tiensu.github.io/blog/25_optimization_methods_gradient-descent/">SGD</a> và Lost Function là MSE (<em>Mean Square Error</em>).</p>
+<p>Đến đây, model đã sẵn sàng để train:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">15</span> model<span style="color:#f92672">.</span>fit(x_train, y_train<span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>, epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</code></pre></div><p>Model được train với dữ liệu train đã tạo ở bên trên, số lượng epoch là 1000. Chú ý rằng ở đây, y_train được chia cho 255. Mục đích của việc <code>scale down</code> này là để model không bị quá bias vào giá trị của y_train khi mà giá trị của y_train lớn hơn giá trị của x_train rất nhiều.</p>
+<p>Output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Epoch <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span>
+<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>s <span style="color:#ae81ff">1</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">37.2759</span>
+Epoch <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span>
+<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>s <span style="color:#ae81ff">920</span>us<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">17.2548</span>
+Epoch <span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span>
+<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>s <span style="color:#ae81ff">525</span>us<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">7.9884</span>
+<span style="color:#f92672">..................</span>
+Epoch <span style="color:#ae81ff">998</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span>
+<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>s <span style="color:#ae81ff">535</span>us<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">3.0594e-06</span>
+Epoch <span style="color:#ae81ff">999</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span>
+<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>s <span style="color:#ae81ff">938</span>us<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">3.0372e-06</span>
+Epoch <span style="color:#ae81ff">1000</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span>
+<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>s <span style="color:#ae81ff">1</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">3.0151e-06</span>
+</code></pre></div><p>Ta thấy giá trị loss giảm từ 37.2759 đến 3.0151e-06. Một con số khá thấp.</p>
+<p>Cuối cùng, ta sẽ dùng model vừa trained để dự đoán giá của ngôi nhà có 7 phòng ngủ.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">16</span> prediction <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict([<span style="color:#ae81ff">7.0</span>])
+<span style="color:#ae81ff">17</span> <span style="color:#66d9ef">print</span>(prdiction <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>)
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">[[<span style="color:#ae81ff">400.25043</span>]]
+</code></pre></div><p>Giá của ngôi nhà nếu tính theo cách thông thường sẽ là 400$. So sánh 2 kết quả ta thấy chúng khá gần nhau. Như vậy là model đã làm việc khá tốt.
+Bạn có thể tăng số epochs lên và train lại model, sau đó kiểm trả lại kết quả dự đoán xem nó có được cải thiện hay không!</p>
+<p>OK, như vậy là chúng ta đã giải quyết xong yêu cầu của bài toán. Đây chỉ là 1 bài tập trình độ <code>mẫu giáo</code> để chúng ta làm quen với việc sử dụng tensorflow để xây dựng NN model. Trong các bài sau, chúng ta sẽ giải quyết các bài toán phức tạp hơn.</p>
+<p>Source code của bài này, các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/introduction_tensorflow/blob/master/Hourse_Prices_Prediction.ipynb">đây</a>.</p>
+<p><strong>Tham khảo</strong></p>
+<ul>
+<li><a href="https://www.coursera.org/professional-certificates/tensorflow-in-practice">Coursera</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

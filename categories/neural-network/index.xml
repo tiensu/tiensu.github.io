@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neural Network on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/neural-network/</link>
+    <description>Recent content in Neural Network on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/categories/neural-network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Xây dựng NN model phân loại với tập dữ liệu MNIST</title>
+      <link>https://tiensu.github.io/blog/29_fashion_mnist_classification/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/29_fashion_mnist_classification/</guid>
+      <description>Bài này, ta sẽ nâng độ khó hơn 1 chút so với bài trước. Yêu cầu đề bài như sau:</description>
+    </item>
+    
+    <item>
+      <title>Xây dựng NN model đơn giản dự đoán giá nhà</title>
+      <link>https://tiensu.github.io/blog/28_hourse_prices_prediction/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/28_hourse_prices_prediction/</guid>
+      <description>Sau một số bài về lý thuyết thì hôm nay chúng ta sẽ bắt tay vào thực hành code một bài toán mẫu giáo, áp dụng những lý thuyết mà ta đã tìm hiểu xem sao nhé!</description>
+    </item>
+    
+    <item>
+      <title>Neural Network cơ bản (Phần 2)</title>
+      <link>https://tiensu.github.io/blog/21_neural_network_fundamentals_2/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/21_neural_network_fundamentals_2/</guid>
+      <description>Trong quá trình tìm hiểu về mạng NN, mình thấy khá là khó hiểu, đặc biệt với các bạn không mạnh về toán.</description>
+    </item>
+    
+    <item>
+      <title>Neural Network cơ bản (Phần 1)</title>
+      <link>https://tiensu.github.io/blog/20_neural_network_fundamentals_1/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/20_neural_network_fundamentals_1/</guid>
+      <description>Trong bài này chúng ta sẽ cùng nhau tìm hiểu lys thuyết cơ bản về mạng thần kinh nhân tạo (neural network):</description>
+    </item>
+    
+  </channel>
+</rss>

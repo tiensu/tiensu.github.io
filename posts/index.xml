@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ML in Practical</title>
+    <link>https://tiensu.github.io/posts/</link>
+    <description>Recent content in Posts on ML in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Triển khai Deep Learning model- Phần 1 Sử dụng Flask </title>
+      <link>https://tiensu.github.io/posts/26_deploy_dl_model_using_flask_and_tf/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/26_deploy_dl_model_using_flask_and_tf/</guid>
+      <description>Bạn đã train xong một DL model đủ tốt, giờ là lúc bạn đưa cho mọi ngưởi sử dụng nó. Đây chính là giai đoạn Deployment trong vòng đời của một AI model.
+Có một vài các để deploy DL model, từ đơn giản đến phức tạp, phụ thuộc vào quy mô, tính chất bài toán của bạn. Trong bài viết này, mình sẽ trình bày một cách đơn giản để deploy DL model như một ứng dụng web sử dụng Flask. Cách này phù hợp với bài toán nhỏ, số lượng truy cập ít. Trong phần 2, mình sẽ trình bày cách khác phức tạp hơn, phục vụ cho các bài toán lớn hơn, với số lượng request nhiều hơn.</description>
+    </item>
+    
+    <item>
+      <title>Các phương pháp Optimization - Gradient Descent</title>
+      <link>https://tiensu.github.io/posts/25_optimization_methods_gradient-descent/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/25_optimization_methods_gradient-descent/</guid>
+      <description>&amp;ldquo;Nearly all of deep learning is powered by one very important algorithm: Stochastic Gradient Descent (SGD)&amp;rdquo; – Goodfellow et al.
+Từ bài trước chúng ta đã biết rằng để model có thể dự đoán đúng thì phải tìm được giá trị phù hợp cho $W$ và $b$. Nếu chúng ta chỉ dựa hoàn toàn vào việc chọn ngẫu nhiên thì gẫn như không bao giờ có thể tìm được giá trị mong muốn. Thay vì thế, chúng ta cần định nghĩa một thuật toán tối ưu (optimization) và sử dụng nó để cải thiện $W$ và $b$. Trong bài này, chúng ta sẽ tìm hiểu một thuật toán tối ưu được sử dụng rất rất phổ biến trong NN and DL model - Gradient Descent (GD) và các biến thể của nó.</description>
+    </item>
+    
+    <item>
+      <title>Parameterized Learning</title>
+      <link>https://tiensu.github.io/posts/24_parameterized_learning/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/24_parameterized_learning/</guid>
+      <description>Bạn có biết thuật toán kNN - một trong những thuật toán đơn giản nhất của ML? Về bản chất, nó không &amp;ldquo;học&amp;rdquo; bất cứ điều gì từ dữ liệu mà chỉ đơn giản là lưu dữ liệu bên trong model, và tại thời điểm dự đoán, nó so sánh dữ liệu cần dự đoán với dữ liệu trong tập training. Rõ ràng với cách làm việc như vậy thì ưu điểm lớn nhất của kNN là không mất thời gian training model. Không không cần quá quan tâm về độ chính xác thì ưu điểm này chính là lý do mà kNN vẫn còn được sử dụng trong một số trường hợp.</description>
+    </item>
+    
+    <item>
+      <title>Dành cho người yêu sách</title>
+      <link>https://tiensu.github.io/posts/23_for_book_lover/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/23_for_book_lover/</guid>
+      <description>Bạn có là người thích đọc sách nhưng ngân quỹ có giới hạn, không đủ tiền để mua sách &amp;ldquo;xịn&amp;rdquo; trên amazon, hay trên các tạp chí khoa học, &amp;hellip;? Bạn đã từng trải qua cảm giác gặp một cuốn sách/bài báo rất hay. Bạn rất muốn tìm bản &amp;ldquo;full không che&amp;rdquo; để đọc nhưng không thể tìm được bản free trên mạng? (Mình đã từng mất cả ngày seach google, đăng ký tài khoản ở cả những trang web nước ngoài nhưng vẫn không tìm được. Có chăng thì chỉ là bản sample, hoặc không có code đi kèm) Lên amazon hoặc trang bán sách trực tiếp của tác giả xem thì giá bán là XXX đô la.</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 3</title>
+      <link>https://tiensu.github.io/posts/22_convolutional_neural_network_3/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/22_convolutional_neural_network_3/</guid>
+      <description>Tiếp tục chuỗi các bài viết về CNN, trong bài này mình sẽ chia sẻ với các bạn một số &amp;ldquo;common patterns 7 rules&amp;rdquo; trong việc xây dựng kiến trúc CNN. Nắm rõ những &amp;ldquo;patterns &amp;amp; rules&amp;rdquo; này sẽ giúp các bạn giảm thiếu thời gian và công sức khá nhiều trong các dự án của các bạn!
+3. Common Architectures &amp;amp; Training Patterns
+Qua 2 bài viết trước, chúng ta đã biết, CNN được tạo thành từ 4 loại layers chủ yếu, bao gồm: CONV, POOL, RELU, và FC. Sắp xếp các layers này với nhau theo một thứ tự nhất định ta sẽ một CNN (gọi tên đầy đủ là kiến trúc CNN).</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 2</title>
+      <link>https://tiensu.github.io/posts/21_convolutional_neural_network_2/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/21_convolutional_neural_network_2/</guid>
+      <description>Vì sử dụng trực tiếp raw pixel của image nên so với CNN, FCN (Fully Connected Network) có 2 nhược điểm kích thước của image tăng lên:
+ Hiệu năng giảm mạnh. Kích thước của mạng tăng nhanh. Kết quả thực nghiệm cho thấy, khi áp dụng Fully Connected Network vào bộ dataset CIFAR-10, độ chính xác chỉ đạt được 52%.  CNN, theo một cách khác, sắp xếp các layers theo dạng 3D volume với 3 chiều: Width, Height, Depth. Các neurons trong mỗi layer chỉ kết nối tới 1 small region của layer trước đó - gọi là local connectivity.</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 1</title>
+      <link>https://tiensu.github.io/posts/20_convolutional_neural_network_1/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/20_convolutional_neural_network_1/</guid>
+      <description>Sau khi đã tìm hiểu cơ bản về Neural Network, chúng ta sẽ đi tìm hiểu về CNN. CNN là một dạng kiến trúc Neural Network đóng vai trò vô cùng quan trọng trong Deep Learning.
+Trong Feedfoward Neural Network, mỗi neural trong một layer được kết nối đến tất cả các nodes của layer tiếp theo. Ta gọi điều này là Fully Connected (FC) layer. Tuy nhiên, trong CNNs, FC layers chỉ được sử dụng ở 1 vài layers cuối. Các layers còn lại được gọi là convolutional layers.
+Một hàm kích hoạt (activation function) (thường là ReLU) được áp dụng tới output của các convolutional layers.</description>
+    </item>
+    
+    <item>
+      <title>Neural Network cơ bản (Phần 2)</title>
+      <link>https://tiensu.github.io/posts/19_neural_network_fundamentals_2/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/19_neural_network_fundamentals_2/</guid>
+      <description>Trong quá trình tìm hiểu về mạng NN, mình thấy khá là khó hiểu, đặc biệt với các bạn không mạnh về toán. Bài này, mình sẽ diễn giải cách thức làm việc của NN một cách trực quan, dễ hiểu cho các bạn thông qua một ví dụ cụ thể.
+1. Nhắc lại lý thuyết
+Giả sử ta có mạng NN như sau:
+ Quá trình training model bao gồm 2 phases:
+1.1 Forward Path
+Phase này tính toán (dự đoán) đầu ra $o_1, o_2$, tính loss.
+Giả sử activation là hàm sigmoid:  Ta sẽ tính lần lượt các đại lượng trung gian:</description>
+    </item>
+    
+    <item>
+      <title>Neural Network cơ bản (Phần 1)</title>
+      <link>https://tiensu.github.io/posts/18_neural_network_fundamentals_1/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/18_neural_network_fundamentals_1/</guid>
+      <description>Trong bài này chúng ta sẽ cùng nhau tìm hiểu lys thuyết cơ bản về mạng thần kinh nhân tạo (neural network):
+ Cấu trúc của neural network. Thuật toán lan truyền (propagation) và lan truyền ngược (backpropagation).  Những kiến thức trong bài này sẽ là tiền đề để các bạn tiến xa hơn trong thế giới của Deep Learning.
+1. Neural Network là gì?
+Neural Networks là các khối (blocks) để xây dựng lên các hệ thống Deep Learning. Chúng ta sẽ bắt đầu với việc xem xét ở mức &amp;quot;high-level&amp;quot; của Neural Network, bao gồm cả mối liên hệ của chúng với não bộ của con người.</description>
+    </item>
+    
+    <item>
+      <title>Nghề Data Scientis - Lý thuyết và thực tế - Sự khác biêt</title>
+      <link>https://tiensu.github.io/posts/17_data_scientist_theory_and_real/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/17_data_scientist_theory_and_real/</guid>
+      <description>Bạn thường nghe nói Data Scientist là nghê sexy nhất thế kỷ 21, với mức lương cao ngất ngưởng, tạo ra những sản phầm có tầm ảnh hưởng lớn, được mọi người ngưỡng mộ, blabla. Và thế là bạn quyết định chuyển hướng sang học làm data scientist. Bạn lao vào học toán (đại số tuyến tính, xác suất thống kê, đạo hàm, tích phân, &amp;hellip;), học lập trình (python, R, &amp;hellip;), học các thuật toán ML, cách sử dụng các thư viện ML. Thậm chí có bạn còn chơi lớn, học luôn cao học về nghành này vì &amp;ldquo;hình như&amp;rdquo; ngành này yêu cầu phải có trình độ cao học trở lên (bản thân mình chính là 1 ví dụ của trường hợp này, :D).</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 14: Tuning Subsample</title>
+      <link>https://tiensu.github.io/posts/xgboost/16_tuning_subsampling/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/16_tuning_subsampling/</guid>
+      <description>Trong quá trình training, XGBoost thường xuyên phải thực hiện công việc chọn lựa ngẫu nhiên tập dữ liệu con (subsamples) từ tập dữ liệu gốc ban đầu. Các kỹ thuật để làm việc này được gọi bằng cái tên Stochastic Gradient Boosting (SGB).
+Trong bài này chúng ta sẽ cùng tìm hiểu về SGB và tuning SGB để tìm ra kỹ thuật phù hợp với bài toán.
+1. Tuning Row Subsampling
+Row subsampling liên quan đến việc chọn ngẫu nhiên các samples từ tập train set. Trong XGBoost, giá trị của row subsampling được chỉ ra bởi tham số subsample.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 13: Tuning Learning_Rate và số lượng của Decision Tree</title>
+      <link>https://tiensu.github.io/posts/xgboost/15_tuning_learning_rate_and_number_decition_tree/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/15_tuning_learning_rate_and_number_decition_tree/</guid>
+      <description>Một vấn đề còn tồn tại của XGBoost là khả năng học trên tập dữ liệu huấn luyện một cách rất nhanh chóng. Điều này đôi khi dễ dẫn đến hiện tượng Overfitting, mặc dù XGBoost đã sử dụng regularization. Một cách hiệu quả để điều khiển quá trình học của XGBoost là sử dụng learning_rate (hay eta).
+Trong bài này, chúng ta sẽ cùng nhau tune learning_rate, learning_rate kết hợp với số lượng trees để tìm ra giá trị tối ưu của hai tham số này.
+1. Tuning Learning_Rate
+Chúng ta tiếp tục sử dụng Otto dataset trong bài này.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 12: Tuning số lượng và kích thước của Decision Tree</title>
+      <link>https://tiensu.github.io/posts/xgboost/14_tuning_number_and_size_decision_tree/</link>
+      <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/14_tuning_number_and_size_decision_tree/</guid>
+      <description>Ý tưởng cơ bản của thuật toán Gradient Boosting là lần lượt thêm các decision trees nối tiếp nhau. Tree thêm vào sau sẽ cố gắng giải quyết những sai sót của tree trước đó. Câu hỏi đặt ra là bao nhiêu trees (weak learner hay estimators) là đủ?
+Trong bài nãy, hãy cùng nhau tìm hiều cách lựa chọn số lượng và kích thước của các trees phù hợp với từng bài toán của các bạn.
+1. Tune số lượng của decision tree
+Thông thường khi sử dụng GBM, ta thường chọn số lượng trees tương đối nhỏ. Có thể là vài chục, vài trăm, hoặc vài nghìn.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 11: Train XGBoost model trên AWS</title>
+      <link>https://tiensu.github.io/posts/xgboost/13_train_xgboost_models_on_aws/</link>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/13_train_xgboost_models_on_aws/</guid>
+      <description>Thư viện XGBoost được thiết kế để tận dụng tối đa sức mạnh của phần cứng hệ thống, bao gồm tất cả CPU cores và bộ nhớ. Trong bài viết này, ta sẽ cùng nhau tìm hiểu cách thiết lập một server trên AWS để train XGBoost model, sao cho vừa nhanh, vừa rẻ! :D
+Bài viết gồm 4 phần:
+ Tạo tài khoản AWS Chạy AWS EC2 Instance Kết nối đến EC2 Instance và chạy code train XGBoost model Đóng AWS EC2 Instance  Chú ý quan trọng: Sẽ mất khoảng 1-2$ chi phí để sử dụng các dịch vụ của AWS trong bài viết này.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 10: Cấu hình Multithreading cho XGBoost model</title>
+      <link>https://tiensu.github.io/posts/xgboost/12_multithreading-xgboost/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/12_multithreading-xgboost/</guid>
+      <description>Thư viện XGBoost được thiết kế để làm việc h iệu quả vớicơ chế xử lý song song trên nhiều core (multithreading) của phần cứng, cả trong quá trình train và dự đoán. Hãy cùng nhau tìm hiểu cơ chế đó thông qua bài viết này.
+1. Chuẩn bị dataset
+Chúng ta sẽ sử dụng Otto Group Product Classification Challenge dataset để minh họa cơ chế multithreading của thư viện XGBoost. Để download dataset này, bạn cần đăng nhập vào Kaggle. có 2 file là train.csv và test.csv. Vì chỉ có file train.csv là có nhãn nên ta sẽ sử dụng file này.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 9: Cấu hình Early_Stopping cho XGBoost model</title>
+      <link>https://tiensu.github.io/posts/xgboost/11_early_stopping/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/11_early_stopping/</guid>
+      <description>Overfitting vẫn luôn là một vấn đề làm đau đầu những kỹ sư AI. Trong bài viết này chúng ta sẽ cùng tìm hiểu cách thức monitor (giám sát) performance (hiệu năng) của XGBoost model trong suốt quá trình train. Từ đó cấu hình early stopping để quyết định khi nào thì nên dừng lại quá trình này để tránh hiện tượng overfitting. Bài viết gồm 2 phần:
+ Monitor hiệu năng của XGBoost model thông qua learning curve (đường cong học tập). Cấu hình early stopping.  1. Giám sát hiệu năng của XGBoost model
+Để monitor porformance của XGBoost model, ta cần cung cấp cả train set, test set và một metric (chỉ tiêu đánh giá) khi train model (gọi hàm model.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 8: Lựa chọn features cho XGBoost model</title>
+      <link>https://tiensu.github.io/posts/xgboost/10_feature-selection/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/10_feature-selection/</guid>
+      <description>Feature selection hay lựa chọn features là một bước tương đối quan trọng trước khi train XGBoost model. Lựa chọn đúng các features sẽ giúp model khái quát hóa vấn đề tốt hơn (low variance) -&amp;gt; đạt độ chính xác cao hơn.
+Trong bài viết này, hãy cùng xem xét về cách dùng thư viện XGBoost để tính importance scores và thể hiện nó trên đồ thị, sau đó lựa chọn các features để train XGBoost model dựa trên importance scores đó.
+1. Tính và hiển thị importance score trên đồ thị
+1.1 Cách 1
+Model XGBoost đã train sẽ tự động tính toán mức độ quan trọng của các features.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 7: Lưu và sử dụng XGBoost model</title>
+      <link>https://tiensu.github.io/posts/xgboost/09_save-load-xgboost-model/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/09_save-load-xgboost-model/</guid>
+      <description>Giả sử bạn đã train xong một XGBoost model đạt được độ chính xác rất cao. Câu hỏi đặt ra là làm sao lưu lại model đó để sử dụng về sau (không phải mất công train lại model mỗi khi cần sử dụng)?
+Trong bài viết này, chúng ta hãy cùng tìm hiểu cách thức lưu một XGBoost model thành 1 file sử dụng Python pickle API. Nội dung bài viết gồm 2 phần chính:
+ Lưu và sử dụng XGBoost model bằng thư viện pickle. Lưu và sử dụng XGBoost model bằng thư viện joblib.  1. Lưu và sử dụng XGBoost model bằng thư viện pickle.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 6: Trực quan hóa XGBoost model</title>
+      <link>https://tiensu.github.io/posts/xgboost/08_visualize-xgboost-model/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/08_visualize-xgboost-model/</guid>
+      <description>Ta đã biết, XGBoost thực chất là tập hợp gồm nhiều decision tree. Việc thể hiện mỗi decision tree đó trên đồ thì sẽ giúp chúng ta hiểu sâu sắc hơn quá trình boosting khi đưa vào một tập dữ liệu. Trong bài này, hãy cùng tìm hiểu cách thức thể hiện đó từ một XGBoost model đã được train.
+1. Vẽ một decision tree đơn lẻ
+XGBoost Python API cung cấp một hàm cho việc vẽ các decision tree của một XGBoost model đã train, đó là plot_tree(). Hàm này nhận một tham số đầu tiên chính là model cần thể hiện.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 5: Đánh giá hiệu năng của XGBoost model</title>
+      <link>https://tiensu.github.io/posts/xgboost/07_evaluate-xgbosst-models/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/07_evaluate-xgbosst-models/</guid>
+      <description>Mục đích của việc phát triển mô hình dự đoán là tạo ra một mô hình có độ chính xác cao khi kiểm tra trên bộ dữ liệu độc lập với dữ liệu train (gọi là unseen data). Trong bài viết này, chúng ta cùng tìm hiểu hai phương pháp đánh giá một XGBoost model:
+ Sử dụng train và test dataset. Sử dụng k-fold cross-validation. Bạn hoàn toàn có thể áp dụng những phương pháp trong bài này cho những ML models khác. Tại vì dạo này mình đang tìm hiểu vê XGBoost model nên mình lấy XGBoost model làm ví dụ thôi.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 4: Chuẩn bị dữ liệu cho XGBoost model</title>
+      <link>https://tiensu.github.io/posts/xgboost/06_data-preparation-for-gradient-boosting/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/06_data-preparation-for-gradient-boosting/</guid>
+      <description>XGBoost là một thuật toán thuộc họ Gradient Boosting. Những ưu điểm vượt trội của nó đã được chứng minh qua các cuộc thi trên kaggle. Dữ liệu đầu vào cho XGBoost model phải ở dạng số. Nếu dữ liệu không ở dạng số thì phải được chuyển qua dạng số (numeric) trước khi đưa vào XGBoost model để train. Có một vài phương pháp để thực hiện việc này, hãy cùng nhau điểm qua trong phần còn lại của bài viết.
+Sau khi xem hết bài viết này, bạn sẽ biết:
+ Làm thế nào để mã hóa chuỗi (string) đầu ra cho việc phân loại?</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 3: Xây dựng XGBoost model</title>
+      <link>https://tiensu.github.io/posts/xgboost/05_build-xgboost-model/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/05_build-xgboost-model/</guid>
+      <description>XGBoost là một thuật toán rất mạnh mẽ, tối ưu hóa về tốc độ và hiệu năng cho việc xây dựng các mô hình dự đoán. Một thống kê chỉ ra rằng, hầu hết những người chiến thắng trong các cuộc thi trên Kaggle đều sử dụng thuật toán này. Trong bài viết này, hãy cùng nhau xây dựng một mô hình XGBoost đơn giản để có thể hiểu được cách thức làm việc của nó.
+Nội dung bài viết chia thành các phần:
+ Cài đặt thư viện XGBoost Chuẩn bị dữ liệu Train XGBoost model Đánh giá XGBoost model Nguồn tham khảo  1.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 2: Toàn cảnh về Ensemble Learning - Phần 2</title>
+      <link>https://tiensu.github.io/posts/xgboost/04_comprehensive_guide_to_ensemble_model_2/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/04_comprehensive_guide_to_ensemble_model_2/</guid>
+      <description>Tiếp tục phần 2 của loạt bài tìm hiểu toàn cảnh về Ensemble Learning, trong phần này ta sẽ đi qua một số thuât toán thuộc nhóm Bagging và Boosting.
+ Các thuật toán thuộc nhóm Bagging bao gồm:  Bagging meta-estimator Random forest   Các thuật toán thuộc họ Boosting bao gồm:  AdaBoost Gradient Boosting (GBM) XGBoost (XGBM) Light GBM CatBoost    Để minh họa cho các thuật toán kể trên, mình sẽ sử dụng bộ dữ liệu Loan Prediction Problem.
+1. Bagging techniques
+1.1 Bagging meta-estimator
+Bagging meta-estimator là thuật toán sử dụng cho cả 2 loại bài toán classification (BaggingClassifier) và regression (BaggingRegressor).</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 1: Toàn cảnh về Ensemble Learning - Phần 1</title>
+      <link>https://tiensu.github.io/posts/xgboost/03_comprehensive_guide_to_ensemble_model_1/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/03_comprehensive_guide_to_ensemble_model_1/</guid>
+      <description>1. Giới thiệu về Ensemble Learning
+Giả sử chúng ta có một bài toán phân loại sản phẩm sử dụng ML. Team của bạn chia thành 3 nhóm, mỗi nhóm sử dụng một thuật toán khác nhau và đánh giá độ chính xác trên tập validation set:
+ Nhóm 1: Sử dụng thuật toán Linear Regression. Nhóm 2: Sử dụng thuật toán k-Nearest Neighbour. Nhóm 3: Sử dụng thuật toán Decision Tree. Độ chính xác của mỗi nhóm lần lượt là 70%, 67% và 76%. Điều này hoàn toàn dễ hiểu bởi vì 3 models làm việc theo những các khác nhau.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Giới thiệu chuỗi bài viết về thuật toán XGBoost</title>
+      <link>https://tiensu.github.io/posts/xgboost/02_xgboost-model-serial-introduction/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/xgboost/02_xgboost-model-serial-introduction/</guid>
+      <description>XGBoost là một thuật toán rất được quan tâm gần đây vì những ưu điểm vượt trội của nó so với các thuật toán khác. Vì vậy, mình quyết định sẽ viết một chuỗi các bài về chủ để này.
+Nội dung các bài viết sẽ chủ yếu tập trung vào code thực hành, sẽ có (ít) lý thuyết toán để các bạn đỡ bị đau đầu. :D
+Danh sách các bài viết (sẽ cập nhật dần dần):
+ Bài 1: Toàn cảnh về Ensemble models - Phần 1 Bài 2: Toàn cảnh về Ensemble models - Phần 2 Bài 3: Xây dựng model XGBoost đầu tiên Bài 4: Chuẩn bị dữ liệu cho XGBoost model Bài 5: Các phương pháp đánh giá độ chính xác của XGBoost model Bài 6: Trực quan hóa XGBoost model Bài 7: Lưu và sử dụng XGBoost model Bài 8: Lựa chọn Features cho XGBoost model Bài 9: Cấu hình Early_Stopping cho XGBoost model Bài 10: Cấu hình Multi-Threading cho XGBoost model Bài 11: Train XGBoost model trên AWS Bài 12: Tuning số lượng và kích thước của Decision Tree Bài 13: Tuning Learning_Rate và số lượng của Decision Tree Bài 14: Tuning Subsample  </description>
+    </item>
+    
+    <item>
+      <title>Lưu ý khi lập kế hoạch cho một dự án AI</title>
+      <link>https://tiensu.github.io/posts/01_ai-project-planing/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/posts/01_ai-project-planing/</guid>
+      <description>Trong bất kỳ dự án nào, đứng ở góc độ của nhà đầu tư và người quản lý, họ đều muốn biết được mốc thời gian dự án có thể được hoàn thành trước khi thực sự bắt đầu dự án. Bởi vì thông tin này giúp cho họ đưa ra quyết định về ngân sách dành cho dự án, khả năng thu hồi vốn và sinh lời (ROI). Cuối cùng là kết luận xem dự án có đáng để đầu tư hay không?
+Các dự án trong lĩnh vực phát triển phần mềm cũng không ngoại lệ. Đối với các dự án phần mềm thông thường, hiện nay, có rất nhiều công cụ, kỹ thuật có thể giúp chúng ta lên kế hoạch, ước lượng khối lượng công việc ban đầu tuơng đối dễ dàng và đầy đủ.</description>
+    </item>
+    
+  </channel>
+</rss>

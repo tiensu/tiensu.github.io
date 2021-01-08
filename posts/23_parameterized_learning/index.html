@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>
+        Parameterized Learning | ML in Practical
+    </title>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+
+
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css" />
+
+
+
+
+
+    <link rel="stylesheet" href="https://tiensu.github.io/style.min.388cbd0ce358245ec0dfcee3b8889b3cc50e2bb8a5b2bcd40f8bd092ebefb81a.css" integrity="sha256-OIy9DONYJF7A387juIibPMUOK7ilsrzUD4vQkuvvuBo=" />
+
+
+
+
+    <script type="application/javascript">
+        var doNotTrack = false;
+        if (!doNotTrack) {
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-180180568-1', 'auto');
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <header id="header">
+
+        <script type="application/javascript">
+            var doNotTrack = false;
+            if (!doNotTrack) {
+                (function(i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-180180568-1', 'auto');
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview');
+            }
+        </script>
+
+        <div class="header_container">
+            <h1 class="sitetitle">
+                <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a>
+            </h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="https://tiensu.github.io/">Home</a></li>
+
+                    <li>
+                        <a href="/about/">
+
+                            <span>About</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/tags/">
+
+                            <span>Tags</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/archives/">
+
+                            <span>Archives</span>
+                        </a>
+                    </li>
+
+                    <li class="hide-sm"><a href="https://tiensu.github.io/index.xml" type="application/rss+xml">RSS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ['$', '$'],
+                        ['\\(', '\\)']
+                    ],
+                    displayMath: [
+                        ['$$', '$$'],
+                        ['\\[', '\\]']
+                    ],
+                    processEscapes: true,
+                    processEnvironments: true
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                }
+            };
+
+            window.addEventListener('load', (event) => {
+                document.querySelectorAll("mjx-container").forEach(function(x) {
+                    x.parentElement.classList += 'has-jax'
+                })
+            });
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    </header>
+
+
+    <section id="main">
+        <article class="post content">
+            <h2 class="title">Parameterized Learning</h2>
+            <div class="post_content">
+                <p>Bạn có biết thuật toán kNN - một trong những thuật toán đơn giản nhất của ML? Về bản chất, nó không &ldquo;học&rdquo; bất cứ điều gì từ dữ liệu mà chỉ đơn giản là lưu dữ liệu bên trong model, và tại thời điểm dự đoán, nó so sánh dữ liệu
+                    cần dự đoán với dữ liệu trong tập training. Rõ ràng với cách làm việc như vậy thì ưu điểm lớn nhất của kNN là không mất thời gian training model. Không không cần quá quan tâm về độ chính xác thì ưu điểm này chính là lý do mà kNN vẫn
+                    còn được sử dụng trong một số trường hợp. Hạn chế của kNN chỉ xuất hiên khi gặp bài toán mà sử dụng lượng dữ liệu lớn. Lúc này thời gian dự đoán của kNN sẽ rất lâu, và đôi khi không thể sử dụng được trong thực tế.</p>
+                <p>Một các tiếp cận khác của ML model mà ở đó nó có thể học được các patterns từ dữ liệu trong suốt quá trình training. Sau đó, ở giai đoạn dự đoán, ML model đó có thể thực hiện rất nhanh chóng để đưa ra kết quả. Dạng này của ML được gọi
+                    là <code>parameterized learning</code>.</p>
+                <p>Dưới đây là định nghĩa chính thống từ tác giả:</p>
+                <p><em>“A learning model that summarizes data with a set of parameters of fixed size
+(independent of the number of training examples) is called a parametric model. No
+matter how much data you throw at the parametric model, it won’t change its mind
+about how many parameters it needs.”</em> – Russell and Norvig (2009).</p>
+                <p>Có thể nói <code>parameterized learning</code> là nền tằng của các thuật toán ML và DL hiện đại ngày nay. Trong bài này, chúng ta sẽ cùng xem xét chi tiết một vài khía cạnh về nó!</p>
+                <p><strong>1. Bốn thành phần cơ bản của Parameterized Learning</strong></p>
+                <p>Hiểu một cách đơn giản, <code>parameterization</code> là quá trình định nghĩa các tham số cần thiết cho một model. Nó bao gồm 4 thành phần: <em>Data, Score Function, Loss Function, Weight-Bias</em>.</p>
+                <p><em><strong>1.1 Data</strong></em></p>
+                <p>Data ở đây chính là input data đưa vào để model học, nó bao gồm <code>Data Points</code> (<em>VD: Các raw pixel của bức anh, các trích xuất đặc trưng của đối tượng, &hellip;</em>) và nhãn kết hợp với Data Points.</p>
+                <p>Data thường được biểu diễn dưới dạng ma trận (<em>gọi là <strong>desing matrix</strong></em>). Mỗi hàng của matrix đại diện cho một Data Point, trong khi mỗi cột của nó thể hiện moojtoj feature.</p>
+                <p>Ví dụ, xem xét một dataset gồm 1000 bức ảnh màu, mỗi ảnh có kích thước 96x96x3 pixels. Design Matrix cho dataset này sẽ là: $X \subseteq R^{100 \times (32 \times 32 \times 3)}$, với $X_i$ là ảnh thức $i$ trong $R$. Cùng với Design Matrix,
+                    ta cũng định nghĩa vector $y$ mà $y_i$ là nhãn cho ảnh thứ $i$ trong dataset.</p>
+                <p><em><strong>1.2 Scroring Function</strong></em></p>
+                <p>Hàm này chấp nhận một input data, sau đó ánh xạ nó sang nhãn tương ứng.</p>
+                <p><strong>INPUT_IMAGES =&gt; F(INPUT_IMAGES) =&gt; OUTPUT_CLASS_LABELS</strong></p>
+                <p><em><strong>1.3 Loss Function</strong></em></p>
+                <p>Loss Function đánh giá mức độ phù hợp giữa nhãn dự đoán (<em>predicted label</em>) và nhãn thực tế (<em>ground-truth label</em>). Giá trị của hàm này tỉ lệ nghịch với mức độ phù hợp hay độ chính xác của model. Mục tiêu của chúng ta khi
+                    training AI model là tối thiểu hóa loss funtion.</p>
+                <p><em><strong>1.4 Weights and Biases</strong></em></p>
+                <p>Weight Matrix (<em>W</em>) và vector bias (<em>b</em>) là những cái được điều chỉnh, cập nhật trong quá trình training AI model, dựa trên output của Score Function và Loss Function. Mục đích cuối cùng cũng vẫn là tăng độ chính xác phân
+                    loại của AI model.</p>
+                <p>Tiếp theo, chúng ta sẽ sử dụng 4 thành phần này để xây dựng một <code>linear classification</code>.</p>
+                <p><strong>2. Linear Classification</strong></p>
+                <p>Phần này, chúng ta sẽ đi sâu hơn 1 chút về toán, tìm hiểu cách mà <code>parameterized learning</code> áp dụng vào machine learning.</p>
+                <p>Giả sử chúng ta có một bộ dataset gồm N ảnh, ký hiệu là $x_i, i = 1, 2, &hellip;, N$. Mỗi $x_i$ có một nhãn tương ứng $y_j, j = 1, 2, &hellip;, K$. Nói một cách khác, chúng ta có N Data Points, mỗi Data Point có D chiều, và được chia thành
+                    K nhóm phân biệt.</p>
+                <p>Ta định nghĩa Score Function thông qua một hàm tuyến tính đơn giản như sau:</p>
+                <p>$f(x_i, W, b) = Wx_i + b$</p>
+                <p><strong>Tham khảo</strong></p>
+                <ul>
+                    <li><a href="https://www.pyimagesearch.com/">Pyimagesearch</a></li>
+                    <li><a href="https://d2l.ai/chapter_convolutional-neural-networks/index.html">Dive into Deep Learning</a></li>
+                    <li><a href="https://cs231n.github.io/convolutional-networks/">CS231</a></li>
+                </ul>
+
+            </div>
+            <div class="info post_meta">
+                <time datetime=2020-11-10T00:00:00Z class="date">Tuesday, November 10, 2020</time>
+
+                <ul class="tags">
+
+                    <li> <a href="https://tiensu.github.io/tags/ai">AI</a> </li>
+
+                    <li> <a href="https://tiensu.github.io/tags/deep-learning">Deep Learning</a> </li>
+
+                    <li> <a href="https://tiensu.github.io/tags/neural-network">Neural Network</a> </li>
+
+                    <li> <a href="https://tiensu.github.io/tags/cnn">CNN</a> </li>
+
+                </ul>
+
+
+            </div>
+            <div class="clearfix"></div>
+        </article>
+
+        <div class="other_posts">
+
+            <a href="https://tiensu.github.io/posts/22_convolutional_neural_network_3/" class="prev">Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 3</a>
+
+
+            <a href="https://tiensu.github.io/posts/for_book_lover/" class="next">Dành cho người yêu sách</a>
+
+        </div>
+        <aside id="comments">
+        </aside>
+
+
+    </section>
+
+    <a id="back_to_top" title="Go To Top" href="#">
+        <span>
+    <svg viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"></path>
+    </svg>
+  </span>
+    </a>
+
+    <footer id="footer">
+        <p>
+            <span>&copy; 2020 <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a> </span>
+            <span>Built with <a rel="nofollow" target="_blank" href="https://gohugo.io">Hugo</a></span>
+            <span>Theme by <a rel="nofollow" target="_blank" href="https://github.com/wayjam/hugo-theme-mixedpaper">WayJam</a></span>
+        </p>
+        <script src="https://tiensu.github.io/js/main.min.8b182175f5874aeed0acc0979345c98d4bde22208ec4f36cc1d6e3102acb4b10.js" integrity="sha256-ixghdfWHSu7QrMCXk0XJjUveIiCOxPNswdbjECrLSxA=" crossorigin="anonymous" async></script>
+    </footer>
+
+</body>
+
+</html>

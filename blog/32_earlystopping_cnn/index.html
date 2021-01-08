@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/convolution-neural-network"
+          class="text-primary">Convolution Neural Network</a>
+        
+        <a href="/categories/image-classification"
+          class="text-primary">Image classification</a>
+        
+        <h2>Sử dụng kỹ thuật EarlyStopping khi huấn luyện CNN model</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>05 December 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/30_cat_dog.jpeg" class="img-fluid w-100 mb-4" alt="Sử dụng kỹ thuật EarlyStopping khi huấn luyện CNN model">
+        
+        <div class="content mb-5">
+          <p>Nếu như bài trước, toàn bộ dữ liệu được đưa vào training, thì bài này, ta sẽ chia tập dữ liệu thành 2 phần:</p>
+<ul>
+<li>Train set: Dùng để huấn luyện model.</li>
+<li>Validation set: Dùng đễ đánh giá model trong suốt quá trình training.</li>
+</ul>
+<p>OK, hãy bắt đầu!</p>
+<p>Trước tiên, download bộ dataset <a href="https://www.kaggle.com/c/dogs-vs-cats/data">cat-and-dog</a> và giải nén về máy tính của bạn tại thư mục làm việc. Ta chỉ cần download file train.zip.</p>
+<p>Bộ dataset này bao gồm 25.000 bức ảnh, chia thành 2 lớp chó và mèo. Mỗi lớp có 12.500 ảnh, kích thước 150x150.</p>
+<p>Ta tiếp tục sử dụng lớp <code>ImageDataGenerator</code> để chuẩn bị dữ liệu cho training model. Lớp <code>ImageDataGenerator</code> yêu cầu cấu trúc thư mục dataset có dạng như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">-</span> training
+    <span style="color:#f92672">-</span> <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">1</span>
+        <span style="color:#f92672">-</span> image <span style="color:#ae81ff">1</span>
+        <span style="color:#f92672">-</span> image <span style="color:#ae81ff">2</span>
+        <span style="color:#f92672">-</span> <span style="color:#f92672">...</span>
+    <span style="color:#f92672">-</span> <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">2</span>
+        <span style="color:#f92672">-</span> image <span style="color:#ae81ff">3</span>
+        <span style="color:#f92672">-</span> image <span style="color:#ae81ff">4</span>
+        <span style="color:#f92672">-</span> <span style="color:#f92672">...</span>
+    <span style="color:#f92672">-</span> <span style="color:#f92672">...</span>
+<span style="color:#f92672">-</span> validation
+    <span style="color:#f92672">-</span> <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">1</span>
+        <span style="color:#f92672">-</span> image <span style="color:#ae81ff">5</span>
+        <span style="color:#f92672">-</span> image <span style="color:#ae81ff">6</span>
+        <span style="color:#f92672">-</span> <span style="color:#f92672">...</span>
+    <span style="color:#f92672">-</span> <span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">2</span>
+        <span style="color:#f92672">-</span> image <span style="color:#ae81ff">7</span>
+        <span style="color:#f92672">-</span> image <span style="color:#ae81ff">8</span>
+</code></pre></div><p>Để chuẩn hóa cấu trúc thư mục như yêu cầu, ta có thể tự viết code để copy các ảnh vào đúng thư mục mong muốn. Hoặc có 1 cách đơn giản hơn là sử dụng thư viện <a href="https://pypi.org/project/split-folders/">split-folders</a>.</p>
+<p>Cài đặt thư viện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install split<span style="color:#f92672">-</span>folders
+</code></pre></div><p>Sử dụng lệnh sau để tạo dữ liệu theo cấu trúc mong muốn:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">splitfolders cats<span style="color:#f92672">-</span><span style="color:#f92672">and</span><span style="color:#f92672">-</span>dogs <span style="color:#f92672">--</span>ratio <span style="color:#f92672">.</span><span style="color:#ae81ff">8</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">--</span>output cat<span style="color:#f92672">-</span>dog<span style="color:#f92672">-</span>dataset
+</code></pre></div><p>Ta được thư mục output <code>cat-dog-dataset</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cat<span style="color:#f92672">-</span>dog<span style="color:#f92672">-</span>dataset
+<span style="color:#960050;background-color:#1e0010">├──</span> train
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> cats
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">└──</span> dogs
+<span style="color:#960050;background-color:#1e0010">└──</span> val
+    <span style="color:#960050;background-color:#1e0010">├──</span> cats
+    <span style="color:#960050;background-color:#1e0010">└──</span> dogs
+</code></pre></div><p>Có dữ liệu chuẩn chỉ rồi, giờ ta sẽ bắt tay vào viết code để train model.</p>
+<p>Đầu tiên, như thường lệ vẫn là import các thư viện sử dụng:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> random
+<span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+<span style="color:#f92672">import</span> shutil
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">from</span> tensorflow <span style="color:#f92672">import</span> keras
+<span style="color:#f92672">from</span> tensorflow.keras.optimizers <span style="color:#f92672">import</span> RMSprop
+<span style="color:#f92672">from</span> tensorflow.keras.callbacks <span style="color:#f92672">import</span> EarlyStopping
+<span style="color:#f92672">from</span> tensorflow.keras.preprocessing.image <span style="color:#f92672">import</span> ImageDataGenerator
+
+config <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>ConfigProto()
+config<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True
+session <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>InteractiveSession(config<span style="color:#f92672">=</span>config)
+</code></pre></div><p>Ở đây, ngoài các thư viện, các lớp quen thuộc, ta có sử dụng thêm hàm <code>EarlyStopping</code> của lớp callback. Hàm này cho phép model dừng  training khi nó thoả mãn một tiêu chí về độ chính xác mà người dùng có thể định nghĩa được. So với hàm callback tự viết như trong các bài trước thì việc sử dụng <code>EarlyStopping</code> linh động hơn rất nhiều. Ta sẽ đi chi tiết ở phần sau.</p>
+<p>Tiếp theo, ta sử dụng lớp <code>ImageDataGenerator</code> để chuẩn bị dữ liệu cho việc huấn luyện model.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gen_data</span>():
+    training_datagen <span style="color:#f92672">=</span> ImageDataGenerator(
+        rescale<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>
+    )
+    validation_datagen <span style="color:#f92672">=</span> ImageDataGenerator(
+        rescale<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>
+    )
+    
+    training_generator <span style="color:#f92672">=</span> training_datagen<span style="color:#f92672">.</span>flow_from_directory(
+        <span style="color:#e6db74">&#39;cat-dog-dataset/train&#39;</span>,
+        target_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">150</span>),
+        batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">32</span>,
+        class_mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary&#39;</span>
+    )
+    
+    validation_generator <span style="color:#f92672">=</span> validation_datagen<span style="color:#f92672">.</span>flow_from_directory(
+        <span style="color:#e6db74">&#39;cat-dog-dataset/val&#39;</span>,
+        target_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">150</span>),
+        batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">32</span>,
+        class_mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary&#39;</span>
+    )
+    
+    <span style="color:#66d9ef">return</span> training_generator, validation_generator
+</code></pre></div><p>Vì dataset đã được chia thành 2 phần, train set và validation set, nên ở đây ta cũng có 2 instances của lớp <code>ImageDataGenerator</code> tương ứng. Một cái dành cho train model, 1 cái dành cho validate model. Hai instances này chỉ khác nhau đường dẫn đến nơi chứa data, còn lại các thông số khác đều giống nhau. Cần lưu ý đến giá trị của tham số <code>batch_size</code>, vì lần này chúng ta sử dụng dữ liệu thật nên nếu bạn set giá trị của nó cao quá có thể dẫn đến hiện tượng <code>out of memory</code>. Thực tế, ban đầu mình set batch_size=64 nhưng bị lỗi nên phải giảm xuống còn 32.</p>
+<p>CNN model được tạo ra giống như bài trước:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_model</span>():
+    model <span style="color:#f92672">=</span> keras<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>Sequential([
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Conv2D(<span style="color:#ae81ff">128</span>, (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>), activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>, input_shape<span style="color:#f92672">=</span>(<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">3</span>)),
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>MaxPooling2D(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>),
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Conv2D(<span style="color:#ae81ff">64</span>, (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>), activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>),
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>MaxPooling2D(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>),
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Conv2D(<span style="color:#ae81ff">32</span>, (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>), activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>),
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>MaxPooling2D(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>),
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Flatten(),
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Dense(<span style="color:#ae81ff">256</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>),
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Dense(<span style="color:#ae81ff">128</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>),
+        keras<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>Dense(<span style="color:#ae81ff">1</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sigmoid&#39;</span>)
+    ])
+    
+    model<span style="color:#f92672">.</span>compile(optimizer<span style="color:#f92672">=</span>RMSprop(lr<span style="color:#f92672">=</span><span style="color:#ae81ff">0.001</span>), loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary_crossentropy&#39;</span>, metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;acc&#39;</span>])
+    
+    <span style="color:#66d9ef">return</span> model
+</code></pre></div><p>Optimizer vẫn là RMSprop nhưng được learning_rate được khởi tạo với giá trị 0.001 thay vì sử dụng giá trị mặc đinh. Loss Function là binary_crossentroy vì có 2 classes cần phân biệt.</p>
+<p>Ta định nghĩa thêm hàm <code>plot_chart</code> để thể hiện kết quả training lên đồ thị:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_chart</span>(history):
+    acc <span style="color:#f92672">=</span> history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;acc&#39;</span>]
+    val_acc <span style="color:#f92672">=</span> history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;val_acc&#39;</span>]
+    loss <span style="color:#f92672">=</span> history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;loss&#39;</span>]
+    val_loss <span style="color:#f92672">=</span> history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;val_loss&#39;</span>]
+
+    epochs <span style="color:#f92672">=</span> range(len(acc))
+    plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
+
+    plt<span style="color:#f92672">.</span>plot(epochs, acc, <span style="color:#e6db74">&#39;r&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Training Accuracy&#39;</span>)
+    plt<span style="color:#f92672">.</span>plot(epochs, val_acc, <span style="color:#e6db74">&#39;b&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Validation Accuracy&#39;</span>)
+    plt<span style="color:#f92672">.</span>plot(epochs, loss, <span style="color:#e6db74">&#39;g&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Training Loss&#39;</span>)
+    plt<span style="color:#f92672">.</span>plot(epochs, val_loss, <span style="color:#e6db74">&#39;y&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Validation Loss&#39;</span>)
+
+    plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Traing and Validation, Accuracy and Loss&#39;</span>)
+    plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+    plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Bên trên ta đã nói về hàm callback sử dụng <code>EarlyStopping</code>. Ta định nghĩa nó như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">callback <span style="color:#f92672">=</span> EarlyStopping(monitor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;loss&#39;</span>, patience<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</code></pre></div><p>Mục đích của hàm này là buộc model dừng quá trình training nếu sau 5 epochs liên tiếp mà giá trị của loss không giảm. Bạn cũng có thể thay <code>loss</code> bằng <code>acc</code>, khi đó, model sẽ dừng training nếu giá trị accuracy không tăng sau 5 epochs liên tiếp.</p>
+<p>Gộp tất cả lại và train model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">training_generator, validation_generator <span style="color:#f92672">=</span> gen_data()
+model <span style="color:#f92672">=</span> create_model()
+
+history <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>fit(
+    training_generator,
+    epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>,
+    validation_data<span style="color:#f92672">=</span>validation_generator,
+    callbacks<span style="color:#f92672">=</span>[callback],
+    verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+)
+Dòng <span style="color:#e6db74">`validation_data=validation_generator`</span> trong hàm fit chỉ ra dữ liệu <span style="color:#960050;background-color:#1e0010">đượ</span>c dùng <span style="color:#960050;background-color:#1e0010">để</span> validate model trong suốt quá trình training<span style="color:#f92672">.</span>
+
+Output:
+<span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span>python
+Found <span style="color:#ae81ff">20000</span> images belonging to <span style="color:#ae81ff">2</span> classes<span style="color:#f92672">.</span>
+Found <span style="color:#ae81ff">5000</span> images belonging to <span style="color:#ae81ff">2</span> classes<span style="color:#f92672">.</span>
+Epoch <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+  <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">625</span> [<span style="color:#f92672">..............................</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.6942</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.5000</span>WARNING:tensorflow:Callbacks method <span style="color:#e6db74">`on_train_batch_end`</span> <span style="color:#f92672">is</span> slow compared to the batch time (batch time: <span style="color:#ae81ff">0.0141</span>s vs <span style="color:#e6db74">`on_train_batch_end`</span> time: <span style="color:#ae81ff">0.0326</span>s)<span style="color:#f92672">.</span> Check your callbacks<span style="color:#f92672">.</span>
+<span style="color:#ae81ff">625</span><span style="color:#f92672">/</span><span style="color:#ae81ff">625</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">116</span>s <span style="color:#ae81ff">186</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.6851</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.5663</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.6292</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.6240</span>
+Epoch <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">625</span><span style="color:#f92672">/</span><span style="color:#ae81ff">625</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">121</span>s <span style="color:#ae81ff">194</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.6250</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.6571</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.5594</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.7356</span>
+Epoch <span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">625</span><span style="color:#f92672">/</span><span style="color:#ae81ff">625</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">117</span>s <span style="color:#ae81ff">188</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.5928</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.6921</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.5248</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.7652</span>
+<span style="color:#f92672">...</span>
+Epoch <span style="color:#ae81ff">14</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">625</span><span style="color:#f92672">/</span><span style="color:#ae81ff">625</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">124</span>s <span style="color:#ae81ff">198</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.4828</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.7799</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.4186</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.8050</span>
+Epoch <span style="color:#ae81ff">15</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">625</span><span style="color:#f92672">/</span><span style="color:#ae81ff">625</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">123</span>s <span style="color:#ae81ff">197</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.4877</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.7753</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.5091</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.7568</span>
+Epoch <span style="color:#ae81ff">16</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">625</span><span style="color:#f92672">/</span><span style="color:#ae81ff">625</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">124</span>s <span style="color:#ae81ff">198</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.4787</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.7796</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.5068</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.8126</span>
+Epoch <span style="color:#ae81ff">17</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">625</span><span style="color:#f92672">/</span><span style="color:#ae81ff">625</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">124</span>s <span style="color:#ae81ff">198</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.4844</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.7826</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.3928</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.8374</span>
+Epoch <span style="color:#ae81ff">18</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">625</span><span style="color:#f92672">/</span><span style="color:#ae81ff">625</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">124</span>s <span style="color:#ae81ff">198</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.4876</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.7832</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.4588</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.8388</span>
+</code></pre></div><p>Ta thấy rằng quá trình training model dừng lại tại epoch thứ 18, vì từ epoch 13 đến epoch 18, giá trị của loss không giảm đi chút nào, thậm chí còn tăng lên.</p>
+<p>Thử vẽ đồ thị loss và accurcy:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plot_chart(history)
+</code></pre></div>
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/cat-dog-chart.png">
+</div>
+
+
+<p>Từ đồ thị ta có thể nhận xét rằng model được training khá tốt, có một chút overfitting nhưng không đáng kể.</p>
+<p>Cuối cùng, model nên được lưu lại để sử dụng cho việc dự đoán về sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;cats-dogs-model.h5&#39;</span>)
+</code></pre></div><p>Source code của bài này, các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/Computer_Vision/blob/master/Deep_Learning/Early_Stopping.ipynb">đây</a>.</p>
+<p>Bài tiếp theo, ta sẽ áp dụng thêm 2 kỹ thuật quan trọng nữa cho bài toán phân loại cat-dog, đó là <code>data augmentation</code> và <code>ModelCheckpoint</code>. Cũng giống như <code>EarlyStopping</code>, mục đích của 2 kỹ thuật này không gì hơn là ngăn chặn hiện tượng Overfitting của model trong quá trình training. Mời các bạn đón đọc!</p>
+<p><strong>Tham khảo</strong></p>
+<ul>
+<li><a href="https://www.coursera.org/professional-certificates/tensorflow-in-practice">Coursera</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/deep-learning/</link>
+    <description>Recent content in Deep Learning on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 3</title>
+      <link>https://tiensu.github.io/blog/24_convolutional_neural_network_3/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/24_convolutional_neural_network_3/</guid>
+      <description>Tiếp tục chuỗi các bài viết về CNN, trong bài này mình sẽ chia sẻ với các bạn một số &amp;ldquo;common patterns 7 rules&amp;rdquo; trong việc xây dựng kiến trúc CNN.</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 2</title>
+      <link>https://tiensu.github.io/blog/23_convolutional_neural_network_2/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/23_convolutional_neural_network_2/</guid>
+      <description>Vì sử dụng trực tiếp raw pixel của image nên so với CNN, FCN (Fully Connected Network) có 2 nhược điểm kích thước của image tăng lên:</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 1</title>
+      <link>https://tiensu.github.io/blog/22_convolutional_neural_network_1/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/22_convolutional_neural_network_1/</guid>
+      <description>Sau khi đã tìm hiểu cơ bản về Neural Network, chúng ta sẽ đi tìm hiểu về CNN. CNN là một dạng kiến trúc Neural Network đóng vai trò vô cùng quan trọng trong Deep Learning.</description>
+    </item>
+    
+    <item>
+      <title>Neural Network cơ bản (Phần 2)</title>
+      <link>https://tiensu.github.io/blog/21_neural_network_fundamentals_2/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/21_neural_network_fundamentals_2/</guid>
+      <description>Trong quá trình tìm hiểu về mạng NN, mình thấy khá là khó hiểu, đặc biệt với các bạn không mạnh về toán.</description>
+    </item>
+    
+    <item>
+      <title>Neural Network cơ bản (Phần 1)</title>
+      <link>https://tiensu.github.io/blog/20_neural_network_fundamentals_1/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/20_neural_network_fundamentals_1/</guid>
+      <description>Trong bài này chúng ta sẽ cùng nhau tìm hiểu lys thuyết cơ bản về mạng thần kinh nhân tạo (neural network):</description>
+    </item>
+    
+  </channel>
+</rss>

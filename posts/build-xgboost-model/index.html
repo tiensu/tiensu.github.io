@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <title>
+    Xây dựng XGBoost model | ML in Practical
+  </title>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
+
+  
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css"
+  />
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/style.min.f7761d111b74dd5c07f0111decee92938c12abc42e0fd319e1a07483e248b54e.css" integrity="sha256-93YdERt03VwH8BEd7O6Sk4wSq8QuD9MZ4aB0g&#43;JItU4=" />
+
+  
+  
+    
+  
+</head>
+
+    <body>
+        <header id="header">
+  <div class="header_container">
+    <h1 class="sitetitle">
+      <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a>
+    </h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="https://tiensu.github.io/">Home</a></li>
+        
+          <li>
+            <a href="/about/">
+              
+              <span>About</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/">
+              
+              <span>Tags</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/archives/">
+              
+              <span>Archives</span>
+            </a>
+          </li>
+        
+        <li class="hide-sm"><a href="https://tiensu.github.io/index.xml" type="application/rss+xml">RSS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+        
+<section id="main">
+  <article class="post content">
+    <h2 class="title">Xây dựng XGBoost model</h2>
+    <div class="post_content">
+      <p>XGBoost là một thuật toán rất mạnh mẽ, tối ưu hóa về tốc độ và hiệu năng cho việc xây dựng các mô hình dự đoán. Một thống kê chỉ ra rằng, hầu hết những người chiến thắng trong các cuộc thi trên Kaggle đều sử dụng thuật toán này. Trong bài viết này, hãy cùng nhau xây dựng một mô hình XGBoost đơn giản để có thể hiểu được cách thức làm việc của nó.</p>
+<p>Nội dung bài viết chia thành các phần:</p>
+<ul>
+<li>Cài đặt thư viện XGBoost</li>
+<li>Chuẩn bị dữ liệu</li>
+<li>Train XGBoost model</li>
+<li>Đánh giá XGBoost model</li>
+<li>Nguồn tham khảo</li>
+</ul>
+<p><strong>1. Cài đặt thư viện XGBoost</strong></p>
+<p>Có 2 cách để cài đặt thư viện XGBoost. Sử dụng <code>pip</code> hoặc biên dịch từ mã nguồn:</p>
+<p>1.1 Sử dụng pip để cài đặt:</p>
+<pre><code>pip install XGBoost
+</code></pre><p>Để  cập nhật thư viện, sử dụng lệnh sau:</p>
+<pre><code>pip install --upgrade XGBoost
+</code></pre><p>1.2 Biên dịch từ mã nguồn</p>
+<p>Sử dụng cách này nếu muốn cài đặt phiên bản mới nhất của XGBoost.</p>
+<pre><code>git clone --recursive https://github.com/dmlc/XGBoost
+cd XGBoost
+cp make/minimum.mk ./config.mk
+make -j8
+cd python-package
+sudo python setup.py install
+</code></pre><p>Tại thời điểm viết bài, phiên bản của XGBoost là 1.2</p>
+<ol start="2">
+<li>Chuẩn bị dữ liệu</li>
+</ol>
+<p>Trong bài viết này, chúng ta sẽ sử dụng dataset về bênh tiểu đường của Ấn Độ. Dataset bao gồm 8 features, miêu tả chi tiết tình trạng của mỗi bệnh nhân và một feature tương ứng chỉ ra bênh nhân có bị tiểu đường hay không. Chi tiết về dataset này, bạn có thể tham khảo trên <a href="https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabet">UCI Machine Learning Repository website</a></p>
+<p>Đây là một dataset khá đơn giản bởi vì tất cả các features của nó đều đã ở dạng số và vấn đề chỉ là &ldquo;binary classification&rdquo;.</p>
+<pre><code>6,148,72,35,0,33.6,0.627,50,1
+1,85,66,29,0,26.6,0.351,31,0
+8,183,64,0,0,23.3,0.672,32,1
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+</code></pre><p>Tải dataset và đặt nó trong thư mục làm việc hiện tại của bạn với tên là <em><strong>pima-indians-diabetes.csv</strong></em>.</p>
+<p>Tiếp theo, load dataset từ file vừa tải về để chuẩn bị cho <em>training</em> và
+<em>evaluating</em> XGBoost model.</p>
+<ul>
+<li>Import các thư viện sử dụng:</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">loadtxt</span>
+<span class="kn">from</span> <span class="nn">XGBoost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+</code></pre></div><ul>
+<li>Load csv file</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">dataset</span> <span class="o">=</span> <span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;pima-indians-diabetes.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&#34;,&#34;</span><span class="p">)</span>
+</code></pre></div><ul>
+<li>Chia dataset thành dữ liệu input (X) và output (Y)</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span> <span class="mi">8</span><span class="p">]</span>
+</code></pre></div><ul>
+<li>Chia X và y thành <em>data training</em> và <em>data testing</em></li>
+</ul>
+<p><em>Training data</em> được sử dụng để train XGBoost model, trong khi <em>testing data</em> được sử dụng để đánh giá độ chính xác của model đó. Để làm điều này, ta có thể sử dụng hàm <code>train_test_split()</code> trong thư viện <em>scikit-learn</em>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</code></pre></div><p>Đến đây, dữ liệu đã được chuẩn bị sẵn sàng cho việc train XGBoost model.</p>
+<p><strong>2. train XGBoost model</strong></p>
+<p>Thư viện XGBoost cung cấp một &ldquo;Wrapper class&rdquo; cho phép sử dụng XGBoost model tương tự như như làm việc với thư viện scikit-learn. XGBoost model trong thư viện XGBoost là XGBClassifier.</p>
+<p>Tạo XGBoost model và thực hiện train:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">model</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</code></pre></div><p>Ở đây, chúng ta đang sử dụng giá trị mặc định của các tham số. Mình sẽ có các bài việc về việc *tuning papameters&rdquo; cho XGBoost model, mời các bạn đón đọc.</p>
+<p>Bạn có thể quan sát các tham số sử dụng trong model bằng lệnh sau:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</code></pre></div><p><strong>3. Đánh giá XGBoost model</strong></p>
+<p>Để sử dụng model đã train để dự đoán, sử dụng hàm <code>model.predict()</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</code></pre></div><p>Ta có thể đánh giá độ chính xác của model bằng cách so sánh kết quả dự đoán của model với kêt quả thực tế. Hàm <code>accuracy_score()</code> giúp chúng ta thực hiện việc này:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Accuracy: </span><span class="si">%.2f%%</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">accuracy</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</code></pre></div><p>Kết quả cuối cùng:</p>
+<pre><code>Accuracy: 77.95%
+</code></pre><p>Kết quả khá tốt đối với bài toán này.</p>
+<p><strong>5. Tổng kết</strong></p>
+<p>Trong bài viết này, chúng ta đã xây dựng XGBoost model sử dụng thư viện XGBoost. Cụ thể, chúng ta đã học:</p>
+<ul>
+<li>Cách cài đặt thư viện XGBoost</li>
+<li>Chuẩn bị dữ liệu train model</li>
+<li>Đánh giá model</li>
+</ul>
+<p>Trong bài tiếp theo, chúng ta sẽ bàn luận về một số phương pháp chuẩn bị dữ liệu train cho XGBoost model.</p>
+<p><em>Toàn bộ source code của bài này các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/XGBoost-algorithm/tree/master/build_first_XGBoost_model">github.</a></em></p>
+<p>Bài viết có tham khảo tại <a href="https://machinelearningmastery.com/XGBoost-with-python/">tham khảo</a></p>
+    </div>
+    <div class="info post_meta">
+      <time datetime=2020-08-30T00:00:00Z class="date">Sunday, August 30, 2020</time>
+      
+        <ul class="tags">
+        
+          <li> <a href="https://tiensu.github.io/tags/ai">AI</a> </li>
+        
+          <li> <a href="https://tiensu.github.io/tags/ml">ML</a> </li>
+        
+          <li> <a href="https://tiensu.github.io/tags/XGBoost">XGBoost</a> </li>
+        
+        </ul>
+      
+      
+    </div>
+    <div class="clearfix"></div>
+  </article>
+  
+    <div class="other_posts">
+      
+      <a href="https://tiensu.github.io/posts/highlight-syntax/" class="prev">Syntax Highlighting</a>
+      
+      
+      <a href="https://tiensu.github.io/posts/ai-project-planing/" class="next">Lưu ý khi lập kế hoạch cho một dự án AI</a>
+      
+    </div>
+    <aside id="comments">
+</aside>
+
+  
+</section>
+
+        <a id="back_to_top" title="Go To Top" href="#">
+  <span>
+    <svg viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"></path>
+    </svg>
+  </span>
+</a>
+
+        <footer id="footer">
+  <p>
+    <span>&copy; 2020 <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a> </span>
+    <span>Built with <a rel="nofollow" target="_blank" href="https://gohugo.io">Hugo</a></span>
+    <span>Theme by <a rel="nofollow" target="_blank" href="https://github.com/wayjam/hugo-theme-mixedpaper">WayJam</a></span>
+  </p>
+
+  <script src="https://tiensu.github.io/js/main.min.8b182175f5874aeed0acc0979345c98d4bde22208ec4f36cc1d6e3102acb4b10.js" integrity="sha256-ixghdfWHSu7QrMCXk0XJjUveIiCOxPNswdbjECrLSxA=" crossorigin="anonymous" async></script>
+</footer>
+
+    </body>
+</html>

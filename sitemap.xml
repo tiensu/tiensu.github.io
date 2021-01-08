@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/model-deployment/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/model-deployment/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/38_package_ai_model_using_docker/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi/</loc>
+    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/ddd_bbc_text_topic_classification-copy/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/text-classification/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/text-classification/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/ddd_bbc_text_topic_classification/</loc>
+    <lastmod>2020-12-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/36_deploy_ai_model_with_flask/</loc>
+    <lastmod>2020-12-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/convolution-neural-network/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/convolution-neural-network/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/image-classification/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/image-classification/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/35_cnn_model_multiple_classification/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/34_transfer_learning/</loc>
+    <lastmod>2020-12-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/33_dataaugmentation_modelcheckpoint_cnn/</loc>
+    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/32_earlystopping_cnn/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/31_happy_and_sad_classification_cnn/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/30_fashion_mnist_classification_advanced/</loc>
+    <lastmod>2020-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/neural-network/</loc>
+    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/neural-network/</loc>
+    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/29_fashion_mnist_classification/</loc>
+    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/28_hourse_prices_prediction/</loc>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/algorithm-optimization/</loc>
+    <lastmod>2020-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/algorithm-optimization/</loc>
+    <lastmod>2020-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/27_optimization_methods_gradient-descent/</loc>
+    <lastmod>2020-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/artificial-intelligent/</loc>
+    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/artificial-intelligent/</loc>
+    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/26_parameterized_learning/</loc>
+    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/25_for_book_lover/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/ebook/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/ebook/</loc>
+    <lastmod>2020-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/deep-learning/</loc>
+    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/deep-learning/</loc>
+    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/24_convolutional_neural_network_3/</loc>
+    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/23_convolutional_neural_network_2/</loc>
+    <lastmod>2020-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/22_convolutional_neural_network_1/</loc>
+    <lastmod>2020-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/21_neural_network_fundamentals_2/</loc>
+    <lastmod>2020-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/20_neural_network_fundamentals_1/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/data-science/</loc>
+    <lastmod>2020-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/data-science/</loc>
+    <lastmod>2020-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/machine-learning/</loc>
+    <lastmod>2020-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/machine-learning/</loc>
+    <lastmod>2020-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/18_data_scientist_theory_and_real/</loc>
+    <lastmod>2020-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/xgboost/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/xgboost/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/17_tuning_subsampling/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/15_tuning_learning_rate_and_number_decition_tree/</loc>
+    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/16_tuning_number_and_size_decision_tree/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/14_train_xgboost_models_on_aws/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/13_multithreading-xgboost/</loc>
+    <lastmod>2020-10-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/12_early_stopping/</loc>
+    <lastmod>2020-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/11_feature-selection/</loc>
+    <lastmod>2020-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/10_save-load-xgboost-model/</loc>
+    <lastmod>2020-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/09_visualize-xgboost-model/</loc>
+    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/08_evaluate-xgbosst-models/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/07_data-preparation-for-gradient-boosting/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/06_build-xgboost-model/</loc>
+    <lastmod>2020-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/ensemble-learning/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/ensemble-learning/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/05_comprehensive_guide_to_ensemble_model_2/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/04_comprehensive_guide_to_ensemble_model_1/</loc>
+    <lastmod>2020-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/03_xgboost-model-serial-introduction/</loc>
+    <lastmod>2020-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/02_machine_learning_algorithms_summary/</loc>
+    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/01_ai-project-planing/</loc>
+    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/project-management/</loc>
+    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/project-management/</loc>
+    <lastmod>2020-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/about/</loc>
+    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/</loc>
+    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/contact/</loc>
+    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/search/</loc>
+    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
+  </url>
+  
+</urlset>

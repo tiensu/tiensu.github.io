@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PM on SuNT&#39;s Personal Blog</title>
+    <link>https://tiensu.github.io/tags/pm/</link>
+    <description>Recent content in PM on SuNT&#39;s Personal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/tags/pm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lưu ý khi lập kế hoạch cho một dự án AI</title>
+      <link>https://tiensu.github.io/blog/01_ai-project-planing/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/01_ai-project-planing/</guid>
+      <description>Trong bất kỳ dự án nào, đứng ở góc độ của nhà đầu tư và người quản lý, họ đều muốn biết được mốc thời gian dự án có thể được hoàn thành trước khi thực sự bắt đầu dự án.</description>
+    </item>
+    
+  </channel>
+</rss>

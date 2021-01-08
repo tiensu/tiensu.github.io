@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/xgboost"
+          class="text-primary">X g boost</a>
+        
+        <h2>XGBoost - Bài 14: Tuning Subsample</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>15 October 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/xgboost_subsample.png" class="img-fluid w-100 mb-4" alt="XGBoost - Bài 14: Tuning Subsample">
+        
+        <div class="content mb-5">
+          <p>Trong quá trình training, XGBoost thường xuyên phải thực hiện công việc chọn lựa ngẫu nhiên tập dữ liệu con (subsamples) từ tập dữ liệu gốc ban đầu. Các kỹ thuật để làm việc này được gọi bằng cái tên <code>Stochastic Gradient Boosting</code> (<em>SGB</em>).</p>
+<p>Trong bài này chúng ta sẽ cùng tìm hiểu về  SGB và tuning SGB để tìm ra kỹ thuật phù hợp với bài toán.</p>
+<p><strong>1. Tuning Row Subsampling</strong></p>
+<p><code>Row subsampling</code> liên quan đến việc chọn ngẫu nhiên các samples từ tập <code>train set</code>. Trong XGBoost, giá trị của <code>row subsampling</code> được chỉ ra bởi tham số <code>subsample</code>. Giá trị mặc định là 1, nghĩa là sử dụng toàn bộ tập <code>train set</code>, không <code>subsampling</code>.</p>
+<p>Tiếp tục sử dụng tập <a href="https://www.kaggle.com/c/otto-group-product-classification-challenge/data">Otto dataset</a>, chúng ta sẽ grid-search tham số <code>subsample</code> với các giá trị như sau: <strong>[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1.0]</strong>.</p>
+<p>Có 9 giá trị của <code>subsample</code>, mỗi model sẽ được đánh giá sử dụng 10-fold cross-validation. Như vậy, có 9x10=90 models cần phải trained.</p>
+<p>Code đầy đủ như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># XGBoost on Otto dataset, tune subsample</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> xgboost <span style="color:#f92672">import</span> XGBClassifier
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> GridSearchCV
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> StratifiedKFold
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">import</span> matplotlib
+matplotlib<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#39;Agg&#39;</span>)
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+
+<span style="color:#75715e"># load data</span>
+data <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;train.csv&#39;</span>)
+dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+
+<span style="color:#75715e"># split data into X and y</span>
+X <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">94</span>]
+y <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">94</span>]
+
+<span style="color:#75715e"># encode string class values as integers</span>
+label_encoded_y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y)
+
+<span style="color:#75715e"># grid search</span>
+model <span style="color:#f92672">=</span> XGBClassifier()
+subsample <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.1</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.4</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.6</span>, <span style="color:#ae81ff">0.7</span>, <span style="color:#ae81ff">0.8</span>, <span style="color:#ae81ff">1.0</span>]
+param_grid <span style="color:#f92672">=</span> dict(subsample<span style="color:#f92672">=</span>subsample)
+kfold <span style="color:#f92672">=</span> StratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, shuffle<span style="color:#f92672">=</span>True, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)
+grid_search <span style="color:#f92672">=</span> GridSearchCV(model, param_grid, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;accuracy&#34;</span>, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>, cv<span style="color:#f92672">=</span>kfold, verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+grid_result <span style="color:#f92672">=</span> grid_search<span style="color:#f92672">.</span>fit(X, label_encoded_y)
+
+<span style="color:#75715e"># summarize results</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Best: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74"> using </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (grid_result<span style="color:#f92672">.</span>best_score_, grid_result<span style="color:#f92672">.</span>best_params_))
+means <span style="color:#f92672">=</span> grid_result<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;mean_test_score&#39;</span>]
+stds <span style="color:#f92672">=</span> grid_result<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;std_test_score&#39;</span>]
+params <span style="color:#f92672">=</span> grid_result<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;params&#39;</span>]
+<span style="color:#66d9ef">for</span> mean, stdev, param <span style="color:#f92672">in</span> zip(means, stds, params):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%f</span><span style="color:#e6db74">) with: </span><span style="color:#e6db74">%r</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (mean, stdev, param))
+
+<span style="color:#75715e"># plot</span>
+pyplot<span style="color:#f92672">.</span>errorbar(subsample, means, yerr<span style="color:#f92672">=</span>stds)
+pyplot<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;XGBoost subsample vs accuracy&#34;</span>)
+pyplot<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;subsample&#39;</span>)
+pyplot<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Accuracy&#39;</span>)
+pyplot<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;subsample.png&#39;</span>)
+</code></pre></div><p>Kết quả chạy:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Fitting <span style="color:#ae81ff">10</span> folds <span style="color:#66d9ef">for</span> each of <span style="color:#ae81ff">9</span> candidates, totalling <span style="color:#ae81ff">90</span> fits
+[Parallel(n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)]: Using backend LokyBackend <span style="color:#66d9ef">with</span> <span style="color:#ae81ff">16</span> concurrent workers<span style="color:#f92672">.</span>
+[Parallel(n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)]: Done  <span style="color:#ae81ff">18</span> tasks      <span style="color:#f92672">|</span> elapsed:  <span style="color:#ae81ff">3.3</span>min
+[Parallel(n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)]: Done  <span style="color:#ae81ff">90</span> out of  <span style="color:#ae81ff">90</span> <span style="color:#f92672">|</span> elapsed: <span style="color:#ae81ff">12.3</span>min finished
+Best: <span style="color:#ae81ff">0.999919</span> using {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">0.2</span>}
+<span style="color:#ae81ff">0.999887</span> (<span style="color:#ae81ff">0.000126</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">0.1</span>}
+<span style="color:#ae81ff">0.999919</span> (<span style="color:#ae81ff">0.000081</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">0.2</span>}
+<span style="color:#ae81ff">0.999903</span> (<span style="color:#ae81ff">0.000107</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">0.3</span>}
+<span style="color:#ae81ff">0.999919</span> (<span style="color:#ae81ff">0.000108</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">0.4</span>}
+<span style="color:#ae81ff">0.999919</span> (<span style="color:#ae81ff">0.000108</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">0.5</span>}
+<span style="color:#ae81ff">0.999903</span> (<span style="color:#ae81ff">0.000107</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">0.6</span>}
+<span style="color:#ae81ff">0.999903</span> (<span style="color:#ae81ff">0.000107</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">0.7</span>}
+<span style="color:#ae81ff">0.999903</span> (<span style="color:#ae81ff">0.000107</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">0.8</span>}
+<span style="color:#ae81ff">0.999887</span> (<span style="color:#ae81ff">0.000103</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;subsample&#39;</span>: <span style="color:#ae81ff">1.0</span>}
+</code></pre></div><p>Độ chính xác của model đạt được bằng 0.999919 tại điểm <code>subsample</code> = 0.2, hay subset của mỗi model = 30% <code>train set</code>.</p>
+<p>Đồ thị bên dưới thể hiện mối quan hệ giữa <code>subsample</code> và <code>accuracy</code>.</p>
+
+
+    <div style="text-align:center">
+        <img src="/subsample.png">
+    </div>
+
+
+<p><strong>2. Tuning Column Subsampling by Tree</strong></p>
+<p>Chúng ta cũng có thể tạo ra một tập ngẫu nhiên các <code>input features</code> để sử dụng cho mỗi <code>decision tree</code>. Trong XGBoost, điều này được cấu hình thông qua tham số <code>colsample_tree</code>. Giá trị mặc định của nó là 1, tức là tất cả các <code>input features</code> đều được sử dụng cho mỗi tree.</p>
+<p>Ta sẽ thử tune tham số này với tập giá trị như sau: <strong>[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1.0]</strong></p>
+<p>Code đầy đủ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># XGBoost on Otto dataset, tune colsample_bytree</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> xgboost <span style="color:#f92672">import</span> XGBClassifier
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> GridSearchCV
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> StratifiedKFold
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">import</span> matplotlib
+matplotlib<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#39;Agg&#39;</span>)
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+
+<span style="color:#75715e"># load data</span>
+data <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;train.csv&#39;</span>)
+dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+
+<span style="color:#75715e"># split data into X and y</span>
+X <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">94</span>]
+y <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">94</span>]
+
+<span style="color:#75715e"># encode string class values as integers</span>
+label_encoded_y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y)
+
+<span style="color:#75715e"># grid search</span>
+model <span style="color:#f92672">=</span> XGBClassifier()
+colsample_bytree <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.1</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.4</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.6</span>, <span style="color:#ae81ff">0.7</span>, <span style="color:#ae81ff">0.8</span>, <span style="color:#ae81ff">1.0</span>]
+param_grid <span style="color:#f92672">=</span> dict(colsample_bytree<span style="color:#f92672">=</span>colsample_bytree)
+kfold <span style="color:#f92672">=</span> StratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, shuffle<span style="color:#f92672">=</span>True, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)
+grid_search <span style="color:#f92672">=</span> GridSearchCV(model, param_grid, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;accuracy&#34;</span>, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>, cv<span style="color:#f92672">=</span>kfold, verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+grid_result <span style="color:#f92672">=</span> grid_search<span style="color:#f92672">.</span>fit(X, label_encoded_y)
+
+<span style="color:#75715e"># summarize results</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Best: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74"> using </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (grid_result<span style="color:#f92672">.</span>best_score_, grid_result<span style="color:#f92672">.</span>best_params_))
+means <span style="color:#f92672">=</span> grid_result<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;mean_test_score&#39;</span>]
+stds <span style="color:#f92672">=</span> grid_result<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;std_test_score&#39;</span>]
+params <span style="color:#f92672">=</span> grid_result<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;params&#39;</span>]
+<span style="color:#66d9ef">for</span> mean, stdev, param <span style="color:#f92672">in</span> zip(means, stds, params):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%f</span><span style="color:#e6db74">) with: </span><span style="color:#e6db74">%r</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (mean, stdev, param))
+
+<span style="color:#75715e"># plot</span>
+pyplot<span style="color:#f92672">.</span>errorbar(colsample_bytree, means, yerr<span style="color:#f92672">=</span>stds)
+pyplot<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;XGBoost colsample_bytree vs accuracy&#34;</span>)
+pyplot<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>)
+pyplot<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;accuracy&#39;</span>)
+pyplot<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;colsample_bytree.png&#39;</span>)
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Fitting <span style="color:#ae81ff">10</span> folds <span style="color:#66d9ef">for</span> each of <span style="color:#ae81ff">9</span> candidates, totalling <span style="color:#ae81ff">90</span> fits
+[Parallel(n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)]: Using backend LokyBackend <span style="color:#66d9ef">with</span> <span style="color:#ae81ff">16</span> concurrent workers<span style="color:#f92672">.</span>
+[Parallel(n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)]: Done  <span style="color:#ae81ff">18</span> tasks      <span style="color:#f92672">|</span> elapsed:  <span style="color:#ae81ff">3.0</span>min
+[Parallel(n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)]: Done  <span style="color:#ae81ff">90</span> out of  <span style="color:#ae81ff">90</span> <span style="color:#f92672">|</span> elapsed: <span style="color:#ae81ff">10.6</span>min finished
+Best: <span style="color:#ae81ff">0.999887</span> using {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">1.0</span>}
+<span style="color:#ae81ff">0.998578</span> (<span style="color:#ae81ff">0.000484</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">0.1</span>}
+<span style="color:#ae81ff">0.999855</span> (<span style="color:#ae81ff">0.000152</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">0.2</span>}
+<span style="color:#ae81ff">0.999871</span> (<span style="color:#ae81ff">0.000121</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">0.3</span>}
+<span style="color:#ae81ff">0.999871</span> (<span style="color:#ae81ff">0.000121</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">0.4</span>}
+<span style="color:#ae81ff">0.999871</span> (<span style="color:#ae81ff">0.000121</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">0.5</span>}
+<span style="color:#ae81ff">0.999871</span> (<span style="color:#ae81ff">0.000121</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">0.6</span>}
+<span style="color:#ae81ff">0.999871</span> (<span style="color:#ae81ff">0.000121</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">0.7</span>}
+<span style="color:#ae81ff">0.999871</span> (<span style="color:#ae81ff">0.000121</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">0.8</span>}
+<span style="color:#ae81ff">0.999887</span> (<span style="color:#ae81ff">0.000103</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bytree&#39;</span>: <span style="color:#ae81ff">1.0</span>}
+</code></pre></div><p>Độ chính xác của XGBoost đạt được là 0.999887 tại colsample_bytree = 1.0. Điều này có nghĩa rằng trong trường hợp này, <code>subsampling column</code> không mang lại giá trị nào.</p>
+<p>Đồ thị thể hiện mối quan hệ giữa <code>subsampling column</code> và <code>accuracy</code>.</p>
+
+
+    <div style="text-align:center">
+        <img src="/colsample_bytree.png">
+    </div>
+
+
+<p><strong>3. Tuning Column Subsampling by Split</strong></p>
+<p>Thay vì <code>subsampling column</code> cho mỗi tree, ta có thể <code>subsampling column</code> ở mức node (hay <em>Split</em>). Tức là tại mỗi node, ta sẽ <code>subsampling column</code> để tìm ra 1 tập ngẫu nhiên các <code>input features</code> để  quyết định hướng đi tiếp theo. Đây chính là điểm khác biệt giữa <code>Random Forest</code> và <code>Bagging meta-data</code> mà ta đã đề cập đến trong bài 2 của chuỗi các bài viết về XGBoost.</p>
+<p><code>Subsampling column</code> ở mức node được cấu hình thông qua tham số <code>colsample_bylevel</code>. Ta sẽ tiến hành tune tham số này với giá trị thay đổi từ 10% đến giá trị mặc định ban đầu của nó (100%).</p>
+<p>Code đầy đủ như bên dưới:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># XGBoost on Otto dataset, tune colsample_bylevel</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> xgboost <span style="color:#f92672">import</span> XGBClassifier
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> GridSearchCV
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> StratifiedKFold
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">import</span> matplotlib
+matplotlib<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#39;Agg&#39;</span>)
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+
+<span style="color:#75715e"># load data</span>
+data <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;train.csv&#39;</span>)
+dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+
+<span style="color:#75715e"># split data into X and y</span>
+X <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">94</span>]
+y <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">94</span>]
+
+<span style="color:#75715e"># encode string class values as integers</span>
+label_encoded_y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y)
+
+<span style="color:#75715e"># grid search</span>
+model <span style="color:#f92672">=</span> XGBClassifier()
+colsample_bylevel <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.1</span>, <span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.4</span>, <span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.6</span>, <span style="color:#ae81ff">0.7</span>, <span style="color:#ae81ff">0.8</span>, <span style="color:#ae81ff">1.0</span>]
+param_grid <span style="color:#f92672">=</span> dict(colsample_bylevel<span style="color:#f92672">=</span>colsample_bylevel)
+kfold <span style="color:#f92672">=</span> StratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, shuffle<span style="color:#f92672">=</span>True, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)
+grid_search <span style="color:#f92672">=</span> GridSearchCV(model, param_grid, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;accuracy&#34;</span>, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>, cv<span style="color:#f92672">=</span>kfold, verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+grid_result <span style="color:#f92672">=</span> grid_search<span style="color:#f92672">.</span>fit(X, label_encoded_y)
+
+<span style="color:#75715e"># summarize results</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Best: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74"> using </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (grid_result<span style="color:#f92672">.</span>best_score_, grid_result<span style="color:#f92672">.</span>best_params_))
+means <span style="color:#f92672">=</span> grid_result<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;mean_test_score&#39;</span>]
+stds <span style="color:#f92672">=</span> grid_result<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;std_test_score&#39;</span>]
+params <span style="color:#f92672">=</span> grid_result<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;params&#39;</span>]
+<span style="color:#66d9ef">for</span> mean, stdev, param <span style="color:#f92672">in</span> zip(means, stds, params):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%f</span><span style="color:#e6db74">) with: </span><span style="color:#e6db74">%r</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (mean, stdev, param))
+
+<span style="color:#75715e"># plot</span>
+pyplot<span style="color:#f92672">.</span>errorbar(colsample_bylevel, means, yerr<span style="color:#f92672">=</span>stds)
+pyplot<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;XGBoost colsample_bylevel vs accuracy&#34;</span>)
+pyplot<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>)
+pyplot<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;accuracy&#39;</span>)
+pyplot<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;colsample_bylevel.png&#39;</span>)
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Fitting <span style="color:#ae81ff">10</span> folds <span style="color:#66d9ef">for</span> each of <span style="color:#ae81ff">9</span> candidates, totalling <span style="color:#ae81ff">90</span> fits
+[Parallel(n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)]: Using backend LokyBackend <span style="color:#66d9ef">with</span> <span style="color:#ae81ff">16</span> concurrent workers<span style="color:#f92672">.</span>
+[Parallel(n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)]: Done  <span style="color:#ae81ff">18</span> tasks      <span style="color:#f92672">|</span> elapsed:  <span style="color:#ae81ff">2.6</span>min
+[Parallel(n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)]: Done  <span style="color:#ae81ff">90</span> out of  <span style="color:#ae81ff">90</span> <span style="color:#f92672">|</span> elapsed:  <span style="color:#ae81ff">9.3</span>min finished
+Best: <span style="color:#ae81ff">0.999919</span> using {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">0.3</span>}
+<span style="color:#ae81ff">0.999903</span> (<span style="color:#ae81ff">0.000129</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">0.1</span>}
+<span style="color:#ae81ff">0.999903</span> (<span style="color:#ae81ff">0.000079</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">0.2</span>}
+<span style="color:#ae81ff">0.999919</span> (<span style="color:#ae81ff">0.000081</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">0.3</span>}
+<span style="color:#ae81ff">0.999903</span> (<span style="color:#ae81ff">0.000107</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">0.4</span>}
+<span style="color:#ae81ff">0.999887</span> (<span style="color:#ae81ff">0.000103</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">0.5</span>}
+<span style="color:#ae81ff">0.999903</span> (<span style="color:#ae81ff">0.000107</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">0.6</span>}
+<span style="color:#ae81ff">0.999903</span> (<span style="color:#ae81ff">0.000107</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">0.7</span>}
+<span style="color:#ae81ff">0.999871</span> (<span style="color:#ae81ff">0.000121</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">0.8</span>}
+<span style="color:#ae81ff">0.999887</span> (<span style="color:#ae81ff">0.000103</span>) <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;colsample_bylevel&#39;</span>: <span style="color:#ae81ff">1.0</span>}
+</code></pre></div><p><code>colsample_bylevel</code> = 0.3 cho ta model với độ chính xác cao nhất, 0.999919.</p>
+<p>Đồ thị thể hiện mối quan hệ giữa <code>colsample_bylevel</code> và <code>accuracy</code>.</p>
+
+
+    <div style="text-align:center">
+        <img src="/colsample_bylevel.png">
+    </div>
+
+
+<p><strong>6. Kết luận</strong></p>
+<p>Như vậy là chúng ta đã biêt cách tuning các kỹ thuật <code>subsample</code> hay <code>stochastic gradient boosting</code> của XGBoost. Nếu có phần cứng đủ mạnh, các bạn có thể tune tất cả các tham số đồng thời với nhau. Khi đó, độ chính xác của model có thể tăng lên 1 chút. Nhưng cái giá phải trả là thời gian train sẽ rất lâu. :D</p>
+<p>Đây cũng là bài cuối cùng trong loạt bài viết về XGBoost model. Hi vọng qua những bài viết của mình, các bạn có thể hiểu hơn về XGBoost và tự tin hơn khi làm viêc với nó. Hẹn mọi người ở những chủ để tiếp theo! :)</p>
+<p><em>Toàn bộ source code của bài này các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/xgboost-algorithm/tree/master/tune_subsample">github.</a></em></p>
+<p>Bài viết có tham khảo tại <a href="https://machinelearningmastery.com/XGBoost-with-python/">tham khảo</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

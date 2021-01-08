@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CNN on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/tags/cnn/</link>
+    <description>Recent content in CNN on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/tags/cnn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Các phương pháp Optimization - Gradient Descent</title>
+      <link>https://tiensu.github.io/blog/25_optimization_methods_gradient-descent/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/25_optimization_methods_gradient-descent/</guid>
+      <description>&amp;ldquo;Nearly all of deep learning is powered by one very important algorithm: Stochastic Gradient Descent (SGD)&amp;rdquo; – Goodfellow et al.</description>
+    </item>
+    
+    <item>
+      <title>Parameterized Learning</title>
+      <link>https://tiensu.github.io/blog/24_parameterized_learning/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/24_parameterized_learning/</guid>
+      <description>Bạn có biết thuật toán kNN - một trong những thuật toán đơn giản nhất của ML? Về bản chất, nó không &amp;ldquo;học&amp;rdquo; bất cứ điều gì từ dữ liệu mà chỉ đơn giản là lưu dữ liệu bên trong model, và tại thời điểm dự đoán, nó so sánh dữ liệu cần dự đoán với dữ liệu trong tập training.</description>
+    </item>
+    
+    <item>
+      <title>Dành cho người yêu sách</title>
+      <link>https://tiensu.github.io/blog/23_for_book_lover/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/23_for_book_lover/</guid>
+      <description>Bạn có là người thích đọc sách nhưng ngân quỹ có giới hạn, không đủ tiền để mua sách &amp;ldquo;xịn&amp;rdquo; trên amazon, hay trên các tạp chí khoa học, &amp;hellip;?</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 3</title>
+      <link>https://tiensu.github.io/blog/22_convolutional_neural_network_3/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/22_convolutional_neural_network_3/</guid>
+      <description>Tiếp tục chuỗi các bài viết về CNN, trong bài này mình sẽ chia sẻ với các bạn một số &amp;ldquo;common patterns 7 rules&amp;rdquo; trong việc xây dựng kiến trúc CNN.</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 2</title>
+      <link>https://tiensu.github.io/blog/21_convolutional_neural_network_2/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/21_convolutional_neural_network_2/</guid>
+      <description>Vì sử dụng trực tiếp raw pixel của image nên so với CNN, FCN (Fully Connected Network) có 2 nhược điểm kích thước của image tăng lên:</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 1</title>
+      <link>https://tiensu.github.io/blog/20_convolutional_neural_network_1/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/20_convolutional_neural_network_1/</guid>
+      <description>Sau khi đã tìm hiểu cơ bản về Neural Network, chúng ta sẽ đi tìm hiểu về CNN. CNN là một dạng kiến trúc Neural Network đóng vai trò vô cùng quan trọng trong Deep Learning.</description>
+    </item>
+    
+  </channel>
+</rss>

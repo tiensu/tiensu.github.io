@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/xgboost"
+          class="text-primary">X g boost</a>
+        
+        <h2>XGBoost - Bài 10: Cấu hình Multithreading cho XGBoost model</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>03 October 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/xgboost_multithreading.png" class="img-fluid w-100 mb-4" alt="XGBoost - Bài 10: Cấu hình Multithreading cho XGBoost model">
+        
+        <div class="content mb-5">
+          <p>Thư viện XGBoost được thiết kế để làm việc h iệu quả vớicơ chế xử lý song song trên nhiều core (<em>multithreading</em>) của phần cứng, cả trong quá trình train và dự đoán. Hãy cùng nhau tìm hiểu cơ chế đó thông qua bài viết này.</p>
+<p><strong>1. Chuẩn bị dataset</strong></p>
+<p>Chúng ta sẽ sử dụng <a href="https://www.kaggle.com/c/otto-group-product-classification-challenge/data">Otto Group Product Classification Challenge</a> dataset để minh họa cơ chế multithreading của thư viện XGBoost. Để download dataset này, bạn cần đăng nhập vào Kaggle. có 2 file là train.csv và test.csv. Vì chỉ có file train.csv là có nhãn nên ta sẽ sử dụng file này. Download file train.csv về máy tính (dạng train.csv.zip). Giải nén nó ra và đặt trong thư mục làm việc của bạn.</p>
+<p>Dataset này bao gồm khoảng 94.000  sản phẩm và 93 <code>input features</code>được chia thành 10 nhóm (ví dụ: thời trang, điện tử, &hellip;). Mục tiêu là xây dựng một model để phân loại một sản phẩm mới vào các nhóm này. Cuộc thi này đã kết thúc vào 05/2015 và người chiến thắng cũng sử dụng XGBoost để tạo model.</p>
+<p><strong>2. Ảnh hưởng của số lượng threads đến thời gian train model</strong></p>
+<p>XGBoost được viết bằng C++, sử dụng <a href="htts://en.wikiedia.or/wiki/OpenMP">OpenMP API</a> để phát triển cơ chế xử lý song song. Trong một số trường hợp, bạn có thể phải compile mại XGBoost mới có thể sử dụng cơ chế song song này. Chi tiết về việc cài đặt XGBoost, có thể xem tại <a href="https://github.com/dmlc/XGBoost/blob/master/doc/build">đây</a>.</p>
+<p>Hai lớp <code>XGBClassifier</code> và <code>XGBRegressor</code> trong thư viện XGBoost cung cấp tham số <code>nthread</code> để chỉ ra số lượng threads mà XGBoost sử dụng trong quá trình train. Mặc định thì giá trị của tham số này là -1, tức là sử dụng tất cả các core của hệ thống.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model <span style="color:#f92672">=</span> XGBClassifier(nthread<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+</code></pre></div><p>Bây giờ chúng ta sẽ xây dựng một số XGBoost models khác nhau theo số lượng threads sử dụng và đo đặc thời gian train của mỗi model.</p>
+<p>Code snippet:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate the effect of the number of threads</span>
+results <span style="color:#f92672">=</span> []
+num_threads <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>]
+<span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> num_threads:
+    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+    model <span style="color:#f92672">=</span> XGBClassifier(nthread<span style="color:#f92672">=</span>n)
+    model<span style="color:#f92672">.</span>fit(X_train, y_train)
+    elapsed <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+    <span style="color:#66d9ef">print</span>(n, elapsed)
+    results<span style="color:#f92672">.</span>append(elapsed)
+</code></pre></div><p>Áp dụng vào bộ dữ liệu <code>Otto</code> (<em>bạn có thể thay đổi giá trị của mảng num_threads theo máy tính của bạn</em>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># load data</span>
+data <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;test.csv&#39;</span>)
+dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># split data into X and y</span>
+X <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">94</span>]
+y <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">94</span>]
+<span style="color:#75715e"># encode string class values as integers</span>
+label_encoded_y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y)
+<span style="color:#75715e"># evaluate the effect of the number of threads</span>
+results <span style="color:#f92672">=</span> []
+num_threads <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+<span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> num_threads:
+    start <span style="color:#f92672">=</span> time()
+    model <span style="color:#f92672">=</span> XGBClassifier(nthread<span style="color:#f92672">=</span>n)
+    model<span style="color:#f92672">.</span>fit(X, label_encoded_y)
+    elapsed <span style="color:#f92672">=</span> time() <span style="color:#f92672">-</span> start
+    <span style="color:#66d9ef">print</span>(n, elapsed)
+    results<span style="color:#f92672">.</span>append(elapsed)
+<span style="color:#75715e"># plot results</span>
+pyplot<span style="color:#f92672">.</span>plot(num_threads, results)
+pyplot<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Speed (seconds)&#39;</span>)
+pyplot<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Number of Threads&#39;</span>)
+pyplot<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;XGBoost Training Speed vs Number of Threads&#39;</span>)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Chạy code trên thu được kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">50.13007640838623</span>
+<span style="color:#ae81ff">2</span> <span style="color:#ae81ff">26.999273538589478</span>
+<span style="color:#ae81ff">3</span> <span style="color:#ae81ff">18.629448890686035</span>
+<span style="color:#ae81ff">4</span> <span style="color:#ae81ff">15.561982154846191</span>
+<span style="color:#ae81ff">5</span> <span style="color:#ae81ff">13.940500497817993</span>
+<span style="color:#ae81ff">6</span> <span style="color:#ae81ff">12.550707578659058</span>
+<span style="color:#ae81ff">7</span> <span style="color:#ae81ff">13.075348854064941</span>
+<span style="color:#ae81ff">8</span> <span style="color:#ae81ff">12.36113166809082</span>
+</code></pre></div><p>và đồ thị thể hiện mối quan hệ giữa số lượng threads và thời gian train model.</p>
+
+
+    <div style="text-align:center">
+        <img src="/plot_multithread_1.png">
+    </div>
+
+
+<p>Có thể thấy rõ xu hướng giảm của thời gian train model khi số lượng threads tăng lên. Nếu kết quả chạy trên máy của bạn không giống như vậy, bạn cần phải xem xét lại cách enable cơ chế song song của XGBoost như link tham khảo mình đề cập bên trên.</p>
+<p><strong>3. Ảnh hưởng của số lượng threads đến thời gian cross-validation</strong></p>
+<p><code>k-fold cross-validation</code> hỗ trợ bởi thư viện <code>scikit-learn</code> cũng có cơ chế xử lý song song tương tự như XGBoost. Tham số <code>n_jobs</code> của hàm <code>cross_val_crore()</code> chỉ ra số lượng threads sử dụng. Mặc định, <code>n_jobs=1</code> tức là chỉ sử dụng 1 core (1 thread). Ta có thể gán giá trị -1 cho nó để sử dụng tất cả cores của hệ thống.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">results <span style="color:#f92672">=</span> cross_val_score(model, X, label_encoded_y, cv<span style="color:#f92672">=</span>kfold,scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;neg_log_loss&#39;</span>, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>, verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</code></pre></div><p>Đến đây lại xuất hiện một câu hỏi, chúng ta nên chọn phương án nào trong 3 phương án sau:</p>
+<ul>
+<li>Disable multithreading của XGBoost, enable multithreading của cross-validation.</li>
+<li>Enable multithreading của XGBoost, disable multithreading của cross-validation.</li>
+<li>Enable multithreading của XGBoost, enable multithreading của cross-validation.</li>
+</ul>
+<p>Để trả lời câu hỏi này, không gì chính xác hơn là chúng ta sẽ code cho cả 3 cách và so sánh thời gian thực thi của mỗi cách:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Otto, parallel cross validation</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> XGBoost <span style="color:#f92672">import</span> XGBClassifier
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> StratifiedKFold
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">import</span> time
+<span style="color:#75715e"># load data</span>
+data <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;train.csv&#39;</span>)
+dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># split data into X and y</span>
+X <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">94</span>]
+y <span style="color:#f92672">=</span> dataset[:,<span style="color:#ae81ff">94</span>]
+<span style="color:#75715e"># encode string class values as integers</span>
+label_encoded_y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y)
+<span style="color:#75715e"># prepare cross validation</span>
+kfold <span style="color:#f92672">=</span> StratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, shuffle<span style="color:#f92672">=</span>True, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)
+<span style="color:#75715e"># Single Thread XGBoost, Parallel Thread CV</span>
+start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+model <span style="color:#f92672">=</span> XGBClassifier(nthread<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+results <span style="color:#f92672">=</span> cross_val_score(model, X, label_encoded_y, cv<span style="color:#f92672">=</span>kfold, coring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;neg_log_loss&#39;</span>, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+elapsed <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Single Thread XGBoost, Parallel Thread CV: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (elapsed))
+<span style="color:#75715e"># Parallel Thread XGBoost, Single Thread CV</span>
+start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+model <span style="color:#f92672">=</span> XGBClassifier(nthread<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+results <span style="color:#f92672">=</span> cross_val_score(model, X, label_encoded_y, cv<span style="color:#f92672">=</span>kfold, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;neg_log_loss, n_jobs=1)</span>
+elapsed <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Parallel Thread XGBoost, Single Thread CV: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (elapsed))
+<span style="color:#75715e"># Parallel Thread XGBoost and CV</span>
+start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+model <span style="color:#f92672">=</span> XGBClassifier(nthread<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+results <span style="color:#f92672">=</span> cross_val_score(model, X, label_encoded_y, cv<span style="color:#f92672">=</span>kfold, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;neg_log_loss&#39;</span>, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+elapsed <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time() <span style="color:#f92672">-</span> start
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Parallel Thread XGBoost and CV: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (elapsed))
+</code></pre></div><p>Kết quả cuối cùng:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Single Thread XGBoost, Parallel Thread CV: <span style="color:#ae81ff">101.820478</span>
+Parallel Thread XGBoost, Single Thread CV: <span style="color:#ae81ff">455.847770</span>
+Parallel Thread XGBoost <span style="color:#f92672">and</span> CV: <span style="color:#ae81ff">98.794466</span>
+</code></pre></div><p>Rõ ràng, phương án thứ 3 sử dụng thời gian ít nhất. Bây giờ bạn đã biết câu trả lời rồi phải không? :D</p>
+<p><strong>4. Kết luận</strong></p>
+<p>Trong bài viết này, chúng ta đã tìm hiểu cách cấu hình cơ chế multithreading của XGBoost model. Chúng ta cũng nhận thức được ảnh hưởng của số lượng threads (số lượng cores) đến thời gian train model, từ đó biết cách kiểm tra xem hệ thống có hỗ trợ cơ chế xử lý song song của XGBoost hay không? Cuối cùng, cách cấu hình tốt nhất cho cả XGBoost và cross-validation để giảm thời gian thực thi cũng đã được tìm ra.</p>
+<p>Ở bài viết tiếp theo chúng ta sẽ tìm hiểu cách scale-up XGBoost model để sử dụng nhiều cores của hệ thống hơn trên AWS cloud. Hãy cùng đón đọc! :)</p>
+<p><em>Toàn bộ source code của bài này các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/XGBoost-algorithm/tree/master/multithreading">github.</a></em></p>
+<p>Bài viết có tham khảo tại <a href="https://machinelearningmastery.com/XGBoost-with-python/">tham khảo</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

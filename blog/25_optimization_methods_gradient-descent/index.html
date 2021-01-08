@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/algorithm-optimization"
+          class="text-primary">Algorithm Optimization</a>
+        
+        <h2>Các phương pháp Optimization - Gradient Descent</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>16 November 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/gradient_descent.jpg" class="img-fluid w-100 mb-4" alt="Các phương pháp Optimization - Gradient Descent">
+        
+        <div class="content mb-5">
+          <p>&ldquo;<em>Nearly all of deep learning is powered by one very important algorithm: Stochastic Gradient Descent (SGD)</em>&rdquo; – Goodfellow et al.</p>
+<p>Từ bài trước chúng ta đã biết rằng để model có thể dự đoán đúng thì phải tìm được giá trị phù hợp cho $W$ và $b$. Nếu chúng ta chỉ dựa hoàn toàn vào việc chọn ngẫu nhiên thì gẫn như không bao giờ có thể tìm được giá trị mong muốn. Thay vì thế, chúng ta cần định nghĩa một thuật toán tối ưu (<em>optimization</em>) và sử dụng nó để cải thiện $W$ và $b$. Trong bài này, chúng ta sẽ tìm hiểu một thuật toán tối ưu được sử dụng rất rất phổ biến trong NN and DL model - <code>Gradient Descent (GD)</code> và các biến thể của nó. Ý tưởng chung của họ các thuật toán GD là đánh giá các tham số, tính toán loss, sau đó thực hiện một bước nhỏ theo hướng giảm loss. Cả 3 bước này được thực hiện trong các vòng lặp cho đến khi gặp một điều kiện dừng nào đó.</p>
+<p><strong>1. The Loss Landscape và Optimization Surface</strong></p>
+<p><code>Gradient descent</code> là thuật toán hoạt động theo kiểu <code>tối ưu qua từng vòng lặp</code> thông qua một <code>mặt tối ưu</code>(<em>optimization surface / loss landscape</em>), như minh họa ở hình bên dưới.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/gradient-descent.png" width="800" height="400">
+</div>
+
+
+<p>Phía bên trái biểu diễn trong không gian 2 chiều để chúng ta dễ hình dùng, còn bên phải biểu diễn một cách thực tế hơn trong không gian nhiều chiều. Mục đích sử dụng <code>gradient descent</code> là tìm ra điểm <code>global minumum</code> (<em>đáy của cái bát ở bên phải</em>).</p>
+<p>Chúng ta có thể thấy, <code>optimization surface</code> có rất nhiều đỉnh (<em>peaks</em>) và thung lũng (valleys*). Mỗi <code>valley</code> có một điểm đáy mà tại đó giá trị loss đạt giá trị cực tiểu, gọi là <code>local minimum</code>. Trong số các điểm <code>local minimum</code>, có 1 điểm mà giá trị loss đạt giá trị nhỏ nhất được gọi là <code>gloabal minimum</code>. Đây chính là điểm mà chính ta muốn tìm trong quá trình training AI model thông qua việc cập nhật các tham số.</p>
+<p>Hãy tưởng tượng, việc dò tìm điểm <code>global minimum</code> trên <code>optimization surface</code> giống như việc đặt 1 viên bi (*chính là * $W$) trên mặt đó, nhiệ vụ của viên bi là dò tìm đường để đi đến điểm đích (<code>global minimum</code>).</p>
+<p>Nếu chỉ nhìn vào hình trên, mọi người có thể thắc mắc: Nếu muốn đến điểm <code>global minimum</code>, tại sao không nhảy thẳng một phát đến đó?</p>
+<p>Nhưng mọi việc không đơn giản như vậy, bởi vì trên thực tế, chúng ta không biết hình dạng của <code>optimization surface</code> như thế nào, chúng ta như một ngươi mù trên đường, không biết phương hướng. Và các thuật toán tối ưu (<em>gradient descent</em> là một trong số đó) chính là cây gậy trong tay, giúp chúng ta dò đường.</p>
+<p>Cụ thể hơn 1 chút thì mỗi một điểm trên <code>optimization surface</code> tương ứng với một giá trị loss $L$ - chính là output của loss funtion khi đưa vào cặp giá trị ($W$, $b$). Ý tưởng của thuật toán tối ưu là cố gắng thử sử dụng các cặp giá trị ($W$, $b$) khác nhau, tính toán loss, cập nhật ($W$, $b$) sao cho giá trị loss thấp hơn &hellip; Lý tưởng nhất là chúng ta có thể đạt được giá trị loss nhỏ nhất tại điểm <code>global minimum</code>, nhưng điều này thường khó xảy ra trong thực tế.</p>
+<p><strong>2. Gradient Descent cho hàm 1 biến</strong></p>
+<p>Giả sử Loss Function của chúng ta là hàm bậc 1, $f(x)$. Điểm <code>global minimum</code> là điểm mà tại đó $x = x^*$.</p>
+<p>Đạo hàm của của $f(x)$ là $f&rsquo;(x)$. Nếu bạn còn nhớ, trong chương trình toán THPT, khi học về đạo hàm ta có các <a href="https://toanthaydinh.com/cuc-tri-cua-ham-so/">nhận xét</a>:</p>
+<ul>
+<li>Nếu đạo hàm của hàm số tại thời điểm $t$, $f&rsquo;(x_t) &gt; 0$ thì $x_t$ nằm về phía bên phải so với $x^*$, và ngược lại.</li>
+<li>$x_t$ càng xa $x^*$ về phía bên phải thì $f&rsquo;(x_t)$ càng lơn hơn 0, và ngược lại.</li>
+</ul>
+<p>Từ nhận xét số 1 có thể suy ra, để điểm tiếp theo $x_{t+1}$ tiến gần về $x^*$ hơn thì cần di chuyển $x_t$ về phía bên trái, tức là phía âm, hay phía ngược dấu với đạo hàm:</p>
+
+
+<div style="text-align:center">
+    $x_{t+1} = x_t + \Delta$ ($\Delta$ là một đại lượng ngược dấu với đạo hàm $f'(x)$)
+</div>
+
+
+<p>Từ nhận xét số 2 có thể suy ra lượng di chuyển $\Delta$ tỉ lệ thuận với $-f&rsquo;(x)$.</p>
+<p>Tổng hợp hai nhận xét trên, ta có công thức cập nhật $x_t$ một cách đơn giản là:</p>
+
+
+<div style="text-align:center">$x_{t+1} = x_t - \eta f'(x_t)$</div>
+
+
+<p>Hoặc viết dưới dạng đơn giản:</p>
+
+
+<div style="text-align:center">$x = x - \eta f'(x)$</div>
+
+
+<p>Trong $\eta$ là một số &gt; 0, gọi là <code>learning rate</code>. Dấu trừ thể hiện viêc đi ngược chiều với đạo hàm (<em>descent</em> nghĩa là <em>đi ngược</em>).</p>
+<p><strong>3. Gradient Descent cho hàm nhiều biến</strong></p>
+<p>Giả sử Loss Function của chúng ta, $f(\theta)$ là hàm nhiều biến, trong đó $\theta$ là tập hợp các vector các tham số của model cần tối ưu. Đạo hàm của $f(\theta)$ tại thời điểm $\theta$ là $\nabla_\theta f(\theta)$.</p>
+<p>Tương tự hàm 1 biến, quy tắc cập nhật $\theta$ là:</p>
+
+
+<div style="text-align:center">$\theta_{t+1} = \theta_t - \eta \nabla_\theta f(\theta_t)$</div>
+
+
+<p>Hoặc viết dưới dạng đơn giản:
+
+
+<div style="text-align:center">$\theta = \theta - \eta \nabla_\theta f(\theta_t)$</div>
+
+</p>
+<p>Tóm lại, thuật toán GD hoạt động như sau:</p>
+<ul>
+<li>Dự đoán một điểm khởi tạo $\nabla = \nabla_0$.</li>
+<li>Cập nhật  $\nabla$ đến khi đạt được kết quả chấp nhận được (<em>hoặc một điều kiện dừng nào đó</em>).
+
+
+<div style="text-align:center">$\theta = \theta - \eta \nabla_\theta f(\theta)$</div>
+
+</li>
+</ul>
+<p>với $\nabla_\theta f(\theta)$ là đạo hàm của Loss Function tại $\theta$.</p>
+<p><strong>4. Stochastic Gradient Descent (SGD)</strong></p>
+<p>Thuật toán GD nguyên thủy có một nhược điểm to lớn là hội tụ rất chậm và yêu cầu tài nguyên tính toán rất lớn. Nguyên nhân gốc rễ của vấn đề này là do GD tính toán gradient trên toàn bộ training set. Điều này thật khó để chấp nhận nếu áp dụng với một tập dữ liệu lớn.</p>
+<p>Một biến thể của GD, gọi là <code>Stochastic Gradient Descent (SGD)</code> ra đời, khắc phục những hạn chế của GD. Thay vì tính toán và cập nhật weight matrix $W$ trên toàn bộ tập dữ liệu như cách làm của GD (<em>cập nhật theo epoch</em>), SGD chia nhỏ tập training thành các <code>batchs</code> (<em>dữ liệu thường được xáo trộn ngẫu nhiên trước khi chia</em>), tính toán và cập nhật $W$ theo từng <code>batch</code> đó (<em>cập nhật theo batch</em>).</p>
+<p>Biểu diễn theo toán học, công thức cập nhật của SGD như sau:</p>
+
+
+<div style="text-align:center">$\theta = \theta - \eta \nabla_\theta f(\theta;x_i;y_i)$</div>
+
+
+<p>trong đó, $f(\theta;x_i;y_i)$ là Loss Function với chỉ 1 cặp điểm dữ liệu (<em>input, label</em>) là ($x_i, y_i$).</p>
+<p>Mặc dù ra đời từ rất lâu (<em>1960</em>), SGD vẫn là một thuật toán quan trọng, được sử dụng rộng rãi trong các kiến trúc DL hiện đại. Vì thế, viêc hiểu cặn cẽ về nó là một điều cần thiết khi học AI/ML.</p>
+<p><em><strong>4.1 Mini-batch SGD</strong></em></p>
+<p>Một câu hỏi đặt ra khi sử dụng SGD là kích thước của <code>batch</code> (<em>batch_size</em>) là bao nhiêu thì hợp lý? Theo như cách diễn giải bên trên thì có vẻ như batch_size càng nhỏ càng tốt? Và tốt nhất là batch_size = 1?</p>
+<p>Tuy nhiên, điều này không đúng. Sử dụng batch_size &gt; 1 mang lại cho chúng ta một số lợi ích nhất định. Nó giúp giảm phương sai khi cập nhật $W$, và đặc biệt hơn, nếu giá trị của batch_size là lũy thừa của 2 thì chúng ta còn hưởng lợi về tốc độ thực thi của các thư viện tối ưu trong đại đố tuyến tính. Trong các bài toán thực tế, batch_size thường nhận các giá trị 32, 64, 128, 256, tùy thuộc vào tài nguyên tính toán của bạn.</p>
+<p>Lúc này, công thức cập nhật sẽ trở thành:</p>
+
+
+<div style="text-align:center">$\theta = \theta - \eta \nabla_\theta f(\theta;x_{i:i+n};y_{i:i+n})$</div>
+
+
+<p>trong đó, $x_{i:i+n}, y_{i:i+n}$ là các cặp điểm dữ liệu (*input, label*) có vị trí từ $i$ đến $i + n -1$.</p>
+<p><em><strong>4.2 Mở rộng của SGD</strong></em></p>
+<p>Trong quá trình sử dụng SGD, ta có thể bắt gặp 2 kỹ thuật hỗ trợ tăng tốc độ hội tụ cho SGD. Đố là <code>momentum</code> và <code>nesterov accelerated gradient (NAG)</code>.</p>
+<p><em><strong>4.2.1 Momentum</strong></em></p>
+<p><code>Momentum</code>, hiểu theo nghĩa tiếng việt là <code>đà</code>, <code>lấy đà</code> hay <code>quán tính</code>. Mục tiêu của nó là đẩy nhanh tốc độ cập nhật $W$ tại những nơi mà các gradients có cùng hướng, và ngược lại. Quan sát lại hình bên trên, có thể tưởng tượng rằng nếu không có momentum, viên bi của chúng ta rất dễ bị mắc kẹt ở các <code>local minimum</code>, mà không sao thoát ra để tìm đến <code>global minimum</code> được.</p>
+<p>Ở phần trên, ta đã biết công thức cập nhật các tham số như sau:</p>
+
+
+<div style="text-align:center">$\theta = \theta - \eta \nabla_\theta f(\theta_t)$</div>
+
+
+<p>Thêm vào momentum $V$, với:</p>
+
+
+<div style="text-align:center">$V_t = \gamma V_{t-1} - \eta \nabla_\theta f(\theta)$</div>
+
+
+<p>ta được:</p>
+
+
+<div style="text-align:center">$\theta = \theta - V_t$</div>
+
+
+<p>Trong đó, $\gamma$ là đại lượng thường được chọn giá trị 0.9, hoặc ban đầu chọn là 0.5, sau khi quá trình học diễn ra ổn định thì tăng lên 0.9. Nó hầu như không bao giờ &lt; 0.5. Khi khai báo sử dụng momentum (<em>trong tensorflow chẳng hạn</em>), ta thường truyền vào giá trị của đại lương này.</p>
+<p><em><strong>4.2.2 Nesterov Accelerated Gradient (NAG)</strong></em></p>
+<p>Momentum tuy giúp ta vượt qua được các <code>local minimum</code>, nhưng khi tới gần <code>global minimum</code>, do có đà nên viên bi vẫn tiếp tục dao động thêm một khoảng thời gian nữa mới có thể dừng lại đúng điểm cần dừng. NAG ra đời để khắc phục nhược điểm này.</p>
+<p>Ý tưởng chính của NAG là sử dụng gradient ở thời tiếp theo, thay vì gradient ở thời điểm hiện tại khi tính lượng thay đổi của $\theta$.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/nesterov.jpeg" width="800" height="400">
+    <p>Ý tưởng của Nesterov accelerated gradient.</p>
+    <a href="https://cs231n.github.io/neural-networks-3/">Nguồn: CS231n Stanford: Convolutional Neural Networks for Visual Recognition</a>
+</div>
+
+
+<p>Công thức cập nhật sẽ như sau:</p>
+
+
+<div style="text-align:center">$V_t = \gamma V_{t-1} - \eta \nabla_\theta f(\theta - \gamma V_{t-1}) \theta$</div>
+
+
+
+
+<div style="text-align:center">$\theta = \theta - V_t$</div>
+
+
+<p>Momentum là một kỹ thuật quan trọng và hiệu quả, gần như luôn luôn được sử dụng cùng với SGD. Còn đối với NAG, chúng ta ít gặp hơn. Trong khi về mặt lý thuyết, nó mang lại hiệu quả hơn momentum, nhưng trong thực tế các kiến trúc nổi tiếng như AlexNet, VGGNet, ResNet, Inception, &hellip; khi train trên tập dữ liệu ImageNet, chỉ sử dụng SGD với momentum. Có lẽ NAG chỉ phù hợp với các tập dữ liệu nhỏ.</p>
+<p><strong>5. Các thuật toán tối ưu khác</strong></p>
+<p>Ngoài SGD, hai thuật toán khác cũng rất hay được sử dụng trong các kiến trúc DL hiện đại là Adam và RMSprop. Mình sẽ có bài viết riêng về các thuật toán này. Mời các bạn đón đọc.</p>
+<p><strong>Tham khảo</strong></p>
+<ul>
+<li><a href="https://www.pyimagesearch.com/">Pyimagesearch</a></li>
+<li><a href="https://d2l.ai/chapter_optimization/gd.html">Dive into Deep Learning</a></li>
+<li><a href="https://machinelearningcoban.com/2017/01/12/gradientdescent/">machinelearningcoban blog</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/blog/</link>
+    <description>Recent content in blog on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Đóng gói AI model sử dụng Docker</title>
+      <link>https://tiensu.github.io/blog/38_package_ai_model_using_docker/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/38_package_ai_model_using_docker/</guid>
+      <description>Đã bao giờ bạn gặp tình huống:
+Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của bạn lại không chạy?</description>
+    </item>
+    
+    <item>
+      <title>Triển khai AI model sử dụng uWSGI và Nginx</title>
+      <link>https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi/</guid>
+      <description>Như đã giới thiệu trong bài trước, mặc dù Flask rất dễ để sử dụng nhưng nó không có đầy đủ chức năng để có thể áp dụng vào các sản phẩm trong thực tế.</description>
+    </item>
+    
+    <item>
+      <title>Phân loại text theo chủ đề  - Transfer Learning</title>
+      <link>https://tiensu.github.io/blog/ddd_bbc_text_topic_classification-copy/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/ddd_bbc_text_topic_classification-copy/</guid>
+      <description>Bài này mình xin phép đổi chủ đề một chút. Chúng ta sẽ thử làm bài toán phân loại text theo các chủ đề khác nhau.</description>
+    </item>
+    
+    <item>
+      <title>Phân loại text theo chủ đề </title>
+      <link>https://tiensu.github.io/blog/ddd_bbc_text_topic_classification/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/ddd_bbc_text_topic_classification/</guid>
+      <description>Bài này mình xin phép đổi chủ đề một chút. Chúng ta sẽ thử làm bài toán phân loại text theo các chủ đề khác nhau.</description>
+    </item>
+    
+    <item>
+      <title>Triển khai AI model sử dụng Flask</title>
+      <link>https://tiensu.github.io/blog/36_deploy_ai_model_with_flask/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/36_deploy_ai_model_with_flask/</guid>
+      <description>Bạn đã xây dựng thành công một DL model với độ chính xác rất cao, 99%. Xin chúc mừng bạn!</description>
+    </item>
+    
+    <item>
+      <title>Xây dựng CNN model cho bài toán đa lớp</title>
+      <link>https://tiensu.github.io/blog/35_cnn_model_multiple_classification/</link>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/35_cnn_model_multiple_classification/</guid>
+      <description>Những bài toán mà chỉ có 2 lớp cần phân biệt gọi là binary classification, còn những bài toán có nhiều hơn 2 lớp được gọi là multiple classification.</description>
+    </item>
+    
+    <item>
+      <title>Sử dụng kỹ thuật Transfer Learning khi huấn luyện CNN model</title>
+      <link>https://tiensu.github.io/blog/34_transfer_learning/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/34_transfer_learning/</guid>
+      <description>Trong các bài toán thực tế, khi làm việc với bộ dataset lớn và kiến trúc model phức tạp, việc huấn luyện model sẽ mất rất nhiều thời gian.</description>
+    </item>
+    
+    <item>
+      <title>Sử dụng kỹ thuật Data Augmentation và Model Checkpoint khi huấn luyện CNN model</title>
+      <link>https://tiensu.github.io/blog/33_dataaugmentation_modelcheckpoint_cnn/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/33_dataaugmentation_modelcheckpoint_cnn/</guid>
+      <description>Tiếp theo bài trước, trong bài này chúng ta sẽ áp dụng thêm 2 kỹ thuật mới vào CNN model Cat&amp;amp;Dog classification:</description>
+    </item>
+    
+    <item>
+      <title>Sử dụng kỹ thuật EarlyStopping khi huấn luyện CNN model</title>
+      <link>https://tiensu.github.io/blog/32_earlystopping_cnn/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/32_earlystopping_cnn/</guid>
+      <description>Nếu như bài trước, toàn bộ dữ liệu được đưa vào training, thì bài này, ta sẽ chia tập dữ liệu thành 2 phần:</description>
+    </item>
+    
+    <item>
+      <title>Xây dựng CNN model với tập dữ liệu Happy&amp;Sad</title>
+      <link>https://tiensu.github.io/blog/31_happy_and_sad_classification_cnn/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/31_happy_and_sad_classification_cnn/</guid>
+      <description>Như đã hứa ở bài trước, ở bài này chúng ta sẽ sử dụng một bộ dữ liệu &amp;ldquo;thực tế&amp;rdquo; hơn để huấn luyện một DL model phân loại hình ành, đó là happy-or-sad dataset.</description>
+    </item>
+    
+    <item>
+      <title>Xây dựng CNN model phân loại với tập dữ liệu MNIST</title>
+      <link>https://tiensu.github.io/blog/30_fashion_mnist_classification_advanced/</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/30_fashion_mnist_classification_advanced/</guid>
+      <description>Trong bài trước, chúng ta đã sử dụng các lớp FC để xây dựng model phân loại các sản phẩm trong tập MNIST thành 10 nhóm khác nhau.</description>
+    </item>
+    
+    <item>
+      <title>Xây dựng NN model phân loại với tập dữ liệu MNIST</title>
+      <link>https://tiensu.github.io/blog/29_fashion_mnist_classification/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/29_fashion_mnist_classification/</guid>
+      <description>Bài này, ta sẽ nâng độ khó hơn 1 chút so với bài trước. Yêu cầu đề bài như sau:</description>
+    </item>
+    
+    <item>
+      <title>Xây dựng NN model đơn giản dự đoán giá nhà</title>
+      <link>https://tiensu.github.io/blog/28_hourse_prices_prediction/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/28_hourse_prices_prediction/</guid>
+      <description>Sau một số bài về lý thuyết thì hôm nay chúng ta sẽ bắt tay vào thực hành code một bài toán mẫu giáo, áp dụng những lý thuyết mà ta đã tìm hiểu xem sao nhé!</description>
+    </item>
+    
+    <item>
+      <title>Các phương pháp Optimization - Gradient Descent</title>
+      <link>https://tiensu.github.io/blog/27_optimization_methods_gradient-descent/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/27_optimization_methods_gradient-descent/</guid>
+      <description>&amp;ldquo;Nearly all of deep learning is powered by one very important algorithm: Stochastic Gradient Descent (SGD)&amp;rdquo; – Goodfellow et al.</description>
+    </item>
+    
+    <item>
+      <title>Parameterized Learning</title>
+      <link>https://tiensu.github.io/blog/26_parameterized_learning/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/26_parameterized_learning/</guid>
+      <description>Bạn có biết thuật toán kNN - một trong những thuật toán đơn giản nhất của ML? Về bản chất, nó không &amp;ldquo;học&amp;rdquo; bất cứ điều gì từ dữ liệu mà chỉ đơn giản là lưu dữ liệu bên trong model, và tại thời điểm dự đoán, nó so sánh dữ liệu cần dự đoán với dữ liệu trong tập training.</description>
+    </item>
+    
+    <item>
+      <title>Dành cho người yêu sách</title>
+      <link>https://tiensu.github.io/blog/25_for_book_lover/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/25_for_book_lover/</guid>
+      <description>Bạn có là người thích đọc sách nhưng ngân quỹ có giới hạn, không đủ tiền để mua sách &amp;ldquo;xịn&amp;rdquo; trên amazon, hay trên các tạp chí khoa học, &amp;hellip;?</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 3</title>
+      <link>https://tiensu.github.io/blog/24_convolutional_neural_network_3/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/24_convolutional_neural_network_3/</guid>
+      <description>Tiếp tục chuỗi các bài viết về CNN, trong bài này mình sẽ chia sẻ với các bạn một số &amp;ldquo;common patterns 7 rules&amp;rdquo; trong việc xây dựng kiến trúc CNN.</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 2</title>
+      <link>https://tiensu.github.io/blog/23_convolutional_neural_network_2/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/23_convolutional_neural_network_2/</guid>
+      <description>Vì sử dụng trực tiếp raw pixel của image nên so với CNN, FCN (Fully Connected Network) có 2 nhược điểm kích thước của image tăng lên:</description>
+    </item>
+    
+    <item>
+      <title>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 1</title>
+      <link>https://tiensu.github.io/blog/22_convolutional_neural_network_1/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/22_convolutional_neural_network_1/</guid>
+      <description>Sau khi đã tìm hiểu cơ bản về Neural Network, chúng ta sẽ đi tìm hiểu về CNN. CNN là một dạng kiến trúc Neural Network đóng vai trò vô cùng quan trọng trong Deep Learning.</description>
+    </item>
+    
+    <item>
+      <title>Neural Network cơ bản (Phần 2)</title>
+      <link>https://tiensu.github.io/blog/21_neural_network_fundamentals_2/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/21_neural_network_fundamentals_2/</guid>
+      <description>Trong quá trình tìm hiểu về mạng NN, mình thấy khá là khó hiểu, đặc biệt với các bạn không mạnh về toán.</description>
+    </item>
+    
+    <item>
+      <title>Neural Network cơ bản (Phần 1)</title>
+      <link>https://tiensu.github.io/blog/20_neural_network_fundamentals_1/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/20_neural_network_fundamentals_1/</guid>
+      <description>Trong bài này chúng ta sẽ cùng nhau tìm hiểu lys thuyết cơ bản về mạng thần kinh nhân tạo (neural network):</description>
+    </item>
+    
+    <item>
+      <title>Nghề Data Scientis - Lý thuyết và thực tế - Sự khác biêt</title>
+      <link>https://tiensu.github.io/blog/18_data_scientist_theory_and_real/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/18_data_scientist_theory_and_real/</guid>
+      <description>Bạn thường nghe nói Data Scientist là nghê sexy nhất thế kỷ 21, với mức lương cao ngất ngưởng, tạo ra những sản phầm có tầm ảnh hưởng lớn, được mọi người ngưỡng mộ, blabla.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 14: Tuning Subsample</title>
+      <link>https://tiensu.github.io/blog/17_tuning_subsampling/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/17_tuning_subsampling/</guid>
+      <description>Trong quá trình training, XGBoost thường xuyên phải thực hiện công việc chọn lựa ngẫu nhiên tập dữ liệu con (subsamples) từ tập dữ liệu gốc ban đầu.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 13: Tuning Learning_Rate và số lượng của Decision Tree</title>
+      <link>https://tiensu.github.io/blog/15_tuning_learning_rate_and_number_decition_tree/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/15_tuning_learning_rate_and_number_decition_tree/</guid>
+      <description>Một vấn đề còn tồn tại của XGBoost là khả năng học trên tập dữ liệu huấn luyện một cách rất nhanh chóng.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 12: Tuning số lượng và kích thước của Decision Tree</title>
+      <link>https://tiensu.github.io/blog/16_tuning_number_and_size_decision_tree/</link>
+      <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/16_tuning_number_and_size_decision_tree/</guid>
+      <description>Ý tưởng cơ bản của thuật toán Gradient Boosting là lần lượt thêm các decision trees nối tiếp nhau. Tree thêm vào sau sẽ cố gắng giải quyết những sai sót của tree trước đó.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 11: Train XGBoost model trên AWS</title>
+      <link>https://tiensu.github.io/blog/14_train_xgboost_models_on_aws/</link>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/14_train_xgboost_models_on_aws/</guid>
+      <description>Thư viện XGBoost được thiết kế để tận dụng tối đa sức mạnh của phần cứng hệ thống, bao gồm tất cả CPU cores và bộ nhớ.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 10: Cấu hình Multithreading cho XGBoost model</title>
+      <link>https://tiensu.github.io/blog/13_multithreading-xgboost/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/13_multithreading-xgboost/</guid>
+      <description>Thư viện XGBoost được thiết kế để làm việc h iệu quả vớicơ chế xử lý song song trên nhiều core (multithreading) của phần cứng, cả trong quá trình train và dự đoán.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 9: Cấu hình Early_Stopping cho XGBoost model</title>
+      <link>https://tiensu.github.io/blog/12_early_stopping/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/12_early_stopping/</guid>
+      <description>Overfitting vẫn luôn là một vấn đề làm đau đầu những kỹ sư AI. Trong bài viết này chúng ta sẽ cùng tìm hiểu cách thức monitor (giám sát) performance (hiệu năng) của XGBoost model trong suốt quá trình train.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 8: Lựa chọn features cho XGBoost model</title>
+      <link>https://tiensu.github.io/blog/11_feature-selection/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/11_feature-selection/</guid>
+      <description>Feature selection hay lựa chọn features là một bước tương đối quan trọng trước khi train XGBoost model. Lựa chọn đúng các features sẽ giúp model khái quát hóa vấn đề tốt hơn (low variance) -&amp;gt; đạt độ chính xác cao hơn.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 7: Lưu và sử dụng XGBoost model</title>
+      <link>https://tiensu.github.io/blog/10_save-load-xgboost-model/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/10_save-load-xgboost-model/</guid>
+      <description>Giả sử bạn đã train xong một XGBoost model đạt được độ chính xác rất cao. Câu hỏi đặt ra là làm sao lưu lại model đó để sử dụng về sau (không phải mất công train lại model mỗi khi cần sử dụng)?</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 6: Trực quan hóa XGBoost model</title>
+      <link>https://tiensu.github.io/blog/09_visualize-xgboost-model/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/09_visualize-xgboost-model/</guid>
+      <description>Ta đã biết, XGBoost thực chất là tập hợp gồm nhiều decision tree. Việc thể hiện mỗi decision tree đó trên đồ thì sẽ giúp chúng ta hiểu sâu sắc hơn quá trình boosting khi đưa vào một tập dữ liệu.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 5: Đánh giá hiệu năng của XGBoost model</title>
+      <link>https://tiensu.github.io/blog/08_evaluate-xgbosst-models/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/08_evaluate-xgbosst-models/</guid>
+      <description>Mục đích của việc phát triển mô hình dự đoán là tạo ra một mô hình có độ chính xác cao khi kiểm tra trên bộ dữ liệu độc lập với dữ liệu train (gọi là unseen data).</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 4: Chuẩn bị dữ liệu cho XGBoost model</title>
+      <link>https://tiensu.github.io/blog/07_data-preparation-for-gradient-boosting/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/07_data-preparation-for-gradient-boosting/</guid>
+      <description>XGBoost là một thuật toán thuộc họ Gradient Boosting. Những ưu điểm vượt trội của nó đã được chứng minh qua các cuộc thi trên kaggle.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 3: Xây dựng XGBoost model</title>
+      <link>https://tiensu.github.io/blog/06_build-xgboost-model/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/06_build-xgboost-model/</guid>
+      <description>XGBoost là một thuật toán rất mạnh mẽ, tối ưu hóa về tốc độ và hiệu năng cho việc xây dựng các mô hình dự đoán.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 2: Toàn cảnh về Ensemble Learning - Phần 2</title>
+      <link>https://tiensu.github.io/blog/05_comprehensive_guide_to_ensemble_model_2/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/05_comprehensive_guide_to_ensemble_model_2/</guid>
+      <description>Tiếp tục phần 2 của loạt bài tìm hiểu toàn cảnh về Ensemble Learning, trong phần này ta sẽ đi qua một số thuât toán thuộc nhóm Bagging và Boosting.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Bài 1: Toàn cảnh về Ensemble Learning - Phần 1</title>
+      <link>https://tiensu.github.io/blog/04_comprehensive_guide_to_ensemble_model_1/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/04_comprehensive_guide_to_ensemble_model_1/</guid>
+      <description>1. Giới thiệu về Ensemble Learning
+Giả sử chúng ta có một bài toán phân loại sản phẩm sử dụng ML.</description>
+    </item>
+    
+    <item>
+      <title>XGBoost - Giới thiệu chuỗi bài viết về thuật toán XGBoost</title>
+      <link>https://tiensu.github.io/blog/03_xgboost-model-serial-introduction/</link>
+      <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/03_xgboost-model-serial-introduction/</guid>
+      <description>XGBoost là một thuật toán rất được quan tâm gần đây vì những ưu điểm vượt trội của nó so với các thuật toán khác.</description>
+    </item>
+    
+    <item>
+      <title>Tổng hợp các thuật toán Machine Learning</title>
+      <link>https://tiensu.github.io/blog/02_machine_learning_algorithms_summary/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/02_machine_learning_algorithms_summary/</guid>
+      <description>Bài viết này nhằm mục đích tổng hợp, tóm tắt lại các thuật toán của Machine Learning, giúp bạn đọc có cái nhìn toàn cảnh và hiểu rõ hơn về Deep Learning.</description>
+    </item>
+    
+    <item>
+      <title>Lưu ý khi lập kế hoạch cho một dự án AI</title>
+      <link>https://tiensu.github.io/blog/01_ai-project-planing/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/01_ai-project-planing/</guid>
+      <description>Trong bất kỳ dự án nào, đứng ở góc độ của nhà đầu tư và người quản lý, họ đều muốn biết được mốc thời gian dự án có thể được hoàn thành trước khi thực sự bắt đầu dự án.</description>
+    </item>
+    
+  </channel>
+</rss>

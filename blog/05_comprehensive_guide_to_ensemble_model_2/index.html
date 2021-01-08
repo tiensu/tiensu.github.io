@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/ensemble-learning"
+          class="text-primary">Ensemble Learning</a>
+        
+        <a href="/categories/xgboost"
+          class="text-primary">X g boost</a>
+        
+        <h2>XGBoost - Bài 2: Toàn cảnh về Ensemble Learning - Phần 2</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>25 August 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/xgboost_ensemble_2.png" class="img-fluid w-100 mb-4" alt="XGBoost - Bài 2: Toàn cảnh về Ensemble Learning - Phần 2">
+        
+        <div class="content mb-5">
+          <p>Tiếp tục phần 2 của loạt bài tìm hiểu toàn cảnh về <code>Ensemble Learning</code>, trong phần này ta sẽ đi qua một số thuât toán thuộc nhóm <code>Bagging</code> và <code>Boosting</code>.</p>
+<ul>
+<li>Các thuật toán thuộc nhóm <code>Bagging</code> bao gồm:
+<ul>
+<li>Bagging meta-estimator</li>
+<li>Random forest</li>
+</ul>
+</li>
+<li>Các thuật toán thuộc họ <code>Boosting</code> bao gồm:
+<ul>
+<li>AdaBoost</li>
+<li>Gradient Boosting (GBM)</li>
+<li>XGBoost (XGBM)</li>
+<li>Light GBM</li>
+<li>CatBoost</li>
+</ul>
+</li>
+</ul>
+<p>Để minh họa cho các thuật toán kể trên, mình sẽ sử dụng bộ dữ liệu <a href="https://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/">Loan Prediction Problem</a>.</p>
+<p><strong>1. Bagging techniques</strong></p>
+<p><em><strong>1.1 Bagging meta-estimator</strong></em></p>
+<p><code>Bagging meta-estimator</code> là thuật toán sử dụng cho cả 2 loại bài toán <code>classification</code> (<em>BaggingClassifier</em>) và <code>regression</code> (<em>BaggingRegressor</em>).</p>
+<p>Các bước thực hiện của thuật toán như sau:</p>
+<ul>
+<li>Bước 1: Tạo ngẫu nhiên các N <code>bags</code> từ tập <code>train set</code>.</li>
+<li>Bước 2: Tạo N objects của lớp <code>BaggingClassifier</code> và train trên mỗi bag, độc lập với nhau.</li>
+<li>Bước 3: Sử dụng các objects đã trained để dự đoán trên tập <code>test set</code>.</li>
+</ul>
+<p>Code cho bài toán <code>classification</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#importing important packages</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> BaggingClassifier
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> tree
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+
+<span style="color:#75715e">#reading the dataset</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;train_ctrUa4K.csv&#34;</span>)
+
+<span style="color:#75715e"># drop nan values</span>
+df<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
+
+<span style="color:#75715e"># instantiate labelencoder object</span>
+le <span style="color:#f92672">=</span> LabelEncoder()
+<span style="color:#75715e"># Categorical boolean mask</span>
+categorical_feature_mask <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dtypes<span style="color:#f92672">==</span>object
+<span style="color:#75715e"># Get list of categorical column names</span>
+categorical_cols <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>columns[categorical_feature_mask]<span style="color:#f92672">.</span>tolist()
+<span style="color:#75715e"># apply le on categorical feature columns</span>
+df[categorical_cols] <span style="color:#f92672">=</span> df[categorical_cols]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> col: le<span style="color:#f92672">.</span>fit_transform(col))
+
+<span style="color:#75715e">#split dataset into train and test</span>
+train, test <span style="color:#f92672">=</span> train_test_split(df, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+
+x_train <span style="color:#f92672">=</span> train<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_train <span style="color:#f92672">=</span> train[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+x_test <span style="color:#f92672">=</span> test<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_test <span style="color:#f92672">=</span> test[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+model <span style="color:#f92672">=</span> BaggingClassifier(tree<span style="color:#f92672">.</span>DecisionTreeClassifier(random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>))
+model<span style="color:#f92672">.</span>fit(x_train, y_train)
+accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>score(x_test,y_test)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Accuracy: {:.2f}%&#34;</span><span style="color:#f92672">.</span>format(accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">77.83</span><span style="color:#f92672">%</span>
+</code></pre></div><p>Đối với bài toán <code>regression</code>, thay <code>BaggingClassifier</code> bằng <code>BaggingRegressor</code>.</p>
+<p>Một số tham số:</p>
+<ul>
+<li>base_estimator: Định nghĩa thuật toán mà <code>base model</code> sử dụng. Mặc định là <code>decision tree</code>.</li>
+<li>n_estimators: Định nghĩa số lượng <code>base models</code>. Mặc định là 10.</li>
+<li>max_samples: Định nghĩa số lượng mẫu data tối đa trong mỗi bag. Mặc định là 1.</li>
+<li>max_features: Định nghĩa số lượng features tối đa sử dụng trong mỗi bag. Mặc định là 1.</li>
+<li>n_jobs: Số lượng jobs chạy song song cho cả quá trình train và predict. Mặc định là 1. Nếu giá trị bằng -1 thì số jobs bằng số cores của hệ thống.</li>
+<li>random_state: Nếu tham số này được gán giá trị giống nhau mỗi lần gọi <code>BaggingClassifier</code> thì các dữ tập dữ liệu con sinh ra (một cách ngẫu nhiên) từ tập dữ liệu ban đầu sẽ giống nhau. Tham số này hữu ích khi cần so sánh các models với nhau.</li>
+</ul>
+<p><em><strong>1.2 Random Forest</strong></em></p>
+<p>Các thức hoạt động của <code>Random Forest</code> gần giống <code>Bagging meta-estimator</code>, chỉ khác một điều duy nhất là tại mỗi node của <code>tree</code> trong <code>Decision Tree</code>, nó tạo ra một tập ngẫu nhiên các <code>features</code> và sử dụng tập này đê chọn hướng đi tiếp theo. Trong khi đó, <code>Bagging meta-estimator</code> sử dụng tất cả <code>features</code> để chọn đường.</p>
+<p>Code ví dụ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#importing important packages</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> tree
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+
+<span style="color:#75715e">#reading the dataset</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;train_ctrUa4K.csv&#34;</span>)
+
+<span style="color:#75715e"># drop nan values</span>
+df<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
+
+<span style="color:#75715e"># instantiate labelencoder object</span>
+le <span style="color:#f92672">=</span> LabelEncoder()
+<span style="color:#75715e"># Categorical boolean mask</span>
+categorical_feature_mask <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dtypes<span style="color:#f92672">==</span>object
+<span style="color:#75715e"># Get list of categorical column names</span>
+categorical_cols <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>columns[categorical_feature_mask]<span style="color:#f92672">.</span>tolist()
+<span style="color:#75715e"># apply le on categorical feature columns</span>
+df[categorical_cols] <span style="color:#f92672">=</span> df[categorical_cols]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> col: le<span style="color:#f92672">.</span>fit_transform(col))
+
+<span style="color:#75715e">#split dataset into train and test</span>
+train, test <span style="color:#f92672">=</span> train_test_split(df, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+
+x_train <span style="color:#f92672">=</span> train<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_train <span style="color:#f92672">=</span> train[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+x_test <span style="color:#f92672">=</span> test<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_test <span style="color:#f92672">=</span> test[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+model <span style="color:#f92672">=</span> RandomForestClassifier()
+model<span style="color:#f92672">.</span>fit(x_train, y_train)
+accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>score(x_test, y_test)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Accuracy: {:.2f}%&#34;</span><span style="color:#f92672">.</span>format(accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">79.86</span><span style="color:#f92672">%</span>
+</code></pre></div><p>Một số tham số:</p>
+<ul>
+<li>n_estimators: Số lượng <code>decition trees</code> (<em>base models</em>). Mặc định là 100 (đối với phiên bản scikit-learn từ 0.22) và 10 (đối với phiên bản &lt; 0.22).</li>
+<li>criterion: Chỉ ra hàm được sử dụng để quyết định hướng đi tại mỗi node của tree. Tham số này có thể nhận 1 trong 2 giá trị {&ldquo;gini&rdquo;, &ldquo;entropy&rdquo;}. Giá trị mặc định là &ldquo;gini&rdquo;.</li>
+<li>max_features: Số lượng <code>features</code> được sử dụng tại mỗi node để tìm đường đi tiếp theo. Một số giá trị thường được sử dụng là:
+<ul>
+<li>auto/sqrt: max_features = sqrt(n_features). Đây là giá trị mặc định.</li>
+<li>log2: max_features = log2(n_features).</li>
+<li>None: max_features = n_features.</li>
+</ul>
+</li>
+<li>max_depth: Độ sâu của mỗi tree. Mặc định, các nodes sẽ được mở rộng tận khi tất cả các leaves chứa ít hơn <code>min_samples_split</code> mẫu (<em>samples</em>).</li>
+<li>min_sample_split: Số lượng mẫu tối thiểu tại mỗi <code>leaf node</code> để có thể tiếp tục mở rộng tree. Giá trị mặc định là 2.</li>
+<li>min_samples_leaf: Số lượng mẫu tối thiểu tại mỗi <code>leaf node</code>. Mặc định là 1.</li>
+<li>max_leaf_nodes: Số lượng <code>leaf node</code> tối đa của mỗi tree. Giá trị mặc định là không có giới hạn số lượng.</li>
+<li>n_jobs: Số lượng jobs chạy song song. Mặc định là 1. Gán giá trị -1 để sử dụng tất cả các cores của hệ thống.</li>
+<li>random_state: Nếu tham số này được gán giá trị giống nhau mỗi lần gọi <code>RandomForestClassifier</code> thì các dữ tập dữ liệu con sinh ra (một cách ngẫu nhiên) từ tập dữ liệu ban đầu sẽ giống nhau. Tham số này hữu ích khi cần so sánh các models với nhau.</li>
+</ul>
+<p><strong>2. Boosting techniques</strong></p>
+<p><em><strong>2.1 AdaBoost</strong></em></p>
+<p>AdaBoost là thuật toán đơn giản nhất trong họ <code>Boosting</code>, nó cũng thường sử dụng <code>decision tree</code> để làm <code>base model</code>.</p>
+<p>Thuật toán thực hiện như sau:</p>
+<ul>
+<li>Bước 1: Ban đầu, tất cả các mẫu dữ liệu được gán cho cùng một giá trị trọng số (<em>weight</em>).</li>
+<li>Bước 2: Lựa chọn ngẫu nhiên một tập dữ liệu con (tập S) từ tập dữ liệu ban đầu (tập D) và train <code>decition tree</code> model trên tập dữ liệu con này.</li>
+<li>Bước 3: Sử dụng model đã trained, tiến hành dự đoán trên toàn tập D.</li>
+<li>Bước 4: Tính toán lỗi (error) bằng cách so sánh giá trị dự đoán và giá trị thực tế.</li>
+<li>Bước 5: Gán giá trị weight cao hơn cho những mẫu dữ liệu có error cao hơn.</li>
+<li>Bước 6: Lặp lại bước 2,3,4,5 đến khi error không đổi hoặc số lượng tốí đa của <code>weak learner</code> đạt được.</li>
+</ul>
+<p>Code mẫu cho bài toán <code>classification</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#importing important packages</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> tree
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> AdaBoostClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+
+<span style="color:#75715e">#reading the dataset</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;train_ctrUa4K.csv&#34;</span>)
+
+<span style="color:#75715e"># drop nan values</span>
+df<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
+
+<span style="color:#75715e"># instantiate labelencoder object</span>
+le <span style="color:#f92672">=</span> LabelEncoder()
+<span style="color:#75715e"># Categorical boolean mask</span>
+categorical_feature_mask <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dtypes<span style="color:#f92672">==</span>object
+<span style="color:#75715e"># Get list of categorical column names</span>
+categorical_cols <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>columns[categorical_feature_mask]<span style="color:#f92672">.</span>tolist()
+<span style="color:#75715e"># apply le on categorical feature columns</span>
+df[categorical_cols] <span style="color:#f92672">=</span> df[categorical_cols]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> col: le<span style="color:#f92672">.</span>fit_transform(col))
+
+<span style="color:#75715e">#split dataset into train and test</span>
+train, test <span style="color:#f92672">=</span> train_test_split(df, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+
+x_train <span style="color:#f92672">=</span> train<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_train <span style="color:#f92672">=</span> train[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+x_test <span style="color:#f92672">=</span> test<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_test <span style="color:#f92672">=</span> test[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+model <span style="color:#f92672">=</span> AdaBoostClassifier(random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+model<span style="color:#f92672">.</span>fit(x_train, y_train)
+accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>score(x_test, y_test)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Accuracy: {:.2f}%&#34;</span><span style="color:#f92672">.</span>format(accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">72.22</span><span style="color:#f92672">%</span>
+</code></pre></div><p>Đối với bài toán <code>regression</code>, thay <code>AdaBoostClassifier</code> bằng <code>AdaBoostRegressor</code>.</p>
+<p>Một vài tham số quan trọng:</p>
+<ul>
+<li>base_estimator: Chỉ ra <code>weak learner</code> là gì. Mặc định sử dụng <code>decition tree</code>.</li>
+<li>n_estimators: Số lượng của <code>weak learners</code>. Mặc định là 50.</li>
+<li>learning_rate: Điều chỉnh mức độ <code>đóng góp</code> của mỗi <code>weak learner</code> đến kết quả cuối cùng.</li>
+<li>random_state: Nếu tham số này được gán giá trị giống nhau mỗi lần gọi <code>AdaBoostClassifier</code> thì các dữ tập dữ liệu con sinh ra (một cách ngẫu nhiên) từ tập dữ liệu ban đầu sẽ giống nhau. Tham số này hữu ích khi cần so sánh các models với nhau.</li>
+</ul>
+<p><em><strong>2.2 Gradient Boosting (GBM)</strong></em></p>
+<p>Để giúp mọi người dễ hình dung, mình sẽ trình bày ý tưởng của GBM thông qua ví dụ sau:</p>
+<p>Cho bảng dữ liệu bên dưới:</p>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">Married</th>
+<th align="center">Gender</th>
+<th align="center">City</th>
+<th align="center">Monthly Income</th>
+<th align="center">Age (target)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">Y</td>
+<td align="center">F</td>
+<td align="center">Hanoi</td>
+<td align="center">51.000</td>
+<td align="center">35</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">N</td>
+<td align="center">M</td>
+<td align="center">HCM</td>
+<td align="center">25.000</td>
+<td align="center">24</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Y</td>
+<td align="center">F</td>
+<td align="center">Hanoi</td>
+<td align="center">70.000</td>
+<td align="center">38</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Y</td>
+<td align="center">M</td>
+<td align="center">HCM</td>
+<td align="center">53.000</td>
+<td align="center">30</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">N</td>
+<td align="center">M</td>
+<td align="center">Hanoi</td>
+<td align="center">47.000</td>
+<td align="center">33</td>
+</tr>
+</tbody>
+</table>
+<p>Bài toán đạt ra là cần dự đoán tuổi dựa trên các <code>input features</code>: Tình trạng hôn nhân, giới tính, thành phố sinh sống, thu nhập hàng tháng.</p>
+<ul>
+<li>Bước 1: Train <code>decition tree</code> model thứ nhất trên tập dữ liệu bên trên.</li>
+<li>Bước 2: Tính toán lỗi dựa theo sai số giữa giá trị thưc tế và giá trị dự đoán.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">Married</th>
+<th align="center">Gender</th>
+<th align="center">City</th>
+<th align="center">Monthly Income</th>
+<th align="center">Age (target)</th>
+<th align="center">Age (prediction 1)</th>
+<th align="center">Error 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">Y</td>
+<td align="center">F</td>
+<td align="center">Hanoi</td>
+<td align="center">51.000</td>
+<td align="center">35</td>
+<td align="center">32</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">N</td>
+<td align="center">M</td>
+<td align="center">HCM</td>
+<td align="center">25.000</td>
+<td align="center">24</td>
+<td align="center">32</td>
+<td align="center">-8</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Y</td>
+<td align="center">F</td>
+<td align="center">Hanoi</td>
+<td align="center">70.000</td>
+<td align="center">38</td>
+<td align="center">32</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Y</td>
+<td align="center">M</td>
+<td align="center">HCM</td>
+<td align="center">53.000</td>
+<td align="center">30</td>
+<td align="center">32</td>
+<td align="center">-2</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">N</td>
+<td align="center">M</td>
+<td align="center">Hanoi</td>
+<td align="center">47.000</td>
+<td align="center">33</td>
+<td align="center">32</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Bước 3: Một <code>decition tree</code> model thứ 2 được tạo, sử dụng cùng <code>input features</code> với model trước đó, nhưng <code>target</code> là <code>Error 1</code>.</li>
+<li>Bước 4: Giá trị dự đoán của model thứ 2 được cộng với giá trị dự đoán của model thứ nhất.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">Age (target)</th>
+<th align="center">Age (prediction 1)</th>
+<th align="center">Error 1 (new target)</th>
+<th align="center">Prediction 2</th>
+<th align="center">Combine (Pred1+Pred2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">35</td>
+<td align="center">32</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">35</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">24</td>
+<td align="center">32</td>
+<td align="center">-8</td>
+<td align="center">-5</td>
+<td align="center">27</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">38</td>
+<td align="center">32</td>
+<td align="center">6</td>
+<td align="center">3</td>
+<td align="center">35</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">30</td>
+<td align="center">32</td>
+<td align="center">-2</td>
+<td align="center">-5</td>
+<td align="center">27</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">33</td>
+<td align="center">32</td>
+<td align="center">1</td>
+<td align="center">3</td>
+<td align="center">35</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Bước 5: Giá trị kết hợp bở bước 3 coi như là giá trị dự đoán mới. Ta tính lỗi (Error 2) dựa trên sai số giữa giá trị này và giá trị thực teses.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">Age (target)</th>
+<th align="center">Age (prediction 1)</th>
+<th align="center">Error 1 (new target)</th>
+<th align="center">Prediction 2</th>
+<th align="center">Combine (Pred1+Pred2)</th>
+<th align="center">Error 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">35</td>
+<td align="center">32</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">35</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">24</td>
+<td align="center">32</td>
+<td align="center">-8</td>
+<td align="center">-5</td>
+<td align="center">27</td>
+<td align="center">-3</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">38</td>
+<td align="center">32</td>
+<td align="center">6</td>
+<td align="center">3</td>
+<td align="center">35</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">30</td>
+<td align="center">32</td>
+<td align="center">-2</td>
+<td align="center">-5</td>
+<td align="center">27</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">33</td>
+<td align="center">32</td>
+<td align="center">1</td>
+<td align="center">3</td>
+<td align="center">35</td>
+<td align="center">-3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Bước 6: Lặp lại bước 2-5 ho đến khi số lượng <code>weak learner</code> đạt được hoặc giá trị lỗi không đổi.</li>
+</ul>
+<p>Code ví dụ cho bài toán <code>classification</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#importing important packages</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> tree
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> GradientBoostingClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+
+<span style="color:#75715e">#reading the dataset</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;train_ctrUa4K.csv&#34;</span>)
+
+<span style="color:#75715e"># drop nan values</span>
+df<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
+
+<span style="color:#75715e"># instantiate labelencoder object</span>
+le <span style="color:#f92672">=</span> LabelEncoder()
+<span style="color:#75715e"># Categorical boolean mask</span>
+categorical_feature_mask <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dtypes<span style="color:#f92672">==</span>object
+<span style="color:#75715e"># Get list of categorical column names</span>
+categorical_cols <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>columns[categorical_feature_mask]<span style="color:#f92672">.</span>tolist()
+<span style="color:#75715e"># apply le on categorical feature columns</span>
+df[categorical_cols] <span style="color:#f92672">=</span> df[categorical_cols]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> col: le<span style="color:#f92672">.</span>fit_transform(col))
+
+<span style="color:#75715e">#split dataset into train and test</span>
+train, test <span style="color:#f92672">=</span> train_test_split(df, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+
+x_train <span style="color:#f92672">=</span> train<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_train <span style="color:#f92672">=</span> train[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+x_test <span style="color:#f92672">=</span> test<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_test <span style="color:#f92672">=</span> test[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+model <span style="color:#f92672">=</span> GradientBoostingClassifier(learning_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">0.01</span>,random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+model<span style="color:#f92672">.</span>fit(x_train, y_train)
+accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>score(x_test, y_test)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Accuracy: {:.2f}%&#34;</span><span style="color:#f92672">.</span>format(accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">78.47</span><span style="color:#f92672">%</span>
+</code></pre></div><p>Đối với bài toán <code>regression</code>, thay <code>GradientBoostingClassifier</code> thành <code>GradientBoostingRegressor</code>.</p>
+<p>Một số tham số quan trọng:</p>
+<ul>
+<li>min_sample_split: Số lượng mẫu tối thiểu tại mỗi <code>leaf node</code> để có thể tiếp tục mở rộng tree. Giá trị mặc định là 2.</li>
+<li>min_samples_leaf: Số lượng mẫu tối thiểu tại mỗi <code>leaf node</code>. Mặc định là 1.</li>
+<li>max_depth: Độ sâu của mỗi tree. Nên xem xét tham số này khi tuning model. Giá trị mặc định là 3.</li>
+<li>max_features: Số lượng tối đa <code>features</code> xem xét khi tìm đường mở rộng tree. Những features này được chọn ngẫu nhiên.</li>
+</ul>
+<p><em><strong>2.3 XGBoost</strong></em></p>
+<p>XGBoost (<em>extreme Gradient Boosting</em>) là phiên bản cải tiến của <code>Gradient Boosting</code>. Ưu điểm vượt trội của nó được chứng minh ở các khía cạnh:</p>
+<ul>
+<li>
+<p>Tốc độ xử lý</p>
+<ul>
+<li>XGBoost thực hiện tinh toán song song nên tốc độ xử lý có thể tăng gấp 10 lần so với GBM. Ngoài ra, XGboost còn hỗ trợ tính toán trên Hadoop.</li>
+</ul>
+</li>
+<li>
+<p>Overfitting</p>
+<ul>
+<li>XGBoost áp dụng cơ chế <code>Regularization</code> nên hạn chế đáng kể hiệ tượng Overfitting (GBM không có regularization).</li>
+</ul>
+</li>
+<li>
+<p>Sự linh hoạt</p>
+<ul>
+<li>XGboost cho phép người dùng sử dụng hàm tối ưu và chỉ tiêu đánh giá của riêng họ, không hạn chế ở những hàm cung cấp sẵn.</li>
+</ul>
+</li>
+<li>
+<p>Xử lý <code>missing value</code></p>
+<ul>
+<li>XGBoost bao gồm cơ chế tự động xử lý <code>missing value</code> bên trong nó. Vì thế, có thể bỏ qua bước này khi chuẩn bị dữ liệu cho XGBoost.</li>
+</ul>
+</li>
+<li>
+<p>Tự động cắt tỉa</p>
+<ul>
+<li>Tính năng <code>tree pruning</code> hộ trợ việc tự động <code>bỏ qua</code> những leaves, nodes không mang giá trị tích cực  trong quá trình mở rộng tree.</li>
+</ul>
+</li>
+</ul>
+<p>Chính vì những ưu điểm đó mà hiệu năng của XGBoost tăng lên đáng kể so với các thuật toán <code>ensemble learning</code> khác. Nó được sử dụng ở hầu hết các cuộc thi trên Kaggle cũng như Hackathons.</p>
+<p>Code ví dụ cho bài toán <code>classification</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#importing important packages</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> tree
+<span style="color:#f92672">import</span> xgboost <span style="color:#f92672">as</span> xgb
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+
+<span style="color:#75715e">#reading the dataset</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;train_ctrUa4K.csv&#34;</span>)
+
+<span style="color:#75715e"># drop nan values</span>
+df<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
+
+<span style="color:#75715e"># instantiate labelencoder object</span>
+le <span style="color:#f92672">=</span> LabelEncoder()
+<span style="color:#75715e"># Categorical boolean mask</span>
+categorical_feature_mask <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dtypes<span style="color:#f92672">==</span>object
+<span style="color:#75715e"># Get list of categorical column names</span>
+categorical_cols <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>columns[categorical_feature_mask]<span style="color:#f92672">.</span>tolist()
+<span style="color:#75715e"># apply le on categorical feature columns</span>
+df[categorical_cols] <span style="color:#f92672">=</span> df[categorical_cols]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> col: le<span style="color:#f92672">.</span>fit_transform(col))
+
+<span style="color:#75715e">#split dataset into train and test</span>
+train, test <span style="color:#f92672">=</span> train_test_split(df, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+
+x_train <span style="color:#f92672">=</span> train<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_train <span style="color:#f92672">=</span> train[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+x_test <span style="color:#f92672">=</span> test<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_test <span style="color:#f92672">=</span> test[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+model <span style="color:#f92672">=</span> xgb<span style="color:#f92672">.</span>XGBClassifier(random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, eta<span style="color:#f92672">=</span><span style="color:#ae81ff">0.01</span>)
+model<span style="color:#f92672">.</span>fit(x_train, y_train)
+accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>score(x_test, y_test)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Accuracy: {:.2f}%&#34;</span><span style="color:#f92672">.</span>format(accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">82</span><span style="color:#f92672">%</span>
+</code></pre></div><p>Đối với vài toán <code>regression</code>, sử dụng <code>XGBRegressor</code> thay vì <code>XGBClassifier</code>.</p>
+<p>Một số tham số quan trọng:</p>
+<ul>
+<li>n_thread: Số lượng cores của hê thống được sử dụng để chạy model. Giá trị mặc định là -1, XGBoost sẽ tự động phát hiện và sử dụng tất cả các cores.</li>
+<li>eta: Tương tự <code>learning_rate</code> trong GBM. Giá trị mặc định là 0.3.</li>
+<li>max_depth: Độ sâu tối đa của <code>decision tree</code>. Giá trị mặc định là 6.</li>
+<li>colsample_bytree: Tương tự <code>max_features</code> của GBM.</li>
+<li>lambda: L2 regularization. Giá trị mặc định là 1.</li>
+<li>alpha: L1 regularization. Giá trị mặc định là 0.</li>
+</ul>
+<p><em><strong>2.4 Light GBM</strong></em></p>
+<p>Tại sao chúng ta vẫn cần thuật toán này khi mà ta đã có XGBoost rất mạnh mẽ rồi?</p>
+<p>Sự khác nhau nằm ở kích thước của dữ liệu huấn luyện. <code>Light GBM</code> đánh bại tất cả các thuật toán khác khi tập dataset có kích thước cực lớn. Thực tế chứng minh, nó cần ít thời gian đê xử lý hơn trên tập dữ liệu này (<em>Có lẽ vì thế mà có chứ <code>light - ánh sáng</code></em>). Nguyên nhân sâu xa của sự khác biệt này nằm ở cơ chế làm viêc của <code>Light GBM</code>. Trong khi các thuật toán khác sử dụng cơ chế <code>level-wise</code> thì nó lại sử dụng <code>leaf-wise</code>.</p>
+<p>Hình dưới đây minh họa sự khác nhau giữa 2 cơ chế <code>level-wise</code> và <code>leaf-wise</code>:</p>
+<p>
+
+<div style="text-align:center">
+    <img style="height:auto" src="/level-wise.webp">
+</div>
+
+
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/leaf-wise.webp">
+</div>
+
+</p>
+<p>Như chúng ta thấy, <code>leaf-wise</code> chỉ mở rộng tree theo 1 trong 2 hướng so với cả 2 hướng của <code>level-wise</code>, tức là số lượng tính toán của <code>Light GBM</code> chỉ bằng 1/2 so với XGBoost.</p>
+<p>Code ví dụ cho bài toán <code>classifier</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#importing important packages</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> tree
+<span style="color:#f92672">import</span> lightgbm <span style="color:#f92672">as</span> lgb
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+
+<span style="color:#75715e">#reading the dataset</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;train_ctrUa4K.csv&#34;</span>)
+
+<span style="color:#75715e"># drop nan values</span>
+df<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
+
+<span style="color:#75715e"># instantiate labelencoder object</span>
+le <span style="color:#f92672">=</span> LabelEncoder()
+<span style="color:#75715e"># Categorical boolean mask</span>
+categorical_feature_mask <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dtypes<span style="color:#f92672">==</span>object
+<span style="color:#75715e"># Get list of categorical column names</span>
+categorical_cols <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>columns[categorical_feature_mask]<span style="color:#f92672">.</span>tolist()
+<span style="color:#75715e"># apply le on categorical feature columns</span>
+df[categorical_cols] <span style="color:#f92672">=</span> df[categorical_cols]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> col: le<span style="color:#f92672">.</span>fit_transform(col))
+
+<span style="color:#75715e">#split dataset into train and test</span>
+train, test <span style="color:#f92672">=</span> train_test_split(df, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+
+x_train <span style="color:#f92672">=</span> train<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_train <span style="color:#f92672">=</span> train[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+x_test <span style="color:#f92672">=</span> test<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;Loan_Status&#39;</span>,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_test <span style="color:#f92672">=</span> test[<span style="color:#e6db74">&#39;Loan_Status&#39;</span>]
+
+model <span style="color:#f92672">=</span> lgb<span style="color:#f92672">.</span>LGBMClassifier()
+model<span style="color:#f92672">.</span>fit(x_train, y_train)
+accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>score(x_test, y_test)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Accuracy: {:.2f}%&#34;</span><span style="color:#f92672">.</span>format(accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Trong trường hợp <code>regression</code>, sử dụng <code>LGBMRegressor</code> thay cho <code>LGBMClassifier</code>.</p>
+<p>Một số tham số quan trọng:</p>
+<ul>
+<li>num_leaves: Số lượng leaves tối đa trên mỗi node. Giá trị mặc định là 31</li>
+<li>max_depth: Độ sâu tối đa của mỗi tree. Mặc định là không có giới hạn.</li>
+<li>learing_rate: <code>learning rate</code> của mỗi tree. Mặc định là 0.1.</li>
+<li>n_estimators: Số lượng <code>weak learners</code>. Mặc định là 100.</li>
+<li>n_jobs: Số lượng cores của hê thống được sử dụng để chạy model. Giá trị mặc định là -1, XGBoost sẽ tự động phát hiện và sử dụng tất cả các cores.</li>
+</ul>
+<p><em><strong>2.5 CatBoost</strong></em></p>
+<p>Khi làm việc với tập dữ liệu mà có số lượng lớn <code>input features</code> kiểu <code>categorical</code>, nếu chúng ta áp dụng <code>one-hot encoding</code> thì số chiều dữ liệu sẽ tăng lên rất nhanh (theo hàm mũ <code>e</code>).</p>
+<p><code>CatBoost</code> ra đời chính là để gánh vác sứ mệnh giải quyết những bài toán như vậy (<code>CatBoost</code> = <code>Categories</code> + <code>Boosting</code>). Khi làm việc với CatBoost, chúng ta không cần thực hiện <code>one-hot encoding</code>.</p>
+<p>Code ví dụ cho <code>classification</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># importing required libraries</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> catboost <span style="color:#f92672">import</span> CatBoostClassifier
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+
+<span style="color:#75715e"># read the train and test dataset</span>
+train_data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;train-data.csv&#39;</span>)
+test_data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;test-data.csv&#39;</span>)
+
+<span style="color:#75715e"># Now, we have used a dataset which has more categorical variables</span>
+<span style="color:#75715e"># hr-employee attrition data where target variable is Attrition </span>
+
+<span style="color:#75715e"># seperate the independent and target variable on training data</span>
+train_x <span style="color:#f92672">=</span> train_data<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Attrition&#39;</span>],axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+train_y <span style="color:#f92672">=</span> train_data[<span style="color:#e6db74">&#39;Attrition&#39;</span>]
+
+<span style="color:#75715e"># seperate the independent and target variable on testing data</span>
+test_x <span style="color:#f92672">=</span> test_data<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Attrition&#39;</span>],axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+test_y <span style="color:#f92672">=</span> test_data[<span style="color:#e6db74">&#39;Attrition&#39;</span>]
+
+<span style="color:#75715e"># find out the indices of categorical variables</span>
+categorical_var <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(train_x<span style="color:#f92672">.</span>dtypes <span style="color:#f92672">!=</span> np<span style="color:#f92672">.</span>float)[<span style="color:#ae81ff">0</span>]
+
+model <span style="color:#f92672">=</span> CatBoostClassifier(iterations<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>)
+
+<span style="color:#75715e"># fit the model with the training data</span>
+model<span style="color:#f92672">.</span>fit(train_x,train_y,cat_features <span style="color:#f92672">=</span> categorical_var,plot<span style="color:#f92672">=</span>False)
+
+<span style="color:#75715e"># predict the target on the train dataset</span>
+predict_train <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(train_x)
+
+<span style="color:#75715e"># Accuray Score on train dataset</span>
+accuracy_train <span style="color:#f92672">=</span> accuracy_score(train_y,predict_train)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">accuracy_score on train dataset : {:.2f}%&#39;</span><span style="color:#f92672">.</span>format(accuracy_train<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+
+<span style="color:#75715e"># predict the target on the test dataset</span>
+predict_test <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(test_x)
+
+<span style="color:#75715e"># Accuracy Score on test dataset</span>
+accuracy_test <span style="color:#f92672">=</span> accuracy_score(test_y,predict_test)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">accuracy_score on test dataset : {:.2f}%&#39;</span><span style="color:#f92672">.</span>format(accuracy_test<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">accuracy_score on train dataset : <span style="color:#ae81ff">91.41</span><span style="color:#f92672">%</span>
+accuracy_score on test dataset : <span style="color:#ae81ff">86.05</span><span style="color:#f92672">%</span>
+</code></pre></div><p>Thay <code>CatBoostRegressor</code> cho <code>CatBoostClassifier</code> trong bài toán <code>regression</code>.</p>
+<p>Một số tham số quan trọng:</p>
+<ul>
+<li>loss_function: Định nghĩa <code>loss_function</code> sử dụng để training model.</li>
+<li>iterations: Số lượng <code>weak learner</code>.</li>
+<li>learning_rate: Learning rate của mỗi tree.</li>
+<li>depth: Độ sâu của mỗi tree.</li>
+</ul>
+<p><strong>3. Kết luận</strong></p>
+<p>Chúng ta đã cùng nhau đi qua 2 phần khá dài để tìm hiểu về <code>Ensemble Learning</code>. Rất nhiều khía cạnh đã được bàn bạc và kèm theo code ví dụ. Hi vọng các bạn đã có cái nhìn rõ hơn về <code>Ensemble Learning</code>. Trong các bài tiếp theo, mình sẽ đi sâu hơn về XGBoost, một thuật toán mạnh mẽ, chiến thắng trong hầu như mọi cuộc thi Kaggle. Hãy đón đọc!</p>
+<p><em>Toàn bộ source code của bài này các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/xgboost-algorithm/tree/master/ensemble_learning">github.</a></em></p>
+<p>Bài viết có tham khảo tại <a href="https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models">đây</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

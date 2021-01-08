@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/ensemble-learning"
+          class="text-primary">Ensemble Learning</a>
+        
+        <a href="/categories/xgboost"
+          class="text-primary">X g boost</a>
+        
+        <h2>XGBoost - Bài 1: Toàn cảnh về Ensemble Learning - Phần 1</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>20 August 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/xgboost_ensemble_1.png" class="img-fluid w-100 mb-4" alt="XGBoost - Bài 1: Toàn cảnh về Ensemble Learning - Phần 1">
+        
+        <div class="content mb-5">
+          <p><strong>1. Giới thiệu về <code>Ensemble Learning</code></strong></p>
+<p>Giả sử chúng ta có một bài toán phân loại sản phẩm sử dụng ML. Team của bạn chia thành 3 nhóm, mỗi nhóm sử dụng một thuật toán khác nhau và đánh giá độ chính xác trên tập <code>validation set</code>:</p>
+<ul>
+<li>Nhóm 1: Sử dụng thuật toán <code>Linear Regression</code>.</li>
+<li>Nhóm 2: Sử dụng thuật toán <code>k-Nearest Neighbour</code>.</li>
+<li>Nhóm 3: Sử dụng thuật toán <code>Decision Tree</code>.
+Độ chính xác của mỗi nhóm lần lượt là 70%, 67% và 76%. Điều này hoàn toàn dễ hiểu bởi vì 3 models làm việc theo những các khác nhau. Ví dụ, <code>Linear Regression</code> cố gắng tìm ra mối quan hệ tuyến tính giữa các điểm dữ liệu, trong khi <code>Decision Tree</code> thì lại dựa vào mỗi quan hệ phi tuyến để liên kết dữ liệu.</li>
+</ul>
+<p>Có cách nào kết hợp kết quả cả 3 models để tạo ra kết quả cuối cùng hay không?</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/Ensemble_Learning.webp">
+</div>
+
+
+<p>Câu hỏi này là tiền đề cho một phương pháp, một họ các thuật toán hoạt động rất hiệu quả trong các bài toán ML. Đó là <code>Ensemble Learning</code> hay <code>Ensemble Models</code>.</p>
+<p>Hình dưới đây thể hiện bức tranh tổng quát về <code>Ensemble Learning</code>.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/Ensemble_Learning_2.png">
+</div>
+
+
+<p><strong>2. Basic Ensemble Techniques</strong></p>
+<p>Ở mức độ cơ bản, có 3 kỹ thuật là:</p>
+<ul>
+<li>Max Voting</li>
+<li>Averaging</li>
+<li>Weighted Averaging
+Mặc dù đơn giản nhưng những kỹ thuật này lại tỏ ra hiệu quả trong một số trường hợp nhất định. Hãy cùng tìm hiểu kỹ hơn về chúng.</li>
+</ul>
+<p><em><strong>2.1 Max Voting</strong></em></p>
+<p>Kỹ thuật này hay được sử dụng cho bài toán phân lớp, ở đó, nhiều models được sử dụng để dự đoán cho mỗi mẫu dữ liệu. Kết quả dự đoán của mỗi model được xem như là một <code>vote</code>. Cái nào có số <code>vote</code> cao nhất thì sẽ là kết quả dự đoán cuối cùng. Nói cách khác, đây là kiểu bầu chọn theo số đông, được áp dụng rất nhiều trong cuộc sống, chính trị, &hellip;</p>
+<p>Lấy ví dụ, đợt vừa rồi, công ty của bạn tổ chức khám sức khỏe cho nhân viên tại bệnh viện X. Sau khi khám xong, phòng tổ chức nhân sự (TCNS) lấy ý kiến mọi người về chất lượng khám bệnh để xem năm sau có tiếp tục khám ở bênh viên X đó nữa không. Bảng dưới là ý kiến của 5 người được chọn ngẫu nhiên trong số toàn bộ nhân viên.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Người 1</th>
+<th align="center">Người 2</th>
+<th align="center">Người 3</th>
+<th align="center">Người 4</th>
+<th align="center">Người 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Có</td>
+<td align="center">Không</td>
+<td align="center">Không</td>
+<td align="center">Có</td>
+<td align="center">Có</td>
+</tr>
+</tbody>
+</table>
+<p>Có 3 ý kiến muốn tiêp tục khám ở bệnh viện X vào năm sau, và 2 ý kiến muốn đổi bênh viện khác. Căn cứ theo <code>max voting</code> thì phòng TCNS sẽ tiếp tục chọn bệnh viên Xlà nơi khám bệnh cho nhân viên cho năm tiếp theo.</p>
+<p>Code minh họa:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x_train, y_train, x_test, y_test <span style="color:#f92672">=</span> get_data()
+
+model_1 <span style="color:#f92672">=</span> DecisionTreeClassifier()
+model_2 <span style="color:#f92672">=</span> KNeighborsClassifier()
+model_3<span style="color:#f92672">=</span> LogisticRegression()
+
+model_1<span style="color:#f92672">.</span>fit(x_train,y_train)
+model_2<span style="color:#f92672">.</span>fit(x_train,y_train)
+model_3<span style="color:#f92672">.</span>fit(x_train,y_train)
+
+pred_1<span style="color:#f92672">=</span>model_1<span style="color:#f92672">.</span>predict(x_test)
+pred_2<span style="color:#f92672">=</span>model_2<span style="color:#f92672">.</span>predict(x_test)
+pred_3<span style="color:#f92672">=</span>model_3<span style="color:#f92672">.</span>predict(x_test)
+
+final_pred <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([])
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(x_test)):
+    final_pred <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>append(final_pred, mode([pred_1[i], pred_2[i], pred_3[i]]))
+</code></pre></div><p>Thư viện <code>scikit-learn</code> có module <code>VotingClassifier</code> giúp chúng ta đơn giản hóa việc này:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> VotingClassifier
+
+x_train, y_train, x_test, y_test <span style="color:#f92672">=</span> get_data()
+
+model_1 <span style="color:#f92672">=</span> LogisticRegression(random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+model_2 <span style="color:#f92672">=</span> DecisionTreeClassifier(random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+
+model <span style="color:#f92672">=</span> VotingClassifier(estimators<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;lr&#39;</span>, model_1), (<span style="color:#e6db74">&#39;dt&#39;</span>, model_2)], voting<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;hard&#39;</span>)
+model<span style="color:#f92672">.</span>fit(x_train,y_train)
+model<span style="color:#f92672">.</span>score(x_test,y_test)
+</code></pre></div><p><em><strong>2.2 Averaging</strong></em></p>
+<p>Tương tự như kỹ thuật <code>Voting</code>, <code>Averaging</code> cũng sử dụng kết quả dự đoán của nhiều models. Tuy nhiên, ở bước quyết định kết quả cuối cùng, giá trị trung bình của tất cả kêt quả của các models được lựa chọn.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/average.PNG">
+</div>
+
+
+<p>Tiếp tục với ví dụ ở trên, một đề nghị khác của phòng TCNS là yêu cầu nhân viên chấm điểm chất lượng khám bệnh của bênh viện X, theo thang điểm từ 1 đến 5.</p>
+<p>Bảng kết quả trả lời của 5 người ngẫu nhiên:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Người 1</th>
+<th align="center">Người 2</th>
+<th align="center">Người 3</th>
+<th align="center">Người 4</th>
+<th align="center">Người 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">3</td>
+<td align="center">5</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<p>Điểm đánh giá cuối cùng sẽ là: <strong>(2+4+3+5+4)/5 = 3.6</strong></p>
+<p>Code ví dụ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x_train, y_train, x_test, y_test <span style="color:#f92672">=</span> get_data()
+
+model_1 <span style="color:#f92672">=</span> tree<span style="color:#f92672">.</span>DecisionTreeClassifier()
+model_2 <span style="color:#f92672">=</span> KNeighborsClassifier()
+model_3 <span style="color:#f92672">=</span> LogisticRegression()
+
+model_1<span style="color:#f92672">.</span>fit(x_train,y_train)
+model_2<span style="color:#f92672">.</span>fit(x_train,y_train)
+model_3<span style="color:#f92672">.</span>fit(x_train,y_train)
+
+pred_1 <span style="color:#f92672">=</span> model1<span style="color:#f92672">.</span>predict_proba(x_test)
+pred_2 <span style="color:#f92672">=</span> model2<span style="color:#f92672">.</span>predict_proba(x_test)
+pred_3 <span style="color:#f92672">=</span> model3<span style="color:#f92672">.</span>predict_proba(x_test)
+
+final_pred <span style="color:#f92672">=</span>(pred1<span style="color:#f92672">+</span>pred2<span style="color:#f92672">+</span>pred3)<span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>
+</code></pre></div><p><em><strong>2.3 Weighted Average</strong></em></p>
+<p>Đây là kỹ thuật mở rộng của <code>averaging</code>. Mỗi model được gắn kèm với một trọng số tỷ lệ với mức độ quan trọng của model đó. Kết quả cuối cùng là trung bình có trọng số của tất cả kết quả của các models.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/weighted.PNG">
+</div>
+
+
+<p>Vẫn với ví dụ ở mục 2.2, nhưng trong số 5 người được hỏi thì người thứ nhất có vợ là bác sĩ, người thứ 2 có mẹ là y tá, người thứ 3 có người yêu là sinh viên trường y. Vì vậy, ý kiến của 3 người này rõ ràng có giá trị hơn so với 2 người còn lại.
+Ta đánh trọng số cho mỗi người như bảng dưới (<em>hàng thứ 2 là trọng số, hàng thứ 3 là điểm đánh giá</em>):</p>
+<table>
+<thead>
+<tr>
+<th align="center">Người 1</th>
+<th align="center">Người 2</th>
+<th align="center">Người 3</th>
+<th align="center">Người 4</th>
+<th align="center">Người 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">0.8</td>
+<td align="center">0.5</td>
+<td align="center">0.3</td>
+<td align="center">0.3</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">3</td>
+<td align="center">5</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<p>Điểm đánh giá cuối cùng sẽ là: <strong>(2<em>1 + 4</em>0.8 + 3<em>0.5 + 5</em>0.3 + 4*0.3)/5 = 1.88</strong></p>
+<p>Code minh họa:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x_train, y_train, x_test, y_test <span style="color:#f92672">=</span> get_data()
+
+model_1 <span style="color:#f92672">=</span> DecisionTreeClassifier()
+model_2 <span style="color:#f92672">=</span> KNeighborsClassifier()
+model_3 <span style="color:#f92672">=</span> LogisticRegression()
+
+model_1<span style="color:#f92672">.</span>fit(x_train,y_train)
+model_2<span style="color:#f92672">.</span>fit(x_train,y_train)
+model_3<span style="color:#f92672">.</span>fit(x_train,y_train)
+
+pred_1 <span style="color:#f92672">=</span> model1<span style="color:#f92672">.</span>predict_proba(x_test)
+pred_2 <span style="color:#f92672">=</span> model2<span style="color:#f92672">.</span>predict_proba(x_test)
+pred_3 <span style="color:#f92672">=</span> model3<span style="color:#f92672">.</span>predict_proba(x_test)
+
+final_pred<span style="color:#f92672">=</span>(pred_1<span style="color:#f92672">*</span><span style="color:#ae81ff">0.3</span> <span style="color:#f92672">+</span> pred_2<span style="color:#f92672">*</span><span style="color:#ae81ff">0.3</span> <span style="color:#f92672">+</span> pred_3<span style="color:#f92672">*</span><span style="color:#ae81ff">0.4</span>)
+</code></pre></div><p><strong>3. Advanced Ensemble techniques</strong></p>
+<p>Đã có <code>basic</code> thì chắc chắn phải có <code>advanced</code>, phải không mọi người. :D</p>
+<p>Có 4 kỹ thuật của <code>Ensemble Learning</code> được xếp vào nhóm <code>advanced</code>:</p>
+<ul>
+<li>Stacking</li>
+<li>Blending</li>
+<li>Bagging</li>
+<li>Boosting</li>
+</ul>
+<p>Chúng ta tiếp tục đi qua lần lượt từng kỹ thuật này:</p>
+<p><em><strong>3.1 Stacking</strong></em></p>
+<p>Hãy xem các bước thực hiện của kỹ thuật này:</p>
+<ul>
+<li>Bước 1: Train model A (<em>base model</em>) theo kiểu <code>cross-validation</code> với k=10.</li>
+<li>Bước 2: Tiếp tuc train model A trên toàn bộ <code>train set</code>.</li>
+<li>Bước 3: Sử dụng model A để dự đoán trên <code>test set</code>.</li>
+<li>Bước 4: Lặp lại bước 1,2,3 cho các <code>base model</code> khác.</li>
+<li>Bước 5:
+<ul>
+<li>Kết quả dự đoán trên <code>train set</code> của các <code>base models</code> được sử dụng như là <code>input features</code> (<code>ensemble train set</code>) để train <code>stacking model</code>.</li>
+<li>Kết quả dự đoán trên <code>test set</code> của các <code>base models</code> được sử dụng như là <code>test set</code> (<code>ensemble test set</code>) của <code>stacking model</code>.</li>
+</ul>
+</li>
+<li>Bước 6: Train và đánh giá <code>stacking model</code> sử dụng <code>ensemble train set</code> và <code>ensemble test set</code>.</li>
+</ul>
+<p>Code minh họa ý tưởng:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># We first define a function to make predictions on n-folds of train and test dataset. This function returns the predictions for train and test for each model.</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Stacking</span>(model,train,y,test,n_fold):
+    folds<span style="color:#f92672">=</span>StratifiedKFold(n_splits<span style="color:#f92672">=</span>n_fold,random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+    test_pred <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>empty((test<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>],<span style="color:#ae81ff">1</span>),float)
+    train_pred <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>empty((<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>),float)
+    <span style="color:#66d9ef">for</span> train_indices,val_indices <span style="color:#f92672">in</span> folds<span style="color:#f92672">.</span>split(train,y<span style="color:#f92672">.</span>values):
+        x_train,x_val <span style="color:#f92672">=</span> train<span style="color:#f92672">.</span>iloc[train_indices],train<span style="color:#f92672">.</span>iloc[val_indices]
+        y_train,y_val <span style="color:#f92672">=</span> y<span style="color:#f92672">.</span>iloc[train_indices],y<span style="color:#f92672">.</span>iloc[val_indices]
+
+        model<span style="color:#f92672">.</span>fit(X<span style="color:#f92672">=</span>x_train,y<span style="color:#f92672">=</span>y_train)
+        train_pred <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>append(train_pred,model<span style="color:#f92672">.</span>predict(x_val))
+        test_pred <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>append(test_pred,model<span style="color:#f92672">.</span>predict(test))
+    <span style="color:#66d9ef">return</span> test_pred<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>),train_pred
+
+<span style="color:#75715e"># Now we’ll create two base models – decision tree and knn.</span>
+model_1 <span style="color:#f92672">=</span> DecisionTreeClassifier(random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+test_pred_1 ,train_pred_1 <span style="color:#f92672">=</span> Stacking(model<span style="color:#f92672">=</span>model_1, n_fold<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, train<span style="color:#f92672">=</span>x_train, test<span style="color:#f92672">=</span>x_test, y<span style="color:#f92672">=</span>y_train)
+train_pred_1 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(train_pred_1)
+test_pred_1 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(test_pred_1)
+
+model_2 <span style="color:#f92672">=</span> KNeighborsClassifier()
+test_pred_2, train_pred_2 <span style="color:#f92672">=</span> Stacking(model<span style="color:#f92672">=</span>model_2, n_fold<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, train<span style="color:#f92672">=</span>x_train,test<span style="color:#f92672">=</span>x_test, y<span style="color:#f92672">=</span>y_train)
+train_pred_2 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(train_pred_2)
+test_pred_2 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(test_pred_2)
+
+<span style="color:#75715e"># Create a final model, logistic regression, on the predictions of the decision tree and knn models.</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([train_pred_1, train_pred_2], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+df_test <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([test_pred_1, test_pred_2], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+
+model <span style="color:#f92672">=</span> LogisticRegression(random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+model<span style="color:#f92672">.</span>fit(df,y_train)
+model<span style="color:#f92672">.</span>score(df_test, y_test)
+</code></pre></div><p>Đoạn code trên chỉ minh họa <code>stack model</code> với 2 levels. <code>Decision Tree</code> và <code>kNN</code> là level 0, còn <code>Logistic Regression</code> là level 1. Bạn hoàn toàn có thể thử nghiệm với nhiều levels hơn.</p>
+<p><em><strong>3.2 Blending</strong></em></p>
+<p>Các bước thực hiện phương pháp này như sau:</p>
+<ul>
+<li>Buớc 1: Chia dataset thành <code>train set</code>, <code>validation set</code> và <code>test set</code>.</li>
+<li>Bước 2: <code>Base model</code> được train trên <code>train set</code>.</li>
+<li>Bước 3: Sử dụng <code>base model</code> để dự đoán trên <code>validation set</code> và <code>test set</code>.</li>
+<li>Bước 4: Lặp lại bước 2,3 cho các <code>base models</code> khác.</li>
+<li>Bước 5:
+<ul>
+<li><code>Validation set</code> và các kết quả dự đoán trên <code>validation set</code> của các <code>base models</code> được sử dụng như là <code>input features</code> (<code>ensemble train set</code>) của <code>blending model</code>.</li>
+<li><code>Test set</code> và các kết quả dự đoán trên <code>test set</code> của các <code>base models</code> được sử dụng như là <code>test set</code> (<code>ensemble test set</code>) của <code>blending model</code>.</li>
+</ul>
+</li>
+<li>Bước 6: Train và đánh giá <code>blending model</code> sử dụng <code>ensemble train set</code> và <code>ensemble test set</code>.</li>
+</ul>
+<p>Code minh họa ý tưởng:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># build two models, decision tree and knn, on the train set in order to make predictions on the validation set.</span>
+model_1 <span style="color:#f92672">=</span> DecisionTreeClassifier()
+model_1<span style="color:#f92672">.</span>fit(x_train, y_train)
+val_pred_1 <span style="color:#f92672">=</span> model1<span style="color:#f92672">.</span>predict(x_val)
+test_pred_1 <span style="color:#f92672">=</span> model1<span style="color:#f92672">.</span>predict(x_test)
+val_pred_1 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(val_pred_1)
+test_pred_1 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(test_pred_1)
+
+model_2 <span style="color:#f92672">=</span> KNeighborsClassifier()
+model_2<span style="color:#f92672">.</span>fit(x_train, y_train)
+val_pred_2 <span style="color:#f92672">=</span> model_2<span style="color:#f92672">.</span>predict(x_val)
+test_pred_2 <span style="color:#f92672">=</span> model2<span style="color:#f92672">.</span>predict(x_test)
+val_pred_2 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(val_pred_2)
+test_pred_2 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(test_pred_2)
+
+<span style="color:#75715e"># Combining the meta-features and the validation set, a logistic regression model is built to make predictions on the test set.</span>
+df_val <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([x_val, val_pred_1,val_pred_2], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+df_test <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([x_test, test_pred1,test_pred_2], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+
+model <span style="color:#f92672">=</span> LogisticRegression()
+model<span style="color:#f92672">.</span>fit(df_val, y_val)
+model<span style="color:#f92672">.</span>score(df_test, y_test)
+</code></pre></div><p><em><strong>3.3 Bagging</strong></em></p>
+<p><code>Bagging</code> (<em>Bootstrap Aggregating</em>) khác với hai kỹ thuật trên ở chỗ, nó sử dụng chung 1 thuật toán cho tất cả các <code>base models</code>. Tập dataset sẽ được chia thành các phần khác nhau (<code>bags</code>) và mỗi <code>base model</code> sẽ được train trên mỗi bag đó.</p>
+<p>Các bước thực hiện của <code>bagging</code> như sau:</p>
+<ul>
+<li>Bước 1: Chia tập dữ liệu ban đầu thành nhiều phần khác nhau (<code>bags</code>).</li>
+<li>Bước 2: Tạo các <code>base models</code> (<em>weak learner</em>) và train chúng trên các bags. Các <code>base model</code> được train song song và độc lập với nhau.</li>
+<li>Bước 3: Kết quả dự đoán cuối cùng được quyết định bằng cách kết hợp kết quả từ các <code>base models</code>.</li>
+</ul>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/bagging_1.png">
+</div>
+
+
+<p><em><strong>3.4 Boosting</strong></em></p>
+<p>Nếu như các <code>base models</code> được train độc lập với nhau trong phương pháp <code>bagging</code>, thì ở phương pháp <code>boosting</code>, chúng lại được train một cách tuần tự. <code>Base model</code> sau được train dựa theo kết quả của <code>base model</code> trước đó để cố gắng sửa những lỗi sai tồn tại ở model này.</p>
+<p>Các bước tiến hành như sau:</p>
+<ul>
+<li>Bước 1: Tạo một tập dữ liệu con (tập A) từ tập dữ liệu ban đầu (tập D).</li>
+<li>Bước 2: Gán cho mỗi điểm dữ liệu trong tập A một trọng số  w có giá trị giống nhau.</li>
+<li>Bước 3: Tạo một <code>base model</code> X và train trên tập A.</li>
+<li>Bước 4: Sử dụng model X để dự đoán trên toàn bộ tập D.</li>
+<li>Bước 5: Tính toán sai số dự đoán dựa vào kết quả dự đoán và kết quả thực tế.</li>
+<li>Bước 6: Gán giá trị w cao hơn cho những điểm dữ liệu bị dự đoán sai.</li>
+<li>Bước 7: Lặp lại bước 1,2,3,4,5,6 đối với <code>base model</code> mới, Y.</li>
+<li>Bước 8: Model cuối cùng (<code>boosting model</code>) sẽ là trung bình có trọng số của tất cả các <code>base models</code>.</li>
+</ul>
+<p>Mỗi <code>base model</code> được gọi là một <code>weak learner</code>. Chúng sẽ không hoạt động tốt trên toàn bộ tập D, nhưng khi kết hợp nhiều <code>weak learners</code> ta được một <code>strong learner</code>. <code>Strong learner</code> này chắc chắn sẽ hiệu quả trên tập D. Ta nói, các <code>weak learners</code> đã <code>boost performance</code> cho <code>strong learner</code>.</p>
+<p><code>Bagging</code> và <code>Boosting</code> là 2 kỹ thuật quan trọng, hiệu quả. Có một số thuật toán đã được phát triển dựa trên nền tảng của chúng. Đặc biệt là thuật toán XGBoost. Trong bài tiếp theo, chúng ta sẽ đi chi tiết hơn về các thuật toán này.</p>
+<p>Mời các bạn đón đọc!</p>
+<p><em>Toàn bộ source code của bài này các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/xgboost-algorithm/tree/master/ensemble_learning">github.</a></em></p>
+<p>Bài viết có tham khảo tại <a href="https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models">đây</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

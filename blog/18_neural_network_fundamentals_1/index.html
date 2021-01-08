@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/neural-network"
+          class="text-primary">Neural Network</a>
+        
+        <h2>Neural Network cơ bản (Phần 1)</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>21 October 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/neural_network_1.jpeg" class="img-fluid w-100 mb-4" alt="Neural Network cơ bản (Phần 1)">
+        
+        <div class="content mb-5">
+          <p>Trong bài này chúng ta sẽ cùng nhau tìm hiểu lys thuyết cơ bản về mạng thần kinh nhân tạo (<em>neural network</em>):</p>
+
+<ul>
+<li>Cấu trúc của <code>neural network</code>.</li>
+<li>Thuật toán lan truyền (<em>propagation</em>) và lan truyền ngược (<em>backpropagation</em>).</li>
+</ul>
+
+<p>Những kiến thức trong bài này sẽ là tiền đề để các bạn tiến xa hơn trong thế giới của Deep Learning.</p>
+
+<p><strong>1. Neural Network là gì?</strong></p>
+
+<p>Neural Networks là các khối (<em>blocks</em>) để xây dựng lên các hệ thống Deep Learning. Chúng ta sẽ bắt đầu với việc xem xét ở mức &quot;high-level&quot; của Neural Network, bao gồm cả mối liên hệ của chúng với não bộ của con người.</p>
+
+<p>Trong thực tế, có rất nhiều những công việc rất khó để có thể thực hiện tự động hóa bởi máy móc nhưng lại rất dễ dàng đối với các loài động vật (bao gồm cả con người). Những công việc đó thường liên quan đến việc nhận diện, phân loại đối tượng.</p>
+
+<p>Ví dụ:</p>
+
+<ul>
+<li>Con chó của gia đình bạn có thể phân biệt được người quen (người trong gia đình bạn) và người lạ (không phải trong gia đình bạn)?</li>
+<li>Một đứa trẻ có thể nhận biết được sự khác nhau giữa xe oto con và xe oto tải.</li>
+</ul>
+
+<p>Tại sao con chó và đứa trẻ có thể làm được những việc đó?</p>
+
+<p>Câu trả lời nằm ở cấu tạo bên trong não bộ của chúng. Não bộ của cả 2 đều chứa một mạng thần kinh sinh học kết nối đến hệ thần kinh trung tâm. Mạng này được tạo ra bởi rất nhiều các <code>neurons</code> kết nối với nhau.</p>
+
+<p>Từ <code>neural</code> là dạng tính từ của <code>neuron</code>, và <code>network</code> ngầm chỉ kiến trúc &quot;graph&quot; của hệ thần kinh. Do vậy, một <code>Artificial Neural Network</code> (<em>ANN</em>) là một hệ thống tính toán, cố gắng mô phỏng (<em>bắt chước</em>) mạng thần kinh sinh học của các loài động vật. ANN là một graph có định hướng, nó bao gồm các nodes và các connections (<em>kết nối giữa các nodes</em>). Mỗi node thực hiện một tính toán đơn giản nào đó, mỗi connection mang một tín hiệu từ node này đến node khác. Những tín hiệu này đi kèm theo một trọng số (<em>weight</em>) chỉ ra mức độ khuyếch đại hoặc giảm bớt cường độ tín hiệu đó. Giá trị weight càng lớn chứng tỏ tín hiệu đi kèm càng quan trọng đối với kết quả đầu ra và ngược lại.</p>
+
+<p>Hình dưới đây là một ANN đơn giản, bao gồm một lớp input ở đầu, 2 lớp ở giữa (<em>hidden layers</em>) và một lớp output ở cuối. Mỗi connection mang theo một tín hiệu xuyên qua hai hidden layers. Kết quả cuối cùng được tính toán tại lớp output.</p>
+
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/simple_ANN.png">
+    </div>
+
+
+
+<p><strong>2. Artificial Models</strong></p>
+
+<p>Hãy xem thử một ANN cơ bản như hình bên dưới:</p>
+
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/basic_ANN.png">
+    </div>
+
+
+
+<p>ANN này thực hiện tính tổng có trọng số ($w_i$) của các input vectors($x_i$). Trong thực tế, các input vectors có thể là pixcel của images, hay các rows của một dataset dạng tabular.</p>
+
+<p>Mỗi $x_i$ kết nối với một neuron thông qua vector trọng số $w_i$.</p>
+
+<p>Diễn giải bằng công thức toán học thì output của ANN này sẽ là:</p>
+
+<ul>
+<li>$y = f(w_1x_1 + w_2x_2 + ... + w_nx_n)$</li>
+<li>$y = f(\sum_{i=1}^n w_ix_i)$</li>
+<li>$y = f(net)$. Với net = $\sum_{i=1}^n w_ix_i$</li>
+</ul>
+
+<p>Nói chung, dù diễn đạt theo cách nào đi nữa thì ý tưởng chung vẫn là áp dụng hàm <code>activate</code> (<em>f</em>) vào tổng có trọng số của các input vectors.</p>
+
+<p><strong>3. Activation Functions</strong></p>
+
+<ul>
+<li><strong><em>a) Step function</em></strong></li>
+</ul>
+
+<p>Hàm activation đơn giản nhất có lẽ là <code>Step function</code>. Hàm này được sử dụng bởi thuật toán <code>Perceptron</code> (<em>sẽ đề cập ở phần sau</em>).</p>
+
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/step_func.png">
+    </div>
+
+
+
+<p>Hàm này luôn nhận giá trị 1 nếu $\sum_{i=1}^n$ $w_i$$x_i$ &gt;= 0 và nhận giá trị 0 trong trường hợp còn lại.</p>
+
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/step.png">
+    </div>
+
+
+
+<p>Vấn đề của <code>step function</code> là nó giá trị của nó không có sự khác biệt khi <code>net</code> &gt;=0 hoặc <code>net</code> &lt; 0. Điều này có thể dẫn đến một số vấn đề  khi huấn luyện <code>neural network</code>.</p>
+
+<ul>
+<li><strong><em>b) Sigmoid function</em></strong></li>
+</ul>
+
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/sigmoid.png">
+    </div>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">y <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>sigmoid(x)
+d2l<span style="color:#f92672">.</span>plot(x<span style="color:#f92672">.</span>numpy(), y<span style="color:#f92672">.</span>numpy(), <span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;sigmoid(x)&#39;</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2.5</span>))</code></pre></div>
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/sigmoid_plot.png">
+    </div>
+
+
+
+<p>So với <code>step function</code>, <code>sigmoid function</code> có một số ưu điểm sau:</p>
+
+<ul>
+<li>Giá trị của nó liên tục và phân biệt nhau tại một nơi.</li>
+<li>Đồ thị của nó đối xứng qua trục y.</li>
+</ul>
+
+<p>Tuy nhiên, có 2 nhược điểm lớn nhất của <code>sigmoid function</code> là:</p>
+
+<ul>
+<li>Output của nó không tập trung quanh điểm gốc tọa độ.</li>
+<li>Càng xa gốc tọa độ, giá trị của nó tiệm cận với giá trị <code>bão hòa</code>. Điề u này vô tình triệt tiêu gradient, vì delta của gradient vô cùng nhỏ.</li>
+</ul>
+
+<p>Đạo hàm của <code>sigmoid function</code> như sau:</p>
+
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/sigmoid_derivative.png">
+    </div>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> tf<span style="color:#f92672">.</span>GradientTape() <span style="color:#66d9ef">as</span> t:
+    y <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>sigmoid(x)
+d2l<span style="color:#f92672">.</span>plot(x<span style="color:#f92672">.</span>numpy(), t<span style="color:#f92672">.</span>gradient(y, x)<span style="color:#f92672">.</span>numpy(), <span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;grad of sigmoid&#39;</span>,
+         figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2.5</span>))</code></pre></div>
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/sigmoid_derivative_plot.png">
+    </div>
+
+
+
+<ul>
+<li><strong><em>c) Tanh function</em></strong></li>
+</ul>
+
+<p>Hàm này giải quyết được nhược điểm thứ nhất của <code>sigmoid function</code>.</p>
+
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/tanh.png">
+    </div>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">y <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>tanh(x)
+d2l<span style="color:#f92672">.</span>plot(x<span style="color:#f92672">.</span>numpy(), y<span style="color:#f92672">.</span>numpy(), <span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;tanh(x)&#39;</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2.5</span>))</code></pre></div>
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/tanh_plot.png">
+    </div>
+
+
+
+<ul>
+<li><strong><em>d) ReLU (Rectified Linear Unit) funtion</em></strong></li>
+</ul>
+
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/relu.png">
+    </div>
+
+
+
+<p>Hàm này nhận giá trị 0 khi inputs &lt; 0, nhưng sẽ tăng tuyến tính khi inputs &gt;= 0.</p>
+
+<p>Thực tế chứng minh, <code>ReLU function</code> hoạt động tốt hơn hẳn so với các hàm kể trên. Bắt đầu từ năm 2015, nó được sử dụng thường xuyên trong Deep Learning.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>Variable(tf<span style="color:#f92672">.</span>range(<span style="color:#f92672">-</span><span style="color:#ae81ff">8.0</span>, <span style="color:#ae81ff">8.0</span>, <span style="color:#ae81ff">0.1</span>), dtype<span style="color:#f92672">=</span>tf<span style="color:#f92672">.</span>float32)
+y <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>relu(x)
+d2l<span style="color:#f92672">.</span>plot(x<span style="color:#f92672">.</span>numpy(), y<span style="color:#f92672">.</span>numpy(), <span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;relu(x)&#39;</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2.5</span>))</code></pre></div>
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/relu_plot.png">
+    </div>
+
+
+
+<p><code>ReLU function</code> vẫn có nhược điểm. Khi inputs &lt; 0, nó nhận giá trị 0. Như vậy thì không thể tính được gradient tại những điể m đó. Thực tế thì cũng hiếm khi có trường hợp nào mà inputs lại có giá trị &lt; 0. Tuy nhiên, để giải quyết triệt để vấn đề thì lại sinh ra một hàm mới:</p>
+
+<ul>
+<li><strong><em>e) Leaky ReLU function</em></strong></li>
+</ul>
+
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/leaky_ReLU.png">
+    </div>
+
+
+
+<p>Đây là một biến thể của <code>ReLU funtion</code>, nó nhận một giá trị khác 0 (thường rất nhỏ) khi inputs &lt; 0. Giá trị của $\alpha$ rất nhỏ và được cập nhật trong quá trình huấn luyện <code>neural network</code>.</p>
+
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/leaky_relu_plot.png">
+    </div>
+
+
+
+<ul>
+<li><strong><em>f) ELU (Exponential Linear Units) function</em></strong></li>
+</ul>
+
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/elu.png">
+    </div>
+
+
+
+<p>Khác với <code>ReLU function</code>, giá trị của $\alpha$  trong <code>ELU function</code> được cố định từ đầu (<em>lúc xây đựng kiến trúc mạng</em>). Giá trị thông thường của $\alpha$ là 1.</p>
+
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/elu_plot.png">
+    </div>
+
+
+
+<p><strong>Nên sử dụng <code>activation function</code> nào?</strong></p>
+
+<p>Việc có nhiều hơn 1 <code>activation function</code> đôi khi làm cho bạn bối rối khi lựa chọn sử dụng cái nào, không sử dụng cái nào?</p>
+
+<p>Lời khuyên của mình như sau:</p>
+
+<ul>
+<li>Bắt đầu với ReLU để đặt được một <code>baseline accuracy</code>. (Hầu hết các public papers đều làm như vậy)</li>
+<li>Thử chuyển qua sử dụng các biến thể của ReLU: Leaky ReLU, ELU.</li>
+</ul>
+
+<p>Trong các dự án thực tế thì mình thường làm theo các bước:</p>
+
+<ul>
+<li>Sử dụng ReLU</li>
+<li>Tune các hyper-parameters khác: architecture, learning rate, regularization strength, ... Ghi lại các giá trị <code>accuracy</code>.</li>
+<li>Một khi đã tương đối thoả mãn về <code>accuracy</code>, chuyển qua ELU. Độ chính xác thường sẽ tăng khoảng 1-5% tùy thuộc dataset.</li>
+</ul>
+
+<p>Cách này chỉ là kinh nghiệm cá nhân của mình, và không có gì đảm bảo đúng trong mọi trường hợp. Bạn có thể tham khảo hoặc không. Hãy luôn nhớ thử-sai mọi khả năng có thể cho bài toán của bạn.</p>
+
+<p><strong>4. Feedfoward Network Architecture</strong></p>
+
+<p>Kiến trúc ANN thì có rất nhiều, nhưng phổ biến nhất là dạng <code>feedfoward network</code>.</p>
+
+
+
+    <div style="text-align:center">
+       <img style="height:auto" src="/images/post/feedfoward_network.png">
+    </div>
+
+
+
+<p>Trong kiến trúc này, một <code>connection</code> giữa 2 nodes chỉ được phép đi theo chiều từ layer $i$ tới layer $i+1$ (<em>vì thế mà có tên feedfoward</em>). Không có chiều từ layer $i+1$ đến layer $i$ hoặc bất kỳ chiều nào khác. Khi có thêm chiều từ layer $i+1$ đến layer $i$ (<em>feedback connection</em>) thì ta được kiến trúc RNN (<strong>Recurrent Neural Network</strong>). <code>Feedfoward network</code> được sử dụng chủ yếu trong các bài toán về <code>Computer Vision</code> (<em>mạng CNN là một ví dụ điển hình</em>) , trong khi <code>feedback network</code> lại được sử dụng chủ yếu trong các bài toán về <code>Natural Language Processing</code>.</p>
+
+<p>ANN được sử dụng cho cả 3 dạng bài toán: supervised, unsupervised, and semi-supervised. Một số ví dụ điển hình là classification, regression, clustering, vector quantization, pattern association, ...</p>
+
+<p>Trong bài tiếp theo, mình sẽ minh họa cách thức cập nhật trong số của mạng ANN thông qua một ví dụ rất dễ hiểu. Mời các bạn đón đọc.</p>
+
+<p><strong>3. Tham khảo</strong></p>
+
+<ul>
+<li><a href="https://www.pyimagesearch.com/">Pyimagesearch</a></li>
+<li><a href="https://d2l.ai/chapter_multilayer-perceptrons/mlp.html">Dive into Deep Learning</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Activation_function">Wikipedia</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>SuNT&#39;s Blog | AI in Practical</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="This is meta description">
+    <meta name="author" content="SuNT">
+    <meta name="generator" content="Hugo 0.68.3" />
+
+    <!-- plugins -->
+
+    <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+
+    <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+
+    <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+
+    <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+
+    <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+    <!-- Main Stylesheet -->
+
+    <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+    <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+    <!-- google analitycs -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'Your ID', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body>
+    <!-- preloader start -->
+    <div class="preloader">
+
+    </div>
+    <!-- preloader end -->
+    <!-- navigation -->
+    <header class="navigation">
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+                <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid" src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+                <div class="collapse navbar-collapse text-center" id="navigation">
+                    <div class="desktop-view">
+                        <ul class="navbar-nav mr-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid" src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+
+                    <ul class="navbar-nav">
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+                        </li>
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+                        </li>
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+                        </li>
+
+
+                    </ul>
+
+
+                    <!-- search -->
+                    <div class="search pl-lg-4">
+                        <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+                        <div class="search-wrapper">
+                            <form action="https://tiensu.github.io//search" class="h-100">
+                                <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+                            </form>
+                            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </nav>
+        </div>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ['$', '$'],
+                        ['\\(', '\\)']
+                    ],
+                    displayMath: [
+                        ['$$', '$$'],
+                        ['\\[', '\\]']
+                    ],
+                    processEscapes: true,
+                    processEnvironments: true
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                }
+            };
+
+            window.addEventListener('load', (event) => {
+                document.querySelectorAll("mjx-container").forEach(function(x) {
+                    x.parentElement.classList += 'has-jax'
+                })
+            });
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    </header>
+    <!-- /navigation -->
+
+    <section class="section-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+
+                    <a href="/categories/artificial-intelligent" class="text-primary">Artificial Intelligent</a>
+
+                    <a href="/categories/convolution-neural-network" class="text-primary">Convolution Neural Network</a>
+
+                    <h2>Xây dựng CNN model cho bài toán đa lớp</h2>
+                    <div class="mb-3 post-meta">
+                        <span>By SuNT</span>
+
+                        <span class="border-bottom border-primary px-2 mx-1"></span>
+                        <span>20 December 2020</span>
+
+                    </div>
+
+                    <img src="https://tiensu.github.io/images/featured-post/33_animals.jpg" class="img-fluid w-100 mb-4" alt="Xây dựng CNN model cho bài toán đa lớp">
+
+                    <div class="content mb-5">
+                        <p>Những bài toán mà chỉ có 2 lớp cần phân biệt gọi là <code>binary classification</code>, còn những bài toán có nhiều hơn 2 lớp được gọi là <code>multiple classification</code>.</p>
+                        <p>Có một vài sự khác biệt trong cách cài đặt CNN model giữa 2 loại bài toán này. Trong hôm nay chúng ta sẽ cùng tìm hiểu điều đó thông qua thực hiện phân loại 3 classes: Cat, Dog và Panda của bộ dữ liệu <a href="https://www.kaggle.com/ashishsaxena2209/animal-image-datasetdog-cat-and-panda">animals</a>.
+                            Bộ dataset này gồm 3000 ảnh chia đều cho mỗi class.</p>
+                        <p>Ta sẽ bắt tay vào thực hiện code luôn, những điểm khác biệt sẽ được đề cập trong quá trình viết code.</p>
+                        <p>Sử dụng kiến thức đã học từ bài trước, ta sẽ thực hiện bài này theo 2 cách và so sánh kết quả:</p>
+                        <ul>
+                            <li>Không sử dụng Transfer Learning</li>
+                            <li>Sử dụng Transfer Learning</li>
+                        </ul>
+                        <p>Đầu tiên, download dataset về thư mục làm việc và dùng thư viện <a href="https://pypi.org/project/split-folders/">split-folers</a> để chia dữ liệu thành 2 tập train và validation.</p>
+                        <p>Import các thư viện sẽ sử dụng:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> random
+<span style="color:#f92672">import</span> shutil
+<span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">from</span> tensorflow <span style="color:#f92672">import</span> keras
+<span style="color:#f92672">from</span> tensorflow.keras <span style="color:#f92672">import</span> layers, Model
+<span style="color:#f92672">from</span> tensorflow.keras.applications.inception_v3 <span style="color:#f92672">import</span> InceptionV3
+<span style="color:#f92672">from</span> tensorflow.keras.preprocessing.image <span style="color:#f92672">import</span> ImageDataGenerator
+<span style="color:#f92672">from</span> tensorflow.keras.callbacks <span style="color:#f92672">import</span> ModelCheckpoint, EarlyStopping
+</code></pre></div>
+                        <p>Chuẩn bị dữ liệu training:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">data_gen</span>():
+    train_gen <span style="color:#f92672">=</span> ImageDataGenerator(
+        rescale<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>,
+        rotation_range<span style="color:#f92672">=</span><span style="color:#ae81ff">40</span>,
+        width_shift_range<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>,
+        height_shift_range<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>,
+        shear_range<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>,
+        zoom_range<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>,
+        horizontal_flip<span style="color:#f92672">=</span>True,
+        fill_mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;nearest&#39;</span>
+    )
+    validation_gen <span style="color:#f92672">=</span> ImageDataGenerator(
+        rescale<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>
+    )
+    
+    train_datagen <span style="color:#f92672">=</span> train_gen<span style="color:#f92672">.</span>flow_from_directory(
+        <span style="color:#e6db74">&#39;Animals/training&#39;</span>,
+        target_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">300</span>),
+        batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">32</span>,
+        class_mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;categorical&#39;</span>
+    )
+    validation_datagen <span style="color:#f92672">=</span> validation_gen<span style="color:#f92672">.</span>flow_from_directory(
+        <span style="color:#e6db74">&#39;Animals/validation&#39;</span>,
+        target_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">300</span>),
+        batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">32</span>,
+        class_mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;categorical&#39;</span>
+    )
+    
+    <span style="color:#66d9ef">return</span> train_datagen, validation_datagen
+</code></pre></div>
+                        <p>Model tự định nghĩa:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_own_model</span>():
+    model <span style="color:#f92672">=</span> keras<span style="color:#f92672">.</span>Sequential([
+        <span style="color:#75715e"># CONV =&gt; RELU =&gt; BN =&gt; POOL =&gt; DO</span>
+        layers<span style="color:#f92672">.</span>Conv2D(<span style="color:#ae81ff">32</span>, (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>), activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>, padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;same&#39;</span>, input_shape<span style="color:#f92672">=</span>(<span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">3</span>)),
+        layers<span style="color:#f92672">.</span>BatchNormalization(),
+        layers<span style="color:#f92672">.</span>MaxPooling2D(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>),
+        layers<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.25</span>),
+        
+        <span style="color:#75715e"># (CONV =&gt; RELU =&gt; BN)*2 =&gt; POOL =&gt; DO</span>
+        layers<span style="color:#f92672">.</span>Conv2D(<span style="color:#ae81ff">64</span>, (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>), activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>, padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;same&#39;</span>),
+        layers<span style="color:#f92672">.</span>BatchNormalization(),
+        layers<span style="color:#f92672">.</span>Conv2D(<span style="color:#ae81ff">64</span>, (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>), activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>, padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;same&#39;</span>),
+        layers<span style="color:#f92672">.</span>BatchNormalization(),
+        layers<span style="color:#f92672">.</span>MaxPooling2D(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>),
+        layers<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.25</span>),
+        
+        <span style="color:#75715e"># (CONV =&gt; RELU =&gt; BN)*2 =&gt; POOL =&gt; DO</span>
+        layers<span style="color:#f92672">.</span>Conv2D(<span style="color:#ae81ff">128</span>, (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>), activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>, padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;same&#39;</span>),
+        layers<span style="color:#f92672">.</span>BatchNormalization(),
+        layers<span style="color:#f92672">.</span>Conv2D(<span style="color:#ae81ff">128</span>, (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>), activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>, padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;same&#39;</span>),
+        layers<span style="color:#f92672">.</span>BatchNormalization(),
+        layers<span style="color:#f92672">.</span>MaxPooling2D(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>),
+        layers<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.25</span>),
+        
+        <span style="color:#75715e"># (FC =&gt; RELU =&gt; BN =&gt; DO)*2 =&gt; FC =&gt; SOFTMAX</span>
+        layers<span style="color:#f92672">.</span>Flatten(),
+        layers<span style="color:#f92672">.</span>Dense(<span style="color:#ae81ff">1024</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>),
+        layers<span style="color:#f92672">.</span>BatchNormalization(),
+        layers<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.25</span>),
+        layers<span style="color:#f92672">.</span>Dense(<span style="color:#ae81ff">512</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>),
+        layers<span style="color:#f92672">.</span>BatchNormalization(),
+        layers<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.25</span>),
+        
+        layers<span style="color:#f92672">.</span>Dense(<span style="color:#ae81ff">3</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;softmax&#39;</span>)
+    ])
+    
+    model<span style="color:#f92672">.</span>compile(optimizer<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;adam&#39;</span>, loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;categorical_crossentropy&#39;</span>, metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;acc&#39;</span>])
+    
+    <span style="color:#66d9ef">return</span> model
+</code></pre></div>
+                        <p>Kiến trúc model:</p>
+                        <p>CONV =&gt; RELU =&gt; BN =&gt; POOL =&gt; DO =&gt; (CONV =&gt; RELU =&gt; BN)*2 =&gt; POOL =&gt; DO =&gt; (CONV =&gt; RELU =&gt; BN)*2 =&gt; POOL =&gt; DO =&gt; (FC =&gt; RELU =&gt; BN =&gt; DO)*2 =&gt; FC =&gt; SOFTMAX</p>
+                        <p>Model sử dụng Transfer Learning:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_transfer_learning_model</span>():
+    base_model <span style="color:#f92672">=</span> InceptionV3(
+        input_shape<span style="color:#f92672">=</span>(<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">300</span>,<span style="color:#ae81ff">3</span>),
+        include_top<span style="color:#f92672">=</span>False,
+        weights<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;imagenet&#39;</span>
+    )
+    
+    <span style="color:#66d9ef">for</span> layer <span style="color:#f92672">in</span> base_model<span style="color:#f92672">.</span>layers:
+        layer<span style="color:#f92672">.</span>trainable <span style="color:#f92672">=</span> False
+    
+    head_model <span style="color:#f92672">=</span> base_model<span style="color:#f92672">.</span>output
+    head_model <span style="color:#f92672">=</span> layers<span style="color:#f92672">.</span>Flatten()(head_model)
+    head_model <span style="color:#f92672">=</span> layers<span style="color:#f92672">.</span>Dense(<span style="color:#ae81ff">1024</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>)(head_model)
+    head_model <span style="color:#f92672">=</span> layers<span style="color:#f92672">.</span>BatchNormalization()(head_model)
+    head_model <span style="color:#f92672">=</span> layers<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.25</span>)(head_model)
+    head_model <span style="color:#f92672">=</span> layers<span style="color:#f92672">.</span>Dense(<span style="color:#ae81ff">512</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;relu&#39;</span>)(head_model)
+    head_model <span style="color:#f92672">=</span> layers<span style="color:#f92672">.</span>BatchNormalization()(head_model)
+    head_model <span style="color:#f92672">=</span> layers<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.5</span>)(head_model)
+    
+    head_model <span style="color:#f92672">=</span> layers<span style="color:#f92672">.</span>Dense(<span style="color:#ae81ff">3</span>, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;softmax&#39;</span>)(head_model)
+    
+    model <span style="color:#f92672">=</span> Model(inputs<span style="color:#f92672">=</span>base_model<span style="color:#f92672">.</span>input, outputs<span style="color:#f92672">=</span>head_model)
+    model<span style="color:#f92672">.</span>compile(optimizer<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;adam&#39;</span>, loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;categorical_crossentropy&#39;</span>, metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;acc&#39;</span>])
+    
+    <span style="color:#66d9ef">return</span> model
+</code></pre></div>
+                        <p>Trong phương pháp Transfer Learning, ta sử dụng pre-trained InceptionV3 làm base_model.</p>
+                        <p>Như chúng ta thấy, có 2 điểm khác biệt ở đây:</p>
+                        <ul>
+                            <li>Hàm activation ở layer cuối Nếu như bài toán <code>binary classification</code> sử dụng hàm <a href="https://en.wikipedia.org/wiki/Sigmoid_function">sigmoid</a> chỉ có 1 output thì bài toán <code>multiple classification</code>                                sử dụng hàm <a href="https://en.wikipedia.org/wiki/Softmax_function">softmax</a>, số lượng output bằng số classes cần phân loại. Mình sẽ có bài phân tích chi tiết về các loại hàm này sau.</li>
+                            <li>Hàm loss
+                                <code>Binary classification</code> sử dụng hàm <code>binary_crossentropy</code>, còn <code>multiple classification</code> sử dụng <code>categorical_crossentropy</code> hoặc <code>sparse_categorical_crossentropy</code>.
+                                Mình cũng sẽ viết một bài về các dạng hàm loss trong tương lai.</li>
+                        </ul>
+                        <p>Định nghĩa callback functions:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_callbacks</span>():
+    callback_1 <span style="color:#f92672">=</span> EarlyStopping(monitor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;val_acc&#39;</span>, patience<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+    callback_2 <span style="color:#f92672">=</span> ModelCheckpoint(
+        <span style="color:#e6db74">&#39;Animals_ModelCheckpoints/model-{epoch:02d}-{val_acc:.2f}.hdf5&#39;</span>,
+        save_best_only<span style="color:#f92672">=</span>True,
+        save_weights_only<span style="color:#f92672">=</span>True,
+        monitor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;val_acc&#39;</span>,
+        save_freq<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;epoch&#39;</span>,
+        mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>,
+        verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+    )
+
+    <span style="color:#66d9ef">return</span> [callback_1, callback_2]
+</code></pre></div>
+                        <p>Hàm vẽ đồ thị:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_graph</span>(history):
+    acc <span style="color:#f92672">=</span> history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;acc&#39;</span>]
+    val_acc <span style="color:#f92672">=</span> history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;val_acc&#39;</span>]
+    loss <span style="color:#f92672">=</span> history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;loss&#39;</span>]
+    val_loss <span style="color:#f92672">=</span> history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;val_loss&#39;</span>]
+    
+    epoch <span style="color:#f92672">=</span> range(len(acc))
+    
+    plt<span style="color:#f92672">.</span>plot(epoch, acc, <span style="color:#e6db74">&#39;r&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Training Accuracy&#39;</span>)
+    plt<span style="color:#f92672">.</span>plot(epoch, val_acc, <span style="color:#e6db74">&#39;b&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Validation Accuracy&#39;</span>)
+    plt<span style="color:#f92672">.</span>plot(epoch, loss, <span style="color:#e6db74">&#39;g&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Training Loss&#39;</span>)
+    plt<span style="color:#f92672">.</span>plot(epoch, val_loss, <span style="color:#e6db74">&#39;y&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Validation Loss&#39;</span>)
+    
+    plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Training &amp; Validation, Accuracy &amp; Loss&#39;</span>)
+    plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+    plt<span style="color:#f92672">.</span>show()
+</code></pre></div>
+                        <p>Train model với kiến trúc tự định nghĩa:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">training_datagen, validation_datagen <span style="color:#f92672">=</span> data_gen()
+model <span style="color:#f92672">=</span> create_own_model()
+
+history <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>fit(
+    training_datagen,
+    epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>,
+    validation_data<span style="color:#f92672">=</span>validation_datagen,
+    callbacks<span style="color:#f92672">=</span>create_callbacks(),
+    verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+)
+</code></pre></div>
+                        <p>Training output:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Found <span style="color:#ae81ff">2400</span> images belonging to <span style="color:#ae81ff">3</span> classes<span style="color:#f92672">.</span>
+Found <span style="color:#ae81ff">600</span> images belonging to <span style="color:#ae81ff">3</span> classes<span style="color:#f92672">.</span>
+Epoch <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+ <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">..............................</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">4</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">1.8446</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.3906</span>WARNING:tensorflow:Callbacks method <span style="color:#e6db74">`on_train_batch_end`</span> <span style="color:#f92672">is</span> slow compared to the batch time (batch time: <span style="color:#ae81ff">0.0442</span>s vs <span style="color:#e6db74">`on_train_batch_end`</span> time: <span style="color:#ae81ff">0.0907</span>s)<span style="color:#f92672">.</span> Check your callbacks<span style="color:#f92672">.</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">1.2381</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.5292</span>
+Epoch <span style="color:#ae81ff">00001</span>: val_acc improved <span style="color:#f92672">from</span> <span style="color:#f92672">-</span>inf to <span style="color:#ae81ff">0.33333</span>, saving model to Animals_ModelCheckpoints<span style="color:#f92672">/</span>model<span style="color:#f92672">-</span><span style="color:#ae81ff">01</span><span style="color:#f92672">-</span><span style="color:#ae81ff">0.33</span><span style="color:#f92672">.</span>hdf5
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">40</span>s <span style="color:#ae81ff">533</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">1.2381</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.5292</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">4.0135</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.3333</span>
+Epoch <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.8709</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.6042</span>
+Epoch <span style="color:#ae81ff">00002</span>: val_acc did <span style="color:#f92672">not</span> improve <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.33333</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">40</span>s <span style="color:#ae81ff">533</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.8709</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.6042</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">3.9076</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.3333</span>
+Epoch <span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.8323</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.6008</span>
+Epoch <span style="color:#ae81ff">00003</span>: val_acc improved <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.33333</span> to <span style="color:#ae81ff">0.35000</span>, saving model to Animals_ModelCheckpoints<span style="color:#f92672">/</span>model<span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">0.35</span><span style="color:#f92672">.</span>hdf5
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">40</span>s <span style="color:#ae81ff">535</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.8323</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.6008</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">3.0383</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.3500</span>
+<span style="color:#f92672">........</span>
+Epoch <span style="color:#ae81ff">11</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.6230</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.6958</span>
+Epoch <span style="color:#ae81ff">00011</span>: val_acc did <span style="color:#f92672">not</span> improve <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.72667</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">40</span>s <span style="color:#ae81ff">536</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.6230</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.6958</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.9326</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.5933</span>
+Epoch <span style="color:#ae81ff">12</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.5867</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.7133</span>
+Epoch <span style="color:#ae81ff">00012</span>: val_acc did <span style="color:#f92672">not</span> improve <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.72667</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">40</span>s <span style="color:#ae81ff">539</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.5867</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.7133</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.6075</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.7067</span>
+Epoch <span style="color:#ae81ff">13</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.5752</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.7262</span>
+Epoch <span style="color:#ae81ff">00013</span>: val_acc did <span style="color:#f92672">not</span> improve <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.72667</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">41</span>s <span style="color:#ae81ff">540</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.5752</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.7262</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.5461</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.7250</span>
+</code></pre></div>
+                        <p>Model dừng train sau 13 epochs do giá trị của val_acc không tăng sau 5 epochs liên tiếp từ epoch 9 đến epoch 13. Độ chính xác cao nhất đạt được trên tập validation 72.67% tại epoch thứ 9.</p>
+                        <p>Đồ thị quá trình training:
+
+
+                            <div style="text-align:center">
+                                <img src="/images/post/33_plot_multi_cnn_1.png">
+                            </div>
+
+                        </p>
+                        <p>Bây giờ, thử sử dụng pre-trained model:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model <span style="color:#f92672">=</span> create_transfer_learning_model()
+training_datagen, validation_datagen <span style="color:#f92672">=</span> data_gen()
+
+history <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>fit(
+    training_datagen,
+    validation_data<span style="color:#f92672">=</span>validation_datagen,
+    epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>,
+    callbacks<span style="color:#f92672">=</span>create_callbacks(),
+    verbose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+)
+</code></pre></div>
+                        <p>Traning output:</p>
+                        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Found <span style="color:#ae81ff">2400</span> images belonging to <span style="color:#ae81ff">3</span> classes<span style="color:#f92672">.</span>
+Found <span style="color:#ae81ff">600</span> images belonging to <span style="color:#ae81ff">3</span> classes<span style="color:#f92672">.</span>
+Epoch <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.1724</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9525</span>
+Epoch <span style="color:#ae81ff">00001</span>: val_acc improved <span style="color:#f92672">from</span> <span style="color:#f92672">-</span>inf to <span style="color:#ae81ff">0.95667</span>, saving model to Animals_ModelCheckpoints<span style="color:#f92672">/</span>model<span style="color:#f92672">-</span><span style="color:#ae81ff">01</span><span style="color:#f92672">-</span><span style="color:#ae81ff">0.96</span><span style="color:#f92672">.</span>hdf5
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">41</span>s <span style="color:#ae81ff">548</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.1724</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9525</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.2077</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.9567</span>
+Epoch <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.1153</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9679</span>
+Epoch <span style="color:#ae81ff">00002</span>: val_acc improved <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.95667</span> to <span style="color:#ae81ff">0.99167</span>, saving model to Animals_ModelCheckpoints<span style="color:#f92672">/</span>model<span style="color:#f92672">-</span><span style="color:#ae81ff">02</span><span style="color:#f92672">-</span><span style="color:#ae81ff">0.99</span><span style="color:#f92672">.</span>hdf5
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">42</span>s <span style="color:#ae81ff">559</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.1153</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9679</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0331</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.9917</span>
+Epoch <span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0719</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9771</span>
+Epoch <span style="color:#ae81ff">00003</span>: val_acc improved <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.99167</span> to <span style="color:#ae81ff">0.99333</span>, saving model to Animals_ModelCheckpoints<span style="color:#f92672">/</span>model<span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">0.99</span><span style="color:#f92672">.</span>hdf5
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">42</span>s <span style="color:#ae81ff">557</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0719</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9771</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0082</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.9933</span>
+<span style="color:#f92672">........</span>
+Epoch <span style="color:#ae81ff">8</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0410</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9833</span>
+Epoch <span style="color:#ae81ff">0000</span><span style="color:#ae81ff">8</span>: val_acc did <span style="color:#f92672">not</span> improve <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.99500</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">43</span>s <span style="color:#ae81ff">569</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0410</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9833</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0288</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.9933</span>
+Epoch <span style="color:#ae81ff">9</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0554</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9842</span>
+Epoch <span style="color:#ae81ff">0000</span><span style="color:#ae81ff">9</span>: val_acc did <span style="color:#f92672">not</span> improve <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.99500</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">44</span>s <span style="color:#ae81ff">588</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0554</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9842</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0140</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.9917</span>
+Epoch <span style="color:#ae81ff">10</span><span style="color:#f92672">/</span><span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> ETA: <span style="color:#ae81ff">0</span>s <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0632</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9804</span>
+Epoch <span style="color:#ae81ff">00010</span>: val_acc did <span style="color:#f92672">not</span> improve <span style="color:#f92672">from</span> <span style="color:#ae81ff">0.99500</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">/</span><span style="color:#ae81ff">75</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">43</span>s <span style="color:#ae81ff">572</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0632</span> <span style="color:#f92672">-</span> acc: <span style="color:#ae81ff">0.9804</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0219</span> <span style="color:#f92672">-</span> val_acc: <span style="color:#ae81ff">0.9933</span>
+</code></pre></div>
+                        <p>Model dừng train sớm hơn, tại epoch thứ 10 sau 5 epochs liên tiếp không cải thiện về giá trị của val_acc (từ epoch 6 đến epoch 10). Độ chính xác trên tập validation cao nhất đạt được là 99,5% tại epoch thứ 5. Kết quả tốt hơn so
+                            với sử dụng model tự định nghĩa rất nhiều.</p>
+                        <p>Đồ thị quá trình training:
+
+
+                            <div style="text-align:center">
+                                <img src="/images/post/33_plot_multi_cnn_2.png">
+                            </div>
+
+                        </p>
+                        <p>Như vậy, qua bài này ta đã biết được cách thức xây dựng kiến trúc CNN model cho bài toán <code>multiple classification</code>. Đồng thời ta cũng nhận thấy rõ ràng ưu điểm của kỹ thuật Transfer Learning so với cách tự xây dựng CNN
+                            model. Có thể nói rằng, sử dụng pre-trained model luôn cho kết quả tốt hơn, trừ khi chúng ta có lý do cụ thể để không sử dụng chúng.</p>
+                        <p>Source code của bài này, các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/Computer_Vision/blob/master/Deep_Learning/Multiple_Classification.ipynb">đây</a>.</p>
+                        <p>Trong các bài viết tiếp theo, mình sẽ viết về một số bài toán NLP và các kỹ thuật cần dùng để giải quyết chúng. Mời các bạn đón đọc!</p>
+                        <p><strong>Tham khảo</strong></p>
+                        <ul>
+                            <li><a href="https://www.coursera.org/professional-certificates/tensorflow-in-practice">Coursera</a></li>
+                        </ul>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center mb-5">
+                    <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <h6 class="mb-4">Contact Me</h6>
+                    <ul class="list-unstyled">
+
+                        <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+
+
+                        <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+
+
+                        <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <h6 class="mb-4">Social Contacts</h6>
+                    <ul class="list-unstyled">
+
+                        <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+
+                        <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <h6 class="mb-4">Categories</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a class="text-dark" href="/categories/algorithm-optimization">Algorithm Optimization</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/artificial-intelligent">Artificial Intelligent</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/convolution-neural-network">Convolution Neural Network</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/data-science">Data Science</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/deep-learning">Deep Learning</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/ebook">Ebook</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/ensemble-learning">Ensemble Learning</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/machine-learning">Machine Learning</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/neural-network">Neural Network</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/project-management">Project Management</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/text-classification">Text classification</a>
+                        </li>
+                        <li class="mb-3"><a class="text-dark" href="/categories/xgboost">Xgboost</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <h6 class="mb-4">Quick Links</h6>
+                    <ul class="list-unstyled">
+
+                        <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+
+                        <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+
+                        <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-12 border-top py-4 text-center">
+                    | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var indexURL = "https://tiensu.github.io/index.json"
+    </script>
+
+    <!-- JS Plugins -->
+
+    <script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+    <script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+    <script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+    <script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+    <script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+    <script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+    <!-- Main Script -->
+
+    <script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+    <div id="js-cookie-box" class="cookie-box cookie-box-hide">
+        This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+    </div>
+    <script>
+        (function($) {
+            const cookieBox = document.getElementById('js-cookie-box');
+            const cookieButton = document.getElementById('js-cookie-button');
+            if (!Cookies.get('cookie-box')) {
+                cookieBox.classList.remove('cookie-box-hide');
+                cookieButton.onclick = function() {
+                    Cookies.set('cookie-box', true, {
+                        expires: 2
+                    });
+                    cookieBox.classList.add('cookie-box-hide');
+                };
+            }
+        })(jQuery);
+    </script>
+
+
+    <style>
+        .cookie-box {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            z-index: 9999;
+            padding: 1rem 2rem;
+            background: rgb(71, 71, 71);
+            transition: all .75s cubic-bezier(.19, 1, .22, 1);
+            color: #fdfdfd;
+        }
+        
+        .cookie-box-hide {
+            display: none;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <title>
+    Bài 10: Train XGBoost model trên AWS | ML in Practical
+  </title>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#ffffff" />
+
+  
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css"
+  />
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/style.min.f7761d111b74dd5c07f0111decee92938c12abc42e0fd319e1a07483e248b54e.css" integrity="sha256-93YdERt03VwH8BEd7O6Sk4wSq8QuD9MZ4aB0g&#43;JItU4=" />
+
+  
+  
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180180568-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+  
+</head>
+
+    <body>
+        <header id="header">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-180180568-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+  <div class="header_container">
+    <h1 class="sitetitle">
+      <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a>
+    </h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="https://tiensu.github.io/">Home</a></li>
+        
+          <li>
+            <a href="/about/">
+              
+              <span>About</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/tags/">
+              
+              <span>Tags</span>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/archives/">
+              
+              <span>Archives</span>
+            </a>
+          </li>
+        
+        <li class="hide-sm"><a href="https://tiensu.github.io/index.xml" type="application/rss+xml">RSS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+        
+<section id="main">
+  <article class="post content">
+    <h2 class="title">Bài 10: Train XGBoost model trên AWS</h2>
+    <div class="post_content">
+      <p>Thư viện XGBoost được thiết kế  để tận dụng tối đa sức mạnh của phần cứng hệ thống, bao gồm tất cả CPU cores và bộ nhớ. Trong bài viết này, ta sẽ cùng nhau tìm hiểu cách thiết lập một server trên AWS để train XGBoost model, sao cho vừa nhanh, vừa rẻ! :D</p>
+<p>Bài viết gồm 4 phần:</p>
+<ul>
+<li>Tạo tài khoản AWS</li>
+<li>Chạy AWS EC2 Instance</li>
+<li>Kết nối đến EC2 Instance và chạy code</li>
+<li>train XGBoost model</li>
+<li>Đóng AWS EC2 Instance</li>
+</ul>
+<p><em><strong>Chú ý quan trọng: Sẽ mất khoảng 1-2$ chi phí để sử dụng các dịch vụ của AWS trong bài viết này.</strong></em></p>
+<p><strong>1. Tạo tài khoản AWS</strong></p>
+<p><em>(Nếu bạn đã có tài khoản AWS, hãy bỏ qua bước này!)</em></p>
+<ul>
+<li>Truy cập vào màn hình <a href="https://console.aws.amazon.com/">console</a> của AWS. Tại đây ta có thể đăng nếu đã có tài khoản hoặc đăng ký tài khoản mới nếu chưa có.
+<figure>
+    <img src="/aws_1.png" width="1200"/> 
+</figure>
+</li>
+<li>Bạn cần cung cấp một số thông tin cần thiết, và đặc biệt là phải có một thẻ credit còn hiệu lực để có thể tiến hành tạo tài khoản. Các công đoạn khác, hãy làm theo chỉ dần trên màn hình.</li>
+</ul>
+<p><strong>2. Chạy AWS EC2 Instance</strong></p>
+<p>Chúng ta sẽ sử dụng dịch vụ EC2 để chạy XGBoost.</p>
+<ul>
+<li>Đăng nhập vào AWS console. Sau khi đăng nhập thành công, danh sách các dịch vụ của AWS sẽ hiển thị.</li>
+<li>Chọn EC2.
+<figure>
+    <img src="/aws_2.png" width="1200"/> 
+</figure>
+</li>
+<li>Click vào nút <code>Launch EC2 Instance</code>.</li>
+<li>Click vào <code>Community AMIs</code>
+<figure>
+    <img src="/aws_3.png" width="1200"/> 
+</figure>
+</li>
+<li>Nhập <code>ami-1c40bf7d</code> vào <code>Search community AMIs</code> và chọn <code>Select</code>.
+<figure>
+    <img src="/aws_4.png" width="1200"/> 
+</figure>
+</li>
+<li>Chọn EC2 Instance type là r4.8xlarge (32 cores CPU).
+Click <code>Review and Launch</code>.</li>
+<li>Click <code>Launch</code>.</li>
+<li>Chọn <code>Create a new key pair</code>, điền tên của <code>key</code> là <code>xgboost-key và click </code>Download Key Pair<code>. <figure>
+    <img src="/aws_5.png" width="800"/> 
+</figure>
+ Lưu file key vào máy tính ở local, sau đó click </code>Launch EC2 Instances`.</li>
+<li>Click <code>View EC2 Instances</code>.
+Chờ khoảng 3 phút và kiểm tra trạng thái của EC2 Instance.
+<figure>
+    <img src="/aws_6.png" width="1200"/> 
+</figure>
+
+Nếu trạng thái là <code>Running</code> thì tức là đã tạo EC2 Instance thành công.
+Ta cũng để ý thấy địa chỉ <code>public IP</code> của EC2 Instance là: <strong>54.92.106.10</strong>. Tiếp theo ta sẽ sử dụng địa chỉ này để kết nối đến EC2 Instance từ localhost thông qua giao thức SSH.</li>
+</ul>
+<p><strong>3. Kết nối đến EC2 Instance và chạy code</strong></p>
+<p><em><strong>3.1 Kết nối đến EC2 Instance qua giao thức ssh</strong></em></p>
+<ul>
+<li>Trên máy tính local (mình dùng Ubuntu), mở cửa sổ Terminal và gõ lệnh:</li>
+</ul>
+<pre><code>$ cd Documents #Thư mục chứa key file
+$ chmod 600 xgboost-key.pem
+$ ssh -i xgboost.pem fedora@54.92.106.10
+</code></pre><p>Nếu đây là lần đầu kết nối đến EC2 Instance, sẽ có 1 cảnh báo xuất hiện. Gõ <code>yes</code>.</p>
+<p>Nếu kết nối thành công, màn hình Terminal sẽ xuất hiện như sau:
+<figure>
+    <img src="/aws_7.png" width="800"/> 
+</figure>
+</p>
+<ul>
+<li>Kiểm ra số lượng CPU cores</li>
+</ul>
+<pre><code>$cat /proc/cpuinfo | grep processor | wc -l
+</code></pre><p>Kết quả:</p>
+<pre><code>32
+</code></pre><p><em><strong>3.2 Cài đặt các thư  viện cần thiết</strong></em></p>
+<ul>
+<li>Cài đặt GCC, Python và SciPy</li>
+</ul>
+<pre><code>sudo dnf install gcc gcc-c++ make git unzip python python3-numpy python3-scipy
+python3-scikit-learn python3-pandas python3-matplotlib
+</code></pre><ul>
+<li>Cài đặt Cmake</li>
+</ul>
+<p>XGBoost yêu cầu cmake &gt;= 3.13. Nếu bạn cài bằng bằng lệnh <code>dnf install cmake</code> thì phiên bản của make la 3.9. Để cài cmake &gt;= 3.13, bạn phải cài build từ source.</p>
+<pre><code>$ wget https://github.com/Kitware/CMake/releases/download/v3.15.2/cmake-3.15.2.tar.gz
+$ tar -zxvf cmake-3.15.2.tar.gz
+$ cd cmake-3.15.2
+$ ./bootstrap
+$ make
+$ sudo make install
+</code></pre><p><em><strong>Kiểm tra GCC:</strong></em></p>
+<pre><code>$gcc --version
+</code></pre><p>Kết quả:</p>
+<pre><code>[fedora@ip-172-31-37-253 ~]$ gcc --version
+gcc (GCC) 6.3.1 20161221 (Red Hat 6.3.1-1)
+</code></pre><p><em><strong>Kiểm tra Python:</strong></em></p>
+<pre><code>$ python3 --version
+</code></pre><p>Kết quả:</p>
+<pre><code>Python 3.5.1
+</code></pre><p><em><strong>Kiểm tra SciPy:</strong></em></p>
+<pre><code>$ python3 -c &quot;import scipy;print(scipy.__version__)&quot;
+$ python3 -c &quot;import numpy;print(numpy.__version__)&quot;
+$ python3 -c &quot;import pandas;print(pandas.__version__)&quot;
+$ python3 -c &quot;import sklearn;print(sklearn.__version__)&quot;
+</code></pre><p>Kết quả:</p>
+<pre><code>0.16.1
+1.11.0
+0.18.0
+0.17.1
+</code></pre><p><em><strong>Kiểm tra Cmake</strong></em></p>
+<pre><code>$ cmake --version
+</code></pre><p>Kết quả:</p>
+<pre><code>3.15.1
+</code></pre><p><em><strong>3.3. Cài đặt thư viện XGBoost</strong></em></p>
+<pre><code>$ pip3 install xgboost==1.1
+</code></pre><p>Tại thời điểm viết bài, phiên bản mới nhất của xgboost là 1.2. Nhưng vì phiên bản của python=3.5 nên bạn chỉ có thể sử dụng được phiên bản 1.1 của xgboost.</p>
+<p>Kiểm tra:</p>
+<pre><code>$ python3 -c &quot;import xgboost;print(xgboost.__version__)&quot;
+</code></pre><p>Kết quả:</p>
+<pre><code>1.1.0
+</code></pre><p><strong>4. Train XGBoost model</strong></p>
+<p>Tương tự như ở bài 9, chúng ta cũng sẽ sử dụng <a href="https://www.kaggle.com/c/otto-group-product-classification-challenge/da">Otto dataset</a> để kiểm tra khả năng của XGBoost model theo số lượng cores của CPU.</p>
+<ul>
+<li>Tạo thư mục <code>xgboost</code> trên máy local, tạo file <code>check_num_threads.py</code> với code như sau:</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Otto multi-core test</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="c1"># load data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;train.csv&#39;</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span>
+<span class="c1"># split data into X and y</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">94</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">94</span><span class="p">]</span>
+<span class="c1"># encode string class values as integers</span>
+<span class="n">label_encoded_y</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="c1"># evaluate the effect of the number of threads</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">num_threads</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">num_threads</span><span class="p">:</span>
+	<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+	<span class="n">model</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">nthread</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+	<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">label_encoded_y</span><span class="p">)</span>
+	<span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">elapsed</span><span class="p">)</span>
+	<span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span>
+</code></pre></div><p>Copy file <code>train.csv</code> ở bài trước vào thư mục <code>xgboost</code>.</p>
+<ul>
+<li>Tại cửa sổ Terminal của máy local, copy thư mục <code>xgboost</code> lên EC2 Instance:</li>
+</ul>
+<pre><code>$ scp -i xgboost-key.pem -r xgboost fedora@54.92.106.10:/home/fedora
+</code></pre><ul>
+<li>Tại của sổ Terminal kết nôi tới EC2 Instance, tiến hành chạy code:</li>
+</ul>
+<pre><code>$ cd xgboost
+python3 check_num_threads.py
+</code></pre><p>Kết quả thu được:</p>
+<pre><code>1 70.75178146362305
+16 6.106862545013428
+32 5.045598745346069
+</code></pre><p>Sử dụng 32 cores, mất 5s để train XGBoost model với tập dữ liệu tương đối lớn. Đây quả là một kết quả ấn tượng. :D</p>
+<p><em><strong>Bonus:</strong></em>: Trong trường hợp việc train model mất nhiều thời gian hơn mà chẳng may bạn bị mất kết nối đến EC2 Instance giữa chừng thì thế nào? Bạn phải chạy train lại từ đầu ư? Quả là mất thời gian phải không? Giải pháp để ngăn chặn tình huống này, hoặc là bạn chạy lệnh train ở chế độ <code>background process</code> và ghi kết quả ra một file như lệnh sau:</p>
+<pre><code>$ nohup python script.py &gt;script.py.out 2&gt;&amp;1 &amp;
+</code></pre><p>hoặc bạn cũng có thể sử dụng <a href="https://github.com/tmux/tmux/wiki">Tmux</a>.</p>
+<p><strong>5. Tắt EC2 EC2 Instance</strong></p>
+<p><code>Tiết kiệm là quốc sách hàng đầu</code>, hãy luôn nhớ tắt EC2 EC2 Instance mỗi khi sử dụng xong. Bản thân mình đã từng một lần quên không tắt trong vài ngày. Kết quả là con số trên hóa đơn AWS tháng đó làm mình buồn mất cả tuần, :).</p>
+<p>Để tắt EC2 EC2 Instance, đơn giản là làm theo như hình vẽ sau:
+<figure>
+    <img src="/aws_8.png" width="1200"/> 
+</figure>
+</p>
+<ul>
+<li>Chọn 1-&gt;2-&gt;3 nếu bạn muốn tắt tạm thời (khi nào muốn dùng thì khởi động lên).</li>
+<li>Chọn 1-&gt;2-&gt;4 nếu bạn muốn xóa hẳn EC2 EC2 Instance này.</li>
+</ul>
+<p><strong>6. Kết luận</strong></p>
+<p>Trong bài viết này, chúng ta đã tìm hiểu cách cài đặt vào cấu hình EC2 Instance để train XGBoost model trên AWS.</p>
+<p>Bài viết tiếp theo sẽ thiên về lý thuyết một chút, chúng ta sẽ tìm hiểu cách cấu hình <code>hyper-parameters</code> cho <code>gradient boosting model</code>. Hãy cùng đón đọc! :)</p>
+<p><em>Toàn bộ source code của bài này các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/xgboost-algorithm/tree/master/run_on_aws">github.</a></em></p>
+<p>Bài viết có tham khảo tại <a href="https://machinelearningmastery.com/XGBoost-with-python/">tham khảo</a>.</p>
+
+    </div>
+    <div class="info post_meta">
+      <time datetime=2020-10-06T00:00:00Z class="date">Tuesday, October 6, 2020</time>
+      
+        <ul class="tags">
+        
+          <li> <a href="https://tiensu.github.io/tags/ai">AI</a> </li>
+        
+          <li> <a href="https://tiensu.github.io/tags/ml">ML</a> </li>
+        
+          <li> <a href="https://tiensu.github.io/tags/xgboost">XGBoost</a> </li>
+        
+        </ul>
+      
+      
+    </div>
+    <div class="clearfix"></div>
+  </article>
+  
+    <div class="other_posts">
+      
+      <a href="https://tiensu.github.io/posts/xgboost/multithreading-xgboost/" class="prev">Bài 9: Cấu hình Multithreading cho XGBoost model</a>
+      
+      
+    </div>
+    <aside id="comments">
+</aside>
+
+  
+</section>
+
+        <a id="back_to_top" title="Go To Top" href="#">
+  <span>
+    <svg viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"></path>
+    </svg>
+  </span>
+</a>
+
+        <footer id="footer">
+  <p>
+    <span>&copy; 2020 <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a> </span>
+    <span>Built with <a rel="nofollow" target="_blank" href="https://gohugo.io">Hugo</a></span>
+    <span>Theme by <a rel="nofollow" target="_blank" href="https://github.com/wayjam/hugo-theme-mixedpaper">WayJam</a></span>
+  </p>
+  <script src="https://tiensu.github.io/js/main.min.8b182175f5874aeed0acc0979345c98d4bde22208ec4f36cc1d6e3102acb4b10.js" integrity="sha256-ixghdfWHSu7QrMCXk0XJjUveIiCOxPNswdbjECrLSxA=" crossorigin="anonymous" async></script>
+</footer>
+
+    </body>
+</html>

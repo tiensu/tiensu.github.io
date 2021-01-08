@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/convolution-neural-network"
+          class="text-primary">Convolution Neural Network</a>
+        
+        <h2>Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 1</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>27 October 2020</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/cnn-1.png" class="img-fluid w-100 mb-4" alt="Mạng thần kinh tích chập (Convolutional Neural Network (CNN) - Phần 1">
+        
+        <div class="content mb-5">
+          <p>Sau khi đã tìm hiểu cơ bản về Neural Network, chúng ta sẽ đi tìm hiểu về CNN. CNN là một dạng kiến trúc Neural Network đóng vai trò vô cùng quan trọng trong Deep Learning.</p>
+<p>Trong <code>Feedfoward Neural Network</code>, mỗi neural trong một layer được kết nối đến tất cả các nodes của layer tiếp theo. Ta gọi điều này là <code>Fully Connected (FC)</code> layer. Tuy nhiên, trong CNNs, FC layers chỉ được sử dụng ở 1 vài layers cuối. Các layers còn lại được gọi là <code>convolutional</code> layers.</p>
+<p>Một hàm kích hoạt (<em>activation function</em>) (thường là ReLU) được áp dụng tới output của các <code>convolutional</code> layers. Kết hợp với các dạng layers khác nhau để giảm kích thước của input. Các FC layers ở cuối có nhiệm vụ phân loại output thành các classes khác nhau.</p>
+<p>Mỗi layer trong CNN áp dụng một tập các bộ lọc (<em>filters</em>) (có thể lên đến hàng trăm hoặc hàng nghìn), kết hợp kết quả lại, cho qua layer tiếp theo. Trong suốt quá trình training, giá trị của các filters được cập nhật (<em>tương tự như trọng số weight trong Neural Network</em>).</p>
+<p>Trong lĩnh vực xử lý ảnh, CNN có thể học để:</p>
+<ul>
+<li>Phát hiện biên (<em>edges</em>) từ <code>raw pixel data</code> ở layer đầu tiên.</li>
+<li>Sử dụng edges đã phát hiện để phát hiện hình dạng (<em>shapes</em>) đối tượng ở layer thứ 2.</li>
+<li>Sử dụng shapes để phát hiện <code>heigher-level features</code> trong các layers tiếp theo.</li>
+</ul>
+<p><strong>1. Hiểu rõ về Convolutions</strong></p>
+<p>Chúng ta sẽ cùng nhau trả lời một số câu hỏi sau:</p>
+<ul>
+<li>Convolutions là gì?</li>
+<li>Chúng lamf được những việc gì?</li>
+<li>Tại sao lại sử dụng chúng?</li>
+<li>Áp dụng chúng vào xử lý ảnh như thế nào?</li>
+</ul>
+<p>Từ <code>convolution</code>, dịch sang tiếng việt là <code>tích chập</code>, nghe có vẻ phức tạp. Bạn chắc chắn đã nghe đến từ này nếu bạn học qua môn <code>Xử lý tín hiệu sô</code>. Tuy nhiên, <code>convolution</code> trong lĩnh vực xử lý lý ảnh hơi khác một chút. Không phải khi có Deep Learning, chúng ta mới sử dụng <code>convolution</code>, các phương pháp xử lý ảnh truyền thống đều sử dụng <code>convolution</code>: Edges detection, Sharpen images, Blurring and Smoothing images, &hellip; Vì thế mới nói, <code>convolution</code> là xương sống của xử lý ảnh. Hiểu rõ <code>convolution</code> là điều kiện tiên quyết để bước chân vào lĩnh vựa xử lý ảnh (theo cả phương pháp truyền thống và sử dụng Deep Learning).</p>
+<p>Nghe thì có vẻ &ldquo;đao to búa lớn&rdquo; vậy, nhưng thực sự không phải vậy. <code>Convolution</code> đơn giản chỉ là tổng của các tích đôi một của từng phần tử tron 2 ma trận. Chia nhỏ các bước ra cho dễ hiểu:</p>
+<ul>
+<li>Lấy 2 ma trận có cùng kích thước</li>
+<li>Nhân 2 ma trận đôi một (<em>element-by-element</em>) (không phải phép nhân ma trận trong đại số tuyến tính).</li>
+<li>Cộng kết quả của các tích lại.</li>
+</ul>
+<p>Yup, đó là <code>convolution</code>.</p>
+<p><em><strong>1.1 Kernel</strong></em></p>
+<p>Một image là một ma trận nhiều chiều. Thường là 3 chiều (w, h, c) với width là số cột, height là số hàng và depth là số kênh màu. &ldquo;Image matrix&rdquo; thường được gọi với cái tên &ldquo;big matrix&rdquo;. Một ma trận khác gọi là <code>kernel</code> (hoặc &ldquo;convolution matrix&rdquo;, &ldquo;tiny matrix&rdquo;, filter) đặt bên trên &ldquo;big matrix&rdquo;, trượt từ trái sang phải, từ trên xuống dưới. Trong quá trình di chuyển, các phép toán (convolution, &hellip;) được áp dụng đối với 2 ma trận đó. Sử dụng các kernel khác nhau, ta có thể đạt được các mục đích mong muốn: Blurring (<em>average smoothing, Gaussian smoothing, &hellip;</em>), Edge detection (<em>Laplacian, Sobel, ..</em>.), &hellip;</p>
+<p>Để hiểu rõ hơn, chúng ta sẽ làm thử 1 ví dụ cụ thể.</p>
+<p>Giả sử có &ldquo;image matrix&rdquo; kernel như sau:</p>
+<p>
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/kernel.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/image_matrix.png">
+</div>
+
+</p>
+<p>Theo lý thuyết bên trên, kernel sẽ được trượt qua &ldquo;image matrix&rdquo; từ trái qua phải, từ trên xuống dưới. Số bước trượt thường là 1 hoặc 2. Tại bước, sau khi trượt xong, ta sẽ dừng lại, thực hiện phép <code>convolution</code> giữa kernel và phần &ldquo;image matrix&rdquo; bị che bởi kernel. Giá trị ouput được lưu trong ma trận kết quả tại vị trí trung tâm của kernel tại bước đó.</p>
+<p>Chi tiết các bước:</p>
+<ul>
+<li>Chọn tọa độ ($x,y$) từ &ldquo;image matrix&rdquo;.</li>
+<li>Đặt <code>center</code> của kernel tại ($x,y$).</li>
+<li>Thực hiện <code>convolution</code> giữa kernel và phần &ldquo;image matrix&rdquo; bị che phủ bởi kernel.</li>
+<li>Lưu kết quả tại ($x,y$) của ma trận kết quả.</li>
+</ul>
+<p>Ví dụ, với $(x,y) = (3,3)$:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/convolution_ex.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/convolution_ex_2.png">
+</div>
+
+</p>
+<p>Sau khi tính toán xong, ta sẽ gán giá trị 132 cho pixel tại vị trí (3,3) của ma trận kết quả. $O_{i,j}$ = 132.</p>
+<p><em><strong>1.2 Implement Convolutions bằng python.</strong></em></p>
+<p>Giờ hãy bắt tay vào code thôi. Việc thực hiện <code>convolution</code> bằng code sẽ giúp bạn hiểu sâu sắc hơn cách áp dụng <code>convolution</code> trong xử lý ảnh.</p>
+<p>Tạo file  convolutions.py và code như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># USAGE</span>
+<span style="color:#75715e"># python convolutions.py --image mai-ngoc.jpg</span>
+
+<span style="color:#75715e"># import the necessary packages</span>
+<span style="color:#f92672">from</span> skimage.exposure <span style="color:#f92672">import</span> rescale_intensity
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> argparse
+<span style="color:#f92672">import</span> cv2
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">convolve</span>(image, K):
+	<span style="color:#75715e"># grab the spatial dimensions of the image and kernel</span>
+	(iH, iW) <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>shape[:<span style="color:#ae81ff">2</span>]
+	(kH, kW) <span style="color:#f92672">=</span> K<span style="color:#f92672">.</span>shape[:<span style="color:#ae81ff">2</span>]
+
+	<span style="color:#75715e"># allocate memory for the output image, taking care to &#34;pad&#34; the orders of the input image so the spatial size (i.e., width and height) are not reduced</span>
+	pad <span style="color:#f92672">=</span> (kW <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+	image <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>copyMakeBorder(image, pad, pad, pad, pad,
+		cv2<span style="color:#f92672">.</span>BORDER_REPLICATE)
+	output <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>zeros((iH, iW), dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;float&#34;</span>)
+
+	<span style="color:#75715e"># loop over the input image, &#34;sliding&#34; the kernel across each (x, y)-coordinate from left-to-right and top-to-bottom</span>
+	<span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> np<span style="color:#f92672">.</span>arange(pad, iH <span style="color:#f92672">+</span> pad):
+		<span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> np<span style="color:#f92672">.</span>arange(pad, iW <span style="color:#f92672">+</span> pad):
+			<span style="color:#75715e"># extract the ROI of the image by extracting the *center* region of the current (x, y)-coordinates dimensions</span>
+			roi <span style="color:#f92672">=</span> image[y <span style="color:#f92672">-</span> pad:y <span style="color:#f92672">+</span> pad <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, x <span style="color:#f92672">-</span> pad:x <span style="color:#f92672">+</span> pad <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]
+
+			<span style="color:#75715e"># perform the actual convolution by taking the element-wise multiplication between the ROI and the kernel, the summing the matrix</span>
+			k <span style="color:#f92672">=</span> (roi <span style="color:#f92672">*</span> K)<span style="color:#f92672">.</span>sum()
+
+			<span style="color:#75715e"># store the convolved value in the output (x, y)- coordinate of the output image</span>
+			output[y <span style="color:#f92672">-</span> pad, x <span style="color:#f92672">-</span> pad] <span style="color:#f92672">=</span> k
+
+	<span style="color:#75715e"># rescale the output image to be in the range [0, 255]</span>
+	output <span style="color:#f92672">=</span> rescale_intensity(output, in_range<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>))
+	output <span style="color:#f92672">=</span> (output <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>)<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;uint8&#34;</span>)
+
+	<span style="color:#75715e"># return the output image</span>
+	<span style="color:#66d9ef">return</span> output
+
+<span style="color:#75715e"># construct the argument parse and parse the arguments</span>
+ap <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-i&#34;</span>, <span style="color:#e6db74">&#34;--image&#34;</span>, required<span style="color:#f92672">=</span>True,
+	help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path to the input image&#34;</span>)
+args <span style="color:#f92672">=</span> vars(ap<span style="color:#f92672">.</span>parse_args())
+
+<span style="color:#75715e"># construct average blurring kernels used to smooth an image</span>
+smallBlur <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>ones((<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>), dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;float&#34;</span>) <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1.0</span> <span style="color:#f92672">/</span> (<span style="color:#ae81ff">7</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">7</span>))
+largeBlur <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>ones((<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">21</span>), dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;float&#34;</span>) <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1.0</span> <span style="color:#f92672">/</span> (<span style="color:#ae81ff">21</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">21</span>))
+
+<span style="color:#75715e"># construct a sharpening filter</span>
+sharpen <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array((
+	[<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>],
+	[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+	[<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]), dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;int&#34;</span>)
+
+<span style="color:#75715e"># construct the Laplacian kernel used to detect edge-like regions of an image</span>
+laplacian <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array((
+	[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>],
+	[<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>],
+	[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]), dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;int&#34;</span>)
+
+<span style="color:#75715e"># construct the Sobel x-axis kernel</span>
+sobelX <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array((
+	[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>],
+	[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>],
+	[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>]), dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;int&#34;</span>)
+
+<span style="color:#75715e"># construct the Sobel y-axis kernel</span>
+sobelY <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array((
+	[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+	[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>],
+	[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>]), dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;int&#34;</span>)
+
+<span style="color:#75715e"># construct an emboss kernel</span>
+emboss <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array((
+	[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>],
+	[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>],
+	[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]), dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;int&#34;</span>)
+
+<span style="color:#75715e"># construct the kernel bank, a list of kernels we&#39;re going to apply using both our custom `convole` function and OpenCV&#39;s `filter2D` function</span>
+kernelBank <span style="color:#f92672">=</span> (
+	(<span style="color:#e6db74">&#34;small_blur&#34;</span>, smallBlur),
+	(<span style="color:#e6db74">&#34;large_blur&#34;</span>, largeBlur),
+	(<span style="color:#e6db74">&#34;sharpen&#34;</span>, sharpen),
+	(<span style="color:#e6db74">&#34;laplacian&#34;</span>, laplacian),
+	(<span style="color:#e6db74">&#34;sobel_x&#34;</span>, sobelX),
+	(<span style="color:#e6db74">&#34;sobel_y&#34;</span>, sobelY),
+	(<span style="color:#e6db74">&#34;emboss&#34;</span>, emboss))
+
+<span style="color:#75715e"># load the input image and convert it to grayscale</span>
+image <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>imread(args[<span style="color:#e6db74">&#34;image&#34;</span>])
+gray <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(image, cv2<span style="color:#f92672">.</span>COLOR_BGR2GRAY)
+
+<span style="color:#75715e"># loop over the kernels</span>
+<span style="color:#66d9ef">for</span> (kernelName, K) <span style="color:#f92672">in</span> kernelBank:
+	<span style="color:#75715e"># apply the kernel to the grayscale image using both our custom `convolve` function and OpenCV&#39;s `filter2D` function</span>
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;[INFO] applying {} kernel&#34;</span><span style="color:#f92672">.</span>format(kernelName))
+	convolveOutput <span style="color:#f92672">=</span> convolve(gray, K)
+	opencvOutput <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>filter2D(gray, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, K)
+
+	<span style="color:#75715e"># show the output images</span>
+	cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#34;Original&#34;</span>, gray)
+	cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#34;{} - convole&#34;</span><span style="color:#f92672">.</span>format(kernelName), convolveOutput)
+	cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#34;{} - opencv&#34;</span><span style="color:#f92672">.</span>format(kernelName), opencvOutput)
+	cv2<span style="color:#f92672">.</span>waitKey(<span style="color:#ae81ff">0</span>)
+	cv2<span style="color:#f92672">.</span>destroyAllWindows()
+</code></pre></div><p>Kết quả:</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/convolution_result.png">
+	<p><strong>Từ trái sang phải</strong>: Ảnh gốc, ảnh áp dụng "average blur" sử dụng 7x7 kernel convolution, và ảnh áp dụng "average blur" sử dụng OpenCV’s cv2.filter2D.</p>
+</div>
+
+
+<p><em><strong>1.3 Vai trò của Convolutions trong Deep Learning</strong></em></p>
+<p>Như các bạn đã thấy từ phần trước, chúng ta phải tự định nghĩa (<em>manually hand-define</em>) các kernel cho mỗi nhiệm vụ xử lý ảnh khác nhau.</p>
+<p><strong>Liệu có cách nào &ldquo;tự động hóa&rdquo; việc này?</strong></p>
+<p>CNN chính là câu trả lời. Bằng cách sắp xếp nhiều lớp convolutions, kết hợp với &ldquo;activation function&rdquo;, pooling, backpropagation, &hellip; CNNs có khả năng học để cập nhật giá trị của kernel, từ đó trích xuất được các đặc trưng của đối tượng trong ảnh.</p>
+<p>Trong bài tiếp theo, mình sẽ tìm hiểu kỹ hơn về các dạng layers khác nhau, sau đó sẽ đưa ra một số &ldquo;common layer stacking patterns&rdquo; được sử dụng rộng rãi trong lĩnh vực xử lý ảnh.</p>
+<p>Source code sử dụng trong bài này, các bạn có thể tham khảo tại github cá nhân của mình tại <a href="https://github.com/tiensu/Computer_Vision/tree/master/Deep_Learning/conv_with_python">github</a></p>
+<p><strong>Tham khảo</strong></p>
+<ul>
+<li><a href="https://www.pyimagesearch.com/">Pyimagesearch</a></li>
+<li><a href="https://d2l.ai/chapter_convolutional-neural-networks/index.html">Dive into Deep Learning</a></li>
+<li><a href="https://cs231n.github.io/convolutional-networks/">CS231</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/artificial-intelligent">Artificial Intelligent</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Model Deployment on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/tags/model-deployment/</link>
+    <description>Recent content in Model Deployment on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/tags/model-deployment/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Đóng gói AI model sử dụng Docker</title>
+      <link>https://tiensu.github.io/blog/38_package_ai_model_using_docker/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/38_package_ai_model_using_docker/</guid>
+      <description>Đã bao giờ bạn gặp tình huống:
+Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của bạn lại không chạy?</description>
+    </item>
+    
+    <item>
+      <title>Triển khai AI model sử dụng uWSGI và Nginx</title>
+      <link>https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi/</guid>
+      <description>Như đã giới thiệu trong bài trước, mặc dù Flask rất dễ để sử dụng nhưng nó không có đầy đủ chức năng để có thể áp dụng vào các sản phẩm trong thực tế.</description>
+    </item>
+    
+    <item>
+      <title>Triển khai AI model sử dụng Flask</title>
+      <link>https://tiensu.github.io/blog/36_deploy_ai_model_with_flask/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/36_deploy_ai_model_with_flask/</guid>
+      <description>Bạn đã xây dựng thành công một DL model với độ chính xác rất cao, 99%. Xin chúc mừng bạn!</description>
+    </item>
+    
+  </channel>
+</rss>

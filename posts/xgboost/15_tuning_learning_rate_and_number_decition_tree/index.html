@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>
+        XGBoost - Bài 13: Tuning Learning_Rate và số lượng của Decision Tree | ML in Practical
+    </title>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+
+
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css" />
+
+
+
+
+
+    <link rel="stylesheet" href="https://tiensu.github.io/style.min.388cbd0ce358245ec0dfcee3b8889b3cc50e2bb8a5b2bcd40f8bd092ebefb81a.css" integrity="sha256-OIy9DONYJF7A387juIibPMUOK7ilsrzUD4vQkuvvuBo=" />
+
+
+
+
+    <script type="application/javascript">
+        var doNotTrack = false;
+        if (!doNotTrack) {
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-180180568-1', 'auto');
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <header id="header">
+
+        <script type="application/javascript">
+            var doNotTrack = false;
+            if (!doNotTrack) {
+                (function(i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-180180568-1', 'auto');
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview');
+            }
+        </script>
+
+        <div class="header_container">
+            <h1 class="sitetitle">
+                <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a>
+            </h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="https://tiensu.github.io/">Home</a></li>
+
+                    <li>
+                        <a href="/about/">
+
+                            <span>About</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/tags/">
+
+                            <span>Tags</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/archives/">
+
+                            <span>Archives</span>
+                        </a>
+                    </li>
+
+                    <li class="hide-sm"><a href="https://tiensu.github.io/index.xml" type="application/rss+xml">RSS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ['$', '$'],
+                        ['\\(', '\\)']
+                    ],
+                    displayMath: [
+                        ['$$', '$$'],
+                        ['\\[', '\\]']
+                    ],
+                    processEscapes: true,
+                    processEnvironments: true
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                }
+            };
+
+            window.addEventListener('load', (event) => {
+                document.querySelectorAll("mjx-container").forEach(function(x) {
+                    x.parentElement.classList += 'has-jax'
+                })
+            });
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    </header>
+
+
+    <section id="main">
+        <article class="post content">
+            <h2 class="title">XGBoost - Bài 13: Tuning Learning_Rate và số lượng của Decision Tree</h2>
+            <div class="post_content">
+                <p>Một vấn đề còn tồn tại của XGBoost là khả năng học trên tập dữ liệu huấn luyện một cách rất nhanh chóng. Điều này đôi khi dễ dẫn đến hiện tượng <code>Overfitting</code>, mặc dù XGBoost đã sử dụng <code>regularization</code>. Một cách hiệu
+                    quả để điều khiển quá trình học của XGBoost là sử dụng <code>learning_rate</code> (<em>hay <strong>eta</strong></em>).</p>
+                <p>Trong bài này, chúng ta sẽ cùng nhau tune <code>learning_rate</code>, <code>learning_rate</code> kết hợp với số lượng trees để tìm ra giá trị tối ưu của hai tham số này.</p>
+                <p><strong>1. Tuning Learning_Rate</strong></p>
+                <p>Chúng ta tiếp tục sử dụng <a href="https://www.kaggle.com/c/otto-group-product-classification-challenge/data">Otto dataset</a> trong bài này. Sử dụng giá trị mặc định của số lượng trees là 100, ta sẽ đánh giá sự phù hợp của mỗi giá trị
+                    learning_rate trong tập sau: <strong>[0.0001, 0.001, 0.01, 0.1, 0.2, 0.3]</strong></p>
+                <p>Có 6 giá trị của learning_rate, kết hợp với 10-fold cross-validation <strong>&ndash;&gt;</strong> Có 60 models được trained.</p>
+                <p>Code tuning như sau:</p>
+                <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># XGBoost on Otto dataset, Tune learning_rate</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;Agg&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+
+<span class="c1"># load data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;train.csv&#39;</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># split data into X and y</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">94</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">94</span><span class="p">]</span>
+
+<span class="c1"># encode string class values as integers</span>
+<span class="n">label_encoded_y</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># grid search</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">()</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">)</span>
+<span class="n">kfold</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">&#34;accuracy&#34;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">kfold</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">grid_result</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">label_encoded_y</span><span class="p">)</span>
+
+<span class="c1"># summarize results</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Best: </span><span class="si">%f</span><span class="s2"> using </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">grid_result</span><span class="o">.</span><span class="n">best_score_</span><span class="p">,</span> <span class="n">grid_result</span><span class="o">.</span><span class="n">best_params_</span><span class="p">))</span>
+<span class="n">means</span> <span class="o">=</span> <span class="n">grid_result</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;mean_test_score&#39;</span><span class="p">]</span>
+<span class="n">stds</span> <span class="o">=</span> <span class="n">grid_result</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;std_test_score&#39;</span><span class="p">]</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">grid_result</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">mean</span><span class="p">,</span> <span class="n">stdev</span><span class="p">,</span> <span class="n">param</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">means</span><span class="p">,</span> <span class="n">stds</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+	<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%f</span><span class="s2"> (</span><span class="si">%f</span><span class="s2">) with: </span><span class="si">%r</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">stdev</span><span class="p">,</span> <span class="n">param</span><span class="p">))</span>
+
+<span class="c1"># plot</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">,</span> <span class="n">means</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">stds</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;XGBoost learning_rate vs Log Loss&#34;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;learning_rate.png&#39;</span><span class="p">)</span>
+</code></pre></div>
+                <p>Kết quả:</p>
+                <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">Fitting</span> <span class="mi">10</span> <span class="n">folds</span> <span class="k">for</span> <span class="n">each</span> <span class="n">of</span> <span class="mi">6</span> <span class="n">candidates</span><span class="p">,</span> <span class="n">totalling</span> <span class="mi">60</span> <span class="n">fits</span>
+<span class="p">[</span><span class="n">Parallel</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]:</span> <span class="n">Using</span> <span class="n">backend</span> <span class="n">LokyBackend</span> <span class="k">with</span> <span class="mi">12</span> <span class="n">concurrent</span> <span class="n">workers</span><span class="o">.</span>
+<span class="p">[</span><span class="n">Parallel</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]:</span> <span class="n">Done</span>  <span class="mi">26</span> <span class="n">tasks</span>      <span class="o">|</span> <span class="n">elapsed</span><span class="p">:</span>  <span class="mf">9.1</span><span class="nb">min</span>
+<span class="p">[</span><span class="n">Parallel</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]:</span> <span class="n">Done</span>  <span class="mi">60</span> <span class="n">out</span> <span class="n">of</span>  <span class="mi">60</span> <span class="o">|</span> <span class="n">elapsed</span><span class="p">:</span> <span class="mf">13.8</span><span class="nb">min</span> <span class="n">finished</span>
+<span class="n">Best</span><span class="p">:</span> <span class="mf">0.999887</span> <span class="n">using</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">}</span>
+<span class="mf">0.999838</span> <span class="p">(</span><span class="mf">0.000102</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">}</span>
+<span class="mf">0.999871</span> <span class="p">(</span><span class="mf">0.000121</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">}</span>
+</code></pre></div>
+                <p>Giá trị learning_rate tối ưu tìm được là 0.001.</p>
+                <p>Đồ thị bên dưới thể hiện mối qua hệ giữa learning_rate và độ chính xác của model.</p>
+
+
+                <div style="text-align:center">
+                    <img src="/learning_rate.png">
+                </div>
+
+
+                <p><strong>2. Tuning Learning_Rate và số lượng <code>decision tree</code></strong></p>
+                <p>Nói chung, khi có nhiều trees được thêm vào XGBoost, những trees thêm vào sau nên sử dụng giá trị learning_rate nhỏ. Ta sẽ kiểm tra nhận định này thông qua quá trình tuning như sau:</p>
+                <ul>
+                    <li>Số lượng trees (<em>n_estimators</em>) = [100, 200, 300, 400, 500]</li>
+                    <li>learning_rate = [0.0001, 0.001, 0.01, 0.1]</li>
+                </ul>
+                <p>Có 5 giá trị của n_estimators và 4 giá trị của learning_rate, kết hợp với 10-fold cross-validation ta có 200 models cần train.</p>
+                <p>Code đầy đủ như dưới đây:</p>
+                <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># XGBoost on Otto dataset, Tune learning_rate and n_estimators</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;Agg&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="c1"># load data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;train.csv&#39;</span><span class="p">)</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># split data into X and y</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">94</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">94</span><span class="p">]</span>
+
+<span class="c1"># encode string class values as integers</span>
+<span class="n">label_encoded_y</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># grid search</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">()</span>
+<span class="n">n_estimators</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="n">n_estimators</span><span class="p">)</span>
+<span class="n">kfold</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">grid_search</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">&#34;accuracy&#34;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">kfold</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">grid_result</span> <span class="o">=</span> <span class="n">grid_search</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">label_encoded_y</span><span class="p">)</span>
+
+<span class="c1"># summarize results</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Best: </span><span class="si">%f</span><span class="s2"> using </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">grid_result</span><span class="o">.</span><span class="n">best_score_</span><span class="p">,</span> <span class="n">grid_result</span><span class="o">.</span><span class="n">best_params_</span><span class="p">))</span>
+<span class="n">means</span> <span class="o">=</span> <span class="n">grid_result</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;mean_test_score&#39;</span><span class="p">]</span>
+<span class="n">stds</span> <span class="o">=</span> <span class="n">grid_result</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;std_test_score&#39;</span><span class="p">]</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">grid_result</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">mean</span><span class="p">,</span> <span class="n">stdev</span><span class="p">,</span> <span class="n">param</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">means</span><span class="p">,</span> <span class="n">stds</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+	<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%f</span><span class="s2"> (</span><span class="si">%f</span><span class="s2">) with: </span><span class="si">%r</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">stdev</span><span class="p">,</span> <span class="n">param</span><span class="p">))</span>
+
+<span class="c1"># plot results</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">means</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">n_estimators</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">):</span>
+	<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n_estimators</span><span class="p">,</span> <span class="n">scores</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;learning_rate: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+	<span class="n">pyplot</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+	<span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;n_estimators&#39;</span><span class="p">)</span>
+	<span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+	<span class="n">pyplot</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;n_estimators_vs_learning_rate.png&#39;</span><span class="p">)</span>
+</code></pre></div>
+                <p>Sau khoảng 2 tiếng chờ đơi thì chúng ta cũng thu được kết quả:</p>
+                <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">Fitting</span> <span class="mi">10</span> <span class="n">folds</span> <span class="k">for</span> <span class="n">each</span> <span class="n">of</span> <span class="mi">20</span> <span class="n">candidates</span><span class="p">,</span> <span class="n">totalling</span> <span class="mi">200</span> <span class="n">fits</span>
+<span class="p">[</span><span class="n">Parallel</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]:</span> <span class="n">Using</span> <span class="n">backend</span> <span class="n">LokyBackend</span> <span class="k">with</span> <span class="mi">16</span> <span class="n">concurrent</span> <span class="n">workers</span><span class="o">.</span>
+<span class="p">[</span><span class="n">Parallel</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]:</span> <span class="n">Done</span>  <span class="mi">18</span> <span class="n">tasks</span>      <span class="o">|</span> <span class="n">elapsed</span><span class="p">:</span>  <span class="mf">6.2</span><span class="nb">min</span>
+<span class="p">[</span><span class="n">Parallel</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]:</span> <span class="n">Done</span> <span class="mi">168</span> <span class="n">tasks</span>      <span class="o">|</span> <span class="n">elapsed</span><span class="p">:</span> <span class="mf">58.2</span><span class="nb">min</span>
+<span class="p">[</span><span class="n">Parallel</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]:</span> <span class="n">Done</span> <span class="mi">200</span> <span class="n">out</span> <span class="n">of</span> <span class="mi">200</span> <span class="o">|</span> <span class="n">elapsed</span><span class="p">:</span> <span class="mf">67.6</span><span class="nb">min</span> <span class="n">finished</span>
+<span class="n">Best</span><span class="p">:</span> <span class="mf">0.999887</span> <span class="n">using</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+<span class="mf">0.999838</span> <span class="p">(</span><span class="mf">0.000102</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+<span class="mf">0.999838</span> <span class="p">(</span><span class="mf">0.000102</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">}</span>
+<span class="mf">0.999838</span> <span class="p">(</span><span class="mf">0.000102</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">}</span>
+<span class="mf">0.999838</span> <span class="p">(</span><span class="mf">0.000102</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">}</span>
+<span class="mf">0.999838</span> <span class="p">(</span><span class="mf">0.000102</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">}</span>
+<span class="mf">0.999887</span> <span class="p">(</span><span class="mf">0.000103</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+<span class="mf">0.999871</span> <span class="p">(</span><span class="mf">0.000121</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
+<span class="mf">0.999871</span> <span class="p">(</span><span class="mf">0.000121</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">}</span>
+<span class="mf">0.999871</span> <span class="p">(</span><span class="mf">0.000121</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">}</span>
+<span class="mf">0.999871</span> <span class="p">(</span><span class="mf">0.000121</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">}</span>
+<span class="mf">0.999871</span> <span class="p">(</span><span class="mf">0.000121</span><span class="p">)</span> <span class="k">with</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">}</span>
+</code></pre></div>
+                <p>Ta có thể thấy, kết quả tốt nhất của model đạt được tại learning_rate=0.001 và n_estimators=100. Tuy nhiên, kết quả này cũng không có sự khác biệt đáng kể so với những trường hợp khác. Bạn có thể thử nghiệm với các metrics đánh giá khác
+                    (
+                    <em>F1-score, precition, recall, log_loss</em>) để nhìn thấy sự khác biệt rõ hơn.</p>
+                <p>Bên dưới là đồ thị thể hiện mối quan hệ của mỗi learning_rate với các giá trị khác nhau của n_estimators.</p>
+
+
+                <div style="text-align:center">
+                    <img src="/n_estimators_vs_learning_rate.png">
+                </div>
+
+
+                <p><strong>3. Kết luận</strong></p>
+                <p>Ở bài viết này, chúng ta đã tiến hành tuning XGBoost model với 2 hyper-parameters là learning_rate và n_estimators.</p>
+                <p>Bài viết tiếp theo chúng ta sẽ tiếp tục tune thêm một tham số khác là <code>subsample</code>. Hãy cùng đón đọc! :)</p>
+                <p><em>Toàn bộ source code của bài này các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/xgboost-algorithm/tree/master/tune_learning_rate">github.</a></em></p>
+                <p>Bài viết có tham khảo tại <a href="https://machinelearningmastery.com/XGBoost-with-python/">tham khảo</a>.</p>
+
+            </div>
+            <div class="info post_meta">
+                <time datetime=2020-10-12T00:00:00Z class="date">Monday, October 12, 2020</time>
+
+                <ul class="tags">
+
+                    <li> <a href="https://tiensu.github.io/tags/ai">AI</a> </li>
+
+                    <li> <a href="https://tiensu.github.io/tags/ml">ML</a> </li>
+
+                    <li> <a href="https://tiensu.github.io/tags/xgboost">XGBoost</a> </li>
+
+                </ul>
+
+
+            </div>
+            <div class="clearfix"></div>
+        </article>
+
+        <div class="other_posts">
+
+            <a href="https://tiensu.github.io/posts/xgboost/14_tuning_number_and_size_decision_tree/" class="prev">XGBoost - Bài 12: Tuning số lượng và kích thước của Decision Tree</a>
+
+
+            <a href="https://tiensu.github.io/posts/xgboost/16_tuning_subsampling/" class="next">XGBoost - Bài 14: Tuning Subsample</a>
+
+        </div>
+        <aside id="comments">
+        </aside>
+
+
+    </section>
+
+    <a id="back_to_top" title="Go To Top" href="#">
+        <span>
+    <svg viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"></path>
+    </svg>
+  </span>
+    </a>
+
+    <footer id="footer">
+        <p>
+            <span>&copy; 2020 <a href="https://tiensu.github.io/" title="ML in Practical">ML in Practical</a> </span>
+            <span>Built with <a rel="nofollow" target="_blank" href="https://gohugo.io">Hugo</a></span>
+            <span>Theme by <a rel="nofollow" target="_blank" href="https://github.com/wayjam/hugo-theme-mixedpaper">WayJam</a></span>
+        </p>
+        <script src="https://tiensu.github.io/js/main.min.8b182175f5874aeed0acc0979345c98d4bde22208ec4f36cc1d6e3102acb4b10.js" integrity="sha256-ixghdfWHSu7QrMCXk0XJjUveIiCOxPNswdbjECrLSxA=" crossorigin="anonymous" async></script>
+    </footer>
+
+</body>
+
+</html>
