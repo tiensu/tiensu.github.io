@@ -170,7 +170,7 @@
 <p>Theo <a href="https://en.wikipedia.org/wiki/Deep_learning">Wikipedia</a>: &ldquo;Deep learning (also known as deep structured learning or differential programming) is part of a broader family of machine learning methods based on artificial neural networks with representation learning. Learning can be supervised, semi-supervised or unsupervised&rdquo;.</p>
 <p>Hiểu theo một cách khác thì DL là một tập hợp các thuật toán mô phỏng lại cách thức hoạt động của bộ não của con người trong việc phân tích dữ liệu, nhằm tạo ra các models cái mà được sử dụng cho việc đưa ra quyết định dựa trên dữ liệu đầu vào. Về bản chất, DL bao gồm nhiều layers, mỗi layer có thể coi là một mạng Neural Network (NN).</p>
 <p>Giống như não bộ của con người, NN có chứa các neurons. Mỗi neurons nhận các tín hiệu ở đầu vào, nhân chúng với các trọng số (<em>weights</em>), tổng hợp chúng lại, và sau cùng là áp dụng các hàm kích hoạt (<em>thường là non-linear</em>) lên chúng. Các neurons được sắp xếp thành các layers liên tiếp nhau (<em>stack</em>).</p>
-<p>Các kiến trúc mạng DL đều sử dụng thuật toán [Backpropagation]](<a href="https://tiensu.github.io/blog/19_neural_network_fundamentals_2/">https://tiensu.github.io/blog/19_neural_network_fundamentals_2/</a>) để tính toán và cập nhật các trọng số của nó thông qua quá trình huấn luyện. Về mặt ý tưởng, dữ liệu được đưa vào mạng DL, sinh ra output, so sánh output với giá trị thực tế (<em>sử dụng loss function</em>) rồi điều chỉnh trọng số theo kết quả so sánh đó.</p>
+<p>Các kiến trúc mạng DL đều sử dụng thuật toán <a href="https://tiensu.github.io/blog/19_neural_network_fundamentals_2/">Backpropagation</a> để tính toán và cập nhật các trọng số của nó thông qua quá trình huấn luyện. Về mặt ý tưởng, dữ liệu được đưa vào mạng DL, sinh ra output, so sánh output với giá trị thực tế (<em>sử dụng loss function</em>) rồi điều chỉnh trọng số theo kết quả so sánh đó.</p>
 <p>Việc điều chỉnh trọng số là một quá trình tối ưu, thường sử dụng thuật toán <a href="https://tiensu.github.io/blog/25_optimization_methods_gradient-descent/">SGD</a>. Ngoài SGD, một số thuật toán khác cũng hay được sử dụng. Đó là Adam, Radam, SRMprop.</p>
 <p><strong>2. Các thuật toán DL</strong></p>
 
@@ -332,9 +332,10 @@
 <ul>
 <li>Các thuật toán Word Embedding</li>
 </ul>
-<p>Word Embedding là quá trình biến đổi các từ thành các vector đại diện, làm đầu vào cho các DL model. Việc biến đổi này có tính đến hoàn cảnh và ngữ nghĩa của từ đó trong câu. Một số thuật toán phổ biến:
-- <a href="https://wiki.pathmind.com/word2vec">Word2Vec</a>: Nó hoạt động theo theo 1 trong 2 cách, dự đoán từ dựa vào những tù xung quanh của nó (<em>CBOW</em>) hoăc dự đoán các từ xung quanh của 1 từ (<em>Skip-Gram</em>). Các từ được đưa vào Word2Vec theo dạng One-hot-encoding.</p>
-<pre><code>
+<p>Word Embedding là quá trình biến đổi các từ thành các vector đại diện, làm đầu vào cho các DL model. Việc biến đổi này có tính đến hoàn cảnh và ngữ nghĩa của từ đó trong câu. Một số thuật toán phổ biến:</p>
+<pre><code>- [Word2Vec](https://wiki.pathmind.com/word2vec): Nó hoạt động theo theo 1 trong 2 cách, dự đoán từ dựa vào những tù xung quanh của nó (*CBOW*) hoăc dự đoán các từ xung quanh của 1 từ (*Skip-Gram*). Các từ được đưa vào Word2Vec theo dạng One-hot-encoding.
+
+
 
     <div style="text-align:center">
         <img style="height:auto" src="/images/post/19_word2vec.png">
