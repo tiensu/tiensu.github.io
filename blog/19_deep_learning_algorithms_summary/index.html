@@ -333,37 +333,31 @@
 <li>Các thuật toán Word Embedding</li>
 </ul>
 <p>Word Embedding là quá trình biến đổi các từ thành các vector đại diện, làm đầu vào cho các DL model. Việc biến đổi này có tính đến hoàn cảnh và ngữ nghĩa của từ đó trong câu. Một số thuật toán phổ biến:</p>
-<pre><code>- [Word2Vec](https://wiki.pathmind.com/word2vec): Nó hoạt động theo theo 1 trong 2 cách, dự đoán từ dựa vào những tù xung quanh của nó (*CBOW*) hoăc dự đoán các từ xung quanh của 1 từ (*Skip-Gram*). Các từ được đưa vào Word2Vec theo dạng One-hot-encoding.
+<p>a. <a href="https://wiki.pathmind.com/word2vec">Word2Vec</a>: Nó hoạt động theo theo 1 trong 2 cách, dự đoán từ dựa vào những tù xung quanh của nó (<em>CBOW</em>) hoăc dự đoán các từ xung quanh của 1 từ (<em>Skip-Gram</em>). Các từ được đưa vào Word2Vec theo dạng One-hot-encoding.</p>
 
 
-
-    <div style="text-align:center">
-        <img style="height:auto" src="/images/post/19_word2vec.png">
-    </div>
-    
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_word2vec.png">
+</div>
 
 
-- [Glove](https://medium.com/@jonathan_hui/nlp-word-embedding-glove-5e7f523999f6): Là một mô hình khác mở rộng ý tưởng của Word2Vec bằng cách kết hợp nó với các kỹ thuật phân tích thừa số ma trận.
+<p>b. <a href="https://medium.com/@jonathan_hui/nlp-word-embedding-glove-5e7f523999f6">Glove</a>: Là một mô hình khác mở rộng ý tưởng của Word2Vec bằng cách kết hợp nó với các kỹ thuật phân tích thừa số ma trận.</p>
 
 
-
-    <div style="text-align:center">
-        <img style="height:auto" src="/images/post/19_gloveglove.png">
-    </div>
-    
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_gloveglove.png">
+</div>
 
 
-- Contextual Word Embeddings: Sử dụng 2 layers bi-directional LSTM để embedding các từ, cho phép tận dụng sự phụ thuộc của nó với các từ trước đó.
-- Transformer: Đây là phương pháp tiên tiến nhất hiện nay, cho phép tập trung vào một vài vị trí cụ thể của từ trong câu thay vì toàn bộ như khi sử dụng LSTM.
+<p>c. Contextual Word Embeddings: Sử dụng 2 layers bi-directional LSTM để embedding các từ, cho phép tận dụng sự phụ thuộc của nó với các từ trước đó.</p>
+<p>d. Transformer: Đây là phương pháp tiên tiến nhất hiện nay, cho phép tập trung vào một vài vị trí cụ thể của từ trong câu thay vì toàn bộ như khi sử dụng LSTM.</p>
 
 
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/19_transformer.png">
+</div>
 
-    <div style="text-align:center">
-        <img style="height:auto" src="/images/post/19_transformer.png">
-    </div>
-    
 
-</code></pre>
 <ul>
 <li>Sequence Modeling</li>
 </ul>
