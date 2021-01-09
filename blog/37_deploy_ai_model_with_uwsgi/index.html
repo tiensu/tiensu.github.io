@@ -340,10 +340,11 @@ ENDPOINT_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python client<span style="color:#f92672">.</span>py
 </code></pre></div><p>Nếu nhận được kết quả trả vê từ server tức là hệ thống đã hoạt động chính xác:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">b<span style="color:#e6db74">`dog`</span>
-</code></pre></div><p>Như vậy là chúng ta đã cùng nhau triển khai thành công DL model sử dụng Nginx, uWSGI và Flask. Nginx thì mặc định được chạy dưới dạng service sau khi cài đặt xong, còn uWSGI thì không. Ta nên cấu hình uWSGI để nó cũng chạy dưới dạng service cho thuận tiện sử dụng. Hi vọng qua bài này, các bạn đã hiểu rõ hơn về cách thức triển khai một AI model trong các sản phẩm thực tế, đáp ứng số lượng lớn user sử dụng đồng thời.</p>
+</code></pre></div><p><strong>7. Kết luận</strong></p>
+<p>Như vậy là chúng ta đã cùng nhau triển khai thành công DL model sử dụng Nginx, uWSGI và Flask. Nginx thì mặc định được chạy dưới dạng service sau khi cài đặt xong, còn uWSGI thì không. Ta nên cấu hình uWSGI để nó cũng chạy dưới dạng service cho thuận tiện sử dụng. Hi vọng qua bài này, các bạn đã hiểu rõ hơn về cách thức triển khai một AI model trong các sản phẩm thực tế, đáp ứng số lượng lớn user sử dụng đồng thời.</p>
 <p>Toàn bộ source code của backend và front-end trong bài này, các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/Model_Deployment/tree/master/uWSGI">đây</a>. Vì model <code>animal_model_classification.h5</code> có dung lượng khá lớn (<em>&gt; 1.5GB</em>) nên mình không upload lên github được. Các bạn hãy sử dụng model của chính mình để thực hành nhé!</p>
 <p>Bài viết tiếp theo, chúng ta sẽ đi nâng cao hơn 1 chút nữa, đó là đóng gói tất cả những phần đã làm hôm nay vào một cái gọi là docker. Docker là gì, và tại sao lại nên dùng nó? Tất cả sẽ được giải đáp trong bài viết đó. Mời các bạn đón đọc!</p>
-<p><strong>7. Tham khảo</strong></p>
+<p><strong>8. Tham khảo</strong></p>
 <ul>
 <li><a href="https://www.nginx.com/">Nginx</a></li>
 <li><a href="https://uwsgi-docs.readthedocs.io/en/latest/">uWSGI</a></li>

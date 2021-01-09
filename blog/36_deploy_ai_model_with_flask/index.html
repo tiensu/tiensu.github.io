@@ -260,7 +260,7 @@ APP_ROOT_1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.<
 
 
 <p>Như vậy là đã xong phần backend, tiếp theo ta sẽ viết code cho front-end.</p>
-<p><strong>2 Web client</strong></p>
+<p><strong>3. Web client</strong></p>
 <p>Web client có giao diện đơn giản gồm 1 button cho phép user chọn ảnh cần nhận diện và 1 khu vực để hiển thị ảnh kèm kết quả.</p>
 
 
@@ -278,7 +278,7 @@ APP_ROOT_1 <span style="color:#f92672">=</span> os<span style="color:#f92672">.<
 </div>
 
 
-<p><strong>3. Python client</strong></p>
+<p><strong>4. Python client</strong></p>
 <p>Tạo file <code>client.py</code> và code như sau:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> requests
 <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
@@ -299,10 +299,11 @@ ENDPOINT_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;dog&#39;</span>
 </code></pre></div><p>Thử lại với một ảnh ảnh con mèo, <code>cat.1.jpg</code>. Kết qủa trả về:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;cat&#39;</span>
-</code></pre></div><p>Như vậy là chúng ta đã cùng nhau triển khai xong DL model sử dụng Flask. Mặc dù tồn tại nhiều nhược điểm nhưng khi cần nhanh chóng đạt được kết quả để thử nghiệm thì Flask vẫn được tin dùng.</p>
+</code></pre></div><p><strong>5. Kết luận</strong></p>
+<p>Như vậy là chúng ta đã cùng nhau triển khai xong DL model sử dụng Flask. Mặc dù tồn tại nhiều nhược điểm nhưng khi cần nhanh chóng đạt được kết quả để thử nghiệm thì Flask vẫn được tin dùng.</p>
 <p>Bài viết tiếp theo, mình sẽ giới thiệu một cách nâng cao hơn để triển khai DL model, thường được áp dụng trong các bài toán thực tế. Mời các bạn đón đọc!</p>
 <p>Toàn bộ source code của backend và front-end trong bài này, các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/Model_Deployment/tree/master/flask">đây</a>. Vì model <code>animal_model_classification.h5</code> có dung lượng khá lớn (<em>&gt; 1.5GB</em>) nên mình không upload lên github được. Các bạn hãy sử dụng model của chính mình để thực hành nhé!</p>
-<p><strong>4. Tham khảo</strong></p>
+<p><strong>6. Tham khảo</strong></p>
 <ul>
 <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a></li>
 <li><a href="https://theaisummer.com/deploy-flask-tensorflow/">AI Summer</a></li>

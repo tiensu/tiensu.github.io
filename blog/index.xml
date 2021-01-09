@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Cấu hình AI Model Registry</title>
+      <link>https://tiensu.github.io/blog/39_ai_model_registry/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/39_ai_model_registry/</guid>
+      <description>Khi giải quyết một bài toán AI, rất hiếm khi số lượng model được huấn luyện và đưa vào sử dụng dừng lại ở con số 1.</description>
+    </item>
+    
+    <item>
       <title>Đóng gói AI model sử dụng Docker</title>
       <link>https://tiensu.github.io/blog/38_package_ai_model_using_docker/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
