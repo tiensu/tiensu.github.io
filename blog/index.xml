@@ -249,19 +249,19 @@ Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của
     
     <item>
       <title>XGBoost - Bài 13: Tuning Learning_Rate và số lượng của Decision Tree</title>
-      <link>https://tiensu.github.io/blog/15_tuning_learning_rate_and_number_decition_tree/</link>
+      <link>https://tiensu.github.io/blog/16_tuning_learning_rate_and_number_decition_tree/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/blog/15_tuning_learning_rate_and_number_decition_tree/</guid>
+      <guid>https://tiensu.github.io/blog/16_tuning_learning_rate_and_number_decition_tree/</guid>
       <description>Một vấn đề còn tồn tại của XGBoost là khả năng học trên tập dữ liệu huấn luyện một cách rất nhanh chóng.</description>
     </item>
     
     <item>
       <title>XGBoost - Bài 12: Tuning số lượng và kích thước của Decision Tree</title>
-      <link>https://tiensu.github.io/blog/16_tuning_number_and_size_decision_tree/</link>
+      <link>https://tiensu.github.io/blog/15_tuning_number_and_size_decision_tree/</link>
       <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/blog/16_tuning_number_and_size_decision_tree/</guid>
+      <guid>https://tiensu.github.io/blog/15_tuning_number_and_size_decision_tree/</guid>
       <description>Ý tưởng cơ bản của thuật toán Gradient Boosting là lần lượt thêm các decision trees nối tiếp nhau. Tree thêm vào sau sẽ cố gắng giải quyết những sai sót của tree trước đó.</description>
     </item>
     
