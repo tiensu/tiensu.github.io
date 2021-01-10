@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Tìm hiểu và cấu hình AI Model Retraining</title>
+      <link>https://tiensu.github.io/blog/40_ai_model_retraining/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/40_ai_model_retraining/</guid>
+      <description>4. Kết luận
+Như vậy là chúng ta đã implemented xong Model Register, sử dụng SQLite database. Bạn hoàn toàn có thể áp dụng những gì được trình bày trong bài viết này vào trong dự án của bạn.</description>
+    </item>
+    
+    <item>
       <title>Cấu hình AI Model Registry</title>
       <link>https://tiensu.github.io/blog/39_ai_model_registry/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
