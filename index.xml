@@ -17,8 +17,7 @@
       <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/40_ai_model_retraining/</guid>
-      <description>4. Kết luận
-Như vậy là chúng ta đã implemented xong Model Register, sử dụng SQLite database. Bạn hoàn toàn có thể áp dụng những gì được trình bày trong bài viết này vào trong dự án của bạn.</description>
+      <description>Hẳn các bạn đã biết, trong hầu hết các bài toán AI, chúng ta không chỉ train model 1 lần rồi thôi (mình không nói đến việc thử-sai trong quá trình tuning model).</description>
     </item>
     
     <item>

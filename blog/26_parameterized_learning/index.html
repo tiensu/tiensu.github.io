@@ -168,10 +168,7 @@
           <p>Bạn có biết thuật toán kNN - một trong những thuật toán đơn giản nhất của ML? Về bản chất, nó không &ldquo;học&rdquo; bất cứ điều gì từ dữ liệu mà chỉ đơn giản là lưu dữ liệu bên trong model, và tại thời điểm dự đoán, nó so sánh dữ liệu cần dự đoán với dữ liệu trong tập training. Rõ ràng với cách làm việc như vậy thì ưu điểm lớn nhất của kNN là không mất thời gian training model. Không không cần quá quan tâm về độ chính xác thì ưu điểm này chính là lý do mà kNN vẫn còn được sử dụng trong một số trường hợp. Hạn chế của kNN chỉ xuất hiên khi gặp bài toán mà sử dụng lượng dữ liệu lớn. Lúc này thời gian dự đoán của kNN sẽ rất lâu, và đôi khi không thể sử dụng được trong thực tế.</p>
 <p>Một các tiếp cận khác của ML model mà ở đó nó có thể học được các patterns từ dữ liệu trong suốt quá trình training. Sau đó, ở giai đoạn dự đoán, ML model đó có thể thực hiện rất nhanh chóng để đưa ra kết quả. Dạng này của ML được gọi là <code>parameterized learning</code>.</p>
 <p>Dưới đây là định nghĩa chính thống từ tác giả:</p>
-<p><em>“A learning model that summarizes data with a set of parameters of fixed size
-(independent of the number of training examples) is called a parametric model. No
-matter how much data you throw at the parametric model, it won’t change its mind
-about how many parameters it needs.”</em> – Russell and Norvig (2009).</p>
+<p><em>“A learning model that summarizes data with a set of parameters of fixed size (independent of the number of training examples) is called a parametric model. No matter how much data you throw at the parametric model, it won’t change its mind about how many parameters it needs.”</em> – Russell and Norvig (2009).</p>
 <p>Có thể nói <code>parameterized learning</code> là nền tằng của các thuật toán ML và DL hiện đại ngày nay. Trong bài này, chúng ta sẽ cùng xem xét chi tiết một vài khía cạnh về nó!</p>
 <p><strong>1. Bốn thành phần cơ bản của Parameterized Learning</strong></p>
 <p>Hiểu một cách đơn giản, <code>parameterization</code> là quá trình định nghĩa các tham số cần thiết cho một model. Nó bao gồm 4 thành phần: <em>Data, Score Function, Loss Function, Weight-Bias</em>.</p>
