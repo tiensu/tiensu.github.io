@@ -66,11 +66,20 @@
     </item>
     
     <item>
-      <title>Artificial Intelligent</title>
-      <link>https://tiensu.github.io/categories/artificial-intelligent/</link>
+      <title>Deep Learning</title>
+      <link>https://tiensu.github.io/categories/deep-learning/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/categories/artificial-intelligent/</guid>
+      <guid>https://tiensu.github.io/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://tiensu.github.io/categories/machine-learning/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/machine-learning/</guid>
       <description></description>
     </item>
     
@@ -84,29 +93,11 @@
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>https://tiensu.github.io/categories/deep-learning/</link>
-      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Data Science</title>
       <link>https://tiensu.github.io/categories/data-science/</link>
       <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/categories/data-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>https://tiensu.github.io/categories/machine-learning/</link>
-      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/machine-learning/</guid>
       <description></description>
     </item>
     

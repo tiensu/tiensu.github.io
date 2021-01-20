@@ -158,12 +158,22 @@
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/tags/artificial-intelligent/</loc>
+    <loc>https://tiensu.github.io/tags/deep-learning/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/categories/artificial-intelligent/</loc>
+    <loc>https://tiensu.github.io/categories/deep-learning/</loc>
+    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/machine-learning/</loc>
+    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/machine-learning/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -185,16 +195,6 @@
   <url>
     <loc>https://tiensu.github.io/categories/ebook/</loc>
     <lastmod>2020-11-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/tags/deep-learning/</loc>
-    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/categories/deep-learning/</loc>
-    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -234,16 +234,6 @@
   
   <url>
     <loc>https://tiensu.github.io/categories/data-science/</loc>
-    <lastmod>2020-10-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/tags/machine-learning/</loc>
-    <lastmod>2020-10-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/categories/machine-learning/</loc>
     <lastmod>2020-10-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -368,17 +358,17 @@
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/about/</loc>
-    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tiensu.github.io/blog/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/contact/</loc>
+    <lastmod>2019-10-29T13:49:23+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/about/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
   </url>
   
