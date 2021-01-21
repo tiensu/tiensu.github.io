@@ -6,10 +6,19 @@
     <description>Recent content in Model Deployment on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tiensu.github.io/tags/model-deployment/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tìm hiểu về Kubernetes và cách áp dụng vào các bài toán AI</title>
+      <link>https://tiensu.github.io/blog/41_kubernetes_in_ai/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/41_kubernetes_in_ai/</guid>
+      <description>Trong các bài viết trước, mình đã giới thiệu về Docker, sử dụng kết hợp với Nginx, uWSGI, Flask để deploy model trong môi trường production.</description>
+    </item>
     
     <item>
       <title>Tìm hiểu và cấu hình AI Model Retraining</title>
