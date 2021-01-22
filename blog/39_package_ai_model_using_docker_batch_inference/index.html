@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/model-deployment"
+          class="text-primary">Model deployment</a>
+        
+        <h2>Đóng gói quá trình Train AI model và Batch Inference sử dụng Docker</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>06 January 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/39_docker.png" class="img-fluid w-100 mb-4" alt="Đóng gói quá trình Train AI model và Batch Inference sử dụng Docker">
+        
+        <div class="content mb-5">
+          <p>Trong bài trước, chúng ta đã tìm hiểu và sử dụng Docker để triển khai AI model theo kiểu <code>online inference</code>. Trong bài này, ta sẽ train một model khác để inference theo kiểu thứ 2, <code>batch inference</code>, sử dụng docker. Mình cũng sẽ thực hiện việc train model bên trong docker luôn (<em>các bài trước đó là train model bên ngoài docker, sau đó chỉ copy model đã train vào trong docker để thực hiện online inference</em>).</p>
+<p><strong>1. Tạo cấu trúc thư mục</strong></p>
+<p>Trước tiên, chúng ta sẽ tạo ra một thư mục để lát nữa khi build docker image, nó sẽ được copy vào trong docker image đó.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">code
+<span style="color:#960050;background-color:#1e0010">├──</span> Dockerfile
+<span style="color:#960050;background-color:#1e0010">├──</span> inference<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">└──</span> train<span style="color:#f92672">.</span>py
+</code></pre></div><p>Trong đó:</p>
+<ul>
+<li><strong>code</strong>: thư mục làm việc chính.</li>
+<li><strong>Dockerfile</strong>: File cấu hình để build docker image.</li>
+<li><strong>train.py</strong>: File code python để thực hiện train model.</li>
+<li><strong>inference.py</strong>: File code python để thực hiện <code>batch inference</code>.</li>
+</ul>
+<p><strong>2. Tạo code python để train model và inference data</strong></p>
+<p>Lần này, chúng ta sẽ thực hiện train model để dự đoán giá nhà tại Boson, sử dụng tập dữ liệu boson trong thư viện scikit-learn. Đây là kiểu model Leaner Regression.</p>
+<p>Tạo file <code>train.py</code> với nội dung như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> json
+<span style="color:#f92672">import</span> os
+
+<span style="color:#f92672">from</span> joblib <span style="color:#f92672">import</span> dump
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> ensemble
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> datasets
+<span style="color:#f92672">from</span> sklearn.utils <span style="color:#f92672">import</span> shuffle
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> mean_squared_error
+
+
+<span style="color:#75715e"># #############################################################################</span>
+<span style="color:#75715e"># Load directory paths for persisting model and metadata</span>
+
+MODEL_DIR <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;MODEL_DIR&#34;</span>]
+MODEL_FILE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;MODEL_FILE&#34;</span>]
+METADATA_FILE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;METADATA_FILE&#34;</span>]
+MODEL_PATH <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(MODEL_DIR, MODEL_FILE)
+METADATA_PATH <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(MODEL_DIR, METADATA_FILE)
+
+<span style="color:#75715e"># #############################################################################</span>
+<span style="color:#75715e"># Load and split data</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Loading data...&#34;</span>)
+boston <span style="color:#f92672">=</span> datasets<span style="color:#f92672">.</span>load_boston()
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Splitting data...&#34;</span>)
+X, y <span style="color:#f92672">=</span> shuffle(boston<span style="color:#f92672">.</span>data, boston<span style="color:#f92672">.</span>target, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float32)
+offset <span style="color:#f92672">=</span> int(X<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.9</span>)
+X_train, y_train <span style="color:#f92672">=</span> X[:offset], y[:offset]
+X_test, y_test <span style="color:#f92672">=</span> X[offset:], y[offset:]
+
+<span style="color:#75715e"># #############################################################################</span>
+<span style="color:#75715e"># Fit regression model</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Fitting model...&#34;</span>)
+params <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;n_estimators&#39;</span>: <span style="color:#ae81ff">500</span>, <span style="color:#e6db74">&#39;max_depth&#39;</span>: <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;min_samples_split&#39;</span>: <span style="color:#ae81ff">2</span>,
+          <span style="color:#e6db74">&#39;learning_rate&#39;</span>: <span style="color:#ae81ff">0.01</span>, <span style="color:#e6db74">&#39;loss&#39;</span>: <span style="color:#e6db74">&#39;ls&#39;</span>}
+clf <span style="color:#f92672">=</span> ensemble<span style="color:#f92672">.</span>GradientBoostingRegressor(<span style="color:#f92672">**</span>params)
+
+clf<span style="color:#f92672">.</span>fit(X_train, y_train)
+train_mse <span style="color:#f92672">=</span> mean_squared_error(y_train, clf<span style="color:#f92672">.</span>predict(X_train))
+test_mse <span style="color:#f92672">=</span> mean_squared_error(y_test, clf<span style="color:#f92672">.</span>predict(X_test))
+metadata <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#34;train_mean_square_error&#34;</span>: train_mse,
+    <span style="color:#e6db74">&#34;test_mean_square_error&#34;</span>: test_mse
+}
+
+<span style="color:#75715e"># #############################################################################</span>
+<span style="color:#75715e"># Serialize model and metadata</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Serializing model to: {}&#34;</span><span style="color:#f92672">.</span>format(MODEL_PATH))
+dump(clf, MODEL_PATH)
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Serializing metadata to: {}&#34;</span><span style="color:#f92672">.</span>format(METADATA_PATH))
+<span style="color:#66d9ef">with</span> open(METADATA_PATH, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> outfile:  
+    json<span style="color:#f92672">.</span>dump(metadata, outfile)
+</code></pre></div><p>Tạo file <code>inference.py</code> với nội dung như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
+
+<span style="color:#f92672">from</span> joblib <span style="color:#f92672">import</span> load
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> datasets
+<span style="color:#f92672">from</span> sklearn.utils <span style="color:#f92672">import</span> shuffle
+
+
+MODEL_DIR <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;MODEL_DIR&#34;</span>]
+MODEL_FILE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;MODEL_FILE&#34;</span>]
+METADATA_FILE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;METADATA_FILE&#34;</span>]
+MODEL_PATH <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(MODEL_DIR, MODEL_FILE)
+METADATA_PATH <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(MODEL_DIR, METADATA_FILE)
+
+<span style="color:#75715e"># #############################################################################</span>
+<span style="color:#75715e"># Get a batch of data to inference</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_data</span>():
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    Return data for inference.
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Loading data...&#34;</span>)
+    boston <span style="color:#f92672">=</span> datasets<span style="color:#f92672">.</span>load_boston()
+    X, y <span style="color:#f92672">=</span> shuffle(boston<span style="color:#f92672">.</span>data, boston<span style="color:#f92672">.</span>target, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+    X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float32)
+    offset <span style="color:#f92672">=</span> int(X<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.9</span>)
+    X_train, y_train <span style="color:#f92672">=</span> X[:offset], y[:offset]
+    X_test, y_test <span style="color:#f92672">=</span> X[offset:], y[offset:]
+    <span style="color:#66d9ef">return</span> X_test, y_test
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Running inference...&#34;</span>)
+
+X, y <span style="color:#f92672">=</span> get_data()
+
+
+<span style="color:#75715e"># #############################################################################</span>
+<span style="color:#75715e"># Load model</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Loading model from: {}&#34;</span><span style="color:#f92672">.</span>format(MODEL_PATH))
+clf <span style="color:#f92672">=</span> load(MODEL_PATH)
+
+<span style="color:#75715e"># #############################################################################</span>
+<span style="color:#75715e"># Run inference</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Scoring observations...&#34;</span>)
+y_pred <span style="color:#f92672">=</span> clf<span style="color:#f92672">.</span>predict(X)
+<span style="color:#66d9ef">print</span>(y_pred)
+</code></pre></div><p>Mình tin chắc các bạn có thể dễ dàng hiểu được đoạn code trên. Ở đây, có một chú ý là mình sử dụng một số biến môi trường <em>MODEL_DIR, MODEL_FILE, &hellip;</em>. Mình không muốn hard-code những biến này vì chúng được sử dụng ở 2 nơi, train và inference model. Thay vào đó, giá trị của chúng sẽ được truyền vào lúc build docker.</p>
+<p><strong>3. Build Docker image để train model</strong></p>
+<p>Tạo file Dockerfile với nội dung như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">FROM jupyter<span style="color:#f92672">/</span>scipy<span style="color:#f92672">-</span>notebook
+USER root
+WORKDIR <span style="color:#f92672">/</span>code
+ADD <span style="color:#f92672">.</span> <span style="color:#f92672">/</span>code
+
+RUN pip install joblib
+RUN mkdir model
+
+<span style="color:#75715e"># Env variables</span>
+ENV MODEL_DIR<span style="color:#f92672">=/</span>code<span style="color:#f92672">/</span>model
+ENV MODEL_FILE<span style="color:#f92672">=</span>clf<span style="color:#f92672">.</span>joblib
+ENV METADATA_FILE<span style="color:#f92672">=</span>metadata<span style="color:#f92672">.</span>json
+
+<span style="color:#75715e"># COPY train.py ./train.py</span>
+<span style="color:#75715e"># COPY inference.py ./inference.py</span>
+
+RUN python3 train<span style="color:#f92672">.</span>py
+</code></pre></div><p>Để build docker image, chạy lệnh sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker build <span style="color:#f92672">-</span>t docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer <span style="color:#f92672">.</span>
+</code></pre></div><p>Output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Sending build context to Docker daemon  <span style="color:#ae81ff">4.608</span>kB
+Step <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : FROM jupyter<span style="color:#f92672">/</span>scipy<span style="color:#f92672">-</span>notebook
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">06</span><span style="color:#ae81ff">9532086</span>d63
+Step <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : USER root
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> c580ea3bbd7f
+Removing intermediate container c580ea3bbd7f
+ <span style="color:#f92672">---&gt;</span> efcad69c0b79
+Step <span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : WORKDIR <span style="color:#f92672">/</span>code
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> <span style="color:#ae81ff">08</span>ee819c1e52
+Removing intermediate container <span style="color:#ae81ff">08</span>ee819c1e52
+ <span style="color:#f92672">---&gt;</span> d05432266229
+Step <span style="color:#ae81ff">4</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : ADD <span style="color:#f92672">.</span> <span style="color:#f92672">/</span>code
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">6</span>b1f81f3a9f6
+Step <span style="color:#ae81ff">5</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : RUN pip install joblib
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> <span style="color:#ae81ff">9</span>a2c41424c59
+Removing intermediate container <span style="color:#ae81ff">9</span>a2c41424c59
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">11e642103</span>f1f
+Step <span style="color:#ae81ff">6</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : RUN mkdir <span style="color:#f92672">/</span>code<span style="color:#f92672">/</span>model
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> <span style="color:#ae81ff">5</span>a4068194bfa
+Removing intermediate container <span style="color:#ae81ff">5</span>a4068194bfa
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">6</span>ae6727bf9aa
+Step <span style="color:#ae81ff">7</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : ENV MODEL_DIR<span style="color:#f92672">=/</span>code<span style="color:#f92672">/</span>model
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> f8992466e635
+Removing intermediate container f8992466e635
+ <span style="color:#f92672">---&gt;</span> c3491c25966e
+Step <span style="color:#ae81ff">8</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : ENV MODEL_FILE<span style="color:#f92672">=</span>clf<span style="color:#f92672">.</span>joblib
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> <span style="color:#ae81ff">15</span>f321f925e4
+Removing intermediate container <span style="color:#ae81ff">15</span>f321f925e4
+ <span style="color:#f92672">---&gt;</span> a643969fdfd1
+Step <span style="color:#ae81ff">9</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : ENV METADATA_FILE<span style="color:#f92672">=</span>metadata<span style="color:#f92672">.</span>json
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> <span style="color:#ae81ff">72</span>c0b8ef67db
+Removing intermediate container <span style="color:#ae81ff">72</span>c0b8ef67db
+ <span style="color:#f92672">---&gt;</span> efce67f3494c
+Step <span style="color:#ae81ff">10</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : RUN python3 train<span style="color:#f92672">.</span>py
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> <span style="color:#ae81ff">10</span>bec25fc25e
+Loading data<span style="color:#f92672">...</span>
+Splitting data<span style="color:#f92672">...</span>
+Fitting model<span style="color:#f92672">...</span>
+Serializing model to: <span style="color:#f92672">/</span>code<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>clf<span style="color:#f92672">.</span>joblib
+Serializing metadata to: <span style="color:#f92672">/</span>code<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>metadata<span style="color:#f92672">.</span>json
+Removing intermediate container <span style="color:#ae81ff">10</span>bec25fc25e
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">05</span>d1c3a12437
+Successfully built <span style="color:#ae81ff">05</span>d1c3a12437
+Successfully tagged docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer:latest
+</code></pre></div><p>Kiểm tra nội dung file metadata:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker run docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer cat <span style="color:#f92672">/</span>code<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>metadata<span style="color:#f92672">.</span>json
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">{<span style="color:#e6db74">&#34;train_mean_square_error&#34;</span>: <span style="color:#ae81ff">1.7677391462344387</span>, <span style="color:#e6db74">&#34;test_mean_square_error&#34;</span>: <span style="color:#ae81ff">6.588673999729974</span>}
+</code></pre></div><p><em>Chú ý: Model ở đây chưa được tuning để tối ưu hóa hiệu năng, các thông tin metadata khác như thuật toán, phân phối dữ liệu, phiên bản model, &hellip; cũng không được lưu lại. Nếu bạn sử dụng hướng dẫn này trong thực tế thì cần lưu ý những điểm trên.</em></p>
+<p><strong>4. Thực hiện Batch Inference</strong></p>
+<p>Chúng ta đã có một model đã train, được lưu thành file <code>clf.joblib</code> trong docker image <code>docker-model-batch-infer</code>. Giờ là lúc sử dụng nó để thực hiện inference.</p>
+<p>Để thực hiện <code>batch inference</code>, ta sẽ khởi động docker image và chạy lệnh thực thi code kèm theo đó:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker run docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer python3 inference<span style="color:#f92672">.</span>py
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Running inference<span style="color:#f92672">...</span>
+Loading data<span style="color:#f92672">...</span>
+Loading model from: <span style="color:#f92672">/</span>code<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>clf<span style="color:#f92672">.</span>joblib
+Scoring observations<span style="color:#f92672">...</span>
+[<span style="color:#ae81ff">15.32448686</span> <span style="color:#ae81ff">27.68741572</span> <span style="color:#ae81ff">24.23789723</span> <span style="color:#ae81ff">31.94786177</span> <span style="color:#ae81ff">10.43966955</span> <span style="color:#ae81ff">34.25663827</span>
+ <span style="color:#ae81ff">22.05210667</span> <span style="color:#ae81ff">11.58265489</span> <span style="color:#ae81ff">13.36407623</span> <span style="color:#ae81ff">42.87157933</span> <span style="color:#ae81ff">33.03218733</span> <span style="color:#ae81ff">15.77635169</span>
+ <span style="color:#ae81ff">23.93521876</span> <span style="color:#ae81ff">19.88239305</span> <span style="color:#ae81ff">25.43466604</span> <span style="color:#ae81ff">20.55132127</span> <span style="color:#ae81ff">13.65254047</span> <span style="color:#ae81ff">47.45491473</span>
+ <span style="color:#ae81ff">17.5734174</span>  <span style="color:#ae81ff">21.51806638</span> <span style="color:#ae81ff">22.57388848</span> <span style="color:#ae81ff">16.97645106</span> <span style="color:#ae81ff">16.25503893</span> <span style="color:#ae81ff">20.57862843</span>
+ <span style="color:#ae81ff">14.57438158</span> <span style="color:#ae81ff">11.81385445</span> <span style="color:#ae81ff">24.78353556</span> <span style="color:#ae81ff">37.51637481</span> <span style="color:#ae81ff">30.34664466</span> <span style="color:#ae81ff">19.67895051</span>
+ <span style="color:#ae81ff">23.22841646</span> <span style="color:#ae81ff">25.02203256</span> <span style="color:#ae81ff">18.65459129</span> <span style="color:#ae81ff">30.09762517</span>  <span style="color:#ae81ff">8.96667041</span> <span style="color:#ae81ff">13.8130382</span>
+ <span style="color:#ae81ff">14.18734797</span> <span style="color:#ae81ff">17.3840622</span>  <span style="color:#ae81ff">19.83840166</span> <span style="color:#ae81ff">24.23822033</span> <span style="color:#ae81ff">20.52076144</span> <span style="color:#ae81ff">15.32433651</span>
+ <span style="color:#ae81ff">25.8157052</span>  <span style="color:#ae81ff">16.47533793</span> <span style="color:#ae81ff">19.2214524</span>  <span style="color:#ae81ff">19.87110293</span> <span style="color:#ae81ff">21.47113681</span> <span style="color:#ae81ff">21.56443118</span>
+ <span style="color:#ae81ff">24.64517965</span> <span style="color:#ae81ff">22.43665872</span> <span style="color:#ae81ff">22.22261406</span>]
+</code></pre></div><p><strong>5. Kết luận</strong></p>
+<p>Như vậy là chúng ta đã thực hiên xong việc train một ML model và sử dụng nó để inference dữ liệu bằng docker. Tuy nhiên, để mang nó vào sử dụng trong môi trường production thì chúng ta cần thực hiện thêm một số công việc nữa như là lập lịch đê thực hiện <code>batch inference</code> định kỳ, tuning hyper-parameter, lưu trữ metadata của model, &hellip;</p>
+<p>Toàn bộ source code sử dụng trong bài này, các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/Model_Deployment/tree/master/docker_batch_inference">đây</a>.</p>
+<p>Trong các bài viết tiếp theo, mình sẽ tổng hợp lại các thuật toán Deep Learning, sau đó sẽ đi chi tiết vào một số thụât toán với các ứng dụng cụ thể. Mời các bạn đón đọc!</p>
+<p><strong>7. Tham khảo</strong></p>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a></li>
+<li><a href="https://www.nginx.com/">Nginx</a></li>
+<li><a href="https://uwsgi-docs.readthedocs.io/en/latest/">uWSGI</a></li>
+<li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a></li>
+<li><a href="https://theaisummer.com/docker/">AI Summer</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

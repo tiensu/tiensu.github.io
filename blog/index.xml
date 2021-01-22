@@ -12,48 +12,57 @@
     
     
     <item>
-      <title>Tìm hiểu về Kubernetes và cách áp dụng vào các bài toán AI</title>
-      <link>https://tiensu.github.io/blog/41_kubernetes_in_ai/</link>
+      <title>Tìm hiểu và cấu hình AI Model Retraining</title>
+      <link>https://tiensu.github.io/blog/41_ai_model_retraining/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/blog/41_kubernetes_in_ai/</guid>
-      <description>Trong các bài viết trước, mình đã giới thiệu về Docker, sử dụng kết hợp với Nginx, uWSGI, Flask để deploy model trong môi trường production.</description>
-    </item>
-    
-    <item>
-      <title>Tìm hiểu và cấu hình AI Model Retraining</title>
-      <link>https://tiensu.github.io/blog/40_ai_model_retraining/</link>
-      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/blog/40_ai_model_retraining/</guid>
+      <guid>https://tiensu.github.io/blog/41_ai_model_retraining/</guid>
       <description>Hẳn các bạn đã biết, trong hầu hết các bài toán AI, chúng ta không chỉ train model 1 lần rồi thôi (mình không nói đến việc thử-sai trong quá trình tuning model).</description>
     </item>
     
     <item>
-      <title>Cấu hình AI Model Registry</title>
-      <link>https://tiensu.github.io/blog/39_ai_model_registry/</link>
-      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      <title>Tìm hiểu về Kubernetes và cách áp dụng vào các bài toán AI</title>
+      <link>https://tiensu.github.io/blog/ddd_kubernetes_in_ai/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/blog/39_ai_model_registry/</guid>
+      <guid>https://tiensu.github.io/blog/ddd_kubernetes_in_ai/</guid>
+      <description>Trong các bài viết trước, mình đã giới thiệu về Docker, sử dụng kết hợp với Nginx, uWSGI, Flask để deploy model trong môi trường production.</description>
+    </item>
+    
+    <item>
+      <title>Cấu hình AI Model Registry</title>
+      <link>https://tiensu.github.io/blog/40_ai_model_registry/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/40_ai_model_registry/</guid>
       <description>Khi giải quyết một bài toán AI, rất hiếm khi số lượng model được huấn luyện và đưa vào sử dụng dừng lại ở con số 1.</description>
     </item>
     
     <item>
-      <title>Đóng gói AI model sử dụng Docker</title>
-      <link>https://tiensu.github.io/blog/38_package_ai_model_using_docker/</link>
+      <title>Đóng gói quá trình Train AI model và Batch Inference sử dụng Docker</title>
+      <link>https://tiensu.github.io/blog/39_package_ai_model_using_docker_batch_inference/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/39_package_ai_model_using_docker_batch_inference/</guid>
+      <description>Trong bài trước, chúng ta đã tìm hiểu và sử dụng Docker để triển khai AI model theo kiểu online inference.</description>
+    </item>
+    
+    <item>
+      <title>Đóng gói AI model theo kiểu Online Inference sử dụng Docker</title>
+      <link>https://tiensu.github.io/blog/38_package_ai_model_using_docker_online_inference/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/blog/38_package_ai_model_using_docker/</guid>
+      <guid>https://tiensu.github.io/blog/38_package_ai_model_using_docker_online_inference/</guid>
       <description>Đã bao giờ bạn gặp tình huống:
 Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của bạn lại không chạy?</description>
     </item>
     
     <item>
       <title>Triển khai AI model sử dụng uWSGI và Nginx</title>
-      <link>https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi/</link>
+      <link>https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi_online_inference/</link>
       <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi/</guid>
+      <guid>https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi_online_inference/</guid>
       <description>Như đã giới thiệu trong bài trước, mặc dù Flask rất dễ để sử dụng nhưng nó không có đầy đủ chức năng để có thể áp dụng vào các sản phẩm trong thực tế.</description>
     </item>
     
@@ -77,10 +86,10 @@ Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của
     
     <item>
       <title>Triển khai AI model sử dụng Flask</title>
-      <link>https://tiensu.github.io/blog/36_deploy_ai_model_with_flask/</link>
+      <link>https://tiensu.github.io/blog/36_deploy_ai_model_with_flask_online_inference/</link>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/blog/36_deploy_ai_model_with_flask/</guid>
+      <guid>https://tiensu.github.io/blog/36_deploy_ai_model_with_flask_online_inference/</guid>
       <description>Bạn đã xây dựng thành công một DL model với độ chính xác rất cao, 99%. Xin chúc mừng bạn!</description>
     </item>
     
