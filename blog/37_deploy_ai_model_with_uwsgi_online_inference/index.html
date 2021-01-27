@@ -254,9 +254,9 @@ model <span style="color:#f92672">=</span> load_model(<span style="color:#e6db74
     app<span style="color:#f92672">.</span>run()
 </code></pre></div><p><strong>4. Cài đặt và cấu hình uWSGI</strong></p>
 <p>Để cài đặt uWSGI, sử dụng lệnh sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install uwsgi
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> pip install uwsgi
 </code></pre></div><p>Kiểm tra cài đặt bằng cách chạy câu lệnh sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">uwsgi <span style="color:#f92672">--</span>http <span style="color:#ae81ff">0.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0.0</span>:<span style="color:#ae81ff">8080</span>  <span style="color:#f92672">--</span>wsgi<span style="color:#f92672">-</span>file server<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>callable app
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> uwsgi <span style="color:#f92672">--</span>http <span style="color:#ae81ff">0.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0.0</span>:<span style="color:#ae81ff">8080</span>  <span style="color:#f92672">--</span>wsgi<span style="color:#f92672">-</span>file server<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>callable app
 </code></pre></div><p>Nếu output như sau thì tức là viêc cài đặt thành công:</p>
 
 
@@ -282,7 +282,7 @@ virtualenv <span style="color:#f92672">=</span> <span style="color:#f92672">/</s
 master <span style="color:#f92672">=</span> false 
 vacuum <span style="color:#f92672">=</span> truemodule <span style="color:#75715e"># định kỳ xóa những file ko cần thiết được sinh ra</span>
 </code></pre></div><p>Để chạy uWSGI, dùng lệnh:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">uwsgi app<span style="color:#f92672">.</span>ini
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> uwsgi app<span style="color:#f92672">.</span>ini
 </code></pre></div><p>Nếu thành công, output trên terminal sẽ như sau:</p>
 
 
@@ -293,7 +293,7 @@ vacuum <span style="color:#f92672">=</span> truemodule <span style="color:#75715
 
 <p><strong>5. Cài đặt và cấu hình Nginx</strong></p>
 <p>Để cài đặt Nginx, sử dụng lệnh sau:</p>
-<pre><code>sudo apt-get install nginx
+<pre><code>$ sudo apt-get install nginx
 </code></pre><p>Tiếp theo, tạo một file cấu hình đặt trong thư mục <code>/etc/nginx/sites-available</code>, tên là <code>service.conf</code>, với nội dụng như sau:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">server {
         listen <span style="color:#ae81ff">80</span>;
@@ -306,14 +306,14 @@ vacuum <span style="color:#f92672">=</span> truemodule <span style="color:#75715
 }
 </code></pre></div><p>Theo cấu hình này, Nginx sẽ lắng nghe trên cổng 80 (<em>mặc định</em>) cho tất cả các yêu cầu đến server đặt tại địa chỉ 0.0.0.0. Các yêu cầu sau đó được chuyển đến uWSGI server thông qua socket service.sock (<em>sử dụng giao thức uwsgi</em>).</p>
 <p>Tiếp theo, để áp dụng các cấu hình trên cho Nginx, ta cần trỏ liên kết của chúng tới thư mục <code>sites-enabled</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sudo ln <span style="color:#f92672">-</span>s <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>nginx<span style="color:#f92672">/</span>sites<span style="color:#f92672">-</span>available<span style="color:#f92672">/</span>service<span style="color:#f92672">.</span>config <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>nginx<span style="color:#f92672">/</span>sites<span style="color:#f92672">-</span>enabled
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> sudo ln <span style="color:#f92672">-</span>s <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>nginx<span style="color:#f92672">/</span>sites<span style="color:#f92672">-</span>available<span style="color:#f92672">/</span>service<span style="color:#f92672">.</span>config <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>nginx<span style="color:#f92672">/</span>sites<span style="color:#f92672">-</span>enabled
 </code></pre></div><p>Kiểm tra lại xem các cấu hình đã đúng hay chưa?:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sudo nginx <span style="color:#f92672">-</span>t 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> sudo nginx <span style="color:#f92672">-</span>t 
 </code></pre></div><p>Nếu mọi thứ OK, sẽ có output như sau:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">nginx: the configuration file <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>nginx<span style="color:#f92672">/</span>nginx<span style="color:#f92672">.</span>conf syntax <span style="color:#f92672">is</span> ok
 nginx: configuration file <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>nginx<span style="color:#f92672">/</span>nginx<span style="color:#f92672">.</span>conf test <span style="color:#f92672">is</span> successful
 </code></pre></div><p>Cuối cùng, restart lại Nginx server:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sudo systemctl status nginx
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> sudo systemctl status nginx
 </code></pre></div>
 
 <div style="text-align:center">
@@ -337,7 +337,7 @@ ENDPOINT_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#
 <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span><span style="color:#e6db74">&#34;__main__&#34;</span>: 
     infer() 
 </code></pre></div><p>Để kiểm tra hoạt động của client và server, đầu tiên khởi chạy uWSGI (<em>như phần 4.</em>), sau đó chạy client:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python client<span style="color:#f92672">.</span>py
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python client<span style="color:#f92672">.</span>py
 </code></pre></div><p>Nếu nhận được kết quả trả vê từ server tức là hệ thống đã hoạt động chính xác:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">b<span style="color:#e6db74">`dog`</span>
 </code></pre></div><p><strong>7. Kết luận</strong></p>

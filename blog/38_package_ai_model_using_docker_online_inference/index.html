@@ -194,7 +194,7 @@
 <p><strong>2. Cài đặt Docker</strong></p>
 <p>Để sử dụng docker thì trước tiên cần phải cài đặt <code>docker engine</code>. Các cài đặt khá đơn giản, hãy làm theo hướng dẫn trên <a href="https://docs.docker.com/engine/install/ubuntu/">trang chủ của docker</a>.</p>
 <p>Sau khi cài xong docker, hãy thử chạy lệnh sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker run tensorflow<span style="color:#f92672">/</span>tensorflow:<span style="color:#ae81ff">2.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span>gpu
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker run tensorflow<span style="color:#f92672">/</span>tensorflow:<span style="color:#ae81ff">2.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span>gpu
 </code></pre></div><p>Nếu thấy output như sau tức là ta đã cài đặt thành công:
 
 
@@ -205,9 +205,11 @@
 </p>
 <p>Ở đây, tensorflow/tensorflow:2.3.0-gpu là docker image trên docker hub, được cài đặt sẵn tensorflow 2.3.0 và cuda.</p>
 <p>Kiểm tra image vừa tải về trong danh sách:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker images
-</code></pre></div><p>Kết quả:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">REPOSITORY              TAG         IMAGE ID       CREATED       SIZE
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span>
+
+Kết quả:
+<span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span>python
+REPOSITORY              TAG         IMAGE ID       CREATED       SIZE
 tensorflow<span style="color:#f92672">/</span>tensorflow   <span style="color:#ae81ff">2.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span>gpu   <span style="color:#ae81ff">3</span>b8d4cbd6723   <span style="color:#ae81ff">3</span> weeks ago   <span style="color:#ae81ff">3.18</span>GB
 </code></pre></div><p>Nếu bạn muốn sử dụng GPU (<em>giả sử là NVIDIA</em>) trong docker thì bạn cần thêm 2 điều kiện:</p>
 <ul>
@@ -215,7 +217,7 @@ tensorflow<span style="color:#f92672">/</span>tensorflow   <span style="color:#a
 <li>Cài thêm <code>NVIDIA Container Tookit</code> theo hướng dẫn ở <a href="https://github.com/NVIDIA/nvidia-docker">đây</a></li>
 </ul>
 <p>Như trên máy tính của mình đã có đủ 2 điều kiện trên, mình kiểm tra GPU bên trong docker như sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker run <span style="color:#f92672">--</span>gpus all <span style="color:#f92672">--</span>rm tensorflow<span style="color:#f92672">/</span>tensorflow:<span style="color:#ae81ff">2.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span>gpu nvidia<span style="color:#f92672">-</span>smi
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker run <span style="color:#f92672">--</span>gpus all <span style="color:#f92672">--</span>rm tensorflow<span style="color:#f92672">/</span>tensorflow:<span style="color:#ae81ff">2.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span>gpu nvidia<span style="color:#f92672">-</span>smi
 </code></pre></div><p>Kết quả:
 
 
@@ -225,7 +227,7 @@ tensorflow<span style="color:#f92672">/</span>tensorflow   <span style="color:#a
 
 </p>
 <p>Hoặc chi tiết hơn:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker run <span style="color:#f92672">--</span>gpus all <span style="color:#f92672">--</span>rm tensorflow<span style="color:#f92672">/</span>tensorflow:<span style="color:#ae81ff">2.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span>gpu python <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#34;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker run <span style="color:#f92672">--</span>gpus all <span style="color:#f92672">--</span>rm tensorflow<span style="color:#f92672">/</span>tensorflow:<span style="color:#ae81ff">2.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span>gpu python <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#34;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&#34;</span>
 </code></pre></div><p>Kết quả:
 
 
@@ -256,7 +258,7 @@ tensorflow<span style="color:#f92672">/</span>tensorflow   <span style="color:#a
 </code></pre></div><ul>
 <li>Khởi động lại docker:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sudo pkill <span style="color:#f92672">-</span>SIGHUP dockerd
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> sudo pkill <span style="color:#f92672">-</span>SIGHUP dockerd
 </code></pre></div><p>Mình đã tổng hợp lại các lệnh hay sử dụng của docker ở phần phụ lục. Các bạn có thể tham khảo thêm.</p>
 <p><strong>3. Xây dựng uWSGI docker image</strong></p>
 <p>Bên cạnh những images được xây dựng sẵn và chia sẻ trên docker hub, docker cũng hỗ trợ bạn tự build các images cho riêng bạn, phù hợp với từng nhu cầu của bạn. Tất cả được thực hiện thông qua 1 file cấu hình, gọi là <code>Dockerfile</code>.</p>
@@ -310,7 +312,7 @@ CMD [<span style="color:#e6db74">&#34;uwsgi&#34;</span>, <span style="color:#e6d
 </code></pre></div><p>Trong đó, 2 files ảnh là để chúng ta thực hiện việc test về sau.</p>
 <p><strong>4 Build docker image</strong></p>
 <p>OK, mọi thứ cần thiết đã chuẩn bị xong, ta sẽ chạy lệnh sau để buidl docker image:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker build <span style="color:#f92672">-</span>t image<span style="color:#f92672">-</span>classification<span style="color:#f92672">-</span>production:<span style="color:#ae81ff">1.0</span> <span style="color:#f92672">.</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker build <span style="color:#f92672">-</span>t image<span style="color:#f92672">-</span>classification<span style="color:#f92672">-</span>production:<span style="color:#ae81ff">1.0</span> <span style="color:#f92672">.</span>
 </code></pre></div><p>Docker image được sinh ra sẽ có tên là <code>image-classification-production</code>, kèm theo tag <code>1.0</code> để phân biệt nó với các phiên bản khác trong tương lai.</p>
 <p>Nếu build, thành công, output sẽ như sau:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#f92672">---&gt;</span> a2a60f32471b
@@ -328,7 +330,7 @@ image<span style="color:#f92672">-</span>classification<span style="color:#f9267
 tensorflow<span style="color:#f92672">/</span>tensorflow             <span style="color:#ae81ff">2.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span>gpu   <span style="color:#ae81ff">3</span>b8d4cbd6723   <span style="color:#ae81ff">3</span> weeks ago          <span style="color:#ae81ff">3.18</span>GB
 </code></pre></div><p><strong>5 Chạy docker image</strong></p>
 <p>Để chạy docker image vừa tạo, ta sử dụng lệnh sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker run <span style="color:#f92672">--</span>rm <span style="color:#f92672">--</span>publish <span style="color:#ae81ff">80</span>:<span style="color:#ae81ff">8080</span>  <span style="color:#f92672">--</span>name dlp  image<span style="color:#f92672">-</span>classification<span style="color:#f92672">-</span>production:<span style="color:#ae81ff">1.0</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker run <span style="color:#f92672">--</span>rm <span style="color:#f92672">--</span>publish <span style="color:#ae81ff">80</span>:<span style="color:#ae81ff">8080</span>  <span style="color:#f92672">--</span>name dlp  image<span style="color:#f92672">-</span>classification<span style="color:#f92672">-</span>production:<span style="color:#ae81ff">1.0</span>
 </code></pre></div><p>Có 2 cái mà ta phải chú ý ở đây:</p>
 <ul>
 <li>Tham số <code>--public 80:8080</code> sẽ &ldquo;expose&rdquo; port 8080 của container tới port 80 của host. Nói cách khác, tất cả các requests đến địa chỉ localhost:80 sẽ được chuyển tiếp đến địa chỉ 0.0.0.0:8080 bên trong container. 8080 được gọi là <code>listening port</code> của uWSGI.</li>
@@ -351,7 +353,7 @@ spawned uWSGI worker <span style="color:#ae81ff">1</span> (<span style="color:#f
 </code></pre></div><p>Ta quan sá thấy container đã chạy thành công và uWSGI cũng đã được khởi động.</p>
 <p><em>Lưu ý: Trong trường hợp port 80 đã được sử dụng bới ứng dụng khác (nginx trong bài trước chẳng hạn), bạn phải close ứng dụng đó hoặc sử dụng một port khác.</em></p>
 <p>Để kiểm tra xem uWSGI có làm viêc đúng hay không, ta có thể sử dụng lại client đã chuẩn bị từ bài trước (<em>nhớ đổi port của ENDPOINT_URL từ 8080 thành 80</em>).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python client<span style="color:#f92672">.</span>py
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python client<span style="color:#f92672">.</span>py
 </code></pre></div><p>Kết quả:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;cat&#39;</span>
 </code></pre></div><p>Như vậy là uWSGI đã được cài đặt thành công vào docker.</p>
@@ -442,7 +444,7 @@ services:
 </ul>
 <p><em><strong>7.3 Build docker-compose</strong></em></p>
 <p>Chạy lệnh sau để build docker-compose với cả 2 containers.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker<span style="color:#f92672">-</span>compose build
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker<span style="color:#f92672">-</span>compose build
 </code></pre></div><p>Nếu build thành công, output sẽ như sau:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Step <span style="color:#ae81ff">7</span><span style="color:#f92672">/</span><span style="color:#ae81ff">7</span> : CMD [<span style="color:#e6db74">&#34;uwsgi&#34;</span>, <span style="color:#e6db74">&#34;app.ini&#34;</span>]
  <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> <span style="color:#ae81ff">9608e1187</span>e82
@@ -481,7 +483,7 @@ tensorflow<span style="color:#f92672">/</span>tensorflow             <span style
 </code></pre></div><p>Ta thấy hai containers <code>docker_nginx</code> và <code>docker_uwsgi</code> đã xuất hiện.</p>
 <p><em><strong>7.4 Kiểm tra hoạt động của hệ thống</strong></em></p>
 <p>Ta sẽ khởi động các containers lên để kiểm tra thử xem hê thống có làm việc chính xác không.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker<span style="color:#f92672">-</span>compose up
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker<span style="color:#f92672">-</span>compose up
 </code></pre></div><p>Khởi động thành công:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Starting nginx                    <span style="color:#f92672">...</span> done
 Starting uwsgi_img_classification <span style="color:#f92672">...</span> done
@@ -511,66 +513,66 @@ uwsgi_img_classification <span style="color:#f92672">|</span> spawned uWSGI work
 <p>Trong các bài viết tiếp theo, mình sẽ sử dụng docker để train một model khác và thực hiện <code>batch inference</code> bằng model đó. Mời các bạn đón đọc!</p>
 <p><strong>9. Phụ lục một số lệnh cơ bản của Docker</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1.</span> List docker image
-docker images
+<span style="color:#960050;background-color:#1e0010">$</span> docker images
 
 <span style="color:#ae81ff">2.</span> List container
-docker ps <span style="color:#f92672">&lt;-</span>a<span style="color:#f92672">&gt;</span>
+<span style="color:#960050;background-color:#1e0010">$</span> docker ps <span style="color:#f92672">&lt;-</span>a<span style="color:#f92672">&gt;</span>
 
 <span style="color:#ae81ff">3.</span> Run a docker
-docker run <span style="color:#f92672">-</span>it [image_name] bash
+<span style="color:#960050;background-color:#1e0010">$</span> docker run <span style="color:#f92672">-</span>it [image_name] bash
 
 <span style="color:#ae81ff">4.</span> Access to running container
-docker <span style="color:#66d9ef">exec</span> <span style="color:#f92672">-</span>it [container_id <span style="color:#f92672">or</span> container_name] bash
+<span style="color:#960050;background-color:#1e0010">$</span> docker <span style="color:#66d9ef">exec</span> <span style="color:#f92672">-</span>it [container_id <span style="color:#f92672">or</span> container_name] bash
 
 <span style="color:#ae81ff">5.</span> Commit change of container to docker image
-docker commit [container_name <span style="color:#f92672">or</span> container_id] [new_image_name]
+<span style="color:#960050;background-color:#1e0010">$</span> docker commit [container_name <span style="color:#f92672">or</span> container_id] [new_image_name]
 
 <span style="color:#ae81ff">6.</span> Stop running container
-docker stop [container_id <span style="color:#f92672">or</span> container_name]
-docker stop <span style="color:#960050;background-color:#1e0010">$</span>(docker ps <span style="color:#f92672">-</span>aq) <span style="color:#75715e"># Stop all container</span>
+<span style="color:#960050;background-color:#1e0010">$</span> docker stop [container_id <span style="color:#f92672">or</span> container_name]
+<span style="color:#960050;background-color:#1e0010">$</span> docker stop <span style="color:#960050;background-color:#1e0010">$</span>(docker ps <span style="color:#f92672">-</span>aq) <span style="color:#75715e"># Stop all container</span>
 
 <span style="color:#ae81ff">7.</span> Start stoped container
-docker start [container_id <span style="color:#f92672">or</span> container_name]
+<span style="color:#960050;background-color:#1e0010">$</span> docker start [container_id <span style="color:#f92672">or</span> container_name]
 
 <span style="color:#ae81ff">8.</span> Remove container
-docker rm [container_id <span style="color:#f92672">or</span> container_name]
-docker rm <span style="color:#960050;background-color:#1e0010">$</span>(docker ps <span style="color:#f92672">-</span>aq) <span style="color:#75715e"># Remove all</span>
+<span style="color:#960050;background-color:#1e0010">$</span> docker rm [container_id <span style="color:#f92672">or</span> container_name]
+<span style="color:#960050;background-color:#1e0010">$</span> docker rm <span style="color:#960050;background-color:#1e0010">$</span>(docker ps <span style="color:#f92672">-</span>aq) <span style="color:#75715e"># Remove all</span>
 
 <span style="color:#ae81ff">9.</span> Export container
-docker export [container_id <span style="color:#f92672">or</span> container_name] <span style="color:#f92672">|</span> gzip <span style="color:#f92672">&gt;</span> file_export<span style="color:#f92672">.</span>tar<span style="color:#f92672">.</span>gz
+<span style="color:#960050;background-color:#1e0010">$</span> docker export [container_id <span style="color:#f92672">or</span> container_name] <span style="color:#f92672">|</span> gzip <span style="color:#f92672">&gt;</span> file_export<span style="color:#f92672">.</span>tar<span style="color:#f92672">.</span>gz
 
 <span style="color:#ae81ff">10.</span> Import docker <span style="color:#f92672">=&gt;</span> images
-zcat  file_export<span style="color:#f92672">.</span>tar<span style="color:#f92672">.</span>gz <span style="color:#f92672">|</span> docker [new_name_image]
-docker images <span style="color:#75715e"># check</span>
+<span style="color:#960050;background-color:#1e0010">$</span> zcat  file_export<span style="color:#f92672">.</span>tar<span style="color:#f92672">.</span>gz <span style="color:#f92672">|</span> docker [new_name_image]
+<span style="color:#960050;background-color:#1e0010">$</span> docker images <span style="color:#75715e"># check</span>
 
 <span style="color:#ae81ff">11.</span> Remove docker image
-docker rmi [image_name]
+<span style="color:#960050;background-color:#1e0010">$</span> docker rmi [image_name]
 
 
 Loi: docker: Error response <span style="color:#f92672">from</span> daemon: Unknown runtime specified nvidia<span style="color:#f92672">.</span>
 Solution:
 <span style="color:#ae81ff">1.</span> 
-sudo systemctl daemon<span style="color:#f92672">-</span>reload
-sudo systemctl restart docker
+<span style="color:#960050;background-color:#1e0010">$</span> sudo systemctl daemon<span style="color:#f92672">-</span>reload
+<span style="color:#960050;background-color:#1e0010">$</span> sudo systemctl restart docker
 
 <span style="color:#ae81ff">2.</span>
-sudo mkdir <span style="color:#f92672">-</span>p <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>systemd<span style="color:#f92672">/</span>system<span style="color:#f92672">/</span>docker<span style="color:#f92672">.</span>service<span style="color:#f92672">.</span>d
-sudo tee <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>systemd<span style="color:#f92672">/</span>system<span style="color:#f92672">/</span>docker<span style="color:#f92672">.</span>service<span style="color:#f92672">.</span>d<span style="color:#f92672">/</span>override<span style="color:#f92672">.</span>conf <span style="color:#f92672">&lt;&lt;</span>EOF
+<span style="color:#960050;background-color:#1e0010">$</span> sudo mkdir <span style="color:#f92672">-</span>p <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>systemd<span style="color:#f92672">/</span>system<span style="color:#f92672">/</span>docker<span style="color:#f92672">.</span>service<span style="color:#f92672">.</span>d
+<span style="color:#960050;background-color:#1e0010">$</span> sudo tee <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>systemd<span style="color:#f92672">/</span>system<span style="color:#f92672">/</span>docker<span style="color:#f92672">.</span>service<span style="color:#f92672">.</span>d<span style="color:#f92672">/</span>override<span style="color:#f92672">.</span>conf <span style="color:#f92672">&lt;&lt;</span>EOF
 [Service]
 ExecStart<span style="color:#f92672">=</span>
 ExecStart<span style="color:#f92672">=/</span>usr<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>dockerd <span style="color:#f92672">--</span>host<span style="color:#f92672">=</span>fd:<span style="color:#f92672">//</span> <span style="color:#f92672">--</span>add<span style="color:#f92672">-</span>runtime<span style="color:#f92672">=</span>nvidia<span style="color:#f92672">=/</span>usr<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>nvidia<span style="color:#f92672">-</span>container<span style="color:#f92672">-</span>runtime
 EOF
-sudo systemctl daemon<span style="color:#f92672">-</span>reload
-sudo systemctl restart docker
+<span style="color:#960050;background-color:#1e0010">$</span> sudo systemctl daemon<span style="color:#f92672">-</span>reload
+<span style="color:#960050;background-color:#1e0010">$</span> sudo systemctl restart docker
 
 
 <span style="color:#f92672">**</span> Move docker image to other computer
 <span style="color:#ae81ff">1.</span> Save images
-docker save <span style="color:#f92672">&lt;</span>REPOSITORY<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>images_name<span style="color:#f92672">&gt;.</span>tar
+<span style="color:#960050;background-color:#1e0010">$</span> docker save <span style="color:#f92672">&lt;</span>REPOSITORY<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>images_name<span style="color:#f92672">&gt;.</span>tar
 <span style="color:#ae81ff">2.</span> Load images
-docker load <span style="color:#f92672">&lt;</span> <span style="color:#f92672">&lt;</span>images_name<span style="color:#f92672">&gt;.</span>tar 
+<span style="color:#960050;background-color:#1e0010">$</span> docker load <span style="color:#f92672">&lt;</span> <span style="color:#f92672">&lt;</span>images_name<span style="color:#f92672">&gt;.</span>tar 
 <span style="color:#ae81ff">3.</span> Run images
-docker run <span style="color:#f92672">-</span>it  <span style="color:#f92672">--</span>runtime<span style="color:#f92672">=</span>nvidia <span style="color:#f92672">--</span>rm  <span style="color:#f92672">--</span>net<span style="color:#f92672">=</span>host <span style="color:#f92672">--</span>privileged <span style="color:#f92672">&lt;</span>Image ID<span style="color:#f92672">&gt;</span>
+<span style="color:#960050;background-color:#1e0010">$</span> docker run <span style="color:#f92672">-</span>it  <span style="color:#f92672">--</span>runtime<span style="color:#f92672">=</span>nvidia <span style="color:#f92672">--</span>rm  <span style="color:#f92672">--</span>net<span style="color:#f92672">=</span>host <span style="color:#f92672">--</span>privileged <span style="color:#f92672">&lt;</span>Image ID<span style="color:#f92672">&gt;</span>
 </code></pre></div><p><strong>10. Tham khảo</strong></p>
 <ul>
 <li><a href="https://www.docker.com/">Docker</a></li>

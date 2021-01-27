@@ -304,7 +304,7 @@ ENV METADATA_FILE<span style="color:#f92672">=</span>metadata<span style="color:
 
 RUN python3 train<span style="color:#f92672">.</span>py
 </code></pre></div><p>Để build docker image, chạy lệnh sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker build <span style="color:#f92672">-</span>t docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer <span style="color:#f92672">.</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker build <span style="color:#f92672">-</span>t docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer <span style="color:#f92672">.</span>
 </code></pre></div><p>Output:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Sending build context to Docker daemon  <span style="color:#ae81ff">4.608</span>kB
 Step <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : FROM jupyter<span style="color:#f92672">/</span>scipy<span style="color:#f92672">-</span>notebook
@@ -351,14 +351,14 @@ Removing intermediate container <span style="color:#ae81ff">10</span>bec25fc25e
 Successfully built <span style="color:#ae81ff">05</span>d1c3a12437
 Successfully tagged docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer:latest
 </code></pre></div><p>Kiểm tra nội dung file metadata:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker run docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer cat <span style="color:#f92672">/</span>code<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>metadata<span style="color:#f92672">.</span>json
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker run docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer cat <span style="color:#f92672">/</span>code<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>metadata<span style="color:#f92672">.</span>json
 </code></pre></div><p>Kết quả:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">{<span style="color:#e6db74">&#34;train_mean_square_error&#34;</span>: <span style="color:#ae81ff">1.7677391462344387</span>, <span style="color:#e6db74">&#34;test_mean_square_error&#34;</span>: <span style="color:#ae81ff">6.588673999729974</span>}
 </code></pre></div><p><em>Chú ý: Model ở đây chưa được tuning để tối ưu hóa hiệu năng, các thông tin metadata khác như thuật toán, phân phối dữ liệu, phiên bản model, &hellip; cũng không được lưu lại. Nếu bạn sử dụng hướng dẫn này trong thực tế thì cần lưu ý những điểm trên.</em></p>
 <p><strong>4. Thực hiện Batch Inference</strong></p>
 <p>Chúng ta đã có một model đã train, được lưu thành file <code>clf.joblib</code> trong docker image <code>docker-model-batch-infer</code>. Giờ là lúc sử dụng nó để thực hiện inference.</p>
 <p>Để thực hiện <code>batch inference</code>, ta sẽ khởi động docker image và chạy lệnh thực thi code kèm theo đó:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">docker run docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer python3 inference<span style="color:#f92672">.</span>py
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker run docker<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer python3 inference<span style="color:#f92672">.</span>py
 </code></pre></div><p>Kết quả:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Running inference<span style="color:#f92672">...</span>
 Loading data<span style="color:#f92672">...</span>
@@ -377,13 +377,10 @@ Scoring observations<span style="color:#f92672">...</span>
 <p>Như vậy là chúng ta đã thực hiên xong việc train một ML model và sử dụng nó để inference dữ liệu bằng docker. Tuy nhiên, để mang nó vào sử dụng trong môi trường production thì chúng ta cần thực hiện thêm một số công việc nữa như là lập lịch đê thực hiện <code>batch inference</code> định kỳ, tuning hyper-parameter, lưu trữ metadata của model, &hellip;</p>
 <p>Toàn bộ source code sử dụng trong bài này, các bạn có thể tham khảo trên github cá nhân của mình tại <a href="https://github.com/tiensu/Model_Deployment/tree/master/docker_batch_inference">đây</a>.</p>
 <p>Trong các bài viết tiếp theo, mình sẽ tổng hợp lại các thuật toán Deep Learning, sau đó sẽ đi chi tiết vào một số thụât toán với các ứng dụng cụ thể. Mời các bạn đón đọc!</p>
-<p><strong>7. Tham khảo</strong></p>
+<p><strong>6. Tham khảo</strong></p>
 <ul>
 <li><a href="https://www.docker.com/">Docker</a></li>
-<li><a href="https://www.nginx.com/">Nginx</a></li>
-<li><a href="https://uwsgi-docs.readthedocs.io/en/latest/">uWSGI</a></li>
-<li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a></li>
-<li><a href="https://theaisummer.com/docker/">AI Summer</a></li>
+<li><a href="https://mlinproduction.com/docker-for-ml-part-3/">Mlinproduction</a></li>
 </ul>
 
         </div>
