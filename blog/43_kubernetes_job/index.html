@@ -178,7 +178,7 @@
 <li>Job thứ hai sử dụng model đã trained để thực hiện Batch Inference.</li>
 </ul>
 <p><em><strong>2.1 Code train &amp; inference model</strong></em></p>
-<p>Tạo thư mục <code>docker</code> và copy 2 file <code>train.py</code> và <code>inference.py</code> đã sử dụng trong các bài trước vào thư mục vừa tạo.
+<p>Tạo thư mục <code>docker</code> và copy 2 file <code>train.py</code> và <code>batch_inference.py</code> đã sử dụng trong các bài trước vào thư mục vừa tạo.
 Sử a lại nội dung của file <code>train.py</code> như sau:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> json
 <span style="color:#f92672">import</span> os
@@ -238,7 +238,7 @@ dump(clf, MODEL_PATH)
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Moving to S3&#34;</span>)
 s3 <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;s3&#39;</span>)
 s3<span style="color:#f92672">.</span>upload_file(MODEL_PATH, BUCKET_NAME, MODEL_FILE)
-</code></pre></div><p>Sửa lại code của file <code>inference.py</code> như sau:</p>
+</code></pre></div><p>Sửa lại code của file <code>batch_inference.py</code> như sau:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
 
 <span style="color:#f92672">import</span> boto3
@@ -494,7 +494,7 @@ spec:
       <span style="color:#f92672">-</span> name: inference<span style="color:#f92672">-</span>container
         imagePullPolicy: Always
         image: tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml:latest
-        command: [<span style="color:#e6db74">&#34;python3&#34;</span>,  <span style="color:#e6db74">&#34;inference.py&#34;</span>]
+        command: [<span style="color:#e6db74">&#34;python3&#34;</span>,  <span style="color:#e6db74">&#34;batch_inference.py&#34;</span>]
         env:
         <span style="color:#f92672">-</span> name: AWS_ACCESS_KEY_ID
           value: <span style="color:#e6db74">&#34;AKIATO25FNP4RFEFXS7Q&#34;</span>
@@ -539,8 +539,8 @@ job<span style="color:#f92672">.</span>batch <span style="color:#e6db74">&#34;jo
 <p>Source code của bài này các bạn tham khảo tại <a href="https://github.com/tiensu/Model_Deployment/tree/master/kubernetes-job">đây</a>.</p>
 <p><strong>8. Tham khảo</strong></p>
 <ul>
-<li><a href="https://mlinproduction.com/k8s-pods/">Mlinproduction</a></li>
-<li><a href="https://mlinproduction.com/k8s-pods/">Docker Hub</a></li>
+<li><a href="https://mlinproduction.com/k8s-jods/">Mlinproduction</a></li>
+<li><a href="https://mlinproduction.com/k8s-jods/">Docker Hub</a></li>
 </ul>
 
         </div>

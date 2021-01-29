@@ -156,6 +156,30 @@
           <div class="row no-gutters align-items-center">
             <div class="col-md-5">
               
+              <img src="https://tiensu.github.io/images/featured-post/kubernetes_job.png" class="card-img" alt="Sử dụng Kubernetes Crojob trong các bài toán AI">
+              
+            </div>
+            <div class="col-md-6 offset-md-1">
+              <div class="card-body">
+                <div class="mb-3 post-meta">
+                  <span>By SuNT</span>
+                  
+                  <span class="border-bottom border-primary px-2 mx-1"></span>
+                  <span>22 January 2021</span>
+                  
+                </div>
+                <a href="https://tiensu.github.io/blog/44_kubernetes_cronjob/"
+                  class="h1 font-weight-bold d-block text-dark mb-4 card-title">Sử dụng Kubernetes Crojob trong các bài toán AI</a>
+                <p class="card-text">$ kubectl create -f cronjob-inference.yaml cronjob.batch/inference-cronjob created kubectl get cronjobs NAME SCHEDULE SUSPEND ACTIVE LAST SCHEDULE AGE inference-cronjob * * * * * False 0 &lt;none&gt; 19s inference-cronjob-1611919440 1/1 15s 82s inference-cronjob-1611919500 1/1 14s 21s inference-cronjob-1611919560 0/1 0s inference-cronjob-1611919560 0/1 0s 0s inference-cronjob-1611919560 1/1 15s 15s inference-cronjob-1611919380 1/1 16s 3m21s inference-cronjob-1611919620 0/1 0s inference-cronjob-1611919620 0/1 0s 0s kubectl get pods --selector=job-name=inference-cronjob-1611919380 NAME READY STATUS RESTARTS AGE inference-cronjob-1611919380-cqdtd 0/1 Completed 0 78s $ kubectl logs inference-cronjob-1611919380-cqdtd Running inference....</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <article class="card featured-post">
+          <div class="row no-gutters align-items-center">
+            <div class="col-md-5">
+              
               <img src="https://tiensu.github.io/images/featured-post/kubernetes_job.png" class="card-img" alt="Sử dụng Kubernetes Job trong các bài toán AI">
               
             </div>

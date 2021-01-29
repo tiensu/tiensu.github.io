@@ -295,7 +295,7 @@ spec:
   containers:
   <span style="color:#f92672">-</span> name: container<span style="color:#f92672">-</span>ml<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer
     image: tiensu<span style="color:#f92672">/</span>ml<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>batch<span style="color:#f92672">-</span>infer:latest
-    command:  [<span style="color:#e6db74">&#39;python3&#39;</span>, <span style="color:#e6db74">&#39;inference.py&#39;</span>]
+    command:  [<span style="color:#e6db74">&#39;python3&#39;</span>, <span style="color:#e6db74">&#39;batch_inference.py&#39;</span>]
   restartPolicy: Never
 </code></pre></div><p>Chạy lệnh sau để tạo Pod:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl create <span style="color:#f92672">-</span>f pod_custom<span style="color:#f92672">.</span>yaml
@@ -330,7 +330,7 @@ Containers:
     Host Port:     <span style="color:#f92672">&lt;</span>none<span style="color:#f92672">&gt;</span>
     Command:
       python3
-      inference<span style="color:#f92672">.</span>py
+      batch_inference<span style="color:#f92672">.</span>py
     State:          Terminated
       Reason:       Completed
       Exit Code:    <span style="color:#ae81ff">0</span>
