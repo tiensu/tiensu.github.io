@@ -6,10 +6,19 @@
     <description>Recent content on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tiensu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sử dụng Kubernetes Job trong các bài toán AI</title>
+      <link>https://tiensu.github.io/blog/43_kubernetes_job/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/43_kubernetes_job/</guid>
+      <description>Trong bài trước, chúng ta đã tìm hiểu về Pod, cách tương tác với Pod và hạn chế của nó. Bài này, chúng ta sẽ làm việc với một thành phần ở mức high level hơn của Kubernetes, đó là Job.</description>
+    </item>
     
     <item>
       <title>Tìm hiểu về Kubernetes và cách áp dụng vào các bài toán AI - Kubernetes Pod</title>
