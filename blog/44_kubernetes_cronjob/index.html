@@ -153,7 +153,7 @@
         <a href="/categories/model-deployment"
           class="text-primary">Model deployment</a>
         
-        <h2>Sử dụng Kubernetes Crojob trong các bài toán AI</h2>
+        <h2>Sử dụng Kubernetes CronJob trong các bài toán AI</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
@@ -162,15 +162,54 @@
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/kubernetes_job.png" class="img-fluid w-100 mb-4" alt="Sử dụng Kubernetes Crojob trong các bài toán AI">
+        <img src="https://tiensu.github.io/images/featured-post/kubernetes_cronjob.png" class="img-fluid w-100 mb-4" alt="Sử dụng Kubernetes CronJob trong các bài toán AI">
         
         <div class="content mb-5">
-          <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl create <span style="color:#f92672">-</span>f cronjob<span style="color:#f92672">-</span>inference<span style="color:#f92672">.</span>yaml 
+          <p>Ở bài trước, chúng ta đã tìm hiểu và thực hành với Kubernetes Job và thấy được sự phù hợp và hiệu quả của nó đối với các tác vụ trong bài toán AI. Tuy nhiên, có thể dễ dàng nhận thấy một nhược điểm của Job, đó là Job phải được tạo một cách thủ công. Điều này khá là bất tiện, vì chúng ta sẽ phải mất công giám sát hoạt động của hệ thống để can thiệp vào (<em>tạo Job</em>) khi cần. Liệu có cách nào làm cho Job có thể tự động được tạo ra và thực hiện nhiệm vụ của nó tại những thời điểm nhất định, theo chu kỳ? Kubernetes CronJob chính là câu trả lời. Trong bài này, hãy cùng nhau làm việc với CronJob nhé!</p>
+<p><strong>1. Kubernetes CronJob là gì?</strong></p>
+<p>CronJob là một bộ lập lịch, tương tự như <code>Cron Task</code> trong nhân Linux. Nó giúp chúng ta tạo ra một kế hoạch thực hiện một công việc nào đó (<em>bằng cách tạo ra các Jobs</em>), tại những thời điểm trong tương lai theo một chu kỳ mà ta định nghĩa.</p>
+<p>Đối với bài toán AI, CronJob phù hợp với các tác vụ cần chạy định kỳ, ví dụ như là Batch Inference, Feature Extraction, &hellip;</p>
+<p><strong>2. Làm việc với CronJob</strong></p>
+<p>Chúng ta sẽ sử dụng lại Docker Image ở <a href="https://tiensu.github.io/blog/43_kubernetes_job/">bài trước</a>.</p>
+<p>Mục đích của mình ở đây là tạo ra một CronJob để thực hiện Batch Inference mỗi phút. File model được lưu trên AWS S3.</p>
+<p>Giống như Pod và Job, CronJob cũng được tạo thông qua file cấu hình (<em>cronjob-inference.yaml</em>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">apiVersion: batch<span style="color:#f92672">/</span>v1beta1
+kind: CronJob
+metadata:
+  name: inference<span style="color:#f92672">-</span>cronjob
+spec:
+  schedule: <span style="color:#e6db74">&#34;* * * * *&#34;</span>
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          <span style="color:#f92672">-</span> name: inference<span style="color:#f92672">-</span>container
+            imagePullPolicy: Always
+            image: tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml:latest
+            command: [<span style="color:#e6db74">&#34;python3&#34;</span>,  <span style="color:#e6db74">&#34;inference.py&#34;</span>]
+            env:
+            <span style="color:#f92672">-</span> name: AWS_ACCESS_KEY_ID
+              value: <span style="color:#e6db74">&#34;&#34;</span>
+            <span style="color:#f92672">-</span> name: AWS_SECRET_ACCESS_KEY
+              value: <span style="color:#e6db74">&#34;&#34;</span>
+          restartPolicy: Never
+      backoffLimit: <span style="color:#ae81ff">0</span>
+</code></pre></div><p>Các thông tin cấu hình khá giống với của Pod, Job. Chỉ có 1 thông tin mới cần lưu ý ở đây:</p>
+<ul>
+<li>schedule: Đây là giá trị chỉ ra chu kỳ chạy của Job, tuân theo các quy tắc định trước. Tham khảo các quy tắc tại <a href="https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/">đây</a>. Ngoài ra, nếu bạn cảm thấy bối rối khi sử dụng những quy tắc để tạo schedule, bạn có thể sử dụng công cụ <a href="https://crontab.guru/">này</a> để giúp đỡ bạn. Ở đây, mình đang cấu hình Schedule là 1 phút, tức cứ mỗi phút, CronJob sẽ tạo ra 1 Job để thực hiện lệnh ``python3 inference.py`.</li>
+</ul>
+<p>Để tạo CronJob, chạy lệnh sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl create <span style="color:#f92672">-</span>f cronjob<span style="color:#f92672">-</span>inference<span style="color:#f92672">.</span>yaml 
 cronjob<span style="color:#f92672">.</span>batch<span style="color:#f92672">/</span>inference<span style="color:#f92672">-</span>cronjob created
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">kubectl get cronjobs
+</code></pre></div><p>Xem thông tin của CronJob vừa tạo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">kubectl get cronjobs
 NAME                SCHEDULE    SUSPEND   ACTIVE   LAST SCHEDULE   AGE
 inference<span style="color:#f92672">-</span>cronjob   <span style="color:#f92672">*</span> <span style="color:#f92672">*</span> <span style="color:#f92672">*</span> <span style="color:#f92672">*</span> <span style="color:#f92672">*</span>   False     <span style="color:#ae81ff">0</span>        <span style="color:#f92672">&lt;</span>none<span style="color:#f92672">&gt;</span>          <span style="color:#ae81ff">19</span>s
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919440</span>   <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>           <span style="color:#ae81ff">15</span>s        <span style="color:#ae81ff">82</span>s
+</code></pre></div><p>Bởi vì bản chất của CronJob là tạo ra các Jobs, nên ta hãy xem thử các Jobs được tạo ra sau mỗi phút:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl get jobs <span style="color:#f92672">--</span>watch
+NAME                           COMPLETIONS   DURATION   AGE
+inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919440</span>   <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>           <span style="color:#ae81ff">15</span>s        <span style="color:#ae81ff">82</span>s
 inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919500</span>   <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>           <span style="color:#ae81ff">14</span>s        <span style="color:#ae81ff">21</span>s
 inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919560</span>   <span style="color:#ae81ff">0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>                      <span style="color:#ae81ff">0</span>s
 inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919560</span>   <span style="color:#ae81ff">0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>           <span style="color:#ae81ff">0</span>s         <span style="color:#ae81ff">0</span>s
@@ -178,10 +217,13 @@ inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">
 inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919380</span>   <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>           <span style="color:#ae81ff">16</span>s        <span style="color:#ae81ff">3</span>m21s
 inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919620</span>   <span style="color:#ae81ff">0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>                      <span style="color:#ae81ff">0</span>s
 inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919620</span>   <span style="color:#ae81ff">0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>           <span style="color:#ae81ff">0</span>s         <span style="color:#ae81ff">0</span>s
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">kubectl get pods <span style="color:#f92672">--</span>selector<span style="color:#f92672">=</span>job<span style="color:#f92672">-</span>name<span style="color:#f92672">=</span>inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919380</span>
+</code></pre></div><p>Cờ <code>--watch</code> sẽ cho phép lắng nghe sự kiện có bất kỳ sự thay đổi nào trong việc sử dụng tài nguyên của Job, chẳng hạn như tạo, hủy Job.</p>
+<p>Để xem các Pods tạo ra bởi Job sau mỗi phút, cần kết hợp với Job tại thời điểm đó. Ví dụ xem logs của Job <code>inference-cronjob-1611919380</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">kubectl get pods <span style="color:#f92672">--</span>selector<span style="color:#f92672">=</span>job<span style="color:#f92672">-</span>name<span style="color:#f92672">=</span>inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919380</span>
 NAME                                 READY   STATUS      RESTARTS   AGE
 inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919380</span><span style="color:#f92672">-</span>cqdtd   <span style="color:#ae81ff">0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>     Completed   <span style="color:#ae81ff">0</span>          <span style="color:#ae81ff">78</span>s
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl logs inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919380</span><span style="color:#f92672">-</span>cqdtd
+</code></pre></div><p>Có Pod rồi, ta có thể xem logs tạo ra bởi Pod đó:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl logs inference<span style="color:#f92672">-</span>cronjob<span style="color:#f92672">-</span><span style="color:#ae81ff">1611919380</span><span style="color:#f92672">-</span>cqdtd
 Running inference<span style="color:#f92672">...</span>
 Loading data<span style="color:#f92672">...</span>
 Loading model from: <span style="color:#f92672">/</span>docker<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>clf<span style="color:#f92672">.</span>joblib
@@ -195,16 +237,19 @@ Scoring observations<span style="color:#f92672">...</span>
  <span style="color:#ae81ff">14.18848318</span> <span style="color:#ae81ff">17.3840622</span>  <span style="color:#ae81ff">19.83840166</span> <span style="color:#ae81ff">24.09904134</span> <span style="color:#ae81ff">20.52649052</span> <span style="color:#ae81ff">15.32433651</span>
  <span style="color:#ae81ff">25.8157052</span>  <span style="color:#ae81ff">16.47533793</span> <span style="color:#ae81ff">19.2214524</span>  <span style="color:#ae81ff">19.86928427</span> <span style="color:#ae81ff">21.47113681</span> <span style="color:#ae81ff">21.56443118</span>
  <span style="color:#ae81ff">24.64517965</span> <span style="color:#ae81ff">22.43665872</span> <span style="color:#ae81ff">22.1020877</span> ]
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl delete inference<span style="color:#f92672">-</span>cronjob
+</code></pre></div><p>Như ta thấy, Batch Inference đã được thực hiện thành công thông qua CronJob.</p>
+<p>Cuối cùng, xóa CronJob khi không sử dụng nữa:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl delete inference<span style="color:#f92672">-</span>cronjob
 cronjob<span style="color:#f92672">.</span>batch<span style="color:#f92672">/</span>inference<span style="color:#f92672">-</span>cronjob deleted
 </code></pre></div><p><strong>3. Kết luận</strong></p>
-<p>Như vậy là mình đã cùng các bạn tìm hiểu và sử dụng Kubernetes Job để thực hiện các tác vụ của một bài toán AI. Có một lưu ý dành cho các bạn đó là trong trường hợp việc thực hiện tạo Job thất bại, hãy nhớ sử dụng lệnh <code>kubectl describe pod &lt;pod_name&gt;</code>, trong đó <em>pod_name</em> là tên Pod của Job để xem đầy đủ logs. Dựa vào logs này, các bạn có thể dễ dàng phát hiện ra nguyên nhân lỗi và cách khắc phục chúng.</p>
-<p>bài viết tiếp theo, chúng ta sẽ tìm hiểu và thực hành với CronJob. Mời các bạn đón đọc!</p>
-<p>Source code của bài này các bạn tham khảo tại <a href="https://github.com/tiensu/Model_Deployment/tree/master/kubernetes-job">đây</a>.</p>
+<p>Xong, mình đã cũng nhau tìm hiểu và sử dụng CronJob để thực hiện nhiệm vụ Batch Inference trong bài toán AI. Mình đặt lịch chạy Job mỗi phút mục đích là để nhanh chóng nhìn thấy kết quả cho lần demo này. Tùy theo yêu cầu thực tế bài toán, các bạn có thể set giá trị phù hợp cho mình.</p>
+<p>Bài viết tiếp theo, chúng ta sẽ tìm hiểu và thực hành với Development. Mời các bạn đón đọc!</p>
+<p>Source code của bài này các bạn tham khảo tại <a href="https://github.com/tiensu/Model_Deployment/tree/master/kubernetes-cronjob">đây</a>.</p>
 <p><strong>8. Tham khảo</strong></p>
 <ul>
-<li><a href="https://mlinproduction.com/k8s-pods/">Mlinproduction</a></li>
-<li><a href="https://mlinproduction.com/k8s-pods/">Docker Hub</a></li>
+<li><a href="https://mlinproduction.com/k8s-cronjobs/">Mlinproduction</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/">CronJob</a></li>
+<li><a href="https://crontab.guru/">Crontab</a></li>
 </ul>
 
         </div>

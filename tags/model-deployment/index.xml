@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Sử dụng Kubernetes Crojob trong các bài toán AI</title>
+      <title>Sử dụng Kubernetes CronJob trong các bài toán AI</title>
       <link>https://tiensu.github.io/blog/44_kubernetes_cronjob/</link>
       <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/44_kubernetes_cronjob/</guid>
-      <description>$ kubectl create -f cronjob-inference.yaml cronjob.batch/inference-cronjob created kubectl get cronjobs NAME SCHEDULE SUSPEND ACTIVE LAST SCHEDULE AGE inference-cronjob * * * * * False 0 &amp;lt;none&amp;gt; 19s inference-cronjob-1611919440 1/1 15s 82s inference-cronjob-1611919500 1/1 14s 21s inference-cronjob-1611919560 0/1 0s inference-cronjob-1611919560 0/1 0s 0s inference-cronjob-1611919560 1/1 15s 15s inference-cronjob-1611919380 1/1 16s 3m21s inference-cronjob-1611919620 0/1 0s inference-cronjob-1611919620 0/1 0s 0s kubectl get pods --selector=job-name=inference-cronjob-1611919380 NAME READY STATUS RESTARTS AGE inference-cronjob-1611919380-cqdtd 0/1 Completed 0 78s $ kubectl logs inference-cronjob-1611919380-cqdtd Running inference.</description>
+      <description>Ở bài trước, chúng ta đã tìm hiểu và thực hành với Kubernetes Job và thấy được sự phù hợp và hiệu quả của nó đối với các tác vụ trong bài toán AI.</description>
     </item>
     
     <item>
