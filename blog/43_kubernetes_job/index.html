@@ -438,9 +438,9 @@ spec:
         command: [<span style="color:#e6db74">&#34;python3&#34;</span>,  <span style="color:#e6db74">&#34;train.py&#34;</span>]
         env:
         <span style="color:#f92672">-</span> name: AWS_ACCESS_KEY_ID
-          value: <span style="color:#e6db74">&#34;AKIATO25FNP4RFEFXS7Q&#34;</span>
+          value: <span style="color:#e6db74">&#34;&#34;</span>
         <span style="color:#f92672">-</span> name: AWS_SECRET_ACCESS_KEY
-          value: <span style="color:#e6db74">&#34;6CfoeytA293HKGGii4nBql/6M4Qg++hHNfUsWoeU&#34;</span>
+          value: <span style="color:#e6db74">&#34;&#34;</span>
       restartPolicy: Never
   backoffLimit: <span style="color:#ae81ff">0</span>
 </code></pre></div><p>Một số thông tin như sau:</p>
@@ -451,7 +451,7 @@ spec:
 <li>spec.template: Chính là phần cấu hình của Pod mà ta cần khai báo, tương tự như cấu hình của Pod mà ta đã tạo ở bài trước.
 <ul>
 <li>imagePullPolicy: Cho phép Kubernetes luôn luôn sử dụng Docker Image từ Docker Hub thay vì Cache Image.</li>
-<li>env: Danh sách các biến môi trường để Pod sử dụng. Ở đây, chúng ta khai bào 2 biến liên quan đến AWS để làm việc với AWS S3.</li>
+<li>env: Danh sách các biến môi trường để Pod sử dụng. Ở đây, chúng ta khai bào 2 biến liên quan đến AWS để làm việc với AWS S3. Mình đã xóa các key mà mình sử dụng. Nếu bạn muốn chạy thử thì hãy thêm key của bạn vào nhé!</li>
 </ul>
 </li>
 <li>restartPolicy: Có khởi động lại Container khi nó bị chết hay không?</li>
@@ -497,9 +497,9 @@ spec:
         command: [<span style="color:#e6db74">&#34;python3&#34;</span>,  <span style="color:#e6db74">&#34;batch_inference.py&#34;</span>]
         env:
         <span style="color:#f92672">-</span> name: AWS_ACCESS_KEY_ID
-          value: <span style="color:#e6db74">&#34;AKIATO25FNP4RFEFXS7Q&#34;</span>
+          value: <span style="color:#e6db74">&#34;&#34;</span>
         <span style="color:#f92672">-</span> name: AWS_SECRET_ACCESS_KEY
-          value: <span style="color:#e6db74">&#34;6CfoeytA293HKGGii4nBql/6M4Qg++hHNfUsWoeU&#34;</span>
+          value: <span style="color:#e6db74">&#34;&#34;</span>
       restartPolicy: Never
   backoffLimit: <span style="color:#ae81ff">0</span>
 </code></pre></div><p>So với cấu hình của Job phía trên, chỉ có các thông tin sau thay đổi: Job name, container name, container command.</p>
