@@ -156,6 +156,54 @@
           <div class="col-md-6 mb-4">
     <article class="card">
         
+        <img src="https://tiensu.github.io/images/featured-post/kubernetes_services.png" class="card-img-top" alt="Sử dụng Kubernetes CronJob trong các bài toán AI">
+        
+        <div class="card-body px-0">
+        
+        <a href="/categories/model-deployment"
+            class="text-primary">Model deployment</a>
+        
+        <a href="https://tiensu.github.io/blog/46_kubernetes_services/" class="h5 d-block my-3">Sử dụng Kubernetes CronJob trong các bài toán AI</a>
+        <div class="mb-3 post-meta">
+            <span>By SuNT</span>
+            
+            <span class="border-bottom border-primary px-2 mx-1"></span>
+            <span>31 January 2021</span>
+            
+        </div>
+        <p class="card-text">$ kubectl create -f development-online-inference.yaml deployment.apps/online-inference-development created $ kubectl get deployments NAME READY UP-TO-DATE AVAILABLE AGE hello-world 5/5 5 5 37m online-inference-development 2/2 2 2 2m11s $ kubectl get pods NAME READY STATUS RESTARTS AGE online-inference-development-5d46c5c7dc-hrkrn 1/1 Running 0 12m online-inference-development-5d46c5c7dc-r4qfz 1/1 Running 0 12m $ kubectl expose deployment online-inference-development --type NodePort --name online-inference-service service/online-inference-service exposed $ kubectl get services NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE kubernetes ClusterIP 10.</p>
+        <a href="https://tiensu.github.io/blog/46_kubernetes_services/" class="btn btn-outline-primary">read more</a>
+        </div>
+    </article>
+</div>
+          
+          <div class="col-md-6 mb-4">
+    <article class="card">
+        
+        <img src="https://tiensu.github.io/images/featured-post/kubernetes_deployment.png" class="card-img-top" alt="Sử dụng Kubernetes Deployment trong các bài toán AI">
+        
+        <div class="card-body px-0">
+        
+        <a href="/categories/model-deployment"
+            class="text-primary">Model deployment</a>
+        
+        <a href="https://tiensu.github.io/blog/45_kubernetes_deployment/" class="h5 d-block my-3">Sử dụng Kubernetes Deployment trong các bài toán AI</a>
+        <div class="mb-3 post-meta">
+            <span>By SuNT</span>
+            
+            <span class="border-bottom border-primary px-2 mx-1"></span>
+            <span>28 January 2021</span>
+            
+        </div>
+        <p class="card-text">Trong bài toán AI, nếu như Job và CronJob phù hợp nhất cho các tác vụ thực hiện không liên tục, không realtime (VD: Batch Inference, Training, &hellip;) thì Deployment lại là lựa chọn tốt nhất cho các tác vụ cần chạy liên tục, realtime (VD: Online Inference, &hellip;).</p>
+        <a href="https://tiensu.github.io/blog/45_kubernetes_deployment/" class="btn btn-outline-primary">read more</a>
+        </div>
+    </article>
+</div>
+          
+          <div class="col-md-6 mb-4">
+    <article class="card">
+        
         <img src="https://tiensu.github.io/images/featured-post/kubernetes_cronjob.png" class="card-img-top" alt="Sử dụng Kubernetes CronJob trong các bài toán AI">
         
         <div class="card-body px-0">
@@ -168,7 +216,7 @@
             <span>By SuNT</span>
             
             <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>22 January 2021</span>
+            <span>25 January 2021</span>
             
         </div>
         <p class="card-text">Ở bài trước, chúng ta đã tìm hiểu và thực hành với Kubernetes Job và thấy được sự phù hợp và hiệu quả của nó đối với các tác vụ trong bài toán AI.</p>
@@ -245,54 +293,6 @@
         </div>
         <p class="card-text">Hẳn các bạn đã biết, trong hầu hết các bài toán AI, chúng ta không chỉ train model 1 lần rồi thôi (mình không nói đến việc thử-sai trong quá trình tuning model).</p>
         <a href="https://tiensu.github.io/blog/41_ai_model_retraining/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <img src="https://tiensu.github.io/images/featured-post/model_registry.png" class="card-img-top" alt="Cấu hình AI Model Registry">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/model-deployment"
-            class="text-primary">Model deployment</a>
-        
-        <a href="https://tiensu.github.io/blog/40_ai_model_registry/" class="h5 d-block my-3">Cấu hình AI Model Registry</a>
-        <div class="mb-3 post-meta">
-            <span>By SuNT</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>10 January 2021</span>
-            
-        </div>
-        <p class="card-text">Khi giải quyết một bài toán AI, rất hiếm khi số lượng model được huấn luyện và đưa vào sử dụng dừng lại ở con số 1.</p>
-        <a href="https://tiensu.github.io/blog/40_ai_model_registry/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <img src="https://tiensu.github.io/images/featured-post/39_docker.png" class="card-img-top" alt="Đóng gói quá trình Train AI model và Batch Inference sử dụng Docker">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/model-deployment"
-            class="text-primary">Model deployment</a>
-        
-        <a href="https://tiensu.github.io/blog/39_package_ai_model_using_docker_batch_inference/" class="h5 d-block my-3">Đóng gói quá trình Train AI model và Batch Inference sử dụng Docker</a>
-        <div class="mb-3 post-meta">
-            <span>By SuNT</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>06 January 2021</span>
-            
-        </div>
-        <p class="card-text">Trong bài trước, chúng ta đã tìm hiểu và sử dụng Docker để triển khai AI model theo kiểu online inference.</p>
-        <a href="https://tiensu.github.io/blog/39_package_ai_model_using_docker_batch_inference/" class="btn btn-outline-primary">read more</a>
         </div>
     </article>
 </div>

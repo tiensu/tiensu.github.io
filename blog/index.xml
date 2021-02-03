@@ -13,8 +13,26 @@
     
     <item>
       <title>Sử dụng Kubernetes CronJob trong các bài toán AI</title>
+      <link>https://tiensu.github.io/blog/46_kubernetes_services/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/46_kubernetes_services/</guid>
+      <description>$ kubectl create -f development-online-inference.yaml deployment.apps/online-inference-development created $ kubectl get deployments NAME READY UP-TO-DATE AVAILABLE AGE hello-world 5/5 5 5 37m online-inference-development 2/2 2 2 2m11s $ kubectl get pods NAME READY STATUS RESTARTS AGE online-inference-development-5d46c5c7dc-hrkrn 1/1 Running 0 12m online-inference-development-5d46c5c7dc-r4qfz 1/1 Running 0 12m $ kubectl expose deployment online-inference-development --type NodePort --name online-inference-service service/online-inference-service exposed $ kubectl get services NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE kubernetes ClusterIP 10.</description>
+    </item>
+    
+    <item>
+      <title>Sử dụng Kubernetes Deployment trong các bài toán AI</title>
+      <link>https://tiensu.github.io/blog/45_kubernetes_deployment/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/45_kubernetes_deployment/</guid>
+      <description>Trong bài toán AI, nếu như Job và CronJob phù hợp nhất cho các tác vụ thực hiện không liên tục, không realtime (VD: Batch Inference, Training, &amp;hellip;) thì Deployment lại là lựa chọn tốt nhất cho các tác vụ cần chạy liên tục, realtime (VD: Online Inference, &amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>Sử dụng Kubernetes CronJob trong các bài toán AI</title>
       <link>https://tiensu.github.io/blog/44_kubernetes_cronjob/</link>
-      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/44_kubernetes_cronjob/</guid>
       <description>Ở bài trước, chúng ta đã tìm hiểu và thực hành với Kubernetes Job và thấy được sự phù hợp và hiệu quả của nó đối với các tác vụ trong bài toán AI.</description>

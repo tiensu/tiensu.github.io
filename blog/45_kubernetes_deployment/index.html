@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/model-deployment"
+          class="text-primary">Model deployment</a>
+        
+        <h2>Sử dụng Kubernetes Deployment trong các bài toán AI</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>28 January 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/kubernetes_deployment.png" class="img-fluid w-100 mb-4" alt="Sử dụng Kubernetes Deployment trong các bài toán AI">
+        
+        <div class="content mb-5">
+          <p>Trong bài toán AI, nếu như Job và CronJob phù hợp nhất cho các tác vụ thực hiện không liên tục, không realtime (<em>VD: Batch Inference, Training, &hellip;</em>) thì Deployment lại là lựa chọn tốt nhất cho các tác vụ cần chạy liên tục, realtime (<em>VD: Online Inference, &hellip;</em>). Trong bài này, hãy cùng tìm hiểu về Deployment và cách sử dụng nó.</p>
+<p><strong>1. Kubernetes Deployment là gì?</strong></p>
+<p>Deployment có thể hiểu là một tập các Pods giống nhau chạy trên một Kubernetes Cluster. Giống như Job, nó cũng quản lý các Pods trong việc thực hiện một nhiệm vụ nào đó. Sự khác nhau giữa Job và Deployment ở tính chất nhiệm vụ mà chúng thực hiện. Đối với Job, các tasks của nó chỉ chạy một lần, sau đó kết thúc luôn. Ngược lại, các tasks của Deployment chạy liên tục từ lúc được khởi tạo và chỉ kết thúc khi có sự can thiệp của người quản trị hoặc một ngoại lệ bất thường.</p>
+<p>Một số đặc điểm trong cách quản lý Pod của Deployment:</p>
+<ul>
+<li>Trong quá trình làm việc, nếu một Pod bị chết, Deployment sẽ tạo ra một Pod khác thay thế.</li>
+<li>Deployment cũng có khả năng tự động scale up/down số lượng các Pods tùy thuộc vào mức độ nặng/nhẹ của công viêc mà nó thực hiện.</li>
+<li>Có thể thay đổi cấu hình của Deployment trực tiếp trong file cấu hình mà không phải downtime.</li>
+<li>Có thể quay lại những thay đổi trước đó trong trường hợp sự thay đổi mới gây ra lỗi.</li>
+</ul>
+<p>Chính vì vậy mà Deployment rất phù hợp với nhiệm vụ Online Inference trong bài toán AI. Chúng ta train một model, tạo một REST API để lắng nghe các yêu cầu dự đoán. Sau đó, tạo ra một Deployment để chấp nhận và thực hiện các yêu cầu đó một các realtime. Nếu số lượng các yêu cầu tăng lên cao, Deployment sẽ tự động tạo thêm các Pod để xử lý và ngược lại. Nếu có một phiên bản mới của model, ta có thể dễ dàng đưa luôn vào sử dụng mà không phải downtime. Và nếu model mới đó không hiệu quả bằng model cũ, ta hoàn toàn có thể quay về sử dụng model cũ đó.</p>
+<p><strong>2. Làm việc với Kubernetes Deployment</strong></p>
+<p>Chúng ta sẽ thực hiện tạo một Deployment để phục vụ nhiệm vụ Online Inference trong bài toán AI.</p>
+<p>Hãy xem cấu trúc thư mục làm việc:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">kubernetes_deployment
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> deployment
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">└──</span> deployment<span style="color:#f92672">-</span>online<span style="color:#f92672">-</span>inference<span style="color:#f92672">.</span>yaml
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">└──</span> docker
+<span style="color:#960050;background-color:#1e0010">│</span>       <span style="color:#960050;background-color:#1e0010">├──</span> api<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>       <span style="color:#960050;background-color:#1e0010">├──</span> Dockerfile
+<span style="color:#960050;background-color:#1e0010">│</span>       <span style="color:#960050;background-color:#1e0010">└──</span> train<span style="color:#f92672">.</span>py
+</code></pre></div><p><em><strong>2.1 Train model AI và tạo REST API</strong></em></p>
+<p>Tạo thư mục docker và hai file code python bên trong nó:</p>
+<ul>
+<li>File <code>train.py</code>: Train model AI và lưu file model.</li>
+<li>File <code>api.py</code>: Tạo API để cho phép yêu cầu dự đoán gửi đến và trả về kết quả.</li>
+</ul>
+<p>Nội dung của file <code>train.py</code> như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> json
+<span style="color:#f92672">import</span> os
+
+<span style="color:#f92672">from</span> joblib <span style="color:#f92672">import</span> dump
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> ensemble
+<span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> datasets
+<span style="color:#f92672">from</span> sklearn.utils <span style="color:#f92672">import</span> shuffle
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> mean_squared_error
+
+
+MODEL_DIR <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;MODEL_DIR&#34;</span>]
+MODEL_FILE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;MODEL_FILE&#34;</span>]
+METADATA_FILE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;METADATA_FILE&#34;</span>]
+MODEL_PATH <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(MODEL_DIR, MODEL_FILE)
+METADATA_PATH <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(MODEL_DIR, METADATA_FILE)
+
+
+<span style="color:#75715e"># #############################################################################</span>
+<span style="color:#75715e"># Load data</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Loading data...&#34;</span>)
+boston <span style="color:#f92672">=</span> datasets<span style="color:#f92672">.</span>load_boston()
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Splitting data...&#34;</span>)
+X, y <span style="color:#f92672">=</span> shuffle(boston<span style="color:#f92672">.</span>data, boston<span style="color:#f92672">.</span>target, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float32)
+offset <span style="color:#f92672">=</span> int(X<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.9</span>)
+X_train, y_train <span style="color:#f92672">=</span> X[:offset], y[:offset]	
+X_test, y_test <span style="color:#f92672">=</span> X[offset:], y[offset:]
+
+<span style="color:#75715e"># #############################################################################</span>
+<span style="color:#75715e"># Fit regression model</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Fitting model...&#34;</span>)
+params <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;n_estimators&#39;</span>: <span style="color:#ae81ff">500</span>, <span style="color:#e6db74">&#39;max_depth&#39;</span>: <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;min_samples_split&#39;</span>: <span style="color:#ae81ff">2</span>,
+          <span style="color:#e6db74">&#39;learning_rate&#39;</span>: <span style="color:#ae81ff">0.01</span>, <span style="color:#e6db74">&#39;loss&#39;</span>: <span style="color:#e6db74">&#39;ls&#39;</span>}
+clf <span style="color:#f92672">=</span> ensemble<span style="color:#f92672">.</span>GradientBoostingRegressor(<span style="color:#f92672">**</span>params)
+
+clf<span style="color:#f92672">.</span>fit(X_train, y_train)
+train_mse <span style="color:#f92672">=</span> mean_squared_error(y_train, clf<span style="color:#f92672">.</span>predict(X_train))
+test_mse <span style="color:#f92672">=</span> mean_squared_error(y_test, clf<span style="color:#f92672">.</span>predict(X_test))
+metadata <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#34;train_mean_square_error&#34;</span>: train_mse,
+    <span style="color:#e6db74">&#34;test_mean_square_error&#34;</span>: test_mse
+}
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Serializing model to: {}&#34;</span><span style="color:#f92672">.</span>format(MODEL_PATH))
+dump(clf, MODEL_PATH)
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Serializing metadata to: {}&#34;</span><span style="color:#f92672">.</span>format(METADATA_PATH))
+<span style="color:#66d9ef">with</span> open(METADATA_PATH, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> outfile:  
+    json<span style="color:#f92672">.</span>dump(metadata, outfile)
+</code></pre></div><p>Nội dung của file <code>api.py</code> như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
+
+<span style="color:#f92672">from</span> flask <span style="color:#f92672">import</span> Flask
+<span style="color:#f92672">from</span> flask_restful <span style="color:#f92672">import</span> Resource, Api, reqparse
+<span style="color:#f92672">from</span> joblib <span style="color:#f92672">import</span> load
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+MODEL_DIR <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;MODEL_DIR&#34;</span>]
+MODEL_FILE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;MODEL_FILE&#34;</span>]
+METADATA_FILE <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;METADATA_FILE&#34;</span>]
+MODEL_PATH <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(MODEL_DIR, MODEL_FILE)
+METADATA_PATH <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(MODEL_DIR, METADATA_FILE)
+
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Loading model from: {}&#34;</span><span style="color:#f92672">.</span>format(MODEL_PATH))
+clf <span style="color:#f92672">=</span> load(MODEL_PATH)
+
+app <span style="color:#f92672">=</span> Flask(__name__)
+api <span style="color:#f92672">=</span> Api(app)
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Prediction</span>(Resource):
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>_required_features <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;CRIM&#39;</span>, <span style="color:#e6db74">&#39;ZN&#39;</span>, <span style="color:#e6db74">&#39;INDUS&#39;</span>, <span style="color:#e6db74">&#39;CHAS&#39;</span>, <span style="color:#e6db74">&#39;NOX&#39;</span>, <span style="color:#e6db74">&#39;RM&#39;</span>,
+                                   <span style="color:#e6db74">&#39;AGE&#39;</span>, <span style="color:#e6db74">&#39;DIS&#39;</span>, <span style="color:#e6db74">&#39;RAD&#39;</span>, <span style="color:#e6db74">&#39;TAX&#39;</span>, <span style="color:#e6db74">&#39;PTRATIO&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>,
+                                   <span style="color:#e6db74">&#39;LSTAT&#39;</span>]
+        self<span style="color:#f92672">.</span>reqparse <span style="color:#f92672">=</span> reqparse<span style="color:#f92672">.</span>RequestParser()
+        <span style="color:#66d9ef">for</span> feature <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>_required_features:
+            self<span style="color:#f92672">.</span>reqparse<span style="color:#f92672">.</span>add_argument(
+                feature, type <span style="color:#f92672">=</span> float, required <span style="color:#f92672">=</span> True, location <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;json&#39;</span>,
+                help <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;No {} provided&#39;</span><span style="color:#f92672">.</span>format(feature))
+        super(Prediction, self)<span style="color:#f92672">.</span>__init__()
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">post</span>(self):
+        args <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>reqparse<span style="color:#f92672">.</span>parse_args()
+        X <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([args[f] <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>_required_features])<span style="color:#f92672">.</span>reshape(<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+        y_pred <span style="color:#f92672">=</span> clf<span style="color:#f92672">.</span>predict(X)
+        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;prediction&#39;</span>: y_pred<span style="color:#f92672">.</span>tolist()[<span style="color:#ae81ff">0</span>]}
+
+api<span style="color:#f92672">.</span>add_resource(Prediction, <span style="color:#e6db74">&#39;/predict&#39;</span>)
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    app<span style="color:#f92672">.</span>run(debug<span style="color:#f92672">=</span>True, host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.0.0.0&#39;</span>)
+</code></pre></div><p>Code của 2 files này khá đơn giản nên mình không giải thích gì thêm, hi vọng các bạn có thể tự hiểu được.</p>
+<p><em><strong>2.2 Chuẩn bị Docker Image</strong></em></p>
+<p>Cũng trong thư mục docker, ta file Dockerfile như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">FROM jupyter<span style="color:#f92672">/</span>scipy<span style="color:#f92672">-</span>notebook
+USER root
+
+WORKDIR <span style="color:#f92672">/</span>docker
+ADD <span style="color:#f92672">.</span> <span style="color:#f92672">/</span>docker
+
+RUN pip install flask flask<span style="color:#f92672">-</span>restful joblib
+
+RUN mkdir <span style="color:#f92672">/</span>docker<span style="color:#f92672">/</span>model
+ENV MODEL_DIR<span style="color:#f92672">=/</span>docker<span style="color:#f92672">/</span>model
+ENV MODEL_FILE<span style="color:#f92672">=</span>clf<span style="color:#f92672">.</span>joblib
+ENV METADATA_FILE<span style="color:#f92672">=</span>metadata<span style="color:#f92672">.</span>json
+
+RUN python3 train<span style="color:#f92672">.</span>py
+</code></pre></div><p>Sau đó tiến hành build Docker Image:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker build <span style="color:#f92672">-</span>t docker<span style="color:#f92672">-</span>ml<span style="color:#f92672">-</span>online <span style="color:#f92672">.</span>
+Sending build context to Docker daemon  <span style="color:#ae81ff">6.656</span>kB
+Step <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : FROM jupyter<span style="color:#f92672">/</span>scipy<span style="color:#f92672">-</span>notebook
+ <span style="color:#f92672">---&gt;</span> c1a7c7ef5e27
+Step <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : USER root
+ <span style="color:#f92672">---&gt;</span> Using cache
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">0</span>d9f55e9c7e0
+Step <span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : WORKDIR <span style="color:#f92672">/</span>docker
+ <span style="color:#f92672">---&gt;</span> Using cache
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">4</span>ed21d81d110
+Step <span style="color:#ae81ff">4</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : ADD <span style="color:#f92672">.</span> <span style="color:#f92672">/</span>docker
+ <span style="color:#f92672">---&gt;</span> a266bfc5ca35
+Step <span style="color:#ae81ff">5</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : RUN pip install flask flask<span style="color:#f92672">-</span>restful joblib
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> <span style="color:#ae81ff">97888</span>ed0b989
+Collecting flask
+  Downloading Flask<span style="color:#f92672">-</span><span style="color:#ae81ff">1.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>py2<span style="color:#f92672">.</span>py3<span style="color:#f92672">-</span>none<span style="color:#f92672">-</span>any<span style="color:#f92672">.</span>whl (<span style="color:#ae81ff">94</span> kB)
+Collecting flask<span style="color:#f92672">-</span>restful
+  Downloading Flask_RESTful<span style="color:#f92672">-</span><span style="color:#ae81ff">0.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">8</span><span style="color:#f92672">-</span>py2<span style="color:#f92672">.</span>py3<span style="color:#f92672">-</span>none<span style="color:#f92672">-</span>any<span style="color:#f92672">.</span>whl (<span style="color:#ae81ff">25</span> kB)
+Requirement already satisfied: joblib <span style="color:#f92672">in</span> <span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>conda<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span><span style="color:#f92672">/</span>site<span style="color:#f92672">-</span>packages (<span style="color:#ae81ff">1.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>)
+Requirement already satisfied: click<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">5.1</span> <span style="color:#f92672">in</span> <span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>conda<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span><span style="color:#f92672">/</span>site<span style="color:#f92672">-</span>packages (<span style="color:#f92672">from</span> flask) (<span style="color:#ae81ff">7.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span>)
+Collecting Werkzeug<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0.15</span>
+  Downloading Werkzeug<span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>py2<span style="color:#f92672">.</span>py3<span style="color:#f92672">-</span>none<span style="color:#f92672">-</span>any<span style="color:#f92672">.</span>whl (<span style="color:#ae81ff">298</span> kB)
+Requirement already satisfied: Jinja2<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">2.10</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">in</span> <span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>conda<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span><span style="color:#f92672">/</span>site<span style="color:#f92672">-</span>packages (<span style="color:#f92672">from</span> flask) (<span style="color:#ae81ff">2.11</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span>)
+Collecting itsdangerous<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0.24</span>
+  Downloading itsdangerous<span style="color:#f92672">-</span><span style="color:#ae81ff">1.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span>py2<span style="color:#f92672">.</span>py3<span style="color:#f92672">-</span>none<span style="color:#f92672">-</span>any<span style="color:#f92672">.</span>whl (<span style="color:#ae81ff">16</span> kB)
+Requirement already satisfied: MarkupSafe<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0.23</span> <span style="color:#f92672">in</span> <span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>conda<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span><span style="color:#f92672">/</span>site<span style="color:#f92672">-</span>packages (<span style="color:#f92672">from</span> Jinja2<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">2.10</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-&gt;</span>flask) (<span style="color:#ae81ff">1.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span>)
+Requirement already satisfied: six<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">1.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">in</span> <span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>conda<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span><span style="color:#f92672">/</span>site<span style="color:#f92672">-</span>packages (<span style="color:#f92672">from</span> flask<span style="color:#f92672">-</span>restful) (<span style="color:#ae81ff">1.15</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>)
+Requirement already satisfied: pytz <span style="color:#f92672">in</span> <span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>conda<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span><span style="color:#f92672">/</span>site<span style="color:#f92672">-</span>packages (<span style="color:#f92672">from</span> flask<span style="color:#f92672">-</span>restful) (<span style="color:#ae81ff">2020.5</span>)
+Collecting aniso8601<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0.82</span>
+  Downloading aniso8601<span style="color:#f92672">-</span><span style="color:#ae81ff">8.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>py2<span style="color:#f92672">.</span>py3<span style="color:#f92672">-</span>none<span style="color:#f92672">-</span>any<span style="color:#f92672">.</span>whl (<span style="color:#ae81ff">44</span> kB)
+Installing collected packages: Werkzeug, itsdangerous, flask, aniso8601, flask<span style="color:#f92672">-</span>restful
+Successfully installed Werkzeug<span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span> aniso8601<span style="color:#f92672">-</span><span style="color:#ae81ff">8.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span> flask<span style="color:#f92672">-</span><span style="color:#ae81ff">1.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span> flask<span style="color:#f92672">-</span>restful<span style="color:#f92672">-</span><span style="color:#ae81ff">0.3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">8</span> itsdangerous<span style="color:#f92672">-</span><span style="color:#ae81ff">1.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>
+Removing intermediate container <span style="color:#ae81ff">97888</span>ed0b989
+ <span style="color:#f92672">---&gt;</span> d9f31d7e7c83
+Step <span style="color:#ae81ff">6</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : RUN mkdir <span style="color:#f92672">/</span>docker<span style="color:#f92672">/</span>model
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> <span style="color:#ae81ff">89</span>b237f6427c
+Removing intermediate container <span style="color:#ae81ff">89</span>b237f6427c
+ <span style="color:#f92672">---&gt;</span> b2778ed90f4a
+Step <span style="color:#ae81ff">7</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : ENV MODEL_DIR<span style="color:#f92672">=/</span>docker<span style="color:#f92672">/</span>model
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> d7a52c9249f9
+Removing intermediate container d7a52c9249f9
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">5157</span>d919abd5
+Step <span style="color:#ae81ff">8</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : ENV MODEL_FILE<span style="color:#f92672">=</span>clf<span style="color:#f92672">.</span>joblib
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> a7f75c6f79e5
+Removing intermediate container a7f75c6f79e5
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">790</span>a21e54588
+Step <span style="color:#ae81ff">9</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : ENV METADATA_FILE<span style="color:#f92672">=</span>metadata<span style="color:#f92672">.</span>json
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> b0b94567182c
+Removing intermediate container b0b94567182c
+ <span style="color:#f92672">---&gt;</span> <span style="color:#ae81ff">92</span>a98ce95a8d
+Step <span style="color:#ae81ff">10</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span> : RUN python3 train<span style="color:#f92672">.</span>py
+ <span style="color:#f92672">---&gt;</span> Running <span style="color:#f92672">in</span> d8055e4ef00d
+Loading data<span style="color:#f92672">...</span>
+Splitting data<span style="color:#f92672">...</span>
+Fitting model<span style="color:#f92672">...</span>
+Serializing model to: <span style="color:#f92672">/</span>docker<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>clf<span style="color:#f92672">.</span>joblib
+Serializing metadata to: <span style="color:#f92672">/</span>docker<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>metadata<span style="color:#f92672">.</span>json
+Removing intermediate container d8055e4ef00d
+ <span style="color:#f92672">---&gt;</span> b1fb95b775ec
+Successfully built b1fb95b775ec
+Successfully tagged docker<span style="color:#f92672">-</span>ml<span style="color:#f92672">-</span>online:latest
+</code></pre></div><p>Có Docker Image rồi, tiến hành push nó lên Docker Hub:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker push tiensu<span style="color:#f92672">/</span>ml<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>online<span style="color:#f92672">-</span>infer:latest
+The push refers to repository [docker<span style="color:#f92672">.</span>io<span style="color:#f92672">/</span>tiensu<span style="color:#f92672">/</span>ml<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>online<span style="color:#f92672">-</span>infer]
+f0e40a44cb9c: Pushed 
+a079ef4fd38e: Pushed 
+<span style="color:#ae81ff">76</span>cba4a3a958: Pushed 
+<span style="color:#ae81ff">3451</span>a539eae2: Pushed 
+<span style="color:#ae81ff">66</span>f4cc63b50c: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">5</span>f70bf18a086: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">6</span>f5a41ae77fd: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">5</span>a1b9a3f9355: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+b1d7816bac14: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+c91fed2d1998: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+cc70098d00e3: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">88727e93</span>cbac: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+cadaf24035f3: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">8</span>f170f4774e3: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">33</span>bd52db887f: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">21e5</span>dd010f50: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+ea370ab22368: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">421</span>d1408f872: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">18</span>fd1ca0de51: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">8</span>f01aab6d756: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+e18a1c4e1d31: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">8552</span>f27c3cd8: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">1</span>a4c57efcc23: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">94</span>b8fe888eac: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">02473</span>afd360b: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+dbf2c0f42a39: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+<span style="color:#ae81ff">9</span>f32931c9d28: Mounted <span style="color:#f92672">from</span> tiensu<span style="color:#f92672">/</span>docker<span style="color:#f92672">-</span>ml 
+latest: digest: sha256:<span style="color:#ae81ff">67</span>c219ed32f9748c0c3ce64e8c4274932a8dadaf05510402f5d64a038bca2165 size: <span style="color:#ae81ff">6790</span>
+</code></pre></div><p><em><strong>2.3 Tạo Kubernetes Deployment</strong></em></p>
+<p>Trong thư mục deployment, tạo file cấu hình (<em>deployment-online-inference.yaml</em>) của Deployment với nội dung như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">apiVersion: apps<span style="color:#f92672">/</span>v1
+kind: Deployment
+metadata:
+  name: online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment
+spec:
+  replicas: <span style="color:#ae81ff">2</span>
+  selector:
+    matchLabels:
+      app: model<span style="color:#f92672">-</span>api
+  template:
+    metadata:
+      labels:
+        app: model<span style="color:#f92672">-</span>api
+    spec:
+      containers:
+      <span style="color:#f92672">-</span> name: model<span style="color:#f92672">-</span>api
+        imagePullPolicy: Always
+        image: tiensu<span style="color:#f92672">/</span>ml<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>online<span style="color:#f92672">-</span>infer:latest
+        command: [<span style="color:#e6db74">&#34;python3&#34;</span>,  <span style="color:#e6db74">&#34;api.py&#34;</span>]
+        ports:
+        <span style="color:#f92672">-</span> containerPort: <span style="color:#ae81ff">5000</span>
+</code></pre></div><p>Một số thông tin cần lưu ý ở đây:</p>
+<ul>
+<li><strong>replicas</strong>: Số lượng Pods được tạo ra lúc ban đầu.</li>
+<li><strong>selector</strong>: Định nghĩa tên của Pods/Containers mà nó quản lý.</li>
+</ul>
+<p>Chạy các lệnh sau để tạo và kiểm tra Deployment:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl create <span style="color:#f92672">-</span>f deployment<span style="color:#f92672">-</span>online<span style="color:#f92672">-</span>inference<span style="color:#f92672">.</span>yaml 
+deployment<span style="color:#f92672">.</span>apps<span style="color:#f92672">/</span>online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment created
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl get deployments
+NAME                           READY   UP<span style="color:#f92672">-</span>TO<span style="color:#f92672">-</span>DATE   AVAILABLE   AGE
+online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment   <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>     <span style="color:#ae81ff">2</span>            <span style="color:#ae81ff">2</span>           <span style="color:#ae81ff">41</span>s
+</code></pre></div><p>Thực ra, Deployment không trực tiếp quản lý các Pods. Thay vào đó, nó sẽ tạo ra các ReplicaSet với mục đích duy trì sự ổn định của các Pods tại bất kì thời điểm nào trong suốt quá trình hoạt động.</p>
+<p>Kiểm tra ReplicaSet được Deployment tạo ra:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl get rs
+NAME                                      DESIRED   CURRENT   READY   AGE
+online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment<span style="color:#f92672">-</span><span style="color:#ae81ff">59</span>c8579f48   <span style="color:#ae81ff">2</span>         <span style="color:#ae81ff">2</span>         <span style="color:#ae81ff">2</span>       <span style="color:#ae81ff">68</span>s
+</code></pre></div><p><em>Chú ý: Tên của ReplicaSet = Tên của Deployment + chuỗi ngẫu nhiên.</em></p>
+<p>Kiểm tra thử các Pods được quản lý bởi <code>online-inference-deployment-59c8579f48</code> ReplicaSet:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl get pods
+NAME                                            READY   STATUS    RESTARTS   AGE
+online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment<span style="color:#f92672">-</span><span style="color:#ae81ff">59</span>c8579f48<span style="color:#f92672">-</span>bg2vj   <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>     Running   <span style="color:#ae81ff">0</span>          <span style="color:#ae81ff">97</span>s
+online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment<span style="color:#f92672">-</span><span style="color:#ae81ff">59</span>c8579f48<span style="color:#f92672">-</span>j9fl2   <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>     Running   <span style="color:#ae81ff">0</span>          <span style="color:#ae81ff">97</span>s
+</code></pre></div><p><em>Chú ý: Tên của Pod = Tên của ReplicaSet + chuỗi ngẫu nhiên.</em></p>
+<p>Thử debug một Pod xem có gì bất thường không?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl describe pod online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment<span style="color:#f92672">-</span><span style="color:#ae81ff">59</span>c8579f48<span style="color:#f92672">-</span>bg2vj
+Name:         online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment<span style="color:#f92672">-</span><span style="color:#ae81ff">59</span>c8579f48<span style="color:#f92672">-</span>bg2vj
+Namespace:    default
+Priority:     <span style="color:#ae81ff">0</span>
+Node:         duynm<span style="color:#f92672">-</span>vostro<span style="color:#f92672">-</span><span style="color:#ae81ff">3670</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">30.130</span>
+Start Time:   Mon, <span style="color:#ae81ff">01</span> Feb <span style="color:#ae81ff">2021</span> <span style="color:#ae81ff">18</span>:<span style="color:#ae81ff">15</span>:<span style="color:#ae81ff">27</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">0700</span>
+Labels:       app<span style="color:#f92672">=</span>model<span style="color:#f92672">-</span>api
+              pod<span style="color:#f92672">-</span>template<span style="color:#f92672">-</span>hash<span style="color:#f92672">=</span><span style="color:#ae81ff">59</span>c8579f48
+Annotations:  cni<span style="color:#f92672">.</span>projectcalico<span style="color:#f92672">.</span>org<span style="color:#f92672">/</span>podIP: <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">24.197</span><span style="color:#f92672">/</span><span style="color:#ae81ff">32</span>
+              cni<span style="color:#f92672">.</span>projectcalico<span style="color:#f92672">.</span>org<span style="color:#f92672">/</span>podIPs: <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">24.197</span><span style="color:#f92672">/</span><span style="color:#ae81ff">32</span>
+Status:       Running
+IP:           <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">24.197</span>
+IPs:
+  IP:           <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">24.197</span>
+Controlled By:  ReplicaSet<span style="color:#f92672">/</span>online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment<span style="color:#f92672">-</span><span style="color:#ae81ff">59</span>c8579f48
+Containers:
+  model<span style="color:#f92672">-</span>api:
+    Container ID:  docker:<span style="color:#f92672">//</span><span style="color:#ae81ff">4</span>cde562c962b48ff4c6bc3c812b140d2555e1984f064108bd8bf607b122cef9a
+    Image:         tiensu<span style="color:#f92672">/</span>ml<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>online<span style="color:#f92672">-</span>infer
+    Image ID:      docker<span style="color:#f92672">-</span>pullable:<span style="color:#f92672">//</span>tiensu<span style="color:#f92672">/</span>ml<span style="color:#f92672">-</span>model<span style="color:#f92672">-</span>online<span style="color:#f92672">-</span>infer<span style="color:#a6e22e">@sha256</span>:<span style="color:#ae81ff">67</span>c219ed32f9748c0c3ce64e8c4274932a8dadaf05510402f5d64a038bca2165
+    Port:          <span style="color:#ae81ff">5000</span><span style="color:#f92672">/</span>TCP
+    Host Port:     <span style="color:#ae81ff">0</span><span style="color:#f92672">/</span>TCP
+    Command:
+      python3
+      api<span style="color:#f92672">.</span>py
+    State:          Running
+      Started:      Mon, <span style="color:#ae81ff">01</span> Feb <span style="color:#ae81ff">2021</span> <span style="color:#ae81ff">18</span>:<span style="color:#ae81ff">15</span>:<span style="color:#ae81ff">45</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">0700</span>
+    Ready:          True
+    Restart Count:  <span style="color:#ae81ff">0</span>
+    Environment:    <span style="color:#f92672">&lt;</span>none<span style="color:#f92672">&gt;</span>
+    Mounts:
+      <span style="color:#f92672">/</span>var<span style="color:#f92672">/</span>run<span style="color:#f92672">/</span>secrets<span style="color:#f92672">/</span>kubernetes<span style="color:#f92672">.</span>io<span style="color:#f92672">/</span>serviceaccount <span style="color:#f92672">from</span> default<span style="color:#f92672">-</span>token<span style="color:#f92672">-</span>wp4xr (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default<span style="color:#f92672">-</span>token<span style="color:#f92672">-</span>wp4xr:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default<span style="color:#f92672">-</span>token<span style="color:#f92672">-</span>wp4xr
+    Optional:    false
+QoS Class:       BestEffort
+Node<span style="color:#f92672">-</span>Selectors:  <span style="color:#f92672">&lt;</span>none<span style="color:#f92672">&gt;</span>
+Tolerations:     node<span style="color:#f92672">.</span>kubernetes<span style="color:#f92672">.</span>io<span style="color:#f92672">/</span><span style="color:#f92672">not</span><span style="color:#f92672">-</span>ready:NoExecute op<span style="color:#f92672">=</span>Exists <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">300</span>s
+                 node<span style="color:#f92672">.</span>kubernetes<span style="color:#f92672">.</span>io<span style="color:#f92672">/</span>unreachable:NoExecute op<span style="color:#f92672">=</span>Exists <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">300</span>s
+Events:
+  Type    Reason     Age    From               Message
+  <span style="color:#f92672">----</span>    <span style="color:#f92672">------</span>     <span style="color:#f92672">----</span>   <span style="color:#f92672">----</span>               <span style="color:#f92672">-------</span>
+  Normal  Scheduled  <span style="color:#ae81ff">2</span>m25s  default<span style="color:#f92672">-</span>scheduler  Successfully assigned default<span style="color:#f92672">/</span>online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>deployment<span style="color:#f92672">-</span><span style="color:#ae81ff">59</span>c8579f48<span style="color:#f92672">-</span>bg2vj to duynm<span style="color:#f92672">-</span>vostro<span style="color:#f92672">-</span><span style="color:#ae81ff">3670</span>
+  Normal  Pulling    <span style="color:#ae81ff">2</span>m22s  kubelet            Pulling image <span style="color:#e6db74">&#34;tiensu/ml-model-online-infer&#34;</span>
+  Normal  Pulled     <span style="color:#ae81ff">2</span>m8s   kubelet            Successfully pulled image <span style="color:#e6db74">&#34;tiensu/ml-model-online-infer&#34;</span> <span style="color:#f92672">in</span> <span style="color:#ae81ff">14.038005704</span>s
+  Normal  Created    <span style="color:#ae81ff">2</span>m7s   kubelet            Created container model<span style="color:#f92672">-</span>api
+  Normal  Started    <span style="color:#ae81ff">2</span>m7s   kubelet            Started container model<span style="color:#f92672">-</span>api
+</code></pre></div><p>OK, mọi thứ đều đang hoạt động đúng như mong muốn.</p>
+<p><em><strong>2.4 Chạy Online Inference</strong></em></p>
+<p>Bây giờ ta sẽ thử gửi một yêu cầu dự đoán thông qua REST API để xem kết quả trả về. Tuy nhiên, có một chú ý quan trọng là REST API này chỉ mới hoạt động được bên trong phạm vi của Kubernetes Cluster. Để mở rộng nó ra ngoài Internet, chúng ta cần phải sử dụng thêm <a href="https://kubernetes.io/docs/concepts/services-networking/service/">Service</a>. Service sẽ được trình bày trong bài viết tiếp theo.</p>
+<p>Chúng ta sẽ thực hiện Online Inference từ một Pod trong cùng Cluster với Deployment. Sử dụng lệnh sau để chạy và truy cập vào Pod <code>python3</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl run python3 <span style="color:#f92672">-</span>ti <span style="color:#f92672">--</span>image<span style="color:#f92672">=</span>python:<span style="color:#ae81ff">3.6</span> <span style="color:#f92672">--</span>command<span style="color:#f92672">=</span>true bash
+If you don<span style="color:#e6db74">&#39;t see a command prompt, try pressing enter.</span>
+root<span style="color:#a6e22e">@python3</span>:<span style="color:#f92672">/</span><span style="color:#75715e"># </span>
+</code></pre></div><p>Phần xử lý Inference bây giờ đang nằm trên 2 Pods mà Deployment tạo ra. Ta sẽ gửi yêu cầu dự đoán đến chúng. Xem lại phần debug bên trên của Pod <code>online-inference-deployment-59c8579f48-bg2vj</code> ta thấy Internal IP của nó là <strong>192.168.24.197</strong></p>
+<p>Từ trong Pod <code>python3</code>, thực hiện lệnh sau để gửi yêu cầu dự đoán:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> curl <span style="color:#f92672">-</span>i <span style="color:#f92672">-</span>H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#f92672">-</span>X POST <span style="color:#f92672">-</span>d <span style="color:#e6db74">&#39;{&#34;CRIM&#34;: 15.02, &#34;ZN&#34;: 0.0, &#34;INDUS&#34;: 18.1, &#34;CHAS&#34;: 0.0, &#34;NOX&#34;: 0.614, &#34;RM&#34;: 5.3, &#34;AGE&#34;: 97.3, &#34;DIS&#34;: 2.1, &#34;RAD&#34;: 24.0, &#34;TAX&#34;: 666.0, &#34;PTRATIO&#34;: 20.2, &#34;B&#34;: 349.48, &#34;LSTAT&#34;: 24.9}&#39;</span> <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">24.197</span>:<span style="color:#ae81ff">5000</span><span style="color:#f92672">/</span>predict
+HTTP<span style="color:#f92672">/</span><span style="color:#ae81ff">1.0</span> <span style="color:#ae81ff">200</span> OK
+Content<span style="color:#f92672">-</span>Type: application<span style="color:#f92672">/</span>json
+Content<span style="color:#f92672">-</span>Length: <span style="color:#ae81ff">41</span>
+Server: Werkzeug<span style="color:#f92672">/</span><span style="color:#ae81ff">1.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span> Python<span style="color:#f92672">/</span><span style="color:#ae81ff">3.8</span><span style="color:#f92672">.</span><span style="color:#ae81ff">6</span>
+Date: Mon, <span style="color:#ae81ff">01</span> Feb <span style="color:#ae81ff">2021</span> <span style="color:#ae81ff">11</span>:<span style="color:#ae81ff">22</span>:<span style="color:#ae81ff">25</span> GMT
+
+{
+    <span style="color:#e6db74">&#34;prediction&#34;</span>: <span style="color:#ae81ff">12.273424794987877</span>
+}
+</code></pre></div><p>Như vậy là ta đã nhận được kết quả dự đoán trả về, chứng tỏ Deployment của chúng ta đã hoạt động đúng như ta dự tính.</p>
+<p><em><strong>2.5 Xóa Deployment khi không sử dụng</strong></em></p>
+<p>Nếu không sử dụng nữa, ta thực hiện lệnh sau để xóa Deployment và các tài nguyên của nó:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> kubectl delete deployment online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>development
+deployment<span style="color:#f92672">.</span>apps <span style="color:#e6db74">&#34;online-inference-development&#34;</span> deleted
+</code></pre></div><p>Kiểm tra lại:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl get rs
+No resources found<span style="color:#f92672">.</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl get pods
+No resources found<span style="color:#f92672">.</span>
+</code></pre></div><p><strong>3. Kết luận</strong></p>
+<p>Xong, chúng ta đã thực hành thành công với Deployment, và ta cũng biết một thiếu sót của Deployment phải cần đến Service để giải quyết. Đó chính là nội dung của bài tiếp theo. Mời các bạn đón đọc!</p>
+<p>Source code của bài này các bạn tham khảo tại <a href="https://github.com/tiensu/Model_Deployment/tree/master/kubernetes_deployment">đây</a>.</p>
+<p><strong>8. Tham khảo</strong></p>
+<ul>
+<li><a href="https://mlinproduction.com/k8s-cronjobs/">Mlinproduction</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/">CronJob</a></li>
+<li><a href="https://crontab.guru/">Crontab</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

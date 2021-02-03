@@ -156,7 +156,7 @@
           <div class="row no-gutters align-items-center">
             <div class="col-md-5">
               
-              <img src="https://tiensu.github.io/images/featured-post/kubernetes_cronjob.png" class="card-img" alt="Sử dụng Kubernetes CronJob trong các bài toán AI">
+              <img src="https://tiensu.github.io/images/featured-post/kubernetes_deployment.png" class="card-img" alt="Sử dụng Kubernetes Deployment trong các bài toán AI">
               
             </div>
             <div class="col-md-6 offset-md-1">
@@ -165,12 +165,12 @@
                   <span>By SuNT</span>
                   
                   <span class="border-bottom border-primary px-2 mx-1"></span>
-                  <span>22 January 2021</span>
+                  <span>28 January 2021</span>
                   
                 </div>
-                <a href="https://tiensu.github.io/blog/44_kubernetes_cronjob/"
-                  class="h1 font-weight-bold d-block text-dark mb-4 card-title">Sử dụng Kubernetes CronJob trong các bài toán AI</a>
-                <p class="card-text">Ở bài trước, chúng ta đã tìm hiểu và thực hành với Kubernetes Job và thấy được sự phù hợp và hiệu quả của nó đối với các tác vụ trong bài toán AI....</p>
+                <a href="https://tiensu.github.io/blog/45_kubernetes_deployment/"
+                  class="h1 font-weight-bold d-block text-dark mb-4 card-title">Sử dụng Kubernetes Deployment trong các bài toán AI</a>
+                <p class="card-text">Trong bài toán AI, nếu như Job và CronJob phù hợp nhất cho các tác vụ thực hiện không liên tục, không realtime (VD: Batch Inference, Training, &hellip;) thì Deployment lại là lựa chọn tốt nhất cho các tác vụ cần chạy liên tục, realtime (VD: Online Inference, &hellip;)....</p>
               </div>
             </div>
           </div>
@@ -186,6 +186,25 @@
 <section>
   <div class="container">
     <div class="row">
+      
+      <div class="col-lg-4 small-post-border">
+        <article class="media">
+          
+          <div class="recent-post-thumb mr-3" style="background-image: url('https://tiensu.github.io/images/featured-post/kubernetes_cronjob.png');"></div>
+          
+          <div class="media-body">
+            <div class="mb-3 post-meta">
+              <span>By SuNT</span>
+              
+              <span class="border-bottom border-primary px-2 mx-1"></span>
+              <span>25 Jan 2021</span>
+              
+            </div>
+            <a href="https://tiensu.github.io/blog/44_kubernetes_cronjob/" class="h5 d-block mb-3">Sử dụng Kubernetes CronJob trong các bài toán AI</a>
+            <a href="https://tiensu.github.io/blog/44_kubernetes_cronjob/" class="btn btn-outline-primary">read more</a>
+          </div>
+        </article>
+      </div>
       
       <div class="col-lg-4 small-post-border">
         <article class="media">
@@ -225,25 +244,6 @@
         </article>
       </div>
       
-      <div class="col-lg-4 small-post-border">
-        <article class="media">
-          
-          <div class="recent-post-thumb mr-3" style="background-image: url('https://tiensu.github.io/images/featured-post/retrain_model.jpg');"></div>
-          
-          <div class="media-body">
-            <div class="mb-3 post-meta">
-              <span>By SuNT</span>
-              
-              <span class="border-bottom border-primary px-2 mx-1"></span>
-              <span>15 Jan 2021</span>
-              
-            </div>
-            <a href="https://tiensu.github.io/blog/41_ai_model_retraining/" class="h5 d-block mb-3">Tìm hiểu và cấu hình AI Model Retraining</a>
-            <a href="https://tiensu.github.io/blog/41_ai_model_retraining/" class="btn btn-outline-primary">read more</a>
-          </div>
-        </article>
-      </div>
-      
     </div>
   </div>
 </section>
@@ -256,6 +256,33 @@
       <div class="col-lg-8 mb-5 mb-lg-0">
         <div class="row">
           
+          
+          <div class="col-md-6 mb-4">
+            <article class="card">
+              
+              <img src="https://tiensu.github.io/images/featured-post/xgboost_evaluation_model.png" class="card-img-top" alt="XGBoost - Bài 5: Đánh giá hiệu năng của XGBoost model">
+              
+              <div class="card-body px-0">
+                
+                <a href="/categories/machine-learning"
+                  class="text-primary">Machine Learning</a>
+                
+                <a href="/categories/xgboost"
+                  class="text-primary">X g boost</a>
+                
+                <a href="https://tiensu.github.io/blog/08_evaluate-xgbosst-models/" class="h5 d-block my-3">XGBoost - Bài 5: Đánh giá hiệu năng của XGBoost model</a>
+                <div class="mb-3 post-meta">
+                  <span>By SuNT</span>
+                  
+                  <span class="border-bottom border-primary px-2 mx-1"></span>
+                  <span>10 September 2020</span>
+                  
+                </div>
+                <p class="card-text">Mục đích của việc phát triển mô hình dự đoán là tạo ra một mô hình có độ chính xác cao khi kiểm tra trên bộ dữ liệu độc lập với dữ liệu train (gọi là unseen data).</p>
+                <a href="https://tiensu.github.io/blog/08_evaluate-xgbosst-models/" class="btn btn-outline-primary">read more</a>
+              </div>
+            </article>
+          </div>
           
           <div class="col-md-6 mb-4">
             <article class="card">
@@ -398,30 +425,6 @@ Giả sử chúng ta có một bài toán phân loại sản phẩm sử dụng 
                 </div>
                 <p class="card-text">XGBoost là một thuật toán rất được quan tâm gần đây vì những ưu điểm vượt trội của nó so với các thuật toán khác.</p>
                 <a href="https://tiensu.github.io/blog/03_xgboost-model-serial-introduction/" class="btn btn-outline-primary">read more</a>
-              </div>
-            </article>
-          </div>
-          
-          <div class="col-md-6 mb-4">
-            <article class="card">
-              
-              <img src="https://tiensu.github.io/images/featured-post/37_ml_algorithms.jpg" class="card-img-top" alt="Tổng hợp các thuật toán Machine Learning">
-              
-              <div class="card-body px-0">
-                
-                <a href="/categories/machine-learning"
-                  class="text-primary">Machine Learning</a>
-                
-                <a href="https://tiensu.github.io/blog/02_machine_learning_algorithms_summary/" class="h5 d-block my-3">Tổng hợp các thuật toán Machine Learning</a>
-                <div class="mb-3 post-meta">
-                  <span>By SuNT</span>
-                  
-                  <span class="border-bottom border-primary px-2 mx-1"></span>
-                  <span>10 August 2020</span>
-                  
-                </div>
-                <p class="card-text">Bài viết này nhằm mục đích tổng hợp, tóm tắt lại các thuật toán của Machine Learning, giúp bạn đọc có cái nhìn toàn cảnh và hiểu rõ hơn về Deep Learning.</p>
-                <a href="https://tiensu.github.io/blog/02_machine_learning_algorithms_summary/" class="btn btn-outline-primary">read more</a>
               </div>
             </article>
           </div>
