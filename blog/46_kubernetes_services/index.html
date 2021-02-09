@@ -153,7 +153,13 @@
         <a href="/categories/model-deployment"
           class="text-primary">Model deployment</a>
         
-        <h2>Sử dụng Kubernetes CronJob trong các bài toán AI</h2>
+        <a href="/categories/kubernetes"
+          class="text-primary">Kubernetes</a>
+        
+        <a href="/categories/docker"
+          class="text-primary">Docker</a>
+        
+        <h2>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 5: Kubernetes Service</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
@@ -162,10 +168,19 @@
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/kubernetes_services.png" class="img-fluid w-100 mb-4" alt="Sử dụng Kubernetes CronJob trong các bài toán AI">
+        <img src="https://tiensu.github.io/images/featured-post/kubernetes_services.png" class="img-fluid w-100 mb-4" alt="Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 5: Kubernetes Service">
         
         <div class="content mb-5">
-          <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl create <span style="color:#f92672">-</span>f development<span style="color:#f92672">-</span>online<span style="color:#f92672">-</span>inference<span style="color:#f92672">.</span>yaml 
+          <p>Đây là bài viết cuối cùng về Kubernetes trên local. Bài sau (<em>nếu có</em>) thì sẽ là hướng dẫn cấu hình Kubernetes trên cloud.</p>
+<p>Trong bài này, chúng ta sẽ cùng tìm hiểu về Kubernetes Serice và áp dụng chúng vào bài toán AI.</p>
+<p><strong>1. Kubernetes Service là gì?</strong></p>
+<p>Ở bài trước, chúng ta đã biết rằng mặc dù Development rất hiệu quả trong việc giải quyết tác vụ Online Inference, nhưng nó có một nhược điểm là REST API chỉ có tác dụng trong phạm vi Cluster, không thể kết nối ra ngoài. <a href="https://kubernetes.io/docs/concepts/services-networking/service/">Service</a> chính là giải pháp để giải quyết cho vấn đề đó.</p>
+<p>Service cung cấp một <code>Stable Virtual IP (VIP)</code> với mục đích forward dữ liệu đến tới các Pods. Một tiến trình <code>kube-poluxy</code> chịu trách nhiệm ánh xạ giữa VIP và các Pods (<em>vì địa chỉ của các Pods luôn thay đổi</em>).</p>
+<p><strong>2. Làm việc với Kubernetes Service</strong></p>
+<p>Chúng ta sẽ sử dụng lại cấu hình của Deployment trong bài trước để tạo REST API cho tác vụ Online Inference trong bài toán AI. Sau đó, sử dụng Service để mở các REST API đó ra bên ngoài.</p>
+<p><em><strong>2.1 Tạo Kubernetes Deployment</strong></em></p>
+<p>Chạy các lệnh sau để tạo và kiểm tra trạng thái của Deployment, Pods:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl create <span style="color:#f92672">-</span>f development<span style="color:#f92672">-</span>online<span style="color:#f92672">-</span>inference<span style="color:#f92672">.</span>yaml 
 deployment<span style="color:#f92672">.</span>apps<span style="color:#f92672">/</span>online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>development created
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl get deployments
 NAME                           READY   UP<span style="color:#f92672">-</span>TO<span style="color:#f92672">-</span>DATE   AVAILABLE   AGE
@@ -175,13 +190,27 @@ online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-
 NAME                                            READY   STATUS        RESTARTS   AGE
 online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>development<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>d46c5c7dc<span style="color:#f92672">-</span>hrkrn   <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>     Running       <span style="color:#ae81ff">0</span>          <span style="color:#ae81ff">12</span>m
 online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>development<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>d46c5c7dc<span style="color:#f92672">-</span>r4qfz   <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>     Running       <span style="color:#ae81ff">0</span>          <span style="color:#ae81ff">12</span>m
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl expose deployment online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>development <span style="color:#f92672">--</span>type NodePort <span style="color:#f92672">--</span>name online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>service
+</code></pre></div><p><em><strong>2.2 Tạo Kubernetes Service</strong></em></p>
+<p>Sử dụng lệnh sau để tạo Service:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl expose deployment online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>development <span style="color:#f92672">--</span>type NodePort <span style="color:#f92672">--</span>name online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>service
 service<span style="color:#f92672">/</span>online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>service exposed
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl get services
+</code></pre></div><p>Một số thông tin:</p>
+<ul>
+<li><strong>type</strong>: Loại Service. Ở đây sử dụng NodePort để mở REST API thông qua Port của các Worker Node. Chi tiết về các loại Type, tham khảo tại <a href="https://kubernetes.io/docs/concepts/services-networking/service/">đây</a>.</li>
+<li><strong>name</strong>: Tên của Service đuọc tạo ra.</li>
+</ul>
+<p>Kiểm tra Service vừa tạo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span>   
 NAME                       TYPE        CLUSTER<span style="color:#f92672">-</span>IP     EXTERNAL<span style="color:#f92672">-</span>IP   PORT(S)          AGE
 kubernetes                 ClusterIP   <span style="color:#ae81ff">10.96</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0.1</span>      <span style="color:#f92672">&lt;</span>none<span style="color:#f92672">&gt;</span>        <span style="color:#ae81ff">443</span><span style="color:#f92672">/</span>TCP          <span style="color:#ae81ff">72</span>m
 online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>service   NodePort    <span style="color:#ae81ff">10.100</span><span style="color:#f92672">.</span><span style="color:#ae81ff">53.16</span>   <span style="color:#f92672">&lt;</span>none<span style="color:#f92672">&gt;</span>        <span style="color:#ae81ff">5000</span>:<span style="color:#ae81ff">31412</span><span style="color:#f92672">/</span>TCP   <span style="color:#ae81ff">3</span>m26s
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl describe services online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>service
+</code></pre></div><p>Chú ý đến 2 thông tin: EXTERNAL-IP và PORT(S). Đây là 2 thông tin để cho các yêu cầu đến truy cập vào trong các Pods.</p>
+<ul>
+<li>Giá trị <code>&lt;none&gt;</code> của EXTERNAL-IP được ngầm hiểu là IP của Worker Node, vì chúng ta đã chọn TYPE của Service là NodePort.</li>
+<li>Giá trị <code>5000:31412/TCP</code> của PORT(S) có nghĩa là yêu cầu từ bên ngoài Cluster gửi đến Port 31412 của Worker Node sẽ được chuyển tiếp đến Port 5000 của các Pods. TCP là giao thức trao đổi dữ liệu.</li>
+</ul>
+<p>Xem đầy đủ thông tin của Service:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl describe services online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>service
 Name:                     online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>service
 Namespace:                default
 Labels:                   <span style="color:#f92672">&lt;</span>none<span style="color:#f92672">&gt;</span>
@@ -198,19 +227,10 @@ Endpoints:                <span style="color:#ae81ff">192.168</span><span style=
 Session Affinity:         None
 External Traffic Policy:  Cluster
 Events:                   <span style="color:#f92672">&lt;</span>none<span style="color:#f92672">&gt;</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> kubectl logs <span style="color:#f92672">-</span>f online<span style="color:#f92672">-</span>inference<span style="color:#f92672">-</span>development<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>d46c5c7dc<span style="color:#f92672">-</span>hrkrn
-Loading model from: <span style="color:#f92672">/</span>docker<span style="color:#f92672">/</span>model<span style="color:#f92672">/</span>clf<span style="color:#f92672">.</span>joblib
- <span style="color:#f92672">*</span> Serving Flask app <span style="color:#e6db74">&#34;api&#34;</span> (lazy loading)
- <span style="color:#f92672">*</span> Environment: production
-   WARNING: This <span style="color:#f92672">is</span> a development server<span style="color:#f92672">.</span> Do <span style="color:#f92672">not</span> use it <span style="color:#f92672">in</span> a production deployment<span style="color:#f92672">.</span>
-   Use a production WSGI server instead<span style="color:#f92672">.</span>
- <span style="color:#f92672">*</span> Debug mode: on
- <span style="color:#f92672">*</span> Running on http:<span style="color:#f92672">//</span><span style="color:#ae81ff">0.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0.0</span>:<span style="color:#ae81ff">5000</span><span style="color:#f92672">/</span> (Press CTRL<span style="color:#f92672">+</span>C to quit)
- <span style="color:#f92672">*</span> Restarting <span style="color:#66d9ef">with</span> stat
- <span style="color:#f92672">*</span> Debugger <span style="color:#f92672">is</span> active<span style="color:#960050;background-color:#1e0010">!</span>
- <span style="color:#f92672">*</span> Debugger PIN: <span style="color:#ae81ff">263</span><span style="color:#f92672">-</span><span style="color:#ae81ff">920</span><span style="color:#f92672">-</span><span style="color:#ae81ff">719</span>
-<span style="color:#ae81ff">10.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">30.130</span> <span style="color:#f92672">-</span> <span style="color:#f92672">-</span> [<span style="color:#ae81ff">02</span><span style="color:#f92672">/</span>Feb<span style="color:#f92672">/</span><span style="color:#ae81ff">2021</span> <span style="color:#ae81ff">11</span>:<span style="color:#ae81ff">06</span>:<span style="color:#ae81ff">49</span>] <span style="color:#e6db74">&#34;POST /predict HTTP/1.1&#34;</span> <span style="color:#ae81ff">200</span> <span style="color:#f92672">-</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> curl <span style="color:#f92672">-</span>i <span style="color:#f92672">-</span>H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#f92672">-</span>X POST <span style="color:#f92672">-</span>d <span style="color:#e6db74">&#39;{&#34;CRIM&#34;: 15.02, &#34;ZN&#34;: 0.0, &#34;INDUS&#34;: 18.1, &#34;CHAS&#34;: 0.0, &#34;NOX&#34;: 0.614, &#34;RM&#34;: 5.3, &#34;AGE&#34;: 97.3, &#34;DIS&#34;: 2.1, &#34;RAD&#34;: 24.0, &#34;TAX&#34;: 666.0, &#34;PTRATIO&#34;: 20.2, &#34;B&#34;: 349.48, &#34;LSTAT&#34;: 24.9}&#39;</span> <span style="color:#ae81ff">10.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">30.130</span>:<span style="color:#ae81ff">31412</span><span style="color:#f92672">/</span>predict
+</code></pre></div><p>Ta có thể nhìn thấy 2 IP:PORT của 2 Pods là: 192.168.24.227:5000 và 192.168.24.228:5000</p>
+<p><em><strong>2.3 Thực hiện Online Inference</strong></em></p>
+<p>Đã cấu hình xong Service, chúng ta thử gửi một yêu cầu dự đoán từ bên ngoài Cluster xem sao:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> curl <span style="color:#f92672">-</span>i <span style="color:#f92672">-</span>H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#f92672">-</span>X POST <span style="color:#f92672">-</span>d <span style="color:#e6db74">&#39;{&#34;CRIM&#34;: 15.02, &#34;ZN&#34;: 0.0, &#34;INDUS&#34;: 18.1, &#34;CHAS&#34;: 0.0, &#34;NOX&#34;: 0.614, &#34;RM&#34;: 5.3, &#34;AGE&#34;: 97.3, &#34;DIS&#34;: 2.1, &#34;RAD&#34;: 24.0, &#34;TAX&#34;: 666.0, &#34;PTRATIO&#34;: 20.2, &#34;B&#34;: 349.48, &#34;LSTAT&#34;: 24.9}&#39;</span> <span style="color:#ae81ff">10.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">30.130</span>:<span style="color:#ae81ff">31412</span><span style="color:#f92672">/</span>predict
 HTTP<span style="color:#f92672">/</span><span style="color:#ae81ff">1.0</span> <span style="color:#ae81ff">200</span> OK
 Content<span style="color:#f92672">-</span>Type: application<span style="color:#f92672">/</span>json
 Content<span style="color:#f92672">-</span>Length: <span style="color:#ae81ff">41</span>
@@ -220,15 +240,15 @@ Date: Tue, <span style="color:#ae81ff">02</span> Feb <span style="color:#ae81ff"
 {
     <span style="color:#e6db74">&#34;prediction&#34;</span>: <span style="color:#ae81ff">12.273424794987877</span>
 }
-</code></pre></div><p><strong>3. Kết luận</strong></p>
-<p>Xong, mình đã cũng nhau tìm hiểu và sử dụng CronJob để thực hiện nhiệm vụ Batch Inference trong bài toán AI. Mình đặt lịch chạy Job mỗi phút mục đích là để nhanh chóng nhìn thấy kết quả cho lần demo này. Tùy theo yêu cầu thực tế bài toán, các bạn có thể set giá trị phù hợp cho mình.</p>
-<p>Bài viết tiếp theo, chúng ta sẽ tìm hiểu và thực hành với Development. Mời các bạn đón đọc!</p>
-<p>Source code của bài này các bạn tham khảo tại <a href="https://github.com/tiensu/Model_Deployment/tree/master/kubernetes-cronjob">đây</a>.</p>
+</code></pre></div><p>Có kết quả trả về, tức là chúng ta đã thành công, :)).</p>
+<p><strong>3. Kết luận</strong></p>
+<p>Đây là bài viết cuối cùng trong năm Canh Tý của mình. Xong bài này mình sẽ về quê đón tết cùng gia đình.</p>
+<p>Bài viết đầu tiên trong năm Nhâm Sửu mình sẽ hướng dẫn các bạn cách nhận biết hiện tượng Data Driff, một vấn đề mà theo mình rất quan trong việc giải quyết các bài toán AI thực tế. Mời các bạn đón đọc!</p>
+<p>Kính chúc mọi người năm mới AN KHANG THỊNH VƯỢNG!!!</p>
 <p><strong>8. Tham khảo</strong></p>
 <ul>
 <li><a href="https://mlinproduction.com/k8s-cronjobs/">Mlinproduction</a></li>
-<li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/">CronJob</a></li>
-<li><a href="https://crontab.guru/">Crontab</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/services-networking/service/">Kubernetes Service</a></li>
 </ul>
 
         </div>
@@ -293,6 +313,9 @@ Date: Tue, <span style="color:#ae81ff">02</span> Feb <span style="color:#ae81ff"
               href="/categories/deep-learning">Deep Learning</a>
           </li>
           <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
               href="/categories/ebook">Ebook</a>
           </li>
           <li class="mb-3"><a class="text-dark"
@@ -300,6 +323,9 @@ Date: Tue, <span style="color:#ae81ff">02</span> Feb <span style="color:#ae81ff"
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/machine-learning">Machine Learning</a>

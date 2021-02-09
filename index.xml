@@ -12,16 +12,16 @@
     
     
     <item>
-      <title>Sử dụng Kubernetes CronJob trong các bài toán AI</title>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 5: Kubernetes Service</title>
       <link>https://tiensu.github.io/blog/46_kubernetes_services/</link>
       <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/46_kubernetes_services/</guid>
-      <description>$ kubectl create -f development-online-inference.yaml deployment.apps/online-inference-development created $ kubectl get deployments NAME READY UP-TO-DATE AVAILABLE AGE hello-world 5/5 5 5 37m online-inference-development 2/2 2 2 2m11s $ kubectl get pods NAME READY STATUS RESTARTS AGE online-inference-development-5d46c5c7dc-hrkrn 1/1 Running 0 12m online-inference-development-5d46c5c7dc-r4qfz 1/1 Running 0 12m $ kubectl expose deployment online-inference-development --type NodePort --name online-inference-service service/online-inference-service exposed $ kubectl get services NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE kubernetes ClusterIP 10.</description>
+      <description>Đây là bài viết cuối cùng về Kubernetes trên local. Bài sau (nếu có) thì sẽ là hướng dẫn cấu hình Kubernetes trên cloud.</description>
     </item>
     
     <item>
-      <title>Sử dụng Kubernetes Deployment trong các bài toán AI</title>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 4: Kubernetes Deployment</title>
       <link>https://tiensu.github.io/blog/45_kubernetes_deployment/</link>
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title>Sử dụng Kubernetes CronJob trong các bài toán AI</title>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 3: Kubernetes CronJob</title>
       <link>https://tiensu.github.io/blog/44_kubernetes_cronjob/</link>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
@@ -39,7 +39,7 @@
     </item>
     
     <item>
-      <title>Sử dụng Kubernetes Job trong các bài toán AI</title>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 2: Kubernetes Job</title>
       <link>https://tiensu.github.io/blog/43_kubernetes_job/</link>
       <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
       
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title>Tìm hiểu về Kubernetes và cách áp dụng vào các bài toán AI - Kubernetes Pod</title>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 1: Kubernetes Pod</title>
       <link>https://tiensu.github.io/blog/42_kubernetes_in_ai/</link>
       <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
       

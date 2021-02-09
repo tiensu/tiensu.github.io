@@ -8,6 +8,26 @@
   </url>
   
   <url>
+    <loc>https://tiensu.github.io/tags/docker/</loc>
+    <lastmod>2021-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/docker/</loc>
+    <lastmod>2021-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/kubernetes/</loc>
+    <lastmod>2021-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/kubernetes/</loc>
+    <lastmod>2021-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tiensu.github.io/tags/model-deployment/</loc>
     <lastmod>2021-01-31T00:00:00+00:00</lastmod>
   </url>
@@ -23,12 +43,12 @@
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/blog/46_kubernetes_services/</loc>
+    <loc>https://tiensu.github.io/tags/</loc>
     <lastmod>2021-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/tags/</loc>
+    <loc>https://tiensu.github.io/blog/46_kubernetes_services/</loc>
     <lastmod>2021-01-31T00:00:00+00:00</lastmod>
   </url>
   

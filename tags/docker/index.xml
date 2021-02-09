@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/tags/docker/</link>
+    <description>Recent content in Docker on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 5: Kubernetes Service</title>
+      <link>https://tiensu.github.io/blog/46_kubernetes_services/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/46_kubernetes_services/</guid>
+      <description>Đây là bài viết cuối cùng về Kubernetes trên local. Bài sau (nếu có) thì sẽ là hướng dẫn cấu hình Kubernetes trên cloud.</description>
+    </item>
+    
+    <item>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 4: Kubernetes Deployment</title>
+      <link>https://tiensu.github.io/blog/45_kubernetes_deployment/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/45_kubernetes_deployment/</guid>
+      <description>Trong bài toán AI, nếu như Job và CronJob phù hợp nhất cho các tác vụ thực hiện không liên tục, không realtime (VD: Batch Inference, Training, &amp;hellip;) thì Deployment lại là lựa chọn tốt nhất cho các tác vụ cần chạy liên tục, realtime (VD: Online Inference, &amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 3: Kubernetes CronJob</title>
+      <link>https://tiensu.github.io/blog/44_kubernetes_cronjob/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/44_kubernetes_cronjob/</guid>
+      <description>Ở bài trước, chúng ta đã tìm hiểu và thực hành với Kubernetes Job và thấy được sự phù hợp và hiệu quả của nó đối với các tác vụ trong bài toán AI.</description>
+    </item>
+    
+    <item>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 2: Kubernetes Job</title>
+      <link>https://tiensu.github.io/blog/43_kubernetes_job/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/43_kubernetes_job/</guid>
+      <description>Trong bài trước, chúng ta đã tìm hiểu về Pod, cách tương tác với Pod và hạn chế của nó. Bài này, chúng ta sẽ làm việc với một thành phần ở mức high level hơn của Kubernetes, đó là Job.</description>
+    </item>
+    
+    <item>
+      <title>Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 1: Kubernetes Pod</title>
+      <link>https://tiensu.github.io/blog/42_kubernetes_in_ai/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/42_kubernetes_in_ai/</guid>
+      <description>Trong các bài viết trước, mình đã giới thiệu về Docker, sử dụng kết hợp với Nginx, uWSGI, Flask để deploy model trong môi trường production.</description>
+    </item>
+    
+    <item>
+      <title>Đóng gói quá trình Train AI model và Batch Inference sử dụng Docker</title>
+      <link>https://tiensu.github.io/blog/39_package_ai_model_using_docker_batch_inference/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/39_package_ai_model_using_docker_batch_inference/</guid>
+      <description>Trong bài trước, chúng ta đã tìm hiểu và sử dụng Docker để triển khai AI model theo kiểu online inference.</description>
+    </item>
+    
+    <item>
+      <title>Đóng gói AI model theo kiểu Online Inference sử dụng Docker</title>
+      <link>https://tiensu.github.io/blog/38_package_ai_model_using_docker_online_inference/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/38_package_ai_model_using_docker_online_inference/</guid>
+      <description>Đã bao giờ bạn gặp tình huống:
+Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của bạn lại không chạy?</description>
+    </item>
+    
+  </channel>
+</rss>

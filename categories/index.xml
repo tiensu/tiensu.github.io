@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>Docker</title>
+      <link>https://tiensu.github.io/categories/docker/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://tiensu.github.io/categories/kubernetes/</link>
+      <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Model Deployment</title>
       <link>https://tiensu.github.io/categories/model-deployment/</link>
       <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
