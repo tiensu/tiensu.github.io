@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Model Retraining on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/tags/model-retraining/</link>
+    <description>Recent content in Model Retraining on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/tags/model-retraining/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tìm hiểu về hiện tượng Data Driff và cách cấu hình AI Model Retraining</title>
+      <link>https://tiensu.github.io/blog/41_ai_model_data_driff_and_retraining/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/41_ai_model_data_driff_and_retraining/</guid>
+      <description>Hẳn các bạn đã biết, trong hầu hết các bài toán AI, chúng ta không chỉ train model 1 lần rồi thôi (mình không nói đến việc thử-sai trong quá trình tuning model).</description>
+    </item>
+    
+  </channel>
+</rss>
