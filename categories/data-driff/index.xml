@@ -12,15 +12,12 @@
     
     
     <item>
-      <title>Một ví dụ về hiện tượng Data Driff</title>
+      <title>Một ví dụ về hiện tượng Data Driff trong Machine Learning</title>
       <link>https://tiensu.github.io/blog/47_data_driff_cause_and_solution/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/47_data_driff_cause_and_solution/</guid>
-      <description>Ở bài trước
-3. Kết luận
-8. Tham khảo
- Mlinproduction Kubernetes Service  </description>
+      <description>Sau một thời gian nghỉ tết thì hôm nay mình đã trở lại. Trong bài viết mình sẽ cùng các bạn làm một ví dụ nhỏ về Data Driff để các bạn hiểu rõ hơn về nó.</description>
     </item>
     
   </channel>
