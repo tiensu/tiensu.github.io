@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/autoencoder"
+          class="text-primary">Autoencoder</a>
+        
+        <h2>Autoencoder với Keras, Tensorflow và Deep Learning</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>04 March 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/autoencoders.png" class="img-fluid w-100 mb-4" alt="Autoencoder với Keras, Tensorflow và Deep Learning">
+        
+        <div class="content mb-5">
+          <p>Loạt bài tiếp theo mình sẽ viết về kiến trúc Autoencoders và một số ứng dụng của chúng.</p>
+<p>Bài đầu tiên, chúng ta sẽ thảo luận Autoencoders là gì, nó có gì khác so với các Generative models khác (<em>ví dụ: GAN</em>), những ứng dụng của chúng, &hellip; Mình cũng sẽ xây dựng một Autoencoders model đơn giản sử dụng Keras và Tensorflow.</p>
+<p><strong>1. Autoencoders là gì?</strong></p>
+<p>Autoencoders là một dạng của Unsupervised Neural Network. Hoạt động của nó được mô tả như sau:</p>
+<ul>
+<li>Nhận một tập dữ liệu đầu vào (<em>input data</em>).</li>
+<li>Chuyển đổi Input Data sang một dạng biểu diễn khác trong không gian tiềm ẩn (<em>Latent Space</em>).</li>
+<li>Tái hiện lại Input Data từ Latent Space Representation.</li>
+</ul>
+<p>Xét về mặt cấu tạo, một Autoencoders model gồm 2 thành phần (<em>subnetworks</em>):</p>
+<ul>
+<li>Encoder: Nhận Input Data rồi chuyển nó sang dạng khác trong Latent Space.
+
+
+    <div style="text-align:center;">
+       <p>$s = E(x)$</p>
+    </div>
+
+</li>
+</ul>
+<p>Trong đó $x$ là Input Data, $E$ là Encoder, và $s$ là Output trong Latent Space.</p>
+<ul>
+<li>Decoder: Nhận Output của Encoder trong Latent Space, $s$, và tái hiện lại Input Data.
+
+
+    <div style="text-align:center;">
+       <p>$o = D(s)$</p>
+    </div>
+
+</li>
+</ul>
+<p>Trong đó, $o$ là Output của Decoder $D$.</p>
+<p>Công thức chung cho toàn bộ quá trình Autoencoder sẽ là:
+
+
+    <div style="text-align:center;">
+       <p>$o = D(E(x))$</p>
+    </div>
+
+</p>
+<p>Kiến trúc tổng quát của Autoencoders được minh họa như sau:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/autoencoders_1.png">
+</div>
+
+</p>
+<p>Để huấn luyện Autoencoders model, chúng ta đưa cho nó Input Data, nó sẽ cố gắng tái hiện lại Input Data bằng cách tối thiểu hóa Mean Squared Error giữa Ouput của model và Input Data. Hay nói cách khác Input Data là nhãn của chính nó.</p>
+<p>Một Autoencoders model lý tưởng khi Output của nó giống hệt với Input Data.</p>
+<p>Liệu bạn có thắc mắc là tại sao chúng ta phải tạo ra Autoencoders model, đi một vòng chỉ để tái hiện lại Input Data? Sao ta không copy luôn Input Data ra là xong chuyện???</p>
+<p>Mình cũng từng thắc mắc như bạn khi mới bắt đầu tìm hiểu về Autoencoders.</p>
+<p>Nhưng bạn nên biết rằng, giá trị thực sự của Autoencoders model nằm ở Output của Encoder trong Latent Space. Hay nói cách khác, chúng ta (<em>thường</em>) chỉ quan tâm đến Encoder và Latent Space mà không quá quan tâm đến Decoder.</p>
+<p>Một ví dụ để bạn dễ hình dung hơn. Giả sử chúng ta có một tập ảnh, mỗi ảnh có kích thước 28x28x1, tức là chúng ta phải sử dụng 28x28x1 = 784 bytes để lưu mỗi ảnh. Sử dụng Autoencoders model, chúng ta chuyển đổi ảnh đó sang một vector nhỏ hơn, chỉ còn 16 bytes trong Latent Space. Sử dụng 16 bytes của vector này, chúng ta sau đó có thể tái hiện lại ảnh ban đầu giống đến 98%. Điều này giúp ta tiết kiệm được rất nhiều không gian lưu trữ, đặc biệt khi phải truyền dữ liệu đó qua môi trường mạng Internet. Đó chính là một trong những ứng dụng của Autoencoders.</p>
+<p><strong>2. Ứng dụng của Autoencoders model</strong></p>
+<p>Kiến trúc tổng quát của Autoencoders được minh họa như sau:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/autoencoders_2.png">
+</div>
+
+</p>
+<p>Một số ứng dụng của Autoencoders trong lĩnh vực Computer Vision có thể kể đến như:</p>
+<ul>
+<li>Giảm chiểu dữ liệu (<em>Dimensionality Reduction</em>): Ứng dụng này giống như thuật toán PCA nhưng hiệu quả hơn.</li>
+<li>Giảm nhiễu dữ liệu (<em>Denoising</em>): Giảm nhiễu dữ liệu, một bước trong quá trình tiền xử lý ảnh, giúp nâng cao độ chính xác của hệ thống OCR.</li>
+<li>Phát hiện bất thường (<em>Anomaly/outlier Detection</em>): Phát hiện những điểm dữ liệu bất thường trong tập dataset, ví dụ như thiết nhãn, lệch ra khỏi phân phối chung của toàn dữ liệu. Một khi đã phát hiện được dữ liệu bất thường, ta có thể loại bỏ chúng hoặc huấn luyện lại model để tăng độ chính xác.</li>
+</ul>
+<p>Trong lĩnh vực Natual Language Processing (<em>NLP</em>), Autoencoders model giúp giải quyết các bài toán:</p>
+<ul>
+<li>Tạo ra đoạn text miêu tả nội dung bức ảnh (<em>Image Caption Generation</em>)</li>
+<li>Tóm tắt nội dung đoạn văn (<em>Text Summarization</em>)</li>
+<li>Trích xuất đăc trưng (<em>Word Embedding</em>)</li>
+</ul>
+<p><strong>3. So sánh Autoencoders và Generative Adversarial Networks (GAN)</strong></p>
+<p>Nếu bạn biết về GAN, bạn có thể nhận thấy Autoencoders và GAN có sự tương đồng về cách làm việc. Cả 2 models đề thuộc dạng Generative.</p>
+<ul>
+<li>Autoencoders: Nhận Input Data, chuyển thành một vector có số chiều nhỏ hơn trong Latent Space. Sau đó, cố gắng tái hiện lại Input Data từ các vector trong Latent Space.</li>
+<li>GAN: Nhận Input Data có số chiều nhỏ, chuyển thành một vector có số chiều lớn hơn. Sau đó, sinh ra một dữ liệu mới từ vector này, đáp ứng một tiêu chí nào đó. Mình sẽ viết một series bài về GAN trong tương lai.</li>
+</ul>
+<p>Chi tiết hơn về so sánh giữa Autoencoders và GAN, bạn có thể đọc tại <a href="https://www.quora.com/What-is-the-difference-between-Generative-Adversarial-Networks-and-Autoencoders">đây</a>.</p>
+<p><strong>4. Xây dựng một Autoencoders model đơn giản với Keras và Tensorflow</strong></p>
+<p>Chúng ta sẽ thử cùng nhau huấn luyện một Autoencoders model trên tập dữ liệu MNIST.</p>
+<p>Cấu trúc thư mục làm việc như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> tree <span style="color:#f92672">--</span>dirsfirst
+<span style="color:#f92672">.</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> sunt
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> __init__<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">└──</span> conv_autoencoder<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">├──</span> output<span style="color:#f92672">.</span>png
+<span style="color:#960050;background-color:#1e0010">├──</span> plot<span style="color:#f92672">.</span>png
+<span style="color:#960050;background-color:#1e0010">└──</span> train_conv_autoencoder<span style="color:#f92672">.</span>py
+</code></pre></div><ul>
+<li>File <code>conv_autoencoder.py</code>: Chứa lớp <code>ConvAutoencoder</code> và phương thúc <code>build</code> để xây dựng kiến trúc mạng của Autoencoders model.</li>
+<li>File <code>train_conv_autoencoder.py</code>: Huấn luyện Autoencoders model trên tập MINIST.</li>
+</ul>
+<p>Mở file <code>conv_autoencoder.py</code> và viết code như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># import the necessary packages</span>
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> BatchNormalization
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Conv2D
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Conv2DTranspose
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> LeakyReLU
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Activation
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Flatten
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Dense
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Reshape
+<span style="color:#f92672">from</span> tensorflow.keras.layers <span style="color:#f92672">import</span> Input
+<span style="color:#f92672">from</span> tensorflow.keras.models <span style="color:#f92672">import</span> Model
+<span style="color:#f92672">from</span> tensorflow.keras <span style="color:#f92672">import</span> backend <span style="color:#66d9ef">as</span> K
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConvAutoencoder</span>:
+	<span style="color:#a6e22e">@staticmethod</span>
+	<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build</span>(width, height, depth, filters<span style="color:#f92672">=</span>(<span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">64</span>), latentDim<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>):
+		<span style="color:#75715e"># initialize the input shape to be &#34;channels last&#34; along with the channels dimension itself channels dimension itself</span>
+		inputShape <span style="color:#f92672">=</span> (height, width, depth)
+		chanDim <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+		<span style="color:#75715e"># define the input to the encoder</span>
+		inputs <span style="color:#f92672">=</span> Input(shape<span style="color:#f92672">=</span>inputShape)
+		x <span style="color:#f92672">=</span> inputs
+
+		<span style="color:#75715e"># loop over the number of filters</span>
+		<span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> filters:
+			<span style="color:#75715e"># apply a CONV =&gt; RELU =&gt; BN operation</span>
+			x <span style="color:#f92672">=</span> Conv2D(f, (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>), strides<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;same&#34;</span>)(x)
+			x <span style="color:#f92672">=</span> LeakyReLU(alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>)(x)
+			x <span style="color:#f92672">=</span> BatchNormalization(axis<span style="color:#f92672">=</span>chanDim)(x)
+
+		<span style="color:#75715e"># flatten the network and then construct our latent vector</span>
+		volumeSize <span style="color:#f92672">=</span> K<span style="color:#f92672">.</span>int_shape(x)
+		x <span style="color:#f92672">=</span> Flatten()(x)
+		latent <span style="color:#f92672">=</span> Dense(latentDim)(x)
+
+		<span style="color:#75715e"># build the encoder model</span>
+		encoder <span style="color:#f92672">=</span> Model(inputs, latent, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;encoder&#34;</span>)
+        <span style="color:#66d9ef">print</span>(encoder<span style="color:#f92672">.</span>summary())
+
+		<span style="color:#75715e"># start building the decoder model which will accept the output of the encoder as its inputs</span>
+		latentInputs <span style="color:#f92672">=</span> Input(shape<span style="color:#f92672">=</span>(latentDim,))
+		x <span style="color:#f92672">=</span> Dense(np<span style="color:#f92672">.</span>prod(volumeSize[<span style="color:#ae81ff">1</span>:]))(latentInputs)
+		x <span style="color:#f92672">=</span> Reshape((volumeSize[<span style="color:#ae81ff">1</span>], volumeSize[<span style="color:#ae81ff">2</span>], volumeSize[<span style="color:#ae81ff">3</span>]))(x)
+
+		<span style="color:#75715e"># loop over our number of filters again, but this time in reverse order</span>
+		<span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> filters[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+			<span style="color:#75715e"># apply a CONV_TRANSPOSE =&gt; RELU =&gt; BN operation</span>
+			x <span style="color:#f92672">=</span> Conv2DTranspose(f, (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>), strides<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,
+				padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;same&#34;</span>)(x)
+			x <span style="color:#f92672">=</span> LeakyReLU(alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>)(x)
+			x <span style="color:#f92672">=</span> BatchNormalization(axis<span style="color:#f92672">=</span>chanDim)(x)
+
+		<span style="color:#75715e"># apply a single CONV_TRANSPOSE layer used to recover the original depth of the image</span>
+		x <span style="color:#f92672">=</span> Conv2DTranspose(depth, (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>), padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;same&#34;</span>)(x)
+		outputs <span style="color:#f92672">=</span> Activation(<span style="color:#e6db74">&#34;sigmoid&#34;</span>)(x)
+
+		<span style="color:#75715e"># build the decoder model</span>
+		decoder <span style="color:#f92672">=</span> Model(latentInputs, outputs, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;decoder&#34;</span>)
+        <span style="color:#66d9ef">print</span>(decoder<span style="color:#f92672">.</span>summary())
+
+		<span style="color:#75715e"># our autoencoder is the encoder + decoder</span>
+		autoencoder <span style="color:#f92672">=</span> Model(inputs, decoder(encoder(inputs)),
+			name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;autoencoder&#34;</span>)
+        <span style="color:#66d9ef">print</span>(autoencoder<span style="color:#f92672">.</span>summay())
+
+		<span style="color:#75715e"># return a 3-tuple of the encoder, decoder, and autoencoder</span>
+		<span style="color:#66d9ef">return</span> (encoder, decoder, autoencoder)
+</code></pre></div><p>Mở file <code>train_conv_autoencoder.py</code> và viết code như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># USAGE</span>
+<span style="color:#75715e"># python train_conv_autoencoder.py</span>
+
+<span style="color:#75715e"># set the matplotlib backend so figures can be saved in the background</span>
+<span style="color:#f92672">import</span> matplotlib
+matplotlib<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#34;Agg&#34;</span>)
+
+<span style="color:#f92672">from</span> tensorflow.compat.v1 <span style="color:#f92672">import</span> ConfigProto
+<span style="color:#f92672">from</span> tensorflow.compat.v1 <span style="color:#f92672">import</span> InteractiveSession
+
+config <span style="color:#f92672">=</span> ConfigProto()
+config<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True
+session <span style="color:#f92672">=</span> InteractiveSession(config<span style="color:#f92672">=</span>config)
+
+<span style="color:#75715e"># import the necessary packages</span>
+<span style="color:#f92672">from</span> sunt.convautoencoder <span style="color:#f92672">import</span> ConvAutoencoder
+<span style="color:#f92672">from</span> tensorflow.keras.optimizers <span style="color:#f92672">import</span> Adam
+<span style="color:#f92672">from</span> tensorflow.keras.datasets <span style="color:#f92672">import</span> mnist
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> argparse
+<span style="color:#f92672">import</span> cv2
+
+<span style="color:#75715e"># construct the argument parse and parse the arguments</span>
+ap <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-s&#34;</span>, <span style="color:#e6db74">&#34;--samples&#34;</span>, type<span style="color:#f92672">=</span>int, default<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+	help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;# number of samples to visualize when decoding&#34;</span>)
+ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-o&#34;</span>, <span style="color:#e6db74">&#34;--output&#34;</span>, type<span style="color:#f92672">=</span>str, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;output.png&#34;</span>,
+	help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path to output visualization file&#34;</span>)
+ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-p&#34;</span>, <span style="color:#e6db74">&#34;--plot&#34;</span>, type<span style="color:#f92672">=</span>str, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;plot.png&#34;</span>,
+	help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path to output plot file&#34;</span>)
+args <span style="color:#f92672">=</span> vars(ap<span style="color:#f92672">.</span>parse_args())
+
+<span style="color:#75715e"># initialize the number of epochs to train for and batch size</span>
+EPOCHS <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>
+BS <span style="color:#f92672">=</span> <span style="color:#ae81ff">32</span>
+
+<span style="color:#75715e"># load the MNIST dataset</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;[INFO] loading MNIST dataset...&#34;</span>)
+((trainX, _), (testX, _)) <span style="color:#f92672">=</span> mnist<span style="color:#f92672">.</span>load_data()
+
+<span style="color:#75715e"># add a channel dimension to every image in the dataset, then scale</span>
+<span style="color:#75715e"># the pixel intensities to the range [0, 1]</span>
+trainX <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>expand_dims(trainX, axis<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+testX <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>expand_dims(testX, axis<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+trainX <span style="color:#f92672">=</span> trainX<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;float32&#34;</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255.0</span>
+testX <span style="color:#f92672">=</span> testX<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;float32&#34;</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255.0</span>
+
+<span style="color:#75715e"># construct our convolutional autoencoder</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;[INFO] building autoencoder...&#34;</span>)
+(encoder, decoder, autoencoder) <span style="color:#f92672">=</span> ConvAutoencoder<span style="color:#f92672">.</span>build(<span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">1</span>)
+opt <span style="color:#f92672">=</span> Adam(lr<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-3</span>)
+autoencoder<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mse&#34;</span>, optimizer<span style="color:#f92672">=</span>opt)
+
+<span style="color:#75715e"># train the convolutional autoencoder</span>
+H <span style="color:#f92672">=</span> autoencoder<span style="color:#f92672">.</span>fit(
+	trainX, trainX,
+	validation_data<span style="color:#f92672">=</span>(testX, testX),
+	epochs<span style="color:#f92672">=</span>EPOCHS,
+	batch_size<span style="color:#f92672">=</span>BS)
+
+<span style="color:#75715e"># construct a plot that plots and saves the training history</span>
+N <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>, EPOCHS)
+plt<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#34;ggplot&#34;</span>)
+plt<span style="color:#f92672">.</span>figure()
+plt<span style="color:#f92672">.</span>plot(N, H<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#34;loss&#34;</span>], label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;train_loss&#34;</span>)
+plt<span style="color:#f92672">.</span>plot(N, H<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#34;val_loss&#34;</span>], label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;val_loss&#34;</span>)
+plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Training Loss and Accuracy&#34;</span>)
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Epoch #&#34;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Loss/Accuracy&#34;</span>)
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lower left&#34;</span>)
+plt<span style="color:#f92672">.</span>savefig(args[<span style="color:#e6db74">&#34;plot&#34;</span>])
+
+<span style="color:#75715e"># use the convolutional autoencoder to make predictions on the</span>
+<span style="color:#75715e"># testing images, then initialize our list of output images</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;[INFO] making predictions...&#34;</span>)
+decoded <span style="color:#f92672">=</span> autoencoder<span style="color:#f92672">.</span>predict(testX)
+outputs <span style="color:#f92672">=</span> None
+
+<span style="color:#75715e"># loop over our number of output samples</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, args[<span style="color:#e6db74">&#34;samples&#34;</span>]):
+	<span style="color:#75715e"># grab the original image and reconstructed image</span>
+	original <span style="color:#f92672">=</span> (testX[i] <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>)<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;uint8&#34;</span>)
+	recon <span style="color:#f92672">=</span> (decoded[i] <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>)<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;uint8&#34;</span>)
+
+	<span style="color:#75715e"># stack the original and reconstructed image side-by-side</span>
+	output <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>hstack([original, recon])
+
+	<span style="color:#75715e"># if the outputs array is empty, initialize it as the current</span>
+	<span style="color:#75715e"># side-by-side image display</span>
+	<span style="color:#66d9ef">if</span> outputs <span style="color:#f92672">is</span> None:
+		outputs <span style="color:#f92672">=</span> output
+
+	<span style="color:#75715e"># otherwise, vertically stack the outputs</span>
+	<span style="color:#66d9ef">else</span>:
+		outputs <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>vstack([outputs, output])
+
+<span style="color:#75715e"># save the outputs image to disk</span>
+cv2<span style="color:#f92672">.</span>imwrite(args[<span style="color:#e6db74">&#34;output&#34;</span>], outputs)
+</code></pre></div><p>Trong code đã có đầy đủ comments, hi vọng các bạn có thể hiểu được.</p>
+<p>Tiến hành chạy code (<em>mình dùng python 3.8, tensorflow 2.3.0 trong môi trường ảo anaconda</em>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python train_conv_autoencoder<span style="color:#f92672">.</span>py
+</code></pre></div><p>Output:</p>
+<ul>
+<li>Kiến trúc của Encoder:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Model: <span style="color:#e6db74">&#34;encoder&#34;</span>
+_________________________________________________________________
+Layer (type)                 Output Shape              Param <span style="color:#75715e">#   </span>
+<span style="color:#f92672">=================================================================</span>
+input_1 (InputLayer)         [(None, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">1</span>)]       <span style="color:#ae81ff">0</span>         
+_________________________________________________________________
+conv2d (Conv2D)              (None, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">32</span>)        <span style="color:#ae81ff">320</span>       
+_________________________________________________________________
+leaky_re_lu (LeakyReLU)      (None, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">32</span>)        <span style="color:#ae81ff">0</span>         
+_________________________________________________________________
+batch_normalization (BatchNo (None, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">32</span>)        <span style="color:#ae81ff">128</span>       
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">64</span>)          <span style="color:#ae81ff">18496</span>     
+_________________________________________________________________
+leaky_re_lu_1 (LeakyReLU)    (None, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">64</span>)          <span style="color:#ae81ff">0</span>         
+_________________________________________________________________
+batch_normalization_1 (Batch (None, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">64</span>)          <span style="color:#ae81ff">256</span>       
+_________________________________________________________________
+flatten (Flatten)            (None, <span style="color:#ae81ff">3136</span>)              <span style="color:#ae81ff">0</span>         
+_________________________________________________________________
+dense (Dense)                (None, <span style="color:#ae81ff">16</span>)                <span style="color:#ae81ff">50192</span>     
+<span style="color:#f92672">=================================================================</span>
+Total params: <span style="color:#ae81ff">69</span>,<span style="color:#ae81ff">392</span>
+Trainable params: <span style="color:#ae81ff">69</span>,<span style="color:#ae81ff">200</span>
+Non<span style="color:#f92672">-</span>trainable params: <span style="color:#ae81ff">192</span>
+</code></pre></div><p>Ta thấy từ kiến trúc trên, Input Data ban đầu là 28x28x1 = 784 bytes, sau khi chuyển sang Latent Space, dữ liệu chỉ còn là vector 16 bytes.</p>
+<ul>
+<li>Kiến trúc của Decoder:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Model: <span style="color:#e6db74">&#34;decoder&#34;</span>
+_________________________________________________________________
+Layer (type)                 Output Shape              Param <span style="color:#75715e">#   </span>
+<span style="color:#f92672">=================================================================</span>
+input_2 (InputLayer)         [(None, <span style="color:#ae81ff">16</span>)]              <span style="color:#ae81ff">0</span>         
+_________________________________________________________________
+dense_1 (Dense)              (None, <span style="color:#ae81ff">3136</span>)              <span style="color:#ae81ff">53312</span>     
+_________________________________________________________________
+reshape (Reshape)            (None, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">64</span>)          <span style="color:#ae81ff">0</span>         
+_________________________________________________________________
+conv2d_transpose (Conv2DTran (None, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">64</span>)        <span style="color:#ae81ff">36928</span>     
+_________________________________________________________________
+leaky_re_lu_2 (LeakyReLU)    (None, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">64</span>)        <span style="color:#ae81ff">0</span>         
+_________________________________________________________________
+batch_normalization_2 (Batch (None, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">64</span>)        <span style="color:#ae81ff">256</span>       
+_________________________________________________________________
+conv2d_transpose_1 (Conv2DTr (None, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">32</span>)        <span style="color:#ae81ff">18464</span>     
+_________________________________________________________________
+leaky_re_lu_3 (LeakyReLU)    (None, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">32</span>)        <span style="color:#ae81ff">0</span>         
+_________________________________________________________________
+batch_normalization_3 (Batch (None, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">32</span>)        <span style="color:#ae81ff">128</span>       
+_________________________________________________________________
+conv2d_transpose_2 (Conv2DTr (None, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">1</span>)         <span style="color:#ae81ff">289</span>       
+_________________________________________________________________
+activation (Activation)      (None, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">1</span>)         <span style="color:#ae81ff">0</span>         
+<span style="color:#f92672">=================================================================</span>
+Total params: <span style="color:#ae81ff">109</span>,<span style="color:#ae81ff">377</span>
+Trainable params: <span style="color:#ae81ff">109</span>,<span style="color:#ae81ff">185</span>
+Non<span style="color:#f92672">-</span>trainable params: <span style="color:#ae81ff">192</span>
+</code></pre></div><p>Ngược lại với Encoder, từ vector 16 bytes trong Latent Space, Decoder tái hiện lại Input Data với 28x28x1 = 784 bytes.</p>
+<ul>
+<li>Kiến trúc của Autoencoder:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Model: <span style="color:#e6db74">&#34;autoencoder&#34;</span>
+_________________________________________________________________
+Layer (type)                 Output Shape              Param <span style="color:#75715e">#   </span>
+<span style="color:#f92672">=================================================================</span>
+input_1 (InputLayer)         [(None, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">1</span>)]       <span style="color:#ae81ff">0</span>         
+_________________________________________________________________
+encoder (Functional)         (None, <span style="color:#ae81ff">16</span>)                <span style="color:#ae81ff">69392</span>     
+_________________________________________________________________
+decoder (Functional)         (None, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">1</span>)         <span style="color:#ae81ff">109377</span>    
+<span style="color:#f92672">=================================================================</span>
+Total params: <span style="color:#ae81ff">178</span>,<span style="color:#ae81ff">769</span>
+Trainable params: <span style="color:#ae81ff">178</span>,<span style="color:#ae81ff">385</span>
+Non<span style="color:#f92672">-</span>trainable params: <span style="color:#ae81ff">384</span>
+</code></pre></div><ul>
+<li>Đồ thị quá trình huấn luyện:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/autoencoders_3.png">
+</div>
+
+</li>
+</ul>
+<p>Ta thấy Train Loss và Validation Loss đều giảm dần khi số lượng epochs tăng và không xảy ra hiện tượng Overfitting.</p>
+<ul>
+<li>Output code Autoencoder model, so với Input Data:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/autoencoders_4.png">
+</div>
+
+</li>
+</ul>
+<p>Bên trái là Input Data, còn bên phải là Output của Autoencoder model. Gần như không có sự khác biệt dữ 2 bên.</p>
+<p><strong>5. Kết luận</strong></p>
+<p>Trong bài này, chúng ta đã cùng tìm hiểu về Autoencoders, cấu tạo, cách hoạt động, ứng dụng, cũng như sự khác nhau của nó so với GAN. Chúng ta cũng đã huấn luyện một Autoencoders đơn giản trên tập MNIST.</p>
+<p>Toàn bộ source code của bài này, các bạn có thể tham khảo tại github cá nhân của mình tại <a href="https://github.com/tiensu/Computer_Vision/tree/master/Deep_Learning/autoencoders/autoencoder_1">đây</a>.</p>
+<p>Hẹn các bạn trong các bài viết tiếp theo.</p>
+<p><strong>6. Tham khảo</strong></p>
+<ul>
+<li><a href="https://www.pyimagesearch.com/2020/02/17/autoencoders-with-keras-tensorflow-and-deep-learning/">Pyimagesearch</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

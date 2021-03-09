@@ -12,9 +12,19 @@
     
     
     <item>
+      <title>Autoencoder với Keras, Tensorflow và Deep Learning</title>
+      <link>https://tiensu.github.io/blog/48_autoencoders/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/48_autoencoders/</guid>
+      <description>Loạt bài tiếp theo mình sẽ viết về kiến trúc Autoencoders và một số ứng dụng của chúng.
+Bài đầu tiên, chúng ta sẽ thảo luận Autoencoders là gì, nó có gì khác so với các Generative models khác (ví dụ: GAN), những ứng dụng của chúng, &amp;hellip; Mình cũng sẽ xây dựng một Autoencoders model đơn giản sử dụng Keras và Tensorflow.</description>
+    </item>
+    
+    <item>
       <title>Một ví dụ về hiện tượng Data Driff trong Machine Learning</title>
       <link>https://tiensu.github.io/blog/47_a_example_data_driff/</link>
-      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/47_a_example_data_driff/</guid>
       <description>Sau một thời gian nghỉ tết thì hôm nay mình đã trở lại. Trong bài viết mình sẽ cùng các bạn làm một ví dụ nhỏ về Data Driff để các bạn hiểu rõ hơn về nó.</description>
