@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/autoencoder"
+          class="text-primary">Autoencoder</a>
+        
+        <h2>Sử dụng Autoencoders model cho bài toán Denoising Data</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>06 March 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/autoencoders_2.png" class="img-fluid w-100 mb-4" alt="Sử dụng Autoencoders model cho bài toán Denoising Data">
+        
+        <div class="content mb-5">
+          <p>Ở bài trước, chúng ta đã tìm hiểu về Autoencoders model và một số ứng dụng của nó. Trong bài này, mình sẽ cũng các bạn sử dụng Autoencoders model để thực hiện việc giảm nhiễu cho dữ liệu hình ảnh. Việc này có thể áp dụng để tăng độ chính xác của hệ thống OCR bằng cách nâng cao chất lượng của ảnh đầu vào hệ thống.</p>
+<p><strong>1. Denoising Autoencoders</strong></p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/denoising_autoencoder_1.png">
+</div>
+
+
+<p>Về bản chất, Autoencoders model cho bài toán Denoising là sự mở rộng của Autoencoders model ở bài trước. Điểm khác biệt ở chỗ, Output của Decoder không phải là Input Data (<em>có nhiễu</em>) mà là Input Data (<em>không có nhiễu</em>).</p>
+<p>Để chuẩn bị dữ liệu cho việc huấn luyện Autoencoders model phục vụ mục đích Denoising, ta có thể làm như sau:</p>
+<ul>
+<li>Chọn ra những dữ liệu (<em>gọi là tập B</em>) không có nhiễu từ tập dữ liệu đầy đủ ban đầu (<em>tập A</em>).</li>
+<li>Thêm nhiễu ngẫu nhiên vào tập B, tạo thành tập C.</li>
+<li>Huấn luyện Autoencoders model với Input Data là tập C, Output từ Decoder là tập B.</li>
+<li>Áp dụng Autoencoders model đã trên toàn bộ tập A.</li>
+</ul>
+<p><strong>2. Denoising Autoencoders với Keras và TensorFlow</strong></p>
+<p>Cấu trúc thư mục làm việc:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tree <span style="color:#f92672">--</span>dirsfirst
+<span style="color:#f92672">.</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> sunt
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> __init__<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">└──</span> conv_autoencoder<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">├──</span> output<span style="color:#f92672">.</span>png
+<span style="color:#960050;background-color:#1e0010">├──</span> plot<span style="color:#f92672">.</span>png
+<span style="color:#960050;background-color:#1e0010">└──</span> train_denoising_autoencoder<span style="color:#f92672">.</span>py
+</code></pre></div><p>Module <code>sunt</code> chứa lớp <code>conv_autoencoder.py</code> mà chúng ta đã sử dụng ở bài trước.</p>
+<p>Trọng tâm của bài này nằm ở file <code>train_denoising_autoencoder.py</code>. Sử dụng tập dữ liệu MNIST, chúng ta thêm nhiễu vào rồi huấn luyện Autoencoders model. Ở đây, nhiễu được tạo ra bằng cách sinh ngẫu nhiên dữ liệu theo phân phối chuẩn có điểm trung tâm là 0.5, độ lệch chuẩn là 0.5. Toàn bộ code của file này như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># USAGE</span>
+<span style="color:#75715e"># python train_denoising_autoencoder.py</span>
+
+<span style="color:#75715e"># set the matplotlib backend so figures can be saved in the background</span>
+<span style="color:#f92672">import</span> matplotlib
+matplotlib<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#34;Agg&#34;</span>)
+
+<span style="color:#f92672">from</span> tensorflow.compat.v1 <span style="color:#f92672">import</span> ConfigProto
+<span style="color:#f92672">from</span> tensorflow.compat.v1 <span style="color:#f92672">import</span> InteractiveSession
+
+config <span style="color:#f92672">=</span> ConfigProto()
+config<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True
+session <span style="color:#f92672">=</span> InteractiveSession(config<span style="color:#f92672">=</span>config)
+
+<span style="color:#75715e"># import the necessary packages</span>
+<span style="color:#f92672">from</span> sunt.conv_autoencoder <span style="color:#f92672">import</span> ConvAutoencoder
+<span style="color:#f92672">from</span> tensorflow.keras.optimizers <span style="color:#f92672">import</span> Adam
+<span style="color:#f92672">from</span> tensorflow.keras.datasets <span style="color:#f92672">import</span> mnist
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> argparse
+<span style="color:#f92672">import</span> cv2
+
+<span style="color:#75715e"># construct the argument parse and parse the arguments</span>
+ap <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-s&#34;</span>, <span style="color:#e6db74">&#34;--samples&#34;</span>, type<span style="color:#f92672">=</span>int, default<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+	help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;# number of samples to visualize when decoding&#34;</span>)
+ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-o&#34;</span>, <span style="color:#e6db74">&#34;--output&#34;</span>, type<span style="color:#f92672">=</span>str, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;output.png&#34;</span>,
+	help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path to output visualization file&#34;</span>)
+ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-p&#34;</span>, <span style="color:#e6db74">&#34;--plot&#34;</span>, type<span style="color:#f92672">=</span>str, default<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;plot.png&#34;</span>,
+	help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path to output plot file&#34;</span>)
+args <span style="color:#f92672">=</span> vars(ap<span style="color:#f92672">.</span>parse_args())
+
+<span style="color:#75715e"># initialize the number of epochs to train for and batch size</span>
+EPOCHS <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>
+BS <span style="color:#f92672">=</span> <span style="color:#ae81ff">32</span>
+
+<span style="color:#75715e"># load the MNIST dataset</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;[INFO] loading MNIST dataset...&#34;</span>)
+((trainX, _), (testX, _)) <span style="color:#f92672">=</span> mnist<span style="color:#f92672">.</span>load_data()
+
+<span style="color:#75715e"># add a channel dimension to every image in the dataset, then scale the pixel intensities to the range [0, 1]</span>
+trainX <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>expand_dims(trainX, axis<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+testX <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>expand_dims(testX, axis<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+trainX <span style="color:#f92672">=</span> trainX<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;float32&#34;</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255.0</span>
+testX <span style="color:#f92672">=</span> testX<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;float32&#34;</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255.0</span>
+
+<span style="color:#75715e"># sample noise from a random normal distribution centered at 0.5 (since our images lie in the range [0, 1]) and a standard deviation of 0.5</span>
+trainNoise <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(loc<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>, scale<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>, size<span style="color:#f92672">=</span>trainX<span style="color:#f92672">.</span>shape)
+testNoise <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(loc<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>, scale<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>, size<span style="color:#f92672">=</span>testX<span style="color:#f92672">.</span>shape)
+trainXNoisy <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>clip(trainX <span style="color:#f92672">+</span> trainNoise, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+testXNoisy <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>clip(testX <span style="color:#f92672">+</span> testNoise, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+
+<span style="color:#75715e"># construct our convolutional autoencoder</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;[INFO] building autoencoder...&#34;</span>)
+(encoder, decoder, autoencoder) <span style="color:#f92672">=</span> ConvAutoencoder<span style="color:#f92672">.</span>build(<span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">1</span>)
+opt <span style="color:#f92672">=</span> Adam(lr<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-3</span>)
+autoencoder<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mse&#34;</span>, optimizer<span style="color:#f92672">=</span>opt)
+
+<span style="color:#75715e"># train the convolutional autoencoder</span>
+H <span style="color:#f92672">=</span> autoencoder<span style="color:#f92672">.</span>fit(
+	trainXNoisy, trainX,
+	validation_data<span style="color:#f92672">=</span>(testXNoisy, testX),
+	epochs<span style="color:#f92672">=</span>EPOCHS,
+	batch_size<span style="color:#f92672">=</span>BS)
+
+<span style="color:#75715e"># construct a plot that plots and saves the training history</span>
+N <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>, EPOCHS)
+plt<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#34;ggplot&#34;</span>)
+plt<span style="color:#f92672">.</span>figure()
+plt<span style="color:#f92672">.</span>plot(N, H<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#34;loss&#34;</span>], label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;train_loss&#34;</span>)
+plt<span style="color:#f92672">.</span>plot(N, H<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#34;val_loss&#34;</span>], label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;val_loss&#34;</span>)
+plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Training Loss and Accuracy&#34;</span>)
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Epoch #&#34;</span>)
+plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Loss/Accuracy&#34;</span>)
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lower left&#34;</span>)
+plt<span style="color:#f92672">.</span>savefig(args[<span style="color:#e6db74">&#34;plot&#34;</span>])
+
+<span style="color:#75715e"># use the convolutional autoencoder to make predictions on the testing images, then initialize our list of output images</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;[INFO] making predictions...&#34;</span>)
+decoded <span style="color:#f92672">=</span> autoencoder<span style="color:#f92672">.</span>predict(testXNoisy)
+outputs <span style="color:#f92672">=</span> None
+
+<span style="color:#75715e"># loop over our number of output samples</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, args[<span style="color:#e6db74">&#34;samples&#34;</span>]):
+	<span style="color:#75715e"># grab the original image and reconstructed image</span>
+	original <span style="color:#f92672">=</span> (testXNoisy[i] <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>)<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;uint8&#34;</span>)
+	recon <span style="color:#f92672">=</span> (decoded[i] <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>)<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;uint8&#34;</span>)
+
+	<span style="color:#75715e"># stack the original and reconstructed image side-by-side</span>
+	output <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>hstack([original, recon])
+
+	<span style="color:#75715e"># if the outputs array is empty, initialize it as the current side-by-side image display</span>
+	<span style="color:#66d9ef">if</span> outputs <span style="color:#f92672">is</span> None:
+		outputs <span style="color:#f92672">=</span> output
+
+	<span style="color:#75715e"># otherwise, vertically stack the outputs</span>
+	<span style="color:#66d9ef">else</span>:
+		outputs <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>vstack([outputs, output])
+
+<span style="color:#75715e"># save the outputs image to disk</span>
+cv2<span style="color:#f92672">.</span>imwrite(args[<span style="color:#e6db74">&#34;output&#34;</span>], outputs)
+</code></pre></div><p>Thực hiện lệnh sau trên Terminer:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python train_denoising_autoencoder<span style="color:#f92672">.</span>py
+<span style="color:#ae81ff">2021</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">10</span> <span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">09</span>:<span style="color:#ae81ff">12.350152</span>: I tensorflow<span style="color:#f92672">/</span>core<span style="color:#f92672">/</span>common_runtime<span style="color:#f92672">/</span>gpu<span style="color:#f92672">/</span>gpu_device<span style="color:#f92672">.</span>cc:<span style="color:#ae81ff">1402</span>] Created TensorFlow device (<span style="color:#f92672">/</span>job:localhost<span style="color:#f92672">/</span>replica:<span style="color:#ae81ff">0</span><span style="color:#f92672">/</span>task:<span style="color:#ae81ff">0</span><span style="color:#f92672">/</span>device:GPU:<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">with</span> <span style="color:#ae81ff">4932</span> MB memory) <span style="color:#f92672">-&gt;</span> physical GPU (device: <span style="color:#ae81ff">0</span>, name: GeForce GTX <span style="color:#ae81ff">1660</span> Ti <span style="color:#66d9ef">with</span> Max<span style="color:#f92672">-</span>Q Design, pci bus id: <span style="color:#ae81ff">0000</span>:<span style="color:#ae81ff">01</span>:<span style="color:#ae81ff">00.0</span>, compute capability: <span style="color:#ae81ff">7.5</span>)
+[INFO] loading MNIST dataset<span style="color:#f92672">...</span>
+[INFO] building autoencoder<span style="color:#f92672">...</span>
+Epoch <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">2021</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">10</span> <span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">09</span>:<span style="color:#ae81ff">14.814333</span>: I tensorflow<span style="color:#f92672">/</span>stream_executor<span style="color:#f92672">/</span>platform<span style="color:#f92672">/</span>default<span style="color:#f92672">/</span>dso_loader<span style="color:#f92672">.</span>cc:<span style="color:#ae81ff">48</span>] Successfully opened dynamic library libcublas<span style="color:#f92672">.</span>so<span style="color:#f92672">.</span><span style="color:#ae81ff">10</span>
+<span style="color:#ae81ff">2021</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">10</span> <span style="color:#ae81ff">23</span>:<span style="color:#ae81ff">09</span>:<span style="color:#ae81ff">14.963101</span>: I tensorflow<span style="color:#f92672">/</span>stream_executor<span style="color:#f92672">/</span>platform<span style="color:#f92672">/</span>default<span style="color:#f92672">/</span>dso_loader<span style="color:#f92672">.</span>cc:<span style="color:#ae81ff">48</span>] Successfully opened dynamic library libcudnn<span style="color:#f92672">.</span>so<span style="color:#f92672">.</span><span style="color:#ae81ff">7</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0276</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0195</span>
+Epoch <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0187</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0213</span>
+Epoch <span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0177</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0182</span>
+Epoch <span style="color:#ae81ff">4</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">8</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0172</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0181</span>
+Epoch <span style="color:#ae81ff">5</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0167</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0185</span>
+Epoch <span style="color:#ae81ff">6</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0164</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0167</span>
+Epoch <span style="color:#ae81ff">7</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0162</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0161</span>
+Epoch <span style="color:#ae81ff">8</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0160</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0162</span>
+Epoch <span style="color:#ae81ff">9</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0158</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0159</span>
+Epoch <span style="color:#ae81ff">10</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0156</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0166</span>
+Epoch <span style="color:#ae81ff">11</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0155</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0164</span>
+Epoch <span style="color:#ae81ff">12</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0154</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0157</span>
+Epoch <span style="color:#ae81ff">13</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0153</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0158</span>
+Epoch <span style="color:#ae81ff">14</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0152</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0167</span>
+Epoch <span style="color:#ae81ff">15</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0151</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0157</span>
+Epoch <span style="color:#ae81ff">16</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0150</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0155</span>
+Epoch <span style="color:#ae81ff">17</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0149</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0160</span>
+Epoch <span style="color:#ae81ff">18</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0149</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0174</span>
+Epoch <span style="color:#ae81ff">19</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0148</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0155</span>
+Epoch <span style="color:#ae81ff">20</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0147</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0155</span>
+Epoch <span style="color:#ae81ff">21</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0147</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0157</span>
+Epoch <span style="color:#ae81ff">22</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0146</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0154</span>
+Epoch <span style="color:#ae81ff">23</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0146</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0156</span>
+Epoch <span style="color:#ae81ff">24</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0145</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0156</span>
+Epoch <span style="color:#ae81ff">25</span><span style="color:#f92672">/</span><span style="color:#ae81ff">25</span>
+<span style="color:#ae81ff">1875</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1875</span> [<span style="color:#f92672">==============================</span>] <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>s <span style="color:#ae81ff">4</span>ms<span style="color:#f92672">/</span>step <span style="color:#f92672">-</span> loss: <span style="color:#ae81ff">0.0145</span> <span style="color:#f92672">-</span> val_loss: <span style="color:#ae81ff">0.0154</span>
+[INFO] making predictions<span style="color:#f92672">...</span>
+</code></pre></div><p>Đồ thị thể hiện quá trình huấn luyện:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/autoencoder_denoising_1.png">
+</div>
+
+</p>
+<p>Ta thấy Train Loss và Validation Loss đều giảm dần khi số lượng epochs tăng và không xảy ra hiện tượng Overfitting.</p>
+<p>Ảnh mới sinh ra từ Autoencoders model so với ảnh đưa vào:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/autoencoder_denoising_2.png">
+</div>
+
+</p>
+<p>Bên trái là Input Data, còn bên phải là Output của Autoencoder model. Ta thấy rất rõ, nhiễu đã được khử gần như hoàn toàn.</p>
+<p><strong>5. Kết luận</strong></p>
+<p>Trong bài này, chúng ta đã cùng xây dựng một Autoencoders model để phục vụ mục đích giảm nhiễu của dữ liệu. Đây là một trong những ứng dụng rất hay của Autoencoders model, giúp nâng cao chất lượng dữ liệu trước khi đưa vào huấn luyện các mô hình DL khác, đặc biệt hữu ích trong bài toán OCR.</p>
+<p>Toàn bộ source code của bài này, các bạn có thể tham khảo tại github cá nhân của mình tại <a href="https://github.com/tiensu/Computer_Vision/tree/master/Deep_Learning/autoencoders/autoencoder_denoising">đây</a>.</p>
+<p>Hẹn các bạn trong các bài viết tiếp theo.</p>
+<p><strong>6. Tham khảo</strong></p>
+<ul>
+<li><a href="https://www.pyimagesearch.com/2020/02/24/denoising-autoencoders-with-keras-tensorflow-and-deep-learning/">Pyimagesearch</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

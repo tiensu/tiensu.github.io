@@ -6,17 +6,26 @@
     <description>Recent content in Autoencoder on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tiensu.github.io/categories/autoencoder/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Sử dụng Autoencoders model cho bài toán Denoising Data</title>
+      <link>https://tiensu.github.io/blog/49_autoencoders_denoise/</link>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/49_autoencoders_denoise/</guid>
+      <description>Ở bài trước, chúng ta đã tìm hiểu về Autoencoders model và một số ứng dụng của nó. Trong bài này, mình sẽ cũng các bạn sử dụng Autoencoders model để thực hiện việc giảm nhiễu cho dữ liệu hình ảnh.</description>
+    </item>
+    
+    <item>
       <title>Autoencoder với Keras, Tensorflow và Deep Learning</title>
-      <link>https://tiensu.github.io/blog/48_autoencoders/</link>
+      <link>https://tiensu.github.io/blog/48_autoencoders_introduction/</link>
       <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/blog/48_autoencoders/</guid>
+      <guid>https://tiensu.github.io/blog/48_autoencoders_introduction/</guid>
       <description>Loạt bài tiếp theo mình sẽ viết về kiến trúc Autoencoders và một số ứng dụng của chúng.
 Bài đầu tiên, chúng ta sẽ thảo luận Autoencoders là gì, nó có gì khác so với các Generative models khác (ví dụ: GAN), những ứng dụng của chúng, &amp;hellip; Mình cũng sẽ xây dựng một Autoencoders model đơn giản sử dụng Keras và Tensorflow.</description>
     </item>
