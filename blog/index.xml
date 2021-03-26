@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Thiết kế hệ thống cho AI model để phục vụ từ 1 đến 1 triệu người dùng</title>
+      <link>https://tiensu.github.io/blog/51_scalability_in_ai_production/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/51_scalability_in_ai_production/</guid>
+      <description>Nếu bạn là người thiết kế giải pháp cho hệ thống phần mềm, (ở công ty mình thường gọi là SA - Solution Architecture) (có sử dụng AI model hoặc không) thì bài viết này dành cho bạn!</description>
+    </item>
+    
+    <item>
       <title>Sử dụng Autoencoders model cho bài toán Abnormal/Outline Data Detection</title>
       <link>https://tiensu.github.io/blog/50_autoencoders_detect_abnormal/</link>
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>

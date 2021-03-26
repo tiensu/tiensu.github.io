@@ -6,10 +6,19 @@
     <description>Recent content in Model Deployment on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tiensu.github.io/categories/model-deployment/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Thiết kế hệ thống cho AI model để phục vụ từ 1 đến 1 triệu người dùng</title>
+      <link>https://tiensu.github.io/blog/51_scalability_in_ai_production/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/51_scalability_in_ai_production/</guid>
+      <description>Nếu bạn là người thiết kế giải pháp cho hệ thống phần mềm, (ở công ty mình thường gọi là SA - Solution Architecture) (có sử dụng AI model hoặc không) thì bài viết này dành cho bạn!</description>
+    </item>
     
     <item>
       <title>Một ví dụ về hiện tượng Data Driff trong Machine Learning</title>

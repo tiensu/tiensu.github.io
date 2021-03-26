@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/model-deployment"
+          class="text-primary">Model deployment</a>
+        
+        <a href="/categories/scalability"
+          class="text-primary">Scalability</a>
+        
+        <h2>Thiết kế hệ thống cho AI model để phục vụ từ 1 đến 1 triệu người dùng</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>15 March 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/scalability.jpg" class="img-fluid w-100 mb-4" alt="Thiết kế hệ thống cho AI model để phục vụ từ 1 đến 1 triệu người dùng">
+        
+        <div class="content mb-5">
+          <p>Nếu bạn là người thiết kế giải pháp cho hệ thống phần mềm, (<em>ở công ty mình thường gọi là SA - Solution Architecture</em>) (<em>có sử dụng AI model hoặc không</em>) thì bài viết này dành cho bạn!</p>
+<p>Đối với cá nhân mình, một SA ở công ty, công việc của mình bao gồm:</p>
+<ul>
+<li>Tiếp nhận bài toán của khách hàng (<em>KH</em>). KH có thể là các tổ chức, cá nhân ngoài công ty (<em>outsoursing</em>) hoặc chính là công ty mình nếu công ty phát tự triển sản phẩm (<em>product</em>).</li>
+<li>Cùng với đội ngũ BA, phân tích làm rõ yêu cầu của KH.</li>
+<li>Tạo tài liệu &ldquo;đề xuất phát triển&rdquo; (<em>Development Proposal</em>) để thống nhất với KH. Tài liệu này thường bao gồm các nội dung:</li>
+<li>Tóm tắt yêu cầu bài toán</li>
+<li>Đưa ra kiến trúc tổng thể giải pháp và các công nghệ sử dụng. Phần này tùy theo đối tượng KH là ai mà mình sẽ trình bày chi tiết hoặc mức tổng quát.</li>
+<li>Các chức năng mà sản phẩm (<em>phần mềm</em>) cung cấp.</li>
+<li>Kế hoạch phát triển dự án, từ thời gian nào để thời gian nào, các mốc phát triển chính.</li>
+<li>Tổ chức dự án: dự án có những ai liên quan (<em>stakeholder</em>), vai trò nhiệm vụ của mỗi người (<em>không cần tên cụ thể, chỉ cần đưa ra các vị trí trong dự án. VD: PM, SM, Developers, QA, &hellip;</em>)</li>
+<li>Chi phí dự án: liệt kê chi phí cho từng chức năng lớn, bao gồm cả phần quản lý (<em>chi phí Overhead</em>) và phát triển.</li>
+<li>Cách thức làm việc giữa đội phát triển, quản lý dự án và KH: họp, báo cáo, demo, &hellip;</li>
+<li>Các điều kiện cần, điều kiện ràng buộc và hạn chế của dự án.</li>
+<li>Trình bày tài liệu &ldquo;đề xuất phát triển&rdquo; với KH. Đây là bước rất quan trọng để thuyết phục KH. Nếu KH đồng ý với những đề xuất đưa ra thì sẽ chinh thức tiến hành thực hiện dự án.</li>
+<li>Đưa ra giải pháp chi tiết hơn cho đội phát triển dự án.</li>
+<li>Theo dõi và hỗ trợ đội phát triển dự án khi có vấn đề khó khăn về kỹ thuật xảy ra. (<em>Viêc quản lý tiến độ phát triển, làm tài liệu dự án hay giao tiếp với KH là trách nhiệm của PM</em>).</li>
+<li>Trong trường hợp đội phát triển dự án không đủ người thì SA có thể tham gia làm cùng như một Developer hoặc nếu đội dự án không đủ năng lực kỹ thuật thì SA tổ chức các buổi đào tạo, huấn luyện cho các thành viên trong đội.</li>
+</ul>
+<p>Ngoài ra, ở công ty, mình cũng đang quản lý team AI, đào tạo và phân bổ nguồn lực AI cho các dự án. Thi thoảng thì mình cũng có tham gia làm PM cho một vài dự án nếu mình cảm thấy thú vị.</p>
+<p>Chi tiết hơn về công việc của một SA cũng như cách thức làm tài liệu &ldquo;đề xuất phát triển&rdquo;, mình sẽ có 1 bài viết chi tiết sau.</p>
+<p>Quay trở lại chủ đề chính của ngày hôm nay, mình sẽ hướng dẫn các bạn cách thiết kế một hệ thống phần mềm (<em>có sử dụng công nghệ AI</em>) để nó có thể hoạt động trơn tru từ lúc bắt đầu phát triển, một vài người dùng đến lúc phục vụ hàng triệu người dùng đồng thời.</p>
+<p>Đầu tiên, chúng ta phải xác định được phạm vi của dự án, của sản phẩm. Nếu sản phẩm của ta chỉ phục vụ một số ít người dùng hoặc làm ra với mục đích demo thì chúng ta không cần phải làm theo những gì được đề cập trong bài viết này. Vì như thế chẳng khác nào &ldquo;mang dao mổ trâu giết gà&rdquo;, vừa tốn công sức lại tốn cả chi phí. Ngược lại, nếu ứng dụng làm ra hướng đến phục vụ số lượng lớn người dùng thì chúng ta phải đặc biệt quan tâm đến thiết kế ngay từ đầu. Nếu không, nó có thể chạy tốt với một vài users, nhưng khi số lượng users tăng lên, nó sẽ không thể đáp ứng được. Lúc đó, có thể chúng ta phải đập đi làm lại từ đầu, rất tốn thời gian, công sức, tiền bạc.</p>
+<p>Bài viết này dành cho các dự án đi theo hướng số 2.</p>
+<p><strong>1. On-premise hay Cloud Services</strong></p>
+<p>Cái đầu tiên bạn phải nghĩ đến là hạ tầng phát triển và triển khai. Có 2 lựa chọn cho các bạn là: On-premise và Cloud Services.</p>
+<p>Mỗi cái đều có ưu, nhược điểm riêng, bạn có thể tham khảo ở <a href="https://www.google.com/search?q=compare+on+premise+v%C3%A0+cloud+services&amp;newwindow=1&amp;sxsrf=ALeKk01AMCBjfaS_eXMT16CLOyWLxe_jPQ%3A1616664525422&amp;ei=zVdcYLWkGeqLr7wP8JyP-Ag&amp;oq=compare+on+premise+v%C3%A0+cloud+services&amp;gs_lcp=Cgdnd3Mtd2l6EANQ30lYyVtg1VtoAnACeAGAAX6IAdYJkgEDNy41mAEAoAEBqgEHZ3dzLXdpesABAQ&amp;sclient=gws-wiz&amp;ved=0ahUKEwj1vojWkMvvAhXqxYsBHXDOA48Q4dUDCA0&amp;uact=5">đây</a></p>
+<p>Về cơ bản thì Cloud Services lợi nhiều hơn hại. Nếu như ở local, chúng ta phải tự xây dựng từ đầu thông qua các thư viện/framework như Docker, Nginx, uWSGI, Kubernetes, &hellip; thì trên Cloud hỗ trợ chúng ta rất nhiều trong việc &ldquo;Scalability&rdquo; sản phẩm thông qua các dịch vụ mà nó cung cấp. Chúng ta chỉ cần hiểu rõ chức năng, mục đích của từng service để sử dụng đúng mục đích, tránh lãng phí tiền bạc không cần thiết. Và mình cũng khuyến khích các bạn sử dụng Cloud cho mục đích này.</p>
+<p>Một số nhà cung cấp Cloud Services khá phổ biến hiện này là AWS, GCP, Azure. Mình chọn GCP để làm ví dụ trình bày trong bài này. Các bạn hoàn toàn có thể áp dụng cho các Cloud Services khác một cách tương tự, chỉ cần hiểu rõ các services của chúng là được.</p>
+<p><strong>2. Bước đầu triển khai ứng dụng AI</strong></p>
+<p>Giả sử, chúng ta đã huấn luyện thành công một AI model, độ chính xác như mong muốn. Chúng ta cũng tạo ra một API đơn giản (<em>sử dụng Flask, uWSGI, Nginx, &hellip;</em>) để nhận các yêu cầu dự đoán (<em>inference</em>) gửi đến model.</p>
+<p>Trên GCP, chúng ta tạo ra một VM Instance (<em>nên chon VM Instance dành riêng cho các tác vụ DL, bởi vì nó được tối ưu và bao gồm đầy đủ các thư viện cần thiết như TF, Cuda, &hellip;</em>) và copy toàn bộ dự án của chúng ta lên đó. Cấu hình cho phép HTTP traffic từ bên ngoài kết nối đến VM Instance đó.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/gcp_one_instance.png">
+</div>
+
+
+<p>Thử gửi một request đến AI model, kết quả trả về không khác gì khi chạy trên local. Bước đầu, như vậy là thành công.</p>
+<p><strong>3. Cấu hình CI/CD Pipeline</strong></p>
+<p>Sau một vài ngày (<em>tuần</em>) sử dụng, chúng ta muốn thay đổi model, thay đổi thư viện sử dụng. Chúng ta bắt đầu nhận ra một số bất cập:</p>
+<ul>
+<li>Việc triển khai yêu cầu rất nhiều thao tác thủ công, mất nhiều thời gian.</li>
+<li>Không có sự đồng bộ giữa các phiên bản của AI model cũng như các thư viện sử dụng.</li>
+<li>Khó khăn trong việc debug khi xảy ra lỗi trong quá trình sử dụng.</li>
+</ul>
+<p>Để giải quyết 2 khó khăn đầu tiên, chúng ta bổ sung thêm CI/CD Pipeline (<em>CD - Continuous integration, CI - Continuous deployment</em>). Pipeline này sẽ tự động hóa việc tạo, kiểm thử và triển khai sản phẩm. Trên local, một số framework hỗ trợ việc này, bao gồm <a href="https://www.jenkins.io/">Jenkins</a>, <a href="https://circleci.com/">CircleCI</a>. Trên GCP, Pipeline này được triển khai thành <a href="https://cloud.google.com/cloud-build">Cloud Build service</a>.</p>
+<p>Khó khăn còn lại có thể vượt qua bằng cách thêm 2 services là <a href="https://cloud.google.com/monitoring">Monitoring</a> và <a href="https://cloud.google.com/logging">Logging</a>. Một khi có 2 services này, chúng ta có thể biết được toàn bộ quá trình hoạt động của hệ thống, và từ đó biết được chính xác nguyên nhân của lỗi (<em>nếu có</em>).</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/gcp_ci-cd.png">
+</div>
+
+
+<p>Để thuận tiện hơn nữa, chúng ta nên đóng gói toàn bộ dự án trong một Docker Container, sau đó mới đặt Container đó trong VM Instance. Mỗi lần thêm mới hay cập nhật thư viện, AI model, chúng ta chỉ cần thay đổi trong file Dockerfile, Rebuild lại Container rồi Redeploy. Mọi thứ trở nên rất đơn giản và dễ dàng. Có rất nhiều Docker Container được xây dựng sẵn cho mục đích phục vụ các bài toán DL. Bạn hoàn toàn có thể tải về và sử dụng chúng miễn phí.</p>
+<p><strong>4. Scaling</strong></p>
+<p>Sau một thời gian sử dụng, ứng dụng của chúng ta đã trở nên phổ biến, số lượng người dùng ngày càng tăng lên. Và VM Instance ban đầu bắt đầu bộc lộ những yếu điểm:</p>
+<ul>
+<li>Thời gian đáp ứng lâu hơn</li>
+<li>Chẳng may VM Instance gặp sự cố thì toàn bộ users không thể sử dụng được ứng dụng.</li>
+</ul>
+<p>Lúc này, chúng ta cần đến Scaling. Có 3 loại Scaling:</p>
+<ul>
+<li>Vertical Scaling hay Scaling Up: Tăng cấu hình phần cứng bằng cách thêm CPU, Memory, GPU, Storage vào VM Instance đang sử dụng, làm cho nó có đủ sức mạnh để xử lý đồng thời nhiều yêu cầu đến từ số lượng lớn người dùng. Việc làm này tất nhiên là không thể diễn ra liên tục, nó phải có giới hạn nhất định. Hơn nữa, nếu VM Instance này bị chết thì toàn bộ hệ thống cũng chết theo.</li>
+<li>Horizontal Scaling hay Scaling Out: Tạo thêm các VM Instance mới bằng cách nhân bản VM Instance hiện tại. Các yêu cầu gửi đến sẽ được phân phối đồng đều trên tất cả các VM Instances. Loại Scaling này thường được sử dụng nhiều hơn.</li>
+<li>Scaling Down: Ngược lại với 2 loại Scaling trên, tức là giảm cấu hình phần cứng hoặc giảm số VM Instances sử dụng khi số lượng người dùng giảm.</li>
+</ul>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/gcp_vertical-scaling.png">
+</div>
+
+
+<p>Đối với Scaling Out, làm thế nào để phân phối các yêu cầu từ người dùng đến các VM Instances? câu trả lời là <a href="https://cloud.google.com/load-balancing">Load Balancing</a>. Load Balancer chịu trách nhiệm điều tiết traffic ngang qua tất cả các VM Instances, làm tăng tính sẵn sàng phục vụ của toàn hệ thống. Nếu một VM Instance bị chết, Load Balancer sẽ chuyển Traffic đến các Instance khác và Scaling Out sẽ giúp tạo ra VM Instance mới để thay thế VM Instance bị chết. Nói chung, ứng dụng của chúng ta vẫn hoạt động bình thường.</p>
+<p>Load Balancer cũng cung cấp các cơ chế mã hóa, bảo mật, xác thực, và kiểm tra sức khỏe các kết nối (<em>health connections checks</em>). Monitoring và Debugging cũng được tích hợp trong Load Balancer.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/gcp_horizontal-scaling.png">
+</div>
+
+
+<p>Số lượng VM Instance được thêm mới là không có giới hạn, tùy thuộc vào nhu cầu bài toán. Ngoài ta, các VM Instances có thể được tạo ra ở các khu vực địa lý khác nhau để tối ưu hóa việc gửi nhận và xử lý Traffic.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/gcp_scaling-out.png">
+</div>
+
+
+<p>Đến lúc này, nhìn chung hệ thống của chúng ta đã có thể chạy ổn định nếu như không có gì bất thường xảy ra. Nhưng nếu như có gì bất thường xảy ra thì sao?</p>
+<p><strong>5. Auto Scaling</strong></p>
+<p>Giả sử tại một số thời điểm, ví dụ như các ngày lễ tết, số lượng Request đến hệ thống tăng lên đột biến. Đây là một <em>common case</em> mà chúng ta thường thấy, chúng được gọi chung với cái tên là <code>sudden spikes in traffic</code>.</p>
+<p>Vậy làm thế nào để giải quyết tình huống này?</p>
+<p>Bạn có thể nghĩ đến việc Scaling Out hệ thống để đáp ứng yêu cầu này. Nhưng khi nào thì thực hiện Scaling Out và Scaling Out bao nhiêu cho đủ. Chúng ta không thể (<em>không nên</em>) tạo ra các VM Instances một cách tùy ý, vì như vậy sẽ tốn rất nhiều tiền. Mọi thứ sử dụng trên hạ tầng Cloud đều phải trả tiền. Auto Scaling là giải pháp cho những tình huống như thế này. Nó là một phương pháp được sử dụng trong điện toán đám mây để thay đổi số lượng tài nguyên tính toán dựa trên tải. Thông thường, điều này có nghĩa là số lượng phiên bản VM Instances tăng lên hoặc giảm xuống, dựa trên một số chỉ số (<em>metrics</em>).</p>
+<p>Có 2 loại Auto Scaling:</p>
+<ul>
+<li>Schedule Scaling: Sử dụng khi chúng ta biết trước rằng Traffic sẽ thay đổi tại các thời điểm nào đó. Và để đáp ứng, chúng ta sẽ đặt lịch cho hệ thống tự động Scaling Out/Down tại những thời đỉểm đó.</li>
+<li>Dynamic Scaling: Sử dụng khi chúng ta không biết trước chính xác thời điểm nào lượng Traffic sẽ thay đổi. Vì thế, chúng ta sẽ cấu hình để hệ thống giám sát một số Metrics, khi các Metrics này vượt quá một ngưỡng nào đó thì các VM Instances sẽ tự động được tạo ra để đáp ứng đủ lượng Traffic. Các Metrics ở đây có thể là phần trăm sử dụng CPU, bộ nhớ, hay thời gian đáp ứng yêu cầu, &hellip; Ví dụ, chúng ta cấu hình để hệ thống tạo ra số VM Instances gấp đôi khi phần trăm sử dụng của CPU vượt quá 90%, và khi phần trăm này giảm xuống nhỏ hơn 40% thì số lượng VM Instances cũng được giảm giống như trạng thái bình thường.</li>
+</ul>
+<p><strong>6. Caching</strong></p>
+<p>Có một cách khác rất hiệu quả để giảm thời gian đáp ứng yêu cầu, đó là sử dụng cơ chế Caching. Cơ chế này có thể áp dụng được khi hệ thống của bạn có những yêu cầu đến giống hệt nhau. Khi đó, model của chúng ta chỉ phải xử lý yêu cầu lần đầu, kết quả từ model được lưu trong bộ nhớ Cache. Các yêu cầu đến sau mà giống yêu cầu này thì kết quả sẽ được lấy ra từ bộ nhớ Cache đó. Việc lấy kết quả ra từ từ bộ nhớ Cache thường nhanh hơn rất nhiều so với việc xử lý của model. Tuy nhiên, cũng cần phải lưu ý khi sử dụng cơ chế Caching, đó là phải thiết lập thời gian Time Out cho bộ nhớ Cache. Hết thời gian này mà kết quả nào ko được lấy ra để sử dụng thì sẽ tự động bị xóa khỏi bộ nhớ Cache.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/gcp_cache.png">
+</div>
+
+
+<p><strong>7. Monitoring, Logging &amp; Alerts</strong></p>
+<p>Monitoring cũng là một phần không thể thiếu được của bất kỳ hệ thống phục vụ số đông người dùng nào. Mặc dù chúng ta có thể tự tin tạo ra một sản phẩm rất tốt, rất hoàn hảo, chạy trơn tru nhưng chúng ta không thể nào dự đoán hết được những lỗi có thể xảy ra trong suốt quá trình hoạt động của ứng dụng. Lỗi có thể đến từ nguyên nhân khách quan: mất mạng, mất điện, &hellip; hoặc chủ quan: code sai, &hellip; Nếu hệ thống chỉ phục vụ một vài người thì thi thoảng xảy ra lỗi cũng không phải vấn đề gì quá lớn lao. Nhưng nếu số lượng Users là hàng nghìn, hàng triệu thì mỗi phút không hoạt động sẽ làm tổn tất của chúng ta rất rất nhiều tiền. Đó là lý do chúng ta cần Monitor, Logging hệ thống và Alert khi xảy ra sự cố, để chúng ta có thể nhanh chóng nhận ra và khắc phục sự cố đó nhanh nhất có thể.</p>
+<p>Hầu hết các nền tảng Cloud đều cung cấp cơ chế Monitor, Loging &amp; Alert dưới dạng các Services của họ. Thông thường các bước để cấu hình Monitor, Logging &amp; Alert sẽ là:</p>
+<ul>
+<li>Định nghĩa các Metrics và giám sát chúng liên tục  (<em>real-time</em>) trong suốt quá hoạt động của hệ thống.</li>
+<li>Trực quan hóa các Metrics đó trên Dashboard dưới dạng các biểu đồ để theo dõi sự thay đổi của chúng theo thời gian (<em>real-time</em>).</li>
+<li>Thông báo đến người quản trị khi có hiện tượng bất thường xảy ra.</li>
+</ul>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/gcp_error-reporting.png">
+</div>
+
+
+<p>Có được cả 3 cơ chế này trong hệ thống, chúng ta có thể yên tâm ngủ ngon mỗi tối, vì mọi hoạt động của hệ thống đều đang được giám sát và điều khiển. Chúng ta chỉ phải quan tâm khi nhận được cảnh báo, báo cáo lỗi xảy ra.</p>
+<p>Những thứ mà mình đã trình bày từ đầu cho đến bước này có thể áp dụng cho tất cả các loại phần mềm nói chung, trong đó có phần mềm sử dụng AI model. Tuy nhiên, riêng với dạng phần mềm có dính dáng đến AI model, chúng ta sẽ phải làm thêm một số bước khác, đặc thù hơn như dưới đây.</p>
+<p><strong>8. Retraining AI Model</strong></p>
+<p>Ở các bài trước mình đã trình bày về hiện tượng Data Driff và sự cần thiết phải Retraining model. Bạn có thể xem lại tại <a href="https://tiensu.github.io/blog/41_ai_model_data_driff_and_retraining/">đây</a> và ở <a href="https://tiensu.github.io/blog/40_ai_model_registry/">đây</a>.</p>
+<p>Để có thể Retraining AI model thì chúng ta phải có dữ liệu mới. Dữ liệu này có thể chính là lịch sử hoạt động của model cũ, hoặc đến từ các phản hồi của KH, của người dùng. Do đó, chúng ta cần có một nơi để lưu trữ những dữ liệu như thế này, chúng ta cần một Database.</p>
+<p>Xét về loại Database, chúng ta có thể hơi băn khoăn một chút là nên sử dụng loại Database nào? SQL hay NoSQL. Chi tiết so sánh giữa 2 loại này, các bạn có thể xem thêm tại <a href="https://www.google.com/search?q=compare+sql+and+nosql&amp;oq=compare+SQL+and+&amp;aqs=chrome.1.69i57j0i19l7.7671j1j1&amp;client=ubuntu&amp;sourceid=chrome&amp;ie=UTF-8">đây</a>. Còn riêng về khía cạnh Scability thì cả 2 lại Database này đều có thể đáp ứng được, mặc dù nói một cách thành thực thì NoSQL có nhiều điểm mạnh hơn SQL trong cá bài toán kiểu như này. Cá nhận mình thì khuyên các bạn sử dụng NoSQL.</p>
+<p>Có đủ data rồi thì chúng ta có thể tiến hành Retraining model theo cách đã trình bày trong bài <a href="https://tiensu.github.io/blog/41_ai_model_data_driff_and_retraining/">này</a> và bài [này]](<a href="https://tiensu.github.io/blog/40_ai_model_registry/)">https://tiensu.github.io/blog/40_ai_model_registry/)</a>.</p>
+<p>Có 2 điều cần chú ý ở đây:</p>
+<ul>
+<li>Các model hoàn toàn độc lập với nhau vì chúng được lưu trong các Docker Container riêng biệt.</li>
+<li>Bản thân model được lưu ở Storage service của Cloud Platform, như S3 của AWS hay <a href="https://cloud.google.com/storage">Storage</a> của GCP.</li>
+</ul>
+<p>Một điều nữa cũng rất quan trọng, đó là không phải lúc nào model mới tạo ra cũng tốt hơn model cũ đang sử dụng. Vì thế, chúng ta phải sử dụng song song cả 2 model đồng thời 1 thời gian để đánh giá, so sánh tính hiệu quả của chúng. Đó chính là phương pháp <a href="https://hbr.org/2017/06/a-refresher-on-ab-testing">A/B Testing</a>. Để phân phối Traffic, chúng ta có thể cấu hình Load Balancer gửi đến mỗi model tương ứng. Ví dụ, ban đầu chỉ gửi 5% đến model mới, 95% đến model cũ, sau đó tăng dần lượng Traffic lên model mới cho đến khi đủ thông tin để kết luận rằng nó tốt hơn model cũ. Khi đó, chúng ta sẽ thay thế hoàn toàn model cũ bằng model mới.</p>
+<p><strong>9. Offline Inference</strong></p>
+<p>Không phải bài toán AI nào cũng yêu cầu phải đáp ứng yêu cầu một cách tức thời. Trong chuyên môn, người ta gọi đó là Online Inference. Còn một loại khác mà model sẽ chỉ trả về kết quả tại một số thời điểm nhất định sau khi nhận được yêu cầu. Đó là kiểu Offline Inference hay Batch Inference, dựa trên cơ chế làm việc bất đồng bộ trong hệ thống. Một thằng thì cứ gửi yêu cầu, sau đó làm việc khác mà không phải chờ nhận kết quả. Một thằng thì cứ thong thả, gom đủ một số lượng yêu cầu nhất định mới trả lời một lần, rồi gửi thông báo đến cho thằng gửi yêu cầu đó.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/gcp_offline-inference.png">
+</div>
+
+
+<p>Để làm được việc này, chúng ta cần đến một kiểu dịch vụ, gọi là Message Queue. Nó là một dạng của dịch vụ không đồng bộ với giao tiếp dịch vụ. Message Queue lưu trữ các thông điệp đến từ một nhà sản xuất (<em>Producer</em>) và đảm bảo rằng mỗi thông báo sẽ chỉ được xử lý một lần bởi một người tiêu dùng (<em>Consumer</em>) duy nhất. Một Message Queue có thể có nhiều Producers và nhiều Consumers.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/google-cloud-pub-sub.png">
+</div>
+
+
+<p><strong>10. Kết luận</strong></p>
+<p>Như vậy là mình đã trình bày xong một cách tổng quát cách thức xây dựng kiến trúc hệ thống phần mềm có sử dụng AI model để phục vụ số lượng Users lớn. Thực tế thì tùy từng bài toán cụ thể mà các bạn có thể thay đổi, tối ưu hóa cho phù hợp với mục đích của các bạn. Hi vọng bài viết này mang lại những kiến thức bổ ích cho mọi người. Hẹn gặp lại các bạn trong những bài viết sau!</p>
+<p><strong>11. Tham khảo</strong></p>
+<ul>
+<li><a href="https://theaisummer.com/scalability/">Theaisummer</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

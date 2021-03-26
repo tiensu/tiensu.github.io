@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scalability on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/scalability/</link>
+    <description>Recent content in Scalability on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/categories/scalability/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thiết kế hệ thống cho AI model để phục vụ từ 1 đến 1 triệu người dùng</title>
+      <link>https://tiensu.github.io/blog/51_scalability_in_ai_production/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/51_scalability_in_ai_production/</guid>
+      <description>Nếu bạn là người thiết kế giải pháp cho hệ thống phần mềm, (ở công ty mình thường gọi là SA - Solution Architecture) (có sử dụng AI model hoặc không) thì bài viết này dành cho bạn!</description>
+    </item>
+    
+  </channel>
+</rss>
