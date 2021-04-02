@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Bài toán Face Recognition</title>
+      <link>https://tiensu.github.io/blog/52_face_recognition/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/52_face_recognition/</guid>
+      <description>1. Giới thiệu chung
+Face Recognition là bài toán nhận dạng và xác thực người dựa vào khuôn mặt của họ.</description>
+    </item>
+    
+    <item>
       <title>Thiết kế hệ thống cho AI model để phục vụ từ 1 đến 1 triệu người dùng</title>
       <link>https://tiensu.github.io/blog/51_scalability_in_ai_production/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>

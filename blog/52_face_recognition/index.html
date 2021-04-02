@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/face-recognition"
+          class="text-primary">Face recognition</a>
+        
+        <h2>Bài toán Face Recognition</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>20 March 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/face_reg.jpeg" class="img-fluid w-100 mb-4" alt="Bài toán Face Recognition">
+        
+        <div class="content mb-5">
+          <p><strong>1. Giới thiệu chung</strong></p>
+<p>Face Recognition là bài toán nhận dạng và xác thực người dựa vào khuôn mặt của họ. Đối với con người thì đó là một nhiệm vụ rất đơn giản, thậm chí là ở trong những điều kiện môi trường khác nhau, tuổi tác thay đổi, đội mũ, đeo kính, &hellip; Tuy nhiên, đối với máy tính thì nó vẫn còn là một thử thách khó khăn trong vài thập kỷ qua cho đến tận ngày nay. Trong thời đại bùng nổ của trí tuệ nhân tạo, tận dụng sức mạnh của các thuật toán DL và lượng dữ liệu vô cùng lớn, chúng ta có thể tạo ra các models hiện đại, cho phép biểu diễn khuôn mặt thành các vectors đặc trưng trong không gian nhiều chiều. Để từ đó, máy tính có thể thực hiện nhận diện ra từng người riêng biệt, mà thậm chí còn vượt qua khả năng của con người trong một số trường hợp.</p>
+<p><strong>2. Phân loại</strong></p>
+<p>Face Recognition có thể chia thành 3 bài toán nhỏ:</p>
+<ul>
+<li>Face Authentication: Hạn chế quyền truy cập của một người đến một nguồn tài nguyên nào đó.</li>
+<li>Face Verification: Xác nhận một người phù hợp với ID của họ.</li>
+<li>Face Identification: Gán chính xác tên của người.</li>
+</ul>
+<p>Ba bài toán này thực ra chỉ khác nhau ở mục đích sử dụng kết quả nhận diện khuôn mặt vào việc gì, còn về bản chất vẫn là phân loại xem khuôn mặt cần nhận diện có thuộc vào nhóm nào trong bộ dữ liệu cho trước hay không?</p>
+<p>Tất cả những bài toán này đều cần phải được giải quyết trong cả 3 trường hợp:</p>
+<ul>
+<li>Người trong ảnh</li>
+<li>Người trong file video</li>
+<li>Người thực (<em>stream real-time từ camera</em>)</li>
+</ul>
+<p>Tuy nhiên, cũng lại xuất hiện thêm một bài toán con con nữa, đó là đôi khi chúng ta cần phân biệt đâu là người thật, đâu là người giả (<em>người trong video hay ảnh</em>). Vì nếu chúng ta đối xử với cả 3 trường hợp đều như nhau thì rất có thể kẻ gian sẽ lợi dụng để truy cập trái phép vào hệ thống thông qua một bức ảnh, cái mà rất dễ dàng có được.</p>
+<p><strong>3. Luông xử lý của bài toán Face Recognition</strong></p>
+<p>Bài toán Face Recognition bắt buộc phải bao gồm tối thiếu 3 bước sau:</p>
+<ul>
+<li>Bước 1: Face Detection - Xác định vị trí của khuôn mặt trong ảnh (<em>hoặc video frame</em>). Vùng này sẽ được đánh dấu bằng một hình chữ nhật bao quanh.</li>
+<li>Bước 2: Face Extraction (<em>Face Embedding</em>) - Trích xuất đặc trưng của khuôn mặt thành một vector đặc trưng trong không gian nhiều chiểu (<em>thường là 128 chiều</em>).</li>
+<li>Bước 3: Face Classification (<em>Face Authentication - Face Verification - Face Identification</em>).</li>
+</ul>
+<p>Ngoài 3 bước trên, trong thực tế chúng ta thường bổ sung thêm một số bước để tăng độ chính xác nhận diện:</p>
+<ul>
+<li>Image Preprocessing: Xử lý giảm nhiễu, giảm mờ, giảm kích thước, chuyển sang ảnh xám, chuẩn hóa, &hellip;</li>
+<li>Face Aligment: Nếu ảnh khuôn mặt bị nghiêng thì căn chỉnh lại sao cho ngay ngắn.</li>
+<li>Kết hợp nhiều phương pháp khác nhau tại bước 3.</li>
+</ul>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/face_reg_flow.png">
+</div>
+
+
+<p><strong>3. Face Detection</strong></p>
+<p>Face Detection là bước đầu tiên trong bài toán Face Recognition, có vai trò rất lớn trong việc nâng cao độ chính xác của toàn bộ hệ thống. Đầu vào của nó là một bức ảnh có chứa mặt người, đầu ra của nó sẽ là các tọa độ của vùng chứa khuôn mặt, thường thể hiện bằng một hình chữ nhật bao quanh khuôn mặt đó.</p>
+<p>Có 2 phương pháp tiếp cận để giải quyết vấn đề ở bước này:</p>
+<ul>
+<li>
+<p>Feature-based: Sử dụng các bộ lọc thủ công (<em>hand-crafted filters</em>) để tìm kiếm và định vị vị trí khuôn mặt trong ảnh. Phương pháp này rất nhanh và hiệu quả trong điều kiện gần lý tưởng, nhưng không hiệu quả trong điều kiện phức tạp hơn.</p>
+<ul>
+<li>
+<p>Điều kiện gần lý tưởng
+
+
+        <div style="text-align:center">
+            <img style="height:auto" src="/images/post/face_detection_1.webp">
+        </div>
+        
+</p>
+</li>
+<li>
+<p>Điều kiện phức tạp hơn
+
+
+        <div style="text-align:center">
+            <img style="height:auto" src="/images/post/face_detection_2.webp">
+        </div>
+        
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Image-based: Sử dụng các thuật toán DL để học và tự động định vị vị trí khuôn mặt dựa trên toàn bộ bức ảnh. Ưu điểm của phương pháp này là độ chính xác cao hơn so với phương pháp Feature-based, nhưng tốc độ thực hiện thì lại chậm hơn. Tùy theo điều kiện cụ thể của từng bài toán mà ta chọn phương pháp phù hợp. VD: chạy trên thiết bị nào (<em>PC hay Embedded Device</em>), có cần Real-time hay không, điều kiện môi trường xung quanh ra sao, &hellip;</p>
+</li>
+</ul>
+<p>Dưới đây là bảng tổng hợp các thư viện và thuật toán cho mỗi phương pháp này:</p>
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/face_detector.png">
+    </div>
+
+
+<p>Nhìn chung, phương pháp Image-based có sử dụng các thuật toán DL nên độ chính xác cao hơn so với phương pháp Feature-based. Nhưng đổi lại, xét về tốc độ thực hiện thì Feature-based lại là kẻ chiến thắng. Tuy nhiên, điều này chỉ biểu hiện rõ rệt nếu chúng ta chạy trên các thiết bị có cấu hình thấp, kiểu như các thiết bị nhúng, còn nếu chạy trên PC hay server thì sự khác biệt về tốc độ thực thi giữa 2 phương pháp là không đáng kể.</p>
+<p><strong>4. Face Embedding</strong></p>
+<p>Đây là bước thứ 2 trong bài toán Face Recognition. Input của nó là bức ảnh khuôn mặt đã tìm ra ở bước 1, còn Output là một Vector nhiều chiều thể hiện đặc trưng của khuôn mặt đó.</p>
+<p>Hai thuật toán phổ biến nhất hiện nay để thực hiện Face Embedding là FaceNet và VGGNet.</p>
+<ul>
+<li>FaceNet được tạo ra bởi Florian Schroff và đồng nghiệp tại Google. Họ đã miêu tả nó trong bài báo năm 2015 với tiêu đề &ldquo;<em>FaceNet: A Unified Embedding for Face Recognition and Clustering</em>&quot;. Ý tưởng của FaceNet được gọi là <em>Triplet Loss</em>, cho phép hình ảnh được mã hóa hiệu quả dưới dạng vectơ đặc trưng, để từ đó tính toán và đối sánh độ tương đồng nhanh chóng thông qua các phép tính khoảng cách trong không gian. Hệ thống của họ đã đạt được kết quả <em>state-of-the-art</em>.</li>
+</ul>
+<p><em>FaceNet, that directly learns a mapping from face images to a compact Euclidean space where distances directly correspond to a measure of face similarity. [&hellip;] Our method uses a deep convolutional network trained to directly optimize the embedding itself, rather than an intermediate bottleneck layer as in previous deep learning approaches. To train, we use triplets of roughly aligned matching / non-matching face patches generated using a novel online triplet mining method.</em>
+<strong>— FaceNet: A Unified Embedding for Face Recognition and Clustering, 2015.</strong></p>
+<ul>
+<li>VGGFace được phát triển bởi Omkar Parkhi và đồng nghiệp từ Visual Geometry Group (VGG) tại Oxford. Nó được mô tả trong bài báo năm 2015 của họ có tiêu đề <em>Deep
+Face Recognition</em>. Trọng tâm chính của họ là thu thập một tập dữ liệu đào tạo rất lớn và sử dụng tập dữ liệu này để đào tạo một mô hình CNN rất sâu về khả năng nhận diện khuôn mặt.</li>
+</ul>
+<p><em>&hellip; we show how a very large scale dataset (2.6M images, over 2.6K people) can be assembled by a combination of automation and human in the loop</em>
+<strong>— Deep Face Recognition, 2015.</strong></p>
+<p>Cả 2 thuật toán này đều có Pre-trained model. Chúng ta hoàn toàn có thể sử dụng chúng một cách miễn phí trong các dự án của mình. Mình sẽ đi chi tiết hơn về cách dùng mỗi thuật toán này trong các bài tiếp theo.</p>
+<p><strong>5. Face Classification</strong></p>
+<p>Nhiệm vụ của bước này là phân loại khuôn mặt vào các nhóm xác định trước trong tập dữ liệu, dựa vào Vector đặc trưng của chúng. Chúng ta có 3 phương pháp:</p>
+<ul>
+<li>Dựa vào khoảng cách: Tính toán và so sánh khoảng cách giữa các Vectors. Khoảng cách càng nhỏ chứng tỏ các Vectors càng giống nhau. Thuật toán kNN là đại diện tiêu biểu cho việc sử dụng khoảng cách để phân loại, ta có thể áp dụng nó. Khoảng cách ở đây có thể sử dụng công thức Cosine hoặc Euclidean. Ưu điểm của phương pháp này là đơn giản, thực thi nhanh nếu số lượng khuôn mặt không nhiều. Nhược điểm là độ chính xác không cao, tốc độ thực thi giảm nếu số lượng khuôn mặt tăng lên.</li>
+<li>Sử dụng ML: Ta có thể dùng các Vectors đặc trưng của khuôn mặt để huấn luyện một ML model, với các thuật toán như SVM, Decision Tree, &hellip; Thuật toán SVM thường được sử dụng nhiều hơn. Phương pháp này cân bằng giữa tốc độ thực hiện và độ chính xác.</li>
+<li>Sử dụng DL: Tương tự vậy, ta cũng có thể huấn luyện một DL model đơn giản (<em>3-5 FC layers</em>) từ các Vectors đặc trưng của khuôn mặt. Phương pháp này thường có độ chính xác cao nhất (<em>nếu DL model đủ tốt</em>), nhưng tốc độ thực hiện lại chậm nhất.</li>
+</ul>
+<p>Ngoài ra, trong các bài toán thực tế, để tăng độ chính xác lên cao nhất có thể, chúng ta có thể kết hợp phương pháp 1 và 3, hoặc phương pháp 1 và 2.</p>
+<p><strong>10. Kết luận</strong></p>
+<p>Như vậy là mình đã trình bày xong một cách tổng quát về bài toán toàn Face Recognition đến các bạn. Hi vọng là các bạn đã có được cái nhìn toàn cảnh về nó, làm tiền đề để đi sâu hơn về mỗi phương pháp, thuật toánTrong 2 bài viết tiếp theo, mình sẽ thực hiện bài toàn này bằng thuật toán FaceNet và VGGFace. Mời các bạn đón đọc.</p>
+<p><strong>11. Tham khảo</strong></p>
+<ul>
+<li><a href="https://theaisummer.com/scalability/">Theaisummer</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
