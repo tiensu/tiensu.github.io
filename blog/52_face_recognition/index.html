@@ -251,13 +251,12 @@
 <p>Đây là bước thứ 2 trong bài toán Face Recognition. Input của nó là bức ảnh khuôn mặt đã tìm ra ở bước 1, còn Output là một Vector nhiều chiều thể hiện đặc trưng của khuôn mặt đó.</p>
 <p>Hai thuật toán phổ biến nhất hiện nay để thực hiện Face Embedding là FaceNet và VGGNet.</p>
 <ul>
-<li>FaceNet được tạo ra bởi Florian Schroff và đồng nghiệp tại Google. Họ đã miêu tả nó trong bài báo năm 2015 với tiêu đề &ldquo;<em>FaceNet: A Unified Embedding for Face Recognition and Clustering</em>&quot;. Ý tưởng của FaceNet được gọi là <em>Triplet Loss</em>, cho phép hình ảnh được mã hóa hiệu quả dưới dạng vectơ đặc trưng, để từ đó tính toán và đối sánh độ tương đồng nhanh chóng thông qua các phép tính khoảng cách trong không gian. Hệ thống của họ đã đạt được kết quả <em>state-of-the-art</em>.</li>
+<li>FaceNet được tạo ra bởi Florian Schroff và đồng nghiệp tại Google. Họ đã miêu tả nó trong bài báo năm 2015 với tiêu đề <a href="https://arxiv.org/abs/1503.03832">FaceNet: A Unified Embedding for Face Recognition and Clustering</a>. Ý tưởng của FaceNet được gọi là <em>Triplet Loss</em>, cho phép hình ảnh được mã hóa hiệu quả dưới dạng vectơ đặc trưng, để từ đó tính toán và đối sánh độ tương đồng nhanh chóng thông qua các phép tính khoảng cách trong không gian. Hệ thống của họ đã đạt được kết quả <em>state-of-the-art</em>.</li>
 </ul>
 <p><em>FaceNet, that directly learns a mapping from face images to a compact Euclidean space where distances directly correspond to a measure of face similarity. [&hellip;] Our method uses a deep convolutional network trained to directly optimize the embedding itself, rather than an intermediate bottleneck layer as in previous deep learning approaches. To train, we use triplets of roughly aligned matching / non-matching face patches generated using a novel online triplet mining method.</em>
 <strong>— FaceNet: A Unified Embedding for Face Recognition and Clustering, 2015.</strong></p>
 <ul>
-<li>VGGFace được phát triển bởi Omkar Parkhi và đồng nghiệp từ Visual Geometry Group (VGG) tại Oxford. Nó được mô tả trong bài báo năm 2015 của họ có tiêu đề <em>Deep
-Face Recognition</em>. Trọng tâm chính của họ là thu thập một tập dữ liệu đào tạo rất lớn và sử dụng tập dữ liệu này để đào tạo một mô hình CNN rất sâu về khả năng nhận diện khuôn mặt.</li>
+<li>VGGFace được phát triển bởi Omkar Parkhi và đồng nghiệp từ Visual Geometry Group (VGG) tại Oxford. Nó được mô tả trong bài báo năm 2015 của họ có tiêu đề <a href="http://www.bmva.org/bmvc/2015/papers/paper041/index.html">Deep Face Recognition</a>. Trọng tâm chính của họ là thu thập một tập dữ liệu đào tạo rất lớn và sử dụng tập dữ liệu này để đào tạo một mô hình CNN rất sâu về khả năng nhận diện khuôn mặt.</li>
 </ul>
 <p><em>&hellip; we show how a very large scale dataset (2.6M images, over 2.6K people) can be assembled by a combination of automation and human in the loop</em>
 <strong>— Deep Face Recognition, 2015.</strong></p>
@@ -270,11 +269,17 @@ Face Recognition</em>. Trọng tâm chính của họ là thu thập một tập
 <li>Sử dụng DL: Tương tự vậy, ta cũng có thể huấn luyện một DL model đơn giản (<em>3-5 FC layers</em>) từ các Vectors đặc trưng của khuôn mặt. Phương pháp này thường có độ chính xác cao nhất (<em>nếu DL model đủ tốt</em>), nhưng tốc độ thực hiện lại chậm nhất.</li>
 </ul>
 <p>Ngoài ra, trong các bài toán thực tế, để tăng độ chính xác lên cao nhất có thể, chúng ta có thể kết hợp phương pháp 1 và 3, hoặc phương pháp 1 và 2.</p>
-<p><strong>10. Kết luận</strong></p>
-<p>Như vậy là mình đã trình bày xong một cách tổng quát về bài toán toàn Face Recognition đến các bạn. Hi vọng là các bạn đã có được cái nhìn toàn cảnh về nó, làm tiền đề để đi sâu hơn về mỗi phương pháp, thuật toánTrong 2 bài viết tiếp theo, mình sẽ thực hiện bài toàn này bằng thuật toán FaceNet và VGGFace. Mời các bạn đón đọc.</p>
-<p><strong>11. Tham khảo</strong></p>
+<p><strong>6. Kết luận</strong></p>
+<p>Trong bài viết này, mình đã cùng các bạn khám phá bài toán Face Recognition, cụ thể:</p>
 <ul>
-<li><a href="https://theaisummer.com/scalability/">Theaisummer</a></li>
+<li>Face Recognition là một vấn đề chung của việc xác định hoặc xác minh người trong ảnh và video.</li>
+<li>Face Recognition là một quá trình bao gồm Face Detection, Face Embedding và Face Recongition.</li>
+<li>Các thuật tóan, các mô hình có thể sử dụng tại từng giai đoạn và ưu/nhược điểm của chúng.</li>
+</ul>
+<p>Trong bài tiếp theo, mình sẽ hướng dẫn bạn cách thực hiện bài toán Face Identification và Face Verification bằng mô hình VGGFace2. Mời các bạn đón đọc!</p>
+<p><strong>7. Tham khảo</strong></p>
+<ul>
+<li><a href="https://machinelearningmastery.com/deep-learning-for-computer-vision/">Machinelearningmastery</a></li>
 </ul>
 
         </div>

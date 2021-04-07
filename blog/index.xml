@@ -12,6 +12,26 @@
     
     
     <item>
+      <title>Thực hiện Face Recognition với FaceNet</title>
+      <link>https://tiensu.github.io/blog/54_face_recognition_facenet/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/54_face_recognition_facenet/</guid>
+      <description>1. Nhắc lại bài toán Face Recognition
+Face Recognition là bài toán nhận diện người dựa vào khuôn mặt của họ trong hình ảnh hoặc video.</description>
+    </item>
+    
+    <item>
+      <title>Thực hiện Face Identification và Verification với VGGFace2</title>
+      <link>https://tiensu.github.io/blog/53_face_recognition_vggface/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/53_face_recognition_vggface/</guid>
+      <description>1. Nhắc lại bài toán Face Recognition
+Face Recognition là bài toán nhận diện người dựa vào khuôn mặt của họ trong hình ảnh hoặc video.</description>
+    </item>
+    
+    <item>
       <title>Bài toán Face Recognition</title>
       <link>https://tiensu.github.io/blog/52_face_recognition/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>

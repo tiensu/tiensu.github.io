@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/face-recognition"
+          class="text-primary">Face recognition</a>
+        
+        <h2>Thực hiện Face Identification và Verification với VGGFace2</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>25 March 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/face_reg_2.jpg" class="img-fluid w-100 mb-4" alt="Thực hiện Face Identification và Verification với VGGFace2">
+        
+        <div class="content mb-5">
+          <p><strong>1. Nhắc lại bài toán Face Recognition</strong></p>
+<p>Face Recognition là bài toán nhận diện người dựa vào khuôn mặt của họ trong hình ảnh hoặc video. Hai trong số các bài toán của Face Recognition là:</p>
+<ul>
+<li>Face Verification: Ánh xạ 1-1, giữa khuôn mặt của một người đưa vào hệ thống nhận diện với một người đã biết trước. Face Verification trả lời câu hỏi: Đây có phải là anh/chị/ông/bà A không?</li>
+<li>Face Identification: Ánh xạ 1-nhiều, giữa giữa khuôn mặt của một người đưa vào hệ thống nhận diện với một tập những người đã biết trước trong CSDL. Face Identification trả lời câu hỏi: Đây là ai?</li>
+</ul>
+<p>Trong bài này, chúng ta sẽ sử dụng VGGFace2 model (<em>đã được Trained trên tập dữ liệu <a href="http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/meta/identity_meta.csv">MS-Celeb-1M</a></em>) để thực hiện bài toán Face Recognition.</p>
+<p><strong>2. VGGFace model.</strong></p>
+<p>VGG model được tạo ra bởi các nhà khoa học trong nhóm Visual Geometry Group (VGG) thuộc trường đại học Oxford. Đến thời điểm hiện tại, nó có 2 phiên bản: VGGFace và VGGFace2.</p>
+<p><em><strong>2.1 VGGFace</strong></em></p>
+<p>VGGFace model được công bố vào năm 2015 trong bài báo <a href="http://www.bmva.org/bmvc/2015/papers/paper041/index.html">Deep Face Recognition</a> bởi Omkar Parkhi và đồng nghiệp. Đóng góp lớn nhất của bài báo là miêu tả cách thức thu thập một số lượng lớn dữ liệu để huấn luyện một CNN model (<em>2.6M images, 2.6K people</em>). Tập dữ liệu này sau đó được sử dụng làm cơ sở để phát triển các model CNN cho các nhiệm vụ Face Recognition như Face Identification và Face Verification. Cụ thể, các models được đào tạo trên tập dữ liệu rất lớn, sau đó được định giá trên tập dữ liệu nhận dạng khuôn mặt điểm chuẩn, chứng tỏ rằng mô hình có hiệu quả trong việc tạo ra các đặc điểm tổng quát từ khuôn mặt.</p>
+<p>Bài báo cũng mô tả quá trình đào tạo một bộ phân loại khuôn mặt. Trước tiên sử dụng hàm kích hoạt Softmax trong lớp đầu của CNN model ra để phân loại khuôn mặt theo từng người. Lớp này sau đó được loại bỏ để đầu ra của mạng CNN là một biểu diễn đặc trưng Vector của khuôn mặt, được gọi là Face Embedding. Sau đó, model được đào tạo thêm, thông qua tinh chỉnh, để khoảng cách Euclid giữa các Vectos của cùng một người nhỏ nhất có thể và các Vectos của 2 người khác nhau lớn nhất có thể. Điều này đạt được bằng cách sử dụng Triplet Loss.</p>
+<p>Mạng CNN ở đây sử dụng theo kiểu kiến trúc của VGG, với các khối lớp có kích thước Kernel nhỏ, hàm kích hoạt ReLU. Tiếp theo là các lớp Max Pooling và cuối cùng là các lớp Fully Connected làm nhiệm vụ phân loại tại phần cuối của mạng. Chính vì sử dụng kiến trúc của họ VGG nên model này có tên là VGGFace.</p>
+<p><strong>2.2 VGGFace 2</strong></p>
+<p>Qiong Cao và đồng nghiệp đã cho ra đời VGGFace2 trong bài báo có tiêu đề <a href="https://arxiv.org/abs/1710.08092">VGGFace2: A Dataset For Recognizing Faces Across Pose And Age</a>. Vẫn là ý tưởng sử dụng lượng lớn dữ liệu như VGGFace, nhưng kích thước dữ liệu của VGGFace2 lớn hơn rất nhiều. Cụ thể, có tổng số 3.31 triệu ảnh của 9131 người khác nhau, tức trung bình mỗi người có 362.6 ảnh trong bộ dataset của VGGFace2. Phần lớn những ảnh này được thu thập từ Google Image Search với sự đa dạng về giới tính, tuổi tác, màu da, tư thế, sắc tộc, điều kiện môi trường, &hellip; Có một điều khác so với VGGFace, đó là VGGFace2 không sử dụng kiến trúc của họ VGG, thay vào đó, nó sử dụng ResNet-50 hoặc SqueezeNet-ResNet-50. Những models này đều được đánh giá trên tập dữ liệu chuẩn, và đều đạt được <em>state-of-the-art</em>. Tuy nhiên, có lẽ vì chung ý tưởng là sử dụng lượng dữ liệu lớn như VGGFace nên nó vẫn lấy cái tên VGGFace2.</p>
+<p><strong>3. Cài đặt thư viện keras-vggface</strong></p>
+<p>Các tác giả của VGGFace/VGFFace2 cung cấp mã nguồn cho các models của họ, cũng như các Pre-trained models mà chúng ta có thể tải xuống và sử dụng được. Các Pre-trained models này được viết bằng Caffe và PyTorch, không có cho TensorFlow hoặc Keras. Mặc dù vậy, chúng ta hoàn toàn có thể chuyển đổi từ Caffe/Pytorch sang Tensorflow/Keras một cách dễ dàng. Và thực tế là có khá nhiều người đã làm sẵn việc này cho chúng ta. Nổi bật trong số đó là dự án <em>keras-vggface</em> của tác giả Refik Can Malli1. Thư viện này có thể được cài đặt thông qua pip:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> pip install git<span style="color:#f92672">+</span>https:<span style="color:#f92672">//</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>rcmalli<span style="color:#f92672">/</span>keras<span style="color:#f92672">-</span>vggface<span style="color:#f92672">.</span>git
+</code></pre></div><p>Nếu cài đặt thành công, bạn sẽ nhận được thông báo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Successfully installed keras<span style="color:#f92672">-</span><span style="color:#ae81ff">2.4</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span> keras<span style="color:#f92672">-</span>vggface<span style="color:#f92672">-</span><span style="color:#ae81ff">0.6</span> pyyaml<span style="color:#f92672">-</span><span style="color:#ae81ff">5.4</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>Kiểm tra lại bằng cách import vào trong code python:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># check version of keras_vggface</span>
+<span style="color:#f92672">import</span> keras_vggface
+<span style="color:#75715e"># print version</span>
+<span style="color:#66d9ef">print</span>(keras_vggface<span style="color:#f92672">.</span>__version__)
+</code></pre></div><p>Output:</p>
+<pre><code>0.6
+</code></pre><p><strong>4. Detect Faces</strong></p>
+<p>Trước khi có thể thực hiện nhận dạng khuôn mặt, chúng ta cần phát hiện khuôn mặt. Đó là quá trình tự động định vị các khuôn mặt trong một bức ảnh và khoanh vùng chúng bằng cách vẽ một hộp giới hạn xung quanh phạm vi của chúng. Trong bài viêt này, chúng ta sẽ sử dụng <a href="https://arxiv.org/pdf/1604.02878.pdf">Multi-Task Cascaded Convolutional Neural Network</a>, để phát hiện khuôn mặt. Đây là một mô hình học sâu hiện đại để phát hiện khuôn mặt, được mô tả trong bài báo năm 2016 có tiêu đề <em>Joint Face Detection and Alignment Using Multitask Cascaded Convolutional Networks</em>.</p>
+<p>Cài đặt MTCNN từ dự án <a href="https://github.com/ipazc/mtcnn">ipazc/mtcnn</a> của <em>Ivan de Paz</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span>  pip install mtcnn
+</code></pre></div><p>Kiểm tra cài đặt:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># confirm mtcnn was installed correctly</span>
+<span style="color:#f92672">import</span> mtcnn
+<span style="color:#75715e"># print version</span>
+<span style="color:#66d9ef">print</span>(mtcnn<span style="color:#f92672">.</span>__version__)
+</code></pre></div><p>Kết quả thực thi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">0.1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>
+</code></pre></div><p>Chúng ta sẽ sử dụng thư viện mtcnn để tạo phát hiện khuôn mặt, sau đó trích xuất khuôn mặt bằng VGGFace model trong các phần tiếp theo.</p>
+<p>Trước tiên, mở một hình ảnh dưới dạng một mảng NumPy, sử dụng hàm <em>Matplotlib imread()</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># load image from file</span>
+pixels <span style="color:#f92672">=</span> pyplot<span style="color:#f92672">.</span>imread(filename)
+</code></pre></div><p>Tiếp theo, gọi thư viện MTCNN và sử dụng nó để phát hiện tất cả các khuôn mặt trong ảnh đã mở:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># create the detector, using default weights</span>
+detector <span style="color:#f92672">=</span> MTCNN()
+<span style="color:#75715e"># detect faces in the image</span>
+results <span style="color:#f92672">=</span> detector<span style="color:#f92672">.</span>detect_faces(pixels)
+</code></pre></div><p>Kết quả là danh sách các hộp giới hạn khuôn mặt, trong đó mỗi hộp xác định góc dưới bên trái của hộp giới hạn, cũng như chiều rộng và chiều cao. Giả sử chỉ có một khuôn mặt trong ảnh cho thí nghiệm lần này, chúng ta có thể xác định tọa độ pixel của hộp giới hạn như sau.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># extract the bounding box from the first face</span>
+x1, y1, width, height <span style="color:#f92672">=</span> results[<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;box&#39;</span>]
+x2, y2 <span style="color:#f92672">=</span> x1 <span style="color:#f92672">+</span> width, y1 <span style="color:#f92672">+</span> height
+</code></pre></div><p>Sử dụng kết quả bên trên để cắt ra hình ảnh khuôn mặt:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># extract the face</span>
+face <span style="color:#f92672">=</span> pixels[y1:y2, x1:x2]
+</code></pre></div><p>VGGFace model yêu cầu mỗi khuôn mặt có kích thước 224x224. Vì thế, chúng ta sẽ resize lại hình ảnh khuôn mặt, sử dụng thư viện PIL:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># resize pixels to the model size</span>
+image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>fromarray(face)
+image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>resize((<span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">224</span>))
+face_array <span style="color:#f92672">=</span> asarray(image)
+</code></pre></div><p>Code đầy đủ, bắt đầu từ việc mở hình ảnh, phát hiện khuôn mặt và hiển thị kết quả như bên dưới (<em>file face_detection.py</em>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> argparse
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> asarray
+<span style="color:#f92672">from</span> mtcnn.mtcnn <span style="color:#f92672">import</span> MTCNN
+
+<span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+<span style="color:#f92672">from</span> tensorflow.compat.v1.keras.backend <span style="color:#f92672">import</span> set_session
+config <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>ConfigProto()
+config<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True  <span style="color:#75715e"># dynamically grow the memory used on the GPU</span>
+config<span style="color:#f92672">.</span>log_device_placement <span style="color:#f92672">=</span> True  <span style="color:#75715e"># to log device placement (on which device the operation ran)</span>
+sess <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>Session(config<span style="color:#f92672">=</span>config)
+set_session(sess)
+
+<span style="color:#75715e"># construct the argument parse and parse the arguments</span>
+ap <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-i&#34;</span>, <span style="color:#e6db74">&#34;--image&#34;</span>, required<span style="color:#f92672">=</span>True, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path to the image&#34;</span>)
+args <span style="color:#f92672">=</span> vars(ap<span style="color:#f92672">.</span>parse_args())
+
+<span style="color:#75715e"># extract a single face from a given photograph</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_face</span>(filename, required_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">224</span>)):
+	<span style="color:#75715e"># load image from file</span>
+	pixels <span style="color:#f92672">=</span> pyplot<span style="color:#f92672">.</span>imread(filename)
+	<span style="color:#75715e"># create the detector, using default weights</span>
+	detector <span style="color:#f92672">=</span> MTCNN()
+	<span style="color:#75715e"># detect faces in the image</span>
+	results <span style="color:#f92672">=</span> detector<span style="color:#f92672">.</span>detect_faces(pixels)
+	<span style="color:#75715e"># extract the bounding box from the first face</span>
+	x1, y1, width, height <span style="color:#f92672">=</span> results[<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;box&#39;</span>]
+	x2, y2 <span style="color:#f92672">=</span> x1 <span style="color:#f92672">+</span> width, y1 <span style="color:#f92672">+</span> height
+	<span style="color:#75715e"># extract the face</span>
+	face <span style="color:#f92672">=</span> pixels[y1:y2, x1:x2]
+	<span style="color:#75715e"># resize pixels to the model size</span>
+	image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>fromarray(face)
+	image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>resize(required_size)
+	face_array <span style="color:#f92672">=</span> asarray(image)
+	<span style="color:#66d9ef">return</span> face_array
+
+<span style="color:#75715e"># load the photo and extract the face</span>
+pixels <span style="color:#f92672">=</span> extract_face(args[<span style="color:#e6db74">&#39;image&#39;</span>])
+<span style="color:#75715e"># plot the extracted face</span>
+pyplot<span style="color:#f92672">.</span>imshow(pixels)
+<span style="color:#75715e"># show the plot</span>
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Chạy code trên:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python face_detection<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>image sharon_stone1<span style="color:#f92672">.</span>jpg
+</code></pre></div><p>Kết quả:
+
+
+    <div style="text-align:center">
+        <img style="height:auto" src="/images/post/face_detection_vggface.png">
+    </div>
+
+</p>
+<p><strong>5. Face Recognition</strong></p>
+<p>Trong phần này, chúng ta sẽ sử dụng mô hình VGGFace2 để thực hiện Face Recognition với ảnh của những người nổi tiếng từ Wikipedia. Một mô hình VGGFace có thể được tạo ra bằng cách sử dụng hàm tạo <em>VGGFace()</em> và chỉ định loại mô hình cần tạo thông qua đối số mô hình.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+model <span style="color:#f92672">=</span> VGGFace(model<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">✬</span><span style="color:#f92672">...</span><span style="color:#960050;background-color:#1e0010">✬</span>)
+</code></pre></div><p>Thư viện <em>keras-vggface</em> cung cấp ba Pre-trained VGGModel models, model VGGFace1 sử dụng kiến trúc <em>vgg16</em> (<em>mặc định</em>) và model VGGFace2 sử dụng kiến trúc <em>resnet50</em> hoặc <em>senet50</em>. Ví dụ dưới đây tạo VGGFace2 model với kiến trúc <em>resnet50</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of creating a face embedding</span>
+<span style="color:#f92672">from</span> keras_vggface.vggface <span style="color:#f92672">import</span> VGGFace
+<span style="color:#75715e"># create a vggface2 model</span>
+model <span style="color:#f92672">=</span> VGGFace(model<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;resnet50&#39;</span>)
+<span style="color:#75715e"># summarize input and output shape</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Inputs: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> model<span style="color:#f92672">.</span>inputs)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Outputs: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> model<span style="color:#f92672">.</span>outputs)
+</code></pre></div><p>Lần đầu tiên khi model được tạo, thư viện sẽ tải xuống các trọng số của mô hình và lưu chúng trong thư mục <em>./keras/models/vggface/</em> trong thư mục <em>/home/<!-- raw HTML omitted --></em>. Kích thước của <em>weights</em> cho kiểu <em>resnet50</em> là khoảng 158MB, vì vậy quá trình tải xuống có thể mất vài phút tùy thuộc vào tốc độ kết nối internet của bạn. Chạy ví dụ trên sẽ in ra kích thước của đầu vào và đầu ra của mô hình. Chúng ta có thể thấy rằng mô hình mong đợi đầu vào là hình ảnh của khuôn mặt có kích thước 244 × 244 và kết quả đầu ra sẽ là một dự đoán của lớp là 8.631 người. Điều này là bởi vì mô hình đã được huấn luyện với 8.631 người trong tập dữ liệu MS-Celeb-1M.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Inputs: [<span style="color:#f92672">&lt;</span>tf<span style="color:#f92672">.</span>Tensor <span style="color:#960050;background-color:#1e0010">✬</span>input_1:<span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">✬</span> shape<span style="color:#f92672">=</span>(<span style="color:#960050;background-color:#1e0010">?</span>, <span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">3</span>) dtype<span style="color:#f92672">=</span>float32<span style="color:#f92672">&gt;</span>]
+Outputs: [<span style="color:#f92672">&lt;</span>tf<span style="color:#f92672">.</span>Tensor <span style="color:#960050;background-color:#1e0010">✬</span>classifier<span style="color:#f92672">/</span>Softmax:<span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">✬</span> shape<span style="color:#f92672">=</span>(<span style="color:#960050;background-color:#1e0010">?</span>, <span style="color:#ae81ff">8631</span>) dtype<span style="color:#f92672">=</span>float32<span style="color:#f92672">&gt;</span>]
+</code></pre></div><p>Mô hình Keras này có thể được sử dụng trực tiếp để dự đoán xác suất của một khuôn mặt nhất định thuộc về một hoặc nhiều hơn tám nghìn người nổi tiếng được biết đến; ví dụ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># perform prediction</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)
+</code></pre></div><p>Sau khi dự đoán được đưa ra, các chỉ số của các phần tử với xác suất lớn nhất có thể được ánh xạ với tên của những người nổi tiếng và có thể lấy ra năm tên hàng đầu có xác suất cao nhất. Hành vi này được cung cấp bởi hàm <em>decode predictions()</em> trong thư viện <em>keras-vggface</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># convert prediction into names</span>
+results <span style="color:#f92672">=</span> decode_predictions(yhat)
+<span style="color:#75715e"># display most likely results</span>
+<span style="color:#66d9ef">for</span> result <span style="color:#f92672">in</span> results[<span style="color:#ae81ff">0</span>]:
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">: </span><span style="color:#e6db74">%.3f%%</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (result[<span style="color:#ae81ff">0</span>], result[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Trước khi chúng ta có thể đưa ra dự đoán với một khuôn mặt, các giá trị pixel phải được chia tỷ lệ giống như cách mà dữ liệu đã được chuẩn bị khi mô hình VGGFace được huấn luyện. Điều này có thể đạt được bằng cách sử dụng hàm <em>prerocess_input()</em> được cung cấp trong thư viện <em>keras-vggface</em> và chỉ định <em>version=2</em> để phù hợp với VGGFace2 model. (<em>version=1 dành cho VGGFace</em>).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># convert one face into samples</span>
+pixels <span style="color:#f92672">=</span> pixels<span style="color:#f92672">.</span>astype(<span style="color:#960050;background-color:#1e0010">✬</span>float32<span style="color:#960050;background-color:#1e0010">✬</span>)
+samples <span style="color:#f92672">=</span> expand_dims(pixels, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+<span style="color:#75715e"># prepare the face for the model, e.g. center pixels</span>
+samples <span style="color:#f92672">=</span> preprocess_input(samples, version<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</code></pre></div><p>Kết hợp tất cả những điều này lại với nhau ta được code đầy đủ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> argparse
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> expand_dims
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> asarray
+<span style="color:#f92672">from</span> mtcnn.mtcnn <span style="color:#f92672">import</span> MTCNN
+<span style="color:#f92672">from</span> keras_vggface.vggface <span style="color:#f92672">import</span> VGGFace
+<span style="color:#f92672">from</span> keras_vggface.utils <span style="color:#f92672">import</span> preprocess_input
+<span style="color:#f92672">from</span> keras_vggface.utils <span style="color:#f92672">import</span> decode_predictions
+
+<span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+<span style="color:#f92672">from</span> tensorflow.compat.v1.keras.backend <span style="color:#f92672">import</span> set_session
+config <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>ConfigProto()
+config<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True  <span style="color:#75715e"># dynamically grow the memory used on the GPU</span>
+config<span style="color:#f92672">.</span>log_device_placement <span style="color:#f92672">=</span> True  <span style="color:#75715e"># to log device placement (on which device the operation ran)</span>
+sess <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>Session(config<span style="color:#f92672">=</span>config)
+set_session(sess)
+
+<span style="color:#75715e"># construct the argument parse and parse the arguments</span>
+ap <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;-i&#34;</span>, <span style="color:#e6db74">&#34;--image&#34;</span>, required<span style="color:#f92672">=</span>True, help<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path to the image&#34;</span>)
+args <span style="color:#f92672">=</span> vars(ap<span style="color:#f92672">.</span>parse_args())
+
+
+<span style="color:#75715e"># extract a single face from a given photograph</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_face</span>(filename, required_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">224</span>)):
+    <span style="color:#75715e"># load image from file</span>
+    pixels <span style="color:#f92672">=</span> pyplot<span style="color:#f92672">.</span>imread(filename)
+    <span style="color:#75715e"># create the detector, using default weights</span>
+    detector <span style="color:#f92672">=</span> MTCNN()
+    <span style="color:#75715e"># detect faces in the image</span>
+    results <span style="color:#f92672">=</span> detector<span style="color:#f92672">.</span>detect_faces(pixels)
+    <span style="color:#75715e"># extract the bounding box from the first face</span>
+    x1, y1, width, height <span style="color:#f92672">=</span> results[<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;box&#39;</span>]
+    x2, y2 <span style="color:#f92672">=</span> x1 <span style="color:#f92672">+</span> width, y1 <span style="color:#f92672">+</span> height
+    <span style="color:#75715e"># extract the face</span>
+    face <span style="color:#f92672">=</span> pixels[y1:y2, x1:x2]
+    <span style="color:#75715e"># resize pixels to the model size</span>
+    image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>fromarray(face)
+    image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>resize(required_size)
+    face_array <span style="color:#f92672">=</span> asarray(image)
+    <span style="color:#66d9ef">return</span> face_array
+
+<span style="color:#75715e"># load the photo and extract the face</span>
+pixels <span style="color:#f92672">=</span> extract_face(args[<span style="color:#e6db74">&#39;image&#39;</span>])
+<span style="color:#75715e"># convert one face into samples</span>
+pixels <span style="color:#f92672">=</span> pixels<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+samples <span style="color:#f92672">=</span> expand_dims(pixels, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+<span style="color:#75715e"># prepare the face for the model, e.g. center pixels</span>
+samples <span style="color:#f92672">=</span> preprocess_input(samples, version<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+<span style="color:#75715e"># create a vggface model</span>
+model <span style="color:#f92672">=</span> VGGFace(model<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;resnet50&#39;</span>)
+<span style="color:#75715e"># perform prediction</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)
+<span style="color:#75715e"># convert prediction into names</span>
+results <span style="color:#f92672">=</span> decode_predictions(yhat)
+<span style="color:#75715e"># display most likely results</span>
+<span style="color:#66d9ef">for</span> result <span style="color:#f92672">in</span> results[<span style="color:#ae81ff">0</span>]:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">: </span><span style="color:#e6db74">%.3f%%</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (result[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">3</span>:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], result[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Chạy code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python face_recognition<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>image sharon_stone1<span style="color:#f92672">.</span>jpg 
+</code></pre></div><p>Một cách tuần tự, đầu tiên khuôn mặt được phát hiện và trích xuất, sau đó VGGFace2 sẽ dự đoán danh tính của khuôn mặt. Năm cái tên có xác suất cao nhất sẽ được hiển thị. Chúng ta có thể thấy rằng mô hình xác định chính xác khuôn mặt thuộc về Sharon Stone với khả năng là 99,618%:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Sharon_Stone: <span style="color:#ae81ff">99.618</span><span style="color:#f92672">%</span>
+Noelle_Reno: <span style="color:#ae81ff">0.096</span><span style="color:#f92672">%</span>
+Anita_Lipnicka: <span style="color:#ae81ff">0.021</span><span style="color:#f92672">%</span>
+Elisabeth_R\xc3\xb6hm: <span style="color:#ae81ff">0.017</span><span style="color:#f92672">%</span>
+Tina_Maze: <span style="color:#ae81ff">0.017</span><span style="color:#f92672">%</span>
+</code></pre></div><p>Thử kiểm tra với một người khác, lần này là <em>Channing Tatum</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python face_recognition<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>image Channing_Tatum_by_Gage_Skidmore_3<span style="color:#f92672">.</span>jpg 
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Channing_Tatum: <span style="color:#ae81ff">90.526</span><span style="color:#f92672">%</span>
+Les_Miles: <span style="color:#ae81ff">0.238</span><span style="color:#f92672">%</span>
+Eoghan_Quigg: <span style="color:#ae81ff">0.212</span><span style="color:#f92672">%</span>
+Nico_Rosberg: <span style="color:#ae81ff">0.153</span><span style="color:#f92672">%</span>
+Venke_Knutson: <span style="color:#ae81ff">0.136</span><span style="color:#f92672">%</span>
+</code></pre></div><p>Chúng ta có thể thấy rằng mô hình VGGFace2 xác định chính xác khuôn mặt là của <em>Channing Tatum</em> với độ xác suất là 90,526%.</p>
+<p>Bạn có thể thử nhận diện với các bức ảnh khác của những người nổi tiếng được lấy từ Wikipedia, bao gồm nhiều giới tính, chủng tộc và độ tuổi khác nhau. Bạn sẽ phát hiện ra rằng mô hình này không hoàn hảo, thi thoảng vẫn có sự nhầm lẫn hoặc xác suất không cao. Bạn cũng có thể thử các phiên bản khác của mô hình, chẳng hạn như <em>vgg16</em> và <em>senet50</em>, sau đó so sánh kết quả. Ví dụ: mình thấy rằng với một bức ảnh của <em>Oscar Isaac</em>, <em>vgg16</em> có hiệu quả, nhưng với các kiểu của VGGFace2 thì không. Mô hình còn có thể được sử dụng để xác định các khuôn mặt mới. Một cách tiếp cận sẽ là huấn luyện lại mô hình ở phần phân loại khuôn mặt, với một tập dữ liệu khuôn mặt mới. Chúng ta sẽ áp dụng cách tiếp cận này trong bài viết về FaceNet model.</p>
+<p><strong>6. Face Verification</strong></p>
+<p>Mô hình VGGFace2 có thể được sử dụng để thực hiện Face Verification. Điều này liên quan đến việc tính toán và so sánh khoảng cách giữa Face Embedding vector của một khuôn mặt đưa vào với Face Embedding vector của một khuôn mặt đã biết trong hê thống. Nếu 2 vectors có khoảng cách gần nhau thì có thể kết luận 2 khuôn mặt là của cùng 1 người, và ngược lại.</p>
+<p>Các phép đo khoảng cách giữa 2 vectors thường dùng là khoảng cách Euclide và khoảng cách Cosine. Giá trị ngưỡng để xác định thế nào là <em>gần</em> hay <em>xa</em> cần được điều chỉnh cho mỗi tập dữ liệu hoặc ứng dụng cụ thể.</p>
+<p>Để tạo ra Face Embedding vector, đầu tiên, chúng ta có thể gọi mô hình VGGFace mà không cần bộ phân loại bằng cách đặt đối số <em>include_top=False</em>, chỉ định kích thước của dữ liệu đầu vào, và gán đối số <em>pooling='avg&rsquo;</em> để bộ lọc ánh xạ đầu ra của mô hình được thành một vector, sử dụng <em>global average pooling</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># create a vggface model</span>
+model <span style="color:#f92672">=</span> VGGFace(model<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;resnet50&#39;</span>, include_top<span style="color:#f92672">=</span>False, input_shape<span style="color:#f92672">=</span>(<span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">3</span>), pooling<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;avg&#39;</span>)
+</code></pre></div><p>Mô hình này, sau đó được sử dụng để đưa ra dự đoán, kết quả trả về là một Face Embedding vector của khuôn mặt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># perform prediction</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)   
+</code></pre></div><p>Chúng ta sẽ tổng hợp lại những thứ trình bày ở trên thành 1 hàm, tham số truyền vào là danh sách các file ảnh có khuôn mặt. Hàm này sẽ tìm và trích xuất các khuôn mặt từ mỗi ảnh thông qua hàm <em>extract_face()</em> đã sử dụng trong phần trước. Mỗi khuôn mặt cần phải được tiền xử lý trước khi đưa vào mô hình VGGFace2 bằng cách hàm <em>preprocess_input()</em>. Kết quả cuối cùng trả về là một mảng chứa toàn bộ Face Embedding vectors của tất các các khuôn mặt có trong các ảnh truyền vào cho hàm số:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># extract faces and calculate face embeddings for a list of photo files</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_embeddings</span>(filenames):
+    <span style="color:#75715e"># extract faces</span>
+    faces <span style="color:#f92672">=</span> [extract_face(f) <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> filenames]
+    <span style="color:#75715e"># convert into an array of samples</span>
+    samples <span style="color:#f92672">=</span> asarray(faces, <span style="color:#e6db74">&#39;float32&#39;</span>)
+    <span style="color:#75715e"># prepare the face for the model, e.g. center pixels</span>
+    samples <span style="color:#f92672">=</span> preprocess_input(samples, version<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+    <span style="color:#75715e"># create a vggface model</span>
+    model <span style="color:#f92672">=</span> VGGFace(model<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;resnet50&#39;</span>, include_top<span style="color:#f92672">=</span>False, input_shape<span style="color:#f92672">=</span>(<span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">3</span>),
+    pooling<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;avg&#39;</span>)
+    <span style="color:#75715e"># perform prediction</span>
+    yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)
+    <span style="color:#66d9ef">return</span> yhat
+</code></pre></div><p>Mình sẽ lấy ảnh của <em>Sharon Stone - sharon stone1.jpg</em> (<em>đã được sử dụng trước đây</em>) để làm tiêu chuẩn. Sau đó, mình lấy một ảnh khác cũng của <em>Sharon Stone</em> và một ảnh không phải là <em>Sharon Stone</em> để so sánh:</p>
+<p>Face Verification có thể được thực hiện bằng cách tính toán khoảng cách Cosine giữa Face Embedding vector của ảnh tiêu chuẩn và Face Embedding vector của ảnh cần Verrify. Để làm điều này, ta sẽ sử dụng hàm <em>cosine()</em> trong thư viện SciPy. Khoảng cách lớn nhất giữa 2 vectors là 1.0 (<em>hai vectors trùng nhau hoàn toàn</em>), và khoảng cách tối thiểu là 0.0 (<em>hai vectors khác nhau hoàn toàn</em>). Giá trị khoảng cách giới hạn phổ biến thường được sử dụng cho Face Recognition là từ 0.4 đến 0.6. Ban đầu, sử dụng giá trị 0.5 rồi sau đó dựa trên thực tế để điểu chỉnh dần. Hàm <em>is_match()</em> bên dưới sẽ thực hiện điều này:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># determine if a candidate face is a match for a known face</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_match</span>(known_embedding, candidate_embedding, thresh<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>):
+    <span style="color:#75715e"># calculate distance between embeddings</span>
+    score <span style="color:#f92672">=</span> cosine(known_embedding, candidate_embedding)
+    <span style="color:#66d9ef">if</span> score <span style="color:#f92672">&lt;=</span> thresh:
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;face is a Match (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> &lt;= </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (score, thresh))
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;face is NOT a Match (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> &gt; </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (score, thresh))
+</code></pre></div><p>Code đầy đủ cho chức năng Face Verification như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> asarray
+<span style="color:#f92672">from</span> scipy.spatial.distance <span style="color:#f92672">import</span> cosine
+<span style="color:#f92672">from</span> mtcnn.mtcnn <span style="color:#f92672">import</span> MTCNN
+<span style="color:#f92672">from</span> keras_vggface.vggface <span style="color:#f92672">import</span> VGGFace
+<span style="color:#f92672">from</span> keras_vggface.utils <span style="color:#f92672">import</span> preprocess_input
+
+<span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+<span style="color:#f92672">from</span> tensorflow.compat.v1.keras.backend <span style="color:#f92672">import</span> set_session
+config <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>ConfigProto()
+config<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True  <span style="color:#75715e"># dynamically grow the memory used on the GPU</span>
+config<span style="color:#f92672">.</span>log_device_placement <span style="color:#f92672">=</span> True  <span style="color:#75715e"># to log device placement (on which device the operation ran)</span>
+sess <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>Session(config<span style="color:#f92672">=</span>config)
+set_session(sess)
+
+<span style="color:#75715e"># extract a single face from a given photograph</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_face</span>(filename, required_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">224</span>)):
+	<span style="color:#75715e"># load image from file</span>
+	pixels <span style="color:#f92672">=</span> pyplot<span style="color:#f92672">.</span>imread(filename)
+	<span style="color:#75715e"># create the detector, using default weights</span>
+	detector <span style="color:#f92672">=</span> MTCNN()
+	<span style="color:#75715e"># detect faces in the image</span>
+	results <span style="color:#f92672">=</span> detector<span style="color:#f92672">.</span>detect_faces(pixels)
+	<span style="color:#75715e"># extract the bounding box from the first face</span>
+	x1, y1, width, height <span style="color:#f92672">=</span> results[<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;box&#39;</span>]
+	x2, y2 <span style="color:#f92672">=</span> x1 <span style="color:#f92672">+</span> width, y1 <span style="color:#f92672">+</span> height
+	<span style="color:#75715e"># extract the face</span>
+	face <span style="color:#f92672">=</span> pixels[y1:y2, x1:x2]
+	<span style="color:#75715e"># resize pixels to the model size</span>
+	image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>fromarray(face)
+	image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>resize(required_size)
+	face_array <span style="color:#f92672">=</span> asarray(image)
+	<span style="color:#66d9ef">return</span> face_array
+
+<span style="color:#75715e"># extract faces and calculate face embeddings for a list of photo files</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_embeddings</span>(filenames):
+	<span style="color:#75715e"># extract faces</span>
+	faces <span style="color:#f92672">=</span> [extract_face(f) <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> filenames]
+	<span style="color:#75715e"># convert into an array of samples</span>
+	samples <span style="color:#f92672">=</span> asarray(faces, <span style="color:#e6db74">&#39;float32&#39;</span>)
+	<span style="color:#75715e"># prepare the face for the model, e.g. center pixels</span>
+	samples <span style="color:#f92672">=</span> preprocess_input(samples, version<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+	<span style="color:#75715e"># create a vggface model</span>
+	model <span style="color:#f92672">=</span> VGGFace(model<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;resnet50&#39;</span>, include_top<span style="color:#f92672">=</span>False, input_shape<span style="color:#f92672">=</span>(<span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">3</span>), pooling<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;avg&#39;</span>)
+	<span style="color:#75715e"># perform prediction</span>
+	yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)
+	<span style="color:#66d9ef">return</span> yhat
+
+<span style="color:#75715e"># determine if a candidate face is a match for a known face</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_match</span>(known_embedding, candidate_embedding, thresh<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>):
+	<span style="color:#75715e"># calculate distance between embeddings</span>
+	score <span style="color:#f92672">=</span> cosine(known_embedding, candidate_embedding)
+	<span style="color:#66d9ef">if</span> score <span style="color:#f92672">&lt;=</span> thresh:
+		<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;face is a Match (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> &lt;= </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (score, thresh))
+	<span style="color:#66d9ef">else</span>:
+		<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;face is NOT a Match (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> &gt; </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (score, thresh))
+
+<span style="color:#75715e"># define filenames</span>
+filenames <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;sharon_stone1.jpg&#39;</span>, <span style="color:#e6db74">&#39;sharon_stone2.jpg&#39;</span>, <span style="color:#e6db74">&#39;sharon_stone3.jpg&#39;</span>, <span style="color:#e6db74">&#39;channing_tatum.jpg&#39;</span>]
+<span style="color:#75715e"># get embeddings file filenames</span>
+embeddings <span style="color:#f92672">=</span> get_embeddings(filenames)
+<span style="color:#75715e"># define sharon stone</span>
+sharon_id <span style="color:#f92672">=</span> embeddings[<span style="color:#ae81ff">0</span>]
+<span style="color:#75715e"># verify known photos of sharon</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Positive Tests&#39;</span>)
+is_match(embeddings[<span style="color:#ae81ff">0</span>], embeddings[<span style="color:#ae81ff">1</span>])
+is_match(embeddings[<span style="color:#ae81ff">0</span>], embeddings[<span style="color:#ae81ff">2</span>])
+<span style="color:#75715e"># verify known photos of other people</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Negative Tests&#39;</span>)
+is_match(embeddings[<span style="color:#ae81ff">0</span>], embeddings[<span style="color:#ae81ff">3</span>])
+</code></pre></div><p>Chúng ta có thể kiểm tra một số hình ảnh ví dụ bằng cách tải thêm ảnh về <em>Sharon Stone</em> và <em>Channing Tatum</em> từ Wikipedia.</p>
+<p>Bức ảnh đầu tiên được lấy làm tiêu bản cho <em>Sharon Stone</em> và những bức ảnh còn lại trong danh sách là để Verify. Chạy ví dụ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python face_verification<span style="color:#f92672">.</span>py
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Positive Tests
+<span style="color:#f92672">&gt;</span>face <span style="color:#f92672">is</span> a Match (<span style="color:#ae81ff">0.460</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0.500</span>)
+<span style="color:#f92672">&gt;</span>face <span style="color:#f92672">is</span> a Match (<span style="color:#ae81ff">0.311</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0.500</span>)
+Negative Tests
+<span style="color:#f92672">&gt;</span>face <span style="color:#f92672">is</span> NOT a Match (<span style="color:#ae81ff">0.701</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.500</span>)
+</code></pre></div><p>Chúng ta có thể thấy rằng hệ thống đã xác minh chính xác hai bức ảnh về Sharon Stone, còn ảnh của Channing Tatum được xác minh chính xác không phải là Sharon Stone.</p>
+<p><strong>7. Kết luận</strong></p>
+<p>Trong bài viết này, chúng ta đã cùng nhau khám phá cách phát triển hệ thống Face Recognition để nhận dạng và xác minh khuôn mặt bằng mô hình VGGFace2. Cụ thể:</p>
+<ul>
+<li>Giới thiệu về  VGGFace và VGGFace2</li>
+<li>Cách cài đặt thư viện Keras VGGFace để sử dụng các mô hình này bằng Python với Keras.</li>
+<li>Cách phát triển hệ thống nhận dạng khuôn mặt để dự đoán tên của những người nổi tiếng trong các bức ảnh.</li>
+<li>Cách phát triển hệ thống xác minh khuôn mặt để xác nhận danh tính của một người được từ bức ảnh khuôn mặt của họ.</li>
+</ul>
+<p>Toàn bộ source code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Computer_Vision/tree/master/Deep_Learning/Face_Recognition/VGGFace">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ khám phá cách thực hiện bài toán Face Recongition bằng mô hình FaceNet. Mời các bạn đón đọc.</p>
+<p><strong>8. Tham khảo</strong></p>
+<ul>
+<li><a href="https://machinelearningmastery.com/deep-learning-for-computer-vision/">Machinelearningmastery</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/model-deployment">Model deployment</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

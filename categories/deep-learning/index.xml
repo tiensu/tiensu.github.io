@@ -6,10 +6,30 @@
     <description>Recent content in Deep Learning on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tiensu.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Thực hiện Face Recognition với FaceNet</title>
+      <link>https://tiensu.github.io/blog/54_face_recognition_facenet/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/54_face_recognition_facenet/</guid>
+      <description>1. Nhắc lại bài toán Face Recognition
+Face Recognition là bài toán nhận diện người dựa vào khuôn mặt của họ trong hình ảnh hoặc video.</description>
+    </item>
+    
+    <item>
+      <title>Thực hiện Face Identification và Verification với VGGFace2</title>
+      <link>https://tiensu.github.io/blog/53_face_recognition_vggface/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/53_face_recognition_vggface/</guid>
+      <description>1. Nhắc lại bài toán Face Recognition
+Face Recognition là bài toán nhận diện người dựa vào khuôn mặt của họ trong hình ảnh hoặc video.</description>
+    </item>
     
     <item>
       <title>Bài toán Face Recognition</title>
