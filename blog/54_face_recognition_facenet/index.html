@@ -176,10 +176,10 @@
 </ul>
 <p>Trong bài này, chúng ta sẽ sử dụng FaceNet model để thực hiện bài toán Face Recognition.</p>
 <p><strong>2. FaceNet model.</strong></p>
-<p>FaceNet là một mô hình nhận dạng khuôn mặt được phát triển bởi Florian Schroff và đồng nghiệp tại Google trong bài báo năm 2015 của họ có tiêu đề <a href="https://arxiv.org/abs/1503.03832">FaceNet: A Unified Embedding for Face Recognition and Clustering</a>. Trong mô hình này, hình ảnh của một khuôn mặt sẽ trích xuất các đặc điểm chất lượng cao từ khuôn mặt và biểu diễn thành vector 128 phần tử (<em>Face Embedding vector 128 chiều</em>).</p>
+<p>FaceNet là một mô hình nhận dạng khuôn mặt được phát triển bởi Florian Schroff và đồng nghiệp tại Google trong bài báo năm 2015 của họ có tiêu đề <a href="https://arxiv.org/abs/1503.03832">FaceNet: A Unified Embedding for Face Recognition and Clustering</a>. Trong mô hình này, hình ảnh của một khuôn mặt sẽ được trích xuất các đặc điểm chất lượng cao và biểu diễn thành vector 128 phần tử (<em>Face Embedding vector 128 chiều</em>).</p>
 <p><em>FaceNet, that directly learns a mapping from face images to a compact Euclidean space where distances directly correspond to a measure of face similarity</em>
 <strong>— FaceNet: A Unified Embedding for Face Recognition and Clustering, 2015.</strong></p>
-<p>Mô hình là một mạng CNN được đào tạo thông qua hàm <em>Triplet Loss</em>. Nó khuyến khích các Face Embedding vector của cùng một người trở nên giống nhau hơn (khoảng cách nhỏ hơn), trong khi các Face Embedding vectơ của những người khác nhau sẽ trở nên ít giống nhau hơn (khoảng cách lớn hơn). Việc tập trung vào đào tạo một mô hình để tạo ra các Face Embedding vector trực tiếp (thay vì trích xuất chúng từ một lớp trung gian của mô hình) là một đổi mới quan trọng của FaceNet so với VGGFace.</p>
+<p>Mô hình là một mạng CNN được đào tạo thông qua hàm <em>Triplet Loss</em>. Nó khuyến khích các Face Embedding vector của cùng một người trở nên giống nhau hơn (khoảng cách nhỏ hơn), trong khi các Face Embedding vectơ của những người khác nhau sẽ trở nên ít giống nhau hơn (khoảng cách lớn hơn). Việc tập trung vào đào tạo một mô hình để tạo ra các Face Embedding vector trực tiếp (<em>thay vì trích xuất chúng từ một lớp trung gian của mô hình</em>) là một đổi mới quan trọng của FaceNet so với VGGFace.</p>
 <p><em>Our method uses a deep convolutional network trained to directly optimize the embedding itself, rather than an intermediate bottleneck layer as in previous deep learning approaches.</em>
 <strong>— FaceNet: A Unified Embedding for Face Recognition and Clustering, 2015.</strong></p>
 <p>Các Face Embedding vectors này sau đó được sử dụng như là Input để đào tạo một mô hình phân loại trên bộ dữ liệu tiêu chuẩn về Face Recognition, đạt được kết quả <em>state-of-the-art</em>.</p>
@@ -188,17 +188,545 @@
 <p>Có một số dự án cung cấp các công cụ để huấn luyện các mô hình dựa trên FaceNet (<em>sử dụng Pre-trained FaceNet model</em>). Có lẽ nổi bật nhất là dự án <a href="http://cmusatyalab.github.io/openface/">OpenFace</a>. Trong dự án  náy, các mô hình FaceNet được xây dựng và huấn luyện bằng PyTorch framework. Keras cũng có 1 dự án tương tự, gọi là <a href="https://github.com/iwantooxxoox/Keras-OpenFace">Keras OpenFace</a>, nhưng tại thời điểm viết bài, các mô hình đó yêu cầu Python 2, điều này hạn chế chúng ta rất nhiều trong việc tiếp cận các tính ưng ưu việt của Python 3. Vì thế mà <em>Keras OpenFace</em> ít được sử dụng.</p>
 <p>Một dự án nổi bật khác là <a href="https://github.com/davidsandberg/facenet">facenet</a> của <em>David Sandberg</em>. Nó cung cấp các mô hình FaceNet được xây dựng và huấn luyện bằng TensorFlow framework. Dự án có vẻ hoàn thiện, mặc dù tại thời điểm viết bài này không cung cấp cài đặt cũng như cách sử dụng API của nó. Một dự án có vẻ hữu ích hơn là <a href="https://github.com/nyoki-mtl/keras-facenet">Keras FaceNet</a> của <em>Hiroki Taniai</em>. Trong dự án này, tác giả cung cấp một tập lệnh để chuyển đổi mô hình <em>Inception ResNet v1</em> từ TensorFlow sang Keras. Một Pre-trained model bằng Keras cũng được cung cấp để sẵn sàng để sử dụng. Chúng ta sẽ sử dụng mô hình <em>Keras FaceNet</em> của <em>Hiroki Taniai</em> trong bài viết này. Nó đã được huấn luyện trên tập dữ liệu <a href="http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/meta/identity_meta.csv">MS-Celeb-1M</a>. Mô hình có thể được tải xuống từ <a href="https://drive.google.com/open?id=1pwQ3H4aJ8a6yyJHZkTwtjcL4wYWQb7bn">đây</a>.</p>
 <p><strong>4. Detect Faces</strong></p>
-<p>Phần này, chúng ta cũng sử dụng thư viện MTCNN tương tự như trong bài trước. Code đầy đủ như sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-</code></pre></div><p><strong>7. Kết luận</strong></p>
-<p>Trong bài viết này, chúng ta đã cùng nhau khám phá cách phát triển hệ thống Face Recognition để nhận dạng và xác minh khuôn mặt bằng mô hình VGGFace2. Cụ thể:</p>
+<p>Phần này, chúng ta cũng sử dụng thư viện MTCNN tương tự như trong bài trước. Code như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># function for face detection with mtcnn</span>
+<span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> asarray
+<span style="color:#f92672">from</span> mtcnn.mtcnn <span style="color:#f92672">import</span> MTCNN
+<span style="color:#75715e"># extract a single face from a given photograph</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_face</span>(filename, required_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">160</span>)):
+        <span style="color:#75715e"># load image from file</span>
+        image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(filename)
+        <span style="color:#75715e"># convert to RGB, if needed</span>
+        image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>convert(<span style="color:#e6db74">&#39;RGB&#39;</span>)
+        <span style="color:#75715e"># convert to array</span>
+        pixels <span style="color:#f92672">=</span> asarray(image)
+        <span style="color:#75715e"># create the detector, using default weights</span>
+        detector <span style="color:#f92672">=</span> MTCNN()
+        <span style="color:#75715e"># detect faces in the image</span>
+        results <span style="color:#f92672">=</span> detector<span style="color:#f92672">.</span>detect_faces(pixels)
+        <span style="color:#75715e"># extract the bounding box from the first face</span>
+        x1, y1, width, height <span style="color:#f92672">=</span> results[<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;box&#39;</span>]
+        <span style="color:#75715e"># bug fix</span>
+        x1, y1 <span style="color:#f92672">=</span> abs(x1), abs(y1)
+        x2, y2 <span style="color:#f92672">=</span> x1 <span style="color:#f92672">+</span> width, y1 <span style="color:#f92672">+</span> height
+        <span style="color:#75715e"># extract the face</span>
+        face <span style="color:#f92672">=</span> pixels[y1:y2, x1:x2]
+        <span style="color:#75715e"># resize pixels to the model size</span>
+        image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>fromarray(face)
+        image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>resize(required_size)
+        face_array <span style="color:#f92672">=</span> asarray(image)
+        <span style="color:#66d9ef">return</span> face_array
+<span style="color:#75715e"># load the photo and extract the face</span>
+pixels <span style="color:#f92672">=</span> extract_face(<span style="color:#e6db74">&#39;...&#39;</span>)
+</code></pre></div><p>Chúng ta sẽ sử dụng hàm này để trích xuất các Face Embedding vector để cung cấp làm đầu vào cho mô hình FaceNet trong phần tiếp theo.</p>
+<p><strong>5. Face Recognition</strong></p>
+<p>Trong phần này, chúng ta sẽ phát triển một hệ thống Face Recongtion để dự đoán danh tính của một khuôn mặt. Model sẽ được huấn luyện và kiểm tra bằng cách sử dụng bộ dữ liệu <a href="https://www.kaggle.com/dansbecker/5-celebrity-faces-dataset">5 Celebrity Faces Dataset</a>, bao gồm rất nhiều bức ảnh của năm người nổi tiếng khác nhau. Mô hình MTCNN vẫn được dùng để thực hiện Face Detection, mô hình FaceNet được sử dụng để Face Embedding vector cho mỗi khuôn mặt được phát hiện, sau đó chúng ta sẽ phát triển một mô hình phân loại bằng thuật toán SVM để dự đoán danh tính của khuôn mặt đó.</p>
+<p><em><strong>5.1 5 Celebrity Faces Dataset</strong></em></p>
+<p><a href="https://www.kaggle.com/dansbecker/5-celebrity-faces-dataset">5 Celebrity Faces Dataset</a> là một bộ dữ liệu nhỏ chứa các bức ảnh của những người nổi tiếng khác nhau. Nó bao gồm các bức ảnh của: <em>Ben Affleck, Elton John, Jerry Seinfeld, Madonna</em> và **. Bộ dữ liệu đã được cung cấp bởi <em>Dan Becker</em>, bạn có thể tải xuống miễn phí từ Kaggle. Lưu ý, cần phải có tài khoản Kaggle để tải xuống tập dữ liệu này.</p>
+<p>Tải xuống tập dữ liệu, file <em>data.zip 2.5MB</em> và giải nén nó trong thư mục làm việc trên máy tính của bạn với tên thư mục <em>5-Celeb-face-dataset</em>. Bây giờ bạn sẽ có một thư mục với cấu trúc sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">5</span><span style="color:#f92672">-</span>celebrity<span style="color:#f92672">-</span>faces<span style="color:#f92672">-</span>dataset
+<span style="color:#960050;background-color:#1e0010">├──</span> train
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> ben_afflek
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> elton_john
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> jerry_seinfeld
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> madonna
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">└──</span> mindy_kaling
+<span style="color:#960050;background-color:#1e0010">└──</span> val
+    <span style="color:#960050;background-color:#1e0010">├──</span> ben_afflek
+    <span style="color:#960050;background-color:#1e0010">├──</span> elton_john
+    <span style="color:#960050;background-color:#1e0010">├──</span> jerry_seinfeld
+    <span style="color:#960050;background-color:#1e0010">├──</span> madonna
+    <span style="color:#960050;background-color:#1e0010">└──</span> mindy_kaling
+</code></pre></div><p>Chúng ta có thể thấy 2 thư mục: thư mục <em>train</em> chứa dữ liệu để huấn luyện model và thư mục <em>val</em> chứa dữ liệu để xác thực hoặc kiểm tra model. Nhìn vào một số bức ảnh trong mỗi thư mục, chúng ta có thể thấy rằng các khuôn mặt có nhiều hướng, ánh sáng và kích thước khác nhau. Điều quan trọng là mỗi bức ảnh chỉ có một khuôn mặt của người đó. Nếu bạn muốn sử dụng dữ liệu của riêng bạn, hãy thu thập và tổ chức dữ liệu tương tự như thế này.</p>
+<p><em><strong>5.2 Detect Faces</strong></em></p>
+<p>Bước đầu tiên cần làm là phát hiện khuôn mặt trong mỗi bức ảnh. Ta sẽ sử dụng hàm <em>extract_face()</em> trong phần trước để làm việc này.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># python extract_faces.py --dp &#39;5-celebrity-faces-dataset/train/ben_afflek/&#39;</span>
+<span style="color:#75715e"># demonstrate face detection on 5 Celebrity Faces Dataset</span>
+<span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> listdir
+<span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> asarray
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#f92672">from</span> mtcnn.mtcnn <span style="color:#f92672">import</span> MTCNN
+<span style="color:#f92672">import</span> argparse
+
+<span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+
+config_tf <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>ConfigProto()
+config_tf<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True
+session <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>Session(config<span style="color:#f92672">=</span>config_tf)
+
+<span style="color:#75715e"># extract a single face from a given photograph</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_face</span>(filename, required_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">160</span>)):
+	<span style="color:#75715e"># load image from file</span>
+	image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(filename)
+	<span style="color:#75715e"># convert to RGB, if needed</span>
+	image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>convert(<span style="color:#e6db74">&#39;RGB&#39;</span>)
+	<span style="color:#75715e"># convert to array</span>
+	pixels <span style="color:#f92672">=</span> asarray(image)
+	<span style="color:#75715e"># create the detector, using default weights</span>
+	detector <span style="color:#f92672">=</span> MTCNN()
+	<span style="color:#75715e"># detect faces in the image</span>
+	results <span style="color:#f92672">=</span> detector<span style="color:#f92672">.</span>detect_faces(pixels)
+	<span style="color:#75715e"># extract the bounding box from the first face</span>
+	x1, y1, width, height <span style="color:#f92672">=</span> results[<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;box&#39;</span>]
+	<span style="color:#75715e"># bug fix</span>
+	x1, y1 <span style="color:#f92672">=</span> abs(x1), abs(y1)
+	x2, y2 <span style="color:#f92672">=</span> x1 <span style="color:#f92672">+</span> width, y1 <span style="color:#f92672">+</span> height
+	<span style="color:#75715e"># extract the face</span>
+	face <span style="color:#f92672">=</span> pixels[y1:y2, x1:x2]
+	<span style="color:#75715e"># resize pixels to the model size</span>
+	image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>fromarray(face)
+	image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>resize(required_size)
+	face_array <span style="color:#f92672">=</span> asarray(image)
+	<span style="color:#66d9ef">return</span> face_array
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+	ap <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+	ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;-dp&#39;</span>, <span style="color:#e6db74">&#39;--data_path&#39;</span>, required<span style="color:#f92672">=</span>True)
+	args <span style="color:#f92672">=</span> vars(ap<span style="color:#f92672">.</span>parse_args())
+
+	i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+	<span style="color:#75715e"># enumerate files</span>
+	<span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> listdir(args[<span style="color:#e6db74">&#39;data_path&#39;</span>]):
+		<span style="color:#75715e"># path</span>
+		path <span style="color:#f92672">=</span> args[<span style="color:#e6db74">&#39;data_path&#39;</span>] <span style="color:#f92672">+</span> filename
+		<span style="color:#75715e"># get face</span>
+		face <span style="color:#f92672">=</span> extract_face(path)
+		<span style="color:#66d9ef">print</span>(i, face<span style="color:#f92672">.</span>shape)
+		<span style="color:#75715e"># plot</span>
+		pyplot<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">7</span>, i)
+		pyplot<span style="color:#f92672">.</span>axis(<span style="color:#e6db74">&#39;off&#39;</span>)
+		pyplot<span style="color:#f92672">.</span>imshow(face)
+		i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+	pyplot<span style="color:#f92672">.</span>show()
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+	main()
+</code></pre></div><p>Thử thực hiện với những ảnh của <em>Ben Affleck</em> và thể hiện các khuôn mặt được phát hiện lên đồ thị.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python extract_faces<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>data_path <span style="color:#e6db74">&#39;5-celebrity-faces-dataset/train/ben_afflek/&#39;</span>
+</code></pre></div><p>Kết quả:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/face_reg_Ben_Affleck.png">
+</div>
+
+</p>
+<p>Tiếp theo, chúng ta sẽ mở rộng ví dụ này để làm việc với toàn bộ ảnh trong các thư mục <em>train</em> và <em>val</em>. Ta viết hàm <em>load_faces()</em> như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># load images and extract faces for all images in a directory</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_faces</span>(directory):
+	faces <span style="color:#f92672">=</span> list()
+	<span style="color:#75715e"># enumerate files</span>
+	<span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> listdir(directory):
+		<span style="color:#75715e"># path</span>
+		path <span style="color:#f92672">=</span> directory <span style="color:#f92672">+</span> filename
+		<span style="color:#75715e"># get face</span>
+		face <span style="color:#f92672">=</span> extract_face(path)
+		<span style="color:#75715e"># store</span>
+		faces<span style="color:#f92672">.</span>append(face)
+	<span style="color:#66d9ef">return</span> faces
+</code></pre></div><p>Tiếp theo là hàm <em>load_dataset()</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># load a dataset that contains one subdir for each class that in turn contains images</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_dataset</span>(directory):
+	X, y <span style="color:#f92672">=</span> list(), list()
+	<span style="color:#75715e"># enumerate folders, on per class</span>
+	<span style="color:#66d9ef">for</span> subdir <span style="color:#f92672">in</span> listdir(directory):
+		<span style="color:#75715e"># path</span>
+		path <span style="color:#f92672">=</span> directory <span style="color:#f92672">+</span> subdir <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span>
+		<span style="color:#75715e"># skip any files that might be in the dir</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isdir(path):
+			<span style="color:#66d9ef">continue</span>
+		<span style="color:#75715e"># load all faces in the subdirectory</span>
+		faces <span style="color:#f92672">=</span> load_faces(path)
+		<span style="color:#75715e"># create labels</span>
+		labels <span style="color:#f92672">=</span> [subdir <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(faces))]
+		<span style="color:#75715e"># summarize progress</span>
+		<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;loaded </span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> examples for class: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (len(faces), subdir))
+		<span style="color:#75715e"># store</span>
+		X<span style="color:#f92672">.</span>extend(faces)
+		y<span style="color:#f92672">.</span>extend(labels)
+	<span style="color:#66d9ef">return</span> asarray(X), asarray(y)
+</code></pre></div><p>Việc còn lại là gọi hàm này với các thư mục <em>train</em> và <em>val</em> để tạo ra các Face Embedding của mỗi khuôn mặt và sử dụng chúng để tạo model phân loại.</p>
+<p>Gộp tất cả lại, ta có code đầy đủ như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># USEAGE python extract_faces_dataset.py --train_data 5-celebrity-faces-dataset/train/ --val_data 5-celebrity-faces-dataset/val/ --save_data 5-celebrity-faces-dataset.npz</span>
+<span style="color:#75715e"># face detection for the 5 Celebrity Faces Dataset</span>
+<span style="color:#f92672">from</span> os <span style="color:#f92672">import</span> listdir
+<span style="color:#f92672">from</span> os.path <span style="color:#f92672">import</span> isdir
+<span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> savez_compressed
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> asarray
+<span style="color:#f92672">from</span> mtcnn.mtcnn <span style="color:#f92672">import</span> MTCNN
+<span style="color:#f92672">import</span> argparse
+
+<span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+
+config_tf <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>ConfigProto()
+config_tf<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True
+session <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>Session(config<span style="color:#f92672">=</span>config_tf)
+
+<span style="color:#75715e"># extract a single face from a given photograph</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_face</span>(filename, required_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">160</span>)):
+	<span style="color:#75715e"># load image from file</span>
+	image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(filename)
+	<span style="color:#75715e"># convert to RGB, if needed</span>
+	image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>convert(<span style="color:#e6db74">&#39;RGB&#39;</span>)
+	<span style="color:#75715e"># convert to array</span>
+	pixels <span style="color:#f92672">=</span> asarray(image)
+	<span style="color:#75715e"># create the detector, using default weights</span>
+	detector <span style="color:#f92672">=</span> MTCNN()
+	<span style="color:#75715e"># detect faces in the image</span>
+	results <span style="color:#f92672">=</span> detector<span style="color:#f92672">.</span>detect_faces(pixels)
+	<span style="color:#75715e"># extract the bounding box from the first face</span>
+	x1, y1, width, height <span style="color:#f92672">=</span> results[<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;box&#39;</span>]
+	<span style="color:#75715e"># bug fix</span>
+	x1, y1 <span style="color:#f92672">=</span> abs(x1), abs(y1)
+	x2, y2 <span style="color:#f92672">=</span> x1 <span style="color:#f92672">+</span> width, y1 <span style="color:#f92672">+</span> height
+	<span style="color:#75715e"># extract the face</span>
+	face <span style="color:#f92672">=</span> pixels[y1:y2, x1:x2]
+	<span style="color:#75715e"># resize pixels to the model size</span>
+	image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>fromarray(face)
+	image <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>resize(required_size)
+	face_array <span style="color:#f92672">=</span> asarray(image)
+	<span style="color:#66d9ef">return</span> face_array
+
+<span style="color:#75715e"># load images and extract faces for all images in a directory</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_faces</span>(directory):
+	faces <span style="color:#f92672">=</span> list()
+	<span style="color:#75715e"># enumerate files</span>
+	<span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> listdir(directory):
+		<span style="color:#75715e"># path</span>
+		path <span style="color:#f92672">=</span> directory <span style="color:#f92672">+</span> filename
+		<span style="color:#75715e"># get face</span>
+		face <span style="color:#f92672">=</span> extract_face(path)
+		<span style="color:#75715e"># store</span>
+		faces<span style="color:#f92672">.</span>append(face)
+	<span style="color:#66d9ef">return</span> faces
+
+<span style="color:#75715e"># load a dataset that contains one subdir for each class that in turn contains images</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_dataset</span>(directory):
+	X, y <span style="color:#f92672">=</span> list(), list()
+	<span style="color:#75715e"># enumerate folders, on per class</span>
+	<span style="color:#66d9ef">for</span> subdir <span style="color:#f92672">in</span> listdir(directory):
+		<span style="color:#75715e"># path</span>
+		path <span style="color:#f92672">=</span> directory <span style="color:#f92672">+</span> subdir <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span>
+		<span style="color:#75715e"># skip any files that might be in the dir</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isdir(path):
+			<span style="color:#66d9ef">continue</span>
+		<span style="color:#75715e"># load all faces in the subdirectory</span>
+		faces <span style="color:#f92672">=</span> load_faces(path)
+		<span style="color:#75715e"># create labels</span>
+		labels <span style="color:#f92672">=</span> [subdir <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(faces))]
+		<span style="color:#75715e"># summarize progress</span>
+		<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;loaded </span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> examples for class: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (len(faces), subdir))
+		<span style="color:#75715e"># store</span>
+		X<span style="color:#f92672">.</span>extend(faces)
+		y<span style="color:#f92672">.</span>extend(labels)
+	<span style="color:#66d9ef">return</span> asarray(X), asarray(y)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+	ap <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+	ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;-td&#39;</span>, <span style="color:#e6db74">&#39;--train_data&#39;</span>, required<span style="color:#f92672">=</span>True)
+	ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;-vd&#39;</span>, <span style="color:#e6db74">&#39;--val_data&#39;</span>, required<span style="color:#f92672">=</span>True)
+	ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;-sd&#39;</span>, <span style="color:#e6db74">&#39;--save_data&#39;</span>, required<span style="color:#f92672">=</span>True)
+	args <span style="color:#f92672">=</span> vars(ap<span style="color:#f92672">.</span>parse_args())
+
+	<span style="color:#75715e"># load train dataset</span>
+	trainX, trainy <span style="color:#f92672">=</span> load_dataset(args[<span style="color:#e6db74">&#39;train_data&#39;</span>])
+	<span style="color:#66d9ef">print</span>(trainX<span style="color:#f92672">.</span>shape, trainy<span style="color:#f92672">.</span>shape)
+	<span style="color:#75715e"># load test dataset</span>
+	testX, testy <span style="color:#f92672">=</span> load_dataset(args[<span style="color:#e6db74">&#39;val_data&#39;</span>])
+	<span style="color:#75715e"># save arrays to one file in compressed format</span>
+	savez_compressed(args[<span style="color:#e6db74">&#39;save_data&#39;</span>], trainX, trainy, testX, testy)
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+	main()
+</code></pre></div><p>Chạy code trên:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python extract_faces_dataset<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>train_data <span style="color:#ae81ff">5</span><span style="color:#f92672">-</span>celebrity<span style="color:#f92672">-</span>faces<span style="color:#f92672">-</span>dataset<span style="color:#f92672">/</span>train<span style="color:#f92672">/</span> <span style="color:#f92672">--</span>val_data <span style="color:#ae81ff">5</span><span style="color:#f92672">-</span>celebrity<span style="color:#f92672">-</span>faces<span style="color:#f92672">-</span>dataset<span style="color:#f92672">/</span>val<span style="color:#f92672">/</span> <span style="color:#f92672">--</span>save_data <span style="color:#ae81ff">5</span><span style="color:#f92672">-</span>celebrity<span style="color:#f92672">-</span>faces<span style="color:#f92672">-</span>dataset<span style="color:#f92672">.</span>npz
+</code></pre></div><p>Sẽ mất một chút thời gian để hoàn thành chương trình. Tất cả các khuôn mặt ở 2 tập <em>train</em> và <em>test</em> được lưu vào một tệp mảng NumPy nén có tên là <em>5-Celeb-face-dataset.npz</em> có dung lượng khoảng 7.5MB và được lưu trữ trong thư mục làm việc hiện tại của chương trình.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">17</span> examples <span style="color:#66d9ef">for</span> class: elton_john
+<span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">19</span> examples <span style="color:#66d9ef">for</span> class: madonna
+<span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">13</span> examples <span style="color:#66d9ef">for</span> class: ben_afflek
+<span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">22</span> examples <span style="color:#66d9ef">for</span> class: mindy_kaling
+<span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">21</span> examples <span style="color:#66d9ef">for</span> class: jerry_seinfeld
+(<span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">3</span>) (<span style="color:#ae81ff">92</span>,)
+<span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">5</span> examples <span style="color:#66d9ef">for</span> class: elton_john
+<span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">5</span> examples <span style="color:#66d9ef">for</span> class: madonna
+<span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">5</span> examples <span style="color:#66d9ef">for</span> class: ben_afflek
+<span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">5</span> examples <span style="color:#66d9ef">for</span> class: mindy_kaling
+<span style="color:#f92672">&gt;</span>loaded <span style="color:#ae81ff">5</span> examples <span style="color:#66d9ef">for</span> class: jerry_seinfeld
+</code></pre></div><p><em><strong>5.3 Tạo Face Embedding vectors</strong></em></p>
+<p>Bước tiếp theo là tạo ra các Face Embedding vectors của mỗi khuôn mặt. Nhớ lại rằng Face Embedding là một vectơ đại diện cho các đặc điểm được trích xuất từ khuôn mặt. Các vectors này sau đó có thể được dùng để tính toán, so sánh với nhau, hoặc tạo ra một bộ phân loại để định danh cho từng khuôn mặt. Ở phần này, chúng ta sẽ dùng mô hình Pre-trained FaceNet để tạo ra các Face Embdding vectors đó.</p>
+<p>Đầu tiên, chúng ta sẽ đọc vào các khuôn mặt đã tạo ở bước trước.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># load the face dataset</span>
+data <span style="color:#f92672">=</span> load(<span style="color:#e6db74">&#39;5-celebrity-faces-dataset.npz&#39;</span>)
+trainX, trainy, testX, testy <span style="color:#f92672">=</span> data[<span style="color:#e6db74">&#39;arr_0&#39;</span>], data[<span style="color:#e6db74">&#39;arr_1&#39;</span>], data[<span style="color:#e6db74">&#39;arr_2&#39;</span>], data[<span style="color:#e6db74">&#39;arr_3&#39;</span>]
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Loaded: &#39;</span>, trainX<span style="color:#f92672">.</span>shape, trainy<span style="color:#f92672">.</span>shape, testX<span style="color:#f92672">.</span>shape, testy<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Tiếp theo, đọc vào Pre-trained FaceNet model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># load the facenet model</span>
+model <span style="color:#f92672">=</span> load_model(<span style="color:#e6db74">&#39;facenet_keras.h5&#39;</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Loaded Model&#39;</span>)
+</code></pre></div><p>Chuẩn hóa dữ liệu đầu vào theo đúng kỳ vọng của Pre-trained FaceNet:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># scale pixel values</span>
+face_pixels <span style="color:#f92672">=</span> face_pixels<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+<span style="color:#75715e"># standardize pixel values across channels (global)</span>
+mean, std <span style="color:#f92672">=</span> face_pixels<span style="color:#f92672">.</span>mean(), face_pixels<span style="color:#f92672">.</span>std()
+face_pixels <span style="color:#f92672">=</span> (face_pixels <span style="color:#f92672">-</span> mean) <span style="color:#f92672">/</span> std
+
+<span style="color:#f92672">...</span>
+<span style="color:#75715e"># transform face into one sample</span>
+samples <span style="color:#f92672">=</span> expand_dims(face_pixels, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</code></pre></div><p>Tạo Face Embedding vectors:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># make prediction to get embedding</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)
+<span style="color:#75715e"># get embedding</span>
+embedding <span style="color:#f92672">=</span> yhat[<span style="color:#ae81ff">0</span>]
+</code></pre></div><p>Viết chung lại thành hàm <em>get_embedding()</em> như bên dưới:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># get the face embedding for one face</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_embedding</span>(model, face_pixels):
+	<span style="color:#75715e"># scale pixel values</span>
+	face_pixels <span style="color:#f92672">=</span> face_pixels<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+	<span style="color:#75715e"># standardize pixel values across channels (global)</span>
+	mean, std <span style="color:#f92672">=</span> face_pixels<span style="color:#f92672">.</span>mean(), face_pixels<span style="color:#f92672">.</span>std()
+	face_pixels <span style="color:#f92672">=</span> (face_pixels <span style="color:#f92672">-</span> mean) <span style="color:#f92672">/</span> std
+	<span style="color:#75715e"># transform face into one sample</span>
+	samples <span style="color:#f92672">=</span> expand_dims(face_pixels, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+	<span style="color:#75715e"># make prediction to get embedding</span>
+	yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)
+	<span style="color:#66d9ef">return</span> yhat[<span style="color:#ae81ff">0</span>]
+</code></pre></div><p>Code đầy đủ từ lúc đọc vào ảnh khuôn mặt, đến khi lưu Face Embedding vector thành 1 file như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># USEAGE:</span>
+<span style="color:#75715e"># python predict_face_embeddings.py --face_dataset 5-celebrity-faces-dataset.npz --facenet_model facenet_keras.h5 --face_embedding 5-celebrity-faces-embeddings.npz</span>
+
+<span style="color:#75715e"># calculate a face embedding for each face in the dataset using facenet</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> load
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> expand_dims
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> asarray
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> savez_compressed
+<span style="color:#f92672">from</span> tensorflow.keras.models <span style="color:#f92672">import</span> load_model
+<span style="color:#f92672">import</span> argparse
+
+<span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+tf<span style="color:#f92672">.</span>get_logger()<span style="color:#f92672">.</span>setLevel(<span style="color:#e6db74">&#39;ERROR&#39;</span>)
+config_tf <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>ConfigProto()
+config_tf<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True
+session <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>Session(config<span style="color:#f92672">=</span>config_tf)
+
+<span style="color:#75715e"># get the face embedding for one face</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_embedding</span>(model, face_pixels):
+	<span style="color:#75715e"># scale pixel values</span>
+	face_pixels <span style="color:#f92672">=</span> face_pixels<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+	<span style="color:#75715e"># standardize pixel values across channels (global)</span>
+	mean, std <span style="color:#f92672">=</span> face_pixels<span style="color:#f92672">.</span>mean(), face_pixels<span style="color:#f92672">.</span>std()
+	face_pixels <span style="color:#f92672">=</span> (face_pixels <span style="color:#f92672">-</span> mean) <span style="color:#f92672">/</span> std
+	<span style="color:#75715e"># transform face into one sample</span>
+	samples <span style="color:#f92672">=</span> expand_dims(face_pixels, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+	<span style="color:#75715e"># make prediction to get embedding</span>
+	yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)
+	<span style="color:#66d9ef">return</span> yhat[<span style="color:#ae81ff">0</span>]
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+	<span style="color:#75715e"># load the face dataset</span>
+	data <span style="color:#f92672">=</span> load(args[<span style="color:#e6db74">&#39;face_dataset&#39;</span>])
+	trainX, trainy, testX, testy <span style="color:#f92672">=</span> data[<span style="color:#e6db74">&#39;arr_0&#39;</span>], data[<span style="color:#e6db74">&#39;arr_1&#39;</span>], data[<span style="color:#e6db74">&#39;arr_2&#39;</span>], data[<span style="color:#e6db74">&#39;arr_3&#39;</span>]
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Loaded: &#39;</span>, trainX<span style="color:#f92672">.</span>shape, trainy<span style="color:#f92672">.</span>shape, testX<span style="color:#f92672">.</span>shape, testy<span style="color:#f92672">.</span>shape)
+	<span style="color:#75715e"># load the facenet model</span>
+	model <span style="color:#f92672">=</span> load_model(args[<span style="color:#e6db74">&#39;facenet_model&#39;</span>])
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Loaded Model&#39;</span>)
+	<span style="color:#75715e"># convert each face in the train set to an embedding</span>
+	newTrainX <span style="color:#f92672">=</span> list()
+	<span style="color:#66d9ef">for</span> face_pixels <span style="color:#f92672">in</span> trainX:
+		embedding <span style="color:#f92672">=</span> get_embedding(model, face_pixels)
+		newTrainX<span style="color:#f92672">.</span>append(embedding)
+	newTrainX <span style="color:#f92672">=</span> asarray(newTrainX)
+	<span style="color:#66d9ef">print</span>(newTrainX<span style="color:#f92672">.</span>shape)
+	<span style="color:#75715e"># convert each face in the test set to an embedding</span>
+	newTestX <span style="color:#f92672">=</span> list()
+	<span style="color:#66d9ef">for</span> face_pixels <span style="color:#f92672">in</span> testX:
+		embedding <span style="color:#f92672">=</span> get_embedding(model, face_pixels)
+		newTestX<span style="color:#f92672">.</span>append(embedding)
+	newTestX <span style="color:#f92672">=</span> asarray(newTestX)
+	<span style="color:#66d9ef">print</span>(newTestX<span style="color:#f92672">.</span>shape)
+	<span style="color:#75715e"># save arrays to one file in compressed format</span>
+	savez_compressed(args[<span style="color:#e6db74">&#39;face_embedding&#39;</span>], newTrainX, trainy, newTestX, testy)
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+	ap <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+	ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;-fd&#39;</span>, <span style="color:#e6db74">&#39;--face_dataset&#39;</span>, required<span style="color:#f92672">=</span>True)
+	ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;-fnm&#39;</span>, <span style="color:#e6db74">&#39;--facenet_model&#39;</span>, required<span style="color:#f92672">=</span>True)
+	ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;-fe&#39;</span>, <span style="color:#e6db74">&#39;--face_embedding&#39;</span>, required<span style="color:#f92672">=</span>True)
+	args <span style="color:#f92672">=</span> vars(ap<span style="color:#f92672">.</span>parse_args())
+
+	main()
+</code></pre></div><p>Chạy code trên:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python predict_face_embeddings<span style="color:#f92672">.</span>py <span style="color:#f92672">--</span>face_dataset <span style="color:#ae81ff">5</span><span style="color:#f92672">-</span>celebrity<span style="color:#f92672">-</span>faces<span style="color:#f92672">-</span>dataset<span style="color:#f92672">.</span>npz <span style="color:#f92672">--</span>facenet_model facenet_keras<span style="color:#f92672">.</span>h5 <span style="color:#f92672">--</span>face_embedding <span style="color:#ae81ff">5</span><span style="color:#f92672">-</span>celebrity<span style="color:#f92672">-</span>faces<span style="color:#f92672">-</span>embeddings<span style="color:#f92672">.</span>npz
+</code></pre></div><p>Kết quả, toàn bộ ảnh khuôn mặt đã được chuyển đổi thành các Face Embedding vectors 128 chiều. Tất cả được lưu lại thành file <em>5-celebrity-faces-embeddings.npz</em> trong cùng thư mục làm việc.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Loaded: (<span style="color:#ae81ff">93</span>, <span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">3</span>) (<span style="color:#ae81ff">93</span>,) (<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">160</span>, <span style="color:#ae81ff">3</span>) (<span style="color:#ae81ff">25</span>,)
+Loaded Model
+(<span style="color:#ae81ff">93</span>, <span style="color:#ae81ff">128</span>)
+(<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">128</span>)
+</code></pre></div><p><em><strong>5.4 Thực hiện Face Classification</strong></em></p>
+<p>Trong phần này, chúng ta sẽ phát triển một mô hình để phân loại các Face Embedding vectors thành 5 nhãn là tên của những người nổi tiếng trong bộ dữ liệu <em>5 Celebrity Faces Dataset</em>. Đầu tiên, đọc vào Face Embedding vectors ở phần trước:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># load dataset</span>
+data <span style="color:#f92672">=</span> load(<span style="color:#e6db74">&#39;5-celebrity-faces-embeddings.npz&#39;</span>)
+trainX, trainy, testX, testy <span style="color:#f92672">=</span> data[<span style="color:#e6db74">&#39;arr_0&#39;</span>], data[<span style="color:#e6db74">&#39;arr_1&#39;</span>], data[<span style="color:#e6db74">&#39;arr_2&#39;</span>], data[<span style="color:#e6db74">&#39;arr_3&#39;</span>]
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Dataset: train=</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, test=</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (trainX<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>], testX<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]))
+</code></pre></div><p>Để train Classifier model, chúng ta cần chuẩn hóa dữ liệu:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># normalize input vectors</span>
+in_encoder <span style="color:#f92672">=</span> Normalizer(norm<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;l2&#39;</span>)
+trainX <span style="color:#f92672">=</span> in_encoder<span style="color:#f92672">.</span>transform(trainX)
+testX <span style="color:#f92672">=</span> in_encoder<span style="color:#f92672">.</span>transform(testX)
+
+<span style="color:#f92672">..</span>
+<span style="color:#75715e"># label encode targets</span>
+out_encoder <span style="color:#f92672">=</span> LabelEncoder()
+out_encoder<span style="color:#f92672">.</span>fit(trainy)
+trainy <span style="color:#f92672">=</span> out_encoder<span style="color:#f92672">.</span>transform(trainy)
+testy <span style="color:#f92672">=</span> out_encoder<span style="color:#f92672">.</span>transform(testy)
+</code></pre></div><p>Tiếp theo, chúng ta sẽ tạo và huấn luyện một SVM model. Thuật toán này đã được chứng mình tính hiệu quả trong việc phân loại các Face Embedding vectors.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># fit model</span>
+model <span style="color:#f92672">=</span> SVC(kernel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;linear&#39;</span>)
+model<span style="color:#f92672">.</span>fit(trainX, trainy)
+
+<span style="color:#f92672">...</span>
+<span style="color:#75715e"># predict</span>
+yhat_train <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(trainX)
+yhat_test <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(testX)
+<span style="color:#75715e"># score</span>
+score_train <span style="color:#f92672">=</span> accuracy_score(trainy, yhat_train)
+score_test <span style="color:#f92672">=</span> accuracy_score(testy, yhat_test)
+<span style="color:#75715e"># summarize</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: train=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">, test=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (score_train<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>, score_test<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Sau khi huấn luyện xong model, ta sẽ thử dự đoán một người ngẫu nhiên trong tập Test.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># test model on a random example from the test dataset</span>
+selection <span style="color:#f92672">=</span> choice([i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(testX<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>])])
+random_face_pixels <span style="color:#f92672">=</span> testX_faces[selection]
+random_face_emb <span style="color:#f92672">=</span> testX[selection]
+random_face_class <span style="color:#f92672">=</span> testy[selection]
+random_face_name <span style="color:#f92672">=</span> out_encoder<span style="color:#f92672">.</span>inverse_transform([random_face_class])
+<span style="color:#f92672">...</span>
+<span style="color:#75715e"># prediction for the face</span>
+samples <span style="color:#f92672">=</span> expand_dims(random_face_emb, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+yhat_class <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)
+yhat_prob <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict_proba(samples)
+<span style="color:#f92672">...</span>
+<span style="color:#75715e"># get name</span>
+class_index <span style="color:#f92672">=</span> yhat_class[<span style="color:#ae81ff">0</span>]
+class_probability <span style="color:#f92672">=</span> yhat_prob[<span style="color:#ae81ff">0</span>,class_index] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+predict_names <span style="color:#f92672">=</span> out_encoder<span style="color:#f92672">.</span>inverse_transform(yhat_class)
+<span style="color:#f92672">...</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Predicted: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (predict_names[<span style="color:#ae81ff">0</span>], class_probability))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Expected: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> random_face_name[<span style="color:#ae81ff">0</span>])
+<span style="color:#f92672">...</span>
+<span style="color:#75715e"># plot for fun</span>
+pyplot<span style="color:#f92672">.</span>imshow(random_face_pixels)
+title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (predict_names[<span style="color:#ae81ff">0</span>], class_probability)
+pyplot<span style="color:#f92672">.</span>title(title)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Tổng hơp hết lại, ta có code đầy đủ như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># USEAGE:</span>
+<span style="color:#75715e"># python random_face_identity_classification.py --face_dataset 5-celebrity-faces-dataset.npz --face_embedding 5-celebrity-faces-dataset.npz</span>
+
+<span style="color:#75715e"># develop a classifier for the 5 Celebrity Faces Dataset</span>
+<span style="color:#f92672">from</span> random <span style="color:#f92672">import</span> choice
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> load
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> expand_dims
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> Normalizer
+<span style="color:#f92672">from</span> sklearn.svm <span style="color:#f92672">import</span> SVC
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#f92672">import</span> argparse
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    ap <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+    ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;-fd&#39;</span>, <span style="color:#e6db74">&#39;--face_dataset&#39;</span>, required<span style="color:#f92672">=</span>True)
+    ap<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;-fe&#39;</span>, <span style="color:#e6db74">&#39;--face_embedding&#39;</span>, required<span style="color:#f92672">=</span>True)
+    args <span style="color:#f92672">=</span> vars(ap<span style="color:#f92672">.</span>parse_args())
+
+    <span style="color:#75715e"># load faces</span>
+    data <span style="color:#f92672">=</span> load(args[<span style="color:#e6db74">&#39;face_dataset&#39;</span>])
+    testX_faces <span style="color:#f92672">=</span> data[<span style="color:#e6db74">&#39;arr_2&#39;</span>]
+    <span style="color:#75715e"># load face embeddings</span>
+    data <span style="color:#f92672">=</span> load(args[<span style="color:#e6db74">&#39;face_embedding&#39;</span>])
+    trainX, trainy, testX, testy <span style="color:#f92672">=</span> data[<span style="color:#e6db74">&#39;arr_0&#39;</span>], data[<span style="color:#e6db74">&#39;arr_1&#39;</span>], data[<span style="color:#e6db74">&#39;arr_2&#39;</span>], data[<span style="color:#e6db74">&#39;arr_3&#39;</span>]
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Dataset: train=</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, test=</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (trainX<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>], testX<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]))
+    <span style="color:#75715e"># normalize input vectors</span>
+    in_encoder <span style="color:#f92672">=</span> Normalizer(norm<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;l2&#39;</span>)
+    trainX <span style="color:#f92672">=</span> in_encoder<span style="color:#f92672">.</span>transform(trainX)
+    testX <span style="color:#f92672">=</span> in_encoder<span style="color:#f92672">.</span>transform(testX)
+    <span style="color:#75715e"># label encode targets</span>
+    out_encoder <span style="color:#f92672">=</span> LabelEncoder()
+    out_encoder<span style="color:#f92672">.</span>fit(trainy)
+    trainy <span style="color:#f92672">=</span> out_encoder<span style="color:#f92672">.</span>transform(trainy)
+    testy <span style="color:#f92672">=</span> out_encoder<span style="color:#f92672">.</span>transform(testy)
+    <span style="color:#75715e"># fit model</span>
+    model <span style="color:#f92672">=</span> SVC(kernel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;linear&#39;</span>, probability<span style="color:#f92672">=</span>True)
+    model<span style="color:#f92672">.</span>fit(trainX, trainy)
+    <span style="color:#75715e"># predict</span>
+    yhat_train <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(trainX)
+    yhat_test <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(testX)
+    <span style="color:#75715e"># score</span>
+    score_train <span style="color:#f92672">=</span> accuracy_score(trainy, yhat_train)
+    score_test <span style="color:#f92672">=</span> accuracy_score(testy, yhat_test)
+    <span style="color:#75715e"># summarize</span>
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: train=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">, test=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (score_train<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>, score_test<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+
+
+    <span style="color:#75715e"># test model on a random example from the test dataset</span>
+    selection <span style="color:#f92672">=</span> choice([i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(testX<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>])])
+    random_face_pixels <span style="color:#f92672">=</span> testX_faces[selection]
+    random_face_emb <span style="color:#f92672">=</span> testX[selection]
+    random_face_class <span style="color:#f92672">=</span> testy[selection]
+    random_face_name <span style="color:#f92672">=</span> out_encoder<span style="color:#f92672">.</span>inverse_transform([random_face_class])
+    <span style="color:#75715e"># prediction for the face</span>
+    samples <span style="color:#f92672">=</span> expand_dims(random_face_emb, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+    yhat_class <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(samples)
+    yhat_prob <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict_proba(samples)
+    <span style="color:#75715e"># get name</span>
+    class_index <span style="color:#f92672">=</span> yhat_class[<span style="color:#ae81ff">0</span>]
+    class_probability <span style="color:#f92672">=</span> yhat_prob[<span style="color:#ae81ff">0</span>,class_index] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+    predict_names <span style="color:#f92672">=</span> out_encoder<span style="color:#f92672">.</span>inverse_transform(yhat_class)
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Predicted: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (predict_names[<span style="color:#ae81ff">0</span>], class_probability))
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Expected: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> random_face_name[<span style="color:#ae81ff">0</span>])
+    <span style="color:#75715e"># plot for fun</span>
+    pyplot<span style="color:#f92672">.</span>imshow(random_face_pixels)
+    title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (predict_names[<span style="color:#ae81ff">0</span>], class_probability)
+    pyplot<span style="color:#f92672">.</span>title(title)
+    pyplot<span style="color:#f92672">.</span>show()
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    main()
+</code></pre></div><p>Kết quả chạy code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Dataset: train<span style="color:#f92672">=</span><span style="color:#ae81ff">93</span>, test<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>
+Accuracy: train<span style="color:#f92672">=</span><span style="color:#ae81ff">100.000</span>, test<span style="color:#f92672">=</span><span style="color:#ae81ff">100.000</span>
+
+Predicted: jerry_seinfeld (<span style="color:#ae81ff">88.476</span>)
+Expected: jerry_seinfeld
+</code></pre></div><p>Kèm theo hình ảnh của người được lựa chọn để dự đoán:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/face_reg_facenet_predict.png">
+</div>
+
+</p>
+<p><strong>6. Kết luận</strong></p>
+<p>Trong bài này, chúng ta đã khám phá cách phát triển hệ thống nhận diện khuôn mặt bằng mô hình FaceNet và bộ phân loại SVM. Cụ thể:</p>
 <ul>
-<li>Giới thiệu về  VGGFace và VGGFace2</li>
-<li>Cách cài đặt thư viện Keras VGGFace để sử dụng các mô hình này bằng Python với Keras.</li>
-<li>Cách phát triển hệ thống nhận dạng khuôn mặt để dự đoán tên của những người nổi tiếng trong các bức ảnh.</li>
-<li>Cách phát triển hệ thống xác minh khuôn mặt để xác nhận danh tính của một người được từ bức ảnh khuôn mặt của họ.</li>
+<li>Giới thiệu về mô hình FaceNet.</li>
+<li>Cách chuẩn bị dữ liệu để huấn luyện hệ thống.</li>
+<li>Cách huấn luyện mô hình và sử dụng mô hình đã huấn luyện để tạo dự đoán.</li>
 </ul>
-<p>Trong bài tiếp theo, chúng ta sẽ khám phá cách thực hiện bài toán Face Recongition bằng mô hình FaceNet. Mời các bạn đón đọc.</p>
+<p>Toàn bộ source code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Computer_Vision/tree/master/Deep_Learning/Face_Recognition/FaceNet">đây</a></p>
+<p>Trong bài tiếp theo, chúng ta sẽ cùng nhau tìm hiểu về mô hình Siamese. Mời các bạn đón đọc.</p>
 <p><strong>8. Tham khảo</strong></p>
 <ul>
 <li><a href="https://machinelearningmastery.com/deep-learning-for-computer-vision/">Machinelearningmastery</a></li>
