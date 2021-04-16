@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Tìm hiểu mạng Siamese. Xây dựng Dataset để huấn luyện mạng Siamese</title>
+      <link>https://tiensu.github.io/blog/55_siamese_network/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/55_siamese_network/</guid>
+      <description>Ngày nay, AI đã len lỏi vào mọi lĩnh vực của đời sống xã hội: y tế, giáo dục, giao thông, &amp;hellip; Có thể nói không ngoa rằng hầu như mọi bài toán AI đều có thể giải quyết được thông qua Neural Network (NN).</description>
+    </item>
+    
+    <item>
       <title>Thực hiện Face Recognition với FaceNet</title>
       <link>https://tiensu.github.io/blog/54_face_recognition_facenet/</link>
       <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>

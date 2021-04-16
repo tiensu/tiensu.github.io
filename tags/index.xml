@@ -6,7 +6,7 @@
     <description>Recent content in Tags on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tiensu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>Deep Learning</title>
       <link>https://tiensu.github.io/tags/deep-learning/</link>
-      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>One-shot Learning</title>
+      <link>https://tiensu.github.io/tags/one-shot-learning/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/tags/one-shot-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Siamese Network</title>
+      <link>https://tiensu.github.io/tags/siamese-network/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/tags/siamese-network/</guid>
       <description></description>
     </item>
     
@@ -30,11 +48,11 @@
     </item>
     
     <item>
-      <title>Model Deployment</title>
-      <link>https://tiensu.github.io/tags/model-deployment/</link>
+      <title>MLOps</title>
+      <link>https://tiensu.github.io/tags/mlops/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/tags/model-deployment/</guid>
+      <guid>https://tiensu.github.io/tags/mlops/</guid>
       <description></description>
     </item>
     

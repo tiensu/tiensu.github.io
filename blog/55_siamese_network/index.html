@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/siamese-network"
+          class="text-primary">Siamese network</a>
+        
+        <a href="/categories/one-shot-learning"
+          class="text-primary">One shot learning</a>
+        
+        <h2>Tìm hiểu mạng Siamese. Xây dựng Dataset để huấn luyện mạng Siamese</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>03 April 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/siamese_network.jpg" class="img-fluid w-100 mb-4" alt="Tìm hiểu mạng Siamese. Xây dựng Dataset để huấn luyện mạng Siamese">
+        
+        <div class="content mb-5">
+          <p>Ngày nay, AI đã len lỏi vào mọi lĩnh vực của đời sống xã hội: y tế, giáo dục, giao thông, &hellip; Có thể nói không ngoa rằng hầu như mọi bài toán AI đều có thể giải quyết được thông qua Neural Network (<em>NN</em>). Tuy nhiên, các NNs luôn đòi hỏi lượng lớn dữ liệu để huấn luyện chúng. Trong thực tế, có một số bài toán mà việc thu thập đủ dữ liệu là một nhiệm vụ bất khả thi, ví dụ như bài toán Face Recognition, Signature Verification, &hellip; <em>Siamese Network (SN) hay Siamese Neural Network (SNN)</em> ra đời để giải quyết tốt hơn những bài toán dạng như thế này.</p>
+<p>SNN chỉ sử dụng một số lượng hình ảnh rất nhỏ (<em>vài ảnh</em>) để có được những dự đoán tốt hơn nhiều so với mạng NN truyền thống. Vì thế nó còn được gọi với 1 số cái tên như <em>One-shot Learning</em>, <em>Few-shot Learning</em>, &hellip; Khả năng học hỏi từ rất ít dữ liệu đã khiến cho SNN trở nên phổ biến hơn trong những năm gần đây. Trong bài viết này, chúng ta sẽ tìm hiểu nó là gì và cách phát triển hệ thống Signature Verification với Pytorch bằng cách sử dụng SNN.</p>
+<p><strong>1. Giới thiệu Siamese Neural Network</strong></p>
+<p><em>Siamese Neural Network (SNN)</em> là một kiến trúc mạng nơ-ron chứa hai hoặc nhiều mạng con giống hệt nhau. &ldquo;<em>Giống hệt nhau</em>&rdquo; ở đây có nghĩa là, chúng có cùng cấu hình với cùng thông số và trọng số. Việc cập nhật các thông số được phản ánh đồng thời trên cả hai mạng con của nó.</p>
+<p>SNN được sử dụng để tìm sự giống nhau của các dữ liệu đầu (<em>Input Data</em>) vào bằng cách so sánh các vectơ đặc trưng của chúng. Một số ứng dụng phổ biến của SNN có thể kể đến như là: Face Verification, Signature Verification, Image Seaching System, &hellip;</p>
+<p>Thông thường, một mạng nơ-ron học cách để dự đoán các lớp của một bài toán. Nếu muốn thêm hay bớt các lớp mới, chúng ta phải cập nhật (<em>huấn luyện</em>) lại mạng nơ-ron trên toàn bộ tập dữ liệu (<em>cả dữ liệu mới và cũ</em>). Ngoài ra, các mạng nơ-ron sâu cần một khối lượng lớn dữ liệu để có thể huấn luyện chúng. SNN, theo một cách khác, học cách tìm ra sự giống nhau giữa các Input Data. Vì vậy, nó cho phép chúng ta phân loại các lớp dữ liệu mới mà không cần huấn luyện lại mạng nơ-ron.
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/siamese_network.png">
+</div>
+
+</p>
+<p>Luồng làm việc của SNN như sau:</p>
+<ul>
+<li>Chọn một cặp Input Data (<em>trong phạm vi bài này là ảnh</em>) được chọn từ dataset.</li>
+<li>Đưa mỗi ảnh qua mỗi Sub-network của SNN để xử lý. Output của các Sub-networks là một Embedding vector.</li>
+<li>Tính toán khoảng cách Euclidean giữa 2 Embedding vectors đó.</li>
+<li>Một <em>Sigmoid Function</em> có thể được áp trên khoảng cách để đưa ra giá trị Score trong đoạn [0,1], thể hiện mức độ giống nhau giữa 2 Embedding vectors. Score càng gần 1 thì 2 vectors càng giống nhau và ngược lại.</li>
+</ul>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/siamese_network.png">
+</div>
+
+
+<p><strong>2. Ưu điểm của SNN</strong></p>
+<p>SNN có một số ưu điểm nổi bật như sau:</p>
+<ul>
+<li>
+<p>Lượng dữ liệu cần thiết để huấn luyện SNN là rất ít.
+Chỉ cần vài Samples là đủ (<em>1-5 samples</em>) huấn luyện SNN. Phương pháp mà nó sử dụng ở đây là <em>One-Shot Learning</em> hoặc <em>Few-Shot Learning</em>. Chính vì cần ít dữ liệu huấn luyện như vậy nên chúng ta cũng không lo lắng việc dữ liệu bị mất cân bằng (<em>Image Imbalance</em>).</p>
+</li>
+<li>
+<p>Khả năng kết hợp với các bộ phân loại khác cao.
+Do cơ chế học của SNN khác biệt với các bộ phân lớp thông thường khác, nên chúng ta hoàn toàn có thể kết hợp chúng lại với nhau. Việc làm này thường cho ra kết quả tốt hơn.</p>
+</li>
+<li>
+<p>Học từ sự tương đồng về ngữ nghĩa:
+SNN tập trung vào việc học các Features ở các lớp sâu hơn, nơi mà các Features giống nhau được đặt gần nhau. Do đó, nó có thể hiểu được phần nào sự tương đồng về ngữ nghĩa của các Input Data.</p>
+</li>
+</ul>
+<p><strong>3. Nhược điểm của SNN</strong></p>
+<p>SNN cũng có những nhược điểm sau:</p>
+<ul>
+<li>
+<p>Thời gian huấn luyện lâu hơn.
+SNN học theo từng cặp đôi một với nhau nên khả năng học của nó chậm hơn các NN khác.</p>
+</li>
+<li>
+<p>Không thể hiện xác suất mỗi lớp trong Output.
+SNN chỉ đưa đưa 1 giá trị <em>Score</em> trong đoạn [0,1], thể hiện sự giống nhau giữa 2 Input Data. <em>Score</em> càng gần 1 thì 2 Input Data càng giống nhau và ngược lại.</p>
+</li>
+</ul>
+<p><strong>4. Loss Function của SNN</strong></p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/snn_loss_function.png">
+</div>
+
+
+<p>Bởi vì, SNN học theo kiểu từng đôi một của Input Data nên <em>Cross Entropy</em> Loss Function thường không được sử dụng. Thay vào đó, 2 Loss Functions là <em>Triple Loss</em> và <em>Contrastive Loss</em> được sử dụng nhiều hơn.</p>
+<p><em><strong>4.1 Triple Loss function</strong></em></p>
+<p>Ý tưởng của <em>Triple Loss</em> là sử dụng bộ 3 Input Data bao gồm: <em>Anchor (A), Positive (P) và Nagative (N)</em> mà ở đó, khoảng cách từ A đến P được tối thiểu hóa, trong khi khoảng cách từ A đến N được tối đa hóa trong suốt quá trình huấn luyện model.</p>
+
+
+<div style="text-align:center">
+    <p>$L(A,P,N) = max(||f(A) - f(P)||^2 - ||f(A) - f(N)||^2 + \alpha,0)$</p>
+</div>
+
+
+<p>Trong công thức trên,</p>
+<ul>
+<li>$\alpha$ gọi là <em>margin</em>, được sử dụng để nhấn mạnh sự khác biệt hoặc sự tương đồng giữa các cặp Input Data.</li>
+<li>$f(A), f(P), f(N)$ là các vectors đặc trưng của các Input Data A, P, N, tương ứng.</li>
+</ul>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/triplet_loss_faces.png">
+</div>
+
+
+<p><em><strong>4.2 Contrastive Loss</strong></em></p>
+<p>Ý tưởng của <em>Contrastive Loss</em> cũng tương tự như <em>Triplet Loss</em>, sự khác nhau ở chỗ <em>Contrastive Loss</em> chỉ sử dụng 1 cặp Input Data, hoặc là cùng loại, hoặc là khác loại. Nếu cùng loại thì khoảng cách giữa các vectors đặc trưng của chúng sẽ được tối thiểu hóa, còn nếu khác loại thì khoảng cách giữa các vectors đặc trưng của chúng sẽ được tối đa hóa trong suốt quá trình huấn luyện.</p>
+<p>Công thức của <em>Contrastive Loss</em>:
+
+
+<div style="text-align:center">
+    <p>$(1 - Y)\frac{1}{2}(D_w)^2 + (Y)\frac{1}{2}{max(0,m - D_w)}^2$</p>
+</div>
+
+</p>
+<p>Trong đó, $D_w$ là khoảng cách Euclidean:
+
+
+<div style="text-align:center">
+    <p>$\sqrt{{G_w(X_1) - G_w(X_2)}^2}$</p>
+</div>
+
+</p>
+<p>$G_w$ là Ouput của SNN đối với 1 Input Data.</p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/pairwise_ranking_loss_faces.png">
+</div>
+
+
+<p>Việc lựa chọn sử dụng Loss Function nào còn tùy thuộc vào bài toán cụ thể. Chưa có công bố nào kết luận cái nào tốt hơn cái nào. Bạn nên thử cả 2 loại để tìm ra cái tốt hơn cho bài toán của bạn.</p>
+<p><strong>5. Signature Verification với Siamese Networks</strong></p>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/siamese_signature_verification.png">
+</div>
+
+
+<p>Trong phần này, chúng ta sẽ xây dựng một SNN model bằng Pytorch để thực hiện nhiệm vụ <em>Signature Verification</em>.</p>
+<p><em><strong>5.1 Signature dataset</strong></em></p>
+<p>Dataset sử dụng trong bài này là <a href="https://drive.google.com/drive/folders/1hFljH9AKhxxIqH-3fj72mCMA6Xh3Vv0m?usp=sharing">ICDAR 2011</a>. Nó chứa các chữ ký của những người dân ở Hà Lan, cả chữ ký thật và chữ ký giả. Nhãn của dữ liệu nằm trong file CSV tương ứng.
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/siamese_network_dataset.png">
+</div>
+
+</p>
+<p>Chúng ta sẽ đoc vào dataset và chuẩn bị cho việc huấn luyện model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#preprocessing and loading the dataset</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SiameseDataset</span>():
+    <span style="color:#66d9ef">def</span> __init__(self,training_csv<span style="color:#f92672">=</span>None,training_dir<span style="color:#f92672">=</span>None,transform<span style="color:#f92672">=</span>None):
+        <span style="color:#75715e"># used to prepare the labels and images path</span>
+        self<span style="color:#f92672">.</span>train_df<span style="color:#f92672">=</span>pd<span style="color:#f92672">.</span>read_csv(training_csv)
+        self<span style="color:#f92672">.</span>train_df<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;image1&#34;</span>,<span style="color:#e6db74">&#34;image2&#34;</span>,<span style="color:#e6db74">&#34;label&#34;</span>]
+        self<span style="color:#f92672">.</span>train_dir <span style="color:#f92672">=</span> training_dir    
+        self<span style="color:#f92672">.</span>transform <span style="color:#f92672">=</span> transform
+
+    <span style="color:#66d9ef">def</span> __getitem__(self,index):
+        <span style="color:#75715e"># getting the image path</span>
+        image1_path<span style="color:#f92672">=</span>os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(self<span style="color:#f92672">.</span>train_dir,self<span style="color:#f92672">.</span>train_df<span style="color:#f92672">.</span>iat[index,<span style="color:#ae81ff">0</span>])
+        image2_path<span style="color:#f92672">=</span>os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(self<span style="color:#f92672">.</span>train_dir,self<span style="color:#f92672">.</span>train_df<span style="color:#f92672">.</span>iat[index,<span style="color:#ae81ff">1</span>])
+        <span style="color:#75715e"># Loading the image</span>
+        img1 <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(image1_path)
+        img2 <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(image2_path)
+        img1 <span style="color:#f92672">=</span> img0<span style="color:#f92672">.</span>convert(<span style="color:#e6db74">&#34;L&#34;</span>)
+        img2 <span style="color:#f92672">=</span> img1<span style="color:#f92672">.</span>convert(<span style="color:#e6db74">&#34;L&#34;</span>)
+        <span style="color:#75715e"># Apply image transformations</span>
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>transform <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> None:
+            img1 <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>transform(img1)
+            img2 <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>transform(img2)
+        <span style="color:#66d9ef">return</span> img1, img2 , th<span style="color:#f92672">.</span>from_numpy(np<span style="color:#f92672">.</span>array([int(self<span style="color:#f92672">.</span>train_df<span style="color:#f92672">.</span>iat[index,<span style="color:#ae81ff">2</span>])],dtype<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>float32))
+    <span style="color:#66d9ef">def</span> __len__(self):
+        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>train_df)
+
+<span style="color:#75715e"># Load the the dataset from raw image folders</span>
+siamese_dataset <span style="color:#f92672">=</span> SiameseDataset(training_csv,training_dir,
+                                        transform<span style="color:#f92672">=</span>transforms<span style="color:#f92672">.</span>Compose([transforms<span style="color:#f92672">.</span>Resize((<span style="color:#ae81ff">105</span>,<span style="color:#ae81ff">105</span>)),
+                                                                      transforms<span style="color:#f92672">.</span>ToTensor()
+                                                                      ])
+                                       )
+
+<span style="color:#75715e"># Load the dataset as pytorch tensors using dataloader</span>
+train_dataloader <span style="color:#f92672">=</span> DataLoader(
+    siamese_dataset, shuffle<span style="color:#f92672">=</span>True, num_workers<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>, batch_size<span style="color:#f92672">=</span>config<span style="color:#f92672">.</span>batch_size
+)
+</code></pre></div><p><em><strong>5.2 SNN model</strong></em></p>
+<p>Chúng ta sẽ tạo SNN model như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#create a siamese network</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SiameseNetwork</span>(nn<span style="color:#f92672">.</span>Module):
+    <span style="color:#66d9ef">def</span> __init__(self):
+        super(SiameseNetwork, self)<span style="color:#f92672">.</span>__init__()
+        <span style="color:#75715e"># Setting up the Sequential of CNN Layers</span>
+        self<span style="color:#f92672">.</span>cnn <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(
+            nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">96</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>,stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>LocalResponseNorm(<span style="color:#ae81ff">5</span>,alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.0001</span>,beta<span style="color:#f92672">=</span><span style="color:#ae81ff">0.75</span>,k<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            nn<span style="color:#f92672">.</span>MaxPool2d(<span style="color:#ae81ff">3</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            
+            nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">96</span>, <span style="color:#ae81ff">256</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>,stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,padding<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>LocalResponseNorm(<span style="color:#ae81ff">5</span>,alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.0001</span>,beta<span style="color:#f92672">=</span><span style="color:#ae81ff">0.75</span>,k<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            nn<span style="color:#f92672">.</span>MaxPool2d(<span style="color:#ae81ff">3</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            nn<span style="color:#f92672">.</span>Dropout2d(p<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>),
+
+            nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">256</span>,<span style="color:#ae81ff">384</span> , kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>,stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            
+            nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">384</span>,<span style="color:#ae81ff">256</span> , kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>,stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>MaxPool2d(<span style="color:#ae81ff">3</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            nn<span style="color:#f92672">.</span>Dropout2d(p<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>),
+        )
+        <span style="color:#75715e"># Defining the fully connected layers</span>
+        self<span style="color:#f92672">.</span>fc <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(
+            nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">30976</span>, <span style="color:#ae81ff">1024</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>Dropout2d(p<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>),
+            
+            nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">1024</span>, <span style="color:#ae81ff">128</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            
+            nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">128</span>,<span style="color:#ae81ff">2</span>))
+        
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward_once</span>(self, x):
+        <span style="color:#75715e"># Forward pass </span>
+        output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>cnn(x)
+        output <span style="color:#f92672">=</span> output<span style="color:#f92672">.</span>view(output<span style="color:#f92672">.</span>size()[<span style="color:#ae81ff">0</span>], <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+        output <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fc(output)
+        <span style="color:#66d9ef">return</span> output
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, input1, input2):
+        <span style="color:#75715e"># forward pass of input 1</span>
+        output1 <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>forward_once(input1)
+        <span style="color:#75715e"># forward pass of input 2</span>
+        output2 <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>forward_once(input2)
+        <span style="color:#66d9ef">return</span> output1, output2
+</code></pre></div><p><em><strong>5.3 Loss Function</strong></em></p>
+<p>Trong bài này, mình sẽ sử dụng Contrastive Loss. Code của nó trong Pytorch như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ContrastiveLoss</span>(torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Module):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    Contrastive loss function.
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> __init__(self, margin<span style="color:#f92672">=</span><span style="color:#ae81ff">1.0</span>):
+        super(ContrastiveLoss, self)<span style="color:#f92672">.</span>__init__()
+        self<span style="color:#f92672">.</span>margin <span style="color:#f92672">=</span> margin
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x0, x1, y):
+        <span style="color:#75715e"># euclidian distance</span>
+        diff <span style="color:#f92672">=</span> x0 <span style="color:#f92672">-</span> x1
+        dist_sq <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>sum(torch<span style="color:#f92672">.</span>pow(diff, <span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">1</span>)
+        dist <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>sqrt(dist_sq)
+
+        mdist <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>margin <span style="color:#f92672">-</span> dist
+        dist <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>clamp(mdist, min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.0</span>)
+        loss <span style="color:#f92672">=</span> y <span style="color:#f92672">*</span> dist_sq <span style="color:#f92672">+</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> y) <span style="color:#f92672">*</span> torch<span style="color:#f92672">.</span>pow(dist, <span style="color:#ae81ff">2</span>)
+        loss <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>sum(loss) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.0</span> <span style="color:#f92672">/</span> x0<span style="color:#f92672">.</span>size()[<span style="color:#ae81ff">0</span>]
+        <span style="color:#66d9ef">return</span> loss
+</code></pre></div><p><em><strong>5.4 Train SNN model</strong></em></p>
+<p>Các bước tiến hành huấn luyện SNN model như sau:</p>
+<ul>
+<li>Khởi tạo model, Loss Funtion, và Optimizer (<em>bài này sử dụng Adam</em>)</li>
+<li>Đưa từng cặp Images vào SNN network.</li>
+<li>Tính toán Loss từ Ouput của mỗi ảnh.</li>
+<li>Tính toán Gradients của model theo phương pháp Back Propagate.</li>
+<li>Cập nhật các tham số của model, sử dụng Optimizer.</li>
+<li>Lưu lại model.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Declare Siamese Network</span>
+net <span style="color:#f92672">=</span> SiameseNetwork()<span style="color:#f92672">.</span>cuda()
+<span style="color:#75715e"># Decalre Loss Function</span>
+criterion <span style="color:#f92672">=</span> ContrastiveLoss()
+<span style="color:#75715e"># Declare Optimizer</span>
+optimizer <span style="color:#f92672">=</span> th<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>Adam(net<span style="color:#f92672">.</span>parameters(), lr<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-3</span>, weight_decay<span style="color:#f92672">=</span><span style="color:#ae81ff">0.0005</span>)
+<span style="color:#75715e">#train the model</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train</span>():
+    loss<span style="color:#f92672">=</span>[] 
+    counter<span style="color:#f92672">=</span>[]
+    iteration_number <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> epoch <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,config<span style="color:#f92672">.</span>epochs):
+        <span style="color:#66d9ef">for</span> i, data <span style="color:#f92672">in</span> enumerate(train_dataloader,<span style="color:#ae81ff">0</span>):
+            img0, img1 , label <span style="color:#f92672">=</span> data
+            img0, img1 , label <span style="color:#f92672">=</span> img0<span style="color:#f92672">.</span>cuda(), img1<span style="color:#f92672">.</span>cuda() , label<span style="color:#f92672">.</span>cuda()
+            optimizer<span style="color:#f92672">.</span>zero_grad()
+            output1,output2 <span style="color:#f92672">=</span> net(img0,img1)
+            loss_contrastive <span style="color:#f92672">=</span> criterion(output1,output2,label)
+            loss_contrastive<span style="color:#f92672">.</span>backward()
+            optimizer<span style="color:#f92672">.</span>step()    
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Epoch {}</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> Current loss {}</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(epoch,loss_contrastive<span style="color:#f92672">.</span>item()))
+        iteration_number <span style="color:#f92672">+=</span> <span style="color:#ae81ff">10</span>
+        counter<span style="color:#f92672">.</span>append(iteration_number)
+        loss<span style="color:#f92672">.</span>append(loss_contrastive<span style="color:#f92672">.</span>item())
+    show_plot(counter, loss)   
+    <span style="color:#66d9ef">return</span> net
+<span style="color:#75715e">#set the device to cuda</span>
+device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#39;cuda&#39;</span> <span style="color:#66d9ef">if</span> th<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;cpu&#39;</span>)
+model <span style="color:#f92672">=</span> train()
+torch<span style="color:#f92672">.</span>save(model<span style="color:#f92672">.</span>state_dict(), <span style="color:#e6db74">&#34;output/model.pt&#34;</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Model Saved Successfully&#34;</span>) 
+</code></pre></div><p>Kết quả huấn luyện sau 20 epochs:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/siamese_network_chart.png">
+</div>
+
+</p>
+<p>Giá trị của Loss vẫn còn dao động, có lẽ chúng ta phải Tuning model nhiều hơn. Trong bài này, mình ko đi chi tiết phần đó.</p>
+<p><em><strong>5.5 Test SNN model</strong></em></p>
+<p>Chúng ta sẽ thực hiện các bước sau để kiểm tra SNN model vừa mới huấn luyện:</p>
+<ul>
+<li>Đọc vào Test dataset, sử dụng lớp Dataloader của Pytorch</li>
+<li>Đưa cặp Image và nhãn tương ứng đi qua SNN model</li>
+<li>Tìm khoảng cách Euclidean giữa 2 Output</li>
+<li>Hiển thị kết quả</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Load the test dataset</span>
+test_dataset <span style="color:#f92672">=</span> SiameseDataset(training_csv<span style="color:#f92672">=</span>testing_csv,training_dir<span style="color:#f92672">=</span>testing_dir,
+                                        transform<span style="color:#f92672">=</span>transforms<span style="color:#f92672">.</span>Compose([transforms<span style="color:#f92672">.</span>Resize((<span style="color:#ae81ff">105</span>,<span style="color:#ae81ff">105</span>)),
+                                                                      transforms<span style="color:#f92672">.</span>ToTensor()
+                                                                      ])
+                                       )
+
+test_dataloader <span style="color:#f92672">=</span> DataLoader(test_dataset,num_workers<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>,batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,shuffle<span style="color:#f92672">=</span>True)
+<span style="color:#75715e">#test the network</span>
+count<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">for</span> i, data <span style="color:#f92672">in</span> enumerate(test_dataloader,<span style="color:#ae81ff">0</span>): 
+  x0, x1 , label <span style="color:#f92672">=</span> data
+  concat <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>cat((x0,x1),<span style="color:#ae81ff">0</span>)
+  output1,output2 <span style="color:#f92672">=</span> model(x0<span style="color:#f92672">.</span>to(device),x1<span style="color:#f92672">.</span>to(device))
+
+  eucledian_distance <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>pairwise_distance(output1, output2)
+    
+  <span style="color:#66d9ef">if</span> label<span style="color:#f92672">==</span>torch<span style="color:#f92672">.</span>FloatTensor([[<span style="color:#ae81ff">0</span>]]):
+    label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Original Pair Of Signature&#34;</span>
+  <span style="color:#66d9ef">else</span>:
+    label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Forged Pair Of Signature&#34;</span>
+    
+  imshow(torchvision<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>make_grid(concat))
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Predicted Eucledian Distance:-&#34;</span>,eucledian_distance<span style="color:#f92672">.</span>item())
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Actual Label:-&#34;</span>,label)
+  count<span style="color:#f92672">=</span>count<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">if</span> count <span style="color:#f92672">==</span><span style="color:#ae81ff">10</span>:
+     <span style="color:#66d9ef">break</span>
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">1.2930774688720703</span>
+Actual Label:<span style="color:#f92672">-</span> Forged Pair Of Signature
+Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">0.6725202798843384</span>
+Actual Label:<span style="color:#f92672">-</span> Original Pair Of Signature
+Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">0.8823959827423096</span>
+Actual Label:<span style="color:#f92672">-</span> Forged Pair Of Signature
+Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">0.9346675276756287</span>
+Actual Label:<span style="color:#f92672">-</span> Forged Pair Of Signature
+Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">0.25577670335769653</span>
+Actual Label:<span style="color:#f92672">-</span> Forged Pair Of Signature
+Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">0.7937518358230591</span>
+Actual Label:<span style="color:#f92672">-</span> Forged Pair Of Signature
+Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">0.7733522057533264</span>
+Actual Label:<span style="color:#f92672">-</span> Original Pair Of Signature
+Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">0.7810924649238586</span>
+Actual Label:<span style="color:#f92672">-</span> Original Pair Of Signature
+Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">1.2326889038085938</span>
+Actual Label:<span style="color:#f92672">-</span> Original Pair Of Signature
+Predicted Eucledian Distance:<span style="color:#f92672">-</span> <span style="color:#ae81ff">0.6290231347084045</span>
+Actual Label:<span style="color:#f92672">-</span> Original Pair Of Signature
+</code></pre></div><p>Một số hình ảnh:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/siamese_network_result.png">
+</div>
+
+</p>
+<p><strong>6. Kết luận</strong></p>
+<p>Trong bài này, chúng ta đã cùng tìm hiểu về Siamese Neural Network, đồng thời xây dựng một SNN đơn giản để giải quyết bài toán Signature Verification.</p>
+<p>Toàn bộ source code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Computer_Vision/tree/master/Deep_Learning/Face_Recognition/FaceNet">đây</a></p>
+<p>Trong bài tiếp theo, chúng ta sẽ cùng thảo luận về cách thức xây dựng và tổ chức Source Code trong các dự án về AI. Mời các bạn đón đọc.</p>
+<p><strong>7. Tham khảo</strong></p>
+<ul>
+<li><a href="https://towardsdatascience.com/a-friendly-introduction-to-siamese-networks-85ab17522942">Towardsdatascience</a></li>
+<li><a href="https://hackernoon.com/one-shot-learning-with-siamese-networks-in-pytorch-8ddaab10340e">Hackernoon</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">Mlops</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One shot learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

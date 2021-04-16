@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>One-shot Learning on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/tags/one-shot-learning/</link>
+    <description>Recent content in One-shot Learning on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Apr 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/tags/one-shot-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tìm hiểu mạng Siamese. Xây dựng Dataset để huấn luyện mạng Siamese</title>
+      <link>https://tiensu.github.io/blog/55_siamese_network/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/55_siamese_network/</guid>
+      <description>Ngày nay, AI đã len lỏi vào mọi lĩnh vực của đời sống xã hội: y tế, giáo dục, giao thông, &amp;hellip; Có thể nói không ngoa rằng hầu như mọi bài toán AI đều có thể giải quyết được thông qua Neural Network (NN).</description>
+    </item>
+    
+  </channel>
+</rss>
