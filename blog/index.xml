@@ -12,7 +12,16 @@
     
     
     <item>
-      <title>Tìm hiểu mạng Siamese. Xây dựng Dataset để huấn luyện mạng Siamese</title>
+      <title>Tổ chức code trong dự án AI</title>
+      <link>https://tiensu.github.io/blog/56_ai_code_structure/</link>
+      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/56_ai_code_structure/</guid>
+      <description>Nếu bạn là người theo nghiệp Code được vài năm, bạn chắc đã từng trải qua cảm giác bực bội, khó chịu khi phải đọc code của một dự án có từ trước đó.</description>
+    </item>
+    
+    <item>
+      <title>Tìm hiểu Siamese Neural Network</title>
       <link>https://tiensu.github.io/blog/55_siamese_network/</link>
       <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
       

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/mlops"
+          class="text-primary">M l ops</a>
+        
+        <h2>Tổ chức code trong dự án AI</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>07 April 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/code_structure.jpeg" class="img-fluid w-100 mb-4" alt="Tổ chức code trong dự án AI">
+        
+        <div class="content mb-5">
+          <p>Nếu bạn là người theo nghiệp Code được vài năm, bạn chắc đã từng trải qua cảm giác bực bội, khó chịu khi phải đọc code của một dự án có từ trước đó. Nó được viết một cách cẩu thả, tùy tiện, không theo một quy định hay tổ chức nào cả. Người ta gọi đó là Source Code không có tính <em>Maintainance</em>. Là một Coder có trách nhiệm, có đạo đức, chúng ta nên viết code làm sao cho người đến sau, khi đọc code của bạn có thể nhanh chóng hiểu được vấn đề. &ldquo;Người đến sau&rdquo; ở đây có thể là chính bạn, vì sau một thời gian thì có khi chính bạn cũng quên hết những gì mình từng viết. Việc viết code một cách cẩn thận còn làm giảm rủi ro phát sinh các lỗi tiềm tàng trong quá trình sử dụng về sau này.</p>
+<p>Bất kỳ dự án phần mềm nào cũng đều phải có quy định về cách tổ chức Source Code trong dự án, ngay từ khi bắt đầu dự án. Các dự án về AI cũng không ngoại lệ. Trong bài này, chúng ta sẽ cùng xem xét một cách tổ chức Source Code cho các dự án AI. Và nếu bạn thấy phù hợp thì có thể áp dụng cho các dự án của bạn.</p>
+<p><strong>1. Project Structure</strong></p>
+<p>Một dự án được coi là tổ chức tốt khi nó có tính <em>module</em>. Tức là mỗi chức năng của dự án được tách riêng ra thành các thành phần khác nhau. Đó gọi là nguyên lý <em>Separation of Concerns</em>. Theo cách này, chúng ta có thể dễ dàng chỉnh sửa, nâng cấp, bổ sung mỗi chức năng mà không ảnh hưởng quá nhiều đến các chức năng khác. Hơn thế nữa, nó còn làm tăng khả năng tái sử dụng code hiệu quả, hạn chế việc code bị trùng lặp không cần thiết. Từ đó, toàn bộ Source Code của dự án sẽ gọn gàng, sáng sủa, dễ nâng cấp, hạn chế lỗi, &hellip; hơn rất nhiều.</p>
+<p>Đối với các dự án về AI, một cách tổ chức Source Code dự án có thể như sau:
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/project-structure.png">
+</div>
+
+</p>
+<p>Trước hết, chúng ta cần phân biệt <em>module</em> và <em>package</em>. Module chỉ đơn giản là các file chứa Python code và chúng có thể được Import lẫn nhau. Trong khi đó, Package là một thư mục chứa nhiều Modules hoặc các Sub-packages. Để có thể Import được Package, cần phải có một file <em>init.py</em> trong Package đó. File này có thể rỗng.</p>
+<p>Như vậy, trong cách tổ chức này, chúng ta có 8 Packages khác nhau:</p>
+<ul>
+<li><em><strong>configs:</strong></em> Chứa các thông tin cấu hình của hệ thống, có thể thay đổi trong quá trình phát triển và sử dụng. Ví dụ: Các Hyper-parameters, các đường dẫn đến Dataset, Model, các thông số trong kiến trúc của Model, các thông số để huấn luyện Model, &hellip; Một cấu hình ví dụ đơn giản như sau:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">CFG <span style="color:#f92672">=</span> {
+   <span style="color:#e6db74">&#34;data&#34;</span>: {
+       <span style="color:#e6db74">&#34;path&#34;</span>: <span style="color:#e6db74">&#34;oxford_iiit_pet:3.*.*&#34;</span>,
+       <span style="color:#e6db74">&#34;image_size&#34;</span>: <span style="color:#ae81ff">128</span>,
+       <span style="color:#e6db74">&#34;load_with_info&#34;</span>: True
+   },
+   <span style="color:#e6db74">&#34;train&#34;</span>: {
+       <span style="color:#e6db74">&#34;batch_size&#34;</span>: <span style="color:#ae81ff">64</span>,
+       <span style="color:#e6db74">&#34;buffer_size&#34;</span>: <span style="color:#ae81ff">1000</span>,
+       <span style="color:#e6db74">&#34;epoches&#34;</span>: <span style="color:#ae81ff">20</span>,
+       <span style="color:#e6db74">&#34;val_subsplits&#34;</span>: <span style="color:#ae81ff">5</span>,
+       <span style="color:#e6db74">&#34;optimizer&#34;</span>: {
+           <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;adam&#34;</span>
+       },
+       <span style="color:#e6db74">&#34;metrics&#34;</span>: [<span style="color:#e6db74">&#34;accuracy&#34;</span>]
+   },
+   <span style="color:#e6db74">&#34;model&#34;</span>: {
+       <span style="color:#e6db74">&#34;input&#34;</span>: [<span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">3</span>],
+       <span style="color:#e6db74">&#34;up_stack&#34;</span>: {
+           <span style="color:#e6db74">&#34;layer_1&#34;</span>: <span style="color:#ae81ff">512</span>,
+           <span style="color:#e6db74">&#34;layer_2&#34;</span>: <span style="color:#ae81ff">256</span>,
+           <span style="color:#e6db74">&#34;layer_3&#34;</span>: <span style="color:#ae81ff">128</span>,
+           <span style="color:#e6db74">&#34;layer_4&#34;</span>: <span style="color:#ae81ff">64</span>,
+           <span style="color:#e6db74">&#34;kernels&#34;</span>: <span style="color:#ae81ff">3</span>
+       },
+       <span style="color:#e6db74">&#34;output&#34;</span>: <span style="color:#ae81ff">3</span>
+   }
+}
+</code></pre></div><ul>
+<li><em><strong>dataloader:</strong></em> Chứa code liên quan đến việc <em>data loading</em> và <em>data preprocessing</em>.</li>
+<li><em><strong>evaluation:</strong></em> Chứa code thực hiện việc đánh giá hiệu năng và độ chính xác của model.</li>
+<li><em><strong>executor:</strong></em> Chứa code (<em>function, script</em>) để huấn luyện model, hoặc sử dụng model để dự đoán. Trong Package này thường có file <em>main.py</em>.</li>
+<li><em><strong>model:</strong></em> Chứa code định nghĩa kiến trúc của model.</li>
+<li><em><strong>notebooks:</strong></em> Chứa tất cả các Jupyter/Colab Notebook của dự án (<em>nếu có</em>).</li>
+<li><em><strong>ops:</strong></em> Chứa code liên quan đến các hoạt động kiểu như <em>algebraic transformations, image manipulation techniques</em> hay <em>graph operations</em>. Package này có thể có hoặc không.</li>
+<li><em><strong>utils:</strong></em> Chứa các <em>common functions</em>, có thể sử dụng ở nhiều nơi trong các Packages khác. Những gì mà không nằm trong số các Packages kể trên thì cũng có thể đưa vào Package này.</li>
+</ul>
+<p><strong>2. Object Oriented Programming (OOP)</strong></p>
+<p>Lập trình hướng đối tượng (<em>OOP</em>) thường không được sử dụng nhiều trong Python giống như Java hay C#. Có lẽ là bởi vì Python là một ngôn ngữ lập trình kiểu Script. Tức là cứ viết là chạy, không cần phải có hàm, phải khai báo, bla bla.</p>
+<p>Tuy nhiên, Python cũng hỗ trợ lập trình theo kiểu OOP. Và trong một dự án lớn thì sử dụng OOP cho Python mang lại hiệu quả rất tích cực, giống như Java hay C#.</p>
+<p><em><strong>2.1 Tính đóng gói (encapsolution)</strong></em></p>
+<p>Ví dụ, ta viết một Class tên là Unet như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UNet</span>():
+    <span style="color:#66d9ef">def</span> __init__(self, config):
+        self<span style="color:#f92672">.</span>base_model <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>keras<span style="color:#f92672">.</span>applications<span style="color:#f92672">.</span>MobileNetV2( input_shape<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>model<span style="color:#f92672">.</span>input, include_top<span style="color:#f92672">=</span>False)
+        self<span style="color:#f92672">.</span>batch_size <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>train<span style="color:#f92672">.</span>batch_size
+        <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_data</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;Loads and Preprocess data &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>dataset, self<span style="color:#f92672">.</span>info <span style="color:#f92672">=</span> DataLoader()<span style="color:#f92672">.</span>load_data(self<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>data)
+        self<span style="color:#f92672">.</span>_preprocess_data()
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_preprocess_data</span>(self):
+        <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_set_training_parameters</span>(self):
+        <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_normalize</span>(self, input_image, input_mask):
+       <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_load_image_train</span>(self, datapoint):
+       <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_load_image_test</span>(self, datapoint):
+        <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34; Builds the Keras model based &#34;&#34;&#34;</span>
+        layer_names <span style="color:#f92672">=</span> [
+            <span style="color:#e6db74">&#39;block_1_expand_relu&#39;</span>,  <span style="color:#75715e"># 64x64</span>
+            <span style="color:#e6db74">&#39;block_3_expand_relu&#39;</span>,  <span style="color:#75715e"># 32x32</span>
+            <span style="color:#e6db74">&#39;block_6_expand_relu&#39;</span>,  <span style="color:#75715e"># 16x16</span>
+            <span style="color:#e6db74">&#39;block_13_expand_relu&#39;</span>,  <span style="color:#75715e"># 8x8</span>
+            <span style="color:#e6db74">&#39;block_16_project&#39;</span>,  <span style="color:#75715e"># 4x4</span>
+        ]
+        layers <span style="color:#f92672">=</span> [self<span style="color:#f92672">.</span>base_model<span style="color:#f92672">.</span>get_layer(name)<span style="color:#f92672">.</span>output <span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> layer_names]
+        <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+        self<span style="color:#f92672">.</span>model <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>keras<span style="color:#f92672">.</span>Model(inputs<span style="color:#f92672">=</span>inputs, outputs<span style="color:#f92672">=</span>x)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train</span>(self):
+        <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">evaluate</span>(self):
+        <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+</code></pre></div><p>Bạn có thể nhìn thấy rằng mỗi chức năng được đóng gói bên trong một phương thức riêng biệt, và các thuộc tính được khai báo như là các <em>instance variables</em>. Cách viết như thế này rõ ràng là giúp code trở nên sáng sủa, dễ mở rộng và bảo trì. Đây chính là tính <em>đóng gói (encapsolution)</em> của OOP. Có một điều mình nhận thấy là OOP trong Python không thiết lập phạm vi truy cập các thuộc tính và phương thức trong một Class. Tất cả chúng đều là <em>public</em>, tức có thể truy cập từ mọi nơi. TUy nhiên, để <em>bắt chước</em> cho giống với OOP <em>chuẩn</em>, khi code Python, chúng ta thường quy ước như sau:</p>
+<ul>
+<li>Để khai báo phạm vi truy cập thành phần trong Class là <em>public</em> thì tên của chúng phải bắt đầu bằng 1 chữ cái.</li>
+<li>Để khai báo phạm vi truy cập thành phần trong Class là <em>protected</em> thì tên của chúng phải bắt đầu bằng ký tự &ldquo;_&quot;.</li>
+<li>Để khai báo phạm vi truy cập thành phần trong Class là <em>public</em> thì tên của chúng phải bắt đầu bằng 2 ký tự &ldquo;_&rdquo; (<em>tức là __</em>).</li>
+</ul>
+<p><em><strong>2.2 Tính thừa kế, trừa tượng và đa hình</strong></em></p>
+<p>Ngoài tính Encapsolution, OOP có 3 tính chất quan trọng nưã là <em>tính kế thừa(inheritance), tính trừu tượng(abstraction) và tính đa hình(polymorphism)</em>.</p>
+<p>Giả sử, khi bắt đầu viết code cho dự án, chúng ta mới chỉ hình dung sơ bộ là chắc chắn sẽ cần những phương thức này, nhưng cách thực hiện phương thức sẽ khác nhau tùy vào giải pháp lựa chọn. Khi đó, chúng ta sẽ sử dụng tính chất <em>abstraction</em> để viết ra một Class kiểu như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BaseModel</span>(ABC):
+    <span style="color:#e6db74">&#34;&#34;&#34;Abstract Model class that is inherited to all models&#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">def</span> __init__(self, cfg):
+        self<span style="color:#f92672">.</span>config <span style="color:#f92672">=</span> Config<span style="color:#f92672">.</span>from_json(cfg)
+    <span style="color:#a6e22e">@abstractmethod</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_data</span>(self):
+        <span style="color:#66d9ef">pass</span>
+    <span style="color:#a6e22e">@abstractmethod</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build</span>(self):
+        <span style="color:#66d9ef">pass</span>
+    <span style="color:#a6e22e">@abstractmethod</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train</span>(self):
+        <span style="color:#66d9ef">pass</span>
+    <span style="color:#a6e22e">@abstractmethod</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">evaluate</span>(self):
+        <span style="color:#66d9ef">pass</span>
+</code></pre></div><p>Tất cả các phương thức trong class này đều chưa được chi tiết các làm việc (<em>không có body</em>), chúng ta mới chỉ khai báo chúng.</p>
+<p>Tiếp theo, với mỗi một giải pháp đưa ra để thử nghiệm, chúng ta sẽ viết chúng thành một Class riêng, kế thừa lại <em>abstract class</em> này. Các <em>inheritance class</em> (<em>Child Class</em>) sẽ chi tiết cách làm việc của các phương thức trong <em>abstract class</em> (<em>Parent Class</em>). Tất nhiên, Child Class cũng sẽ có thêm các phương thức của riêng nó.</p>
+<p>Ví dụ dưới đây, Class Unet sẽ kế thừa Class BaseModel:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UNet</span>(BaseModel):
+    <span style="color:#66d9ef">def</span> __init__(self, config):
+       super()<span style="color:#f92672">.</span>__init__(config)
+       self<span style="color:#f92672">.</span>base_model <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>keras<span style="color:#f92672">.</span>applications<span style="color:#f92672">.</span>MobileNetV2(input_shape<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>model<span style="color:#f92672">.</span>input, include_top<span style="color:#f92672">=</span>False)
+       <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_data</span>(self):
+        self<span style="color:#f92672">.</span>dataset, self<span style="color:#f92672">.</span>info <span style="color:#f92672">=</span> DataLoader()<span style="color:#f92672">.</span>load_data(self<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>data )
+        self<span style="color:#f92672">.</span>_preprocess_data()
+        <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build</span>(self):
+        <span style="color:#f92672">.</span> <span style="color:#f92672">.</span> <span style="color:#f92672">.</span>
+        self<span style="color:#f92672">.</span>model <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>keras<span style="color:#f92672">.</span>Model(inputs<span style="color:#f92672">=</span>inputs, outputs<span style="color:#f92672">=</span>x)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train</span>(self):
+        self<span style="color:#f92672">.</span>model<span style="color:#f92672">.</span>compile(optimizer<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>train<span style="color:#f92672">.</span>optimizer<span style="color:#f92672">.</span>type,
+                           loss<span style="color:#f92672">=</span>tf<span style="color:#f92672">.</span>keras<span style="color:#f92672">.</span>losses<span style="color:#f92672">.</span>SparseCategoricalCrossentropy(from_logits<span style="color:#f92672">=</span>True),
+                           metrics<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>train<span style="color:#f92672">.</span>metrics)
+        model_history <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>model<span style="color:#f92672">.</span>fit(self<span style="color:#f92672">.</span>train_dataset, epochs<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>epoches,
+                                       steps_per_epoch<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>steps_per_epoch,
+                                       validation_steps<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>validation_steps,
+                                       validation_data<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>test_dataset)
+        <span style="color:#66d9ef">return</span> model_history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;loss&#39;</span>], model_history<span style="color:#f92672">.</span>history[<span style="color:#e6db74">&#39;val_loss&#39;</span>]
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">evaluate</span>(self):
+        predictions <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> image, mask <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>dataset<span style="color:#f92672">.</span>take(<span style="color:#ae81ff">1</span>):
+            predictions<span style="color:#f92672">.</span>append(self<span style="color:#f92672">.</span>model<span style="color:#f92672">.</span>predict(image))
+        <span style="color:#66d9ef">return</span> predictions
+</code></pre></div><p>Chú ý là ở trong Child Class, bên trong hàm tạo <em><strong>init</strong></em>, chúng ta phải gọi lệnh <em>super().<strong>init</strong>()</em> để thực hiện hàm tạo của Parent Class (<em>super() là đại diện của Parent Class</em>).</p>
+<p>Việc có nhiều Child Classes kế thừa cùng một Parent Class, mỗi Child Class lại thực hiện các phương thức của Parent Class theo các cách khác nhau, chính là tính đa hình của OOP.</p>
+<p><em><strong>2.3 Instance Mothod, Class Method và Static Method</strong></em></p>
+<p><em>Instancemethod, classmethod</em> và <em>staticmethod</em> cũng là các đặc tính thú vị của OOP. Hãy tìm hiểu thêm về nó một chút. Hãy xem xét ví dụ sau để hiểu rõ hơn về các loại phương thức này:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dataset</span>():
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">im_load_data</span>(self, x):
+<span style="color:#f92672">...</span>         <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;executing im_load_data(</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">)&#34;</span> <span style="color:#f92672">%</span> (self, x))
+<span style="color:#f92672">...</span>     <span style="color:#a6e22e">@classmethod</span>
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cm_load_data</span>(cls, x):
+<span style="color:#f92672">...</span>         <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;executing cm_load_data(</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">)&#34;</span> <span style="color:#f92672">%</span> (cls, x))
+<span style="color:#f92672">...</span>     <span style="color:#a6e22e">@staticmethod</span>
+<span style="color:#f92672">...</span>     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sm_load_data</span>(x):
+<span style="color:#f92672">...</span>         <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;executing sm_load_data(</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">)&#34;</span> <span style="color:#f92672">%</span> x)
+<span style="color:#f92672">...</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> dataset <span style="color:#f92672">=</span> Dataset()
+</code></pre></div><p>Dưới đây là cách đơn giản nhất để thực thi một phương thức:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> dataset<span style="color:#f92672">.</span>im_load_data(<span style="color:#e6db74">&#39;args&#39;</span>)
+executing im_load_data(<span style="color:#f92672">&lt;</span>__main__<span style="color:#f92672">.</span>Dataset object at <span style="color:#ae81ff">0x7ff97a1bd280</span><span style="color:#f92672">&gt;</span>, args)
+</code></pre></div><p>Đây là một Instance Method, là phương thức phổ biến nhất. Một đối tượng (<em>instance của class</em>) được ngầm truyền thành tham số thứ nhất (self) của phương thức này. Vì vậy, mặc dù im_load_data cần hai tham số, nhưng dataset.im_load_data chỉ cần một tham số thôi. Và dataset.im_load_data không còn là hàm nguyên gốc ban đầu mà là một phiên bản đã được &ldquo;bind&rdquo; cho dataset:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> dataset<span style="color:#f92672">.</span>im_load_data
+<span style="color:#f92672">&lt;</span>bound method Dataset<span style="color:#f92672">.</span>im_load_data of <span style="color:#f92672">&lt;</span>__main__<span style="color:#f92672">.</span>Dataset object at <span style="color:#ae81ff">0x7ff97a1bd280</span><span style="color:#f92672">&gt;&gt;</span>
+</code></pre></div><p>Class Method là phương thức thuộc về cả Class. Khi thực thi, nó không dùng đến bất cứ một Instance nào của Class đó. Thay vào đó, cả Class sẽ được truyền thành tham số thứ nhất (<em>cls</em>) của phương thức này, tương tự như Instance Class.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> Dataset<span style="color:#f92672">.</span>cm_load_data(<span style="color:#e6db74">&#39;args&#39;</span>)
+executing cm_load_data(<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">__main__</span><span style="color:#f92672">.</span>Dataset<span style="color:#e6db74">&#39;&gt;, args)</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> Dataset<span style="color:#f92672">.</span>cm_load_data
+<span style="color:#f92672">&lt;</span>bound method Dataset<span style="color:#f92672">.</span>cm_load_data of <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">__main__</span><span style="color:#f92672">.</span>Dataset<span style="color:#e6db74">&#39;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> dataset<span style="color:#f92672">.</span>cm_load_data
+<span style="color:#f92672">&lt;</span>bound method Dataset<span style="color:#f92672">.</span>cm_load_data of <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">__main__</span><span style="color:#f92672">.</span>Dataset<span style="color:#e6db74">&#39;&gt;&gt;</span>
+</code></pre></div><p>Một điều thú vị là Class Method cũng có thể gọi từ instance mà không gặp trở ngại gì (nhiều ngôn ngữ vẫn cho làm điều này kèm theo vài warning).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> dataset<span style="color:#f92672">.</span>cm_load_data(<span style="color:#e6db74">&#39;args&#39;</span>)
+executing cm_load_data(<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">__main__</span><span style="color:#f92672">.</span>Dataset<span style="color:#e6db74">&#39;&gt;, args)</span>
+</code></pre></div><p>Static Method là một phương thức đặc biệt, nó không sử dụng bất cứ thứ gì liên quan đến Class hay Instance của Class đó. Cả Self hay Cls đều không xuất hiện trong tham số của loại phương thức này. Và Static Method hoạt động không khác gì một hàm thông thường.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> dataset<span style="color:#f92672">.</span>sm_load_data(<span style="color:#e6db74">&#39;args&#39;</span>)
+executing sm_load_data(args)
+<span style="color:#f92672">&gt;&gt;&gt;</span> Dataset<span style="color:#f92672">.</span>sm_load_data(<span style="color:#e6db74">&#39;args&#39;</span>)
+executing sm_load_data(args)
+</code></pre></div><p>Đối với Static Method, dù gọi <em>dataset.sm_load_data</em> hay <em>Dataset.sm_load_data</em> thì kết quả trả về vẫn là hàm ban đầu không hề được &ldquo;bind&rdquo; bất cứ một đối tượng nào:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> dataset<span style="color:#f92672">.</span>sm_load_data
+<span style="color:#f92672">&lt;</span>function Dataset<span style="color:#f92672">.</span>sm_load_data at <span style="color:#ae81ff">0x7ff97a093160</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> Dataset<span style="color:#f92672">.</span>sm_load_data
+<span style="color:#f92672">&lt;</span>function Dataset<span style="color:#f92672">.</span>sm_load_data at <span style="color:#ae81ff">0x7ff97a093160</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Static method, với sự đặc biệt của nó, được dùng rất hạn chế. Bởi vì nó không giống như instance method hay class method, nó không có bất cứ sự liên quan tới đối tượng gọi nó. Static method không phải là phương thức được sử dụng thường xuyên.</p>
+<p>Tuy nhiên, nó vẫn tồn tại là có lý do của nó. Static method thường dùng để nhóm các hàm tiện ích lại với nhau (trong cùng một class). Nó không yêu cầu gì từ class đó, ngoại trừ việc tham chiếu khi được gọi.</p>
+<p>Nhưng hàm như vậy không cho vào class nào cũng không vấn đề gì. Nhưng nhóm chúng trong class và gọi chúng thông quan instance hoặc class sẽ giúp chúng ta hiểu hơn về bối cảnh cũng như chức năng của chúng.</p>
+<p><strong>3. Documentation</strong>
+Hay được hiểu là <em>code phải có comments</em>. Tác dụng của việc Comments code là không phải bàn cãi. Có 2 cách <em>Comment</em> code:</p>
+<ul>
+<li>Comment bằng những lời giải thích tường mình</li>
+<li>Comment bằng chính cách đặt tên hàm, tên biến, &hellip;</li>
+</ul>
+<p>Hãy xem một ví dụ về Code không có Comment:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">n</span>(self, ii, im):
+    ii <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>cast(ii, tf<span style="color:#f92672">.</span>float32) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255.0</span>
+    im <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">return</span> ii, im
+</code></pre></div><p>Đọc đoạn code trên, bạn có thấy khó hiểu không?</p>
+<p>Bây giờ hãy thêm Comment vào cho nó:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_normalize</span>(self, input_image, input_mask):
+        <span style="color:#e6db74">&#34;&#34;&#34; Normalise input image
+</span><span style="color:#e6db74">        Args:
+</span><span style="color:#e6db74">            input_image (tf.image): The input image
+</span><span style="color:#e6db74">            input_mask (int): The image mask
+</span><span style="color:#e6db74">        Returns:
+</span><span style="color:#e6db74">            input_image (tf.image): The normalized input image
+</span><span style="color:#e6db74">            input_mask (int): The new image mask
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        input_image <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>cast(input_image, tf<span style="color:#f92672">.</span>float32) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255.0</span>
+        input_mask <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> input_image, input_mask
+</code></pre></div><p>Vẫn cùng 1 đoạn Code, nhưng sau khi thêm Comment, người đọc dễ dàng hiểu được mục đích của nó.</p>
+<p>Cách Comment như trên trong Python gọi là <a href="https://www.python.org/dev/peps/pep-0257/">docstrings</a>. Chúng ta luôn luôn nên thêm Docstrings trước mỗi File, hàm, Module để chỉ ra mục đích của chúng. Có nhiều cách để định dạng Docstrings. Cách như trong ví dụ này là Style của Google, trong đó:</p>
+<ul>
+<li>Dòng đầu tiên chỉ ra mục đích của đoạn code</li>
+<li>Tiếp theo là giải thích các tham số truyền vào</li>
+<li>Cuối cùng là giải thích kết quả trả về là gì?</li>
+</ul>
+<p>Hai phần sau có thể bỏ qua nếu chúng không cung cấp nhiều giá trị.</p>
+<p><strong>4. Kết luận</strong></p>
+<p>Trong bài này, chúng ta đã khám phá một vài <em>Best Practices</em> khi Code cho dự án về AI, từ việc tổ chức dự án, sử dụng OOP, đến việc Comment trong Code. Theo cách đó, Code của chúng ta sẽ trở nên ràng mạch, rõ ràng, dễ đọc hiểu, dễ bảo trì, mở rộng và hạn chế phát sinh các lỗi tiềm ẩn trong quá trình vận hành.</p>
+<p>Các bạn có thể tham khảo cấu trúc dự án mẫu tại <a href="https://github.com/tiensu/AI_Model_Coding/tree/master/Project_Structure">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ cùng thảo luận về cách thức xây dựng và tổ chức Source Code trong các dự án về AI. Mời các bạn đón đọc.</p>
+<p><strong>5. Tham khảo</strong></p>
+<ul>
+<li><a href="https://theaisummer.com/best-practices-deep-learning-code/">Theaisummer</a></li>
+<li><a href="https://www.learnpython.org/en/Modules_and_Packages">Learnpython</a></li>
+<li><a href="https://realpython.com/python3-object-oriented-programming/">Realpython</a></li>
+<li><a href="https://www.datacamp.com/community/tutorials/docstrings-python">Datacamp</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">Mlops</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One shot learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
