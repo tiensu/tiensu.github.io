@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Tóm tắt về RNN</title>
+      <link>https://tiensu.github.io/blog/57_rnn_summary/</link>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/57_rnn_summary/</guid>
+      <description>Thực ra, các bài toán về Nartual Language Processing(NLP) không phải là thế mạnh của mình. Từ trước đến giờ, mình chủ yếu làm các bài toán về Computer Vision(CV).</description>
+    </item>
+    
+    <item>
       <title>Tổ chức code trong dự án AI</title>
       <link>https://tiensu.github.io/blog/56_ai_code_structure/</link>
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>

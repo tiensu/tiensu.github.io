@@ -6,10 +6,28 @@
     <description>Recent content in Tags on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tiensu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LSTM</title>
+      <link>https://tiensu.github.io/tags/lstm/</link>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/tags/lstm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RNN</title>
+      <link>https://tiensu.github.io/tags/rnn/</link>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/tags/rnn/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>MLOps</title>
@@ -120,11 +138,11 @@
     </item>
     
     <item>
-      <title>Convolution Neural Network</title>
-      <link>https://tiensu.github.io/tags/convolution-neural-network/</link>
+      <title>CNN</title>
+      <link>https://tiensu.github.io/tags/cnn/</link>
       <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/tags/convolution-neural-network/</guid>
+      <guid>https://tiensu.github.io/tags/cnn/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/rnn"
+          class="text-primary">R n n</a>
+        
+        <a href="/categories/lstm"
+          class="text-primary">L s t m</a>
+        
+        <h2>Tóm tắt về RNN</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>10 April 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/rnn_lstm.png" class="img-fluid w-100 mb-4" alt="Tóm tắt về RNN">
+        
+        <div class="content mb-5">
+          <p>Thực ra, các bài toán về <em>Nartual Language Processing(NLP)</em> không phải là thế mạnh của mình. Từ trước đến giờ, mình chủ yếu làm các bài toán về <em>Computer Vision(CV)</em>. Tuy nhiên, trong thời gian gần đây, cộng đồng nói rất nhiều về <em>Attention, Transformer, BERT, &hellip;</em>. Đó là những kỹ thuật tiên tiến mới ra đời, giúp giải quyết rất nhiều tác vụ khó của NLP, đạt đến độ <em>State of Art</em>. Hoạt động trong lĩnh vực AI đã lâu, mình không muốn đứng ngoài dòng chảy công nghệ đó. Mặc dù bên CV, mình còn rất nhiều thứ muốn viết, nhưng trong một số bài viết sắp tới mình muốn &ldquo;đổi gió&rdquo; một chút. Mình sẽ viết về các kỹ thuật sử dụng trong NLP, sau khi đã dành ra kha khá thời gian để tìm hiểu về chúng. Mục đích viết vẫn là để ghi nhớ và chia sẻ với mọi người. Các kỹ thuật mình dự định viết sẽ bao gồm: RNN, LSTM, Transformer, BERT, Attention, Seq2Se2, &hellip;</p>
+<p>Bài đầu tiên trong chủ đề NLP, mình sẽ cùng các bạn tìm hiểu về RNN.</p>
+<p>Nếu như các bên CV có CNN thì bên NLP có RNN. CNN chuyên xử lý dữ liệu có kiến trúc dạng <em>lưới (grid)</em>, (<em>VD: Images, &hellip;</em>), còn RNN chuyên xử lý dữ liệu dạng <em>chuỗi (sequential)</em>.</p>
+<p><strong>1. Overview</strong></p>
+<p><em><strong>1.1 Kiến trúc RNN</strong></em></p>
+<p>Giả sử:</p>
+<ul>
+<li>$X_t \in R^{nxd0}$ là Input tại Time-Step $t$,</li>
+<li>$H_t \in R^{nxh}$ là trạng thái của Hidden Layer tại Time-Step $t$,</li>
+<li>$W_{xh} \in R^{dxh}$ là ma trận trọng số của Hidden Layer tại Time-Step $t$,</li>
+<li>$b_h \in R^{1xh}$ là hệ số Bias của Hidden Layer tại Time-Step $t$,</li>
+<li>$H_{t-1}$ là trạng thái của Hidden Layer tại Time-Step $t-1$,</li>
+<li>$W_{hh} \in R^{hxh}$ là ma trận trọng số của Hidden Layer tại Time-Step $t-1$,</li>
+<li>$W_{hq} \in R^{hxq}$ là ma trận trọng số của Output Layer tại Time-Step $t$</li>
+<li>$b_q \in R^{1xh}$ là hệ số Bias của Output Layer tại Time-Step $t$,</li>
+<li>$\phi$ là hàm kích hoạt.</li>
+</ul>
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/architecture-rnn-ltr.svg">
+</div>
+
+
+<p>Khi đó:</p>
+<ul>
+<li>
+<p>Trạng thái của Hidden Layer tại Time_Step $t$ sẽ là:
+
+
+<div style="text-align:center">
+    <p>$H_t = \phi(X_tW_{xh} + H_{t-1}W_{hh} + b_h)$</p>
+</div>
+
+</p>
+</li>
+<li>
+<p>Giá trị đầu ra tại Time-Step $t$ sẽ là:
+
+
+<div style="text-align:center">
+    <p>$O_t = H_tW_{hq} + b_q$</p>
+</div>
+
+</p>
+</li>
+</ul>
+<p><em><strong>1.2 Ưu điểm, nhược điểm của RNN</strong></em></p>
+<p>Ưu điểm:</p>
+<ul>
+<li>Có khả năng xử lý dữ liệu đầu vào ở bất kỳ độ dài nào.</li>
+<li>Kích thước mô hình không tăng theo kích thước đầu vào.</li>
+<li>Việc huấn luyện mô hình có sử dụng thông tin ở Time-Step trước đó.</li>
+<li>Các hệ số của mô hình (<em>weight và bias</em>) được chia sẻ theo thời gian.</li>
+</ul>
+<p>Nhược điểm:</p>
+<ul>
+<li>Việc xử lý, tính toán mất khá nhiều thời gian.</li>
+<li>Thông tin từ các Time-Step ở xa không được duy trì tốt.</li>
+<li>Không thể xem xét bất kỳ đầu vào nào trong tương lai cho trạng thái hiện tại.</li>
+</ul>
+<p><em><strong>1.3 Một số loại mô hình RNN</strong></em></p>
+<ul>
+<li>
+<p>Dạng 1: One-to-One
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/rnn-one-to-one-ltr.png">
+</div>
+
+</p>
+</li>
+<li>
+<p>Dạng 2: One-to-Many
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/rnn-one-to-many-ltr.png">
+</div>
+
+
+Ứng dụng: Music generation</p>
+</li>
+<li>
+<p>Dạng 3: Many-to_One
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/rnn-many-to-one-ltr.png">
+</div>
+
+
+Ứng dụng: Sentiment classification</p>
+</li>
+<li>
+<p>Dạng 4: Many-to-Many (<em>Input Data và Ouput có chiều dài bằng nhau</em>)
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/rnn-many-to-many-same-ltr.png">
+</div>
+
+
+Ứng dụng: Name entity recognition</p>
+</li>
+<li>
+<p>Dạng 4: Many-to-Many (<em>Input Data và Ouput có chiều dài khác nhau</em>)
+
+
+<div style="text-align:center">
+    <img style="height:auto" src="/images/post/rnn-many-to-many-different-ltr.png">
+</div>
+
+
+Ứng dụng: Machine translation</p>
+</li>
+</ul>
+<p><em><strong>1.4 Loss Function</strong></em></p>
+<p>Loss Function của RNN bằng tổng các Loss tại các Time-Step:
+
+
+<div style="text-align:center">
+    <p>$L(\widehat{y},y) = \sum_{t_y}^{t=1}L(\widehat{y}^{<t>},y^{<t>})$</p>
+</div>
+
+</p>
+<p><em><strong>1.5 Backpropagation through time</strong></em></p>
+<p>Backpropagation được thực hiện tại mỗi Time-Step. Tại Time-Step T, đạo hàm của Loss Function $L$ đối với ma trận trọng số $W$ được cho bởi công thức:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/rnn_backpropagation.png">
+</div>
+
+
+<p><strong>2. Xử lý vấn đề Long Term Dependences</strong></p>
+<p>Bình thường thì RNN sử dụng 1 trong 3 Activation Function là: Sigmoid, Tanh và ReLU.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/rnn_ativation_function.png">
+</div>
+
+</p>
+<p>Cũng giống như các mô hình khác, hiện tượng <em>Vanishing &amp; Exploring Gradient</em> cũng xảy ra ở trong mô hình RNN. Điều này dẫn đến việc RNN không có khả năng ghi nhớ trạng thái của các Time-Step ở xa. Nguyên nhân của các hiện tượng này là do việc thực hiện phép nhân Gradient theo hàm mũ, làm cho nó tăng/giảm một các đột biến khi số lượng Layers tăng lên.</p>
+<p>Sử dụng ReLU chúng ta đã giải quyết được khá tốt vấn đề Vanishing Gradient. Còn đối với Exploring Gradient, chúng ta có thể sử dụng Gradient Clipping.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/gradient-clipping-en.png">
+</div>
+
+</p>
+<p>Ý tưởng của Gradient Clipping cũng tương tự như ReLU, nó đưa ra một giới hạn, và Gradient chỉ có thể nhỏ hơn hoặc bằng giới hạn đó.</p>
+<p><strong>3. Long Short Team Memory (LSTM)</strong></p>
+<p>Long Short Team Memory (LSTM)) là một phiên bản cải tiến của RNN, giúp dễ dàng ghi nhớ dữ liệu quá khứ trong bộ nhớ của nó. Vấn đề Vanishing Gradient của RNN được giải quyết tốt hơn với LSTM. LSTM rất phù hợp giải quyết các bài toán phân loại, xử lý và dự đoán chuỗi thời gian có độ dài không xác định. Mô hình LSTM cũng được huấn luyện bằng cách thuật toán Backpropagation.</p>
+<p>Kiến trúc mạng LSTM bao gồm nhiều Layers, mỗi Layers được cấu tạo bởi nhiều đơn vị nhỏ gọi là Cell. Mỗi Cell được đại diện bởi 2 bộ nhớ: Cell State ($C$) và Hidden State ($h$).
+<strong>- Hidden State - h,H:</strong> Bộ nhớ ngắn hạn (<em>working memory</em>), chỉ lưu thông tin của Cell ngay trước Cell hiện tại. Tồn tại trong cả RNN và LSTM.
+<strong>- Cell State - C:</strong> Bộ nhớ dài hạn (<em>long-term memory, memory cell</em>), lưu thông tin của nhiều Cells trong quá khứ. Chỉ tồn tại trên LSTM.</p>
+<p>Xét 1 Cell hiện tại ($C_t, h_t$) trong LSTM. Luồng dữ liệu trong Cell này tuần tự đi qua 3 cổng như sau:</p>
+<p><strong>- Forget gate:</strong> Cổng này quyết định thông tin nào từ Cell trước đó ($C_{t-1}$) nên được giữ lại hoặc ném đi. Thông tin từ Hidden State trước đó ($h_{t-1}$) và thông tin từ Input hiện tại ($x_t$) được đưa qua hàm Sigmoid, cho ra một giá trị trong khoảng từ 0 đến 1. Giá trị này càng gần 0 nghĩa là thông tin ít quan trọng (*trường hợp = 0 thì có thể bỏ qua - Forget*), giá trị càng gần 1 nghĩa là thông càng tin quan trọng.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/lstm-forget-f.png">
+</div>
+
+</p>
+
+
+<div style="text-align:center">
+   <p>$f_t = \sigma(W_f\cdot[h_{t-1},x_t] + b_f) = \sigma(W_{xf}X_t + W_{hf}H_{t-1} + b_f)$</p>
+</div>
+
+
+<ul>
+<li><strong>Input gate:</strong> Cổng này quyết định giá trị nào từ Hidden State trước đó ($h_{t-1}$) và thông tin từ Input hiện tại ($x_t$) sẽ được đi vào Cell hiện tại. Để làm được việc này, nó sử dụng 2 hàm Sigmoid và Tanh. Tương tự như Forget Gate, thông tin từ Hidden State trước đó ($h_{t-1}$) và thông tin từ Input hiện tại ($x_t$) được đưa qua hàm Sigmoid, cho ra một giá trị trong khoảng từ 0 đến 1. Giá trị này càng gần 0 nghĩa là thông tin càng ít quan trọng , giá trị càng gần 1 nghĩa là thông tin càng  quan trọng. Hàm Tanh tạo ra một vector ứng cử của Cell State hiện tại ($\widetilde{C_t}$). Output của 2 hàm này được nhân với nhau tính toán Cell State hiện tại.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/lstm-input-i.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <p>$i_t = \sigma(W_i\cdot[h_{t-1},x_t] + b_i) = \sigma(W_{xi}X_t + W_{hi}H_{t-1} + b_i)$</p>
+   <p>$\widetilde{C_t} = tanh(W_c\cdot[h_{t-1},x_t] + b_c) = tanh(X_tW_{xc} + H_{t-1}W_{hc} + b_c)$</p>
+</div>
+
+</li>
+</ul>
+<p>Đến đây, ta đã có thể tính được Cell State hiện tại.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/lstm-cellstate-c.png">
+</div>
+
+</p>
+<p>Chúng ta nhân trạng thái của Cell trước đó với $f_t$ rồi cộng với $i_t * \widetilde{C_t}$
+
+
+<div style="text-align:center">
+   <p>$C_t = f_t * C_{t-1} + i_t * \widetilde{C_t}$</p>
+</div>
+
+</p>
+<p><strong>- Output gate:</strong> Cổng này quyết định thông tin nào sẽ được output ra ngoài ($h_t$). Vẫn vẫn giống như 2 cổng bên trên, thông tin từ Hidden State trước đó ($h_{t-1}$) và thông tin từ Input hiện tại ($x_t$) được đưa qua hàm Sigmoid, cho ra một giá trị trong khoảng từ 0 đến 1. Giá trị này càng gần 0 nghĩa là thông tin càng ít quan trọng , giá trị càng gần 1 nghĩa là thông tin càng  quan trọng. Tiếp đos, Cell State được cho qua hàm Tanh để đưa giá trị của Cell State về miền [-1,1].
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/lstm-output-o.png">
+</div>
+
+</p>
+<p>Output của Cell được tính như sau:
+
+
+<div style="text-align:center">
+   <p>$o_t = \sigma(W_o\cdot[h_{t-1},x_t] + b_o) = \sigma(W_{xo}X_t + W_{ho}H_{t-1} + b_o)$</p>
+   <p>$h_t = o_t * tanh(C_t)$</p>
+</div>
+
+</p>
+<p><strong>4. Kết luận</strong></p>
+<p>Trong bài này, chúng ta đã khám phá một vài <em>Best Practices</em> khi Code cho dự án về AI, từ việc tổ chức dự án, sử dụng OOP, đến việc Comment trong Code. Theo cách đó, Code của chúng ta sẽ trở nên ràng mạch, rõ ràng, dễ đọc hiểu, dễ bảo trì, mở rộng và hạn chế phát sinh các lỗi tiềm ẩn trong quá trình vận hành.</p>
+<p>Các bạn có thể tham khảo cấu trúc dự án mẫu tại <a href="https://github.com/tiensu/AI_Model_Coding/tree/master/Project_Structure">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ cùng thảo luận về cách thức xây dựng và tổ chức Source Code trong các dự án về AI. Mời các bạn đón đọc.</p>
+<p><strong>5. Tham khảo</strong></p>
+<ul>
+<li><a href="https://theaisummer.com/best-practices-deep-learning-code/">Theaisummer</a></li>
+<li><a href="https://www.learnpython.org/en/Modules_and_Packages">Learnpython</a></li>
+<li><a href="https://realpython.com/python3-object-oriented-programming/">Realpython</a></li>
+<li><a href="https://www.datacamp.com/community/tutorials/docstrings-python">Datacamp</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">Cnn</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">Lstm</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">Mlops</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One shot learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">Rnn</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

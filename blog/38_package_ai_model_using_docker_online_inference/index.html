@@ -173,7 +173,7 @@
 <p>99% câu trả lời cho câu hỏi này là do sự khác biệt về môi trường giữa 2 máy tính, 1% còn lại là do các nguyên nhân khác như copy thiếu file, sai đường dẫn, sử dụng câu lệnh không đúng, &hellip;</p>
 <p>Trong bài toán AI, tình trạng này lại càng phổ biến hơn, bởi vì một model AI yêu cầu cơ man nào là thư viện đi kèm, thư viện này liên kết, ràng buộc với thư viện kia. Không những thế, với tốc độ phát triển như vũ bão hiện nay của AI, các thư viện cũng liên tục cập nhật phiên bản mới, và có khi code sử dụng phiên bản cũ lại không chạy được trên phiên bản mới. Rồi thì thư viện A phiên bản 1.x lại chỉ tương thích với thư viện B phiên bản 1.x.x, nếu ta cứ nhắm mắt gõ <code>pip install abc</code> thì mặc định sẽ là phiên bản mới nhất. Rất rất nhiều vấn đề xung đột thư viện xảy ra trong phát triển một bài toán AI trên nhiều máy tính khác nhau hoặc nhiều người cùng làm việc.</p>
 <p>Vấn đề đặt ra lúc này là phải làm sao <code>cô lập</code> được môi trường phát triển dành riêng cho 1 bài toán AI cụ thể. Môi trường đó phải tách biệt hoàn toàn với môi trường trên máy tính, và phải dễ dàng di chuyển giữa nhiều máy tính với nhau.</p>
-<p>Một số công cụ đã ra đời để hỗ trợ giải quyết vấn đề này bằng cách tạo ra các môi trường ảo. Có thể kể đến như <a href="https://www.anaconda.com/">anaconda</a>, <a href="https://pypi.org/project/virtualenv/">venv`</a>, &hellip; Mỗi loại đều có những ưu nhược điểm riêng, và phụ thuộc vào thói quen sử dụng của mỗi người. Cá nhân mình cũng đã từng sử dụng qua các loại kể trên nhưng thấy chúng vẫn chưa thể giải quyết được triệt để vấn đề về xung đột môi trường &hellip;</p>
+<p>Một số công cụ đã ra đời để hỗ trợ giải quyết vấn đề này bằng cách tạo ra các môi trường ảo. Có thể kể đến như <a href="https://www.anaconda.com/">anaconda</a>, <a href="https://pypi.org/project/virtualenv/">venv</a>, &hellip; Mỗi loại đều có những ưu nhược điểm riêng, và phụ thuộc vào thói quen sử dụng của mỗi người. Cá nhân mình cũng đã từng sử dụng qua các loại kể trên nhưng thấy chúng vẫn chưa thể giải quyết được triệt để vấn đề về xung đột môi trường &hellip;</p>
 <p>Cho đến khi mình biết đến <a href="https://www.docker.com/">Docker</a>, một công cụ rất <code>powerfull</code>, rất tuyệt vời. Có thể nói docker đã giải quyết được tận gốc vấn đề làm đau đầu những nhà phát triể n AI bấy lâu nay.</p>
 <p>Trong bài này, chúng ta sẽ cùng nhau tìm hiểu về docker và cách sử dụng nó trong viêc đóng gói một AI model để thực hiện Inference theo kiểu <code>Online Inference</code>.</p>
 <p><strong>1. Docker là gì?</strong></p>
@@ -208,7 +208,7 @@
 </p>
 <p>Ở đây, tensorflow/tensorflow:2.3.0-gpu là docker image trên docker hub, được cài đặt sẵn tensorflow 2.3.0 và cuda.</p>
 <p>Kiểm tra image vừa tải về trong danh sách:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> docker images
 
 Kết quả:
 <span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span>python
@@ -265,7 +265,7 @@ tensorflow<span style="color:#f92672">/</span>tensorflow   <span style="color:#a
 </code></pre></div><p>Mình đã tổng hợp lại các lệnh hay sử dụng của docker ở phần phụ lục. Các bạn có thể tham khảo thêm.</p>
 <p><strong>3. Xây dựng uWSGI docker image</strong></p>
 <p>Bên cạnh những images được xây dựng sẵn và chia sẻ trên docker hub, docker cũng hỗ trợ bạn tự build các images cho riêng bạn, phù hợp với từng nhu cầu của bạn. Tất cả được thực hiện thông qua 1 file cấu hình, gọi là <code>Dockerfile</code>.</p>
-<p>Trong phần này, ta sẽ cùng nhau xây dựng một DL docker image, bao gồm toàn bộ source code ở <a href="https://tiensu.github.io/blog/35_deploy_dl_model_as_webapp_with_uwsgi/">bài trước</a>. Ta cũng cấu hình Flask, uWSGI trong docker image để chạy được source code đó.</p>
+<p>Trong phần này, ta sẽ cùng nhau xây dựng một DL docker image, bao gồm toàn bộ source code ở <a href="https://tiensu.github.io/blog/37_deploy_ai_model_with_uwsgi_online_inference/">bài trước</a>. Ta cũng cấu hình Flask, uWSGI trong docker image để chạy được source code đó.</p>
 
 
 <div style="text-align:center">
@@ -283,7 +283,6 @@ opencv<span style="color:#f92672">-</span>python<span style="color:#f92672">==</
 </code></pre></div><p><strong>3.3 Bước 3</strong></p>
 <p>Tạo file cấu hình cho uWSGI. Vì mình muốn kiểm tra riêng sự hoạt động của uWSGI nên file cấu hình sẽ như sau:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">[uwsgi] 
-  
 http <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0.0</span>:<span style="color:#ae81ff">8080</span>
 wsgi<span style="color:#f92672">-</span>file <span style="color:#f92672">=</span> server<span style="color:#f92672">.</span>py
 callable <span style="color:#f92672">=</span> app
@@ -641,7 +640,7 @@ EOF
               href="/categories/autoencoder">Autoencoder</a>
           </li>
           <li class="mb-3"><a class="text-dark"
-              href="/categories/convolution-neural-network">Convolution Neural Network</a>
+              href="/categories/cnn">Cnn</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/data-driff">Data driff</a>
@@ -671,6 +670,9 @@ EOF
               href="/categories/kubernetes">Kubernetes</a>
           </li>
           <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">Lstm</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
               href="/categories/machine-learning">Machine Learning</a>
           </li>
           <li class="mb-3"><a class="text-dark"
@@ -684,6 +686,9 @@ EOF
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">Rnn</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/scalability">Scalability</a>

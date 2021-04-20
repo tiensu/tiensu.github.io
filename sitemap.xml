@@ -4,7 +4,42 @@
   
   <url>
     <loc>https://tiensu.github.io/categories/</loc>
-    <lastmod>2021-04-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/lstm/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/lstm/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/rnn/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/rnn/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/57_rnn_summary/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -14,16 +49,6 @@
   
   <url>
     <loc>https://tiensu.github.io/categories/mlops/</loc>
-    <lastmod>2021-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/</loc>
-    <lastmod>2021-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/tags/</loc>
     <lastmod>2021-04-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -248,12 +273,12 @@
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/tags/convolution-neural-network/</loc>
+    <loc>https://tiensu.github.io/tags/cnn/</loc>
     <lastmod>2020-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/categories/convolution-neural-network/</loc>
+    <loc>https://tiensu.github.io/categories/cnn/</loc>
     <lastmod>2020-12-20T00:00:00+00:00</lastmod>
   </url>
   
