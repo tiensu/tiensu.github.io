@@ -156,7 +156,7 @@
         <a href="/categories/lstm"
           class="text-primary">L s t m</a>
         
-        <h2>Tóm tắt về RNN</h2>
+        <h2>Tóm tắt về RNN &amp; LSTM</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
@@ -165,7 +165,7 @@
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/rnn_lstm.png" class="img-fluid w-100 mb-4" alt="Tóm tắt về RNN">
+        <img src="https://tiensu.github.io/images/featured-post/rnn_lstm.png" class="img-fluid w-100 mb-4" alt="Tóm tắt về RNN &amp; LSTM">
         
         <div class="content mb-5">
           <p>Thực ra, các bài toán về <em>Nartual Language Processing(NLP)</em> không phải là thế mạnh của mình. Từ trước đến giờ, mình chủ yếu làm các bài toán về <em>Computer Vision(CV)</em>. Tuy nhiên, trong thời gian gần đây, cộng đồng nói rất nhiều về <em>Attention, Transformer, BERT, &hellip;</em>. Đó là những kỹ thuật tiên tiến mới ra đời, giúp giải quyết rất nhiều tác vụ khó của NLP, đạt đến độ <em>State of Art</em>. Hoạt động trong lĩnh vực AI đã lâu, mình không muốn đứng ngoài dòng chảy công nghệ đó. Mặc dù bên CV, mình còn rất nhiều thứ muốn viết, nhưng trong một số bài viết sắp tới mình muốn &ldquo;đổi gió&rdquo; một chút. Mình sẽ viết về các kỹ thuật sử dụng trong NLP, sau khi đã dành ra kha khá thời gian để tìm hiểu về chúng. Mục đích viết vẫn là để ghi nhớ và chia sẻ với mọi người. Các kỹ thuật mình dự định viết sẽ bao gồm: RNN, LSTM, Transformer, BERT, Attention, Seq2Se2, &hellip;</p>
@@ -175,14 +175,14 @@
 <p><em><strong>1.1 Kiến trúc RNN</strong></em></p>
 <p>Giả sử:</p>
 <ul>
-<li>$X_t \in R^{nxd0}$ là Input tại Time-Step $t$,</li>
-<li>$H_t \in R^{nxh}$ là trạng thái của Hidden Layer tại Time-Step $t$,</li>
-<li>$W_{xh} \in R^{dxh}$ là ma trận trọng số của Hidden Layer tại Time-Step $t$,</li>
-<li>$b_h \in R^{1xh}$ là hệ số Bias của Hidden Layer tại Time-Step $t$,</li>
-<li>$H_{t-1}$ là trạng thái của Hidden Layer tại Time-Step $t-1$,</li>
-<li>$W_{hh} \in R^{hxh}$ là ma trận trọng số của Hidden Layer tại Time-Step $t-1$,</li>
-<li>$W_{hq} \in R^{hxq}$ là ma trận trọng số của Output Layer tại Time-Step $t$</li>
-<li>$b_q \in R^{1xh}$ là hệ số Bias của Output Layer tại Time-Step $t$,</li>
+<li>$X_t \in R^{n\timesd}$ là Input tại Time-Step $t$,</li>
+<li>$H_t \in R^{n\timesh}$ là Hidden State tại Time-Step $t$,</li>
+<li>$W_{xh} \in R^{d\timesh}$ là ma trận trọng số của Hidden State tại Time-Step $t$,</li>
+<li>$b_h \in R^{1\timesh}$ là hệ số Bias của Hidden State tại Time-Step $t$,</li>
+<li>$H_{t-1}$ là Hidden State tại Time-Step $t-1$,</li>
+<li>$W_{hh} \in R^{h\timesh}$ là ma trận trọng số của Hidden State tại Time-Step $t-1$,</li>
+<li>$W_{hq} \in R^{h\timesq}$ là ma trận trọng số của Output Layer tại Time-Step $t$</li>
+<li>$b_q \in R^{1\timesh}$ là hệ số Bias của Output Layer tại Time-Step $t$,</li>
 <li>$\phi$ là hàm kích hoạt.</li>
 </ul>
 
@@ -291,7 +291,7 @@
 
 
 <div style="text-align:center">
-    <p>$L(\widehat{y},y) = \sum_{t_y}^{t=1}L(\widehat{y}^{<t>},y^{<t>})$</p>
+    <img style="height:auto" src="/images/post/rnn_loss_function.png">
 </div>
 
 </p>
@@ -325,9 +325,9 @@
 <p>Ý tưởng của Gradient Clipping cũng tương tự như ReLU, nó đưa ra một giới hạn, và Gradient chỉ có thể nhỏ hơn hoặc bằng giới hạn đó.</p>
 <p><strong>3. Long Short Team Memory (LSTM)</strong></p>
 <p>Long Short Team Memory (LSTM)) là một phiên bản cải tiến của RNN, giúp dễ dàng ghi nhớ dữ liệu quá khứ trong bộ nhớ của nó. Vấn đề Vanishing Gradient của RNN được giải quyết tốt hơn với LSTM. LSTM rất phù hợp giải quyết các bài toán phân loại, xử lý và dự đoán chuỗi thời gian có độ dài không xác định. Mô hình LSTM cũng được huấn luyện bằng cách thuật toán Backpropagation.</p>
-<p>Kiến trúc mạng LSTM bao gồm nhiều Layers, mỗi Layers được cấu tạo bởi nhiều đơn vị nhỏ gọi là Cell. Mỗi Cell được đại diện bởi 2 bộ nhớ: Cell State ($C$) và Hidden State ($h$).
-<strong>- Hidden State - h,H:</strong> Bộ nhớ ngắn hạn (<em>working memory</em>), chỉ lưu thông tin của Cell ngay trước Cell hiện tại. Tồn tại trong cả RNN và LSTM.
-<strong>- Cell State - C:</strong> Bộ nhớ dài hạn (<em>long-term memory, memory cell</em>), lưu thông tin của nhiều Cells trong quá khứ. Chỉ tồn tại trên LSTM.</p>
+<p>Kiến trúc mạng LSTM bao gồm nhiều Layers, mỗi Layers được cấu tạo bởi nhiều đơn vị nhỏ gọi là Cell. Mỗi Cell được đại diện bởi 2 bộ nhớ: Cell State ($C$) và Hidden State ($h$).</p>
+<p><strong>- Hidden State - h,H:</strong> Bộ nhớ ngắn hạn (<em>working memory</em>), chỉ lưu thông tin của Cell ngay trước Cell hiện tại. Tồn tại trong cả RNN và LSTM.</p>
+<p><strong>- Cell State - C:</strong> Bộ nhớ dài hạn (<em>long-term memory, memory cell</em>), lưu thông tin của nhiều Cells trong quá khứ. Chỉ tồn tại trên LSTM.</p>
 <p>Xét 1 Cell hiện tại ($C_t, h_t$) trong LSTM. Luồng dữ liệu trong Cell này tuần tự đi qua 3 cổng như sau:</p>
 <p><strong>- Forget gate:</strong> Cổng này quyết định thông tin nào từ Cell trước đó ($C_{t-1}$) nên được giữ lại hoặc ném đi. Thông tin từ Hidden State trước đó ($h_{t-1}$) và thông tin từ Input hiện tại ($x_t$) được đưa qua hàm Sigmoid, cho ra một giá trị trong khoảng từ 0 đến 1. Giá trị này càng gần 0 nghĩa là thông tin ít quan trọng (*trường hợp = 0 thì có thể bỏ qua - Forget*), giá trị càng gần 1 nghĩa là thông càng tin quan trọng.
 
@@ -396,15 +396,14 @@
 
 </p>
 <p><strong>4. Kết luận</strong></p>
-<p>Trong bài này, chúng ta đã khám phá một vài <em>Best Practices</em> khi Code cho dự án về AI, từ việc tổ chức dự án, sử dụng OOP, đến việc Comment trong Code. Theo cách đó, Code của chúng ta sẽ trở nên ràng mạch, rõ ràng, dễ đọc hiểu, dễ bảo trì, mở rộng và hạn chế phát sinh các lỗi tiềm ẩn trong quá trình vận hành.</p>
-<p>Các bạn có thể tham khảo cấu trúc dự án mẫu tại <a href="https://github.com/tiensu/AI_Model_Coding/tree/master/Project_Structure">đây</a>.</p>
-<p>Trong bài tiếp theo, chúng ta sẽ cùng thảo luận về cách thức xây dựng và tổ chức Source Code trong các dự án về AI. Mời các bạn đón đọc.</p>
+<p>Trong bài này, chúng ta đã tóm tắt sơ lược về RNN &amp; LSTM. Mặc dù LSTM tiên tiến hơn RNN nhưng nó vẫn còn tồn tại một số nhược điểm.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ cùng tìm hiểu về cơ chế Attention và kiến trúc Transformer. Mời các bạn đón đọc.</p>
 <p><strong>5. Tham khảo</strong></p>
 <ul>
-<li><a href="https://theaisummer.com/best-practices-deep-learning-code/">Theaisummer</a></li>
-<li><a href="https://www.learnpython.org/en/Modules_and_Packages">Learnpython</a></li>
-<li><a href="https://realpython.com/python3-object-oriented-programming/">Realpython</a></li>
-<li><a href="https://www.datacamp.com/community/tutorials/docstrings-python">Datacamp</a></li>
+<li><a href="https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks">stanford</a></li>
+<li><a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">colah</a></li>
+<li><a href="https://aditi-mittal.medium.com/understanding-rnn-and-lstm-f7cdf6dfc14e">aditi-mittal</a></li>
+<li><a href="https://d2l.ai/chapter_recurrent-neural-networks/rnn.html">d2l.ai</a></li>
 </ul>
 
         </div>
