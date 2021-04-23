@@ -175,14 +175,14 @@
 <p><em><strong>1.1 Kiến trúc RNN</strong></em></p>
 <p>Giả sử:</p>
 <ul>
-<li>$X_t \in R^{n\timesd}$ là Input tại Time-Step $t$,</li>
-<li>$H_t \in R^{n\timesh}$ là Hidden State tại Time-Step $t$,</li>
-<li>$W_{xh} \in R^{d\timesh}$ là ma trận trọng số của Hidden State tại Time-Step $t$,</li>
-<li>$b_h \in R^{1\timesh}$ là hệ số Bias của Hidden State tại Time-Step $t$,</li>
+<li>$X_t \in R^{n\times d}$ là Input tại Time-Step $t$,</li>
+<li>$H_t \in R^{n\times h}$ là Hidden State tại Time-Step $t$,</li>
+<li>$W_{xh} \in R^{d\times h}$ là ma trận trọng số của Hidden State tại Time-Step $t$,</li>
+<li>$b_h \in R^{1\times h}$ là hệ số Bias của Hidden State tại Time-Step $t$,</li>
 <li>$H_{t-1}$ là Hidden State tại Time-Step $t-1$,</li>
-<li>$W_{hh} \in R^{h\timesh}$ là ma trận trọng số của Hidden State tại Time-Step $t-1$,</li>
-<li>$W_{hq} \in R^{h\timesq}$ là ma trận trọng số của Output Layer tại Time-Step $t$</li>
-<li>$b_q \in R^{1\timesh}$ là hệ số Bias của Output Layer tại Time-Step $t$,</li>
+<li>$W_{hh} \in R^{h\times h}$ là ma trận trọng số của Hidden State tại Time-Step $t-1$,</li>
+<li>$W_{hq} \in R^{h\times q}$ là ma trận trọng số của Output Layer tại Time-Step $t$</li>
+<li>$b_q \in R^{1\times h}$ là hệ số Bias của Output Layer tại Time-Step $t$,</li>
 <li>$\phi$ là hàm kích hoạt.</li>
 </ul>
 
@@ -378,7 +378,7 @@
 </div>
 
 </p>
-<p><strong>- Output gate:</strong> Cổng này quyết định thông tin nào sẽ được output ra ngoài ($h_t$). Vẫn vẫn giống như 2 cổng bên trên, thông tin từ Hidden State trước đó ($h_{t-1}$) và thông tin từ Input hiện tại ($x_t$) được đưa qua hàm Sigmoid, cho ra một giá trị trong khoảng từ 0 đến 1. Giá trị này càng gần 0 nghĩa là thông tin càng ít quan trọng , giá trị càng gần 1 nghĩa là thông tin càng  quan trọng. Tiếp đos, Cell State được cho qua hàm Tanh để đưa giá trị của Cell State về miền [-1,1].
+<p><strong>- Output gate:</strong> Cổng này quyết định thông tin nào sẽ được output ra ngoài ($h_t$). Vẫn vẫn giống như 2 cổng bên trên, thông tin từ Hidden State trước đó ($h_{t-1}$) và thông tin từ Input hiện tại ($x_t$) được đưa qua hàm Sigmoid, cho ra một giá trị trong khoảng từ 0 đến 1. Giá trị này càng gần 0 nghĩa là thông tin càng ít quan trọng , giá trị càng gần 1 nghĩa là thông tin càng  quan trọng. Tiếp đó, Cell State được cho qua hàm Tanh để đưa giá trị của Cell State về miền [-1,1].
 
 
 <div style="text-align:center">
