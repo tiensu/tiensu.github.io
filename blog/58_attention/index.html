@@ -235,7 +235,7 @@
 
 
 <div style="text-align:center">
-   <p>$c_i = \sum_{j=1}{n}\alpha_{ij}h_j$</p>
+   <p>$c_i = \sum_{j=1}^n\alpha_{ij}h_j$</p>
 </div>
 
 </p>
@@ -252,19 +252,19 @@
 <li>$h_i$ là Hidden State tại TimeStep $i$ của Encoder.</li>
 <li>$n$ là chiều dài của Input Sequence.</li>
 </ul>
-<p>$alpha_{ij}$ được tính bằng cách lấy Softmax của Attention Score ($e_{ij}$):
+<p>$\alpha_{ij}$ được tính bằng cách lấy Softmax của Attention Score ($e_{ij}$):
 
 
 <div style="text-align:center">
    <p>$\alpha_{ij} = softmax(e_{ij}) = \frac_{e^{e_{ij}}}{\sum_{k=1}{m}e^{ik}}$</p>
-   <p>$e_{ij} = f(s_{i-1}, h_j) = align_score(s_{i-1}, h_j)$</p>
+   <p>$e_{ij} = f(s_{i-1}, h_j) = AlignScore(s_{i-1}, h_j)$</p>
 </div>
 
 </p>
 <p>Trong đó:</p>
 <ul>
 <li>$h_{i-1}$ là Hidden State tại TimeStep $i-1$ của Decoder.</li>
-<li>$s_j$ là Hidden State tại TimeStep $j của Encoder.</li>
+<li>$s_j$ là Hidden State tại TimeStep $j$ của Encoder.</li>
 </ul>
 <p>Context Vector $c_{ij}$ sau đó được sử dụng để Decoder tính ra Output $y_i$.</p>
 
@@ -275,7 +275,7 @@
 
 
 <p><strong>5. Bahdanau Attention &amp; Luong Attention</strong></p>
-<p>Như bên trên đã giới thiệu, hai nhóm tác giả đã giới thiệu 2 loại Attention khác nhau, gọi là <a href="https://arxiv.org/pdf/1409.0473.pdf">Bahdanau Attention</a> và <a href="https://arxiv.org/abs/1508.04025">Luong Attention</a>
+<p>Như bên trên đã giới thiệu, hai nhóm tác giả đã giới thiệu 2 loại Attention khác nhau, gọi là <a href="https://arxiv.org/pdf/1409.0473.pdf">Bahdanau Attention</a> và <a href="https://arxiv.org/abs/1508.04025">Luong Attention</a>.
 
 
 <div style="text-align:center">
@@ -466,7 +466,7 @@
 <p><strong>10.Kết luận</strong></p>
 <p>Trong bài này, chúng ta đã cùng nhau tìm hiểu khá chi tiết về cơ chế Attention áp dụng cho mô hình Seq2Seq với kiến trúc Encoder-Decoder.</p>
 <p>Ở bài tiếp theo, mình sẽ tiếp tục giới thiệu về Self_Attention và Multi-head Sefl-Attention. Hiểu được 2 lại Attention này là điều kiện tiền để để chúng ta có thể tiếp tục với mô hình Transformer. Mời các bạn đón đọc.</p>
-<p><strong>5. Tham khảo</strong></p>
+<p><strong>11. Tham khảo</strong></p>
 <ul>
 <li><a href="https://www.linkedin.com/pulse/explanation-attention-based-encoder-decoder-deep-keshav-bhandari/">Keshav Bhandari</a></li>
 <li><a href="https://towardsdatascience.com/attn-illustrated-attention-5ec4ad276ee3#ba24">Raimi Karim</a></li>
