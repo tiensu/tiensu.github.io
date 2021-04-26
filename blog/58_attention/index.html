@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/rnn"
+          class="text-primary">R n n</a>
+        
+        <a href="/categories/lstm"
+          class="text-primary">L s t m</a>
+        
+        <a href="/categories/attention"
+          class="text-primary">Attention</a>
+        
+        <h2>Tìm hiểu cơ chế Attention trong mô hình Seq2Seq</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>10 April 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/attention.png" class="img-fluid w-100 mb-4" alt="Tìm hiểu cơ chế Attention trong mô hình Seq2Seq">
+        
+        <div class="content mb-5">
+          <p>Trong bài này, mình sẽ giải thích qua về kiến trúc Encoder-Decoder với mô hình Seq2Seq. Sau đó, chúng ta sẽ tìm hiểu chi tiết về cơ chế Attention áp dụng trong kiến trúc đó.</p>
+<p><strong>1. Giới thiệu mô hình Sequence to Sequence (Seq2Seq)</strong></p>
+<p><a href="https://arxiv.org/pdf/1409.3215.pdf">Mô hình Seq2Seq</a> được giới thiệu lần đầu vào năm 2014 bởi Google. Mục đích của nó là ánh xạ một Input Sequence Data có chiều dài cố định thành một Output Sequence Data có chiều dài cố định. Chiều dài của 2 Sequence Data không nhất thiết phải giống nhau. Ví dụ khi dịch câu có 5 từ <em>What are you doing now?</em> từ tiếng Anh sang câu có 7 ký tự <em>今天你在做什麼？</em> trong tiếng Trung Quốc.</p>
+<p>Mô hình Seq2Seq có thể giải quyết các bài toán sau:</p>
+<ul>
+<li><strong>Text Summarization -</strong> Đây là bài toán tóm tắt nội dung của một văn bản dài thành một đoạn văn bản ngắn hơn. Kể từ khi được Google giới thiệu năm 2014, nó đã trở nên khá phổ biến.</li>
+<li><strong>Machine Translation -</strong> Dịch văn bản giữa các ngôn ngữ khác nhau. Google Translate chính là một sản phẩm của bài toán này.</li>
+<li><strong>Image/Video Captioning -</strong> Đưa cho máy tính một bức ảnh hoặc một video, nó sẽ trả lại cho bạn một (<em>hoặc một vài</em>) câu miêu tả nội dung của bức ảnh / Video đó. Mình đang nghĩ rằng phần thi đầu tiên của kỳ thi TOEIC (<em>phần thi miêu tả tranh</em>) có thể chính là một ứng dụng thực tế của bài toán này.</li>
+<li><strong>Speech Recognition -</strong> Bài toán trong lĩnh vực Audio, còn được gọi là Speech To Text, tức chuyển đổi âm thanh thành văn bản.</li>
+<li><strong>Music Generation -</strong> Đây là một bài toán rất thú vị, máy tính có thể sáng tác nhạc cho bạn. Nghe chắc sẽ rất ngầu! :D</li>
+<li><strong>Recommendation Engine -</strong> Hệ thống khuyến nghị có lẽ đã không còn xa lạ với mọi người. Có rất nhiều các để tạo ra nó, và mô hình Seq2Seq với kiến trúc Encoder-Decoder cũng là một trong số đó, cho kết quả rất khả quan.</li>
+<li><strong>Chatbot -</strong> Hay còn gọi là hệ thống Question-Answer. Siri hay Alexa là ví dụ thực tế.</li>
+</ul>
+<p>Các bài toán kể trên đều có chung một đặc điểm là chúng sử dụng dữ liệu ở dạng chuỗi (<em>tuần tự</em>), bao gồm nhiều TimeSteps. Đó có thể là văn bản, âm thanh, tín hiệu, &hellip; Ví dụ đối với văn bản thì mỗi TimeStep có thể hiểu là một từ trong văn bản đó.</p>
+<p><strong>2. Kiến trúc của mô hình Seq2Seq</strong></p>
+<p>Mô hình Seq2Seq bao gồm 2 thành phần: Encoder và Decoder. Mỗi một thành phần bao gồm nhiều NN Layers xếp chồng lên nhau (<em>stack</em>). NN Layer có thể là CNN, RNN, LSTM. GRU, &hellip; Trong bài này, mình sẽ lấy ví dụ là LSTM.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/encoder_decoder.png">
+</div>
+
+</p>
+<p><em><strong>2.1 Quá trình huấn luyện</strong></em></p>
+<p>Trong quá trình huấn luyện, mỗi thành phần sẽ thực hiện nhiệm vụ như sau:</p>
+<ul>
+<li>
+<p><strong>Encoder -</strong> Đọc vào toàn bộ Input Sequence, lần lượt từng TimeStep tại các LSTM Cell. Tại TimeStep $t$, Output ra của các Cell là Hidden State ($h_t$) và Cell State ($C-t$), gọi chung là Internal State. Internal State của TimeStep trước được sử dụng cùng với Input của TimeStep hiện tại để làm đầu vào cho Cell hiện tại. Internal State ($h_0, c_0$) được khởi tạo ngẫu nhiên. Internal State của Cell cuối cùng của Encoder được sử dụng làm đầu vào cho Decoder. Chi tiết về Internal State của LSTM Cell, bạn có thể xem lại bài <a href="https://tiensu.github.io/blog/57_rnn_summary/">này</a> của mình.</p>
+</li>
+<li>
+<p><strong>Decoder -</strong> Đọc vào toàn bộ Target Sequence, lần lượt từng TimeStep. Khác với Encoder, Target Sequence được thêm vào tiền tố START_ và hậu tố _END để chỉ ra điểm bắt đầu và kết thúc của nó. Internal State ban đầu ($h_0, s_0$) của Decoder được khởi tạo bằng với Intern State của Cell cuối cùng trong Encoder. Tại mỗi TimeStep $t$, Decoder sẽ đọc vào một từ trong văn bản Target Sequence, cho ra ra một từ dự đoán ($y&rsquo;_t$) và Internal State ($h_t, c_t$). Internal State này cũng sẽ được sử dụng cho TimeStep tiếp theo, còn $y&rsquo;_t$ sẽ được dùng để tính toán lỗi với Target Sequence, sau đó Backpropagation sẽ cập nhật lại các trọng số của model theo lỗi đó. Internal State ở Cell cuối cùng của Decoder được loại bỏ vì không dùng đến.</p>
+</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/encoder_decoder_train.png">
+</div>
+
+
+<p><em><strong>2.2 Quá trình dự đoán</strong></em></p>
+<p>Quá trình dự đoán của Encoder vẫn giống như quá trình huấn luyện nó. Còn đối với Decoder, quá trình dự đoán diễn ra như sau:</p>
+<ul>
+<li>Internal State ban đầu ($h_0, s_0$) của Decoder được khởi tạo bằng với Intern State của Cell cuối cùng trong Encoder.</li>
+<li>Input của Decoder luôn bắt đầu bằng START_.</li>
+<li>LSTM Cell của Decoder sinh ra mỗi từ tại mỗi TimeStep.</li>
+<li>Internal State của mỗi TimeStep được sử dụng cho TimeStep tiếp theo.</li>
+<li>Từ dự đoán sinh ra tại mỗi TimeStep ($y&rsquo;_t) được chuyển thành Input cho TimeStep tiếp theo.</li>
+<li>Quá trình dự đoán kết thúc khi Decoder dự đoán ra $y&rsquo;_t$ là _END.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/encoder_decoder_predict.png">
+</div>
+
+
+<p><strong>3. Hạn chế của mô hình Seq2Seq với kiến trúc Encoder-Decoder</strong></p>
+<p>Kiến trúc Encoder-Decoder làm việc rất hiệu quả đối với Input Sequence có chiều dài nhỏ, nhưng hiệu năng sẽ giảm dần khi kích thước của Input Sequence tăng lên. Giả sử, Encoder nhận vào một Input Sequence {$c_1, x_2, &hellip;, x_n$} và mã hóa thành các vectors có chiều dài cố định {$h_1, h_2, &hellip;, h_n$}, gọi là Hidden State hay Context Vector. Chỉ có Context Vector cuối cùng $h_n$ mới được sử dụng cho bộ Decoder để dự đoán Output, dẫn đến thông tin của toàn bộ Input Sequence không được sử dụng đầy đủ (<em>mất thông tin</em>). Attention xuất hiện như là một giải pháp hữu hiệu để giải quyết vấn đề này.</p>
+<p><strong>4. Giới thiệu Attention</strong></p>
+<p>Attention là một kỹ thuật được <a href="https://arxiv.org/abs/1409.0473">Bahdanau et al., 2014</a> và <a href="https://arxiv.org/abs/1508.04025">Luong et al., 2015</a> giới thiệu trong các bài báo của họ. Ý tưởng của nó là cho phép Decoder sử dụng thông tin của toàn bộ Input Sequence, nhưng chỉ tập trung vào những phần <em>quan trọng</em> tại mỗi TimeStep. Nói một cách cụ thể và dễ hiểu hơn, Attention thực chất là cơ chế tạo ra một Context Vector bằng cách tính trung bình có trọng số của toàn bộ Internal State của Input Sequence trong bộ Encoder:
+
+
+<div style="text-align:center">
+   <p>$c_i = \sum_{j=1}{n}\alpha_{ij}h_j$</p>
+</div>
+
+</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention.png">
+</div>
+
+
+<p>Trong đó:</p>
+<ul>
+<li>$\alpha_{ij}$ là trọng số của TimeStep $j$ của Decoder và TimeStep $i$ của Encoder. Nói cách khác, Output thứ $j$ của Decoder nên chú ý một lượng $alpha_{ij}$ đến Input thứ $i$ của Encoder.</li>
+<li>$h_i$ là Hidden State tại TimeStep $i$ của Encoder.</li>
+<li>$n$ là chiều dài của Input Sequence.</li>
+</ul>
+<p>$alpha_{ij}$ được tính bằng cách lấy Softmax của Attention Score ($e_{ij}$):
+
+
+<div style="text-align:center">
+   <p>$\alpha_{ij} = softmax(e_{ij}) = \frac_{e^{e_{ij}}}{\sum_{k=1}{m}e^{ik}}$</p>
+   <p>$e_{ij} = f(s_{i-1}, h_j) = align_score(s_{i-1}, h_j)$</p>
+</div>
+
+</p>
+<p>Trong đó:</p>
+<ul>
+<li>$h_{i-1}$ là Hidden State tại TimeStep $i-1$ của Decoder.</li>
+<li>$s_j$ là Hidden State tại TimeStep $j của Encoder.</li>
+</ul>
+<p>Context Vector $c_{ij}$ sau đó được sử dụng để Decoder tính ra Output $y_i$.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_2.png">
+</div>
+
+
+<p><strong>5. Bahdanau Attention &amp; Luong Attention</strong></p>
+<p>Như bên trên đã giới thiệu, hai nhóm tác giả đã giới thiệu 2 loại Attention khác nhau, gọi là <a href="https://arxiv.org/pdf/1409.0473.pdf">Bahdanau Attention</a> và <a href="https://arxiv.org/abs/1508.04025">Luong Attention</a>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_bahdanau_luong.jpeg">
+</div>
+
+</p>
+<p>Xét về nguyên lý hoạt động thì 2 dạng Attention này đều giống nhau. Sự khác nhau của chúng nằm ở kiến trúc và cách tính toán của mỗi loại.</p>
+<p><em><strong>5.1 Bahdanau Attention</strong></em></p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/bahdanau_attention.jpeg">
+</div>
+
+
+<p><em>Bahdanau Attention</em> còn được gọi là <em>Additive Attention</em>, được tạo ra bởi <em>Dzmitry Bahdanau</em> trong <a href="https://arxiv.org/pdf/1409.0473.pdf">bài báo</a> vào năm 2014. Mục tiêu của nó là cải thiện hiệu năng của mô hình Seq2Seq bằng cách thay đổi đầu vào của Decoder với các thông tin từ Input Sequence. Các bước tiến hành như sau:</p>
+<ul>
+<li><strong>Tạo Encoder Hidden State -</strong> Encoder sinh ra Hidden State tại mỗi TimeStep.</li>
+<li><strong>Tính toán Alignment Score</strong> giữa Decoder Hidden State ở TimeStep trước đó với mỗi Encoder Hidden State. Chú ý rằng, Encoder Hidden State ở TimeStep cuối cùng được sử dụng như là Decoder Hidden State ở TimeStep đầu tiên.</li>
+<li><strong>Tính toán Softmax của Alignment Score -</strong> Giá trị của Alignment Score ở bước trên được đưa về khoảng giá trị [0,1] bằng cách sử dụng hàm Softmax.</li>
+<li><strong>Tính toán Context Vector -</strong> Encoder Hidden State và Alignment Score tương ứng của nó được nhân với nhau để tạo thành Context Vector cho mỗi TimeStep.</li>
+<li><strong>Tính toán Output của Decoder -</strong> Các Context Vectors được cộng lại với nhau, rồi cộng với vào Decoder Output và Decoder Hidden State tại TimeStep trước đó, để sinh ra Decoder Output mới tại TimeStep hiện tại.</li>
+<li><strong>Lặp lại</strong> bước 2-5 đối với mỗi TimeStep của Decoder đến tận khi Decoder Output là _END hoặc chiều dài của Output Sequence đặt đến giá trị tối đa quy định trước.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/bahdanau_attention_flow.jpeg">
+</div>
+
+</li>
+</ul>
+<p><em><strong>5.2 Luong Attention</strong></em></p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/luong_attention.jpeg">
+</div>
+
+
+<p>Luong Attention được đề xuất bởi Thang Luong trong <a href="https://arxiv.org/abs/1508.04025">bài báo</a> của anh ấy và đồng nghiệp. Nó còn có tên khác là <em>Multiplicative Attention</em>, kế thừa từ Bahdanau Attention. Hai điểm khác biết chủ yếu giữa Luong Attention và Bahdanau Attention là:</p>
+<ul>
+<li>Cách tính toán Alignment Score. Có 3 phương pháp tính Aligment Score trong Luong Attention so với 1 phương pháp của Bahdanau Attention.</li>
+<li>Vị trí của Attention trong kiến trúc Encoder-Decoder.</li>
+</ul>
+<p>Các bước thực hiện Luong Attention như sau:</p>
+<ul>
+<li><strong>Tạo Encoder Hidden State -</strong> Encoder sinh ra Hidden State tại mỗi TimeStep.</li>
+<li><strong>Tạo Decoder Hidden State -</strong> Decoder Hidden State và Decoder Output của TimeStep trước đó được đưa qua Decoder RNN Cell để sinh ra Decoder Hidden State tại TimeStep hiện tại.</li>
+<li><strong>Tính toán Alignment Score -</strong> Sử dụng Decoder Hidden State ở bước trên và Encoder Hidden State để tính Alignment Score.</li>
+<li><strong>Tính toán Softmax của Alignment Score -</strong> Giá trị của Alignment Score ở bước trên được đưa về khoảng giá trị [0,1] bằng cách sử dụng hàm Softmax.</li>
+<li><strong>Tính toán Context Vector -</strong> Encoder Hidden State và Alignment Score tương ứng của nó được nhân với nhau để tạo thành Context Vector.</li>
+<li><strong>Tính toán Output của Decoder -</strong> Context Vector được cộng vào Decoder Output và Decoder Hidden State tại TimeStep trước đó, để sinh ra Decoder Output mới tại TimeStep hiện tại.</li>
+<li><strong>Lặp lại</strong> bước 2-6 đối với mỗi TimeStep của Decoder đến tận khi Decoder Output là _END hoặc chiều dài của Output Sequence đặt đến giá trị tối đa quy định trước.</li>
+</ul>
+<p>Như chúng ta thấy, thứ tự các bước của Luong Attention khác so với Bahdanau Attention.</p>
+<p><strong>6. Global/Soft Attention &amp; Local/Hard Attention</strong></p>
+<p>Phụ thuộc vào việc có bao nhiêu Encoder Hidden State tham gia vào quá trình tạo Context Vector cho Decoder mà chúng ta có thể chia Attention thành 2 loại: Global/Soft Attention và Local/Hard Attention.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_global_local.png">
+</div>
+
+</p>
+<p><em><strong>6.1 Global/Soft Attention</strong></em></p>
+<p>Global Attention, tên khác là Soft Attention là loại Attention mà ở đó toàn bộ Encoder Hidden State đều được sử dụng để tính toán Context Vector tại mỗi TimeStep.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/global_attention.png">
+</div>
+
+</p>
+<p><em><strong>6.2 Local/Hard Attention</strong></em></p>
+<p>Global Attention có một nhược điểm là nó yêu cầu tài nguyên tính toán khá lớn, nhất là đối với các bài toán mà Input Sequence có chiều dài lớn. Đó chính là lý do Local/Hard Attention ra đời. Nó giải quyết vấn đề của Global Attention bằng cách chỉ sử dụng một số lượng nhất định Encoder Hidden State thay vì tất cả.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/local_attention.png">
+</div>
+
+</p>
+<p><strong>7. Mở rộng của Attention (Extended Attention)</strong></p>
+<p>Các loại Attention mà chúng ta nói từ đầu đến giờ chỉ hoạt động với kiến trúc Encoder-Decoder (<em>có đủ 2 thành phần Encoder và Decoder</em>), tức là phải có cả Input Sequence và Target Sequence như trong bài toán Machine Translation hay Text Summarization. Để áp dụng vào bài toán mà chỉ có một thành phần Encoder (<em>chỉ có Input Sequence, không có Target Sequence</em>) như Text Classification, chúng ta phải sử dụng các dạng mở rộng của Attention. Có 3 loại Extended Attention là: Self-Attention, Multi-head Self-Attention và Hierarchical Attention.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/extended_attention.png">
+</div>
+
+</p>
+<p>Chúng ta sẽ tìm hiểu kỹ hơn về Self-Attention và Multi-head Sefl-Attention trong bài tiếp theo. Còn Hierachical Attention, các bạn đọc thêm tại <a href="https://www.cs.cmu.edu/~./hovy/papers/16HLT-hierarchical-attention-networks.pdf">đây</a>.</p>
+<p><strong>8. Một số dạng Alignment Score Function</strong></p>
+<p>Bảng dưới đây tổng hợp một số dạng Alignment Score Function:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_alignment_score.png">
+</div>
+
+</p>
+<p><strong>9. Ví dụ về cách làm việc của Attention</strong></p>
+<p>Trong phần này, chúng ta sẽ minh họa cách làm việc của Attention thông qua một ví dụ trực quan để có thể hiểu rõ hơn về nó.</p>
+<p><em><strong>9.1 Bước 1 - Chuẩn bị Encoder Hidden State</strong></em></p>
+<p>Giả sử chúng ta có 4 Encoder Hidden States (<em>màu xanh</em>) và Decoder Hidden State đầu tiên (<em>màu vàng</em>).
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_1.png">
+</div>
+
+</p>
+<p><em><strong>9.2 Bước 2 - Tính Alignment Score</strong></em></p>
+<p>Tính Aligment Score, sử dụng Dot Product Function giữa Decoder Hidden State và Encoder Hidden States (<em>xem mục 8</em>).
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_2.png">
+</div>
+
+</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_2_2.png">
+</div>
+
+
+<p>Theo kết quả trên, chúng ta đạt được Alignment Score cao nhất là 60 tại TimeStep thứ 2 của Encoder (<em>Hidden State là [5,0,1]</em>). Điều này có nghĩa là Output tiếp theo của Decoder sẽ chịu ảnh hưởng nhiều của Hidden State này.</p>
+<p><em><strong>9.3 Bước 3 - Cho Alignment Score qua Softmax Function</strong></em></p>
+<p>Tiếp theo, chúng ta đưa Alignment Scores đi qua hàm Softmax, thu được các giá trị trong khoảng [0,1].
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_3.png">
+</div>
+
+</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_3_3.png">
+</div>
+
+
+<p><em><strong>9.4 Buớc 4 - Tính Context Vector của mỗi TimeStep</strong></em></p>
+<p>Vector Context được tính bằng cách nhân Encoder Hidden State với Alignment Score (<em>đã đi qua hàm Softmax</em>) tương ứng của nó.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_4.png">
+</div>
+
+</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_4_4.png">
+</div>
+
+
+<p><em><strong>9.5 Bước 5 - Tính tổng của các Context Vector</strong></em></p>
+<p>Các Context Vector tại mỗi TimeStep được cộng lại với nhau, tạo thành 1 Context Vector chung cho toàn bộ Input Sequence.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_5.png">
+</div>
+
+</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_5_5.png">
+</div>
+
+
+<p><em><strong>9.6 Bước 6 - Sử dụng Context Vector cho Decoder</strong></em></p>
+<p>Đến đây, ta đã được Context Vector đầy đủ của toàn bộ Input Sequence. Chúng ta sẽ đưa nó vào Decoder để sử dụng tạo ra Output mới.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/attention_step_6.png">
+</div>
+
+</p>
+<p><strong>10.Kết luận</strong></p>
+<p>Trong bài này, chúng ta đã cùng nhau tìm hiểu khá chi tiết về cơ chế Attention áp dụng cho mô hình Seq2Seq với kiến trúc Encoder-Decoder.</p>
+<p>Ở bài tiếp theo, mình sẽ tiếp tục giới thiệu về Self_Attention và Multi-head Sefl-Attention. Hiểu được 2 lại Attention này là điều kiện tiền để để chúng ta có thể tiếp tục với mô hình Transformer. Mời các bạn đón đọc.</p>
+<p><strong>5. Tham khảo</strong></p>
+<ul>
+<li><a href="https://www.linkedin.com/pulse/explanation-attention-based-encoder-decoder-deep-keshav-bhandari/">Keshav Bhandari</a></li>
+<li><a href="https://towardsdatascience.com/attn-illustrated-attention-5ec4ad276ee3#ba24">Raimi Karim</a></li>
+<li><a href="https://towardsdatascience.com/attention-and-its-different-forms-7fc3674d14dc">Anusha Lihala</a></li>
+<li><a href="https://blog.floydhub.com/attention-mechanism/">floydhub</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">Cnn</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">Lstm</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">Mlops</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One shot learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">Rnn</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

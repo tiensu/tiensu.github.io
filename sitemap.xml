@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tiensu.github.io/tags/attention/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/attention/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tiensu.github.io/categories/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url>
@@ -34,6 +44,11 @@
   
   <url>
     <loc>https://tiensu.github.io/tags/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/58_attention/</loc>
     <lastmod>2021-04-10T00:00:00+00:00</lastmod>
   </url>
   
