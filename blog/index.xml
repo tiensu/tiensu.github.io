@@ -14,7 +14,7 @@
     <item>
       <title>Tìm hiểu cơ chế Attention trong mô hình Seq2Seq</title>
       <link>https://tiensu.github.io/blog/58_attention/</link>
-      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/58_attention/</guid>
       <description>Trong bài này, mình sẽ giải thích qua về kiến trúc Encoder-Decoder với mô hình Seq2Seq. Sau đó, chúng ta sẽ tìm hiểu chi tiết về cơ chế Attention áp dụng trong kiến trúc đó.</description>
