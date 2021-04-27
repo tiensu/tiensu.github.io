@@ -162,7 +162,7 @@
         <a href="/categories/transformer"
           class="text-primary">Transformer</a>
         
-        <h2>Tìm hiểu cơ chế Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer</h2>
+        <h2>Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
@@ -171,7 +171,7 @@
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/self_attention.png" class="img-fluid w-100 mb-4" alt="Tìm hiểu cơ chế Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer">
+        <img src="https://tiensu.github.io/images/featured-post/self_attention.png" class="img-fluid w-100 mb-4" alt="Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer">
         
         <div class="content mb-5">
           <p>Kiến trúc Transformer với xương sống là Self-Attention đã &ldquo;làm mưa làm gió&rdquo; trong cộng đồng NLP trong 1-2 năm gần đây. Nó đạt được độ chính xác rất cao trong hầu hết các bài toán NLP. Trong bài này, hãy cùng nhau tìm hiểu kỹ hơn về cơ chế Self-Attention, làm tiền đề cho việc tìm hiểu kiến trúc Transformer ở bài sau.</p>
@@ -183,11 +183,11 @@
 
 
 <div style="text-align:center">
-   <p>$Attention(Q,K,V) = softmax(\frac_{QK^T}{\sqrt{d_k}}) \times V$</p>
+   <p>$Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}}) \times V$</p>
 </div>
 
 </p>
-<p>Trong đó, $\frac_{1}{\sqrt(d_k)}$ là hệ số tỷ lệ. $d_k$ là số chiều của Key.</p>
+<p>Trong đó, $\frac{1}{\sqrt(d_k)}$ là hệ số tỷ lệ. $d_k$ là số chiều của Key.</p>
 <p><em><strong>2.1 Bước 1 - Chuẩn bị Input</strong></em></p>
 <p>Giả sử, chúng ta có 3 Inputs (<em>3 từ trong Input Sequence</em>), mỗi  Input là một vector 4 chiều như sau:
 
@@ -310,7 +310,7 @@
 </p>
 <p>Từ bước 4 đến bước 7, mình chỉ tính cho Input1 làm đại diện. Hai Inputs còn lại được tính tương tự.</p>
 <p><em><strong>2.5 Bước 5 - Tính Softmax</strong></em>
-Để đơn giản, mình bỏ qua hệ số tỉ lệ $\frac_{1}{\sqrt(d_k)}$
+Để đơn giản, mình bỏ qua hệ số tỉ lệ $\frac{1}{\sqrt(d_k)}$
 
 
 <div style="text-align:center">
@@ -389,7 +389,7 @@
 <li>Cơ chế Multi-Head thường áp dụng cho Self-Attention. Nhưng về mặt lý thuyết, nó cũng có thể được sử dụng cho Attention.</li>
 <li>Tương tự, Query/Key/Value thường sử dụng đối với Self-Attention, nhưng nó cũng có thể được áp dụng cho Attention.</li>
 </ul>
-<p><strong>5.Kết luận</strong></p>
+<p><strong>5. Kết luận</strong></p>
 <p>Trong bài này, chúng ta đã cùng nhau tìm hiểu khá chi tiết về cơ chế Self-Attention cũng như khái niệm Multi-Head Self-Attention.</p>
 <p>Ở bài tiếp theo, mình sẽ giới thiệu về mô hình Transformer. Mời các bạn đón đọc.</p>
 <p><strong>6. Tham khảo</strong></p>
