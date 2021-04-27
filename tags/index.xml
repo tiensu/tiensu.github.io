@@ -6,7 +6,7 @@
     <description>Recent content in Tags on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tiensu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Attention</title>
       <link>https://tiensu.github.io/tags/attention/</link>
-      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/tags/attention/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>LSTM</title>
       <link>https://tiensu.github.io/tags/lstm/</link>
-      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/tags/lstm/</guid>
       <description></description>
@@ -32,9 +32,18 @@
     <item>
       <title>RNN</title>
       <link>https://tiensu.github.io/tags/rnn/</link>
-      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/tags/rnn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformer</title>
+      <link>https://tiensu.github.io/tags/transformer/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/tags/transformer/</guid>
       <description></description>
     </item>
     

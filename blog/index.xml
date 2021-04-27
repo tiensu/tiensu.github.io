@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Tìm hiểu cơ chế Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer</title>
+      <link>https://tiensu.github.io/blog/59_self-attention/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/59_self-attention/</guid>
+      <description>Kiến trúc Transformer với xương sống là Self-Attention đã &amp;ldquo;làm mưa làm gió&amp;rdquo; trong cộng đồng NLP trong 1-2 năm gần đây.</description>
+    </item>
+    
+    <item>
       <title>Tìm hiểu cơ chế Attention trong mô hình Seq2Seq</title>
       <link>https://tiensu.github.io/blog/58_attention/</link>
       <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>

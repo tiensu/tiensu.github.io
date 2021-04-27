@@ -229,7 +229,7 @@
 
 
 <p><strong>3. Hạn chế của mô hình Seq2Seq với kiến trúc Encoder-Decoder</strong></p>
-<p>Kiến trúc Encoder-Decoder làm việc rất hiệu quả đối với Input Sequence có chiều dài nhỏ, nhưng hiệu năng sẽ giảm dần khi kích thước của Input Sequence tăng lên. Giả sử, Encoder nhận vào một Input Sequence {$c_1, x_2, &hellip;, x_n$} và mã hóa thành các vectors có chiều dài cố định {$h_1, h_2, &hellip;, h_n$}, gọi là Hidden State hay Context Vector. Chỉ có Context Vector cuối cùng $h_n$ mới được sử dụng cho bộ Decoder để dự đoán Output, dẫn đến thông tin của toàn bộ Input Sequence không được sử dụng đầy đủ (<em>mất thông tin</em>). Attention xuất hiện như là một giải pháp hữu hiệu để giải quyết vấn đề này.</p>
+<p>Kiến trúc Encoder-Decoder làm việc rất hiệu quả đối với Input Sequence có chiều dài nhỏ, nhưng hiệu năng sẽ giảm dần khi kích thước của Input Sequence tăng lên. Giả sử, Encoder nhận vào một Input Sequence {$x_1, x_2, &hellip;, x_n$} và mã hóa thành các vectors có chiều dài cố định {$h_1, h_2, &hellip;, h_n$}, gọi là Hidden State hay Context Vector. Chỉ có Context Vector cuối cùng $h_n$ mới được sử dụng cho bộ Decoder để dự đoán Output, dẫn đến thông tin của toàn bộ Input Sequence không được sử dụng đầy đủ (<em>mất thông tin</em>). Attention xuất hiện như là một giải pháp hữu hiệu để giải quyết vấn đề này.</p>
 <p><strong>4. Giới thiệu Attention</strong></p>
 <p>Attention là một kỹ thuật được <a href="https://arxiv.org/abs/1409.0473">Bahdanau et al., 2014</a> và <a href="https://arxiv.org/abs/1508.04025">Luong et al., 2015</a> giới thiệu trong các bài báo của họ. Ý tưởng của nó là cho phép Decoder sử dụng thông tin của toàn bộ Input Sequence, nhưng chỉ tập trung vào những phần <em>quan trọng</em> tại mỗi TimeStep. Nói một cách cụ thể và dễ hiểu hơn, Attention thực chất là cơ chế tạo ra một Context Vector bằng cách tính trung bình có trọng số của toàn bộ Internal State của Input Sequence trong bộ Encoder:
 
@@ -256,7 +256,7 @@
 
 
 <div style="text-align:center">
-   <p>$\alpha_{ij} = softmax(e_{ij}) = \frac_{e^{e_{ij}}}{\sum_{k=1}{m}e^{ik}}$</p>
+   <p>$\alpha_{ij} = softmax(e_{ij}) = \frac{exp(e_{ij})}{\sum_{k=1}^m exp(e_{ik}}$</p>
    <p>$e_{ij} = f(s_{i-1}, h_j) = AlignScore(s_{i-1}, h_j)$</p>
 </div>
 
@@ -360,7 +360,7 @@
 
 </p>
 <p><strong>7. Mở rộng của Attention (Extended Attention)</strong></p>
-<p>Các loại Attention mà chúng ta nói từ đầu đến giờ chỉ hoạt động với kiến trúc Encoder-Decoder (<em>có đủ 2 thành phần Encoder và Decoder</em>), tức là phải có cả Input Sequence và Target Sequence như trong bài toán Machine Translation hay Text Summarization. Để áp dụng vào bài toán mà chỉ có một thành phần Encoder (<em>chỉ có Input Sequence, không có Target Sequence</em>) như Text Classification, chúng ta phải sử dụng các dạng mở rộng của Attention. Có 3 loại Extended Attention là: Self-Attention, Multi-head Self-Attention và Hierarchical Attention.
+<p>Các loại Attention mà chúng ta nói từ đầu đến giờ chỉ hoạt động với kiến trúc Encoder-Decoder (<em>có đủ 2 thành phần Encoder và Decoder</em>), tức là phải có cả Input Sequence và Target Sequence như trong bài toán Machine Translation hay Text Summarization. Để áp dụng vào bài toán mà chỉ có một thành phần Encoder (<em>chỉ có Input Sequence, không có Target Sequence</em>) hoặc ngược lại, như Text Classification, chúng ta phải sử dụng các dạng mở rộng của Attention. Có 3 loại Extended Attention là: Self-Attention, Multi-head Self-Attention và Hierarchical Attention.
 
 
 <div style="text-align:center">
@@ -463,7 +463,7 @@
 </div>
 
 </p>
-<p><strong>10.Kết luận</strong></p>
+<p><strong>10. Kết luận</strong></p>
 <p>Trong bài này, chúng ta đã cùng nhau tìm hiểu khá chi tiết về cơ chế Attention áp dụng cho mô hình Seq2Seq với kiến trúc Encoder-Decoder.</p>
 <p>Ở bài tiếp theo, mình sẽ tiếp tục giới thiệu về Self_Attention và Multi-head Sefl-Attention. Hiểu được 2 lại Attention này là điều kiện tiền để để chúng ta có thể tiếp tục với mô hình Transformer. Mời các bạn đón đọc.</p>
 <p><strong>11. Tham khảo</strong></p>
@@ -591,6 +591,9 @@
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/xgboost">Xgboost</a>

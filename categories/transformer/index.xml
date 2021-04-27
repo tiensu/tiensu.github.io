@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transformer on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/transformer/</link>
+    <description>Recent content in Transformer on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/categories/transformer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tìm hiểu cơ chế Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer</title>
+      <link>https://tiensu.github.io/blog/59_self-attention/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/59_self-attention/</guid>
+      <description>Kiến trúc Transformer với xương sống là Self-Attention đã &amp;ldquo;làm mưa làm gió&amp;rdquo; trong cộng đồng NLP trong 1-2 năm gần đây.</description>
+    </item>
+    
+  </channel>
+</rss>
