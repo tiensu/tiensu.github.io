@@ -439,7 +439,14 @@ Nhận thấy rằng, A chỉ phụ thuộc vào Embedding Token ở vị trí �
 <li><em>Bước 4 -</em> Decoder Stack xử lý, cùng với Context Vector từ Encoder Stack, sinh ra Vector đại diện của Output Sequence.</li>
 <li><em>Bước 5 -</em> Output Layer biến đổi Vector đại diện này thành Output Sequence.</li>
 <li><em>Bước 6 -</em> Từ cuối cùng trong Output Sequence đặt vào vị trí thứ 2 (<em>sau Start Token</em>) của Input Sequence của Decoder Stack. Sau đó, Intput Sequence mới này lại được đưa vào Decoder Stack.</li>
-<li><em>Bước 7 -</em> Lặp lại từ bước 4-6 cho đến khi bắt gặp từ cuối cùng trong Ouput Sequence là End Token (<em>_END</em>).</li>
+<li><em>Bước 7 -</em> Lặp lại từ bước 4-6 cho đến khi bắt gặp từ cuối cùng trong Ouput Sequence là End Token (<em>_END</em>).
+
+
+<div style="text-align-last:center">
+   <img style="height:auto" src="/images/post/transformers_inference.png">
+</div>
+
+</li>
 </ul>
 <p><strong>5. Ứng dụng của Transformers</strong></p>
 <p>Transformers được sử dụng rất rộng rãi ở hầu hết các bài toán trong lĩnh vực NLP. Với mỗi bài toán, chúng ta sẽ sử dụng một biến thể khác của Transformers.</p>
