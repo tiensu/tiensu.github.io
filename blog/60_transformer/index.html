@@ -162,7 +162,7 @@
         <a href="/categories/transformer"
           class="text-primary">Transformer</a>
         
-        <h2>Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer</h2>
+        <h2>Transformers - Nhưng không phải là kẻ hủy diệt &hellip;</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
@@ -171,7 +171,7 @@
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/transformers.jpeg" class="img-fluid w-100 mb-4" alt="Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer">
+        <img src="https://tiensu.github.io/images/featured-post/transformers.jpeg" class="img-fluid w-100 mb-4" alt="Transformers - Nhưng không phải là kẻ hủy diệt &hellip;">
         
         <div class="content mb-5">
           <p>Nếu bạn là dân ngoại đạo, bạn cũng có thể đã từng nghe về <a href="https://en.wikipedia.org/wiki/Transformers_(film_series)">Transformers</a>. Đó là một bộ phim bom tấn, liên tục lập kỷ lục phòng vé tại thời điểm nó ra mắt. Tuy nhiên, <em>Transformers</em> mình muốn nói ở đầy là một AI model. Được giới thiệu lần đầu vào năm 2017 trong bài báo <a href="https://arxiv.org/abs/1706.03762">Attention is all you need</a>, cũng như bộ phim kia, nó cũng lập tức gây chấn động cộng động NLP lúc bấy giờ bởi hiệu năng của nó hơn hẳn so với các kiến trúc mô hình tồn tại trước đó trong các thử nghiệm được công bố.</p>
@@ -216,7 +216,7 @@
 <p>PE được tính như sau:
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$PE_{(pos,2i)} = sin(\frac{pos}{1000^{\frac{2i}{d}}})$</p>
    <p>$PE_{(pos,2i+1)} = cos(\frac{pos}{1000^{\frac{2i}{d}}})$</p>
 </div>
@@ -265,7 +265,7 @@
 </p>
 <p>Có 4 bước, chúng ta sẽ đi chi tiết mỗi bước.</p>
 <ul>
-<li>Bước 1
+<li><em>Bước 1</em>
 
 
 <div style="text-align:center">
@@ -279,7 +279,7 @@
 <p>$W^Q$ có kích thước là (4,4), trong đó 4 là số chiều của Word Embedding của 1 từ, 4 là do chúng ta giả sử $W^Q$ là ma trận vuông cho dễ xử lý. Thực tế có thể phức tạp hơn.</p>
 <p>Kết quả, các ma trận Q, V, K có kích thước (2, 4).</p>
 <ul>
-<li>Bước 2
+<li><em>Bước 2</em>
 
 
 <div style="text-align:center">
@@ -290,7 +290,7 @@
 </ul>
 <p>Đây chính là công thức tính Output của Self-Attention.</p>
 <ul>
-<li>Bước 3
+<li><em>Bước 3</em>
 
 
 <div style="text-align:center">
@@ -304,7 +304,7 @@ Nhận thấy rằng, A chỉ phụ thuộc vào Embedding Token ở vị trí �
 <p>Trong khi đó, B phụ thuộc vào Embedding ở vị trí thứ nhất và thứ hai: ($B = q_1 \times k_2 = x_1<em>W^A \times x_2</em>W^K$).</p>
 <p>($x_1, x_2$ <em>là các Embedding của Token thứ nhất và thứ hai</em>).</p>
 <ul>
-<li>Bước 4
+<li><em>Bước 4</em>
 
 
 <div style="text-align:center">
@@ -368,7 +368,7 @@ Nhận thấy rằng, A chỉ phụ thuộc vào Embedding Token ở vị trí �
 <p><em>Matmul -</em> phép toán Matrix Dot-Product giữa ma trận Query và chuyển vị của ma trận Key.
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$MatMul(Q,K) = Q.K^T$</p>
 </div>
 
@@ -384,7 +384,7 @@ Nhận thấy rằng, A chỉ phụ thuộc vào Embedding Token ở vị trí �
 <p><em>Softmax -</em> Đưa giá trị về một phân phối xác suất trong khoảng [0,1].
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt(d_k)})V$</p>
 </div>
 

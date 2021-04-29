@@ -339,7 +339,7 @@
 </p>
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$f_t = \sigma(W_f\cdot[h_{t-1},x_t] + b_f) = \sigma(W_{xf}X_t + W_{hf}h_{t-1} + b_f)$</p>
 </div>
 
@@ -355,7 +355,7 @@
 
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$i_t = \sigma(W_i\cdot[h_{t-1},x_t] + b_i) = \sigma(W_{xi}X_t + W_{hi}h_{t-1} + b_i)$</p>
    <p>$\widetilde{C_t} = tanh(W_c\cdot[h_{t-1},x_t] + b_c) = tanh(X_tW_{xc} + h_{t-1}W_{hc} + b_c)$</p>
 </div>
@@ -373,7 +373,7 @@
 <p>Chú giả về các phép toán:
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$\otimes$: Element-wise multiplication</p>
    <p>$\oplus$: Element-wise addition</p>
 </div>
@@ -382,7 +382,7 @@
 <p>Chúng ta nhân trạng thái của Cell trước đó với $f_t$ rồi cộng với $i_t * \widetilde{C_t}$
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$C_t = f_t * C_{t-1} + i_t * \widetilde{C_t}$</p>
 </div>
 
@@ -398,7 +398,7 @@
 <p>Output của Cell được tính như sau:
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$o_t = \sigma(W_o\cdot[h_{t-1},x_t] + b_o) = \sigma(W_{xo}X_t + W_{ho}h_{t-1} + b_o)$</p>
    <p>$h_t = o_t * tanh(C_t)$</p>
 </div>

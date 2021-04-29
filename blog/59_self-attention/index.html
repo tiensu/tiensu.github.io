@@ -182,7 +182,7 @@
 <p>Cơ chế Attention có thể được hiểu như là sự kết hợp giữa một Query và một cặp Key-Value để cho ra một Output. Công thức tính như sau:
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}}) \times V$</p>
 </div>
 
@@ -381,7 +381,7 @@
 <p>Mỗi Head nhận vào một Input $x$ (<em>Token Embedding và Positional Decoding</em>) và cho ra:
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$Head_i = Attention_i(x) = softmax(\frac{Q_iK_i^T}{\sqrt(d_k)})V_i$</p>
 </div>
 
@@ -390,7 +390,7 @@
 <p>Sau khi có được các Output của từng Head, ta sẽ tổng hợp chúng lại thành 1 Output duy nhất.
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$MultiHead(Q,K,V) = Concat(Head_1, Head_2, ..., Head_h)W^0$</p>
 </div>
 
