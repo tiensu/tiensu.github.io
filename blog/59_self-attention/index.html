@@ -174,7 +174,7 @@
         <img src="https://tiensu.github.io/images/featured-post/self-attention.png" class="img-fluid w-100 mb-4" alt="Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer">
         
         <div class="content mb-5">
-          <p>Kiến trúc Transformer với xương sống là Self-Attention đã &ldquo;làm mưa làm gió&rdquo; trong cộng đồng NLP trong 1-2 năm gần đây. Nó đạt được độ chính xác rất cao trong hầu hết các bài toán NLP. Trong bài này, hãy cùng nhau tìm hiểu kỹ hơn về cơ chế Self-Attention, làm tiền đề cho việc tìm hiểu kiến trúc Transformer ở bài sau.</p>
+          <p>Kiến trúc Transformer với xương sống là Self-Attention đã <em>làm mưa làm gió</em> trong cộng đồng NLP trong 1-2 năm gần đây. Nó đạt được độ chính xác rất cao trong hầu hết các bài toán NLP. Trong bài này, hãy cùng nhau tìm hiểu kỹ hơn về cơ chế Self-Attention, làm tiền đề cho việc tìm hiểu kiến trúc Transformer ở bài sau.</p>
 <p><strong>1. Self-Attention là gì?</strong></p>
 <p>Chúng ta đều biết rằng Word Embedding là vector đại diện cho ngữ nghĩa của một từ trong câu. Những từ mà có nghĩa tương tự nhau thì vector của chúng cũng sẽ gần giống nhau và ngược lại. Tuy nhiên, trong một câu, ý nghĩa của các từ riêng lẻ không đại diện cho cả câu đó. Ví dụ, xét câu: <em>The bank of a river</em>. Hai từ <em>bank</em> và <em>river</em>, nếu tách riêng thì có ý nghĩa hoàn toàn khác nhau, và nếu mang ý nghĩa đó của chúng vào câu thì sai hoàn toàn.</p>
 <p>Cơ chế Self-Attention được đề xuất trong bài báo <a href="https://arxiv.org/abs/1706.03762">Attention is all you need</a> có thể giải quyết tốt vấn đề này. Ý tưởng làm việc của nó là so sánh các từ với nhau đôi một, bao gồm cả chính nó (<em>self</em>) để tìm ra mức độ quan trọng của mỗi từ mà nó nên chú ý tới (<em>thể hiện qua trọng số</em>).</p>
@@ -205,7 +205,7 @@
 
 
 <p><em><strong>2.2 Bước 2 - Khởi tạo trọng số (Weight) cho Key, Query và Value</strong></em></p>
-<p>Mỗi một Input sẽ được đại diện bởi 3 đại lượng: <strong>key, query</strong> và <strong>value</strong> có số chiều tùy ý. Giả sử, 3 đại lượng này có số chiều là 3. Để tạo ra chúng, ta cần khởi tạo các trọng số cho từng đại lượng. Vì Input có số chiều là 4, (Key, Query, Value) có số chiều là 3 nên các Weights phải có kích thước 4x3. Chúng thường có giá trị nhỏ, được khởi tạo ngẫu nhiên sử dụng một trong số các phân phối Gaussian, Xavier, Kaiming, &hellip;</p>
+<p>Mỗi một Input sẽ được đại diện bởi 3 đại lượng: <strong>key, query</strong> và <strong>value</strong> có số chiều tùy ý. Giả sử, 3 đại lượng này có số chiều là 3. Để tạo ra chúng, ta cần khởi tạo các trọng số cho từng đại lượng. Vì Input có số chiều là 4, (<em>Key, Query, Value</em>) có số chiều là 3 nên các Weights phải có kích thước 4x3. Chúng thường có giá trị nhỏ, được khởi tạo ngẫu nhiên sử dụng một trong số các phân phối Gaussian, Xavier, Kaiming, &hellip;</p>
 <ul>
 <li>
 <p>Weight cho Key:
@@ -370,7 +370,7 @@
 </p>
 <p><strong>Chú ý -</strong> Kích thước của Query và Key phải luôn bằng nhau để có thể thực hiện được <em>dot product</em>, còn kích thước của Value có thể khác. Kich thước của Output sẽ giống với kích thước của Value.</p>
 <p><strong>3. Multi-Head Self-Attention</strong></p>
-<p>Trong kiến trúc của Transformer, mỗi một Self-Attention module được gọi là một Head. Query, Key, Value của các Input được chia nhỏ thành N phần, cho đi qua đồng thời N Head. Các Output của mỗi Head được tổng hợp lại thành một Output cuối cùng. Cơ chế này được gọi là Multi-Head Self-Attention.
+<p>Trong kiến trúc của Transformer, mỗi một Self-Attention module được gọi là một Head. Việc sử dụng nhiều Heads đồng thời gọi là Multi-Head.
 
 
 <div style="text-align:center">
@@ -378,6 +378,24 @@
 </div>
 
 </p>
+<p>Mỗi Head nhận vào một Input $x$ (<em>Token Embedding và Positional Decoding</em>) và cho ra:
+
+
+<div style="text-align:center">
+   <p>$Head_i = Attention_i(x) = softmax(\frac{Q_iK_i^T}{\sqrt(d_k)})V_i$</p>
+</div>
+
+</p>
+<p>Trong đó, $d_k = d_k$(trong trường hợp một Head) $/(số lượng Head)$.</p>
+<p>Sau khi có được các Output của từng Head, ta sẽ tổng hợp chúng lại thành 1 Output duy nhất.
+
+
+<div style="text-align:center">
+   <p>$MultiHead(Q,K,V) = Concat(Head_1, Head_2, ..., Head_h)W^0$</p>
+</div>
+
+</p>
+<p>$W^0$ là ma trận có chiều rộng bằng với chiều rộng của ma trận Input, mục đích sử dụng của nó là để đưa kích thước của Output về bằng với kích thước của Input.</p>
 <p><strong>4. So sánh Attention và Self-Attention</strong></p>
 <p>Nếu bạn vẫn còn mơ hồ giữa Attention và Self-Attention thì mình sẽ liệt kê những điểm khác nhau giữa chúng cho bạn.</p>
 <ul>
@@ -397,6 +415,7 @@
 <li><a href="https://blogs.oracle.com/ai-and-datascience/post/multi-head-self-attention-in-nlp">Praphul Singh</a></li>
 <li><a href="https://towardsdatascience.com/illustrated-self-attention-2d627e33b20a">Raimi Karim</a></li>
 <li><a href="https://datascience.stackexchange.com/questions/49468/whats-the-difference-between-attention-vs-self-attention-what-problems-does-ea">datascience</a></li>
+<li><a href="https://arxiv.org/pdf/1706.03762.pdf">Attention is all you need</a></li>
 </ul>
 
         </div>

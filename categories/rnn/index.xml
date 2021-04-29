@@ -6,10 +6,19 @@
     <description>Recent content in RNN on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tiensu.github.io/categories/rnn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer</title>
+      <link>https://tiensu.github.io/blog/60_transformer/</link>
+      <pubDate>Sun, 25 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/60_transformer/</guid>
+      <description>Nếu bạn là dân ngoại đạo, bạn cũng có thể đã từng nghe về Transformers. Đó là một bộ phim bom tấn, liên tục lập kỷ lục phòng vé tại thời điểm nó ra mắt.</description>
+    </item>
     
     <item>
       <title>Self-Attention và Multi-head Sefl-Attention trong kiến trúc Transformer</title>
@@ -17,7 +26,7 @@
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/59_self-attention/</guid>
-      <description>Kiến trúc Transformer với xương sống là Self-Attention đã &amp;ldquo;làm mưa làm gió&amp;rdquo; trong cộng đồng NLP trong 1-2 năm gần đây.</description>
+      <description>Kiến trúc Transformer với xương sống là Self-Attention đã làm mưa làm gió trong cộng đồng NLP trong 1-2 năm gần đây.</description>
     </item>
     
     <item>
