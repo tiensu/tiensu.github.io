@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.83.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/rnn"
+          class="text-primary">Rnn</a>
+        
+        <a href="/categories/lstm"
+          class="text-primary">Lstm</a>
+        
+        <a href="/categories/attention"
+          class="text-primary">Attention</a>
+        
+        <a href="/categories/transformer"
+          class="text-primary">Transformer</a>
+        
+        <a href="/categories/bert"
+          class="text-primary">Bert</a>
+        
+        <h2>BERT - Bidirectional Encoder Representations from Transformers</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>29 April 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/bert.png" class="img-fluid w-100 mb-4" alt="BERT - Bidirectional Encoder Representations from Transformers">
+        
+        <div class="content mb-5">
+          <p>Cuối năm 2018, các nhà nghiên cứu tại Google AI Language đã công bố một mô hình với tên gọi BERT trong bài báo <a href="https://arxiv.org/abs/1810.04805">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a>. Kế thừa kiến trúc của Transformers đã từng công bố trước đó, BERT đạt được hiệu quả rất cao so với các mô hình khác trong các tác vụ của NLP. Từ đó, có rất nhiều phiên bản của BERT ra đời, tập trung giải quyết các bài toán NLP trong từng lĩnh vực, ngôn ngữ cụ thể. Có thể nói Transformers và BERT đã mở ra một <em>kỷ nguyên mới</em> cho lĩnh vực AI nói chung và NLP nói riêng.</p>
+<p>Kỹ thuật chính mà BERT sử dụng là sử dụng chỉ phần Encoder Stack của Transformers và áp dụng phương pháp <em>huấn luyện 2 chiều</em> (<em>bidirectional training</em>). Trước đó thì các Language Model thường chỉ <em>huấn luyện 1 chiều</em> (<em>nondirectional training</em>), từ trái qua phải hoặc từ phải qua trái. Các tác giả của bài báo đã chỉ ra rằng, bằng việc sử dụng <em>bidirection training</em> có thể thu được nhiều thông tin về ngữ nghĩa của mỗi từ trong Input Sequence hơn so với <em>nondirectional training</em>.</p>
+<p>Trong bài này, chúng ta sẽ cùng tìm hiểu về nó.</p>
+<p><strong>1. Tại sao lại cần BERT?</strong></p>
+<p>Cũng như trong Computer Vision (*CV) trong những thách thức lớn nhất trong NLP là thiếu dữ liệu đào tạo. Nhìn chung, có rất nhiều dữ liệu văn bản có sẵn, nhưng nếu chúng ta muốn giải quyết các bài toán đặc thù của mình thì chúng ta phải tự tạo các bộ dữ liệu dành riêng cho bài toán đó. Việc đó quả thực mất rất nhiều thời gian. Để giúp thu hẹp khoảng cách về dữ liệu này, các nhà nghiên cứu đã phát triển các kỹ thuật khác nhau để đào tạo các mô hình biểu diễn ngôn ngữ có mục đích chung bằng cách sử dụng vô số văn bản trên các website (<em>Pre-trained model</em>). Sau đó, các mô hình Pre-trained này có thể được tinh chỉnh trên các tập dữ liệu nhỏ hơn dành riêng cho nhiệm vụ cụ thể. Cách tiếp cận này cải thiện độ chính xác lớn rất nhiều so với việc huấn luyện model từ đầu trên các bộ dữ liệu nhỏ. Kỹ thuật này được gọi bằng cái tên Transfer Learning giống như trong CV. BERT là một bổ sung gần đây cho kỹ thuật này trong việc tạo ra các Pre-trained model của NLP. Các Pre-trained BERT model có thể dễ dàng tải về miễn phí, sau đó được sử dụng hoặc là để trích xuất Features từ dữ liệu văn bản như đề cập trong bài báo <a href="https://arxiv.org/abs/1802.05365">ELMO</a>, hoặc Fine-tune trên tập dữ liệu riêng của một nhiệm vụ cụ thể.</p>
+<p><strong>2. Ý tưởng của BERT</strong></p>
+<p>Hãy nói về Language Modeling. Nhiệm vụ của nó là &ldquo;tìm từ tiếp theo trong câu&rdquo;. Ví dụ, trong câu sau:
+
+
+<div style="text-align-last:center">
+   <p style="font-color:red">The woman went to the store and bought a ...</p>
+</div>
+
+</p>
+<p>Language Modeling có thể hoàn thành việc này bằng cách đưa ra một dự đoán rằng, 80% từ còn thiếu là &ldquo;bag&rdquo; và 20% là &ldquo;water&rdquo;. Cách làm việc của Language Modeling là nhìn vào Input Sequence từ trái qua phải hoặc từ phải qua trái, gọi là Unidirection, hoặc là từ cả 2 phía, gọi là Bidirection. Các cách tiếp cận này khá hiệu quả đối với bài toán dự đoán từ tiếp theo, như ví dụ trên.</p>
+<p>Đến với BERT, nó cũng có thể được coi là một Language Modeling, nhưng cách làm việc của nó có một vài điểm khác với trước đó:</p>
+<ul>
+<li>BERT dựa trên kiến trúc của Transformers, tức là cũng tiếp cận Input Sequence theo cả 2 hướng, nhưng tại cùng một thời điểm (<em>trước đó là lần lượt từ trái qua phải rồi từ phải qua trái, hoặc ngược lại</em>). Cách này có thể gọi là Nondirection. Hơn nữa, việc sử dụng kiến trúc của Tranformers làm cho BERT có thể hiểu ngữ nghĩa của cả câu tốt hơn (xem lại <a href="https://tiensu.github.io/blog/60_transformer/">bài viết về Transformers</a>) so với kiến trúc LSTM/GRU.</li>
+<li>Thay vì dự đoán từ tiếp theo, BERT sử dụng một kỹ thuật mới, gọi là <em>Mask LM (MLM)</em>. Ý tưởng là &ldquo;mask&rdquo; ngẫu nhiên một số từ trong câu và sau đó cố gắng dự đoán chúng.</li>
+</ul>
+<p>Để tạo ra Word Embedding, chúng ta có thể sử dụng một trong 2 phương pháp: Context-Free hoặc Context-Based.</p>
+<ul>
+<li><em>Trong Context-Based -</em> lại được chia thành 3 cách: Unidirection, Bidirection và Nondirection.</li>
+<li><em>Context-Free-</em> kiểu như Word2Vec hay Glove, sinh ra các Word Embedding dựa hoàn toàn vào từ điển từ (<em>Vocabulary Dictionary</em>).</li>
+</ul>
+<p>Ví dụ:</p>
+<ul>
+<li>Từ <em>bank</em> trong câu <em>bank account</em> sẽ có Word Embedding giống hệt với từ <em>bank</em> trong câu <em>bank of the river</em> nếu sử dụng Context-Free.</li>
+<li>Trong câu <em>I accessed the bank account</em>, nếu sử dụng Unidirection thì Word Embedding của từ <em>bank</em> sẽ được sinh ra dựa trên các từ <em>I accessed the</em>. Còn nếu sử dụng Bidirection/Nondirection thì sẽ dựa trên các từ <em>I accessed the &hellip; account</em>.</li>
+</ul>
+<p><strong>3. Cách làm việc của BERT</strong></p>
+<p>Kiến trúc của BERT kế thừa kiến trúc của <a href="https://tiensu.github.io/blog/60_transformer/">Transformers</a>. Kiến trúc đầy đủ của Transformers bao gồm 2 thành phần:</p>
+<ul>
+<li><em>Encoder Stack -</em> nhận Input Sequence và sinh ra Context Vector đại diện cho Input Sequence đó.</li>
+<li><em>Decoder Stack -</em> sinh ra Output Sequence dựa vào Context Vector.</li>
+</ul>
+<p>Bởi vì nhiệm vụ của BERT là sinh ra Vector đại diện (<em>Sequence Embedding hay Context Vector</em>) của câu nên nó chỉ cần phần Encoder Stack.</p>
+<p>Cũng giống như Transformers, BERT cũng yêu cầu Positional Encoding thêm vào Input Sequence. Ngoài ra, nó còn yêu cầu thêm một số  thành phần khác:</p>
+<ul>
+<li><em>Token Embedding:</em> Một CLS Token được thêm vào tại vị trí đầu tiên của Input Sequence, và SEP Token được thêm vào cuối mỗi câu trong Input Sequence.</li>
+<li><em>Segment Embedding:</em> Một ký hiệu chỉ ra từ nào thuộc về câu nào nếu trong Input Sequence có nhiều câu.</li>
+<li><em>Positional Encoding:</em> Chỉ ra vị trí của từ trong Input Sequence.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/bert_input.png">
+</div>
+
+</li>
+</ul>
+<p>Để huấn luyện BERT model, chúng ta sử dụng 2 chiến lược như sau:</p>
+<p><em><strong>3.1 Masked LM (MLS)</strong></em></p>
+<p>Ý tưởng của LMS khá đơn giản: Lựa chọn ngẫu nhiên 15% các từ trong Input Sequence, thay thế chúng bằng [MASK] token, sau đó toàn bộ qua BERT model để dự đoán các từ được Masked dựa trên mỗi liên hệ trước sau với các từ còn lại. Về mặt kỹ thuật, các bước để thực hiện dự đoán như sau:</p>
+<ul>
+<li>Thêm một lớp Classification ngay sau Ouput của Encoder Stack.</li>
+<li>Nhân Ouput của Encoder Stack với Embedding Matrix để chuyển chúng sang miền của Vocabulary.</li>
+<li>Tính toán xác suất của mỗi từ trong Vocabulary với hàm Softmax.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/bert_prediction.png">
+</div>
+
+</li>
+</ul>
+<p>Ý tưởng này tuy đơn giản dễ thực hiện nhưng lại gặp phải một vấn đề. Đó là BERT model sẽ chỉ dự đoán khi gặp [MASK] token trong Input Sequence, trong khi đó, chúng ta muốn nó phải dự đoán trong bất cứ trường hợp nào, có hoặc không có [MASK] token. Để giải quyết vấn đề này, trong số 15% số từ được lựa chọn ngẫu nhiên kia:</p>
+<ul>
+<li>80% được thay thế bằng [MASK] token.</li>
+<li>10% được thay thế bằng token ngẫu nhiên.</li>
+<li>10% còn lại được giữ nguyên, không thay đổi.</li>
+</ul>
+<p>Trong khi huấn luyện BERT model, Loss Function chỉ áp dụng đối với các dự đoán của Masked token và bỏ qua dự đoán của các Non-masked tokens khác. Thời gian huấn luyện cũng lâu hơn khá nhiều so với các model sử dụng phương pháp <em>Nondirection training</em>.</p>
+<p><em><strong>3.2 Next Sentence Prediction (NSP)</strong></em></p>
+<p>Để hiểu được mối quan hệ giữa 2 câu, BERT sử dụng một kỹ thuật gọi là NSP. Trong quá trình huần luyện, một cặp câu được đưa vào, model sẽ học để dự đoán câu thứ 2 trong cặp câu Input đó có phải là câu tiếp theo của câu thứ nhất hay không? (<em>ý tưởng nghe cũng khá giống với Siamese Network trong CV, :D</em>).</p>
+<p>Cụ thể, dữ liệu huấn luyện sẽ có 50% số cặp là liên tiếp (<em>câu thứ 2 là tiếp theo của câu thứ nhất</em>), 50% số cặp còn lại là 2 câu rời rạc nhau.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/bert_nsp.png">
+</div>
+
+</p>
+<p>Để dự đoán xem câu thứ 2 có phải là tiếp theo của câu thứ nhất hay không, model sẽ làm như sau:</p>
+<ul>
+<li>Toàn bộ Input Sequence được đưa qua model.</li>
+<li>Ouput của [CLS] token được chuyển về vector kích thước 2x1 thông qua một lớp Classification đơn giản.</li>
+<li>Tính toán xác suất của mỗi nhãn sử dụng hàm Softmax.</li>
+</ul>
+<p>MLM và NSP được sử dụng song song trong quá trình huấn luyện BERT model, với mục tiêu là tối thiểu hóa Loss Function kết hợp của cả 2 chiến lược đó. Đây là một ví dụ của câu nói nổi tiếng - <em>Together to better</em>.</p>
+<p><strong>4. Một số thông tin về Pre-trained BERT model</strong></p>
+<ul>
+<li>Có 2 phiên bản của Pre-trained BERT model:
+<ul>
+<li>BERT-Base: 12-layer, 768-hidden-nodes, 12-attention-heads, 110M parameters</li>
+<li>BERT-Large: 24-layer, 1024-hidden-nodes, 16-attention-heads, 340M parameters</li>
+</ul>
+</li>
+</ul>
+<p>Thời gian huấn luyện mỗi phiên bản như sau:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/bert_train_time.png">
+</div>
+
+</p>
+<ul>
+<li>Nếu có đủ dữ liệu huấn luyện, thời gian huấn luyện lâu hơn sẽ cho độ chính xác cao hơn. Ví dụ, đối với chiến lược Mask LM, BERT-Base model đạt được độ chính xác cao hơn 1% khi huấn luyện 1M Steps, so với 500K Steps (<em>cùng batch_size</em>).
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/bert_train_compare.png">
+</div>
+
+</li>
+</ul>
+<p><strong>6. Cách sử dụng BERT để Fine-tune model</strong></p>
+<p>BERT có thể sử dụng cho rất nhiều tác vụ trong NLP:</p>
+<ul>
+<li>Classification task: Thêm một Classification layer ngay sau Ouput của Encoder Stack cho [CLS] token.</li>
+<li>Question Answering task: Một Q&amp;A model nhận một câu hỏi và nhiệm vụ của nó là tìm ra câu trả lời trong Corpus. Sử dụng BERT, nó có thể được huấn luyện bằng cách học từ các cặp câu trong Input Sequence để dự đoán xem cặp câu đó có phải là một cặp câu hỏi - trả lời hay không?</li>
+<li>Named Entity Recognition (<em>NER</em>): Model nhận một câu và được yêu cầu là đánh dấu các dạng Entities khác nhau (<em>Person, Organization, Date, &hellip;</em>) xuất hiện trong câu đó. Sử dụng BERT, model này có thể được huấn luyện bằng cách cho Ouput vector của mỗi Token đi qua một Classification layer để dự đoán xem đó có phải là một Entity hay không?</li>
+</ul>
+<p>Trong quá trình Fine-tune, hầu hết các Hyper-parameters của BERT model được giữ nguyên. Các tác giả của bài báo đã đưa ra một số chỉ dẫn về các Hyper-parameters cần quan tâm, thay đổi để đạt được kết quả tốt nhất.</p>
+<ul>
+<li>Dropout – 0.1</li>
+<li>Batch Size – 16, 32</li>
+<li>Learning Rate (Adam) – 5e-5, 3e-5, 2e-5</li>
+<li>Number of epochs – 3, 4</li>
+</ul>
+<p>Các bạn có thể đọc chi tiết trong Section 3.5 &amp; 4 của <a href="https://arxiv.org/pdf/1810.04805.pdf">bài báo</a> đó.</p>
+<p><strong>7. Kết luận</strong></p>
+<p>BERT chắc chắn là một bước đột phá trong việc giải quyết các bài toán NLP. Nó cho phép tiếp cận và  tinh chỉnh nhanh các tham số, layers để áp dụng vào một loạt các bài toán thực tế . Trong bài này, chúng ta đã mô tả một số đặc điểm chính của BERT mà không đi quá sâu về mặt toán học. Nếu bạn muốn tìm hiểu tường tận, chi tiết hơn, bạn nên tìm đọc bài báo gốc của tác giả. Một tài liệu tham khảo hữu ích khác là <a href="https://github.com/google-research/bert">mã nguồn BERT và các Pre-trained model</a> của nó, bao gồm 103 ngôn ngữ và được nhóm nghiên cứu phát hành rộng rãi dưới dạng mã nguồn mở.</p>
+<p>Ở bài tiếp theo, có lẽ mình sẽ quay lại một số chủ đề của Computer Vision. Mời các bạn đón đọc.</p>
+<p><strong>8. Tham khảo</strong></p>
+<ul>
+<li><a href="https://arxiv.org/pdf/1810.04805.pdf">BERT paper</a></li>
+<li><a href="https://towardsml.com/2019/09/17/bert-explained-a-complete-guide-with-theory-and-tutorial/">Samia</a></li>
+<li><a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">Rani Horev</a></li>
+<li><a href="https://yashuseth.blog/2019/06/12/bert-explained-faqs-understand-bert-working/">Yashu Seth</a></li>
+</ul>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">Bert</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">Cnn</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">Lstm</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">Mlops</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One shot learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">Rnn</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">Xgboost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

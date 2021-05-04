@@ -6,10 +6,15 @@
     <description>Recent content in LSTM on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Apr 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://tiensu.github.io/categories/lstm/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/lstm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BERT - Bidirectional Encoder Representations from Transformers</title>
+      <link>https://tiensu.github.io/blog/61_bert/</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/61_bert/</guid>
+      <description>Cuối năm 2018, các nhà nghiên cứu tại Google AI Language đã công bố một mô hình với tên gọi BERT trong bài báo BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.</description>
+    </item>
     
     <item>
       <title>Transformers - Nhưng không phải là kẻ hủy diệt ...</title>

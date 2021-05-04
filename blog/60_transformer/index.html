@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="This is meta description">
   <meta name="author" content="SuNT">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.83.1" />
 
   <!-- plugins -->
   
@@ -151,10 +151,10 @@
       <div class="col-lg-8 mx-auto">
         
         <a href="/categories/rnn"
-          class="text-primary">R n n</a>
+          class="text-primary">Rnn</a>
         
         <a href="/categories/lstm"
-          class="text-primary">L s t m</a>
+          class="text-primary">Lstm</a>
         
         <a href="/categories/attention"
           class="text-primary">Attention</a>
@@ -313,7 +313,7 @@ Nhận thấy rằng, A chỉ phụ thuộc vào Embedding Token ở vị trí �
 
 </li>
 </ul>
-<p>Làm tương tự cho ma trận F. Ta cũng nhận thấy B&rsquo; phụ thuộc vào Embedding Token của cả hai vị trí 1 và 2. Để ngăn chặn điều này, ta thêm vào Mask như sau:
+<p>Làm tương tự cho ma trận F. Ta cũng nhận thấy B' phụ thuộc vào Embedding Token của cả hai vị trí 1 và 2. Để ngăn chặn điều này, ta thêm vào Mask như sau:
 
 
 <div style="text-align:center">
@@ -428,8 +428,9 @@ Nhận thấy rằng, A chỉ phụ thuộc vào Embedding Token ở vị trí �
 </li>
 </ul>
 <p>Cách thức huấn luyện như thế này còn được gọi với cái tên là <em>Teacher Forcing</em>. Target Sequence ở đây đóng vai trò là Teacher để Force mô hình hoạt động đúng như mong muốn. Cá nhân mình thấy, nó khá giống với phương pháp Supervise Learning mà chúng ta đã quen thuộc.</p>
-<p><strong>4. Sử dụng mô hình Transformers để dự đoán (Inference)</strong></p>
-<p>Quá trình dự đoán của Transformers có một chút khác biệt so với quá trình huấn luyện của nó. Chúng ta chỉ có Input Sequence, không có Target Sequence. Mục đích của Inference là sinh ra Output Sequence từ Input Sequence.</p>
+<p><strong>4. Sử dụng mô hình Transformers để dự đoán (Inference)</strong>
+3
+Quá trình dự đoán của Transformers có một chút khác biệt so với quá trình huấn luyện của nó. Chúng ta chỉ có Input Sequence, không có Target Sequence. Mục đích của Inference là sinh ra Output Sequence từ Input Sequence.</p>
 <p>Trong mô hình Seq2Seq, Output của Decoder Stack được sinh ra trong một vòng lặp, Ouput từ TimeStep trước được đưa vào làm Input của TimeStep tiếp theo. Vòng lặp kết thúc khi Output là Token kết thúc (<em>_END</em>). Còn trong mô hình Transformers, tại mỗi TimeStep, toàn bộ Output tại các thời điểm trước đó được đưa vào làm Input cho thời điểm tiếp theo, thay vì chỉ sử dụng Output cuối cùng.</p>
 <p>Toàn bộ quá trình Inference diễn ra như sau:</p>
 <ul>
@@ -549,6 +550,9 @@ Nhận thấy rằng, A chỉ phụ thuộc vào Embedding Token ở vị trí �
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">Bert</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/cnn">Cnn</a>

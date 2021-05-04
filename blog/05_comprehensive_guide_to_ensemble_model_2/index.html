@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="This is meta description">
   <meta name="author" content="SuNT">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.83.1" />
 
   <!-- plugins -->
   
@@ -157,7 +157,7 @@
           class="text-primary">Ensemble Learning</a>
         
         <a href="/categories/xgboost"
-          class="text-primary">X g boost</a>
+          class="text-primary">Xgboost</a>
         
         <h2>XGBoost - Bài 2: Toàn cảnh về Ensemble Learning - Phần 2</h2>
         <div class="mb-3 post-meta">
@@ -374,54 +374,54 @@ accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.
 <table>
 <thead>
 <tr>
-<th align="center">ID</th>
-<th align="center">Married</th>
-<th align="center">Gender</th>
-<th align="center">City</th>
-<th align="center">Monthly Income</th>
-<th align="center">Age (target)</th>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Married</th>
+<th style="text-align:center">Gender</th>
+<th style="text-align:center">City</th>
+<th style="text-align:center">Monthly Income</th>
+<th style="text-align:center">Age (target)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">1</td>
-<td align="center">Y</td>
-<td align="center">F</td>
-<td align="center">Hanoi</td>
-<td align="center">51.000</td>
-<td align="center">35</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">Hanoi</td>
+<td style="text-align:center">51.000</td>
+<td style="text-align:center">35</td>
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="center">N</td>
-<td align="center">M</td>
-<td align="center">HCM</td>
-<td align="center">25.000</td>
-<td align="center">24</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">HCM</td>
+<td style="text-align:center">25.000</td>
+<td style="text-align:center">24</td>
 </tr>
 <tr>
-<td align="center">3</td>
-<td align="center">Y</td>
-<td align="center">F</td>
-<td align="center">Hanoi</td>
-<td align="center">70.000</td>
-<td align="center">38</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">Hanoi</td>
+<td style="text-align:center">70.000</td>
+<td style="text-align:center">38</td>
 </tr>
 <tr>
-<td align="center">4</td>
-<td align="center">Y</td>
-<td align="center">M</td>
-<td align="center">HCM</td>
-<td align="center">53.000</td>
-<td align="center">30</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">HCM</td>
+<td style="text-align:center">53.000</td>
+<td style="text-align:center">30</td>
 </tr>
 <tr>
-<td align="center">5</td>
-<td align="center">N</td>
-<td align="center">M</td>
-<td align="center">Hanoi</td>
-<td align="center">47.000</td>
-<td align="center">33</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">Hanoi</td>
+<td style="text-align:center">47.000</td>
+<td style="text-align:center">33</td>
 </tr>
 </tbody>
 </table>
@@ -433,66 +433,66 @@ accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.
 <table>
 <thead>
 <tr>
-<th align="center">ID</th>
-<th align="center">Married</th>
-<th align="center">Gender</th>
-<th align="center">City</th>
-<th align="center">Monthly Income</th>
-<th align="center">Age (target)</th>
-<th align="center">Age (prediction 1)</th>
-<th align="center">Error 1</th>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Married</th>
+<th style="text-align:center">Gender</th>
+<th style="text-align:center">City</th>
+<th style="text-align:center">Monthly Income</th>
+<th style="text-align:center">Age (target)</th>
+<th style="text-align:center">Age (prediction 1)</th>
+<th style="text-align:center">Error 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">1</td>
-<td align="center">Y</td>
-<td align="center">F</td>
-<td align="center">Hanoi</td>
-<td align="center">51.000</td>
-<td align="center">35</td>
-<td align="center">32</td>
-<td align="center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">Hanoi</td>
+<td style="text-align:center">51.000</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">3</td>
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="center">N</td>
-<td align="center">M</td>
-<td align="center">HCM</td>
-<td align="center">25.000</td>
-<td align="center">24</td>
-<td align="center">32</td>
-<td align="center">-8</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">HCM</td>
+<td style="text-align:center">25.000</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">-8</td>
 </tr>
 <tr>
-<td align="center">3</td>
-<td align="center">Y</td>
-<td align="center">F</td>
-<td align="center">Hanoi</td>
-<td align="center">70.000</td>
-<td align="center">38</td>
-<td align="center">32</td>
-<td align="center">6</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">Hanoi</td>
+<td style="text-align:center">70.000</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">6</td>
 </tr>
 <tr>
-<td align="center">4</td>
-<td align="center">Y</td>
-<td align="center">M</td>
-<td align="center">HCM</td>
-<td align="center">53.000</td>
-<td align="center">30</td>
-<td align="center">32</td>
-<td align="center">-2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">HCM</td>
+<td style="text-align:center">53.000</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">-2</td>
 </tr>
 <tr>
-<td align="center">5</td>
-<td align="center">N</td>
-<td align="center">M</td>
-<td align="center">Hanoi</td>
-<td align="center">47.000</td>
-<td align="center">33</td>
-<td align="center">32</td>
-<td align="center">1</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">Hanoi</td>
+<td style="text-align:center">47.000</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">1</td>
 </tr>
 </tbody>
 </table>
@@ -503,54 +503,54 @@ accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.
 <table>
 <thead>
 <tr>
-<th align="center">ID</th>
-<th align="center">Age (target)</th>
-<th align="center">Age (prediction 1)</th>
-<th align="center">Error 1 (new target)</th>
-<th align="center">Prediction 2</th>
-<th align="center">Combine (Pred1+Pred2)</th>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Age (target)</th>
+<th style="text-align:center">Age (prediction 1)</th>
+<th style="text-align:center">Error 1 (new target)</th>
+<th style="text-align:center">Prediction 2</th>
+<th style="text-align:center">Combine (Pred1+Pred2)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">1</td>
-<td align="center">35</td>
-<td align="center">32</td>
-<td align="center">3</td>
-<td align="center">3</td>
-<td align="center">35</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">35</td>
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="center">24</td>
-<td align="center">32</td>
-<td align="center">-8</td>
-<td align="center">-5</td>
-<td align="center">27</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">-8</td>
+<td style="text-align:center">-5</td>
+<td style="text-align:center">27</td>
 </tr>
 <tr>
-<td align="center">3</td>
-<td align="center">38</td>
-<td align="center">32</td>
-<td align="center">6</td>
-<td align="center">3</td>
-<td align="center">35</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">35</td>
 </tr>
 <tr>
-<td align="center">4</td>
-<td align="center">30</td>
-<td align="center">32</td>
-<td align="center">-2</td>
-<td align="center">-5</td>
-<td align="center">27</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">-2</td>
+<td style="text-align:center">-5</td>
+<td style="text-align:center">27</td>
 </tr>
 <tr>
-<td align="center">5</td>
-<td align="center">33</td>
-<td align="center">32</td>
-<td align="center">1</td>
-<td align="center">3</td>
-<td align="center">35</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">35</td>
 </tr>
 </tbody>
 </table>
@@ -560,60 +560,60 @@ accuracy <span style="color:#f92672">=</span> model<span style="color:#f92672">.
 <table>
 <thead>
 <tr>
-<th align="center">ID</th>
-<th align="center">Age (target)</th>
-<th align="center">Age (prediction 1)</th>
-<th align="center">Error 1 (new target)</th>
-<th align="center">Prediction 2</th>
-<th align="center">Combine (Pred1+Pred2)</th>
-<th align="center">Error 2</th>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Age (target)</th>
+<th style="text-align:center">Age (prediction 1)</th>
+<th style="text-align:center">Error 1 (new target)</th>
+<th style="text-align:center">Prediction 2</th>
+<th style="text-align:center">Combine (Pred1+Pred2)</th>
+<th style="text-align:center">Error 2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">1</td>
-<td align="center">35</td>
-<td align="center">32</td>
-<td align="center">3</td>
-<td align="center">3</td>
-<td align="center">35</td>
-<td align="center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">0</td>
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="center">24</td>
-<td align="center">32</td>
-<td align="center">-8</td>
-<td align="center">-5</td>
-<td align="center">27</td>
-<td align="center">-3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">-8</td>
+<td style="text-align:center">-5</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">-3</td>
 </tr>
 <tr>
-<td align="center">3</td>
-<td align="center">38</td>
-<td align="center">32</td>
-<td align="center">6</td>
-<td align="center">3</td>
-<td align="center">35</td>
-<td align="center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">3</td>
 </tr>
 <tr>
-<td align="center">4</td>
-<td align="center">30</td>
-<td align="center">32</td>
-<td align="center">-2</td>
-<td align="center">-5</td>
-<td align="center">27</td>
-<td align="center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">-2</td>
+<td style="text-align:center">-5</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">3</td>
 </tr>
 <tr>
-<td align="center">5</td>
-<td align="center">33</td>
-<td align="center">32</td>
-<td align="center">1</td>
-<td align="center">3</td>
-<td align="center">35</td>
-<td align="center">-3</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">-3</td>
 </tr>
 </tbody>
 </table>
@@ -937,6 +937,9 @@ accuracy_score on test dataset : <span style="color:#ae81ff">86.05</span><span s
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">Bert</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/cnn">Cnn</a>

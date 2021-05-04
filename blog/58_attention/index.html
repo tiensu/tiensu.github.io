@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="This is meta description">
   <meta name="author" content="SuNT">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.83.1" />
 
   <!-- plugins -->
   
@@ -151,10 +151,10 @@
       <div class="col-lg-8 mx-auto">
         
         <a href="/categories/rnn"
-          class="text-primary">R n n</a>
+          class="text-primary">Rnn</a>
         
         <a href="/categories/lstm"
-          class="text-primary">L s t m</a>
+          class="text-primary">Lstm</a>
         
         <a href="/categories/attention"
           class="text-primary">Attention</a>
@@ -201,7 +201,7 @@
 <p><strong>Encoder -</strong> Đọc vào toàn bộ Input Sequence, lần lượt từng TimeStep tại các LSTM Cell. Tại TimeStep $t$, Output ra của các Cell là Hidden State ($h_t$) và Cell State ($C-t$), gọi chung là Internal State. Internal State của TimeStep trước được sử dụng cùng với Input của TimeStep hiện tại để làm đầu vào cho Cell hiện tại. Internal State ($h_0, c_0$) được khởi tạo ngẫu nhiên. Internal State của Cell cuối cùng của Encoder được sử dụng làm đầu vào cho Decoder. Chi tiết về Internal State của LSTM Cell, bạn có thể xem lại bài <a href="https://tiensu.github.io/blog/57_rnn_summary/">này</a> của mình.</p>
 </li>
 <li>
-<p><strong>Decoder -</strong> Đọc vào toàn bộ Target Sequence, lần lượt từng TimeStep. Khác với Encoder, Target Sequence được thêm vào tiền tố START_ và hậu tố _END để chỉ ra điểm bắt đầu và kết thúc của nó. Internal State ban đầu ($h_0, s_0$) của Decoder được khởi tạo bằng với Intern State của Cell cuối cùng trong Encoder. Tại mỗi TimeStep $t$, Decoder sẽ đọc vào một từ trong văn bản Target Sequence, cho ra ra một từ dự đoán ($y&rsquo;_t$) và Internal State ($h_t, c_t$). Internal State này cũng sẽ được sử dụng cho TimeStep tiếp theo, còn $y&rsquo;_t$ sẽ được dùng để tính toán lỗi với Target Sequence, sau đó Backpropagation sẽ cập nhật lại các trọng số của model theo lỗi đó. Internal State ở Cell cuối cùng của Decoder được loại bỏ vì không dùng đến.</p>
+<p><strong>Decoder -</strong> Đọc vào toàn bộ Target Sequence, lần lượt từng TimeStep. Khác với Encoder, Target Sequence được thêm vào tiền tố START_ và hậu tố _END để chỉ ra điểm bắt đầu và kết thúc của nó. Internal State ban đầu ($h_0, s_0$) của Decoder được khởi tạo bằng với Intern State của Cell cuối cùng trong Encoder. Tại mỗi TimeStep $t$, Decoder sẽ đọc vào một từ trong văn bản Target Sequence, cho ra ra một từ dự đoán ($y'_t$) và Internal State ($h_t, c_t$). Internal State này cũng sẽ được sử dụng cho TimeStep tiếp theo, còn $y'_t$ sẽ được dùng để tính toán lỗi với Target Sequence, sau đó Backpropagation sẽ cập nhật lại các trọng số của model theo lỗi đó. Internal State ở Cell cuối cùng của Decoder được loại bỏ vì không dùng đến.</p>
 </li>
 </ul>
 
@@ -218,8 +218,8 @@
 <li>Input của Decoder luôn bắt đầu bằng START_.</li>
 <li>LSTM Cell của Decoder sinh ra mỗi từ tại mỗi TimeStep.</li>
 <li>Internal State của mỗi TimeStep được sử dụng cho TimeStep tiếp theo.</li>
-<li>Từ dự đoán sinh ra tại mỗi TimeStep ($y&rsquo;_t) được chuyển thành Input cho TimeStep tiếp theo.</li>
-<li>Quá trình dự đoán kết thúc khi Decoder dự đoán ra $y&rsquo;_t$ là _END.</li>
+<li>Từ dự đoán sinh ra tại mỗi TimeStep ($y'_t) được chuyển thành Input cho TimeStep tiếp theo.</li>
+<li>Quá trình dự đoán kết thúc khi Decoder dự đoán ra $y'_t$ là _END.</li>
 </ul>
 
 
@@ -531,6 +531,9 @@
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">Bert</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/cnn">Cnn</a>

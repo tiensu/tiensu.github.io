@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BERT on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/bert/</link>
+    <description>Recent content in BERT on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/bert/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BERT - Bidirectional Encoder Representations from Transformers</title>
+      <link>https://tiensu.github.io/blog/61_bert/</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/61_bert/</guid>
+      <description>Cuối năm 2018, các nhà nghiên cứu tại Google AI Language đã công bố một mô hình với tên gọi BERT trong bài báo BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.</description>
+    </item>
+    
+  </channel>
+</rss>
