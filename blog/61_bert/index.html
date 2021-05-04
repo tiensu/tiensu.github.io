@@ -187,7 +187,7 @@
 
 
 <div style="text-align-last:center">
-   <p style="font-color:red">The woman went to the store and bought a ...</p>
+   <p style="color:red font-style:italic">The woman went to the store and bought a ...</p>
 </div>
 
 </p>
@@ -308,15 +308,29 @@
 <li>Number of epochs – 3, 4</li>
 </ul>
 <p>Các bạn có thể đọc chi tiết trong Section 3.5 &amp; 4 của <a href="https://arxiv.org/pdf/1810.04805.pdf">bài báo</a> đó.</p>
-<p><strong>7. Kết luận</strong></p>
+<p><strong>7. Một số Pre-trained BERT model cho các tác vụ (<em>lĩnh vực</em>) cụ thể</strong></p>
+<p>BERT là mã nguồn mở, có nghĩa là bất kỳ ai cũng có thể sử dụng nó. Google tuyên bố rằng người dùng có thể huấn luyện một hệ thống Question&amp;Answering chỉ mất khoảng 30 phút nếu sử dụng TPU trên Cloud và vài giờ nếu sử dụng GPU. Nhiều tổ chứcc, nhóm nghiên cứu và các nhóm riêng biệt của Google đang tinh chỉnh kiến trúc mô hình BERT để tối ưu hóa hiệu quả của nó hoặc chuyên môn hóa nó cho một số nhiệm vụ nhất định. Một số ví dụ bao gồm:</p>
+<ul>
+<li>patentBERT - BERT model fine-tuned thực hiện nhiệm vụ phân loại các sáng kiến theo các nhóm khác nhau.</li>
+<li>docBERT - BERT model fine-tuned thực hiện nhiệm vụ phân loại các văn bản nói chung.</li>
+<li>bioBERT - BERT model fine-tuned thực hiện tạo Vector Embedding cho các tài liệu trong lĩnh vực sinh học.</li>
+<li>VideoBERT - BERT model fine-tuned thực hiện gán nhãn Video trên Youtube.</li>
+<li>SciBERT - BERT model fine-tuned thực hiện tạo Vector Embedding cho các tài liệu trong lĩnh vực khoa học.</li>
+<li>G-BERT - BERT model fine-tuned kết hợp với  phương pháp Hierarchical Representations để đưa ra các khuyến nghị trong lĩnh vực y học.</li>
+<li>TinyBERT by Huawei - Phiên bản <em>rút gọn</em> của BERT để chạy nhanh hơn.</li>
+<li>DistilBERT by HuggingFace - Tương tự TinyBERT.</li>
+<li>PhoBERT - BERT model fine-tuned dành riêng cho các bài toán NLP sử dụng tiếng Việt, được công bố bởi VinAI.</li>
+</ul>
+<p><strong>8. Kết luận</strong></p>
 <p>BERT chắc chắn là một bước đột phá trong việc giải quyết các bài toán NLP. Nó cho phép tiếp cận và  tinh chỉnh nhanh các tham số, layers để áp dụng vào một loạt các bài toán thực tế . Trong bài này, chúng ta đã mô tả một số đặc điểm chính của BERT mà không đi quá sâu về mặt toán học. Nếu bạn muốn tìm hiểu tường tận, chi tiết hơn, bạn nên tìm đọc bài báo gốc của tác giả. Một tài liệu tham khảo hữu ích khác là <a href="https://github.com/google-research/bert">mã nguồn BERT và các Pre-trained model</a> của nó, bao gồm 103 ngôn ngữ và được nhóm nghiên cứu phát hành rộng rãi dưới dạng mã nguồn mở.</p>
 <p>Ở bài tiếp theo, có lẽ mình sẽ quay lại một số chủ đề của Computer Vision. Mời các bạn đón đọc.</p>
-<p><strong>8. Tham khảo</strong></p>
+<p><strong>9. Tham khảo</strong></p>
 <ul>
 <li><a href="https://arxiv.org/pdf/1810.04805.pdf">BERT paper</a></li>
 <li><a href="https://towardsml.com/2019/09/17/bert-explained-a-complete-guide-with-theory-and-tutorial/">Samia</a></li>
 <li><a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">Rani Horev</a></li>
 <li><a href="https://yashuseth.blog/2019/06/12/bert-explained-faqs-understand-bert-working/">Yashu Seth</a></li>
+<li><a href="https://searchenterpriseai.techtarget.com/definition/BERT-language-model">Ben Lutkevich</a></li>
 </ul>
 
         </div>
