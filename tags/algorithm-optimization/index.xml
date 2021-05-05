@@ -6,7 +6,11 @@
     <description>Recent content in Algorithm Optimization on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/algorithm-optimization/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/tags/algorithm-optimization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Các phương pháp Optimization - Gradient Descent</title>
       <link>https://tiensu.github.io/blog/27_optimization_methods_gradient-descent/</link>

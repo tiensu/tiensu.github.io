@@ -6,7 +6,20 @@
     <description>Recent content in Categories on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CNN</title>
+      <link>https://tiensu.github.io/categories/cnn/</link>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/cnn/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Attention</title>
       <link>https://tiensu.github.io/categories/attention/</link>
@@ -148,15 +161,6 @@
       <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/categories/text-classification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CNN</title>
-      <link>https://tiensu.github.io/categories/cnn/</link>
-      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/cnn/</guid>
       <description></description>
     </item>
     

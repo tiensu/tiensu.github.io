@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/cnn"
+          class="text-primary">C n n</a>
+        
+        <h2>CNN - Một hành trình phát triển từ 63.3% đến 90.2%</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>02 May 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/cnn_architectures.png" class="img-fluid w-100 mb-4" alt="CNN - Một hành trình phát triển từ 63.3% đến 90.2%">
+        
+        <div class="content mb-5">
+          <p>Năm 2012, Alexnet ra đời với độ chính xác trên tập dữ liệu ImageNet được công bố là 63.3%. Từ đó đến nay, trải qua gần 9 năm phát triển, có rất nhiều kiến trúc mới của CNN nối tiếp nhau ra đời, cái sau tốt hơn cái trước. Thời điểm hiện tại, EfficientNet có lẽ là kiến trúc đạt được độ chính xác trên ImageNet cao nhất, lên đến hơn 90% khi huấn luyện bằng phương pháp Teacher-Student.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/image_classification_plot_imagenet.png">
+</div>
+
+</p>
+<p>Bài viết này, mục đích là nhìn lại toàn bộ quá trình phát triển đó của CNN, không chỉ đưa ra số liệu, bảng biểu, đồ thị mà còn tóm tắt lại nguyên lý cơ bản của mỗi kiến trúc CNN.</p>
+<p><a href="https://arxiv.org/abs/1810.00736">Simone Bianco</a>, năm 2018, đã đưa ra một tóm tắt về <em>Top Performing CNNs Model</em>, thể hiện như hình dưới đây:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/deep-learning-architectures-plot-2018.png">
+</div>
+
+</p>
+<p>Trong hình trên, trục Y thể hiện độ chính xác của model trên tập ImageNet, trục X (<em>Floating Point Operations Per Second - FLOPS</em>) chỉ ra mức độ phức tạp của model. Bán kính của vòng tròn càng lớn, model càng có nhiều tham số. Từ tổng kết này, rõ ràng rằng không phải cứ có nhiều tham số thì độ chính xác sẽ cao hơn.</p>
+<p><strong>1. Một số thuật ngữ sử dụng trong bài</strong></p>
+<p>Để tránh làm các bạn bối rối khi theo dõi bài viết, mình sẽ giải thích trước một số thuật ngữ được sử dụng ở đây:</p>
+<ul>
+<li><strong>Wider network -</strong> Network có nhiều Feature Maps (<em>Filters</em>).</li>
+<li><strong>Deeper network -</strong>  Network có nhiều Convolutional layers.</li>
+<li><strong>High Resolution network -</strong> Network nhận Input Image có độ phân giải lớn (<em>Spatial resolutions</em>).
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/architecture-scaling-types.png">
+</div>
+
+</li>
+</ul>
+<p><strong>2. AlexNet: ImageNet Classification with Deep Convolutional Neural Networks (2012)</strong></p>
+<p><a href="https://www.cs.toronto.edu/~kriz/imagenet_classification_with_deep_convolutional.pdf">Alexnet</a> được tạo thành từ 5 Conv Layers, bắt đầu từ 11x11 kernel, giảm dần đến 3x3 kernel. Nó là kiến trúc CNN đầu tiên sử dụng <a href="https://arxiv.org/abs/1603.07285">Max-Pooling layers</a>, ReLU Activation function, và Dropout. Alexnet được sử dụng cho bài toán phân loại hình ảnh, số lượng nhãn lên đến 1000. Đó là một điều rất bất ngờ tại thời điểm bấy giờ.</p>
+<p>Chúng ta có thể tạo ra Alexnet chỉ với khoảng 35 dòng Pytorch code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AlexNet</span>(nn<span style="color:#f92672">.</span>Module):
+    <span style="color:#66d9ef">def</span> __init__(self, num_classes: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">-&gt;</span> None:
+        super(AlexNet, self)<span style="color:#f92672">.</span>__init__()
+        self<span style="color:#f92672">.</span>features <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(
+            nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">64</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">11</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>MaxPool2d(kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">192</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>MaxPool2d(kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+            nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">192</span>, <span style="color:#ae81ff">384</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">384</span>, <span style="color:#ae81ff">256</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">256</span>, <span style="color:#ae81ff">256</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>MaxPool2d(kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+        )
+        self<span style="color:#f92672">.</span>avgpool <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>AdaptiveAvgPool2d((<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">6</span>))
+        self<span style="color:#f92672">.</span>classifier <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(
+            nn<span style="color:#f92672">.</span>Dropout(),
+            nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">256</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4096</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>Dropout(),
+            nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">4096</span>, <span style="color:#ae81ff">4096</span>),
+            nn<span style="color:#f92672">.</span>ReLU(inplace<span style="color:#f92672">=</span>True),
+            nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">4096</span>, num_classes),
+        )
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x: torch<span style="color:#f92672">.</span>Tensor) <span style="color:#f92672">-&gt;</span> torch<span style="color:#f92672">.</span>Tensor:
+        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>features(x)
+        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>avgpool(x)
+        x <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>flatten(x, <span style="color:#ae81ff">1</span>)
+        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>classifier(x)
+        <span style="color:#66d9ef">return</span> x
+</code></pre></div><p>Alexnet cũng là mô hình đầu tiên huấn luyện thành công trên tập ImageNet, đạt được Top-5 Error Rate là 15.3%.</p>
+<p><strong>3. VGG (2014)</strong></p>
+<p>Kiến trúc VGG xuất hiện trong bài báo <a href="https://arxiv.org/abs/1409.1556">Very Deep Convolutional Networks for Large-Scale Image Recognition</a> vào năm 2014. Đây là nghiên cứu đầu tiên cung cấp bằng chứng không thể phủ nhận rằng chỉ cần thêm nhiều lớp Conv trong kiến trúc sẽ tăng hiệu quả quả model. Tuy nhiên, giả định này chỉ đúng đến một thời điểm nhất định. Các tác giả của bài báo chỉ sử dụng các Filters có kích thước 3x3, trái ngược lại với Alexnet. Ảnh đầu vào để huấn luyện model là ảnh RGB có kích thước 224x224.</p>
+<p>VGG được đặc trưng bởi sự đơn giản của nó, chỉ sử dụng các lớp Conv với Kernel 3 × 3 xếp chồng lên nhau theo chiều sâu ngày càng tăng. Việc giảm kích thước được xử lý bằng cách sử dụng Max-pooling. Ba Fully-Connected layers, trong đó 2 lớp đầu, mỗi lớp có 4.096 nodes, lớp còn lại có 1000 nodes (<em>tương ứng với 1000 classes</em>), được theo sau bởi một bộ phân loại Softmax.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/vgg_table.png">
+</div>
+
+</p>
+<p>Có 2 phiên bản của VGG thường hay được sử dụng là VGG16 và VGG19. Các con số 16, 19 chỉ ra số Weights layers của mỗi model (<em>cột D và E trong bảng trên</em>). Ở thời điểm năm 2014 thì 16 và 19 layers được xem là rất <em>deep</em> rồi. Bây giờ thì chúng ta có kiến trúc ResNet có số lượng layers từ 50-200.</p>
+<p>VGG có 2 nhược điểm:</p>
+<ul>
+<li>Thời gian huấn luyện rất lâu nếu bạn ko có GPU.</li>
+<li>Dung lượng của model sau khi huấn luyện xong rất lớn (<em>VGG16 là khoảng 533MB, còn VGG19 khoảng 574MB</em>). Điều này làm cho VGG khó triển khai trên các thiết bị có bộ nhớ khiêm tốn.</li>
+</ul>
+<p>VGG vẫn thi thoảng được sử dụng trong một số ứng dụng như Image Classification, Feature Extraction, &hellip; nhưng nhìn chung thì các kiến trúc nhỏ nhẹ (<em>SqueezeNet, GoogleNet, &hellip;</em>) vẫn được ưu chuộng hơn.</p>
+<p><strong>4. InceptionNet/GoogleNet (2014)</strong></p>
+<p>Sau VGG, bài báo <a href="https://arxiv.org/abs/1409.4842">Going Deeper with Convolutions</a> viết bởi Christian Szegedy cũng tạo ra một bước đột phá lớn. Bài báo ra đời xuất phát từ suy nghĩ rằng việc tăng độ sâu của model không phải các duy nhất làm cho nó tốt hơn. Tại sao không mở rộng model trong khi vẫn cố gắng duy trì sự tính toán ở mức độ ổn định?</p>
+<p>Kiến trúc của GoogleNet bao gồm nhiều Inception Module, mỗi Module hoạt động như một <em>multi-level feature extractor</em> (<em>bộ trích xuất đặc trưng nhiều tầng</em>) bằng cách sử dụng các Filters có kích thước khác nhau: 1x1, 3x3, 5x5. Output của các Filters sau đó được tổng hợp lại trước khi đưa vào Module tiếp theo.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/imagenet_inception_module.png">
+</div>
+
+</p>
+<p>Filter 1x1 đặt trước cac Filters 3x3 và 5x5 để giảm số lượng Input Channel, từ đó giảm giúp chi phí tính toán của kiến trúc GoogleNet.</p>
+<p><em><strong>4.1 Inception V2</strong></em></p>
+<p>Trong bài báo năm 2014 thì kiến trúc này có tên là GoogleNet, đến bài báo <a href="https://arxiv.org/abs/1512.00567"> Rethinking the Inception Architecture for Computer Vision (2015)</a>, với một chút cải tiến để tăng hiệu quả, nó được đặt tên là Inception V2 và Inception V3.</p>
+<p>Sự cải tiến của Inception V2 so với GoogleNet thể hiện ở 2 điểm:</p>
+<ul>
+<li>
+<p>Thay thế Filter 5x5 bằng 2 Filters 3x3 chồng lên nhau, mục đích là để tăng tốc độ xử lý vì theo lý thuyết, thời gian để một Filter 5x5 tính toán băng 2.78 lần so với Filter 3x3.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/inception_v2.png">
+</div>
+
+</p>
+</li>
+<li>
+<p>Tách Filter nxn thành 1xn và nx1. Ví dụ, với Filter 3x3 sẽ tương đương với 1x3 và 3x1. Theo thực nghiệm thì việc làm này sẽ giảm được khoảng 33% chi phí tính toán.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/inception_v2_2.png">
+</div>
+
+</p>
+</li>
+</ul>
+<p><em><strong>4.2 Inception V3</strong></em></p>
+<p>Inception V3 tiếp tục cải tiển từ Inception V2:</p>
+<ul>
+<li>Sử dụng RMSProp Optimizer.</li>
+<li>Thêm Filter 7x7.</li>
+<li>Sử dụng BatNorm sau các FC layers.</li>
+<li>Sử dụng Label Smoothing.</li>
+</ul>
+<p>Dung lượng của Inception V3 khá nhỏ so với VGG, chỉ khoảng 96MB.</p>
+<p>Code thực hiện GoogleNet bằng Pytorch như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> torch
+<span style="color:#f92672">import</span> torch.nn <span style="color:#f92672">as</span> nn
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InceptionModule</span>(nn<span style="color:#f92672">.</span>Module):
+    <span style="color:#66d9ef">def</span> __init__(self, in_channels, out_channels):
+        super(InceptionModule, self)<span style="color:#f92672">.</span>__init__()
+        relu <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>ReLU()
+        self<span style="color:#f92672">.</span>branch1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(
+                  nn<span style="color:#f92672">.</span>Conv2d(in_channels, out_channels<span style="color:#f92672">=</span>out_channels, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>),
+                  relu)
+        conv3_1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(in_channels, out_channels<span style="color:#f92672">=</span>out_channels, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+        conv3_3 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(out_channels, out_channels, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+        self<span style="color:#f92672">.</span>branch2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(conv3_1, conv3_3,relu)
+        conv5_1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(in_channels, out_channels<span style="color:#f92672">=</span>out_channels, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+        conv5_5 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(out_channels, out_channels, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+        self<span style="color:#f92672">.</span>branch3 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(conv5_1,conv5_5,relu)
+        max_pool_1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>MaxPool2d(kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+        conv_max_1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(in_channels, out_channels<span style="color:#f92672">=</span>out_channels, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+        self<span style="color:#f92672">.</span>branch4 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(max_pool_1, conv_max_1,relu)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, input):
+        output1 <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>branch1(input)
+        output2 <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>branch2(input)
+        output3 <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>branch3(input)
+        output4 <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>branch4(input)
+        <span style="color:#66d9ef">return</span> torch<span style="color:#f92672">.</span>cat([output1, output2, output3, output4], dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+model <span style="color:#f92672">=</span> InceptionModule(in_channels<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>,out_channels<span style="color:#f92672">=</span><span style="color:#ae81ff">32</span>)
+inp <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>rand(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">128</span>,<span style="color:#ae81ff">128</span>)
+<span style="color:#66d9ef">print</span>(model(inp)<span style="color:#f92672">.</span>shape)
+</code></pre></div><p><strong>5. ResNet: Deep Residual Learning for Image Recognition (2015)</strong></p>
+<p>Từ sau khi VGG ra đời, người ta đã từng nghĩ rằng cứ thêm nhiều lớp Conv thì model sẽ hoạt động tốt hơn. Nhiều người trong số họ cũng thử tiến hành các thực nghiệm với số lớp Conv nhiều hơn của VGG. Tuy nhiên, tất cả đều gặp phải một vấn đề, đó là Vanishing Gradient.</p>
+<p><a href="https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">ResNet</a> ra đời đã giải quyết được phần nào vấn đề này. Ý tưởng của nó là đưa vào trong kiến trúc của mình các <em>Identity Shortcut Connection</em> hay <em>Skip Connection</em>, để sử dụng thông tin của các layers trước đó cho layer hiện tại. Nhờ vậy mà hạn chế được hiện tượng Vanishing Gradient khi số lớp Conv tăng lên.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/resnet.png">
+</div>
+
+</p>
+<p>Với việc áp dụng ý tưởng này, số lớp Conv của Resnet có thể tăng đến con sô 150 lớp (<em>Resnet-150</em>).
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/resnet_vgg.png">
+</div>
+
+</p>
+<p>Torchvision cung cấp sẵn một số Pre-trained của các phiên bản Resnet, bạn có thể import trực tiếp vào và sử dụng chúng.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> torchvision
+pretrained <span style="color:#f92672">=</span> True
+<span style="color:#75715e"># A lot of choices :P</span>
+model <span style="color:#f92672">=</span> torchvision<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>resnet18(pretrained)
+model <span style="color:#f92672">=</span> torchvision<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>resnet34(pretrained)
+model <span style="color:#f92672">=</span> torchvision<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>resnet50(pretrained)
+model <span style="color:#f92672">=</span> torchvision<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>resnet101(pretrained)
+model <span style="color:#f92672">=</span> torchvision<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>resnet152(pretrained)
+model <span style="color:#f92672">=</span> torchvision<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>wide_resnet50_2(pretrained)
+model <span style="color:#f92672">=</span> torchvision<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>wide_resnet101_2(pretrained)
+</code></pre></div><p>Bản thân mình không thích từ <em>Skip Connection</em> hay từ dịch nghĩa <em>bỏ qua kết nối</em> vì thực tế ResNet có bỏ qua kết nối nào đâu (<em>nhìn vào hình minh họa thấy rất rõ ràng</em>). Chẳng qua là nó thêm đường tắt, bắc cầu từ các lớp Conv trước đó đến chính nó. Do vây, dùng từ <em>Shortcut Connection</em> mới chính xác, phản ánh đúng bản chất của ResNet.</p>
+<p><strong>6. DenseNet: Densely Connected Convolutional Networks (2017)</strong></p>
+<p><a href="https://arxiv.org/abs/1608.06993">DenseNet</a> tiếp tục giải quyết vấn đề cố hữu khi sử dụng nhiều lớp Conv, đó là Vanishing Gradient.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/densenet.png">
+</div>
+
+</p>
+<p>Đối với mạng CNN truyền thống (<em>VGG, &hellip;</em>) thì Input của một lớp chính là Ouput của lớp ngay trước đó.
+
+
+<div style="text-align-last:center">
+   <p>$x_i = H_i(x_{i-1}$</p>
+</div>
+
+</p>
+<p>ResNet mở rộng hành vi này bằng cách thêm vào thông tin của một lớp trước đó nữa (<em>không nhất thiết là lớp ngay trước mà có thể trước vài lớp</em>) thông qua Shortcut Connection.
+
+
+<div style="text-align-last:center">
+   <p>$x_i = H_i(x_{i-1} + x_{i-n}$</p>
+</div>
+
+</p>
+<p>DenseNet tiếp tục mở rộng, nó tổng hợp thông tin của tất cả các lớp trước đó làm Input cho lớp hiện tại.
+
+
+<div style="text-align-last:center">
+   <p>$x_i = H_i([x_0, x_1, ..., x_{i-1}])$</p>
+</div>
+
+</p>
+<p>Tạo DenseNet model trong Torchvision như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> torchvision
+model <span style="color:#f92672">=</span> torchvision<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>DenseNet(
+    growth_rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>, <span style="color:#75715e"># how many filters to add each layer (`k` in paper)</span>
+    block_config <span style="color:#f92672">=</span> (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">16</span>), <span style="color:#75715e"># how many layers in each pooling block</span>
+    num_init_features <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>, <span style="color:#75715e"># the number of filters to learn in the first convolution layer (k0)</span>
+    bn_size<span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>, <span style="color:#75715e"># multiplicative factor for number of bottleneck (1x1 cons) layers</span>
+    drop_rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#75715e"># dropout rate after each dense conv layer</span>
+    num_classes <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span> <span style="color:#75715e"># number of classification classes</span>
+)
+<span style="color:#66d9ef">print</span>(model) <span style="color:#75715e"># see snapshot below</span>
+</code></pre></div><p>Ban đầu, DenseNet được đề xuất để sử dụng cho bài toán Image Classification, nhưng về sau nó còn được sử dụng cho rất nhiều bài toán khác, như thống kê dưới đây.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/densenet-applications.png">
+</div>
+
+</p>
+<p><strong>7. Big Transfer (BiT): General Visual Representation Learning (2020)</strong></p>
+<p><a href="https://arxiv.org/pdf/1912.11370.pdf">BiT</a> là một biến thể của ResNet. Cả ba phiên bản của nó (<em>small, medium và large</em>) đều dựa trên ResNet152. BiT-large sử dụng ResNet152x4 và được huấn luyện trên tập JFT chứa khoảng 300M hình ảnh đã đánh nhãn, lớn hơn rất nhiều so với ImageNet.</p>
+<p>Đóng góp lớn nhất của kiến trúc này là việc sử dụng các Normalization Layers. Tác giả đã sử dụng <a href="https://theaisummer.com/normalization/#group-normalization-2018">Group Normalization</a> và <a href="https://theaisummer.com/normalization/#weight-standardization-2019">Weight Standardization</a> thay vì Batch Normalization.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/bit.gif">
+</div>
+
+</p>
+<p><strong>8. EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks (2020)</strong></p>
+<p>EfficientNet được đề xuất bởi Mingxing Tan và Quoc V. Le tại Google trong bài báo <a href="https://arxiv.org/abs/1905.11946">EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks</a>. Kết quả nghiên cứu của các tác giả chỉ ra rằng nó đạt được dộ chính xác tốt hơn nhiều so với các kiến trúc CNN trước đó.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/efficientnet-results-imagenet.png">
+</div>
+
+</p>
+<p>Ý tưởng của EfficientNet là thay vì tìm ra một kiến trúc tối ưu từ đầu thì nó xuất phát từ một <em>Base model F</em>, sau đó dần dần mở rộng, cải tiến nó dần lên.</p>
+<p>Tuy nhiên, hãy nhớ lại một số vấn đề cần chú ý trong các kiến trúc từ trước đến giờ khi Scale-up từng thành phần riêng lẻ (<em>Individual Scaling</em>):</p>
+<ul>
+<li>Deeper Network có thể nắm bắt được nhiều các Features phức tạp hơn nhưng rất khó huấn luyện do vấn đề Vanishing Gradient.</li>
+<li>Wider Network có thể nắm bắt được nhiều các Featureschi tiết hơn nhưng cũng khó huấn luyện do vấn đề Saturate Gradient.</li>
+<li>High Resolution Network cũng có thể nắm bắt được nhiều các Featureschi tiết hơn nhưng độ chính xác giảm dần khi gặp những hình ảnh có độ phân giải thấp hơn.</li>
+</ul>
+<p>Rút kinh nghiệm từ những vấn đề trên, EfficientNet tiến hành Scale-up đồng thời cả 3 thành phần, gọi là <em>Compound Scaling</em>.</p>
+<p>Để tìm ra các hệ số Scale-up cho 3 thành phần đó, các nhà nghiên cứu đã sử dụng phương pháp <em>chia tỷ lệ kết hợp</em>. Grid-search được áp dụng để tìm mối quan hệ giữa các chiều có tỷ lệ khác nhau của Base-model trong điều kiện hạn chế tài nguyên cố định. Sử dụng chiến lược này, tác giả đã tìm được các hệ số tỷ lệ thích hợp cho mỗi chiều để có thể tăng lên. Từ các hệ số này, Base-model có thể được Scale-upe lên theo kích thước mong muốn.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/efficientnet_scaling.png.png">
+</div>
+
+</p>
+<p>Việc áp dụng Compound Scaling rõ ràng đã cải thiện được hiệu quả đáng kể so với Individual Scaling.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/compound-vs-individual-scaling-efficientnet.png">
+</div>
+
+</p>
+<p><strong>9. Noisy Student Training: Self-training with Noisy Student improves ImageNet classification (2020)</strong></p>
+<p>Xuất hiện sau EfficientNet một thời gian ngắn, <a href="https://arxiv.org/pdf/1911.04252.pdf">Noisy Student Training</a> đưa ra một phương pháp huấn luyện mới, sử dụng EfficientNet làm kiến trúc nền tảng. làm tăng đáng kể độ chính xác trên tập dữ liệu ImageNet.</p>
+<p>Phương pháp này bao gồm 4 bước như sau:</p>
+<ul>
+<li><em>Bước 1 -</em> Huấn luyện một Teacher model trên tập dữ liệu đã được gán nhãn (<em>tập A</em>).</li>
+<li><em>Bước 2 -</em> Sử dụng Teacher model để sinh ra nhãn cho 300M ảnh chưa có nhãn (<em>pseudo labels</em>) (<em>tập B</em>)</li>
+<li><em>Bước 3 -</em> Huấn luyện Student model trên tổng dữ liệu (<em>tập A và B</em>).</li>
+<li><em>Bước 4 -</em> Lặp lại bước 1 bằng cách coi Student model như là Teacher model.</li>
+</ul>
+<p>Về mặt lý thuyết, Student model sẽ hiệu quả hơn Teacher model vì nó được huấn luyện trên nhiều dữ liệu hơn. Ngoài ra, một lượng lớn nhiễu (<em>Noise</em>) cũng được thêm vào trong quá trình huấn luyện Student model để giúp nó học hiệu quả hơn từ tập B.</p>
+<p>Một số kỹ thuật như Dropout, Data Augmentation, &hellip; cũng được áp dụng.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/self-training-imagenet.png">
+</div>
+
+</p>
+<p><strong>10. Meta Pseudo-Labels (2021)</strong></p>
+<p>Quay lại phương pháp Noisy Student Training, một vấn đề phát sinh là nếu như các Pseudo Labels không chính xác thì Student model sẽ không thể cải thiện được so với Teacher model, thậm chí là tồi hơn. Vấn đề này được gọi bằng cái tên <em>Sự xác nhận sai lệch trong gán nhãn giả (confirmation bias in pseudo-labeling)</em>.</p>
+<p>Để khác phục vấn đề này, một ý tưởng mới xuất hiện, đó là thiết kế một cơ chế phản hồi từ Student model đến Teacher model, để Teacher model sinh ra nhãn đúng hơn.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/meta-pseudo-labels.png">
+</div>
+
+</p>
+<p>Bằng cách này, cả Teacher và Student đều tham gia vào quá trình huấn luyện cùng nhau, giúp nhau học tập tốt hơn - <em>Together to better</em> (<em>Ý tưởng của phương pháp này nghe hơi giống với cách thức mà model GAN hoạt động nhỉ, :D</em>).</p>
+<p><strong>11. Kết luận</strong></p>
+<p>Bảng sau so sánh các kiến trúc CNN đã trình bày từ đầu đến giờ, về các khía canh: số lượng tham số, độ chính xác trên tập ImageNet và năm công bố.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/cnn_summary.png">
+</div>
+
+</p>
+<p>Có thể rút ra một số nhận xét sau:</p>
+<ul>
+<li>Model DenseNet có ít tham số nhất, model BiT-L có nhiều tham số nhất.</li>
+<li>Model Meta Pseudo Labels đạt được độ chính xác cao nhất trên tập ImageNet.</li>
+<li>Không phải cứ nhiều tham số hơn thì độ chính xác cao hơn.</li>
+</ul>
+<p>Trong bài này, chúng ta đã cũng nhau nhìn lại chặng đường phát triển của các kiến trúc CNN thông qua một số models tiêu biểu. Hầu hết các models đều được cung cấp dưới dạng Pre-trained trong Keras hay Torchvision. Bạn có thể thử sử dụng chúng và Fine-tune trên tập dữ liệu của bạn để so sánh và đánh giá kết quả, giữa các models với nhau và so với việc tạo và huấn luyện model từ đầu.</p>
+<p>Ở bài tiếp theo, có lẽ mình sẽ quay lại một số chủ đề của Computer Vision. Mời các bạn đón đọc.</p>
+<p><strong>11. Tham khảo</strong></p>
+<p>[1] Krizhevsky, A., Sutskever, I., &amp; Hinton, G. E. (2017). Imagenet classification with deep convolutional neural networks. Communications of the ACM, 60(6), 84-90.</p>
+<p>[2] Simonyan, K., &amp; Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556.</p>
+<p>[3] Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S., Anguelov, D., &hellip; &amp; Rabinovich, A. (2015). Going deeper with convolutions. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1-9).</p>
+<p>[4] He, K., Zhang, X., Ren, S., &amp; Sun, J. (2016). Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778).</p>
+<p>[5] Kolesnikov, A., Beyer, L., Zhai, X., Puigcerver, J., Yung, J., Gelly, S., &amp; Houlsby, N. (2019). Big transfer (bit): General visual representation learning. arXiv preprint arXiv:1912.11370, 6(2)</p>
+<p>[6] Huang, G., Liu, Z., Van Der Maaten, L., &amp; Weinberger, K. Q. (2017). Densely connected convolutional networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 4700-4708).</p>
+<p>[7] Tan, M., &amp; Le, Q. V. (2019). Efficientnet: Rethinking model scaling for convolutional neural networks. arXiv preprint arXiv:1905.11946.</p>
+<p>[8] Xie, Q., Luong, M. T., Hovy, E., &amp; Le, Q. V. (2020). Self-training with noisy student improves imagenet classification. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 10687-10698).</p>
+<p>[9] Pham, H., Xie, Q., Dai, Z., &amp; Le, Q. V. (2020). Meta pseudo labels. arXiv preprint arXiv:2003.10580.</p>
+<p>[10] Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., &amp; Wojna, Z. (2016). Rethinking the inception architecture for computer vision. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 2818-2826).</p>
+<p>[11] Nikolas Adaloglou, &ldquo;Best deep CNN architectures and their principles: from AlexNet to EfficientNet&rdquo;, Available online: <a href="https://theaisummer.com/cnn-architectures/">https://theaisummer.com/cnn-architectures/</a> (Accessed on 02 May 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

@@ -6,7 +6,11 @@
     <description>Recent content in XGBoost on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/xgboost/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/tags/xgboost/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>XGBoost - Bài 14: Tuning Subsample</title>
       <link>https://tiensu.github.io/blog/17_tuning_subsampling/</link>
