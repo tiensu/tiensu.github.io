@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/ocr"
+          class="text-primary">O c r</a>
+        
+        <h2>Giới thiệu bài toán OCR</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>03 May 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/OCR.jpg" class="img-fluid w-100 mb-4" alt="Giới thiệu bài toán OCR">
+        
+        <div class="content mb-5">
+          <p><strong>1. OCR là gì?</strong></p>
+<p>OCR, viết tắt của <em>Optical Character Recognition</em> là một phương pháp chuyển đổi các văn bản, ký tự xuất hiện trong hình ảnh, hay các tài liệu scaned thành định dạnh mà máy tính có thể hiểu được. Từ đó, chúng ta có thể dễ dàng chỉnh sửa, tìm kiếm, và thực hiện rất nhiều công việc khác. Nếu đưa cho máy tính một hình ảnh chứa các văn bản, ký tự thì máy tính chỉ coi đó là một <em>bức ảnh</em> đại diện bởi ma trận các giá trị của từng pixel trong ảnh đó.</p>
+<p><strong>2. Ứng dụng của OCR</strong></p>
+<p>OCR có rất nhiều ứng dụng trong thực tế. Có thể kể ra đây một số ví dụ sau:</p>
+<p><em><strong>- Automatic Data Entry - Tự động nhập liệu</strong></em></p>
+<p>Đây có lẽ là ứng dụng phổ biến và quan trọng nhất của OCR. Trước đây, đối với những số liệu trong một hình ảnh hay tài liệu scan, để đưa vào máy tính xử lý, con người phải nhập thủ công bằng tay. Việc này rất mất thời gian và nhàm chán. Ngày nay, với sự hỗ trợ của OCR, quá trình này diễn ra hoàn toàn tự động, nhanh chóng, dễ dàng, độ chính xác cao.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_data_entry.png">
+</div>
+
+</p>
+<p><em><strong>- Nhận diện biển số xe</strong></em></p>
+<p>Áp dụng trong các bãi đỗ xe, tự động nhận diện biển số  giúp giảm thời gian quản lý cho cả người lái xe và nhân công bảo vệ.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_NPR.png">
+</div>
+
+</p>
+<p><em><strong>- Xe tự lái</strong></em></p>
+<p>OCR giúp xe tự động nhận diện biển số để đi theo đúng chỉ dẫn.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/traffic_sign_classification_phases.jpg">
+</div>
+
+</p>
+<p><em><strong>- Book Scanning</strong></em></p>
+<p>OCR giúp chuyển sách giấy thành sách điện từ một cách dễ dàng.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_book.jpg">
+</div>
+
+</p>
+<p>Và còn rất rất nhiều ứng dụng khác nữa.</p>
+<p><strong>3. OCR Pipeline</strong></p>
+<p>OCR hoạt động theo một Pipeline như sau:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_pipeline.png">
+</div>
+
+</p>
+<p><em><strong>3.1 Image Pre-processing</strong></em></p>
+<p>Đây là bước tiền xử lý hình ảnh trước khi đưa vào cho model học tập. Các images có thể bị mờ, bị nhiễu, bị lệch, &hellip; Nếu để nguyên như vậy đưa vào model thì kết quả sẽ rất kém. Nhiệm vụ của Image Pre-processing là cố gắng loại bỏ những lỗi như vậy.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_pipeline1.png">
+</div>
+
+</p>
+<p><em><strong>3.2 Text Detection</strong></em></p>
+<p>Như cái tên đã chỉ ra, nhiệm vụ của bước này là tìm ra khu vực trong hình ảnh chứa ký tự/văn bản.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_pipeline2.png">
+</div>
+
+</p>
+<p>Có 2 kiểu ký tự/văn bản trong hình ảnh mà bài toán OCR có thể giải quyết:</p>
+<ul>
+<li><em>Ký tự/văn bản có cấu trúc:</em> Là những hình ảnh tương đối rõ ràng, background cố định, font chữ cố định, màu sắc cố định, ký tự/văn bản được tổ chức ngay ngắn theo hàng/cột, &hellip; Ví dụ, trang sách.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_structured.jpg">
+</div>
+
+</li>
+</ul>
+<p><em>- Ký tự/văn bản phi cấu trúc:</em> Là những hình ảnh có ký tự/văn bản xuất hiệu không sự thống nhất về màu sắc, vị trí, kiểu chữ, &hellip; Ví dụ: bảng quảng cáo.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_unstructured.jpg">
+</div>
+
+</p>
+<p>Rõ ràng, giải quyết kiểu thứ 2 khó hơn rất nhiều so với kiểu thứ nhất.</p>
+<p>Để thực hiện nhiệm vụ Text Detection, có thể tiếp cận theo 3 cách:</p>
+<ul>
+<li><em>Cách 1 - Phát hiện từng ký tự một (Character-by-Character)</em>.</li>
+<li><em>Cách 2 - Phát hiện từng từ một (Word-by-Word)</em>.</li>
+<li><em>Cách 3 - Phát hiện từng dòng một (Line-by-Line)</em>.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_pipeline2-1.png">
+</div>
+
+
+<p>Nhìn chung, hầu hết các hệ thống OCR đều sử dụng cách tiếp cận thứ 2 hoặc 3. Cách 1 chậm và độ chính xác thấp hơn.</p>
+<p>Về mặt kỹ thuật, có 2 cách có thể sử dụng:</p>
+<ul>
+<li><em>Cách 1- Sử dụng các kỹ thuật xử lý ảnh cơ bản (truyền thống)</em>
+Cách này sử dụng các bộ lọc (<em>filters</em>) để tách rời các ký tự ra khỏi nền của bức ảnh, sau đó áp dụng các kỹ thuật phát hiện biên, Contours để thu được vị trí của từng ký tự riêng rẽ. Một số cái tên điển hình sử dụng nguyên lý này là Stroke Width Transform (<em>SWT</em>), Maximally Stable Regions (<em>MSER</em>).</li>
+</ul>
+<p>Trong điều kiện tương đối lý tưởng, dữ liệu sạch sẽ, ít nhiễu thì phương pháp này tỏ ra khá hiệu quả, độ chính xác cao và dễ thực hiện. Tuy nhiên, trong thực tế, rất khó để đảm bảo những điều kiện như vậy.</p>
+<ul>
+<li><em>Cách 2 - Sử dụng kỹ thuật Deep Learning</em>
+Sử dụng DL, nói chung là hiệu quả hơn rất nhiều so với phương pháp bên trên, bởi vì chúng có khả năng học từ dữ liệu nên không bị ảnh hưởng quá nhiều bởi các yếu tố môi trường. Một số model nổi bật là Connectionist Text Proposal Network (<em>CTPN</em>), Efficient and Accurate Scene Text Detector (<em>EAST</em>), &hellip; Các Object Detection models khác như SSD, Yolo, Faster RCNN cũng có thể thực hiện được nhiệm vụ này.</li>
+</ul>
+<p>Ở cách 2 này, nếu chia nhỏ hơn nữa thì có thể thành: Simplified pipeline và Multi-steps.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/east_image-1.jpg">
+</div>
+
+</p>
+<p>Hai model CTPN và EAST đều thuộc nhóm Simplified Pipeline. Trong các bài tiếp theo, chúng ta sẽ tìm hiểu kỹ hơn EAST model.</p>
+<p><em><strong>3.3 Text Recognition</strong></em></p>
+<p>Các ký tự/văn bản trong từng khu vực phát hiện ở bước bên trên sẽ được nhận diện cụ thể ở bước này.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_pipeline4.png">
+</div>
+
+</p>
+<p>Tương tự như Text Detection, ở đây cũng có 2 phương pháp giải quyết là dùng kỹ thuật xử lý ảnh cơ bản và dùng kỹ thuật Deep Learning.</p>
+<p>Đối với cách thứ nhất, sau khi tách riêng được từng ký tự ra khỏi nền, sẽ cho chúng đi qua mội bộ phân lớp để nhận diện. Cách này xử lý ở mức Characters, phụ thuộc nhiều vào kết quả của Text Detection và môi trường nên độ chính xác không cao.</p>
+<p>Cách thứ 2 hiện nay đã chứng tỏ được tính ưu việt của nó so với cách thứ nhất. Hai model nổi bật sử dụng DL cho nhiệm vụ này là:</p>
+<ul>
+<li>CRNN - Connectionist Temporal Classification (<em>CTC</em>) based.</li>
+<li>Attention-based.</li>
+</ul>
+<p>Trong các bài tiếp theo, chúng ta sẽ tìm hiểu kỹ hơn về 2 model này.</p>
+<p><em><strong>3.4 Restructing</strong></em></p>
+<p>Ở bước cuối cùng này, ký tự/văn bản sau khi nhận dạng xong sẽ được sắp xếp lại đúng theo vị trí của nó như trong hình ảnh bản đầu. Mục đích của việc làm này là để thuận tiện trong việc trích chọn ra các thông tin cần thiết, dựa vào vị trí tương đối của chúng với nhau.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/OCR_pipeline6.png">
+</div>
+
+</p>
+<p><strong>4. Kết luận</strong></p>
+<p>Bài này, mình đã giới thiệu đến các bạn những kiến thức tổng quát về bài toán OCR: OCR là gì, các bước thực hiện như thế nào, có các phương pháp gì, ưu/nhược điểm của từng phương pháp.</p>
+<p>Ở bài tiếp theo, mình giới thiệu về model EAST để thực hiện Text Detection. Mời các bạn đón đọc.</p>
+<p><strong>5. Tham khảo</strong></p>
+<p>[1] TheAILearner, &ldquo;Optical Character Recognition: Introduction and its Applications&rdquo;, Available online: <a href="https://theailearner.com/2021/03/10/optical-character-recognition-introduction-and-its-applications/">https://theailearner.com/2021/03/10/optical-character-recognition-introduction-and-its-applications/</a> (Accessed on 05 May 2021).</p>
+<p>[2] TheAILearner, &ldquo;Optical Character Recognition Pipeline&rdquo;, Available online: <a href="https://theailearner.com/2019/05/28/optical-character-recognition-pipeline/">https://theailearner.com/2019/05/28/optical-character-recognition-pipeline/</a> (Accessed on 05 May 2021).</p>
+<p>[3] TheAILearner, &ldquo;OOptical Character Recognition Pipeline: Text Detection&rdquo;, Available online: <a href="https://theailearner.com/2021/01/28/optical-character-recognition-pipeline-text-detection/">https://theailearner.com/2021/01/28/optical-character-recognition-pipeline-text-detection/</a> (Accessed on 05 May 2021).</p>
+<p>[4] TheAILearner, &ldquo;Optical Character Recognition Pipeline: Text Recognition&rdquo;, Available online: <a href="https://theailearner.com/2019/05/29/optical-character-recognition-pipeline-text-recognition/">https://theailearner.com/2019/05/29/optical-character-recognition-pipeline-text-recognition/</a> (Accessed on 05 May 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

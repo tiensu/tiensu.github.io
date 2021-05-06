@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CRNN on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/crnn/</link>
+    <description>Recent content in CRNN on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 May 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tiensu.github.io/categories/crnn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Giới thiệu bài toán OCR</title>
+      <link>https://tiensu.github.io/blog/63_ocr_introduction/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/63_ocr_introduction/</guid>
+      <description>1. OCR là gì?
+OCR, viết tắt của Optical Character Recognition là một phương pháp chuyển đổi các văn bản, ký tự xuất hiện trong hình ảnh, hay các tài liệu scaned thành định dạnh mà máy tính có thể hiểu được.</description>
+    </item>
+    
+  </channel>
+</rss>
