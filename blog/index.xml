@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Text Detection với EASR Model</title>
+      <link>https://tiensu.github.io/blog/64_ocr_text_detection_east/</link>
+      <pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/64_ocr_text_detection_east/</guid>
+      <description>Trước khi có sự ra đời của học sâu trong bài toán Text Detection, hầu hết các phương pháp đều khó thực hiện trong các tình huống phức tạp của dữ liệu thực tế.</description>
+    </item>
+    
+    <item>
       <title>Mất cân bằng dữ liệu - làm sao để giải quyết?</title>
       <link>https://tiensu.github.io/blog/ddd_data_imbalance_in_classification_task/</link>
       <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
@@ -24,7 +33,7 @@ Mất cân bằng dữ liệu (Data Imbalance) là một vấn đề thường x
     <item>
       <title>Giới thiệu bài toán OCR</title>
       <link>https://tiensu.github.io/blog/63_ocr_introduction/</link>
-      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/63_ocr_introduction/</guid>
       <description>1. OCR là gì?
