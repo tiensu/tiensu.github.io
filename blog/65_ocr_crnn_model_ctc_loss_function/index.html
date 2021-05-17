@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/ocr"
+          class="text-primary">O c r</a>
+        
+        <a href="/categories/ctc"
+          class="text-primary">C t c</a>
+        
+        <a href="/categories/text-recognition"
+          class="text-primary">Text recognition</a>
+        
+        <h2>Text Recognition với CRNN và CTC</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>08 May 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/crnn_ctc.png" class="img-fluid w-100 mb-4" alt="Text Recognition với CRNN và CTC">
+        
+        <div class="content mb-5">
+          <p><strong>1. CRNN Model</strong></p>
+<p>Convolutional Recurrent Neural Network (<em>CRNN</em>) là một kiến trúc được thiết kế chuyên biệt để giải quyết nhiệm vụ Text Recognition trong bài toán OCR. Xuất hiện trong bài báo <a href="https://arxiv.org/pdf/1507.05717.pdf">An End-to-End Trainable Neural Network for Image-based Sequence Recognition and Its Application to Scene Text Recognition</a> xuất bản năm 2015, cho đến nay, nó vẫn được coi là một trong những model hiệu quả nhất cho việc thực hiện Text Recognition.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/crnn_architecture.png">
+</div>
+
+</p>
+<p>CRNN, đúng như cái tên của nó, là sự kết hợp giữa CNN và RNN. Đây là một sự cộng sinh rất hợp lý bởi vì nhiệm vụ của nó là nhận một bức ảnh đầu vào và cho ra một văn bản chứa trong bức ảnh đó. Nhắc đến xử lý ảnh thì CNN chắc chắn không thể thiếu, và xử lý văn bản thì RNN cũng là ứng cử viên nặng ký. Kiến trúc của CRNN chia thành 3 phần rõ rệt.</p>
+<p><em><strong>1.1 Convolutional Layers</strong></em></p>
+<p>Ảnh đầu vào được cho đi qua các lớp Conv, sinh ra các Feature Maps. Các Feature Maps sau đó lại được chia ra thành một chuỗi của các Feature Vectors (<em>các TimeSteps</em>), gọi là Feature Sequence.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/crnn_feature_sequence.png">
+</div>
+
+</p>
+<p><em><strong>1.2 Recurrent Layers</strong></em></p>
+<p>Feature Sequence được đưa vào các lớp Bidirectional LSTM, sinh ra một chuỗi các ký tự (<em>Seq2Seq</em>), mà mỗi một ký tự tương ứng với một TimeStep trong Feature Sequence. Về lý thuyết thì đây chính là văn bản đầu ra cần xác định. Tuy nhiên, Feature Maps không phải lúc nào cũng được chia chính xác thành các Feature Vectors, mà mỗi Feature Vector chứa đúng 1 ký tự cần nhận diện, nên chuỗi đầu ra của LSTM cũng rất lộn xộn: trùng lặp, không có ký tự, &hellip;
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/crnn_lstm.png">
+</div>
+
+</p>
+<p><em><strong>1.3 Transcription Layers</strong></em></p>
+<p>Nhiệm vụ của phần này là xử lý đầu ra của Recurrent Layers, sắp xếp lại các ký tự, loại bỏ các lỗi tồn tại (<em>alignment</em>) để đưa ra kết quả cuối cùng.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/crnn_transcription.png">
+</div>
+
+</p>
+<p>Một số hướng tiếp cận của Transcription Layers như sau:</p>
+<ul>
+<li><em>Cách 1 -</em> Quy định mỗi ký tự tương ứng với một số cố định TimeSteps. Ví dụ, chúng ta có 10 TimeSteps, tương ứng với Output là State thì ta sắp xếp các TimeSteps như sau: &ldquo;S, S, T, T, A, A, T, T, E, E&rdquo;. Cách này đơn giản nhưng chỉ đúng khi kích thước, kiểu chữ, &hellip; của văn bản không đổi.</li>
+<li><em>Cách 2 -</em> Đánh nhãn cho mỗi TimeStep như hình bên dưới, rồi huấn luyện model sử dụng dữ liệu này.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/crnn_timestep_label.png">
+</div>
+
+</li>
+</ul>
+<p>Cách này có vẻ chính xác hơn, nhưng nhược điểm là tốn rất nhiều thời gian cho việc tạo dữ liệu.</p>
+<ul>
+<li><em>Cách 3 -</em> Sử dụng Connectionist Temporal Classification (CTC)</li>
+</ul>
+<p>CTC ra đời từ năm 2006 để giải quyết vấn đề Alignment (<em>chính là vấn đề ánh xạ từ Output của RNN ra kết quả cuối cùng</em>) cho các bài toán OCR, Speech Recognition, &hellip; một cách hiệu quả. Chúng ta sẽ tìm hiểu chi tiết về nó trong phần 2 dưới đây.</p>
+<p>Để nâng cao hiệu quả của CRNN, chúng ta có thể thêm vào một lớp Attention ở giữa hai lớp CNN và RNN. Cơ chế hoàn toàn giống như trong bài <a href="https://tiensu.github.io/blog/58_attention/">Tìm hiểu cơ chế Attention trong mô hình Seq2Seq</a>.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/crnn_ctc.png">
+</div>
+
+</p>
+<p><strong>2. Connectionist Temporal Classification</strong></p>
+<p>CTC đơn giản là một Loss Function được sử dụng để huấn luyện các Deep Learning model. Mục tiêu của nó là tìm ra cách ánh xạ (<em>alignment</em>) giữa một Input X và Output Y. Nó không yêu cầu Aligned Data (<em>dữ liệu được gắn nhãn cụ thể cho mỗi TimeStep</em>), bởi vì nó có thể đưa ra được xác suất cho mỗi khả năng Align từ X sang Y. Nó chỉ yêu cầu đầu vào là một hình ảnh (<em>ma trận Feature của hinh ảnh</em>) và đoạn Text tương ứng với hình ảnh đó.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/crnn_alignment.png">
+</div>
+
+</p>
+<p>Thực chất, bản thân CTC cũng ko biết chính xác cách Alignment giữa X và Y. Nó làm việc theo kiểu <em>Work Arround</em>, tức là nếu đưa cho nó X thì nó sẽ trả lại cho ta tất cả các khả năng của Y, kèm theo xác suất chính xác của mỗi khả năng đó. Chúng ta cần huấn luyện model sao cho:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/crnn_ctc.png">
+</div>
+
+</p>
+<p>Trong đó $Y^*$ là kết quả đầu ra cuối cùng mà ta mong đợi, nó càng giống với nhãn (<em>Ground Trust - GT</em>) càng tốt.</p>
+<p>Quá trình làm việc của CTC bao gồm 3 bước:</p>
+<p><em><strong>2.1 Encoding Text</strong></em></p>
+<p>Lý tưởng thì mỗi TimeStep sẽ tương ứng với một ký tự. Nhưng nếu không phải vậy thì sao, nếu một ký tự tồn tại trong cả 2 TimeSteps thì sao? Khi đó, kết quả sẽ xuất hiện các ký tự trùng nhau. CTC giải quyết vấn đề này bằng cách gộp tất cả các ký tự trùng nhau thành một. Ví dụ: <em>ttiien ssuu</em> -&gt; <em>tien su</em>.</p>
+<p>Tuy nhiên, nếu làm như vậy thì những từ mà bản thân nó có các ký tự trùng nhau thì sao? Ví dụ: <em>hello, sorry, &hellip;</em> Để tiếp tục xử lý vấn đề, CTC sử dụng một ký tự giả, gọi là <em>blank</em> và ký hiệu là &ldquo;-&rdquo;. Trong khi mã hóa Text, nếu gặp 2 ký tự trùng nhau, CTC sẽ chèn thêm kí tự <em>blank</em> vào giữa chúng. Ví dụ: <em>meet</em> -&gt; <em>mm-ee-ee-t</em>, <em>mmm-e-ee-tt</em>. Trong quá trình Decoding  Text, nếu gặp ký tự <em>blank</em> này thì CTC hiểu rằng phải giữ lại cả 2 ký tự 2 bên ký hiệu đó.</p>
+<p><em><strong>2.2 Loss Calculate</strong></em></p>
+<p>Loss được tính toán cho mỗi Training Sample (<em>một cặp ảnh và GT Text tương ứng</em>). Nó là tổng tất cả các Scores của tất cả các khả năng Alignments của GT Text.
+Giả sử chúng ta có một ma trận Score là Ouput của CRNN như sau:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/ctc_matrix_score.png">
+</div>
+
+</p>
+<p>Ma trận này gồm 2 TimeSteps, và GT Text có 3 ký tự: <em>a, b</em> và ký tự <em>blank (-)</em>. Tổng Score tại mỗi TimeStep bằng 1. Giả sử:</p>
+<ul>
+<li>Các khả năng Alignment của ký tự <em>a</em> là: <em>aaa, a&ndash;, a-, aa-, -aa, &ndash;a</em> &ndash;&gt; Score của *a = 0.4x0.3x0.4 + 0.4x0.7x0.6 + 0.4x0.7 + 0.4x0.3x0.6 + 0.1x0.3x0.4 + 0.1x0.7x0.4 = 0.608. * &ndash;&gt; <em>Loss =</em> $-\log_{10}0.6084 = 0.216$</li>
+<li>Các khả năng Alignment của ký tự <em>b</em> là: <em>bbb, b&ndash;, b-, bb-, -bb, &ndash;b</em> &ndash;&gt; Score của <em>b = 0.5x0.0x0.0 + 0.5x0.7x0.6 + 0.5x0.7 + 0.5x0.0x0.6 + 0.1x0.0x0.0 + 0.1x0.7x0.0 = 0.56</em> &ndash;&gt; *Loss = * $\log_{10}0.56 = 0.25$</li>
+<li>Các khả năng Alignment của ký tự <em>blank</em> là: <em>&ndash;, &mdash;</em> -&gt; Score của <em>blank = 0.1x0.7 + 0.1x0.7x0.6 = 0.112</em> &ndash;&gt; <em>Loss =</em> $-\log_{10}0.112 = 0.95$</li>
+</ul>
+<p>Tổng Loss =  0.216 + 0.25 + 0.95 = 1.416.</p>
+<p>Chúng ta cần tối thiểu hóa giá trị Loss này trong quá trình huấn luyện model, sử dụng thuật toán Backpropagation và SGD.</p>
+<p><em><strong>2.3 Decoding Text</strong></em></p>
+<p>Quá trình Decoding một Unseen Image diễn ra như sau:</p>
+<ul>
+<li>Tìm đường đi tối ưu nhất từ Score Matrix bằng cách chọn các ký tự có Score cao nhất tại mỗi TimeStep.</li>
+<li>Xóa bỏ các ký tự trống, ký tự trùng lặp.</li>
+</ul>
+<p>Xem thử ví dụ sau:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/ctc_decoding.png">
+</div>
+
+</p>
+<p>Có 3 ký tự là <em>a. b, -</em> và 5 TimeSteps. Các ký tự trên đường đi tối ưu nhất là: <em>aaa-b</em>. Sau khi loại bỏ ký tự trùng và khoảng trắng ta được <em>ab</em>.</p>
+<p><strong>3. Kết luận</strong></p>
+<p>Bài này, mình đã giới thiệu đến các bạn những kiến thức khái quát về CRNN model, về CTC Loss dùng cho nhiệm vụ Text Recognition của bài toán OCR: kiến trúc, cách làm việc &hellip;</p>
+<p>Souce Code ví dụ của CRNN + CTC, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Computer_Vision/tree/master/Deep_Learning/OCR/CRNN_CTC">đây</a>.</p>
+<p>Ở bài tiếp theo, chúng ta sẽ chuyển qua tìm hiểu về bài toán Object Detection. Mời các bạn đón đọc.</p>
+<p><strong>4. Tham khảo</strong></p>
+<p>[1] B.Shi, X.Bai, C.Yao, An End-to-End Trainable Neural Network for Image-based Sequence Recognition and Its Application to Scene Text Recognition. arXiv preprint arXiv:1507.05717.</p>
+<p>[2] TheAILearner, &ldquo;CTC – Problem Statement&rdquo;, Available online: <a href="https://theailearner.com/2021/03/10/ctc-problem-statement/">https://theailearner.com/2021/03/10/ctc-problem-statement/</a> (Accessed on 07 May 2021).</p>
+<p>[3] Harald Scheidl, &ldquo;An Intuitive Explanation of Connectionist Temporal Classification&rdquo;, Available online: <a href="https://towardsdatascience.com/intuitively-understanding-connectionist-temporal-classification-3797e43a86c">https://towardsdatascience.com/intuitively-understanding-connectionist-temporal-classification-3797e43a86c</a> (Accessed on 07 May 2021).</p>
+<p>[4] Siddhant, &ldquo;Explanation of Connectionist Temporal Classification&rdquo;, Available online: <a href="https://sid2697.github.io/Blog_Sid/algorithm/2019/10/19/CTC-Loss.html">https://sid2697.github.io/Blog_Sid/algorithm/2019/10/19/CTC-Loss.html</a> (Accessed on 07 May 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">Ctc</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

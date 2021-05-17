@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="this is meta description">
   <meta name="author" content="SuNT">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.80.0" />
 
   <!-- plugins -->
   
@@ -156,6 +156,36 @@
           <div class="col-md-6 mb-4">
     <article class="card">
         
+        <img src="https://tiensu.github.io/images/featured-post/kubernetes-architecture.png" class="card-img-top" alt="Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 1: Kubernetes Pod">
+        
+        <div class="card-body px-0">
+        
+        <a href="/categories/mlops"
+            class="text-primary">M l ops</a>
+        
+        <a href="/categories/kubernetes"
+            class="text-primary">Kubernetes</a>
+        
+        <a href="/categories/docker"
+            class="text-primary">Docker</a>
+        
+        <a href="https://tiensu.github.io/blog/42_kubernetes_in_ai/" class="h5 d-block my-3">Tìm hiểu về Kubernetes và áp dụng vào bài toán AI - Phần 1: Kubernetes Pod</a>
+        <div class="mb-3 post-meta">
+            <span>By SuNT</span>
+            
+            <span class="border-bottom border-primary px-2 mx-1"></span>
+            <span>18 January 2021</span>
+            
+        </div>
+        <p class="card-text">Trong các bài viết trước, mình đã giới thiệu về Docker, sử dụng kết hợp với Nginx, uWSGI, Flask để deploy model trong môi trường production.</p>
+        <a href="https://tiensu.github.io/blog/42_kubernetes_in_ai/" class="btn btn-outline-primary">read more</a>
+        </div>
+    </article>
+</div>
+          
+          <div class="col-md-6 mb-4">
+    <article class="card">
+        
         <img src="https://tiensu.github.io/images/featured-post/retrain_model.jpg" class="card-img-top" alt="Tìm hiểu về hiện tượng Data Driff và cách cấu hình AI Model Retraining">
         
         <div class="card-body px-0">
@@ -280,30 +310,6 @@ Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của
     </article>
 </div>
           
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <img src="https://tiensu.github.io/images/featured-post/34_bbc_text_classification.jpg" class="card-img-top" alt="Phân loại text theo chủ đề  - Transfer Learning">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/text-classification"
-            class="text-primary">Text Classification</a>
-        
-        <a href="https://tiensu.github.io/blog/ddd_bbc_text_topic_classification-copy/" class="h5 d-block my-3">Phân loại text theo chủ đề  - Transfer Learning</a>
-        <div class="mb-3 post-meta">
-            <span>By SuNT</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>28 December 2020</span>
-            
-        </div>
-        <p class="card-text">Bài này mình xin phép đổi chủ đề một chút. Chúng ta sẽ thử làm bài toán phân loại text theo các chủ đề khác nhau.</p>
-        <a href="https://tiensu.github.io/blog/ddd_bbc_text_topic_classification-copy/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
         </div>
       </div>
       
@@ -328,6 +334,8 @@ Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/autoencoder">Autoencoder</a></li>
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/bert">BERT</a></li>
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/cnn">CNN</a></li>
+            <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/crnn">Crnn</a></li>
+            <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/ctc">Ctc</a></li>
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/data-driff">Data Driff</a></li>
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/data-imbalance">Data imbalance</a></li>
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/data-science">Data Science</a></li>
@@ -351,6 +359,7 @@ Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/siamese-network">Siamese Network</a></li>
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/text-classification">Text Classification</a></li>
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/text-detection">Text Detection</a></li>
+            <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/text-recognition">Text recognition</a></li>
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/transformer">Transformer</a></li>
             <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white" href="/tags/xgboost">XGBoost</a></li>
         </ul>
@@ -377,151 +386,43 @@ Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của
       
       <div class="col-12 mt-5">
         
-
 <ul class="pagination">
-    
-    <li class="page-item">
-        <a href="/blog/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item">
+  <li class="page-item">
+    <a href="/blog/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item">
     <a href="/blog/page/4/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/blog/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/blog/page/2/">2</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/blog/page/3/">3</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/blog/page/4/">4</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="/blog/page/5/">5</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/blog/page/6/">6</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item disabled"><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/blog/page/12/">12</a></li>
-    
-    
-    <li class="page-item">
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/blog/">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/blog/page/2/">2</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/blog/page/3/">3</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/blog/page/4/">4</a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/blog/page/5/">5</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/blog/page/6/">6</a>
+  </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/blog/page/12/">12</a>
+  </li>
+  <li class="page-item">
     <a href="/blog/page/6/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="/blog/page/12/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
+  </li>
+  <li class="page-item">
+    <a href="/blog/page/12/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
 </ul>
 
 
@@ -585,6 +486,9 @@ Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">Ctc</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/data-driff">Data Driff</a>
@@ -651,6 +555,9 @@ Tại sao code trên máy tính của tôi chạy mà mang sang máy tính của
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text recognition</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/transformer">Transformer</a>

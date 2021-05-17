@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CTC on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/ctc/</link>
+    <description>Recent content in CTC on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/ctc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Text Recognition với CRNN và CTC</title>
+      <link>https://tiensu.github.io/blog/65_ocr_crnn_model_ctc_loss_function/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/65_ocr_crnn_model_ctc_loss_function/</guid>
+      <description>1. CRNN Model
+Convolutional Recurrent Neural Network (CRNN) là một kiến trúc được thiết kế chuyên biệt để giải quyết nhiệm vụ Text Recognition trong bài toán OCR.</description>
+    </item>
+    
+  </channel>
+</rss>

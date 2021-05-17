@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="This is meta description">
   <meta name="author" content="SuNT">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.80.0" />
 
   <!-- plugins -->
   
@@ -156,7 +156,7 @@
         <a href="/categories/text-detection"
           class="text-primary">Text Detection</a>
         
-        <h2>Text Detection với EASR Model</h2>
+        <h2>Text Detection với EAST</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
@@ -165,7 +165,7 @@
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/EAST-Image.jpg" class="img-fluid w-100 mb-4" alt="Text Detection với EASR Model">
+        <img src="https://tiensu.github.io/images/featured-post/EAST-Image.jpg" class="img-fluid w-100 mb-4" alt="Text Detection với EAST">
         
         <div class="content mb-5">
           <p>Trước khi có sự ra đời của học sâu trong bài toán Text Detection, hầu hết các phương pháp đều khó thực hiện trong các tình huống phức tạp của dữ liệu thực tế. Các phương pháp này sử dụng những kỹ thuật xử lý ảnh truyền thống và thủ công, chúng thường có nhiều giai đoạn và kết thúc với hiệu suất tổng thể không thực sự thuyết phục. Trong bài viết này, chúng ta sẽ tìm hiểu một thuật toán dựa trên học sâu (<em>EAST</em>) để phát hiện văn bản bằng một mạng nơron duy nhất.</p>
@@ -206,8 +206,8 @@
   <p>$L = L_s + \lambda_gL_g$</p>
 </div>
 
-
-Trong đó, $L_s$ là Loss Function của Score Map, còn $L_g$ là Loss Function của Geomatry Map. Hằng số $\lambda_g$ là trọng số thể hiện mức độ quan trong của $L_g$, nó nhận giá trị trong khoảng [0,1]. Trong bài báo thì tác giả đang sử dụng $\lambda_g$ = 1.</p>
+</p>
+<p>Trong đó, $L_s$ là Loss Function của Score Map, còn $L_g$ là Loss Function của Geomatry Map. Hằng số $\lambda_g$ là trọng số thể hiện mức độ quan trong của $L_g$, nó nhận giá trị trong khoảng [0,1]. Trong bài báo thì tác giả đang sử dụng $\lambda_g$ = 1.</p>
 <p><strong>4. Non-max Suppression Mergin Stage</strong></p>
 <p>Output của Geomatry Map đối với một khu vực có thể có rất nhiều, Chỉ một Output lớn hơn giá trị ngưỡng quy định bởi Locality-Aware NSM mới được giữ lại.</p>
 <p><strong>5. Sử dụng EAST model</strong></p>
@@ -245,7 +245,7 @@ Trong đó, $L_s$ là Loss Function của Score Map, còn $L_g$ là Loss Functio
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> cd EAST<span style="color:#f92672">/</span>lanms<span style="color:#f92672">/</span>
 <span style="color:#960050;background-color:#1e0010">$</span> make
 </code></pre></div><p><em><strong>5.3 Test EAST model</strong></em></p>
-<p>Trước tiên cần phải có EAST model. Nếu có đủ dữ liệu, chúng ta có thể huấn luyện nó lại từ đầu như hướng dẫn trên Github <a href="https://github.com/argman/EAST">argman</a>. Ở đây, mình chọn Pre-trained EAST model, download tại <a href="https://drive.google.com/file/d/0B3APw5BZJ67ETHNPaU9xUkVoV0U/view">đây</a>.</p>
+<p>Trước tiên cần phải có EAST model. Nếu có đủ dữ liệu của riêng mình, chúng ta có thể huấn luyện nó lại từ đầu như hướng dẫn trên Github <a href="https://github.com/argman/EAST">argman</a>. Ở đây, mình chọn Pre-trained EAST model, download tại <a href="https://drive.google.com/file/d/0B3APw5BZJ67ETHNPaU9xUkVoV0U/view">đây</a>.</p>
 <ul>
 <li><em>Chuyển đổi Code từ TF 1.xx sang TF 2.xx</em>
 Source Code trên Github được viết bằng Tensorflow phiên bản 1.xx. Thời điểm hiện tại, hầu hết các model mới đều chuyển sang sử dụng Tensorflow phiên bản 2.xx. Để chạy được với Tensorflow 2.xx, chúng ta cần làm thêm 1 bước chuyển đổi Code từ TF 1.xx sang TF 2.xx.</li>
@@ -270,13 +270,13 @@ Tuy nhiên, vẫn còn 1 lỗi mà chưa thể chuyển đổi tự động đư
 </div>
 
 
+<p>Hiện tại, EAST đã được tích hợp sẵn trong OpenCV phiên bản 4.xx. Chúng ta có thể dễ dàng sử dụng nó mà không cần phải làm nhiều bước dài dòng như thế này. Tham khảo cách sử dụng EAST trong OpenCV tại <a href="https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/">đây</a>.</p>
 <p><strong>6. Kết luận</strong></p>
 <p>Bài này, mình đã giới thiệu đến các bạn những kiến thức khái quát về EAST model, dùng cho nhiệm vụ Text Detection của bài toán OCR: ưu/nhược điểm, kiến trúc, cách làm việc và cách sử dụng nó từ Source Code trên Github.</p>
 <p>Ở bài tiếp theo, mình giới thiệu về model CRNN và CTC để thực hiện Text Recognition. Mời các bạn đón đọc.</p>
 <p><strong>7. Tham khảo</strong></p>
 <p>[1] X.Zhou, C.Yao, H.Wen, et al, EAST: An Efficient and Accurate Scene Text Detector. arXiv preprint arXiv:1704.03155.</p>
-<p>[2] TheAILearner, &ldquo;Efficient and Accurate Scene Text Detector (EAST)
-&ldquo;, Available online: <a href="https://theailearner.com/2019/10/19/efficient-and-accurate-scene-text-detector-east/">https://theailearner.com/2019/10/19/efficient-and-accurate-scene-text-detector-east/</a> (Accessed on 06 May 2021).</p>
+<p>[2] TheAILearner, &ldquo;Efficient and Accurate Scene Text Detector (EAST)&rdquo;, Available online: <a href="https://theailearner.com/2019/10/19/efficient-and-accurate-scene-text-detector-east/">https://theailearner.com/2019/10/19/efficient-and-accurate-scene-text-detector-east/</a> (Accessed on 06 May 2021).</p>
 <p>[3] TheAILearner, &ldquo;Implementation of EAST&rdquo;, Available online: <a href="https://theailearner.com/2021/03/10/implementation-of-east/">https://theailearner.com/2021/03/10/implementation-of-east/</a> (Accessed on 06 May 2021).</p>
 
         </div>
@@ -344,6 +344,9 @@ Tuy nhiên, vẫn còn 1 lỗi mà chưa thể chuyển đổi tự động đư
               href="/categories/cnn">CNN</a>
           </li>
           <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">Ctc</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
               href="/categories/data-driff">Data Driff</a>
           </li>
           <li class="mb-3"><a class="text-dark"
@@ -408,6 +411,9 @@ Tuy nhiên, vẫn còn 1 lỗi mà chưa thể chuyển đổi tự động đư
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text recognition</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/transformer">Transformer</a>

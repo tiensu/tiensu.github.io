@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="This is meta description">
   <meta name="author" content="SuNT">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.80.0" />
 
   <!-- plugins -->
   
@@ -184,10 +184,10 @@
 <p>Cụ thể hơn 1 chút thì mỗi một điểm trên <code>optimization surface</code> tương ứng với một giá trị loss $L$ - chính là output của loss funtion khi đưa vào cặp giá trị ($W$, $b$). Ý tưởng của thuật toán tối ưu là cố gắng thử sử dụng các cặp giá trị ($W$, $b$) khác nhau, tính toán loss, cập nhật ($W$, $b$) sao cho giá trị loss thấp hơn &hellip; Lý tưởng nhất là chúng ta có thể đạt được giá trị loss nhỏ nhất tại điểm <code>global minimum</code>, nhưng điều này thường khó xảy ra trong thực tế.</p>
 <p><strong>2. Gradient Descent cho hàm 1 biến</strong></p>
 <p>Giả sử Loss Function của chúng ta là hàm bậc 1, $f(x)$. Điểm <code>global minimum</code> là điểm mà tại đó $x = x^*$.</p>
-<p>Đạo hàm của của $f(x)$ là $f&rsquo;(x)$. Nếu bạn còn nhớ, trong chương trình toán THPT, khi học về đạo hàm ta có các <a href="https://toanthaydinh.com/cuc-tri-cua-ham-so/">nhận xét</a>:</p>
+<p>Đạo hàm của của $f(x)$ là $f'(x)$. Nếu bạn còn nhớ, trong chương trình toán THPT, khi học về đạo hàm ta có các <a href="https://toanthaydinh.com/cuc-tri-cua-ham-so/">nhận xét</a>:</p>
 <ul>
-<li>Nếu đạo hàm của hàm số tại thời điểm $t$, $f&rsquo;(x_t) &gt; 0$ thì $x_t$ nằm về phía bên phải so với $x^*$, và ngược lại.</li>
-<li>$x_t$ càng xa $x^*$ về phía bên phải thì $f&rsquo;(x_t)$ càng lơn hơn 0, và ngược lại.</li>
+<li>Nếu đạo hàm của hàm số tại thời điểm $t$, $f'(x_t) &gt; 0$ thì $x_t$ nằm về phía bên phải so với $x^*$, và ngược lại.</li>
+<li>$x_t$ càng xa $x^*$ về phía bên phải thì $f'(x_t)$ càng lơn hơn 0, và ngược lại.</li>
 </ul>
 <p>Từ nhận xét số 1 có thể suy ra, để điểm tiếp theo $x_{t+1}$ tiến gần về $x^*$ hơn thì cần di chuyển $x_t$ về phía bên trái, tức là phía âm, hay phía ngược dấu với đạo hàm:</p>
 
@@ -197,7 +197,7 @@
 </div>
 
 
-<p>Từ nhận xét số 2 có thể suy ra lượng di chuyển $\Delta$ tỉ lệ thuận với $-f&rsquo;(x)$.</p>
+<p>Từ nhận xét số 2 có thể suy ra lượng di chuyển $\Delta$ tỉ lệ thuận với $-f'(x)$.</p>
 <p>Tổng hợp hai nhận xét trên, ta có công thức cập nhật $x_t$ một cách đơn giản là:</p>
 
 
@@ -378,6 +378,9 @@
               href="/categories/cnn">CNN</a>
           </li>
           <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">Ctc</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
               href="/categories/data-driff">Data Driff</a>
           </li>
           <li class="mb-3"><a class="text-dark"
@@ -442,6 +445,9 @@
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text recognition</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/transformer">Transformer</a>
