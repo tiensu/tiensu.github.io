@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/object-detection"
+          class="text-primary">Object Detection</a>
+        
+        <h2>Tóm tắt các thuật toán Object Detection</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>12 May 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/object_detection.png" class="img-fluid w-100 mb-4" alt="Tóm tắt các thuật toán Object Detection">
+        
+        <div class="content mb-5">
+          <p>Object Detection là một trong những bài toán rất phổ biến trong lĩnh vực Computer Vision. Ngày nay, với sự giúp đỡ của các thuật toán Deep Learning, bài toán này đã được giải quyết khá tốt. Các thuật toán nối tiếng có thể kể ra ở đây là: R-CNN, Fast R-CNN, Faster R-CNN, YOLOv1, YOLOv2, YOLOv3, YOLOv4, YOLOv5, SSD, EfficientDet. Trong bài này, hãy cùng nhau tóm tắt lại các thuật toán Deep Learning đó nhé!</p>
+<p><strong>1. Các thuật toán Object Detection</strong></p>
+<p><em><strong>1.1 R-CNN</strong></em></p>
+<p>Đây có thể coi là thuật toán Deep Learning đầu tiên giải quyết bài toán Computer Vision. Trước đó, cũng có một vài thuật toán khác (<em>không phải Deep Learning</em>), như Exhaustive Search, &hellip; Nhược điểm chung của các thuật toán này là chúng yêu cầu tài nguyên tính toán rất lớn, thời gian xử lý cũng rất lâu.</p>
+<p>Để giải quyết những yếu điểm đó, R-CNN đề xuất sử dụng phương pháp Selective Search để trích xuất thông tin từ khoảng 2000 khu vực trên bức ảnh (<em>mỗi khu vực được gọi là Region Proposal</em>). Các thông tin được trích xuất sau đó sẽ được đưa qua một mạng CNN để xác định vị trí cũng như phân loại đối tượng.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/rcnn.png">
+</div>
+
+</p>
+<p>Mặc dù vậy, R-CNN vẫn cần trung bình khoảng 50s để xử lý một bức ảnh. Nếu ảnh có nhiều đối tượng thì thời gian xử lý còn lâu hơn nữa.</p>
+<p><em><strong>1.2 Fast R-CNN</strong></em></p>
+<p>Fast R-CNN ra đời để giải quyết hạn chế của R-CNN. Thay vì chia bức ảnh thành các Region Proposals và đưa chúng vào mạng CNN như R-CNN, Fast R-CNN đưa toàn bộ bức ảnh vào mạng CNN một lần để sinh ra Feature Map. Từ Feature Map này, các Region Proposals mới được nhận diện và đưa vào mạng FC. Cuối cùng, Softmax được sử dụng để dự đoán nhãn cho mỗi đối tượng và tính toán tọa độ các Bouding Boxs của chúng.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/fast_r_cnn.png">
+</div>
+
+</p>
+<p>Fast R-CNN nhanh hơn R-CNN vì mạng CNN chỉ hoạt động một lần trên mỗi bức ảnh.</p>
+<p><em><strong>1.3 Faster R-CNN</strong></em></p>
+<p>Tương tự như Fast R-CNN, toàn bộ bức ảnh cũng được đi qua mạng CNN đẻ sinh ra Feature Map. Điểm khác ở đây là Faster R-CNN sử dụng một Region Proposal Network (<em>RPN</em>) thay vì Selective Search để sinh ra các Region Proposals. Tiếp đó, ROI Pooling nhận đầu vào là các Region Proposals đó để sinh ra nhãn dự đoán và tọa độ của Bounding Box cho mỗi đối tượng trong ảnh.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/faster_rcnn.png">
+</div>
+
+</p>
+<p>So sánh về mặt thời gian xử lý giữa 3 thuật toán trong hộ R-CNN, có sự giảm dần từ R-CNN -&gt; Fast R-CNN -&gt; Faster R-CNN.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/rcnn_comparation.png">
+</div>
+
+</p>
+<p><em><strong>1.4 YOLO - You Look Only Once</strong></em></p>
+<p>Các thuật toán trong họ R-CNN có thể được phân loại là nhóm Two Stages Detector, bởi vì cách làm việc của chúng bao gồm 2 bước (<em>2 stages</em>). Đầu tiên, chúng lựa chọn ROI (<em>Region of Interest</em>) trong bức ảnh. Sau đó, chúng phân loại các ROI đó sử dụng mạng CNN. Đó chính là nguyên nhân làm cho tốc độ thực thi của những thuật toán đó tương đối chậm.</p>
+<p>YOLO là một thuật toán Single Stage Detecto (<em>Single Shot Detector</em>), nghĩa là chúng sẽ dự đóan nhãn và vị trí của đối tượng trong toàn bộ bức ảnh chỉ với một lần chạy thuật toán duy nhất. Và tất nhiên, cách làm việc này giúp cho thời gian xử lý của YOLO rất nhanh, phù hợp với các ứng dụng cần chạy Realtime.</p>
+<p>Cách làm viêc của YOLO có thể tóm tắt như sau:</p>
+<ul>
+<li>Chia bức ảnh thành các Cells. Ví dụ: 19x19, 13x13, &hellip;</li>
+<li>Mỗi Cell chịu trách nhiệm dự đoán ra b Bounding Box. b = 3, 5, 7, &hellip;</li>
+<li>Ouput của việc dự đoán bao gồm:
+<ul>
+<li>Tọa độ trung tâm của Bounding Box ($b_x, b_y$)</li>
+<li>Chiều rộng của Bounding Box ($b_w$)</li>
+<li>Chiều cao của Bounding Box ($b_h$)</li>
+<li>Nhãn của đối tượng (<em>nếu có</em>) trong Bounding Box (<em>c</em>)</li>
+<li>Xác suất có đối tượng trong Bounding Box ($p_c$)</li>
+</ul>
+</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/yolo.png">
+</div>
+
+
+<p>Hầu hết các Cell và Bounding Box không chứa đối tượng. Quy định một giá trị ngưỡng cho $p_c$ để loại bỏ bớt những Bounding Box này. Cách này gọi là NMS (<em>Non-Max Suppression</em>).
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/yolo_2.png">
+</div>
+
+</p>
+<p><a href="https://github.com/pjreddie/darknet">Darknet</a> github phổ biến nhất của YOLO. Bạn có thể sử dụng nó cho các dự án của mình.</p>
+<p>Tiếp sau thành công của YOLOv1, các phiên bản tiếp theo YOLOv2, YOLOv3, YOLOv4, YOLOv5 lần lượt ra đời, phiên bản sau kế thừa ưu điểm và hạn chế nhược điểm của phiên bản trước đó.</p>
+<ul>
+<li>
+<p>YOLOv1:</p>
+<ul>
+<li>24 Conv layers, 2 FC layers -&gt; tổng cộng có 26 layers.</li>
+<li>Nhược điểm chính là khả năng phát hiện những đối tượng kích thước nhỏ rất kém.</li>
+<li>Chi tiết xem tại <a href="https://arxiv.org/pdf/1506.02640.pdf">đây</a></li>
+</ul>
+</li>
+<li>
+<p>YOLOv2:</p>
+<ul>
+<li>Thêm BN layers -&gt; tổng cộng có 30 layers.</li>
+<li>Có thêm 3 Anchor Boxes.</li>
+<li>Không có FC layers.</li>
+<li>Kích thước của Training Image được Scale trong khoảng 320-608.</li>
+<li>Mỗi đối tượng có thể có nhiều nhãn.</li>
+<li>Vẫn gặp khó khăn khi phát hiện những đối tượng có kích thước nhỏ.</li>
+<li>Chi tiết xem tại <a href="https://arxiv.org/pdf/1612.08242.pdf">đây</a></li>
+</ul>
+</li>
+<li>
+<p>YOLOv3:</p>
+<ul>
+<li>Tổng cộng 106 layers.</li>
+<li>Thay đối cách tính Loss Function.</li>
+<li>Sử dụng 9 Anchor Boxes.</li>
+<li>Phát hiện đối tượng kích thước nhỏ khá tốt.</li>
+<li>Chi tiết xem tại <a href="https://arxiv.org/pdf/1804.02767.pdf">đây</a></li>
+</ul>
+</li>
+<li>
+<p>YOLOv4:</p>
+<ul>
+<li>Sử dụng CSPDARKNET53 model làm Backbone.</li>
+<li>Neck — Spatial pyramid pooling and Path Aggregation Network</li>
+<li>Head — Class subnet and Box subnet, as well as in YOLOv3</li>
+<li>Hỗ trợ rất nhiều Frameworks: TensorFlow, OpenCV, OpenVINO, PyTorch, TensorRT, ONNX, CoreML, etc.</li>
+<li>So với YOLOv3,mAP và FPS của YOLOv4 tăng tương ứng 10% và 12%.</li>
+<li>So với EfficientDet, YOLOv4 nhanh hơn khoảng 2 lần.</li>
+<li>Chi tiết xem tại <a href="https://arxiv.org/pdf/2004.10934v1.pdf">đây</a></li>
+</ul>
+</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/yolo_3.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/yolo_4.jpg">
+</div>
+
+
+<ul>
+<li>YOLOv5:
+<ul>
+<li>Ra đời chỉ vài ngày sau YOLOv4</li>
+<li>Có 4 phiên bản khác nhau: YOLOv5s, YOLOv5m, YOLOv5l, YOLOv5x. Độ chính xác tăng dần và tốc độ giảm dần theo thứ tự đó.</li>
+<li>So sánh với YOLOv4:
+<ul>
+<li>&ldquo;<em>If you’re a developer looking to incorporate near realtime object detection into your project quickly, YOLOv5 is a great choice. If you’re a computer vision engineer in pursuit of state-of-the-art and not afraid of a little more custom configuration, YOLOv4 in Darknet continues to be most accurate.</em>&rdquo;</li>
+<li>CSPDarknet53s-YOSPP gets 19.5% faster model inference speed and 1.3% higher AP than YOLOv5l.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>1.5 SSD - Single Shot Detector</strong></p>
+<p>SSD cũng là một thuật toán thuộc nhóm Single Stage Detector. Ảnh đầu vào được cho đi qua mạng VGG-16 để trích xuất Feature Maps với các hệ số Scale khác nhau. Tiếp theo, nó dự đoán nhãn và vị trí của đối tượng sử dụng Conv layers. Output là một tập các Bounding Box và xác suất có đối tượng bên trong đó. Cuối cùng áp dụng NMS để loại bỏ đi những Bounding Box không phù hợp.</p>
+<p>Chi tiết về SSD, bạn có thể tham khảo ở <a href="https://arxiv.org/pdf/1512.02325.pdf.">đây</a></p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/ssd.png">
+</div>
+
+
+<p>Khá ngạc nhiên là mặc dù ra đời từ năm 2015 nhưng đến nay vẫn không có thêm phiên bản mới nào của SSD, trong khi YOLO thì ra phiên bản mới liên tục.</p>
+<p>Về tốc độ xử lý và độ chính xác thì nói chung SSD ngang ngửa với YOLOv3 và chỉ chịu thua YOLOv4. Các bạn có thể xem so sánh chi tiết ở <a href="https://paperswithcode.com/paper/yolov4-optimal-speed-and-accuracy-of-object/review/">đây</a>, và ở <a href="https://events.ecmwf.int/event/172/contributions/1767/attachments/867/1540/Machine-Learning-WS_Bellos_Betsas.pdf">đây nữa</a></p>
+<p>Ngoài các thuật toán kể trên, còn có 1 số thuật toán Object Detection khác như EfficientDet, RatinaNet, &hellip; Bạn có thể đọc thêm về những thuật toán này từ các nguồn trên Internet. Đến thời điểm hiện tại, ý kiến của cá nhân mình thì YOLOv4 đang là State-of-Art cho bài toán Object Detection, cả về tốc độ và độ chính xác. Mình luôn áp dụng YOLOv4 đầu tiên trong các dự án về Object Detection của mình, nếu có vấn đề gì thì mới chuyển qua thuật toán khác.</p>
+<p><strong>2. Metrics đánh giá Object Detection model</strong></p>
+<p>Để đánh giá một Classification model, ta thường sử dụng các Metrics: Precision, Recall, F1-Score, Accuracy.</p>
+<p>Để đánh giá một Regression model, ta thường sử dụng các Metrics: Root Mean Square (<em>RMS</em>), Mean Square Error (<em>MSE</em>), Mean Absoluate Error (<em>MAE</em>), &hellip; Nhược</p>
+<p>Để đánh giá một Object Detection model, ta dùng Metrics nào?</p>
+<p>Để trả lời câu hỏi này, hãy nhớ lại 2 mục đích của một Object Detection model là:</p>
+<ul>
+<li>Classification: Phân loại đối tượng trong bức ảnh thuộc vào lớp nào?</li>
+<li>Localization: Xác định chính xác vị trí của đối tượng trong bức ảnh.</li>
+</ul>
+<p>Vì vậy, Metrics đánh giá một Object Detection model cần phải kết hợp cả 2 mục tiêu này. Hiện nay, Mean Average Precision (<em>mAP</em>) được sử dụng rộng rãi để đánh giá các Object Detection model. Về bản chất, mỗi một lớp (<em>class - nhãn</em>) trong bài Object Detection model có một giá trị AP riêng, mAP là trung bình của các giá trị AP đó. Vì AP được tính cho mỗi lớp nên trong cách tính AP dưới đây, bạn có thể thấy rằng ta chỉ sử dụng kết quả dự đoán Bounding Box mà không sử dụng kết quả dự đoán nhãn của model.</p>
+<p><em><strong>2.1 Intersection over Union - IoU</strong></em></p>
+<p>Trước tiên, cần hiểu khái niệm IoU. Như cái tên của nó đã gợi nhớ, IoU là tỉ số giữa phần giao nhau và phần hợp nhau của 2 Bounding Box. Ground Trust(<em>GT - Bounding Box mà ta vẽ bằng tay khi đánh nhãn đối tượng</em>) Bounding Box và Bounding Box mà model dự đoán ra được.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/iou.png">
+</div>
+
+</p>
+<p>Giá trị IoU nằm trong khoảng [0;1]. IoU = 0 ngụ ý rằng model dự đoán sai hoàn toàn, IoU = 1 ngụ ý rằng model dự đoán chính xác hoàn toàn.</p>
+<p>Thông thường, sẽ có một giá trị ngưỡng (<em>threshold</em>) của IoU để xác định Bounding Box dự đoán ra có được chấp nhận hay không? Threshold thường là 0.5 hoặc 0.75. Nếu IoU &gt; Threshold, Bounding Box là hợp lệ và ngược lại.</p>
+<p><em><strong>2.2 Precision và Recall</strong></em></p>
+<p>Precision và Recall được xác định thông qua công thức:
+
+
+<div style="text-align-last:center">
+   <p>$Precision = \frac{TP}{TP + FP}$</p>
+   <p>$Recall = \frac{TP}{TP + FN}$</p>
+</div>
+
+</p>
+<p>Sử dụng IoU và Threshold, ta có thể xác định được TP, FP, TN, FN như sau:</p>
+<ul>
+<li>Nếu IoU &gt;= Threshold, Bounding Box được coi là TP - True Positive.</li>
+<li>Nếu IoU &lt; Threshold, Bounding Box được coi là FP - False Positive.</li>
+<li>Nếu có đối tượng trong bức ảnh nhưng model không phát hiện được (<em>không dự đoán được Bounding Box</em>) &ndash;&gt; FN - False Negative.</li>
+<li>Mọi phần trong bức ảnh mà không có đối tượng và model cũng dự đoán là không có đối tượng &ndash;&gt; TN - True Negative.</li>
+</ul>
+<p>Precision and Recall được tính cho mỗi đối tượng trong bức ảnh. Chúng ta cũng cần xem xét đến giá trị Confidence Score trả ra từ model. Các Bounding Box có Confidence lớn hơn một giá trị ngưỡng được coi là Positive và ngược lại.</p>
+<p><em><strong>2.3 Tính toán mAP</strong></em></p>
+<ul>
+<li><em>Bước 1 -</em> Vẽ đồ thị Precision - Recall
+Thể hiện 2 giá trị Precision và Recall trên đồ thị PR, Precision trên trục y, Recall trên trục x.
+
+
+<div style="text-align-last:center">
+   <img style="height:auto" src="/images/post/pr_chart.png">
+</div>
+
+</li>
+</ul>
+<p>Mong đợi rằng đồ thị PR (<em>đường màu xanh</em>) sẽ có dạng đơn điệu giảm dần từ trái sang phải theo giá trị của Precision. Nếu không, chúng ta sẽ phải sử dụng giá trị <em>interpolation - nội suy</em> của Pricsion (<em>đường màu đỏ</em>) - $p_{interp}$. Giá trị $interp_p$ tại mỗi vị trí bằng giá trị lớn nhất của Precision ở bên phải của vị trí đó. Vì AP được tính bằng trung bình của 11 điểm $p_{interp}$ nên ta thể hiện 11 điểm trên đồ thị PR, tương ứng với Recall từ 0.0, 0.1, &hellip;, 1.0</p>
+<ul>
+<li>
+<p><em>Bước 2 -</em> Tính AP
+
+
+<div style="text-align-last:center">
+   <p>$AP = \frac{1}{11}\sum_{r \in {0,0.1,0.2,...,1}}p_{interp}(r) = \frac{1}{11} (1 + 0.8 + 0.6 + 0.5 + 0.5 + 0.5 + 0.45 + 0.48 + 0.48 + 0.35 + 0.2) = 0.53$</p>
+</div>
+
+</p>
+</li>
+<li>
+<p><em>Bước 3 -</em> Tính mAP
+mAP được tính bằng trung bình của tất cả các AP của mỗi class.
+
+
+<div style="text-align-last:center">
+   <p>$mAP = \frac{1}{n}\sum_{i=1}^n AP_i$</p>
+</div>
+
+</p>
+</li>
+</ul>
+<p>Trong đó, $n$ là số class mà model có thể phát hiện.</p>
+<p><strong>3. Kết luận</strong></p>
+<p>Bài này, mình đã giới thiệu đến các bạn những kiến thức khái quát về các thuật toán Object Detection và một Metrics mAP để đánh giá các thuật toán đó. Hi vọng các bạn sẽ có được cái nhìn toàn diện để có thể lựa chọn được thuật toán phù hợp với bài toán của mình. Để hiểu sâu hơn về mỗi thuật toán đó, mình khuyên các bạn nên đọc kỹ bài báo gốc của nó và bắt tay vào train/test lại chúng trên bộ dữ liệu của mình. Có rất nhiều hướng dẫn trên Internet giúp các bạn làm điều này.</p>
+<p>Ở bài tiếp theo, chúng ta sẽ chuyển qua tìm hiểu về bài toán Sematics Segmentation. Mời các bạn đón đọc.</p>
+<p><strong>4. Tham khảo</strong></p>
+<p>[1] Renu Khandewal, &ldquo;Evaluating performance of an object detection model&rdquo;, Available online: <a href="https://towardsdatascience.com/evaluating-performance-of-an-object-detection-model-137a349c517b">https://towardsdatascience.com/evaluating-performance-of-an-object-detection-model-137a349c517b</a> (Accessed on 12 May 2021).</p>
+<p>[2] Jędrzej Świeżewski, &ldquo;YOLO Algorithm and YOLO Object Detection: An Introduction&rdquo;, Available online: <a href="https://appsilon.com/object-detection-yolo-algorithm/">https://appsilon.com/object-detection-yolo-algorithm/</a> (Accessed on 12 May 2021).</p>
+<p>[3] Analytics Vidhya, &ldquo;A Review of Object Detection Models&rdquo;, Available online: <a href="https://medium.com/analytics-vidhya/a-review-of-object-detection-models-f575c515655cl">https://medium.com/analytics-vidhya/a-review-of-object-detection-models-f575c515655cl</a> (Accessed on 12 May 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">Ctc</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
