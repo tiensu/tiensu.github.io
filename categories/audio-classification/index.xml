@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Audio Classification on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/audio-classification/</link>
+    <description>Recent content in Audio Classification on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/audio-classification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giới thiệu chung về các bài toán Sound/Audio sử dụng Deep Learning</title>
+      <link>https://tiensu.github.io/blog/67_audio_deep_learning_part_1/</link>
+      <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/67_audio_deep_learning_part_1/</guid>
+      <description>Bên cạnh Images, Text thì Sound cũng là một dạng dữ liệu mà chúng ta thường gặp trong đời sống hàng ngày.</description>
+    </item>
+    
+  </channel>
+</rss>
