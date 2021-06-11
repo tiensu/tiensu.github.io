@@ -171,113 +171,152 @@
         <img src="https://tiensu.github.io/images/featured-post/audio_stft.png" class="img-fluid w-100 mb-4" alt="Audio Data Preparation - Một số kỹ thuật nâng cao">
         
         <div class="content mb-5">
-          <p>Đây là bài thứ 2 trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tìm hiểu cách xử lý dữ liệu Audio bằng các thư viện của Python. Chúng ta cũng tìm hiểu về Mel Spectrogram, một dạng biến đổi từ Spectrogram giúp Deep Learning model học tốt hơn.</p>
-<p><strong>1. Audio File Formats and Python Libraries</strong></p>
-<p>Bắt đầu từ âm thanh chúng ta nghe được trong thực tế ở dạng tín hiệu tương tự, nó được số hóa và lưu lại theo các định dạng khác nhau: .mp3, .wav, .wma, .aac, .flac, &hellip;</p>
-<p>Python có một số thư viện xử lý dữ liệu Audio rất tốt. Nổi bật nhất là 2 thư viện Librosa và Scipy. Nếu bạn sử dụng Pytorch thì có thư viện torchaudio, sử dụng Tensorflow thì có tư viện tf.audio. Cả 2 đều khá tiện dụng, được xây dựng để xử lý riêng cho dữ liệu Audio.</p>
-<p>Thử đọc một file Audio bằng thư viện librosa:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Load the audio file with librosa</span>
-<span style="color:#f92672">import</span> librosa
-
-AUDIO_FILE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./7061-6-0-0.wav&#39;</span>
-samples, sample_rate <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>load(AUDIO_FILE, sr<span style="color:#f92672">=</span>None)
-</code></pre></div><p>Tương tự với thư viện scipy:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Load the audio file with scipy</span>
-<span style="color:#f92672">from</span> scipy.io <span style="color:#f92672">import</span> wavfile
-
-sample_rate, samples <span style="color:#f92672">=</span> wavfile<span style="color:#f92672">.</span>read(AUDIO_FILE)
-</code></pre></div><p>Kết quả đọc Audio file được thể hiện trên đồ thị như sau:
+          <p>Đây là bài thứ 3 trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tiến thêm một bước sâu hơn là tìm cách nâng cao chất lượng của Mel Spectrogram thông qua tinh chỉnh các Hyper-parameters của nó. Đồng thời, chúng ta cũng sẽ tìm hiểu một số kỹ thuật làm giàu dữ liệu Audio. Cả 2 vấn đề này đều quan trọng, góp phần nâng cao hiệu quả của các Deep Learning model.</p>
+<p><strong>1. Spectrograms Optimization with Hyper-parameter tuning</strong></p>
+<p>Ở bài trước, chúng ta đã tìm hiểu về Mel Spectrogram và cách tạo ra nó sử dụng thư viện libsora. Thực chất, để tạo ra được Mel Spectrogram, chúng ta cần phải chỉ ra một số tham số cho nó. Nếu không được cung cấp, các giá trị mặc định sẽ được sử dụng. Để tạo ra được Mel Spectrogram thực sự tốt cho Deep Learning model, chúng ta cần điều chỉnh các tham số này tùy theo từng loại dữ liệu.</p>
+<p>Trước hết, chúng ta cần hiểu một số khái niệm sau:</p>
+<p><em><strong>1.1 Discrete Fourier Transform (DFT) và Fast Fourier Transform (FFT)</strong></em></p>
+<p><a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">DFT</a> và FFT là 2 cách để  tính toán FFT. Sử dụng DFT thường mất nhiều thời gian hơn nên trong thực tế, FFT được sử dụng nhiều hơn. Về bản chất, FFT là một biến đổi khác của DFT.</p>
+<p>Sử dụng FFT tuy nhanh nhưng nó lại chỉ đưa ra một cách khái quát về tất cả các thành phần tần số có trong toàn bộ chuỗi thời gian của Audio. Nó không chỉ ra được cách mà các thành phần tần số thay đổi như thế nào theo thời gian.</p>
+<p><em><strong>1.2 Short-time Fourier Transform (STFT)</strong></em></p>
+<p>Để có được thông tin về sự biến đổi của các thành phần tần số qua thời gian, chúng ta phải sử dụng thuật toán Short-time Fourier Transform (STFT). STFT là một biến thể của Fourier Transform mà ở đó, các Audio Signal được chia nhỏ thành các phần bằng nhau, sử dụng Sliding Time window và Sliding Frequency window. Sau đó, áp dụng FFT trên mỗi phần đó rồi kết hợp các kết quả lại với nhau thành một kết quả cuối cùng. Cách làm này cho phép STFT có khả năng lấy được thông tin về sự thay đổi của các thành phần tần số theo thời gian.
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/audio_visualization.png">
+   <img style="height:auto" src="/images/post/audio_stft_2.png">
 </div>
 
 </p>
-<p>Nếu sử dụng Jupyter Notebook, chúng ta có thể nghe được file Audio đó:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> Audio
-Audio(AUDIO_FILE)
-</code></pre></div>
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/audio_listen.png">
-</div>
-
-
-<p><strong>2. Audio Signal Data</strong></p>
-<p>Như chúng ta đã biết từ bài trước đó, Audio Data có được bằng cách lấy mẫu từ Sound Analog Signal theo một chu kỳ thời gian và đo đặc giá trị của biên độ tại mỗi thời điểm lấy mẫu đó. Audio Data được lưu lại thành file theo một trong các định dạng nén (<em>.mp3, .wav, &hellip;</em>). Khi đọc lên bằng các thư viện xử lý, nó được giải nén và chuyển thành một Numpy Array. Mảng dữ liệu này là giống nhau cho dù Audio Data được lưu dưới bất kỳ định dạng nào.</p>
-<p>Trong bộ nhớ, Audio có thể coi là một chuỗi các giá trị của biên độ theo thời gian. Ví dụ, nếu tần số lấy mẫu là 16800Hz thì cứ 1s Audio sẽ có 16800 giá trị biên độ.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#66d9ef">print</span> (<span style="color:#e6db74">&#39;Example shape &#39;</span>, samples<span style="color:#f92672">.</span>shape, <span style="color:#e6db74">&#39;Sample rate &#39;</span>, sample_rate, <span style="color:#e6db74">&#39;Data type&#39;</span>, type(samples))
-<span style="color:#66d9ef">print</span> (samples[<span style="color:#ae81ff">22400</span>:<span style="color:#ae81ff">22420</span>])
-</code></pre></div>
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/audio_array.png">
-</div>
-
-
-<p>Khoảng giá trị của biên độ được quy định bởi thông số bit-length. Ví dụ, bit-length bằng 16 có nghĩa là biên độ có thể có giá trị trong khoảng từ 0 đến $2^{16}-1$. Bit-length càng lớn thì chất lượng của Audio càng tốt.</p>
-<p><strong>3. Spectrograms</strong></p>
-<p>Dữ liệu Audio hiếm khi được đưa trực tiếp vào các Deep Learning model để huấn luyện. Thay vào đó, chúng thường được chuyển sang dạng Spectrogram như trong bài trước chúng ta đã đề cập.</p>
-<p>Ta sẽ vẽ Spectrogram lên đồ thị:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sgram <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>stft(samples)
-librosa<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>specshow(sgram)
-</code></pre></div>
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/audio_spectrogram.png">
-</div>
-
-
-<p>Đây là dạng nguyên thủy của Spectrogram. Rõ ràng, chúng ta không thể thấy rõ được các thông tin về tần số, biên độ mà Spectrogram thể hiện. Điều này được giải thích là do khả năng nhận thức âm thanh của con người. Hầu hết những âm thanh mà chúng ta nghe được đều tập trung xung quanh một dải tần số và biên độ khá hẹp.</p>
-<p><strong>4. Mel Spectrogram</strong></p>
-<p>Để giải quyết vấn đề này, Spectrogram được chuyển sang một dạng mới, gọi là Mel Spectrogram mà ở đó:</p>
+<p>Ví dụ, ta có một Audio Signal có độ dài 1 phút chứa các tần số từ 0Hz đến 10000Hz (theo Mel Scale). Thuật toán STFT để tạo ra Mel Spectrogram sẽ làm như sau:</p>
 <ul>
-<li>Tần số được thay thế bằng giá trị Logarithmic của nó, gọi là Mel Scale.</li>
-<li>Biên độ được thay thế bằng giá trị Logarithmic của nó, gọi là Decibel Scale.</li>
+<li>Chọn kích thước của Time-Window là 3s, ta có 20 Time-Sections.</li>
+<li>Chia khoảng tần số thành 10 bands: 0-1000Hz, 1000-2000Hz, &hellip;, 9000-10000Hz.</li>
 </ul>
-<p>Hình dưới đây cho ta biết các giá trị Decibel Scale của một số loại âm thanh khác nhau.</p>
+<p>Kết quả ta thu được một màng 2D Numpy có kích thước (10,20), ở đó:</p>
+<ul>
+<li>Mỗi cột đại diện cho STFT của một Time-Section.</li>
+<li>Mỗi hàng đại diện cho giá trị của biên độ trong một Band.</li>
+</ul>
+<p>Mỗi hàng/cột ở đây tương ứng với mỗi hàng/cột của Mel Spectrogram.</p>
+<p>Thử in ra Type và Shape của Mel Spectrogram:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Spectrogram is a 2D numpy array</span>
+<span style="color:#66d9ef">print</span>(type(mel_sgram), mel_sgram<span style="color:#f92672">.</span>shape)
+<span style="color:#75715e"># &lt;class &#39;numpy.ndarray&#39;&gt; (128, 194)</span>
+</code></pre></div><p>Ta thấy Mel Spectrogram là một Numpy Array có kích thước (128, 194).</p>
+<p><em><strong>1.3 Mel Spectrogram Hyperparameters</strong></em></p>
+<p>Dưới đây là danh sách các Hyperparameters của Mel Spectrogram được sử dụng trong thư viện librosa (<em>các thư viện khác cũng có các hyperparameters tương tự</em>):</p>
+<ul>
+<li>
+<p>Frequency Bands:</p>
+<ul>
+<li><strong>fmin:</strong> tần số nhỏ nhất</li>
+<li><strong>fmax:</strong> tần số lớn nhất</li>
+<li><strong>n_mels:</strong> số lượng Frequency Bands, hay chiều cao của Mel Spectrogram.</li>
+</ul>
+</li>
+<li>
+<p>Time Sections</p>
+<ul>
+<li><strong>n_fft:</strong> kích thước Time-Window, hay chiều dài mỗi Time-Section.</li>
+<li><strong>hop_length:</strong> Có thể hiểu nó tương tự như Stride trong CNN, tức là số bước trượt/nhảy tính theo đơn vị Hop của Time-Window (<em>xem hình minh họa bên trên</em>)</li>
+</ul>
+<p>Các tham số này có thể điều chỉnh được và chúng ta nên điều chỉnh nó tùy theo từng bộ dữ liệu để có kết quả tốt nhất.</p>
+</li>
+</ul>
+<p><strong>2. Mel Frequency Cepstral Coeficients (MFCC)</strong></p>
+<p>MFCC là một dạng thể hiện khác của Audio Data, được biến đổi từ Mel Spectrogram. Cụ thể MFCC nén các Frequency Bands từ Mel Spectrogram tương ứng với các mức tần số thông thường của giọng nói con người. Chính vì thê mà Mel Spectrogram phù hợp với đa số các loại Audio, còn MFFC thì phù hợp hơn với âm thanh phát ra từ miệng chúng ta.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sklearn
+<span style="color:#f92672">import</span> librosa
+<span style="color:#f92672">import</span> librosa.display
 
+<span style="color:#75715e"># Load the audio file</span>
+AUDIO_FILE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;./7061-6-0-0.wav&#39;</span>
+samples, sample_rate <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>load(AUDIO_FILE, sr<span style="color:#f92672">=</span>None)
+mfcc <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>feature<span style="color:#f92672">.</span>mfcc(samples, sr<span style="color:#f92672">=</span>sample_rate)
 
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/audio_decibel_scale.png">
-</div>
+<span style="color:#75715e"># Center MFCC coefficient dimensions to the mean and unit variance</span>
+mfcc <span style="color:#f92672">=</span> sklearn<span style="color:#f92672">.</span>preprocessing<span style="color:#f92672">.</span>scale(mfcc, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+librosa<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>specshow(mfcc, sr<span style="color:#f92672">=</span>sample_rate, x_axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;time&#39;</span>)
 
-
-<p>Chúng ta thử vẽ lại Spectrogram ở trên, thay thế tần số bằng Mel Scale:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># use the mel-scale instead of raw frequency</span>
-sgram_mag, _ <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>magphase(sgram)
-mel_scale_sgram <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>feature<span style="color:#f92672">.</span>melspectrogram(S<span style="color:#f92672">=</span>sgram_mag, sr<span style="color:#f92672">=</span>sample_rate)
-librosa<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>specshow(mel_scale_sgram)
+<span style="color:#66d9ef">print</span> (f<span style="color:#e6db74">&#39;MFCC is of type {type(mfcc)} with shape {mfcc.shape}&#39;</span>)
+<span style="color:#75715e"># MFCC is of type &lt;class &#39;numpy.ndarray&#39;&gt; with shape (20, 194)</span>
 </code></pre></div>
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/audio_mel_scale_visual.png">
+   <img style="height:auto" src="/images/post/audio_mffc.png">
 </div>
 
 
-<p>Ta thấy thông tin đã xuất hiện rõ ràng hơn. Tiếp tục sử dụng Decibel Scale thay cho biên độ để tạo thành Mel Spectrogram:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># use the decibel scale to get the final Mel Spectrogram</span>
-mel_sgram <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>amplitude_to_db(mel_scale_sgram, ref<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>min)
-librosa<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>specshow(mel_sgram, sr<span style="color:#f92672">=</span>sample_rate, x_axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;time&#39;</span>, y_axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mel&#39;</span>)
-plt<span style="color:#f92672">.</span>colorbar(format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%+2.0f</span><span style="color:#e6db74"> dB&#39;</span>)
-</code></pre></div>
+<p>Ta thấy, Mel Spectrogram có kích thước (128,194), còn MFFC có kích thước (20, 194).</p>
+<p><strong>3. Audio Data Augmentation</strong></p>
+<p>Chúng ta đã không còn xa lạ với khái niệm Data Augmentaion và lợi ích của nó trong các bài toán CV, NLP. Đối với Auio, chúng ta cũng làm tương tự. Có thể áp dụng Augmentaion đối với Raw Audio hoặc Mel Spectrogram.</p>
+<p><em><strong>3.1 Spectrogram Augmentation</strong></em></p>
+<p>Các phép biến đổi của Image khong thể áp dụng trực tiếp vào cho Mel Spectrogram được vì nó sẽ biến đổi hoàn toàn Sound Signal, tạo ra các Sound Signal mới hoàn toàn. Thay vào đó, chúng ta sẽ sử dụng phương pháp SpecAugment với 2 kỹ thuật chính:</p>
+<ul>
+<li><strong>Frequency Masks:</strong> Ngẫu nhiên Mask một khoảng liên tục của Frequency ngang theo trục X.</li>
+<li><strong>Time Masks:</strong> Ngẫu nhiên Mask một khoảng liên tục của Time dọc theo trục Y.</li>
+</ul>
+
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/audio_mel_spectrogram_visual.png">
+   <img style="height:auto" src="/images/post/audio_specaugment.png">
 </div>
 
 
-<p>Đến đây thì thông tin của Audio đã được thể hiện rất rõ ràng trên hình ảnh của Mel Spectrogram.</p>
-<p><strong>5. Kết luận</strong></p>
-<p>Bài thứ hai trong chuỗi các bài viết về Audio Deep Learning này, chúng ta học cách sử dụng một số thư viện của Python để xử lý Audio Data. Chúng ta cũng tìm hiểu về Mel Spectrogram và cách tạo ra nó. Sử dụng Mel Spectrogram thay thế cho Spectrogram thông thường sẽ mang lại hiệu quả hơn khi đưa vào các Deep Learning model để huấn luyện.</p>
+<p><em><strong>3.2 Raw Audio Augmentation</strong></em></p>
+<p>Một số kỹ thuật:</p>
+<ul>
+<li>
+<p><strong>Time Shift:</strong> dịch chuyển Audio sang trái/phải một đoạn ngẫu nhiên
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_time_shift.png">
+</div>
+
+</p>
+</li>
+<li>
+<p><strong>Pitch Shift:</strong> Thay đổi ngẫu nhiên các tần số thành phần của Audio
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_pitch_shift.png">
+</div>
+
+</p>
+</li>
+<li>
+<p><strong>Time Stretch:</strong> Tăng/giảm tốc độ của âm thanh một cách ngẫu nhiên.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_time_stretch.png">
+</div>
+
+</p>
+</li>
+<li>
+<p><strong>Add Noise:</strong> Thêm nhiễu ngẫu nhiên vào Audio
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_add_noise.png">
+</div>
+
+</p>
+</li>
+</ul>
+<p><strong>4. Kết luận</strong></p>
+<p>Bài thứ ba trong chuỗi các bài viết về Audio Deep Learning này, chúng ta biết thêm về một số Hyperparameters của Mel Spectrogram cần tune để thu được kết quả tốt nhất. Chúng ta cũng biết MFFC là gì và khi nào thì sử dụng nó. Cuối cùng, chúng ta biết các phương pháp, kỹ thuật để tăng cường dữ liệu Audio, giúp Deep Learning models có thể học được tốt hơn.</p>
 <p>Source code bài này mình để ở <a href="https://github.com/tiensu/Audio_Deep_Learning/tree/master/Audio_Classification">đây</a>.</p>
-<p>Ở bài tiếp theo, chúng ta sẽ tìm hiểu một số kỹ thuật nâng cao, cải thiện Audio Data để giúp Deep Learning models học tốt hơn. Mời các bạn đón đọc.</p>
+<p>Ở bài tiếp theo, chúng ta sẽ áp dụng những kỹ thuật đã tìm hiểu ngày hôm nay vào bài toán Audio Classification. Mời các bạn đón đọc.</p>
 <p><strong>6. Tham khảo</strong></p>
-<p>[1] Ketan Doshi, &ldquo;Audio Deep Learning Made Simple (Part 2): Why Mel Spectrograms perform better&rdquo;, Available online: <a href="https://towardsdatascience.com/audio-deep-learning-made-simple-part-2-why-mel-spectrograms-perform-better-aad889a93505">https://towardsdatascience.com/audio-deep-learning-made-simple-part-2-why-mel-spectrograms-perform-better-aad889a93505</a> (Accessed on 20 May 2021).</p>
-<p>[2] Wikipedia, &ldquo;Mel-frequency cepstrum&rdquo;, Available online: <a href="https://en.wikipedia.org/wiki/Mel-frequency_cepstrum">https://en.wikipedia.org/wiki/Mel-frequency_cepstrum</a> (Accessed on 25 May 2021).</p>
+<p>[1] Ketan Doshi, &ldquo;Audio Deep Learning Made Simple (Part 3): Data Preparation and Augmentation&rdquo;, Available online: <a href="https://towardsdatascience.com/audio-deep-learning-made-simple-part-3-data-preparation-and-augmentation-24c6e1f6b52">https://towardsdatascience.com/audio-deep-learning-made-simple-part-3-data-preparation-and-augmentation-24c6e1f6b52</a> (Accessed on 30 May 2021).</p>
+<p>[2] Wikipedia, &ldquo;Discrete Fourier transform&rdquo;, Available online: <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform_cepstrum">https://en.wikipedia.org/wiki/Discrete_Fourier_transform_cepstrum</a> (Accessed on 30 May 2021).</p>
+<p>[3] Wikipedia, &ldquo;Fast Fourier transform&rdquo;, Available online: <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">https://en.wikipedia.org/wiki/Fast_Fourier_transform</a> (Accessed on 30 May 2021).</p>
+<p>[4] Wikipedia, &ldquo;Short-time Fourier transform&rdquo;, Available online: <a href="https://en.wikipedia.org/wiki/Short-time_Fourier_transform">https://en.wikipedia.org/wiki/Short-time_Fourier_transform</a> (Accessed on 30 May 2021).</p>
+<p>[5] Springer, &ldquo;MFCC Features&rdquo;, Available online: <a href="https://link.springer.com/content/pdf/bbm%3A978-3-319-49220-9%2F1.pdf">https://link.springer.com/content/pdf/bbm%3A978-3-319-49220-9%2F1.pdf</a> (Accessed on 30 May 2021).</p>
 
         </div>
 

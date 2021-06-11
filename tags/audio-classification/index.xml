@@ -13,7 +13,7 @@
       <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/69_audio_deep_learning_part_3/</guid>
-      <description>Đây là bài thứ 2 trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tìm hiểu cách xử lý dữ liệu Audio bằng các thư viện của Python.</description>
+      <description>Đây là bài thứ 3 trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tiến thêm một bước sâu hơn là tìm cách nâng cao chất lượng của Mel Spectrogram thông qua tinh chỉnh các Hyper-parameters của nó.</description>
     </item>
     
     <item>

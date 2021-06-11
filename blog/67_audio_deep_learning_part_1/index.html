@@ -248,7 +248,7 @@ Trong miền thời gian, Sound Signal mô tả sự thay đổi của biên đ�
 Trong miền tần số, Sound Signal mô tả sự thay đổi của biên độ theo tần số. Biên độ nằm trên trục tung và tần số nằm trên trục hoành (<em>xem đồ thị bên trên</em>).</li>
 </ul>
 <p><em><strong>3.3 Spectrogram</strong></em></p>
-<p>Ở mục 3.2, ta đã nói đến mỗi liên hệ giữa biên độ với thời gian và biên độ với tần số. Hơn thế nữa, tần số và và thời gian cũng có mối liên hệ với nhau. Đồ thị thể hiện mối liên hệ này gọi là Spectrogram, trong đó, trục X thể hiện thời gian và trục Y thể hiện tần số. Nói một cách dễ hiểu thì Spectrogram thể hiện sự thay đổi của tần số theo thời gian. Không chỉ có vậy, độ lớn của biên độ cũng được Spectrogram thể hiện thông qua màu sắc. Màu sắc càng sáng thì thì biên độ càng lớn và ngược lại.</p>
+<p>Ở mục 3.2, ta đã nói đến mỗi liên hệ giữa biên độ với thời gian và biên độ với tần số. Hơn thế nữa, tần số và và thời gian cũng có mối liên hệ với nhau. Đồ thị thể hiện mối liên hệ này gọi là <a href="https://en.wikipedia.org/wiki/Spectrogram">Spectrogram</a>, trong đó, trục X thể hiện thời gian và trục Y thể hiện tần số. Nói một cách dễ hiểu thì Spectrogram thể hiện sự thay đổi của tần số theo thời gian. Không chỉ có vậy, độ lớn của biên độ cũng được Spectrogram thể hiện thông qua màu sắc. Màu sắc càng sáng thì thì biên độ càng lớn và ngược lại.</p>
 <p>Trong 2 hình bên dưới, hình thứ nhất thể hiện Soung Signal trong miền thời gian. Tại t = 600000, biên độ có giá trị lớn nhất. Hình thứ 2 là Spectrogram của Sound Signal đó. Tương ứng với giá trị lớn nhất của biên độ là vùng màu sắc sáng nhất trên Spectrogram.</p>
 
 
@@ -258,7 +258,7 @@ Trong miền tần số, Sound Signal mô tả sự thay đổi của biên đ�
 
 
 <p>Có thể nói, Spectrogram là cách thể hiện tốt nhất của Sound Signal, dưới dạng một hình ảnh, bởi vì nó mang đầy đủ thông tin về thời gian, tần số và biên độ. Và do vậy, Spectrogram được sử dụng làm dữ liệu đầu vào cho các Deep Learning model, như một <em>bức ảnh</em> thông thường.</p>
-<p>Spectrogram được sinh ra bằng cách áp dụng phép biến đổi Fourier lên một Signal để phân tách Signal đó thành các tần số thành phần. Có lẽ đa số chúng ta đã quên mất cách tính Fourier bằng tay như thế nào, mặc dù chúng ta đã được học ở bậc đại học. Rất may là có một số thư viên của Python sẽ giúp chúng ta thực hiện Fourier Transform một cách dễ dàng.</p>
+<p>Spectrogram được sinh ra bằng cách áp dụng phép biến đổi <a href="https://en.wikipedia.org/wiki/Fourier_transform">Fourier</a> lên một Signal để phân tách Signal đó thành các tần số thành phần. Có lẽ đa số chúng ta đã quên mất cách tính Fourier bằng tay như thế nào, mặc dù chúng ta đã được học ở bậc đại học. Rất may là có một số thư viên của Python sẽ giúp chúng ta thực hiện Fourier Transform một cách dễ dàng.</p>
 <p><strong>4. Audio Deep Learning models</strong></p>
 
 
@@ -355,6 +355,8 @@ Trong miền tần số, Sound Signal mô tả sự thay đổi của biên đ�
 <p><strong>7. Tham khảo</strong></p>
 <p>[1] Ketan Doshi, &ldquo;Audio Deep Learning Made Simple (Part 1): State-of-the-Art Techniques&rdquo;, Available online: <a href="https://towardsdatascience.com/audio-deep-learning-made-simple-part-1-state-of-the-art-techniques-da1d3dff2504">https://towardsdatascience.com/audio-deep-learning-made-simple-part-1-state-of-the-art-techniques-da1d3dff2504</a> (Accessed on 20 May 2021).</p>
 <p>[2] Wikipedia, &ldquo;Định lý lấy mẫu Nyquist–Shannon&rdquo;, Available online: <a href="https://vi.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_l%C3%BD_l%E1%BA%A5y_m%E1%BA%ABu_Nyquist%E2%80%93Shannon">https://vi.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_l%C3%BD_l%E1%BA%A5y_m%E1%BA%ABu_Nyquist%E2%80%93Shannon</a> (Accessed on 20 May 2021).</p>
+<p>[3] Wikipedia, &ldquo;Fourier transform&rdquo;, Available online: <a href="https://en.wikipedia.org/wiki/Fourier_transform">https://en.wikipedia.org/wiki/Fourier_transform</a> (Accessed on 20 May 2021).</p>
+<p>[4] Wikipedia, &ldquo;Spectrogram&rdquo;, Available online: <a href="https://en.wikipedia.org/wiki/Spectrogram">https://en.wikipedia.org/wiki/Spectrogram</a> (Accessed on 20 May 2021).</p>
 
         </div>
 
