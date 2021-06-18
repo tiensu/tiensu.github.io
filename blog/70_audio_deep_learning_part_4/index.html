@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/audio-classification"
+          class="text-primary">Audio Classification</a>
+        
+        <a href="/categories/speech-recognition"
+          class="text-primary">Speech Recognition</a>
+        
+        <a href="/categories/speech-to-text"
+          class="text-primary">Speech To Text</a>
+        
+        <h2>Thực hành huấn luyện Audio Classification model</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>05 June 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/audio_classification.jpg" class="img-fluid w-100 mb-4" alt="Thực hành huấn luyện Audio Classification model">
+        
+        <div class="content mb-5">
+          <p>Đây là bài thứ 4 trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ code thực hành huấn luyện một mô hình phân loại Audio. Chúng ta sẽ đi tuần tự từng bước, từ việc chuẩn bị dữ liệu, xây dựng kiến trúc model, huấn luyện và đánh giá model. Cuối cùng là sử dụng model đã huấn luyện để  dự đoán. Một số hướng mở rộng để nâng cao độ chính xác của model cũng sẽ được đưa ra bàn thảo.</p>
+<p><strong>1. Luồng hoạt động của bài toán Audio Classification</strong></p>
+<p>Tương tự như bài toán Image Classification hay Text Classification, bài toán Audio Classification thông thường sẽ bao gồm các bước xử lý chính như sau:</p>
+<ul>
+<li>Dữ liệu Audio được chuyển sang dạng Spectrogram (<em>hoặc Mel Spectrogram, hoặc MFCC</em>).</li>
+<li>Spectrogram Image được đưa qua mạng CNN để tạo ra Feature Maps.</li>
+<li>Sử dụng Feature Maps làm đầu vào cho bộ phân lớp (<em>FC, SVM, &hellip;</em>) để cho ra kết qủa dự đoán.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_workdflow.png">
+</div>
+
+
+<p><strong>2. Chuẩn bị dữ liệu</strong></p>
+<p><em><strong>2.1 Download dữ liệu</strong></em></p>
+<p>Chúng ta sẽ sử dụng bộ dữ liệu <a href="https://urbansounddataset.weebly.com/urbansound8k.html">Urban Sound 8K</a> trong bài này. Nó bao gồm 10 classes là các loại âm thanh khác nhau như tiếng chó sủa, tiếng còi báo động, tiếng mát khoan, &hellip;</p>
+<p>Sau khi tải về, chúng ta thấy bộ dữ liệu này gồm 2 phần:</p>
+<ul>
+<li>Các Audio files trong 10 sub-folders có tên từ <em>fold1</em> đến <em>fold10</em>. Trong mỗi sub-folders đó đều chứa các Audio files. Ví dụ: <em>fold1/103074-7-1-0.wav</em>. Độ dài của mỗi file Audio khoảng 4s.</li>
+<li>File <em>UrbanSound8K.csv</em> chứa thông tin về mỗi Audio files trong bộ dữ liệu: Tên file, nhãn, &hellip; Nhãn của mỗi file Audio được quy định là theo ID từ 0 đến 9.</li>
+</ul>
+<p><em><strong>2.2 Tiền xử lý dữ liệu</strong></em></p>
+<p>Mọi thông tin về dataset đều nằm trong file UrbanSound8K.csv (<em>metadata file</em>), vì vậy, trước tiên chúng ta đọc nó lên dể xem nó chứa những thông tin gì:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Prepare training data from Metadata file</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+
+data_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/home/sunt/Downloads/UrbanSound8k&#39;</span>
+
+<span style="color:#75715e"># Read metadata file</span>
+metadata_file <span style="color:#f92672">=</span> download_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/UrbanSound8K.csv&#39;</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(metadata_file)
+df<span style="color:#f92672">.</span>head()
+
+<span style="color:#75715e"># Construct file path by concatenating fold and file name</span>
+df[<span style="color:#e6db74">&#39;relative_path&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/fold&#39;</span> <span style="color:#f92672">+</span> df[<span style="color:#e6db74">&#39;fold&#39;</span>]<span style="color:#f92672">.</span>astype(str) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> df[<span style="color:#e6db74">&#39;slice_file_name&#39;</span>]<span style="color:#f92672">.</span>astype(str)
+
+<span style="color:#75715e"># Take relevant columns</span>
+<span style="color:#75715e"># df = df[[&#39;relative_path&#39;, &#39;classID&#39;]]</span>
+df<span style="color:#f92672">.</span>head()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_metadata.png">
+</div>
+
+
+<p>Tiếp theo, chúng ta sẽ thực hiện một số bước tiền xử lý (<em>pre-processing</em>) dữ liệu để sẵn sàng đưa vào model huấn luyện. Quá trình Pre-processing sẽ đuợc thực hiện một cách tự động, cùng lúc với việc đọc các files Audio (<em>thực hiện lúc runtime</em>). Nói một cách dễ hiểu là đọc files Audio đến đâu, thực hiện Pre-processing và đưa vào model huấn luyện đến đó chứ không phải đọc xong toàn bộ files Audio rồi mới thực hiện các bước kia. Cách làm này cũng tương tự như cách chúng ta thường làm với dữ liệu Image, bởi vì cả 2 loại dữ liệu này thường tương đối lớn, nếu đọc hết một lần thì sẽ rất tốn bộ nhớ. Tất nhiên, vì model yêu cầu nhận vào dữ liệu theo từng Batch nên chúng ta cũng sẽ đọc và tiền xử lý dữ liệu theo từng Batch. Như vậy thì trong bộ nhớ lúc nào cũng chỉ có tối đa một Batch dữ liệu, tránh được việc tràn bộ nhớ. Giá trị của Batch, gọi là Batch_size có thể lớn hoặc nhỏ tùy theo kích thước bộ nhớ máy tính xử lý của bạn.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_preprocessing_flow.png">
+</div>
+
+
+<p>Ở bài này, mình sẽ sử dụng Pytorch và thư việ torchaudio để thực hiện. Code cho từng bước lần lượt như sau:</p>
+<ul>
+<li>Đọc Audio files</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math<span style="color:#f92672">,</span> random
+<span style="color:#f92672">import</span> torch
+<span style="color:#f92672">import</span> torchaudio
+<span style="color:#f92672">from</span> torchaudio <span style="color:#f92672">import</span> transforms
+<span style="color:#f92672">from</span> IPython.display <span style="color:#f92672">import</span> Audio
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AudioUtil</span>():
+   <span style="color:#75715e"># ----------------------------</span>
+   <span style="color:#75715e"># Load an audio file. Return the signal as a tensor and the sample rate</span>
+   <span style="color:#75715e"># ----------------------------</span>
+   <span style="color:#a6e22e">@staticmethod</span>
+   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">open</span>(audio_file):
+      sig, sr <span style="color:#f92672">=</span> torchaudio<span style="color:#f92672">.</span>load(audio_file)
+      <span style="color:#66d9ef">return</span> (sig, sr)
+</code></pre></div><ul>
+<li><strong>Convert to two channels</strong></li>
+</ul>
+<p>Một vài files Audio có thể ở dạng một kênh (<em>mono</em>), trong khi đó một số khác ở dạng hai kênh (<em>stereo</em>). Bởi vì model chỉ chấp nhận dữ liệu có cùng kích thước nên chúng ta sẽ chuyển đổi tất cả sang dạng stereo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Convert the given audio to the desired number of channels</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#a6e22e">@staticmethod</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">rechannel</span>(aud, new_channel):
+   sig, sr <span style="color:#f92672">=</span> aud
+
+   <span style="color:#66d9ef">if</span> (sig<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> new_channel):
+      <span style="color:#75715e"># Nothing to do</span>
+      <span style="color:#66d9ef">return</span> aud
+
+   <span style="color:#66d9ef">if</span> (new_channel <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>):
+      <span style="color:#75715e"># Convert from stereo to mono by selecting only the first channel</span>
+      resig <span style="color:#f92672">=</span> sig[:<span style="color:#ae81ff">1</span>, :]
+   <span style="color:#66d9ef">else</span>:
+      <span style="color:#75715e"># Convert from mono to stereo by duplicating the first channel</span>
+      resig <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>cat([sig, sig])
+
+   <span style="color:#66d9ef">return</span> ((resig, sr))
+</code></pre></div><ul>
+<li><strong>Standardize sampling rate</strong></li>
+</ul>
+<p>Tương tự bước thứ 2, các files Audio có thể có Sample Rate khác nhau (<em>48000Hz, 44100Hz, &hellip;</em>). Chúng ta phải đưa tất cả về cùng 1 giá trị của Sample Rate:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Since Resample applies to a single channel, we resample one channel at a time</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#a6e22e">@staticmethod</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">resample</span>(aud, newsr):
+   sig, sr <span style="color:#f92672">=</span> aud
+
+   <span style="color:#66d9ef">if</span> (sr <span style="color:#f92672">==</span> newsr):
+      <span style="color:#75715e"># Nothing to do</span>
+      <span style="color:#66d9ef">return</span> aud
+
+   num_channels <span style="color:#f92672">=</span> sig<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+   <span style="color:#75715e"># Resample first channel</span>
+   resig <span style="color:#f92672">=</span> torchaudio<span style="color:#f92672">.</span>transforms<span style="color:#f92672">.</span>Resample(sr, newsr)(sig[:<span style="color:#ae81ff">1</span>,:])
+   <span style="color:#66d9ef">if</span> (num_channels <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>):
+      <span style="color:#75715e"># Resample the second channel and merge both channels</span>
+      retwo <span style="color:#f92672">=</span> torchaudio<span style="color:#f92672">.</span>transforms<span style="color:#f92672">.</span>Resample(sr, newsr)(sig[<span style="color:#ae81ff">1</span>:,:])
+      resig <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>cat([resig, retwo])
+
+   <span style="color:#66d9ef">return</span> ((resig, newsr))
+</code></pre></div><ul>
+<li><strong>Resize to the same length</strong></li>
+</ul>
+<p>Tiếp tục, chúng ta sẽ thay đổi chiều dài của tất cả các files Audio về chung một giá trị <em>max_length</em>. File có chiều dài nhỏ hơn <em>max_length</em> sẽ được kéo dài bằng cách thêm vào khoảng <em>im lặng - slience</em>. File có chiều dài lớn hơn <em>max_length</em> sẽ được cắt bớt đi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Pad (or truncate) the signal to a fixed length &#39;max_ms&#39; in milliseconds</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#a6e22e">@staticmethod</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pad_trunc</span>(aud, max_ms):
+   sig, sr <span style="color:#f92672">=</span> aud
+   num_rows, sig_len <span style="color:#f92672">=</span> sig<span style="color:#f92672">.</span>shape
+   max_len <span style="color:#f92672">=</span> sr<span style="color:#f92672">//</span><span style="color:#ae81ff">1000</span> <span style="color:#f92672">*</span> max_ms
+
+   <span style="color:#66d9ef">if</span> (sig_len <span style="color:#f92672">&gt;</span> max_len):
+      <span style="color:#75715e"># Truncate the signal to the given length</span>
+      sig <span style="color:#f92672">=</span> sig[:,:max_len]
+
+   <span style="color:#66d9ef">elif</span> (sig_len <span style="color:#f92672">&lt;</span> max_len):
+      <span style="color:#75715e"># Length of padding to add at the beginning and end of the signal</span>
+      pad_begin_len <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">0</span>, max_len <span style="color:#f92672">-</span> sig_len)
+      pad_end_len <span style="color:#f92672">=</span> max_len <span style="color:#f92672">-</span> sig_len <span style="color:#f92672">-</span> pad_begin_len
+
+      <span style="color:#75715e"># Pad with 0s</span>
+      pad_begin <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>zeros((num_rows, pad_begin_len))
+      pad_end <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>zeros((num_rows, pad_end_len))
+
+      sig <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>cat((pad_begin, sig, pad_end), <span style="color:#ae81ff">1</span>)
+   
+   <span style="color:#66d9ef">return</span> (sig, sr)
+</code></pre></div><ul>
+<li><strong>Data Augmentation: Time Shift</strong></li>
+</ul>
+<p>Đến đây, chúng ta đã coi như thực hiện Pre-processing xong dữ liệu thô của Audio. Chúng ta có thể áp dụng kỹ thuật Augmentation ở tại bước này, cụ thể là Time-Shift.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Shifts the signal to the left or right by some percent. Values at the end</span>
+<span style="color:#75715e"># are &#39;wrapped around&#39; to the start of the transformed signal.</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#a6e22e">@staticmethod</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">time_shift</span>(aud, shift_limit):
+   sig,sr <span style="color:#f92672">=</span> aud
+   _, sig_len <span style="color:#f92672">=</span> sig<span style="color:#f92672">.</span>shape
+   shift_amt <span style="color:#f92672">=</span> int(random<span style="color:#f92672">.</span>random() <span style="color:#f92672">*</span> shift_limit <span style="color:#f92672">*</span> sig_len)
+   <span style="color:#66d9ef">return</span> (sig<span style="color:#f92672">.</span>roll(shift_amt), sr)
+</code></pre></div><p>Ngoài Time-Shift, vẫn còn một số kỹ thuật Augmentation khác có thể áp dụng ở đây. Bạn có thể xem lại ở bài số 3 tại <a href="https://tiensu.github.io/blog/69_audio_deep_learning_part_3/">đây</a>.</p>
+<ul>
+<li><strong>Convert to Mel Spectrogram</strong></li>
+</ul>
+<p>Dữ liệu Audio thô sau đó sẽ được chuyển sang dạng Mel Spectrogram. Bạn có thể xem lại lý thuyết về Mel Spectrogram và lý do cần chuyển sang Mel Spectrogram ở bài số 2 tại <a href="https://tiensu.github.io/blog/68_audio_deep_learning_part_2/">đây</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Generate a Spectrogram</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#a6e22e">@staticmethod</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spectro_gram</span>(aud, n_mels<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span>, n_fft<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span>, hop_len<span style="color:#f92672">=</span>None):
+   sig,sr <span style="color:#f92672">=</span> aud
+   top_db <span style="color:#f92672">=</span> <span style="color:#ae81ff">80</span>
+
+   <span style="color:#75715e"># spec has shape [channel, n_mels, time], where channel is mono, stereo etc</span>
+   spec <span style="color:#f92672">=</span> transforms<span style="color:#f92672">.</span>MelSpectrogram(sr, n_fft<span style="color:#f92672">=</span>n_fft, hop_length<span style="color:#f92672">=</span>hop_len, n_mels<span style="color:#f92672">=</span>n_mels)(sig)
+
+   <span style="color:#75715e"># Convert to decibels</span>
+   spec <span style="color:#f92672">=</span> transforms<span style="color:#f92672">.</span>AmplitudeToDB(top_db<span style="color:#f92672">=</span>top_db)(spec)
+   <span style="color:#66d9ef">return</span> (spec)
+</code></pre></div><ul>
+<li><strong>Data Augmentation: Time and Frequency Masking</strong></li>
+</ul>
+<p>Tiếp tục áp dụng thêm một số kỹ thuật Augmentation nữa đối với Mel Spectrogram. Lần này là SpecAugment với 2 phương pháp Time and Frequency Masking.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Augment the Spectrogram by masking out some sections of it in both the frequency</span>
+<span style="color:#75715e"># dimension (ie. horizontal bars) and the time dimension (vertical bars) to prevent</span>
+<span style="color:#75715e"># overfitting and to help the model generalise better. The masked sections are</span>
+<span style="color:#75715e"># replaced with the mean value.</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#a6e22e">@staticmethod</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spectro_augment</span>(spec, max_mask_pct<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, n_freq_masks<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, n_time_masks<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+   _, n_mels, n_steps <span style="color:#f92672">=</span> spec<span style="color:#f92672">.</span>shape
+   mask_value <span style="color:#f92672">=</span> spec<span style="color:#f92672">.</span>mean()
+   aug_spec <span style="color:#f92672">=</span> spec
+
+   freq_mask_param <span style="color:#f92672">=</span> max_mask_pct <span style="color:#f92672">*</span> n_mels
+   <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n_freq_masks):
+      aug_spec <span style="color:#f92672">=</span> transforms<span style="color:#f92672">.</span>FrequencyMasking(freq_mask_param)(aug_spec, mask_value)
+
+   time_mask_param <span style="color:#f92672">=</span> max_mask_pct <span style="color:#f92672">*</span> n_steps
+   <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n_time_masks):
+      aug_spec <span style="color:#f92672">=</span> transforms<span style="color:#f92672">.</span>TimeMasking(time_mask_param)(aug_spec, mask_value)
+
+   <span style="color:#66d9ef">return</span> aug_spec
+</code></pre></div><p><strong>3. Định nghĩa Data Set và Data Loader</strong></p>
+<p>Để đưa dữ liệu vào cho model để huẩn luyện, trong Pytorch, chúng ta cần 2 Objects:</p>
+<ul>
+<li><strong>Dataset object:</strong> Sử dụng tất cả các hàm Pre-processing đã định nghĩa ở trên.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> DataLoader, Dataset, random_split
+<span style="color:#f92672">import</span> torchaudio
+
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Sound Dataset</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SoundDS</span>(Dataset):
+   <span style="color:#66d9ef">def</span> __init__(self, df, data_path):
+      self<span style="color:#f92672">.</span>df <span style="color:#f92672">=</span> df
+      self<span style="color:#f92672">.</span>data_path <span style="color:#f92672">=</span> str(data_path)
+      self<span style="color:#f92672">.</span>duration <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+      self<span style="color:#f92672">.</span>sr <span style="color:#f92672">=</span> <span style="color:#ae81ff">44100</span>
+      self<span style="color:#f92672">.</span>channel <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+      self<span style="color:#f92672">.</span>shift_pct <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.4</span>
+            
+   <span style="color:#75715e"># ----------------------------</span>
+   <span style="color:#75715e"># Number of items in dataset</span>
+   <span style="color:#75715e"># ----------------------------</span>
+   <span style="color:#66d9ef">def</span> __len__(self):
+      <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>df)    
+      
+   <span style="color:#75715e"># ----------------------------</span>
+   <span style="color:#75715e"># Get i&#39;th item in dataset</span>
+   <span style="color:#75715e"># ----------------------------</span>
+   <span style="color:#66d9ef">def</span> __getitem__(self, idx):
+      <span style="color:#75715e"># Absolute file path of the audio file - concatenate the audio directory with</span>
+      <span style="color:#75715e"># the relative path</span>
+      audio_file <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>data_path <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>loc[idx, <span style="color:#e6db74">&#39;relative_path&#39;</span>]
+      <span style="color:#75715e"># Get the Class ID</span>
+      class_id <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>loc[idx, <span style="color:#e6db74">&#39;classID&#39;</span>]
+
+      aud <span style="color:#f92672">=</span> AudioUtil<span style="color:#f92672">.</span>open(audio_file)
+      <span style="color:#75715e"># Some sounds have a higher sample rate, or fewer channels compared to the</span>
+      <span style="color:#75715e"># majority. So make all sounds have the same number of channels and same </span>
+      <span style="color:#75715e"># sample rate. Unless the sample rate is the same, the pad_trunc will still</span>
+      <span style="color:#75715e"># result in arrays of different lengths, even though the sound duration is</span>
+      <span style="color:#75715e"># the same.</span>
+      reaud <span style="color:#f92672">=</span> AudioUtil<span style="color:#f92672">.</span>resample(aud, self<span style="color:#f92672">.</span>sr)
+      rechan <span style="color:#f92672">=</span> AudioUtil<span style="color:#f92672">.</span>rechannel(reaud, self<span style="color:#f92672">.</span>channel)
+
+      dur_aud <span style="color:#f92672">=</span> AudioUtil<span style="color:#f92672">.</span>pad_trunc(rechan, self<span style="color:#f92672">.</span>duration)
+      shift_aud <span style="color:#f92672">=</span> AudioUtil<span style="color:#f92672">.</span>time_shift(dur_aud, self<span style="color:#f92672">.</span>shift_pct)
+      sgram <span style="color:#f92672">=</span> AudioUtil<span style="color:#f92672">.</span>spectro_gram(shift_aud, n_mels<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span>, n_fft<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span>, hop_len<span style="color:#f92672">=</span>None)
+      aug_sgram <span style="color:#f92672">=</span> AudioUtil<span style="color:#f92672">.</span>spectro_augment(sgram, max_mask_pct<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, n_freq_masks<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, n_time_masks<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+
+      <span style="color:#66d9ef">return</span> aug_sgram, class_id
+</code></pre></div><ul>
+<li><strong>DataLoader object:</strong> Sử dụng Dataset object để lấy ra từng dữ liệu, gom thành từng Batch trước khi đưa cho model học.</li>
+</ul>
+<p>Toàn bộ dữ liệu sẽ được chia thành 2 phần train/validation theo tỷ lệ 80/20, sau đó được sử dụng để tạo ra các DataLoader.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_dataloader.png">
+</div>
+
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> random_split
+
+myds <span style="color:#f92672">=</span> SoundDS(df, data_path)
+
+<span style="color:#75715e"># Random split of 80:20 between training and validation</span>
+num_items <span style="color:#f92672">=</span> len(myds)
+num_train <span style="color:#f92672">=</span> round(num_items <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.8</span>)
+num_val <span style="color:#f92672">=</span> num_items <span style="color:#f92672">-</span> num_train
+train_ds, val_ds <span style="color:#f92672">=</span> random_split(myds, [num_train, num_val])
+
+<span style="color:#75715e"># Create training and validation data loaders</span>
+train_dl <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>DataLoader(train_ds, batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, shuffle<span style="color:#f92672">=</span>True)
+val_dl <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>DataLoader(val_ds, batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, shuffle<span style="color:#f92672">=</span>False)
+</code></pre></div><p>Mỗi Batch sẽ bao gồm 2 Tensors, một là Mel Spectrogram và một là nhãn tương ứng. Các Batch được lấy ngẫu nhiên từ tập train thông qua các Epoch. Kích thước của Batch sẽ là: <em>(batch_size, num_chanels, Mel freq_bands, time_steps)</em>.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_batch_shape.png"> 
+</div>
+
+</p>
+<p>Nếu chúng ta thử Visualize một Data Sample trong một Batch lên sẽ được như sau:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_batch_visualization.png"> 
+</div>
+
+</p>
+<p>Ta có thể thấy các đường sọc ngang, dọc. Đó là kết quả của việc áp dụng các kỹ thuật SpecAugment.</p>
+<p>Dữ liệu bây giờ đã sẵn sàng để đưa cho model học tập.</p>
+<p>Toàn bộ quá trình Pre-precessing thông qua Dataset và DataLoader được thể hiện như trong hình dưới đây:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_dataset_dataloader.png">
+</div>
+
+</p>
+<p><strong>4. Tạo model</strong></p>
+<p>Bởi vì dữ liệu huấn luyện là Mel Spectrogram có dạng Image nên chúng ta sẽ xây dựng model bằng cách kết hợp một vài lớp CNN để trích xuất đặc trưng của ảnh và một vài lớp FC làm nhiệm vụ phân loại.
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_model_block.png">
+</div>
+
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> torch.nn.functional <span style="color:#f92672">as</span> F
+<span style="color:#f92672">from</span> torch.nn <span style="color:#f92672">import</span> init
+
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Audio Classification Model</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AudioClassifier</span> (nn<span style="color:#f92672">.</span>Module):
+    <span style="color:#75715e"># ----------------------------</span>
+    <span style="color:#75715e"># Build the model architecture</span>
+    <span style="color:#75715e"># ----------------------------</span>
+    <span style="color:#66d9ef">def</span> __init__(self):
+        super()<span style="color:#f92672">.</span>__init__()
+        conv_layers <span style="color:#f92672">=</span> []
+
+        <span style="color:#75715e"># First Convolution Block with Relu and Batch Norm. Use Kaiming Initialization</span>
+        self<span style="color:#f92672">.</span>conv1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">8</span>, kernel_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">5</span>), stride<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>), padding<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>))
+        self<span style="color:#f92672">.</span>relu1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>ReLU()
+        self<span style="color:#f92672">.</span>bn1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>BatchNorm2d(<span style="color:#ae81ff">8</span>)
+        init<span style="color:#f92672">.</span>kaiming_normal_(self<span style="color:#f92672">.</span>conv1<span style="color:#f92672">.</span>weight, a<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>)
+        self<span style="color:#f92672">.</span>conv1<span style="color:#f92672">.</span>bias<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>zero_()
+        conv_layers <span style="color:#f92672">+=</span> [self<span style="color:#f92672">.</span>conv1, self<span style="color:#f92672">.</span>relu1, self<span style="color:#f92672">.</span>bn1]
+
+        <span style="color:#75715e"># Second Convolution Block</span>
+        self<span style="color:#f92672">.</span>conv2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">16</span>, kernel_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>), stride<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>), padding<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
+        self<span style="color:#f92672">.</span>relu2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>ReLU()
+        self<span style="color:#f92672">.</span>bn2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>BatchNorm2d(<span style="color:#ae81ff">16</span>)
+        init<span style="color:#f92672">.</span>kaiming_normal_(self<span style="color:#f92672">.</span>conv2<span style="color:#f92672">.</span>weight, a<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>)
+        self<span style="color:#f92672">.</span>conv2<span style="color:#f92672">.</span>bias<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>zero_()
+        conv_layers <span style="color:#f92672">+=</span> [self<span style="color:#f92672">.</span>conv2, self<span style="color:#f92672">.</span>relu2, self<span style="color:#f92672">.</span>bn2]
+
+        <span style="color:#75715e"># Second Convolution Block</span>
+        self<span style="color:#f92672">.</span>conv3 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">32</span>, kernel_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>), stride<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>), padding<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
+        self<span style="color:#f92672">.</span>relu3 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>ReLU()
+        self<span style="color:#f92672">.</span>bn3 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>BatchNorm2d(<span style="color:#ae81ff">32</span>)
+        init<span style="color:#f92672">.</span>kaiming_normal_(self<span style="color:#f92672">.</span>conv3<span style="color:#f92672">.</span>weight, a<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>)
+        self<span style="color:#f92672">.</span>conv3<span style="color:#f92672">.</span>bias<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>zero_()
+        conv_layers <span style="color:#f92672">+=</span> [self<span style="color:#f92672">.</span>conv3, self<span style="color:#f92672">.</span>relu3, self<span style="color:#f92672">.</span>bn3]
+
+        <span style="color:#75715e"># Second Convolution Block</span>
+        self<span style="color:#f92672">.</span>conv4 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">64</span>, kernel_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>), stride<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>), padding<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
+        self<span style="color:#f92672">.</span>relu4 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>ReLU()
+        self<span style="color:#f92672">.</span>bn4 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>BatchNorm2d(<span style="color:#ae81ff">64</span>)
+        init<span style="color:#f92672">.</span>kaiming_normal_(self<span style="color:#f92672">.</span>conv4<span style="color:#f92672">.</span>weight, a<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>)
+        self<span style="color:#f92672">.</span>conv4<span style="color:#f92672">.</span>bias<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>zero_()
+        conv_layers <span style="color:#f92672">+=</span> [self<span style="color:#f92672">.</span>conv4, self<span style="color:#f92672">.</span>relu4, self<span style="color:#f92672">.</span>bn4]
+
+        <span style="color:#75715e"># Linear Classifier</span>
+        self<span style="color:#f92672">.</span>ap <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>AdaptiveAvgPool2d(output_size<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+        self<span style="color:#f92672">.</span>lin <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(in_features<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span>, out_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+
+        <span style="color:#75715e"># Wrap the Convolutional Blocks</span>
+        self<span style="color:#f92672">.</span>conv <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(<span style="color:#f92672">*</span>conv_layers)
+ 
+    <span style="color:#75715e"># ----------------------------</span>
+    <span style="color:#75715e"># Forward pass computations</span>
+    <span style="color:#75715e"># ----------------------------</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+        <span style="color:#75715e"># Run the convolutional blocks</span>
+        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>conv(x)
+
+        <span style="color:#75715e"># Adaptive pool and flatten for input to linear layer</span>
+        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>ap(x)
+        x <span style="color:#f92672">=</span> x<span style="color:#f92672">.</span>view(x<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>], <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+
+        <span style="color:#75715e"># Linear layer</span>
+        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>lin(x)
+
+        <span style="color:#75715e"># Final output</span>
+        <span style="color:#66d9ef">return</span> x
+
+<span style="color:#75715e"># Create the model and put it on the GPU if available</span>
+model <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Parallel(AudioClassifier())
+device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
+model <span style="color:#f92672">=</span> myModel<span style="color:#f92672">.</span>to(device)
+<span style="color:#75715e"># Check that it is on Cuda</span>
+next(model<span style="color:#f92672">.</span>parameters())<span style="color:#f92672">.</span>device
+</code></pre></div><p>Ở đây mình có máy tính 2 GPU nên mình sẽ sử dụng đồng thời cả 2 GPU đó để quá trình huấn luyện diễn ra nhanh hơn.</p>
+<p><strong>5. Training</strong></p>
+<p>Có được model rồi, chúng ta cần định nghĩa Optimizer, Loss function, Learning Rate schedule, &hellip; Tất cả có trong hàm Training như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Training Loop</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">training</span>(model, train_dl, num_epochs):
+   <span style="color:#75715e"># Tensorboard</span>
+   writer <span style="color:#f92672">=</span> SummaryWriter()
+   <span style="color:#75715e"># Loss Function, Optimizer and Scheduler</span>
+   criterion <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>CrossEntropyLoss()
+   optimizer <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>Adam(model<span style="color:#f92672">.</span>parameters(),lr<span style="color:#f92672">=</span><span style="color:#ae81ff">0.001</span>)
+   scheduler <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>lr_scheduler<span style="color:#f92672">.</span>OneCycleLR(optimizer, max_lr<span style="color:#f92672">=</span><span style="color:#ae81ff">0.001</span>,
+                                                steps_per_epoch<span style="color:#f92672">=</span>int(len(train_dl)),
+                                                epochs<span style="color:#f92672">=</span>num_epochs,
+                                                anneal_strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;linear&#39;</span>)
+
+  <span style="color:#75715e"># Repeat for each epoch</span>
+  <span style="color:#66d9ef">for</span> epoch <span style="color:#f92672">in</span> range(num_epochs):
+      running_loss <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>
+      correct_prediction <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+      total_prediction <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+      <span style="color:#75715e"># Repeat for each batch in the training set</span>
+      <span style="color:#66d9ef">for</span> i, data <span style="color:#f92672">in</span> enumerate(train_dl):
+         <span style="color:#75715e"># Get the input features and target labels, and put them on the GPU</span>
+         inputs, labels <span style="color:#f92672">=</span> data[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>to(device), data[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>to(device)
+
+         <span style="color:#75715e"># Normalize the inputs</span>
+         inputs_m, inputs_s <span style="color:#f92672">=</span> inputs<span style="color:#f92672">.</span>mean(), inputs<span style="color:#f92672">.</span>std()
+         inputs <span style="color:#f92672">=</span> (inputs <span style="color:#f92672">-</span> inputs_m) <span style="color:#f92672">/</span> inputs_s
+
+         <span style="color:#75715e"># Zero the parameter gradients</span>
+         optimizer<span style="color:#f92672">.</span>zero_grad()
+
+         <span style="color:#75715e"># forward + backward + optimize</span>
+         outputs <span style="color:#f92672">=</span> model(inputs)
+         loss <span style="color:#f92672">=</span> criterion(outputs, labels)
+         loss<span style="color:#f92672">.</span>backward()
+         optimizer<span style="color:#f92672">.</span>step()
+         scheduler<span style="color:#f92672">.</span>step()
+
+         <span style="color:#75715e"># Keep stats for Loss and Accuracy</span>
+         running_loss <span style="color:#f92672">+=</span> loss<span style="color:#f92672">.</span>item()
+
+         <span style="color:#75715e"># Get the predicted class with the highest score</span>
+         _, prediction <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>max(outputs,<span style="color:#ae81ff">1</span>)
+         <span style="color:#75715e"># Count of predictions that matched the target label</span>
+         correct_prediction <span style="color:#f92672">+=</span> (prediction <span style="color:#f92672">==</span> labels)<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>item()
+         total_prediction <span style="color:#f92672">+=</span> prediction<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+
+         <span style="color:#75715e">#if i % 10 == 0:    # print every 10 mini-batches</span>
+         <span style="color:#75715e">#    print(&#39;[%d, %5d] loss: %.3f&#39; % (epoch + 1, i + 1, running_loss / 10))</span>
+    
+   <span style="color:#75715e"># Print stats at the end of the epoch</span>
+   num_batches <span style="color:#f92672">=</span> len(train_dl)
+   avg_loss <span style="color:#f92672">=</span> running_loss <span style="color:#f92672">/</span> num_batches
+   avg_acc <span style="color:#f92672">=</span> correct_prediction<span style="color:#f92672">/</span>total_prediction
+   writer<span style="color:#f92672">.</span>add_scalar(<span style="color:#e6db74">&#34;Loss/train&#34;</span>, avg_loss, epoch)
+   writer<span style="color:#f92672">.</span>add_scalar(<span style="color:#e6db74">&#34;Acc/train&#34;</span>, avg_acc, epoch)
+   <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;Epoch: {epoch}, Loss: {avg_loss:.2f}, Accuracy: {acc:.2f}&#39;</span>)
+
+   <span style="color:#75715e"># Save model</span>
+   torch<span style="color:#f92672">.</span>save(model<span style="color:#f92672">.</span>state_dict(), <span style="color:#e6db74">&#39;model.pt&#39;</span>)
+
+   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Finished Training&#39;</span>)
+</code></pre></div><p>Chúng ta sẽ tiến hành huấn luyện model với 100 epochs:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">num_epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>
+training(myModel, train_dl, num_epochs)
+</code></pre></div><p>Sau 100 epochs, chúng ta thu được kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Epoch: <span style="color:#ae81ff">0</span>, Loss: <span style="color:#ae81ff">2.22</span>, Accuracy: <span style="color:#ae81ff">0.19</span>
+Epoch: <span style="color:#ae81ff">1</span>, Loss: <span style="color:#ae81ff">2.10</span>, Accuracy: <span style="color:#ae81ff">0.27</span>
+<span style="color:#f92672">...</span>
+Epoch: <span style="color:#ae81ff">98</span>, Loss: <span style="color:#ae81ff">0.31</span>, Accuracy: <span style="color:#ae81ff">0.90</span>
+Epoch: <span style="color:#ae81ff">99</span>, Loss: <span style="color:#ae81ff">0.31</span>, Accuracy: <span style="color:#ae81ff">0.90</span>
+Finished Training
+</code></pre></div><p>Và đồ thị Training Loss, Training Acc trên Tensorboard:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_model_acc.png">
+</div>
+
+</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/audio_model_loss.png">
+</div>
+
+
+<p><strong>6. Inference</strong></p>
+<p>Tiếp theo, chúng ta sử dụng model đã lưu đề tiến hành dự đoán và đánh giá độ chính xác trên tập Test.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># ----------------------------</span>
+<span style="color:#75715e"># Inference</span>
+<span style="color:#75715e"># ----------------------------</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inference</span> (model, test_dl):
+    correct_prediction <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    total_prediction <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#75715e"># Disable gradient updates</span>
+    <span style="color:#66d9ef">with</span> torch<span style="color:#f92672">.</span>no_grad():
+        <span style="color:#66d9ef">for</span> data <span style="color:#f92672">in</span> test_dl:
+            <span style="color:#75715e"># Get the input features and target labels, and put them on the GPU</span>
+            inputs, labels <span style="color:#f92672">=</span> data[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>to(device), data[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>to(device)
+
+            <span style="color:#75715e"># Normalize the inputs</span>
+            inputs_m, inputs_s <span style="color:#f92672">=</span> inputs<span style="color:#f92672">.</span>mean(), inputs<span style="color:#f92672">.</span>std()
+            inputs <span style="color:#f92672">=</span> (inputs <span style="color:#f92672">-</span> inputs_m) <span style="color:#f92672">/</span> inputs_s
+
+            <span style="color:#75715e"># Get predictions</span>
+            outputs <span style="color:#f92672">=</span> model(inputs)
+
+            <span style="color:#75715e"># Get the predicted class with the highest score</span>
+            _, prediction <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>max(outputs,<span style="color:#ae81ff">1</span>)
+            <span style="color:#75715e"># Count of predictions that matched the target label</span>
+            correct_prediction <span style="color:#f92672">+=</span> (prediction <span style="color:#f92672">==</span> labels)<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>item()
+            total_prediction <span style="color:#f92672">+=</span> prediction<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+        
+    acc <span style="color:#f92672">=</span> correct_prediction<span style="color:#f92672">/</span>total_prediction
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;Accuracy: {acc:.2f}, Total items: {total_prediction}&#39;</span>)
+
+<span style="color:#75715e"># Run inference on trained model with the validation set load best model weights</span>
+model_inf <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>DataParallel(AudioClassifier())
+device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
+model_inf <span style="color:#f92672">=</span> model_inf<span style="color:#f92672">.</span>to(device)
+model_inf<span style="color:#f92672">.</span>load_state_dict(torch<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;model.pt&#39;</span>))
+model_inf<span style="color:#f92672">.</span>eval()
+
+inference(model_inf, val_dl)
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.90</span>, Total items: <span style="color:#ae81ff">1746</span>
+</code></pre></div><p>Trên tập Test, độ chính xác vẫn đạt đuọc 90%. Điều này chứng tỏ model của chúng ta hoạt động khá tốt, không bị hiện tượng Overfitting.</p>
+<p><strong>7. Hướng mở rộng</strong></p>
+<p>Kết quả đạt được của chúng ta đã khá tốt rồi, tuy nhiên vẫn còn một số hướng có khả năng sẽ làm cho kết quả tốt hơn. Nếu gặp bài toán Audio Classification trong thực tế, bạn có thể thử áp dụng những cách này xem độ chính xác của model có được cải thiện thêm không nhế.</p>
+<p><em><strong>7.1 Thay thế kiến trúc CNN model khác</strong></em></p>
+<p>Ở đây, chúng ta đang tự xây dựng kiến trúc CNN model. Như bạn đã biết, có khá nhiều kiến trúc CNN model kinh điển cho bài toán Image Classification như VGG, ResNet, InceptionNet, &hellip; Hãy thử với các kiến trúc này hoặc huấn luyện từ đầu hoặc sử dụng Transfer Learing &hellip;</p>
+<p><em><strong>7.2 Thay đổi Audio Features</strong></em></p>
+<p>Như bài trước đã phân tích, Audio Features có thể ở dạng Mel Spectrogram hoặc MFCCs. Bài này chúng ta đã sử dụng Mel Spectrogram rồi, còn lại MFCC là dành cho các bạn thử.</p>
+<p><em><strong>7.3 Mel Spectrogram Hyper-parameters Tuning</strong></em></p>
+<p>Để tạo ra Mel Spectrogram, chúng ta cần cung cấp một số Hyper-parameters. Giá trị của các Hyper-parameters này ảnh hưởng ít nhiều đến Mel Spectrogram được tạo ra, từ đó ảnh hưởng đến kết quả của model. Hãy thử Tune các Hyper-parameters của Mel Spectrogram xem sao nhé. Tham khảo thêm tại <a href="https://wandb.ai/jhartquist/fastaudio-esc-50/reports/Fine-Tuning-ResNet-18-for-Audio-Classification--VmlldzoyOTAyMzc">đây</a>.</p>
+<p><em><strong>7.4 Áp dụng phương pháp k-Fold Cross Validation</strong></em></p>
+<p>k-Fold Cross Validation vẫn là một trong những phương pháp khá hiệu quả đổi với các bài toán có sự mất cân bằng về dữ liệu. Dataset sử dụng trong bài này cũng được phân ra thành 10 folds, ngụ ý rằng nên sử dụng phương pháp k-Fold Cross Validation đối với nó để có được kết quả tốt hơn. Code cho phương pháp này mình cũng đã viết nhưng chưa có thời gian chạy thử để so sánh.</p>
+<p><strong>8. Kết luận</strong></p>
+<p>Bài thứ tư trong chuỗi các bài viết về Audio Deep Learning này, chúng ta đã cùng nhau thực hiện code hoàn chỉnh bài toán Audio Classification. Một số hướng tiếp cận mở rộng cũng được đưa ra để các bạn nghiên cứu thêm.</p>
+<p>Source code bài này mình để ở <a href="https://github.com/tiensu/Audio_Deep_Learning/tree/master/Audio_Classification">đây</a>.</p>
+<p>Trong bài thứ 5 tiếp theo, chúng ta sẽ thảo luận về bài toán Audio Recognition. Mời các bạn đón đọc.</p>
+<p><strong>9. Tham khảo</strong></p>
+<p>[1] Ketan Doshi, &ldquo;Audio Deep Learning Made Simple (Part 3): Data Preparation and Augmentation&rdquo;, Available online: <a href="https://towardsdatascience.com/audio-deep-learning-made-simple-sound-classification-step-by-step-cebc936bbe5">https://towardsdatascience.com/audio-deep-learning-made-simple-sound-classification-step-by-step-cebc936bbe5</a> (Accessed on 05 Jun 2021).</p>
+<p>[2] Scott Duda, &ldquo;Urban Environmental Audio Classification Using Mel Spectrograms&rdquo;, Available online: <a href="https://scottmduda.medium.com/urban-environmental-audio-classification-using-mel-spectrograms-706ee6f8dcc1">https://scottmduda.medium.com/urban-environmental-audio-classification-using-mel-spectrograms-706ee6f8dcc1</a> (Accessed on 05 Jun 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
