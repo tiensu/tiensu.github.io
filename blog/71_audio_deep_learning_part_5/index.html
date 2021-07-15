@@ -164,14 +164,14 @@
           <span>By SuNT</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>05 June 2021</span>
+          <span>15 June 2021</span>
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/audio_classification.jpg" class="img-fluid w-100 mb-4" alt="Tìm hiểu bài toán Automatic Speech Recognition (ASR)">
+        <img src="https://tiensu.github.io/images/featured-post/71_stt.png" class="img-fluid w-100 mb-4" alt="Tìm hiểu bài toán Automatic Speech Recognition (ASR)">
         
         <div class="content mb-5">
-          <p>Đây là bài thứ 5 trong chuỗi 6 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tìm hiểu về bài toán Automatic Speech Recognition (ASR) hay Speech-to-Text: kiến trúc, cách thức làm việc, &hellip;</p>
+          <p>Đây là bài cuối cùng trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tìm hiểu về bài toán Automatic Speech Recognition (ASR) hay Speech-to-Text: kiến trúc, cách thức làm việc, &hellip;</p>
 <p>Có lẽ chúng ta không còn quá xa lạ với một số ứng dụng như Siri, Alexa, Google Home, Cortana, &hellip; Chúng đều là các ứng dụng dựa trên bài toán ASR.</p>
 <p><strong>1. Speech to Text</strong></p>
 <p>Như chúng ta đều biết, tiếng nói của con người là một thứ tồn tại hàng ngày xung quanh chúng ta. Trong một số trường hợp, chúng ta cần phải chuyển đổi những giọng nói đó thành văn bản (<em>transcribe</em>) đề có thể xử lý tốt hơn. Ví dụ: ghi chép nội dụng trong một cuộc họp, tổng đài hỗ trợ tự động, &hellip;</p>
@@ -279,7 +279,7 @@ Kiến trúc này chỉ sử dụng mạng RNN SeqSeq, sử dụng Input là cá
 <p>Ví dụ, trong hình bên trên thì:
 
 
-<div style="text-align:center">
+<div style="text-align-last:center">
    <p>$WER = \frac{Detetion + Insertion + Substitution}{\sum{Characters/Words}} = \frac{1 + 1 + 1}{6} = 0.5$</p>
 </div>
 
@@ -291,7 +291,7 @@ Kiến trúc này chỉ sử dụng mạng RNN SeqSeq, sử dụng Input là cá
 <p>Nói chung, sau khi đánh giá model, WER đã thỏa mãn yêu cầu (<em>&gt; giá trị ngưỡng, 0.8 chẳng hạn</em>) thì bài toán ASR coi như đã được giải quyết xong. ASR mặc dù đã sinh ra văn bản từ giọng nói nhưng nó không hiểu gì về ngữ nghĩa của văn bản đó cả. Kết quả của ASR thường được sử dụng làm Input cho các bài toán khác trong lĩnh vực NLP: sinh văn bản mới, phân loại văn bản, tự động trả lời, &hellip;</p>
 <p><strong>7. Kết luận</strong></p>
 <p>Như vậy là chúng ta đã kết thúc bài thứ 5 tại đây. Qua bài này, chúng ta đã hiểu được phần nào rõ hơn về bài toán ASR, từ kiến trúc cho đến cách làm việc</p>
-<p>Trong bài tiếp theo, bài cuối cùng trong chuỗi bài về Audio Deep Learning, chúng ta sẽ tìm hiểu một số thuật toán, kiến trúc mô hình của bài toán tổng hợp tiếng nói - Speech Synthesis hay Text-to-Speech. Mời các bạn đón đọc.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ chuyển sang một chủ đề mới, đó là bài toán Recommender System. Mời các bạn đón đọc.</p>
 <p><strong>8. Tham khảo</strong></p>
 <p>[1] Ketan Doshi, &ldquo;Audio Deep Learning Made Simple: Automatic Speech Recognition (ASR), How it Works&rdquo;, Available online: <a href="https://towardsdatascience.com/audio-deep-learning-made-simple-automatic-speech-recognition-asr-how-it-works-716cfce4c706">https://towardsdatascience.com/audio-deep-learning-made-simple-automatic-speech-recognition-asr-how-it-works-716cfce4c706</a> (Accessed on 05 Jun 2021).</p>
 <p>[2] Scott Duda, &ldquo;Urban Environmental Audio Classification Using Mel Spectrograms&rdquo;, Available online: <a href="https://scottmduda.medium.com/urban-environmental-audio-classification-using-mel-spectrograms-706ee6f8dcc1">https://scottmduda.medium.com/urban-environmental-audio-classification-using-mel-spectrograms-706ee6f8dcc1</a> (Accessed on 05 Jun 2021).</p>
@@ -419,6 +419,9 @@ Kiến trúc này chỉ sử dụng mạng RNN SeqSeq, sử dụng Input là cá
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/rnn">RNN</a>

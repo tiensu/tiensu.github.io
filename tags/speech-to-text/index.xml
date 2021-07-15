@@ -6,7 +6,25 @@
     <description>Recent content in Speech-to-Text on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/speech-to-text/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/speech-to-text/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tìm hiểu bài toán Automatic Speech Recognition (ASR)</title>
+      <link>https://tiensu.github.io/blog/72_audio_deep_learning_part_6./</link>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/72_audio_deep_learning_part_6./</guid>
+      <description>Đây là bài cuối cùng trong chuỗi 6 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tổng hợp lại các kiến trúc mô hình DL để giải quyết bài toán Speech Synthesis.</description>
+    </item>
+    
+    <item>
+      <title>Tìm hiểu bài toán Automatic Speech Recognition (ASR)</title>
+      <link>https://tiensu.github.io/blog/71_audio_deep_learning_part_5/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/71_audio_deep_learning_part_5/</guid>
+      <description>Đây là bài cuối cùng trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tìm hiểu về bài toán Automatic Speech Recognition (ASR) hay Speech-to-Text: kiến trúc, cách thức làm việc, &amp;hellip;</description>
+    </item>
+    
     <item>
       <title>Thực hành huấn luyện Audio Classification model</title>
       <link>https://tiensu.github.io/blog/70_audio_deep_learning_part_4/</link>
@@ -14,15 +32,6 @@
       
       <guid>https://tiensu.github.io/blog/70_audio_deep_learning_part_4/</guid>
       <description>Đây là bài thứ 4 trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ code thực hành huấn luyện một mô hình phân loại Audio.</description>
-    </item>
-    
-    <item>
-      <title>Tìm hiểu bài toán Automatic Speech Recognition (ASR)</title>
-      <link>https://tiensu.github.io/blog/71_audio_deep_learning_part_5/</link>
-      <pubDate>Sat, 05 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/blog/71_audio_deep_learning_part_5/</guid>
-      <description>Đây là bài thứ 5 trong chuỗi 6 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tìm hiểu về bài toán Automatic Speech Recognition (ASR) hay Speech-to-Text: kiến trúc, cách thức làm việc, &amp;hellip;</description>
     </item>
     
     <item>
