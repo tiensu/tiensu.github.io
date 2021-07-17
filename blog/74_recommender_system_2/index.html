@@ -153,170 +153,218 @@
         <a href="/categories/recommender-system"
           class="text-primary">Recommender System</a>
         
-        <h2>Giới thiệu các phương pháp truyền thống xây dựng Recommender System</h2>
+        <h2>Tìm hiểu bài toán Recommender System - Phần 1</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>25 June 2021</span>
+          <span>05 July 2021</span>
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/73_recommender_system.jpg" class="img-fluid w-100 mb-4" alt="Giới thiệu các phương pháp truyền thống xây dựng Recommender System">
+        <img src="https://tiensu.github.io/images/featured-post/74_recommender_system.png" class="img-fluid w-100 mb-4" alt="Tìm hiểu bài toán Recommender System - Phần 1">
         
         <div class="content mb-5">
-          <p>Chúng ta sẽ chuyển sang tìm hiểu một chủ đề mới, đó là các hệ thống khuyến nghị - Recommender System (RS).</p>
-<p>Ngày nay, RS rất phổ biến trong cuộc sống của chúng ta. Khi xem Youtube, lướt Facebook, mua hàng trên Amazon hay Tiki, xem phim trên Netflix, chúng ta đều được đưa ra các gợi ý về những thứ mà chúng ta có thể quan tâm&hellip; Có thể nói, RS là ứng dụng quan trọng nhất của AI vào lĩnh vực giải trí và Maketing.</p>
-<p>Trong chuỗi 4 bài tiếp theo ngay sau đây, chúng ta sẽ cùng tìm hiểu kỹ càng hơn về các thuật toán mà RS sử dụng, đồng thời sẽ thực hành một số thuật toán đó. Các bài viết bao gồm:</p>
-<ul>
-<li>Bài 1: Giới thiệu các phương pháp truyền thống xây dựng Recommender System</li>
-<li>bài 2: Xây dựng Recommender System bằng phương pháp Content-Based Filtering</li>
-<li>Bài 3: Giới thiệu phương pháp Deep Learning trong xây dựng Recommender System</li>
-<li>Bài 4: Xây dựng Recommender System bằng phương pháp Deep Learning</li>
-</ul>
-<p><strong>1. Phân loại thông tin sử dụng trong RS</strong></p>
-<p>Trong RS, có 2 đối tượng quan trọng nhất là khách hàng (<em>Users</em>) và sản phẩm (<em>Items</em>). Thông tin về 2 đối tượng này được sử dụng làm Input Data để tạo nên các RS. Dựa vào tính chất của chúng mà ta có thể phân loại như sau:</p>
-<ul>
-<li>Explicit Information: Là những thông tin được thể hiện một các rõ ràng, tường mình. Đó có thể là các thông tin về sự tương tác giữa Users-Items như hành vi click và nút Like/Dislike hoặc cho điểm (<em>ratting</em>) Items. Hoặc thông tin về bản thân Users/Items (<em>User Profile - Item Profile</em>).</li>
-<li>Implicit Information: Ngược lại với Explicit Information, đây là các thông tin mà không được thể hiện một các cụ thể, rõ ràng. Đó là khi User truy cập, tìm kiếm, bình luận, &hellip; và một Item cụ thể. Từ đó, hệ thống sẽ ghi nhận rằng User đang quan tâm đến Item đó.</li>
-</ul>
-<p><strong>2. Các phương pháp RS truyền thống</strong></p>
-<p>Hai phương pháp RS phổ biến mà có thể bạn đã biết là: Content-Based Filtering và Collaborative Filtering. Ngoài ra, có thể kết hợp 2 phương pháp này lại, tạo ra một phương pháp mới gọi là Hybrid Filtering.</p>
+          <p>Đây là bài thứ 2 trong chuỗi bài viết về Recommender System. Trong bài này, chúng ta sẽ thực hành xây dựng một RS sử dụng phương pháp Content-Based Filtering.</p>
+<p><strong>1. Đặt vấn đề</strong></p>
+<p>Một website bán sách muốn tăng doanh số bán hàng. Họ muốn bạn - 1 Data Scientist giúp họ xây dựng một RS để đề xuất các cuốn sách cho người dùng mỗi khi họ ghé vào website của họ. Sau khi xem xét kỹ yêu cầu bài toán và dữ liệu hiện có, bạn quyết định xây dựng RS theo phương pháp Content-Based Filtering.</p>
+<p>Sơ đồ các bước tiến hành sẽ như sau:</p>
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/73_rs_methods.png">
+   <img style="height:auto" src="/images/post/74_rs_overall.jpg">
 </div>
 
 
-<p><em><strong>2.1 Phương pháp Content-Based Filtering</strong></em></p>
-<p>Đây là phương pháp đơn giản nhất, hầu như chỉ dựa trên thông tin User Profile và Item Profile. Ý tưởng cơ bản của nó là nếu một User A đã từng quan tâm đến một Item X trong quá khứ thì khả năng cao là A cũng sẽ quan tâm đến Item Y nếu Y tương tự X.</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/73_rs_content-based.png">
-</div>
-
-
-<p>User Profile được xây dựng dần dần theo thời gian sử dụng Explicit Information.</p>
-<p>Một số Metrics đo độ Tương tự (Similarity) giữa 2 Items</p>
-<p>Để đánh giá mức độ Similarity giữa 2 Items, chúng ta có thể sử dụng một trong các Metrics sau:</p>
+<p>Ở đây, phần RS Engine sẽ bao gồm 2 nhiệm vụ:</p>
 <ul>
-<li>Cosin Similarity:</li>
+<li>Nhiệm vụ 1: Sử dụng Cosine Similarity để tìm ra danh sách 10 cuốn sách có mức độ tương tự gần với cuốn sách mà ta đưa vào RS nhất.</li>
+<li>Nhiệm vụ 2: Sử dụng những hiểu biết về lĩnh vực sách để đưa ra gợi ý khi đưa vào RS một cuốn sách, làm cho kết quả mang tính <em>đa dạng</em> hơn.</li>
 </ul>
-<p>Công thức tính Cosin Similarity giữa 2 vector A và B như sau:</p>
+<p><strong>2. Chuẩn bị dữ liệu</strong></p>
+<p>Download dữ liệu tại <a href="https://github.com/allenjiang/Mona-Lisa-AI/tree/master/Books%20Data">đây</a>.</p>
+<p>Thông tin về sách đựợc lưu trong các files: books.csv, book_tags.csv, tags.csv. Chúng ta sẽ khám phá từng file:</p>
 
 
-<div style="text-align-last:center">
-   <p>$sim(A,B) = cos(\theta) = \frac{A.B}{\begin{Vmatrix}A\end{Vmatrix}  \begin{Vmatrix}B\end{Vmatrix}}$</p>
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_1.png">
 </div>
 
 
-<p>Trong đó, $A$ và $B$ là 2 Profile Vector của 2 Items, $\theta$ là góc giữa chúng.</p>
-<p>Cosin Similarity có giá trị nằm trong khoảng [-1,1]. Càng gần 1 thì 2 Items càng giống nhau. Chúng ta có thể chọn n-Items từ danh sách giảm dần mức độ Similarity hoặc lấy các Items mà mức độ Similarity lớn hơn giá trị ngưỡng.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_2.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_3.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_4.png">
+</div>
+
+
+<p>Ta thấy rằng có tổng cộng 10.000 cuốn sách, và trường <em>book_tags</em> của mỗi cuốn sách chứa đựng nhiều về cuốn sách đó. Vì thế, chúng ta sẽ sử dụng thông tin này đề xây dựng RS.</p>
+<p>Vì các thông tin <em>book_id, tag_id, tag_name, &hellip;</em> nằm rải rác ở các file csv khác nhau nên ta sẽ tiến hành gom chúng lại với nhau.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_5.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_6.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_7.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_8.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_9.png">
+</div>
+
+
+<p>Đến đây, chúng ta đã có đầy đủ thông tin cần thiết về các cuốn sách trong một DataFrame là <em>books</em>.</p>
+<p><strong>3. Transform Data</strong></p>
+<p>Như đã phân tích ở trên, chúng ta sẽ sử dụng thông tin <em>tag_name</em> làm cơ sở cho việc tính toán mức độ tương tự giữa các cuốn sách.</p>
+<p>Hãy xem thử, <em>tag_name</em> đang như thế nào?</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_10.png">
+</div>
+
+
+<p>Chúng ta cần phải chuyển đổi các thông tin này từ dạng Text sang dạng Number để làm Input cho việc tính toán. Việc này được gọi là Word Embedding. Mỗi cuốn sách sẽ được chuyển đổi tương ứng thành một Vector, gọi là Vector Embedding. Có rất nhiều thuật toán giúp chúng ta thực hiện nhiệm vụ này: CountVectorizing, TF-IDF, Glove, Word2Vec, BERT, &hellip; Trong bài này, chúng ta sẽ sử dụng TF-IDF trong thư viện Scikit-learn như dưới đây:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_11.png">
+</div>
+
+
+<p>TFIDF (<em>Term Frequency - Inverse Document Frequency</em>) tính toán mức độ <em>quan trọng</em> của mỗi từ dưạ trên tần suất xuất hiện và mối liên hệ với các từ khác trong toàn bộ đoạn văn bản. Vector Embedding của mỗi cuốn sách là một hàng trong TF-IDF vector.</p>
+<p><strong>4. Xây dựng RS Engine</strong></p>
+<p>Như đã nói ở bên trên, sẽ có 2 nhiệm vụ trong bước này:</p>
 <ul>
-<li>Euclidean Distance:</li>
+<li>Nhiệm vụ 1:</li>
 </ul>
-<p>Công thức tính Euclidean Distance giữa 2 vector $A(x_1, x_2, &hellip;, x_n)$ và $B(y_1, y_2, &hellip;, y_n)$ như sau:</p>
-
-
-<div style="text-align-last:center">
-   <p>$ED(A,B) = \sqrt{(x_1 - y_1)^2 + (x_2 - y_2)^2 + ... + (x_n - y_n)^2}$</p>
-</div>
-
-
-<p>Euclidean Distance có giá trị &gt; 0 và càng nhỏ thì 2 vectors càng giống nhau. So với Cosin Similarity, việc tính toán Euclidean Distance khá chậm, đặc biệt là trong trường hợp số chiều của các vectors lớn.</p>
-<p><em><strong>2.2 Phương pháp Collaborative Filtering</strong></em></p>
-<p>Phương pháp này sử dụng mối quan hệ giữa User-User, Item-Item và User-Item để đưa ra các đề xuất.</p>
+<p>Chúng ta cần tính mức độ tương tự nhau giữa các Vector Embedding của các cuốn sách. Như đã giới thiệu ở bài trước, chúng ta có thể sử dụng Cosine Similarity hoặc Euclidean Distance. Mình sẽ chọn Cosine Similarity để thực hiện. Thư viện Scikit-learn đã hỗ trợ chúng ta việc này.</p>
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/73_rs_collaborative_filtering.png">
+   <img style="height:auto" src="/images/post/74_rs_12.png">
 </div>
 
 
-<p>Collaborative Filtering được chia thành 2 phương pháp:</p>
+<p>Nếu zoom to lên một phần của ma trân Cosine Similarity ta sẽ thấy như sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_13.jpg">
+</div>
+
+
+<p>Giá trị tại điểm giao nhau giữa hàng và cột trong ma trận này chính là thể hiện mức độ tương tự nhau của 2 cuốn sách nằm trên hàng và cột đó.</p>
+<p>Tiếp theo, chúng ta sẽ viết code để lấy ra được danh sách các cuốn sách được đề xuất khi đưa vào RS tên một cuốn sách:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_13.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_14.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_15.png">
+</div>
+
+
+<p>Chúng ta sẽ kiểm tra luôn kết quả của nhiệm vụ 1. Ta đưa vào RS một cuốn sách có tên <em>The Fellowship of the Ring (The Lord of the Rings, #1)</em>, kết quả nhận được như sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_16.png">
+</div>
+
+
+<p>Chúng ta nhận đuọc một danh sách gồm 10 cuốn sách có mức độ tương tự lớn nhất với cuốn sách mà ta đưa vào cho RS. Mình cũng thử lên Amazon, thử chọn mua cuốn sách cùng tên thì thật thú vị là Amazon cũng gọi ý cho mình 10 cuốn sách gần giống như kết quả của RS mà ta vừa xây dựng. Chứng tỏ rằng RS của chúng ta hoạt động khá hiệu quả.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/74_rs_17.jpg">
+</div>
+
+
 <ul>
-<li>
-<p><strong>Memory-based</strong>: Phương pháp này còn được gọi là thuật toán Collaborative Filtering dựa trên vùng lân cận. Các vùng lân cận này có thể được xác định theo một trong hai cách:</p>
-<ul>
-<li>User-based Collaborative Filtering: Ý tưởng là phân chia các Users tương tự nhau vào chung một nhóm. Nếu một User bất kỳ trong nhóm thích một Item nào đó thì Item đó sẽ được đề xuất cho toàn bộ các Users khác trong nhóm đó.</li>
-<li>Item-Item Collaborative Filtering: Ý tưởng là phân chia Items tương tự nhau vào chung một nhóm. Nếu một User thích bất kỳ một Item nào trong nhóm đó thì tất cả các Item còn lại trong cùng nhóm sẽ được đề xuất cho User đó. Nghe qua ý tưởng thì có vẻ Item-Item Collaborative Filtering rất giống với ý tưởng của  phương pháp Content-Based Filtering. Và quả thực đúng là như vậy. Tuy nhiên, sự khác nhau ở đây là cách thức để tìm ra các Items tương tự nhau. Đối với Content-Based Filtering, ta sử dụng chính đặc điểm (<em>Profile</em>) của các Items để tính toán mức độ Similarity giữa chúng. Còn đối với Item-Item Collaborative Filtering, độ Similarity được tính dựa trên Utility Matrix mà sẽ được đề cập dưới đây.</li>
+<li>Nhiệm vụ 2:</li>
 </ul>
-</li>
-<li>
-<p><strong>Model-based</strong>:  Phương pháp này sử dụng các thuật toán ML như PCA, Clustering, SVD, Matrix Factorisation, &hellip; để dự đoán các giá trị Rating còn thiếu của User đối với Item.</p>
-</li>
-</ul>
-<p>Tất cả các cách/phương pháp của Collaborative Filtering đề phải sử dụng Utility Matrix, được tạo thành từ bảng dữ liệu User-Item Ratings như dưới đây.
+<p>Nếu có hiểu biết về lĩnh vực sách, chúng ta sẽ thấy rằng những người mà quan tâm đến thể loại Fantasy cũng thường quan tâm đến một số thể loại khác như Science Fiction, Technology, Entrpreneurship, Biograpies, &hellip;
+Như vậy, để cho đa dạng hơn trong kết quả của RS, chúng ta có thể xử lý như sau: Lọc ra 10 cuốn sách có mức độ tương tự với cuốn sách đưa vào cao nhất để gơi ý, nhưng các cuốn sách đó nằm trên các Tags(<em>Categories</em>) khác nhau.</p>
+<p>Giả sử chúng ta lấy ra các cuốn sách có Tag là Non-Fiction, Economics, Entrepreneurial từ danh sách các cuốn sách sắp xếp giảm dần theo mức độ tương tự với cuốn sách <em>The Fellowship of the Ring (The Lord of the Rings, #1)</em>, code như sau:</p>
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/73_rs_utility_matrix.png">
+   <img style="height:auto" src="/images/post/74_rs_17.png">
 </div>
 
-</p>
-<p>Bảng User-Item Ratings chỉ chứa các Users và Items mà có sự tương tác với nhau, còn Utility Matrix thì chứa tất các các Users, Items trong hệ thống. Mỗi Cell trong Utility Matrix thể hiện giá trị Rating của User và Item tương ứng. Vấn đề lớn nhất của Collaborative Filtering là số lượng Rating thường nhỏ hơn rất nhiều so với số lượng User và Item. Điều này dẫn đến Utility Matrix bị thiếu rất nhiều gíá trị trong các Cells. Vì lẽ đó mà Utility Matrix còn được gọi là ma trận thưa (Sparsity Matrix).</p>
-<p>Ta có công thức tính độ thưa như sau:
 
-
-<div style="text-align-last:center">
-   <p>$Sparsity = \frac{No of Ratings}{No of Cells}$</p>
-</div>
-
-</p>
-<p>Nếu giá trị của Sparsity &gt; 0.5 thì chúng ta không nên sử dụng Collaborative Filtering mà nên xem xét sử dụng các phương pháp khác.</p>
-<p>Chi tiết hơn về 2 phương pháp Content-Based Filtering và Collaborative Filtering, các bạn có thể đọc thêm tại <a href="https://machinelearningcoban.com/2017/05/17/contentbasedrecommendersys/">đây</a> và <a href="https://machinelearningcoban.com/2017/05/24/collaborativefiltering/">đây</a>.</p>
-<p><em><strong>2.3 Phương pháp Hybrid</strong></em></p>
-<p>Phương pháp này có tên gọi khác là Ensemble, tức là kết hợp 2 phương pháp Content-Based Filtering và Collaborative Filtering.
+<p>Amazon cũng thi thoảng đưa thêm tính chất Diversiry (<em>đa dạng</em>) này vào trong RS của họ, thậm chí còn cho phép User bật/tắt tính năng này. Ví dụ dưới đây là kết quả gợi ý nếu người dùng tắt tính năng Diversity:</p>
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/73_rs_hybrid.png">
+   <img style="height:auto" src="/images/post/74_rs_18.jpg">
 </div>
 
-</p>
-<p>Content-Based Filtering và Collaborative Filtering, mỗi phương pháp đều có ưu/nhược điểm riêng của mỗi loại. Và trong một số trường hợp, việc kết hợp chúng lại sẽ mang đến hiệu quả tốt hơn. Netflix chính là một ví dụ sử dụng phương pháp Hybrid này.</p>
-<p><strong>3. Đánh giá Recommender System</strong></p>
-<p>Các ML model thường sử dụng Accuracy metric (<em>đối với bài toán Classification</em>) và RMSE metric (<em>đối với bài toán Regression</em>) để đánh giá model. Tuy nhiên, đối với RS model, các metrics này đều tỏ ra không hiệu quả.</p>
-<p>Để đưa ra được một metric phù hợp hơn, đầu tiên chúng ta hãy xem thử Netflix và Amazon đang đề xuất cho User những gì?
+
+<p>Nếu User bật tính năng Diversity lên thì kết quả sẽ thay đổi như sau:</p>
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/73_rs_netflix_list.jpeg">
-</div>
-
-</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/73_rs_amazon_list.png">
+   <img style="height:auto" src="/images/post/74_rs_19.jpg">
 </div>
 
 
-<p>Dễ nhận thấy, điểm mấu chốt ở đây là User không cần tương tác với tất cả các Items trong danh sách đề xuất mà chỉ cần tương tác với ít nhất một Item trong số đó. Và khi điều này xảy ra, tức là RS model đã làm việc đúng (<em>hitted</em>).</p>
-<p>Do vậy, các xây dựng metric đánh giá RS model sẽ như sau:</p>
-<ul>
-<li>Đối với mỗi User, chọn ngẫu nhiên 99 Items mà User đó không tương tác.</li>
-<li>Kết hợp 99 Items đó với một Test Item (<em>Item mà User đã tương tác</em>). Ta có 100 Items.</li>
-<li>Chạy RS model trên 100 Items đó rồi sắp xếp theo thứ tự giảm dần xác suất mà User đó có tương tác với mỗi Item.</li>
-<li>Lựa chọn 10 Items có xác suất lớn nhất trong danh sách đã sắp xếp. Nếu Test Item nằm trong số 10 Items đã chọn thì ta nói RS model đã làm việc đúng (<em>tính là một Hit</em>).</li>
-<li>Lặp lại quá trình trên cho toàn bộ Users. Ta định nghĩa giá trị Hit Ratio @10 như sau:</li>
-</ul>
-
-
-<div style="text-align-last:center">
-   <p>$Hit Ration @10= \frac{No Of Hits}{No Of Users}$</p>
-</div>
-
-
-<p>Hit Ration @10 chính là metric đánh giá RS model của chúng ta.</p>
-<p><strong>4. Kết luận</strong></p>
-<p>Như vậy là chúng ta đã kết thúc bài đầu tiên trong chuỗi 4 bài tìm hiểu về Recommender System. Qua bài này, chúng ta đã hiểu được phần nào rõ hơn về bài toán RS, cũng như một số phương pháp truyền thống để xây dựng RS.</p>
-<p>Trong bài tiếp theo, chúng ta sẽ thực hành xây dựng một RS bằng phương pháp Content-Based Filtering. Mời các bạn đón đọc.</p>
+<p>Trong 5 cuốn sách được gợi ý thì có 3 cuốn giữ nguyên như khi tắt Diversity, còn 2 cuốn mới xúât hiện, khác Category. Đó chính là kết quả của Diversity.</p>
+<p><strong>5. Kết luận</strong></p>
+<p>Như vậy là chúng ta đã cùng nhau thực hành code một RS theo phương pháp Content-Based Filtering, sử dụng bộ dataset về sách. Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Recommender_System">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ tìm hiểu cách xây dựng RS bằng phương pháp sử dụng Deep Learning. Mời các bạn đón đọc.</p>
 <p><strong>5. Tham khảo</strong></p>
-<p>[1] Parul Pandey, &ldquo;The Remarkable World of Recommender Systems&rdquo;, Available online: <a href="https://www.topbots.com/overview-of-recommender-systems/">https://www.topbots.com/overview-of-recommender-systems/</a> (Accessed on 25 Jun 2021).</p>
-<p>[2] James Loy, &ldquo;Deep Learning based Recommender Systems&rdquo;, Available online: <a href="https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e">https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e</a> (Accessed on 25 Jun 2021).</p>
+<p>[1] Parul Pandey, &ldquo;The Remarkable World of Recommender Systems&rdquo;, Available online: <a href="https://www.topbots.com/diversity-through-recommendation-systems/">https://www.topbots.com/diversity-through-recommendation-systems/</a> (Accessed on 05 Jul 2021).</p>
+<p>[2] James Loy, &ldquo;Deep Learning based Recommender Systems&rdquo;, Available online: <a href="https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e">https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e</a> (Accessed on 05 Jul 2021).</p>
 
         </div>
 
