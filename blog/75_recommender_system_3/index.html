@@ -153,218 +153,157 @@
         <a href="/categories/recommender-system"
           class="text-primary">Recommender System</a>
         
-        <h2>Thực hành xây dựng RS bằng phương pháp Content-Based Filtering</h2>
+        <h2>Thực hành xây dựng RS sử dụng Deep Learning</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>05 July 2021</span>
+          <span>10 July 2021</span>
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/74_recommender_system.png" class="img-fluid w-100 mb-4" alt="Thực hành xây dựng RS bằng phương pháp Content-Based Filtering">
+        <img src="https://tiensu.github.io/images/featured-post/75_recommender_system.jpg" class="img-fluid w-100 mb-4" alt="Thực hành xây dựng RS sử dụng Deep Learning">
         
         <div class="content mb-5">
-          <p>Đây là bài thứ 2 trong chuỗi bài viết về Recommender System. Trong bài này, chúng ta sẽ thực hành xây dựng một RS sử dụng phương pháp Content-Based Filtering.</p>
+          <p>Đây là bài thứ 3 trong chuỗi bài viết về Recommender System. Trong bài này, chúng ta sẽ thực hành xây dựng một RS sử dụng kỹ thuật Deep Learning.</p>
+<p>Ngày nay, Deep Learning đã đi sâu vào rất nhiều lĩnh vực, giải quyết được rất nhiều bài toán khó trong thực tế, từ Computer Vision cho đến Natual Language Processing. Recommender System cũng được hưởng lợi từ sự phát triển mạnh mẽ đó. Có thể nói rằng, với sự tham gia của Deep Learning, các RS hiện đại ngày nay như Youtube, Amazon, Netflix, Facebook, &hellip; đã đạt được State-of-Art, bỏ xa các phương pháp truyền thống trong cuộc đua mang lại lợi ich thiết thực cho các doanh nghiệp.</p>
 <p><strong>1. Đặt vấn đề</strong></p>
-<p>Một website bán sách muốn tăng doanh số bán hàng. Họ muốn bạn - 1 Data Scientist giúp họ xây dựng một RS để đề xuất các cuốn sách cho người dùng mỗi khi họ ghé vào website của họ. Sau khi xem xét kỹ yêu cầu bài toán và dữ liệu hiện có, bạn quyết định xây dựng RS theo phương pháp Content-Based Filtering.</p>
-<p>Sơ đồ các bước tiến hành sẽ như sau:</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_overall.jpg">
-</div>
-
-
-<p>Ở đây, phần RS Engine sẽ bao gồm 2 nhiệm vụ:</p>
-<ul>
-<li>Nhiệm vụ 1: Sử dụng Cosine Similarity để tìm ra danh sách 10 cuốn sách có mức độ tương tự gần với cuốn sách mà ta đưa vào RS nhất.</li>
-<li>Nhiệm vụ 2: Sử dụng những hiểu biết về lĩnh vực sách để đưa ra gợi ý khi đưa vào RS một cuốn sách, làm cho kết quả mang tính <em>đa dạng</em> hơn.</li>
-</ul>
+<p>Một website chiếu phim muốn thu hút nhiều User hơn. Họ muốn bạn - 1 Data Scientist giúp họ xây dựng một RS để đề xuất các bộ phim phù hợp cho người dùng mỗi khi họ ghé vào website của họ. Sau khi xem xét kỹ yêu cầu bài toán và dữ liệu hiện có, bạn quyết định xây dựng RS sử dụng kỹ thuật Deep Learning.</p>
 <p><strong>2. Chuẩn bị dữ liệu</strong></p>
-<p>Download dữ liệu tại <a href="https://github.com/allenjiang/Mona-Lisa-AI/tree/master/Books%20Data">đây</a>.</p>
-<p>Thông tin về sách đựợc lưu trong các files: books.csv, book_tags.csv, tags.csv. Chúng ta sẽ khám phá từng file:</p>
+<p>Download dữ liệu tại <a href="https://www.kaggle.com/grouplens/movielens-20m-dataset">đây</a>.</p>
+<p>Có rất nhiều thông tin về các bộ phim được lưu rải rác trong các file khác nhau: tên, thể loại, diễn viên, đạo diễn, năm sản xuất, quốc gia sản xuất, đường dẫn xem phim, &hellip; Bộ dataset này được thu thập từ năm 1995 đến năm 2015 và được cung cấp bởi MovieLends. Ở bài này, chúng ta chỉ tập trung vào thông tin Rating trong file <em>rating.csv</em>.</p>
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_1.png">
+   <img style="height:auto" src="/images/post/75_rs_1.png">
+</div>
+
+
+<p><strong>3. Data Preprocessing</strong></p>
+<p>Vì kích thước của bộ dữ liệu này khá lớn, nên nếu máy tính của bạn không đủ mạnh thì sẽ không thể xử lý hết được, hoặc là sẽ mất rất nhiều thời gian. Máy tính của mình là Core i7, 16GB RAM, GTX Gefore 1660i (6GB), mình đã thử chạy toàn bộ dataset nhưng không nổi. Vì thế, mình quyết định chỉ sử dụng 30% trong tổng số dữ liệu để thực hành. Nếu bạn có máy tính cấu hình mạnh hơn, bạn có thể thử với toàn bộ tập dữ liệu này.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_2.png">
+</div>
+
+
+<p>Với 30% dữ liệu, chúng ta có 6.027.314 hàng trong DataFrame. Mỗi hàng tương ứng với một Rating tạo bởi một User đối với 1 bộ phim (<em>item</em>). Số lượng Users tham gia vào viêc Rating là 41.547. Nói chung thì dữ liệu như này vẫn là khá lớn.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_3.png">
+</div>
+
+
+<p><strong>3. Train-Test Split</strong></p>
+<p>Cùng với Rating, trong file <em>rating.csv</em> còn có cột <strong>timestamp</strong> chứa thông tin về thời gian thực hiện Rating của User. Dựa vào thông tin này, chúng ta sẽ tiến hành chia tập dữ liệu của chúng ta thành 2 phần Train và Test theo chiến lược <em>leave-one-out</em>. Nếu bạn chưa biết thì <em>leave-one-out</em> là cách chia dữ liệu theo thời gian, tức là sử dụng những dữ liệu ở thời điểm gần hiện tại làm tập Test, còn lại làm tập Train. Xem ví dụ dưới đây:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_4.png">
+</div>
+
+
+<p>Cách chia này thường được sử dụng cho các bài toán RS và Time Series. Nếu thực hiện như cách truyền thống là xáo trộn ngẫu nhiên rồi chia thì sẽ không công bằng vì chúng ta có thể đang sử dụng những dữ liệu gần đây để huấn luyện và những dữ liệu trước đó để kiểm tra. Điều này dẫn đến rò rỉ dữ liệu với xu hướng nhìn trước và hiệu suất của mô hình được đào tạo sẽ không thể tổng quát hóa thành hiệu suất trong thế giới thực.</p>
+<p>Code dưới đây thực hiện <em>leave-one-out</em>:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_5.png">
+</div>
+
+
+<p><strong>4. Convert Dataset into Implicit Dataset</strong></p>
+<p>Các bài toán RS trong thực tế thường được giải quyết sử dụng dữ liệu dạng Implicit vì dữ liệu dạng này dễ dàng thu thập được từ người dùng thông qua Log hoạt động của hệ thống. Trong bài này, chúng ta cung sẽ sử dụng Implicit Dataset để huấn luyện model.</p>
+<p>Tuy nhiên, tập MovieLends chỉ có dữ liệu dạng Explicit (<em>chính là Rating của User đối với Item</em>). Để chuyển sang dạng Implicit, chúng ta sẽ tiến hành chuyển đổi các giá trị Rating thành &ldquo;1&rdquo; (<em>positive class</em>), ngụ ý rằng User có tương tác với Item đó. Thay vì cố gắng dự đoán giá trị của Rating, ta sẽ dự đoán liệu User có tương tác với Item đó hay không? <em>Tương tác</em> ở đây có thể hiểu là hành vi Click vào nút Like của Item, mua Item, hay xem Item. Những Items này sẽ được đề xuất cho User, làm tăng khả năng mua hàng của User.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_6.png">
+</div>
+
+
+<p>Sau khi thực hiện việc chuyển đổi Rating thành &ldquo;1&rdquo; thì chúng ta mới chỉ có Positive class, cần phải có thêm Negative class nữa mới có thể huấn luyện được model. Negative class (<em>0</em>) ở đây được giả định là User không tương tác, không quan tâm đến Item. Mặc dù điều giả định này không hoàn toàn đúng, vì có thể User chưa biết đến Item đó, nhưng nó vẫn tỏ ra khá hiệu quả trong thực tế.</p>
+<p>Code dưới đây sinh ra 4 Negative Samples tương ứng với mỗi hàng trong DataFrame. Tỉ lệ Positive : Negative là 1:4 được chọn tùy ý. Bạn có thể thử theo ý bạn, nhưng cá nhân mình thấy thì tỉ lệ này làm cho model hoạt động khá ổn trong thực tế.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_7.png">
+</div>
+
+
+<p>Sử dụng Pytorch, ta viết lại đoạn code trên vào class Dataset để thuận tiện cho việc huấn luyện model như sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_8.png">
+</div>
+
+
+<p><strong>5. Định nghĩa Deep Learning model</strong></p>
+<p>Đã có một số kiến trúc Deep Learning model được đề xuất cho bài toán RS. Trong số đó, đề xuất của <a href="https://arxiv.org/abs/1708.05031">He và cộng sự</a> có tên là Neural Collaborative Filtering (<em>NFC</em>) được sử dụng phổ biến hơn cả bởi tính đơn giản của nó. Chúng ta cũng sẽ sử dụng nó trong bài này.</p>
+<p>Kiến trúc của NFC được mô tả như sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_9.png">
+</div>
+
+
+<p>Inputs của NFC model là các vectors dạng One-hot Encoded của User và Item. Các vectors này được đưa qua các lớp Embeddings để sinh ra các Embedded vectors tương ứng. Embedded vectors sau đó được kết hợp lại với nhau trước khi đi qua một vài lớp Fully Connected, chuyển thành vector dự đoán (<em>output vector</em>). Hàm Sigmoid được áp dụng cho Ouput vector sinh ra xác suất của mỗi class: Positive và Negative. Như ví dụ trong sơ đồ kiến trúc NFC model thì xác suất mỗi class Positive : Negative tương ứng là 0.8:0.2. Từ đó có thể kết luận là User được dự đoán là có tương tác với Item đó vì 0.8 &gt; 0.2.</p>
+<p>Sử dụng <a href="https://github.com/PyTorchLightning/pytorch-lightning">Pytorch Lightning</a>, ta định nghĩa NFC model như sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_10.png">
+</div>
+
+
+<p>Pytorch Lightning là một dạng <em>lightweight</em> của Pytorch, nó đóng gói các hàm của Pytorch ở mức high-level, giúp đơn giản hóa code và tăng tốc độ xử lý. Chi tiết hơn vê Pytorch Lightning, bạn có thể tham khảo trong link mình để bên trên.</p>
+<p><strong>5. Huấn luyện Deep Learning model</strong></p>
+<p>NFC model được huấn luyện như sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_11.png">
 </div>
 
 
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_2.png">
+   <img style="height:auto" src="/images/post/75_rs_12.png">
 </div>
 
 
+<p>Thời gian huấn luyện khá lâu, mình phải chờ gần một ngày mới hoàn thành.</p>
+<p><strong>6. Đánh giá Deep Learning model</strong></p>
+<p>Để đánh giá các RS model, chúng ta sẽ sử dụng metric Hit Ration @10 như đã đề cập trong <a href="https://tiensu.github.io/blog/73_recommender_system_1/">bài trước</a>.</p>
+<p>Code thực hiện như sau:</p>
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_3.png">
+   <img style="height:auto" src="/images/post/75_rs_13.png">
 </div>
 
 
+<p>Kết quả cuối cùng:</p>
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_4.png">
+   <img style="height:auto" src="/images/post/75_rs_result.png">
 </div>
 
 
-<p>Ta thấy rằng có tổng cộng 10.000 cuốn sách, và trường <em>book_tags</em> của mỗi cuốn sách chứa đựng nhiều về cuốn sách đó. Vì thế, chúng ta sẽ sử dụng thông tin này đề xây dựng RS.</p>
-<p>Vì các thông tin <em>book_id, tag_id, tag_name, &hellip;</em> nằm rải rác ở các file csv khác nhau nên ta sẽ tiến hành gom chúng lại với nhau.</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_5.png">
-</div>
-
-
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_6.png">
-</div>
-
-
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_7.png">
-</div>
-
-
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_8.png">
-</div>
-
-
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_9.png">
-</div>
-
-
-<p>Đến đây, chúng ta đã có đầy đủ thông tin cần thiết về các cuốn sách trong một DataFrame là <em>books</em>.</p>
-<p><strong>3. Transform Data</strong></p>
-<p>Như đã phân tích ở trên, chúng ta sẽ sử dụng thông tin <em>tag_name</em> làm cơ sở cho việc tính toán mức độ tương tự giữa các cuốn sách.</p>
-<p>Hãy xem thử, <em>tag_name</em> đang như thế nào?</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_10.png">
-</div>
-
-
-<p>Chúng ta cần phải chuyển đổi các thông tin này từ dạng Text sang dạng Number để làm Input cho việc tính toán. Việc này được gọi là Word Embedding. Mỗi cuốn sách sẽ được chuyển đổi tương ứng thành một Vector, gọi là Vector Embedding. Có rất nhiều thuật toán giúp chúng ta thực hiện nhiệm vụ này: CountVectorizing, TF-IDF, Glove, Word2Vec, BERT, &hellip; Trong bài này, chúng ta sẽ sử dụng TF-IDF trong thư viện Scikit-learn như dưới đây:</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_11.png">
-</div>
-
-
-<p>TFIDF (<em>Term Frequency - Inverse Document Frequency</em>) tính toán mức độ <em>quan trọng</em> của mỗi từ dưạ trên tần suất xuất hiện và mối liên hệ với các từ khác trong toàn bộ đoạn văn bản. Vector Embedding của mỗi cuốn sách là một hàng trong TF-IDF vector.</p>
-<p><strong>4. Xây dựng RS Engine</strong></p>
-<p>Như đã nói ở bên trên, sẽ có 2 nhiệm vụ trong bước này:</p>
-<ul>
-<li>Nhiệm vụ 1:</li>
-</ul>
-<p>Chúng ta cần tính mức độ tương tự nhau giữa các Vector Embedding của các cuốn sách. Như đã giới thiệu ở bài trước, chúng ta có thể sử dụng Cosine Similarity hoặc Euclidean Distance. Mình sẽ chọn Cosine Similarity để thực hiện. Thư viện Scikit-learn đã hỗ trợ chúng ta việc này.</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_12.png">
-</div>
-
-
-<p>Nếu zoom to lên một phần của ma trân Cosine Similarity ta sẽ thấy như sau:</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_13.jpg">
-</div>
-
-
-<p>Giá trị tại điểm giao nhau giữa hàng và cột trong ma trận này chính là thể hiện mức độ tương tự nhau của 2 cuốn sách nằm trên hàng và cột đó.</p>
-<p>Tiếp theo, chúng ta sẽ viết code để lấy ra được danh sách các cuốn sách được đề xuất khi đưa vào RS tên một cuốn sách:</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_13.png">
-</div>
-
-
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_14.png">
-</div>
-
-
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_15.png">
-</div>
-
-
-<p>Chúng ta sẽ kiểm tra luôn kết quả của nhiệm vụ 1. Ta đưa vào RS một cuốn sách có tên <em>The Fellowship of the Ring (The Lord of the Rings, #1)</em>, kết quả nhận được như sau:</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_16.png">
-</div>
-
-
-<p>Chúng ta nhận đuọc một danh sách gồm 10 cuốn sách có mức độ tương tự lớn nhất với cuốn sách mà ta đưa vào cho RS. Mình cũng thử lên Amazon, thử chọn mua cuốn sách cùng tên thì thật thú vị là Amazon cũng gọi ý cho mình 10 cuốn sách gần giống như kết quả của RS mà ta vừa xây dựng. Chứng tỏ rằng RS của chúng ta hoạt động khá hiệu quả.</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_17.jpg">
-</div>
-
-
-<ul>
-<li>Nhiệm vụ 2:</li>
-</ul>
-<p>Nếu có hiểu biết về lĩnh vực sách, chúng ta sẽ thấy rằng những người mà quan tâm đến thể loại Fantasy cũng thường quan tâm đến một số thể loại khác như Science Fiction, Technology, Entrpreneurship, Biograpies, &hellip;
-Như vậy, để cho đa dạng hơn trong kết quả của RS, chúng ta có thể xử lý như sau: Lọc ra 10 cuốn sách có mức độ tương tự với cuốn sách đưa vào cao nhất để gơi ý, nhưng các cuốn sách đó nằm trên các Tags(<em>Categories</em>) khác nhau.</p>
-<p>Giả sử chúng ta lấy ra các cuốn sách có Tag là Non-Fiction, Economics, Entrepreneurial từ danh sách các cuốn sách sắp xếp giảm dần theo mức độ tương tự với cuốn sách <em>The Fellowship of the Ring (The Lord of the Rings, #1)</em>, code như sau:</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_17.png">
-</div>
-
-
-<p>Amazon cũng thi thoảng đưa thêm tính chất Diversiry (<em>đa dạng</em>) này vào trong RS của họ, thậm chí còn cho phép User bật/tắt tính năng này. Ví dụ dưới đây là kết quả gợi ý nếu người dùng tắt tính năng Diversity:</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_18.jpg">
-</div>
-
-
-<p>Nếu User bật tính năng Diversity lên thì kết quả sẽ thay đổi như sau:</p>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/74_rs_19.jpg">
-</div>
-
-
-<p>Trong 5 cuốn sách được gợi ý thì có 3 cuốn giữ nguyên như khi tắt Diversity, còn 2 cuốn mới xúât hiện, khác Category. Đó chính là kết quả của Diversity.</p>
-<p><strong>5. Kết luận</strong></p>
-<p>Như vậy là chúng ta đã cùng nhau thực hành code một RS theo phương pháp Content-Based Filtering, sử dụng bộ dataset về sách. Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Recommender_System">đây</a>.</p>
-<p>Trong bài tiếp theo, chúng ta sẽ tìm hiểu cách xây dựng RS bằng phương pháp sử dụng Deep Learning. Mời các bạn đón đọc.</p>
-<p><strong>6. Tham khảo</strong></p>
-<p>[1] Parul Pandey, &ldquo;The Remarkable World of Recommender Systems&rdquo;, Available online: <a href="https://www.topbots.com/diversity-through-recommendation-systems/">https://www.topbots.com/diversity-through-recommendation-systems/</a> (Accessed on 05 Jul 2021).</p>
-<p>[2] James Loy, &ldquo;Deep Learning based Recommender Systems&rdquo;, Available online: <a href="https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e">https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e</a> (Accessed on 05 Jul 2021).</p>
+<p>Hit Ration @10 mới chỉ đạt 0.58, vẫn còn khá khiêm tốn. Có lẽ model cần phải được huấn luyện thêm nhiều epochs nữa. Con số 0.58 có nghĩa là nếu đề xuất một Item nào đó cho 100 Users thì 58 người có tương tác với Item đó.</p>
+<p><strong>7. Kết luận</strong></p>
+<p>Như vậy là chúng ta đã kết thúc chuỗi bài viết về Recommender System tại đây. Hi vọng từ những điều mình chia sẻ sẽ giúp ích cho các bạn trong quá trình học tập và công tác của mình.</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Recommender_System">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ chuyển sang một chủ đề hoàn toàn mới, Time Series Data. Mời các bạn đón đọc.</p>
+<p><strong>8. Tham khảo</strong></p>
+<p>[1] james Loy, &ldquo;Deep Learning based Recommender Systems&rdquo;, Available online: <a href="https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e">https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e</a> (Accessed on 10 Jul 2021).</p>
+<p>[2] Abhijit Roy, &ldquo;Introduction To Recommender Systems- 2: Deep Neural Network Based Recommendation Systems&rdquo;, Available online: <a href="https://towardsdatascience.com/introduction-to-recommender-systems-2-deep-neural-network-based-recommendation-systems-4e4484e64746">https://towardsdatascience.com/introduction-to-recommender-systems-2-deep-neural-network-based-recommendation-systems-4e4484e64746</a> (Accessed on 05 Jul 2021).</p>
 
         </div>
 
