@@ -13,9 +13,7 @@
       <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/76_data_prepeation_for_ml_foundation/</guid>
-      <description>1. Giới thiệu chung
-1.1 Các bước xây dựng Machine Learning model
-Mỗi dự án ML nói chung đều bao gồm một số bước thực hiện giống nhau (cùng chiến lược), nhưng khác nhau vì dữ liệu cụ thể của mỗi dự án.</description>
+      <description>Series các bài viết tiếp theo, mình sẽ tập trung vào chủ đề chuẩn bị dữ liệu (Data Preparation) để huấn luyện các mô hình ML.</description>
     </item>
     
   </channel>

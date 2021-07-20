@@ -154,7 +154,7 @@
           class="text-primary">Machine Learning</a>
         
         <a href="/categories/data-preparation"
-          class="text-primary">Data preparation</a>
+          class="text-primary">Data Preparation</a>
         
         <h2>Chuẩn bị dữ liệu cho Machine Learning model - Những kiến thức cơ bản</h2>
         <div class="mb-3 post-meta">
@@ -168,22 +168,164 @@
         <img src="https://tiensu.github.io/images/featured-post/76_data_preparation.jpg" class="img-fluid w-100 mb-4" alt="Chuẩn bị dữ liệu cho Machine Learning model - Những kiến thức cơ bản">
         
         <div class="content mb-5">
-          <p><strong>1. Giới thiệu chung</strong></p>
-<p><em><strong>1.1 Các bước xây dựng Machine Learning model</strong></em></p>
+          <p>Series các bài viết tiếp theo, mình sẽ tập trung vào chủ đề chuẩn bị dữ liệu (<em>Data Preparation</em>) để huấn luyện các mô hình ML. Đây có thể coi là bước quan trọng nhất để tạo ra được một ML model có độ chính xác cao. Có rất nhiều kiến thức, thuật toán, kỹ thuật có thể được áp dụng ở phần này. Mình sẽ cùng các bạn đi từng bước, khám phá dần dần để giúp bạn dễ dàng nắm bắt và áp dụng những gì học được vào giải quyết các bài toán của bạn.</p>
+<p>Bài đầu tiên, mình sẽ chủ yếu nhắc lại một số kiến thức, khái niệm chung về ML, cũng như công đọan Data Preparation.</p>
+<h1 id="1-giới-thiệu-chung">1. Giới thiệu chung</h1>
+<h2 id="11-các-bước-xây-dựng-machine-learning-model">1.1 Các bước xây dựng Machine Learning model</h2>
 <p>Mỗi dự án ML nói chung đều bao gồm một số bước thực hiện giống nhau (<em>cùng chiến lược</em>), nhưng khác nhau vì dữ liệu cụ thể của mỗi dự án. Vì thế mà các kỹ thuật xử lý tại mỗi bước cũng sẽ khác nhau đối với từng dự án (<em>khác chiến thuật</em>). Điều này làm cho mỗi dự án học máyMLw trở thành duy nhất. Không ai có thể cho bạn biết kết quả tốt nhất là gì hay làm thế nào để đạt được nó. Bạn phải thiết lập một giá trị hiệu suất làm điểm tham chiếu, sau đó so sánh với hiệu suất từ tất cả các mô hình mà bạn có thể xây dựng được theo các cách thức, thuật toán khác nhau. Dựa vào các kết quả so sánh đó mà bạn có thể kết luận được rằng mô hình nào là tốt nhất, tối ưu nhất trên tập dữ liệu bạn có. Tất nhiên, bạn không hề đơn độc trong quá trình làm việc của mình. Các kiến thức, kỹ thuật đã được đúc kết, bạn có thể lấy ra sử dụng rất dễ dàng. Việc của bạn chỉ là khi nào thì lấy ra kỹ thuật nào mà thôi.</p>
 <p>Chiến lược của các dự án ML có thể được tóm tắt trong 4 bước như sau: Định nghĩa vấn đề, Chuẩn bị dữ liệu, Đánh giá mô hình và Hoàn thiện mô hình.</p>
+<h3 id="a-bước-1---định-nghĩa-vấn-đề">a, Bước 1 - Định nghĩa vấn đề</h3>
+<p>Bước này liên quan đến việc tìm hiểu đầy đủ về dự án để chọn lựa thuật toán, và chỉ tiêu đánh giá phù hợp. Ví dụ, đó là bài toán phân loại (<em>classification</em>) - đánh giá bằng độ chính xác hay hồi quy (<em>regression</em>) - đánh giá bằng chỉ số MSE? Nó cũng liên quan đến việc định hướng thu thập dữ liệu, là tiền đề cho bước tiếp theo.</p>
+<h3 id="b-bước-2---thu-thập-dữ-liệu">b, Bước 2 - Thu thập dữ liệu</h3>
+<p>Khi đã nhận thức rõ ràng vấn đề cần giải quyết, chúng ta sẽ bắt tay vào việc tìm kiếm, thu thập dữ liệu. Dữ liệu có thể đến từ nhiều nguồn với các định dạng khác nhau. Vì thế, cần phải có kế hoạch lưu trữ, xử lý, quản lý cho phù hợp.</p>
+<h3 id="c-bước-3---chuẩn-bị-dữ-liệu">c, Bước 3 - Chuẩn bị dữ liệu</h3>
+<p>Bước này liên quan đến việc chuyển đổi dữ liệu thô đã được thu thập thành một dạng có thể được sử dụng trong mô hình hóa. Các kỹ thuật tiền xử lý dữ liệu thường đề cập đến việc bổ sung, xóa hoặc chuyển đổi dữ liệu thành các dạng khác nhau. Bạn cũng nên hỏi ý kiến chuyên gia tại bước này để tìm ra những thông tin hữu ích nhất trong đống dữ liệu của mình.</p>
 <ul>
-<li>Bước 1 - Định nghĩa vấn đề</li>
+<li>
+<h3 id="d-bước-4---lựa-chọn-và-đánh-giá-mô-hình">d, Bước 4 - Lựa chọn và đánh giá mô hình</h3>
+</li>
 </ul>
-<p>Bước này liên quan đến việc tìm hiểu đầy đủ về dự án để chọn lựa thuật toán phù hợp. Ví dụ, đó là bài toán phân loại (<em>classification</em>) hay hồi quy (<em>regression</em>)? Nó liên quan đến việc thu thập dữ liệu được cho là hữu ích trong việc đưa ra dự đoán và xác định rõ hình thức dự đoán sẽ thực hiện. Nó cũng có thể liên quan đến việc nói chuyện với dự án các bên liên quan và những người khác có chuyên môn sâu trong miền. Bước này cũng bao gồm việc thực hiện
-xem xét kỹ lưỡng dữ liệu, cũng như có thể khám phá dữ liệu bằng cách sử dụng thống kê tóm tắt và trực quan hóa dữ liệu.</p>
-<p><strong>7. Kết luận</strong></p>
-<p>Như vậy là chúng ta đã kết thúc chuỗi bài viết về Recommender System tại đây. Hi vọng từ những điều mình chia sẻ sẽ giúp ích cho các bạn trong quá trình học tập và công tác của mình.</p>
-<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Recommender_System">đây</a>.</p>
-<p>Trong bài tiếp theo, chúng ta sẽ chuyển sang một chủ đề hoàn toàn mới, Data Preparation for Machine Learning. Mời các bạn đón đọc.</p>
-<p><strong>8. Tham khảo</strong></p>
-<p>[1] james Loy, &ldquo;Deep Learning based Recommender Systems&rdquo;, Available online: <a href="https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e">https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e</a> (Accessed on 10 Jul 2021).</p>
-<p>[2] Abhijit Roy, &ldquo;Introduction To Recommender Systems- 2: Deep Neural Network Based Recommendation Systems&rdquo;, Available online: <a href="https://towardsdatascience.com/introduction-to-recommender-systems-2-deep-neural-network-based-recommendation-systems-4e4484e64746">https://towardsdatascience.com/introduction-to-recommender-systems-2-deep-neural-network-based-recommendation-systems-4e4484e64746</a> (Accessed on 05 Jul 2021).</p>
+<p>Bước này liên quan đến việc lựa chọn và đánh giá các mô hình học máy trên tập dữ liệu của bạn. Có rất nhiều thuật toán ML, và bạn thường không thể biết chính xác thuật toán nào sẽ giải quyết tốt cho bài toán của bạn. Các thông thường là xây dựng một mô hình làm cơ sở (<em>base model</em>) tham chiếu cho các mô hình khác. Các mô hình sau đó phải có giá trị metrics lớn hơn Base Model mới được xem xét sử dụng. Đối với những tập dữ liệu lớn, có thể chia nhỏ ra thành nhiều phần, sử dụng chiến thuật k_Folds để có thể nhanh chóng đạt được kết quả đánh giá.</p>
+<ul>
+<li>
+<h3 id="e-bước-5--hoàn-thiện-mô-hình">e, Bước 5- Hoàn thiện mô hình</h3>
+</li>
+</ul>
+<p>Sau khi có kết quả đánh giá và lựa chọn được mô hình phù hợp nhất với bài toán, ta tiến hành huấn luyện mô hình đó trên toàn bộ tập dữ liệu lớn. Model được huấn luyện xong và đáp ứng được các yêu cầu cụ thể đặt ra có thể được mang đi tích hợp vào các hệ thống khác để sử dụng. Quá trình này có thể được chia ra thành nhiều công đoạn nhỏ hơn như Giám sát, Cập nhật, &hellip;</p>
+<p>Tiếp theo, mình sẽ đi chi tiết vào bước 3.</p>
+<h2 id="12-chuẩn-bị-dữ-liệu---data-preparation-là-gì">1.2 Chuẩn bị dữ liệu - Data Preparation là gì?</h2>
+<p>Như chúng ta đã biết, các ML model không thể sử dụng trực tiếp dữ liệu thô sau khi được thu thập. Một số lý do là:</p>
+<ul>
+<li>Các thuật toán ML yêu cầu dữ liệu phải ở dạng số - Numbers</li>
+<li>Dữ liệu thô có thể chứa các loại nhiễu, lỗi có thể gây ra ảnh hưởng tiêu cực đến quá trình học của các mô hình ML</li>
+</ul>
+<p>Do đó, dữ liệu thô cần phải trải qua một bước tinh chỉnh trước khi đưa vào mô hình để huấn luyện. Quá trình này thường được gọi tên là Data Preparation. Một số tên khác cũng có thể được sử dụng là Data Wrangling, Data Cleaning, Data Preprocessing, Feature Engineering, &hellip; mặc dù những cái tên này chính xác hơn là để chỉ các công việc cần hoàn thành trong quá trình Data Preparation.</p>
+<p>Đi vào chi tiết hơn, các công việc cần phải thực hiện trong quá trình Data Preparation là:</p>
+<h3 id="a-data-cleaning">a, Data Cleaning</h3>
+<p>Nhận diện và sửa các lỗi như thiếu hụt (<em>missing</em>) dữ liệu, dữ liệu bất thường (<em>outlier</em>), dữ liệu trùng lặp (<em>dupplicate</em>), &hellip;</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_1.png">
+</div>
+
+
+<h3 id="b-feature-selection">b, Feature Selection</h3>
+<p>Tìm ra mỗi liên hệ giữa các features và nhãn cần dự đoán của bài toán. Từ đó bỏ đi các features có sự liên quan ít đi để mô hình có thể tập trung vào những features có giá trị.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_2.png">
+</div>
+
+
+<h3 id="c-data-transforms">c, Data Transforms</h3>
+<p>Thay đổi kiểu, phạm vi và phân phối của dữ liệu.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_3.png">
+</div>
+
+
+<h3 id="d-feature-engineering">d, Feature Engineering</h3>
+<p>Tạo ra các features mới từ dữ liệu hiện có.</p>
+<h3 id="e-dimensionality-reduction">e, Dimensionality Reduction</h3>
+<p>Ánh xạ dữ liệu lên một không gian mới để giảm kích thước của dữ liệu.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/75_rs_4.png">
+</div>
+
+
+<p>Mỗi công việc này đều đòi hỏi những kỹ năng cụ thể, hiểu biết về công cụ, kỹ thuật áp dụng để có thể cho ra kết quả tốt nhất. Chúng ta sẽ đi chi tiết trong các bài sau.</p>
+<h2 id="13-làm-thế-nào-để-biết-nên-áp-dụng-kỹ-thụật-data-preparation-nào">1.3 Làm thế nào để biết nên áp dụng kỹ thụật Data Preparation nào?</h2>
+<p>Đứng trước một tập dữ liệu thô vừa được thu thập, bạn phân vân không biết nên làm như thế nào? bắt đầu từ đâu? Dưới đây là một vài gợi ý:</p>
+<ul>
+<li>Tìm hiễu kỹ càng yêu cầu bài toán và thông tin về dữ liệu thô</li>
+</ul>
+<p>Việc này là bước khởi đầu để bạn có cái nhìn tổng thể về dữ liệu, giúp bạn trả lời các câu hỏi: dữ liệu có đúng/đủ không? liệu có sai sót gì trong quá trình thu thập không? &hellip; Từ đó, giúp bạn loại đi được những dữ liệu không phù hợp và ý niệm về việc cần phải có dữ liệu tinh ở dạng như thế nào?</p>
+<ul>
+<li>Sử dụng phương pháp thống kê, phân tích</li>
+</ul>
+<p>Các công cụ thống kê như Mean, Standard Deviation, Sum, Count, &hellip; có thể giúp bạn nhận ra dữ liệu có bị thiếu hay không? Đang được phân phối như thế nào? Ở dạng Numbers hay Categories, &hellip; Biết được những điều này rồi, bạn chỉ cần chọn kỹ thuật xử lý tương ứng.</p>
+<ul>
+<li>Sử dụng phương pháp trực quan hóa dữ liệu</li>
+</ul>
+<p>Biểu diễn lên đồ thị cũng là 1 cách hiệu quả để hiểu hơn về dữ liệu. Các vấn đề như mức độ tương quan giữa các features, có tồn tại hay không dữ liệu Outlier, &hellip; đều có thể nhận biết được thông qua đồ thị.</p>
+<h1 id="2-phân-tích-các-chiến-lược-cho-data-preparation">2. Phân tích các chiến lược cho Data Preparation</h1>
+<h2 id="21-naive-approach">2.1 Naive Approach</h2>
+<p>Data Preparation là quá trình chuyển đổi dữ liệu thô thành một dạng thích hợp để mô hình hóa. Một cách tiếp cận đơn giản (<em>Naive Approach</em>) là áp dụng biến đổi trên toàn bộ tập dữ liệu trước khi phân chia thành tập Train và Test để huấn luyện và đánh giá hiệu suất của mô hình. Điều này có thể dẫn đến một vấn đề gọi là rò rỉ dữ liệu (<em>Data Leakage</em>), trong đó thông tin của dữ liệu trong tập Test bị <em>rò rỉ</em> vào tập Train. Việc đó làm cho sự ước tính độ chính xác về hiệu suất của mô hình khi đưa ra dự đoán trên dữ liệu mới sẽ không còn đáng tin cậy nữa.</p>
+<p>Code ví dụ cho chiến lược này như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># naive approach to normalizing the data before splitting the data and evaluating the model</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_classification
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> MinMaxScaler
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LogisticRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_classification(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>, n_redundant<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)
+<span style="color:#75715e"># standardize the dataset</span>
+scaler <span style="color:#f92672">=</span> MinMaxScaler()
+X <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>fit_transform(X)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LogisticRegression()
+model<span style="color:#f92672">.</span>fit(X_train, y_train)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test)
+<span style="color:#75715e"># evaluate predictions</span>
+accuracy <span style="color:#f92672">=</span> accuracy_score(y_test, yhat)
+<span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> &#39;</span> <span style="color:#f92672">%</span> (accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Đoạn code trên thực hiện các việc: tạo dữ liệu giả, chuẩn hóa dữ liệu, chia dữ liệu thành 2 tập Train và Test, huấn luyện và đánh giá mô hình.</p>
+<p>Kết quả chạy thu được độ chính xác là 84.848%. Khá cao, nhưng ta biết rằng cách tiếp cận này tiềm ẩn nguy cơ như đã phân tích nên ta không nên sử dụng kết quả này.</p>
+<h2 id="22-standard-approach">2.2 Standard Approach</h2>
+<p>Chiến lược chuẩn của Data Preparation sẽ như sau:</p>
+<ul>
+<li>Chia dữ liệu thành 2 tập Train và Test</li>
+<li>Huấn luyện (<em>Fit</em>) các thuật toán của Data Preparation chỉ trên tập Train</li>
+<li>Áp dụng các thuật toán của Data Preparation đã huấn luyện vào cả 2 tập Train và Test</li>
+<li>Huấn luyện model trên tập Train</li>
+<li>Đánh giá model trên tập Test</li>
+</ul>
+<p>Code ví dụ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># correct approach for normalizing the data after the data is split before the model is</span>
+evaluated
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_classification
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> MinMaxScaler
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LogisticRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_classification(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>, n_redundant<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the scaler</span>
+scaler <span style="color:#f92672">=</span> MinMaxScaler()
+<span style="color:#75715e"># fit on the training dataset</span>
+scaler<span style="color:#f92672">.</span>fit(X_train)
+<span style="color:#75715e"># scale the training dataset</span>
+X_train <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>transform(X_train)
+<span style="color:#75715e"># scale the test dataset</span>
+X_test <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>transform(X_test)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LogisticRegression()
+model<span style="color:#f92672">.</span>fit(X_train, y_train)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test)
+<span style="color:#75715e"># evaluate predictions</span>
+accuracy <span style="color:#f92672">=</span> accuracy_score(y_test, yhat)
+<span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> &#39;</span> <span style="color:#f92672">%</span> (accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Đọan code này thực hiện các công việc: tạo dữ liệu giả, chia dữ liệu thành 2 tập Train và Test, chuẩn hóa dữ liệu, huấn luyện và đánh giá mô hình. Kết quả chạy code cho ra <em>Accuracy: 84.455</em>.</p>
+<p><strong>Chú ý: Đối với cách phân chia dữ liệu theo kiểu k-Fold, những phân tích về 2 chiến lược trên vẫn đúng. Mình có cả code ví dụ cho phần này, bạn có thể xem trên github của mình.</strong></p>
+<p><strong>3. Kết luận</strong></p>
+<p>Kết thúc bài đầu tiên về chủ đề Data Preparation cho các ML model. Chúng ta đã được ôn lại các bước để thực hiện huấn luyện một mô hình ML, chi tiết các công việc cần thực hiện và các chiến lược cho phần Data Preparation.</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Preparation_for_ML/tree/master/01_DP_Introduction">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ đi sâu vào các kỹ thuật giải quyết công việc Data Cleaning . Mời các bạn đón đọc.</p>
+<p><strong>4. Tham khảo</strong></p>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
 
         </div>
 
@@ -262,7 +404,7 @@ xem xét kỹ lưỡng dữ liệu, cũng như có thể khám phá dữ liệu 
               href="/categories/data-imbalance">Data Imbalance</a>
           </li>
           <li class="mb-3"><a class="text-dark"
-              href="/categories/data-preparation">Data preparation</a>
+              href="/categories/data-preparation">Data Preparation</a>
           </li>
           <li class="mb-3"><a class="text-dark"
               href="/categories/data-science">Data Science</a>
