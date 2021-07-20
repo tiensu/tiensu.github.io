@@ -4,7 +4,42 @@
   
   <url>
     <loc>https://tiensu.github.io/categories/</loc>
-    <lastmod>2021-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/76_data_prepeation_for_ml_foundation/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/data-preparation/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/data-preparation/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/machine-learning/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/machine-learning/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -14,16 +49,6 @@
   
   <url>
     <loc>https://tiensu.github.io/categories/recommender-system/</loc>
-    <lastmod>2021-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/</loc>
-    <lastmod>2021-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/tags/</loc>
     <lastmod>2021-07-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -585,16 +610,6 @@
   <url>
     <loc>https://tiensu.github.io/blog/27_optimization_methods_gradient-descent/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/tags/machine-learning/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/categories/machine-learning/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>

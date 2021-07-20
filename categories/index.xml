@@ -6,7 +6,25 @@
     <description>Recent content in Categories on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Preparation</title>
+      <link>https://tiensu.github.io/categories/data-preparation/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/data-preparation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://tiensu.github.io/categories/machine-learning/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Recommender System</title>
       <link>https://tiensu.github.io/categories/recommender-system/</link>
@@ -274,15 +292,6 @@
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/categories/algorithm-optimization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>https://tiensu.github.io/categories/machine-learning/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/machine-learning/</guid>
       <description></description>
     </item>
     
