@@ -6,11 +6,20 @@
     <description>Recent content in Machine Learning on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chuẩn bị dữ liệu cho Machine Learning model - Những kiến thức cơ bản</title>
+      <link>https://tiensu.github.io/blog/77_data_prepeation_for_ml_data_cleaning_basic/</link>
+      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/77_data_prepeation_for_ml_data_cleaning_basic/</guid>
+      <description>Bài thứ 2 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ bàn về nhiệm vụ Data Cleaning, tiếng việt gọi là làm sạch dữ liệu.</description>
+    </item>
+    
     <item>
       <title>Chuẩn bị dữ liệu cho Machine Learning model - Những kiến thức cơ bản</title>
       <link>https://tiensu.github.io/blog/76_data_prepeation_for_ml_foundation/</link>
-      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/76_data_prepeation_for_ml_foundation/</guid>
       <description>Series các bài viết tiếp theo, mình sẽ tập trung vào chủ đề chuẩn bị dữ liệu (Data Preparation) để huấn luyện các mô hình ML.</description>

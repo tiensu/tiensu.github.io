@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/data-preparation"
+          class="text-primary">Data Preparation</a>
+        
+        <h2>Chuẩn bị dữ liệu cho Machine Learning model - Những kiến thức cơ bản</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>18 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/data-cleaning.png" class="img-fluid w-100 mb-4" alt="Chuẩn bị dữ liệu cho Machine Learning model - Những kiến thức cơ bản">
+        
+        <div class="content mb-5">
+          <p>Bài thứ 2 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ bàn về nhiệm vụ Data Cleaning, tiếng việt gọi là <em>làm sạch dữ liệu</em>.</p>
+<p>Data Cleaning là một bước rất quan trong trong bất kỳ dự án ML nào. Trong dữ liệu dạng bảng (<em>tabular data</em>), có nhiều kỹ thuật phân tích thống kê và trực quan hóa dữ liệu khác nhau mà bạn có thể sử dụng để khám phá dữ liệu của mình nhằm xác định các thao tác làm sạch dữ liệu mà bạn có thể muốn thực hiện.</p>
+<p>Trước khi chuyển sang các phương pháp phức tạp, có một số thao tác rất cơ bản mà bạn có thể nên thực hiện trên mọi dự án học máy. Những điều này cơ bản đến mức chúng thường bị các kỹ sư AI/Ml dày dạn kinh nghiệm bỏ qua, nhưng lại rất quan trọng đến mức nếu bỏ qua, các mô hình có thể hoạt động một cách thiếu chính xác hoặc không thể sử dụng được.</p>
+<p>Chúng ta sẽ sử dụng 2 bộ dữ liệu <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/oil-spill.csv">Oil Spill Dataset</a> và <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv">Iris Flowers Dataset</a> để thực hành. Chúng đều là những bộ dữ liệu tiêu chuẩn cho việc học tập ML.</p>
+<h3 id="1-nhận-diện-và-xóa-các-features-chỉ-chứa-1-giá-trị-tất-cả-giá-trị-trong-các-hàng-của-1-cột-đều-bằng-nhau">1. Nhận diện và xóa các features chỉ chứa 1 giá trị (tất cả giá trị trong các hàng của 1 cột đều bằng nhau)</h3>
+<p>Các features mà chỉ có một giá trị duy nhất chắc chắn không có ý nghĩa cho việc mô hình hóa. Những features như vậy được gọi là <em>zero-variance</em>, bởi vì nếu chúng ta đo phương sai của chúng, sẽ thu được giá trị là 0.</p>
+<p>Hình dưới đây là ví dụ về features kiểu này:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/77_data_cleaning_1.png">
+</div>
+
+
+<h4 id="11-sử-dụng-numpy">1.1 Sử dụng Numpy</h4>
+<p>Để phát hiện ra các features này, chúng ta có thể sử dụng hàm <em>unique()</em> của Numpy, nó sẽ cho ta biết số lượng của các giá trị duy nhất trong mỗi cột. Ví dụ:  2 2 -&gt; 1, 2 3 -&gt; 2, 4 5 4 -&gt; 2, &hellip;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># summarize the number of unique values for each column using numpy</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> loadtxt
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> unique
+<span style="color:#75715e"># load the dataset</span>
+data <span style="color:#f92672">=</span> loadtxt( <span style="color:#e6db74">&#39; oil-spill.csv &#39;</span> , delimiter<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; , &#39;</span> )
+<span style="color:#75715e"># summarize the number of unique values in each column</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]):
+   <span style="color:#66d9ef">print</span>(i, len(unique(data[:, i]))
+</code></pre></div><p>Chạy code trên sẽ in ra kết quả như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">0</span> <span style="color:#ae81ff">238</span>
+<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">297</span>
+<span style="color:#ae81ff">2</span> <span style="color:#ae81ff">927</span>
+<span style="color:#ae81ff">3</span> <span style="color:#ae81ff">933</span>
+<span style="color:#ae81ff">4</span> <span style="color:#ae81ff">179</span>
+<span style="color:#ae81ff">5</span> <span style="color:#ae81ff">375</span>
+<span style="color:#ae81ff">6</span> <span style="color:#ae81ff">820</span>
+<span style="color:#ae81ff">7</span> <span style="color:#ae81ff">618</span>
+<span style="color:#ae81ff">8</span> <span style="color:#ae81ff">561</span>
+<span style="color:#ae81ff">9</span> <span style="color:#ae81ff">57</span>
+<span style="color:#ae81ff">10</span> <span style="color:#ae81ff">577</span>
+<span style="color:#ae81ff">11</span> <span style="color:#ae81ff">59</span>
+<span style="color:#ae81ff">12</span> <span style="color:#ae81ff">73</span>
+<span style="color:#ae81ff">13</span> <span style="color:#ae81ff">107</span>
+<span style="color:#ae81ff">14</span> <span style="color:#ae81ff">53</span>
+<span style="color:#ae81ff">15</span> <span style="color:#ae81ff">91</span>
+<span style="color:#ae81ff">16</span> <span style="color:#ae81ff">893</span>
+<span style="color:#ae81ff">17</span> <span style="color:#ae81ff">810</span>
+<span style="color:#ae81ff">18</span> <span style="color:#ae81ff">170</span>
+<span style="color:#ae81ff">19</span> <span style="color:#ae81ff">53</span>
+<span style="color:#ae81ff">20</span> <span style="color:#ae81ff">68</span>
+<span style="color:#ae81ff">21</span> <span style="color:#ae81ff">9</span>
+<span style="color:#ae81ff">22</span> <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">23</span> <span style="color:#ae81ff">92</span>
+<span style="color:#ae81ff">24</span> <span style="color:#ae81ff">9</span>
+<span style="color:#ae81ff">25</span> <span style="color:#ae81ff">8</span>
+<span style="color:#ae81ff">26</span> <span style="color:#ae81ff">9</span>
+<span style="color:#ae81ff">27</span> <span style="color:#ae81ff">308</span>
+<span style="color:#ae81ff">28</span> <span style="color:#ae81ff">447</span>
+<span style="color:#ae81ff">29</span> <span style="color:#ae81ff">392</span>
+<span style="color:#ae81ff">30</span> <span style="color:#ae81ff">107</span>
+<span style="color:#ae81ff">31</span> <span style="color:#ae81ff">42</span>
+<span style="color:#ae81ff">32</span> <span style="color:#ae81ff">4</span>
+<span style="color:#ae81ff">33</span> <span style="color:#ae81ff">45</span>
+<span style="color:#ae81ff">34</span> <span style="color:#ae81ff">141</span>
+<span style="color:#ae81ff">35</span> <span style="color:#ae81ff">110</span>
+<span style="color:#ae81ff">36</span> <span style="color:#ae81ff">3</span>
+<span style="color:#ae81ff">37</span> <span style="color:#ae81ff">758</span>
+<span style="color:#ae81ff">38</span> <span style="color:#ae81ff">9</span>
+<span style="color:#ae81ff">39</span> <span style="color:#ae81ff">9</span>
+<span style="color:#ae81ff">40</span> <span style="color:#ae81ff">388</span>
+<span style="color:#ae81ff">41</span> <span style="color:#ae81ff">220</span>
+<span style="color:#ae81ff">42</span> <span style="color:#ae81ff">644</span>
+<span style="color:#ae81ff">43</span> <span style="color:#ae81ff">649</span>
+<span style="color:#ae81ff">44</span> <span style="color:#ae81ff">499</span>
+<span style="color:#ae81ff">45</span> <span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">46</span> <span style="color:#ae81ff">937</span>
+<span style="color:#ae81ff">47</span> <span style="color:#ae81ff">169</span>
+<span style="color:#ae81ff">48</span> <span style="color:#ae81ff">286</span>
+<span style="color:#ae81ff">49</span> <span style="color:#ae81ff">2</span>
+</code></pre></div><p>Nhìn vào đây, ta có thể thấy ngay rằng cột 22 chỉ chứa 1 giá trị duy nhất. Vì thế, nó nên được loại bỏ khỏi dataset.</p>
+<h4 id="12-sử-dụng-pandas">1.2 Sử dụng Pandas</h4>
+<p>Một cách làm khác là sử dụng hàm <em>nunique()</em> của Pandas như dưới đây:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># summarize the number of unique values for each column using numpy</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+df <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39; oil-spill.csv &#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># summarize the number of unique values in each column</span>
+<span style="color:#66d9ef">print</span>(df<span style="color:#f92672">.</span>nunique())
+</code></pre></div><p>Chạy code trên sẽ thu được kết quả tương tự như Numpy.</p>
+<p>Để xóa những cột chỉ chứa 1 giá trị duy nhất, ta thực hiện như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># delete columns with a single unique value</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+df <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39; oil-spill.csv &#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#66d9ef">print</span>(df<span style="color:#f92672">.</span>shape)
+<span style="color:#75715e"># get number of unique values for each column</span>
+counts <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>nunique()
+<span style="color:#75715e"># record columns to delete</span>
+to_del <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(counts) <span style="color:#66d9ef">if</span> v <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>]
+<span style="color:#66d9ef">print</span>(to_del)
+<span style="color:#75715e"># drop useless columns</span>
+df<span style="color:#f92672">.</span>drop(to_del, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, inplace<span style="color:#f92672">=</span>True)
+<span style="color:#66d9ef">print</span>(df<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(<span style="color:#ae81ff">937</span>, <span style="color:#ae81ff">50</span>)
+[<span style="color:#ae81ff">22</span>]
+(<span style="color:#ae81ff">937</span>, <span style="color:#ae81ff">49</span>)
+</code></pre></div><h4 id="13-sử-dụng-scikit-learn">1.3 Sử dụng Scikit-learn</h4>
+<p>Thư viện Sckit-learn cung cấp lớp <em>VarianceThreshold</em> giúp ta nhận ra các cột chỉ có 1 giá trị dựa vào tính chất của phương sai. Nếu tất cả các giá trị trong một cột đều bằng nhau thì phương sai của chúng bằng 0. Cách sử dụng như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of applying the variance threshold for feature selection</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> VarianceThreshold
+<span style="color:#75715e"># load the dataset</span>
+df <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39;oil-spill.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># split data into inputs and outputs</span>
+data <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>values
+X <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+y <span style="color:#f92672">=</span> data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#66d9ef">print</span>(X<span style="color:#f92672">.</span>shape, y<span style="color:#f92672">.</span>shape)
+<span style="color:#75715e"># define the transform</span>
+transform <span style="color:#f92672">=</span> VarianceThreshold(threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+<span style="color:#75715e"># transform the input data</span>
+X_sel <span style="color:#f92672">=</span> transform<span style="color:#f92672">.</span>fit_transform(X)
+<span style="color:#66d9ef">print</span>(X_sel<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Một instance của lớp VarianceThreshold được tạo với tham số threshold=0 được cung cấp (<em>đây là giá trị mặc định, bạn có thể bỏ qua không cần chỉ ra nếu muốn sử dụng giá trị mặc định này</em>). Sau đó, nó dược <em>fit</em> và áp dụng vào tập dữ liệu thông qua hàm <em>fit_transform()</em> để tạo ra một phiên bản đã biến đổi của dữ liệu mà ở đó, các cột có phương sai không lớn hơn giá trị <em>threshold</em> sẽ bị xóa bỏ.</p>
+<p>Kết quả chạy code trên như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(<span style="color:#ae81ff">937</span>, <span style="color:#ae81ff">49</span>) (<span style="color:#ae81ff">937</span>,)
+(<span style="color:#ae81ff">937</span>, <span style="color:#ae81ff">48</span>)
+</code></pre></div><p>Trước, 50 cột. Sau khi biến đổi còn lại 49 cột.</p>
+<p>Ban đầu, dataset có 50 cột, cột số 22 chỉ chứa 1 giá trị duy nhất nên bị xóa, còn lại 49 cột trong dataset.</p>
+<h3 id="2-xem-xét-các-cột-có-rất-ít-giá-trị-rất-nhiều-giá-trị-trong-các-hàng-của-1-cột-trùng-nhau">2. Xem xét các cột có rất ít giá trị (rất nhiều giá trị trong các hàng của 1 cột trùng nhau)</h3>
+<p>Quan sát lại kết quả từ phần 1, ta thấy rằng có những cột có rất ít giá trị. Ví dụ, các cột 45, 32, và 38 chỉ có 2,4, và 9 giá trị không trùng nhau, tương ứng theo thứ tự. Những cột mà có ít giá trị như thế này, theo lý thuyết nên có dạng Ordinal hoặc Categorical. Tuy nhiên, trong trường hợp này, <em>Oil Spill Dataset</em> chỉ chứa giá trị dạng số nên hiện tượng này có thể coi là bất thường. Near-zero là tên gọi được đặt cho chúng bởi vì nếu tính toán thì giá trị phương sai của chúng rất gần 0.</p>
+<h4 id="21-sử-dung-numpy">2.1 Sử dung Numpy</h4>
+<p>Để có cái nhìn rõ hơn, chúng ta sẽ tính phần trăm số lượng giá trị không trùng của mỗi cột theo tổng số hàng và in ra những cột có phần trăm nhỏ hơn 1:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># summarize the percentage of unique values for each column using numpy</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> loadtxt
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> unique
+<span style="color:#75715e"># load the dataset</span>
+data <span style="color:#f92672">=</span> loadtxt( <span style="color:#e6db74">&#39; oil-spill.csv &#39;</span> , delimiter<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; , &#39;</span> )
+<span style="color:#75715e"># summarize the number of unique values in each column</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]):
+   num <span style="color:#f92672">=</span> len(unique(data[:, i]))
+   percentage <span style="color:#f92672">=</span> float(num) <span style="color:#f92672">/</span> data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+      <span style="color:#66d9ef">if</span> percentage <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>:
+         <span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%.1f%%</span><span style="color:#e6db74"> &#39;</span> <span style="color:#f92672">%</span> (i, num, percentage))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1.0</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0.1</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1.0</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0.9</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1.0</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">0.4</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0.3</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1.0</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1.0</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0.2</span><span style="color:#f92672">%</span>
+<span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0.2</span><span style="color:#f92672">%</span>
+</code></pre></div><p>11 cột trong tổng số 50 cột có giá trị phần trăm không lớn hơn 1. Điều này, ko có nghĩa là chúng ta nên xóa bỏ chúng ngay lập tức như đối với các cột chỉ có 1 giá trị, mà chúng ta nên xem xét thực hiện các lựa chọn sau:</p>
+<ul>
+<li>Chuyển sang dạng Ordinal</li>
+<li>Chuyển sang dạng Categorical</li>
+<li>Xóa bỏ</li>
+</ul>
+<p>Hai lựa chọn đầu có thể căn cứ vào thông tin về dataset để quyết định có thực hiện hay không? Thực hiện các lựa chọn một cách độc lập và so sánh kết quả của model trong mỗi trường hợp với nhau xem lựa chọn nào mang lại kết quả tốt nhất.</p>
+<h4 id="22-sử-dụng-pandas">2.2 Sử dụng Pandas</h4>
+<p>Code dưới đây sử dụng Pandas để tính toán và xóa bỏ 11 cột có phần trăm không lớn hơn 1:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># delete columns where number of unique values is less than 1% of the rows</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+df <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39; oil-spill.csv &#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#66d9ef">print</span>(df<span style="color:#f92672">.</span>shape)
+<span style="color:#75715e"># get number of unique values for each column</span>
+counts <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>nunique()
+<span style="color:#75715e"># record columns to delete</span>
+to_del <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(counts) <span style="color:#66d9ef">if</span> (float(v)<span style="color:#f92672">/</span>df<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>]
+<span style="color:#66d9ef">print</span>(to_del)
+<span style="color:#75715e"># drop useless columns</span>
+df<span style="color:#f92672">.</span>drop(to_del, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, inplace<span style="color:#f92672">=</span>True)
+<span style="color:#66d9ef">print</span>(df<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(<span style="color:#ae81ff">937</span>, <span style="color:#ae81ff">50</span>)
+[<span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">49</span>]
+(<span style="color:#ae81ff">937</span>, <span style="color:#ae81ff">39</span>)
+</code></pre></div><p>Trước, 50 cột. Xóa các cột [21, 22, 24, 25, 26, 32, 36, 38, 39, 45, 49]. Còn lại, 39 cột.</p>
+<h4 id="23-sử-dụng-scikit-learn">2.3 Sử dụng Scikit-learn</h4>
+<p>Vẫn theo tính chất của phương sai, ta biết rằng, những cột mà có rất ít giá trị thì phương sai của chúng rất nhỏ, chỉ lớn hơn 0.0 một chút xíu. Vì thế, tương tự như mục 1.3, ta có thể sử dụng lớp <em>VarianceThreshold()</em> với giá trị <em>threshold</em> &gt; 0.0 để loại bỏ những cột đó.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># explore the effect of the variance thresholds on the number of selected features</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> arange
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> VarianceThreshold
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># load the dataset</span>
+df <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39; oil-spill.csv &#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># split data into inputs and outputs</span>
+data <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>values
+X <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+y <span style="color:#f92672">=</span> data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#66d9ef">print</span>(X<span style="color:#f92672">.</span>shape, y<span style="color:#f92672">.</span>shape)
+<span style="color:#75715e"># define thresholds to check</span>
+thresholds <span style="color:#f92672">=</span> arange(<span style="color:#ae81ff">0.0</span>, <span style="color:#ae81ff">0.55</span>, <span style="color:#ae81ff">0.05</span>)
+<span style="color:#75715e"># apply transform with each threshold</span>
+results <span style="color:#f92672">=</span> list()
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> thresholds:
+   <span style="color:#75715e"># define the transform</span>
+   transform <span style="color:#f92672">=</span> VarianceThreshold(threshold<span style="color:#f92672">=</span>t)
+   <span style="color:#75715e"># transform the input data</span>
+   X_sel <span style="color:#f92672">=</span> transform<span style="color:#f92672">.</span>fit_transform(X)
+   <span style="color:#75715e"># determine the number of input features</span>
+   n_features <span style="color:#f92672">=</span> X_sel<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]
+   <span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39; &gt;Threshold=</span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">, Features=</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> &#39;</span> <span style="color:#f92672">%</span> (t, n_features))
+   <span style="color:#75715e"># store the result</span>
+   results<span style="color:#f92672">.</span>append(n_features)
+<span style="color:#75715e"># plot the threshold vs the number of selected features</span>
+pyplot<span style="color:#f92672">.</span>plot(thresholds, results)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Trong ví dụ trên, ta cho <em>threshold</em> nhận giá trị thay đổi từ 0.0 đến 0.55, với bước nhảy 0.05. Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(<span style="color:#ae81ff">937</span>, <span style="color:#ae81ff">49</span>) (<span style="color:#ae81ff">937</span>,)
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.00</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">48</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.05</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">37</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.10</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">36</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.15</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">35</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.20</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">35</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.25</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">35</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.30</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">35</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.35</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">35</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.40</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">35</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.45</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">33</span>
+<span style="color:#f92672">&gt;</span>Threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">0.50</span>, Features<span style="color:#f92672">=</span><span style="color:#ae81ff">31</span>
+</code></pre></div><p>Ta thấy, ban đầu có 50 cột, và số lượng cột giảm dần khi tăng giá trị của <em>threshold</em>. Đồ thị sau thể hiện mối quan hệ giữa <em>threshold</em> và số lượng cột còn lại trong dataset sau khi biến đổi.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/77_data_cleaning_2.png">
+</div>
+
+
+<h3 id="3-nhận-diện-và-xóa-các-hàng-trùng-nhau">3. Nhận diện và xóa các hàng trùng nhau</h3>
+<p>Các hàng có dữ liệu giống hệt nhau gần như là vô nghĩa đối với quá trình mô hình hóa, thậm chí là gây ra những tác động tiêu cực trong quá trình đánh giá mô hình. Bởi vì, cùng một dữ liệu nhưng có thể xuất hiện trong cả 2 tập Train và Test. Về mặt xác suất, chúng ta có thể coi sự trùng lặp như là 1 sự điều chỉnh phân phối dữ liệu và nó có thể có 1 chút lợi ích nếu bạn muốn mô hình của mình <em>thiên vị</em> theo hướng có lợi cho bạn (<em>purposefully bias</em>). Tuy nhiên, trong hầu hết trường hợp, ML model được mong đợi hoạt động một cách <em>minh bạch, chính xác</em> nhất có thể. Vì thế, một cách hiển nhiên, chúng ta cần tìm ra và xóa bỏ chúng khỏi tập dữ liệu trước khi tiến hành huấn luyện mô hình.</p>
+<p>Để kiểm tra dữ liệu trùng lặp trong các hàng, ta có thể sử dụng dung hàm <em>dupplicate()</em> của Pandas như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># locate rows of duplicate data</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+df <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39;iris.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># calculate duplicates</span>
+dups <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>duplicated()
+<span style="color:#75715e"># report if there are any duplicates</span>
+<span style="color:#66d9ef">print</span>(dups<span style="color:#f92672">.</span>any())
+<span style="color:#75715e"># list all duplicate rows</span>
+<span style="color:#66d9ef">print</span>(df[dups])
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">True
+       <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">3</span>               <span style="color:#ae81ff">4</span>
+<span style="color:#ae81ff">34</span>   <span style="color:#ae81ff">4.9</span>  <span style="color:#ae81ff">3.1</span>  <span style="color:#ae81ff">1.5</span>  <span style="color:#ae81ff">0.1</span>     Iris<span style="color:#f92672">-</span>setosa
+<span style="color:#ae81ff">37</span>   <span style="color:#ae81ff">4.9</span>  <span style="color:#ae81ff">3.1</span>  <span style="color:#ae81ff">1.5</span>  <span style="color:#ae81ff">0.1</span>     Iris<span style="color:#f92672">-</span>setosa
+<span style="color:#ae81ff">142</span>  <span style="color:#ae81ff">5.8</span>  <span style="color:#ae81ff">2.7</span>  <span style="color:#ae81ff">5.1</span>  <span style="color:#ae81ff">1.9</span>  Iris<span style="color:#f92672">-</span>virginica
+</code></pre></div><p>Đầu tiên, kết quả kiểm tra xem có dự trùng lặp dữ liệu hay không được báo cáo. Trong trường hợp này là có (<em>True</em>). Tiếp theo sau là danh sách các hàng bị trùng dữ liệu với 1 hàng nào đó phía trên. Cụ thể, dữ liệu ở hàng 34 bị trùng với 1 hàng nào đó từ 0-&gt;33, hàng 37 bị trùng với 1 hàng nào đó từ 0-&gt;36, hàng 142 bị trùng với 1 hàng nào đó từ 0-&gt;141.</p>
+<p>Biết được kết quả kiểm tra trùng lặp dữ liệu rồi, chúng ta sẽ tiến hành xóa chúng đi, sử dụng hàm <em>drop_duplicates()</em> của Pandas như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># delete rows of duplicate data from the dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+df <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39;iris.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#66d9ef">print</span>(df<span style="color:#f92672">.</span>shape)
+<span style="color:#75715e"># delete duplicate rows</span>
+df<span style="color:#f92672">.</span>drop_duplicates(inplace<span style="color:#f92672">=</span>True)
+<span style="color:#66d9ef">print</span>(df<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(<span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">5</span>)
+(<span style="color:#ae81ff">147</span>, <span style="color:#ae81ff">5</span>)
+</code></pre></div><p>Ban đầu, 150 hàng. Sau khi xóa các hàng trùng nhau, còn lại 147 hàng.</p>
+<h3 id="4-kết-luận">4. Kết luận</h3>
+<p>Mình sẽ kết thúc bài này tại đây. Trong bài này, chúng ta đã khám phá một số lỗi cơ bản của dữ liệu và phương pháp xử lý chúng.</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Preparation_for_ML/tree/master/02_Data_Cleaning">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ tiếp tục tìm hiểu về một vấn đề khác của Data Cleaning, đó là nhận diện và xử lý dữ liệu Outlier . Mời các bạn đón đọc.</p>
+<h3 id="5-tham-khảo">5. Tham khảo</h3>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
