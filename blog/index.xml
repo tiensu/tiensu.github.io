@@ -8,12 +8,21 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate><atom:link href="https://tiensu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Chuẩn bị dữ liệu cho Machine Learning model - Những kiến thức cơ bản</title>
+      <title>Chuẩn bị dữ liệu cho Machine Learning model - Data Cleaning</title>
       <link>https://tiensu.github.io/blog/77_data_prepeation_for_ml_data_cleaning_basic/</link>
       <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/77_data_prepeation_for_ml_data_cleaning_basic/</guid>
       <description>Bài thứ 2 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ bàn về nhiệm vụ Data Cleaning, tiếng việt gọi là làm sạch dữ liệu.</description>
+    </item>
+    
+    <item>
+      <title>Chuẩn bị dữ liệu cho Machine Learning model - Outlier</title>
+      <link>https://tiensu.github.io/blog/78_data_prepeation_for_ml_data_cleaning_outlier/</link>
+      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/78_data_prepeation_for_ml_data_cleaning_outlier/</guid>
+      <description>Bài thứ 3 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu về Outlier Data, mà tiếng việt của chúng ta gọi là dữ liệu ngoại lệ.</description>
     </item>
     
     <item>
