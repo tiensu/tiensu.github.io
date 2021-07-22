@@ -6,7 +6,16 @@
     <description>Recent content on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data</title>
+      <link>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data/</link>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data/</guid>
+      <description>Bài thứ 4 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu về vấn đề Missing Data.</description>
+    </item>
+    
     <item>
       <title>Chuẩn bị dữ liệu cho Machine Learning model - Data Cleaning - Basic</title>
       <link>https://tiensu.github.io/blog/77_data_prepeation_for_ml_data_cleaning_basic/</link>

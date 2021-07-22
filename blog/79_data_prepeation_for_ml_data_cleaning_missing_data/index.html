@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/data-preparation"
+          class="text-primary">Data Preparation</a>
+        
+        <h2>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>21 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/79_missing_data.jpg" class="img-fluid w-100 mb-4" alt="Chuẩn bị dữ liệu cho Machine Learning model - Missing Data">
+        
+        <div class="content mb-5">
+          <p>Bài thứ 4 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu về vấn đề Missing Data.</p>
+<h3 id="1-missing-data-là-gì">1. Missing Data là gì?</h3>
+<p>Missing Data là hiện tượng thiếu hụt một vài giá trị trong tập dữ liệu. Những vị trí thiếu đó có thể được thể hiện bởi số 0, số âm, khoảng trắng, hoặc một ký tự đặc biệt nào đó (<em>dấu ? chẳng hạn</em>).</p>
+<p>Nguyên nhân dẫn đến hiện tượng này có thể là do có sai sót trong quá trình thu thập dữ liệu, hoặc dữ liệu bị hỏng (<em>corruption</em>) trong quá trình lưu trữ và trao đổi.</p>
+<p>Phần lớn các thuật toán ML không thể làm việc được với Missing Data, hoặc nếu có thì kết quả cũng không đáng tin cậy. Vì thế, chúng ta cần loại bỏ vấn đề này trước khi thực hiện các bước mô hình hóa dữ liệu.</p>
+<h3 id="2-nhận-diện-và-đánh-dấu-missing-data">2. Nhận diện và đánh dấu Missing Data</h3>
+<p>Trước tiên, bạn hãy tải bộ dữ liệu Diabetes tại <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.csv">đây</a> để thực hành trong phần này.</p>
+<p>Để nhận diện Missing Data, các hay dùng nhất là sử dụng các hàm thống kê. Xem code dưới đây:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># load and summarize the dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># summarize the dataset</span>
+<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>describe())
+</code></pre></div><p>Đoạn code trên đọc Diabetes dataset và hiển thị các thông tin tóm tắt thống kê của nó:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">                <span style="color:#ae81ff">0</span>           <span style="color:#ae81ff">1</span>           <span style="color:#ae81ff">2</span>           <span style="color:#ae81ff">3</span>           <span style="color:#ae81ff">4</span>           <span style="color:#ae81ff">5</span>           <span style="color:#ae81ff">6</span>           <span style="color:#ae81ff">7</span>           <span style="color:#ae81ff">8</span>
+count  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>
+mean     <span style="color:#ae81ff">3.845052</span>  <span style="color:#ae81ff">120.894531</span>   <span style="color:#ae81ff">69.105469</span>   <span style="color:#ae81ff">20.536458</span>   <span style="color:#ae81ff">79.799479</span>   <span style="color:#ae81ff">31.992578</span>    <span style="color:#ae81ff">0.471876</span>   <span style="color:#ae81ff">33.240885</span>    <span style="color:#ae81ff">0.348958</span>
+std      <span style="color:#ae81ff">3.369578</span>   <span style="color:#ae81ff">31.972618</span>   <span style="color:#ae81ff">19.355807</span>   <span style="color:#ae81ff">15.952218</span>  <span style="color:#ae81ff">115.244002</span>    <span style="color:#ae81ff">7.884160</span>    <span style="color:#ae81ff">0.331329</span>   <span style="color:#ae81ff">11.760232</span>    <span style="color:#ae81ff">0.476951</span>
+min      <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.078000</span>   <span style="color:#ae81ff">21.000000</span>    <span style="color:#ae81ff">0.000000</span>
+<span style="color:#ae81ff">25</span><span style="color:#f92672">%</span>      <span style="color:#ae81ff">1.000000</span>   <span style="color:#ae81ff">99.000000</span>   <span style="color:#ae81ff">62.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>   <span style="color:#ae81ff">27.300000</span>    <span style="color:#ae81ff">0.243750</span>   <span style="color:#ae81ff">24.000000</span>    <span style="color:#ae81ff">0.000000</span>
+<span style="color:#ae81ff">50</span><span style="color:#f92672">%</span>      <span style="color:#ae81ff">3.000000</span>  <span style="color:#ae81ff">117.000000</span>   <span style="color:#ae81ff">72.000000</span>   <span style="color:#ae81ff">23.000000</span>   <span style="color:#ae81ff">30.500000</span>   <span style="color:#ae81ff">32.000000</span>    <span style="color:#ae81ff">0.372500</span>   <span style="color:#ae81ff">29.000000</span>    <span style="color:#ae81ff">0.000000</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">%</span>      <span style="color:#ae81ff">6.000000</span>  <span style="color:#ae81ff">140.250000</span>   <span style="color:#ae81ff">80.000000</span>   <span style="color:#ae81ff">32.000000</span>  <span style="color:#ae81ff">127.250000</span>   <span style="color:#ae81ff">36.600000</span>    <span style="color:#ae81ff">0.626250</span>   <span style="color:#ae81ff">41.000000</span>    <span style="color:#ae81ff">1.000000</span>
+max     <span style="color:#ae81ff">17.000000</span>  <span style="color:#ae81ff">199.000000</span>  <span style="color:#ae81ff">122.000000</span>   <span style="color:#ae81ff">99.000000</span>  <span style="color:#ae81ff">846.000000</span>   <span style="color:#ae81ff">67.100000</span>    <span style="color:#ae81ff">2.420000</span>   <span style="color:#ae81ff">81.000000</span>    <span style="color:#ae81ff">1.000000</span>
+</code></pre></div><p>Quan sát kết quả hiển thị bên trên, ta có thể thấy rằng có một vài cột có chứa giá trị 0 (<em>thể hiện ở việc giá trị nhỏ nhất của cột đó là 0</em>). Theo kiến thức chuyên môn trong lĩnh vực y học về bệnh tiểu đường thì 0 là giá trị không hợp lệ ở đây. Điều đó có nghĩa là, tại các vị trí có giá trị 0 chính là Missing Data.</p>
+<p>Cụ thể hơn, Missing Data nằm ở các cột [1, 2, 3, 4, 5] tương ứng với [Plasma glucose concentration, Diastolic blood pressur, Triceps skinfold thickness, 2-Hour serum insulin, Body mass index]. Tại cột đầu tiên, giá trị 0 là hợp lệ.</p>
+<p>Thử xác nhận lại điều này bằng cách kiểm tra 20 hàng đầu tiên của bộ dữ liệu:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># load the dataset and review rows</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># summarize the first 20 rows of data</span>
+<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">20</span>))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">4</span>     <span style="color:#ae81ff">5</span>      <span style="color:#ae81ff">6</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">8</span>
+<span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">148</span>  <span style="color:#ae81ff">72</span>  <span style="color:#ae81ff">35</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">33.6</span>  <span style="color:#ae81ff">0.627</span>  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">85</span>  <span style="color:#ae81ff">66</span>  <span style="color:#ae81ff">29</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">26.6</span>  <span style="color:#ae81ff">0.351</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">183</span>  <span style="color:#ae81ff">64</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">23.3</span>  <span style="color:#ae81ff">0.672</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">89</span>  <span style="color:#ae81ff">66</span>  <span style="color:#ae81ff">23</span>   <span style="color:#ae81ff">94</span>  <span style="color:#ae81ff">28.1</span>  <span style="color:#ae81ff">0.167</span>  <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">137</span>  <span style="color:#ae81ff">40</span>  <span style="color:#ae81ff">35</span>  <span style="color:#ae81ff">168</span>  <span style="color:#ae81ff">43.1</span>  <span style="color:#ae81ff">2.288</span>  <span style="color:#ae81ff">33</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">116</span>  <span style="color:#ae81ff">74</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">25.6</span>  <span style="color:#ae81ff">0.201</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">3</span>   <span style="color:#ae81ff">78</span>  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">32</span>   <span style="color:#ae81ff">88</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">0.248</span>  <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">7</span>   <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">115</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">35.3</span>  <span style="color:#ae81ff">0.134</span>  <span style="color:#ae81ff">29</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">8</span>    <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">197</span>  <span style="color:#ae81ff">70</span>  <span style="color:#ae81ff">45</span>  <span style="color:#ae81ff">543</span>  <span style="color:#ae81ff">30.5</span>  <span style="color:#ae81ff">0.158</span>  <span style="color:#ae81ff">53</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">125</span>  <span style="color:#ae81ff">96</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0.0</span>  <span style="color:#ae81ff">0.232</span>  <span style="color:#ae81ff">54</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">10</span>   <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">110</span>  <span style="color:#ae81ff">92</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">37.6</span>  <span style="color:#ae81ff">0.191</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">11</span>  <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">168</span>  <span style="color:#ae81ff">74</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">38.0</span>  <span style="color:#ae81ff">0.537</span>  <span style="color:#ae81ff">34</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">12</span>  <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">139</span>  <span style="color:#ae81ff">80</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">27.1</span>  <span style="color:#ae81ff">1.441</span>  <span style="color:#ae81ff">57</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">13</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">189</span>  <span style="color:#ae81ff">60</span>  <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">846</span>  <span style="color:#ae81ff">30.1</span>  <span style="color:#ae81ff">0.398</span>  <span style="color:#ae81ff">59</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">14</span>   <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">166</span>  <span style="color:#ae81ff">72</span>  <span style="color:#ae81ff">19</span>  <span style="color:#ae81ff">175</span>  <span style="color:#ae81ff">25.8</span>  <span style="color:#ae81ff">0.587</span>  <span style="color:#ae81ff">51</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">15</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">100</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">30.0</span>  <span style="color:#ae81ff">0.484</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">16</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">118</span>  <span style="color:#ae81ff">84</span>  <span style="color:#ae81ff">47</span>  <span style="color:#ae81ff">230</span>  <span style="color:#ae81ff">45.8</span>  <span style="color:#ae81ff">0.551</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">17</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">107</span>  <span style="color:#ae81ff">74</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">29.6</span>  <span style="color:#ae81ff">0.254</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">18</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">103</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">38</span>   <span style="color:#ae81ff">83</span>  <span style="color:#ae81ff">43.3</span>  <span style="color:#ae81ff">0.183</span>  <span style="color:#ae81ff">33</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">19</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">115</span>  <span style="color:#ae81ff">70</span>  <span style="color:#ae81ff">30</span>   <span style="color:#ae81ff">96</span>  <span style="color:#ae81ff">34.6</span>  <span style="color:#ae81ff">0.529</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
+</code></pre></div><p>Khi làm việc với dữ liệu có Missing Data, chúng ta nên đánh dấu (<em>mark</em>) chúng bằng một giá trị là NaN, bởi vì các thư viện Pandas, Numpy, Scikit-learn đều bỏ qua giá trị này trong các tính toán của chúng. Để làm việc này, ta sử dụng hàm <em>replace()</em> của Pandas.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of review data with missing values marked with a nan</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39; pima-indians-diabetes.csv &#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
+dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
+<span style="color:#75715e"># summarize the first 20 rows of data</span>
+<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">20</span>))
+</code></pre></div><p>Kết quả hiển thị:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">     <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">2</span>     <span style="color:#ae81ff">3</span>      <span style="color:#ae81ff">4</span>     <span style="color:#ae81ff">5</span>      <span style="color:#ae81ff">6</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">8</span>
+<span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">148.0</span>  <span style="color:#ae81ff">72.0</span>  <span style="color:#ae81ff">35.0</span>    NaN  <span style="color:#ae81ff">33.6</span>  <span style="color:#ae81ff">0.627</span>  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">85.0</span>  <span style="color:#ae81ff">66.0</span>  <span style="color:#ae81ff">29.0</span>    NaN  <span style="color:#ae81ff">26.6</span>  <span style="color:#ae81ff">0.351</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">183.0</span>  <span style="color:#ae81ff">64.0</span>   NaN    NaN  <span style="color:#ae81ff">23.3</span>  <span style="color:#ae81ff">0.672</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">89.0</span>  <span style="color:#ae81ff">66.0</span>  <span style="color:#ae81ff">23.0</span>   <span style="color:#ae81ff">94.0</span>  <span style="color:#ae81ff">28.1</span>  <span style="color:#ae81ff">0.167</span>  <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">137.0</span>  <span style="color:#ae81ff">40.0</span>  <span style="color:#ae81ff">35.0</span>  <span style="color:#ae81ff">168.0</span>  <span style="color:#ae81ff">43.1</span>  <span style="color:#ae81ff">2.288</span>  <span style="color:#ae81ff">33</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">116.0</span>  <span style="color:#ae81ff">74.0</span>   NaN    NaN  <span style="color:#ae81ff">25.6</span>  <span style="color:#ae81ff">0.201</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">3</span>   <span style="color:#ae81ff">78.0</span>  <span style="color:#ae81ff">50.0</span>  <span style="color:#ae81ff">32.0</span>   <span style="color:#ae81ff">88.0</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">0.248</span>  <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">7</span>   <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">115.0</span>   NaN   NaN    NaN  <span style="color:#ae81ff">35.3</span>  <span style="color:#ae81ff">0.134</span>  <span style="color:#ae81ff">29</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">8</span>    <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">197.0</span>  <span style="color:#ae81ff">70.0</span>  <span style="color:#ae81ff">45.0</span>  <span style="color:#ae81ff">543.0</span>  <span style="color:#ae81ff">30.5</span>  <span style="color:#ae81ff">0.158</span>  <span style="color:#ae81ff">53</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">125.0</span>  <span style="color:#ae81ff">96.0</span>   NaN    NaN   NaN  <span style="color:#ae81ff">0.232</span>  <span style="color:#ae81ff">54</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">10</span>   <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">110.0</span>  <span style="color:#ae81ff">92.0</span>   NaN    NaN  <span style="color:#ae81ff">37.6</span>  <span style="color:#ae81ff">0.191</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">11</span>  <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">168.0</span>  <span style="color:#ae81ff">74.0</span>   NaN    NaN  <span style="color:#ae81ff">38.0</span>  <span style="color:#ae81ff">0.537</span>  <span style="color:#ae81ff">34</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">12</span>  <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">139.0</span>  <span style="color:#ae81ff">80.0</span>   NaN    NaN  <span style="color:#ae81ff">27.1</span>  <span style="color:#ae81ff">1.441</span>  <span style="color:#ae81ff">57</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">13</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">189.0</span>  <span style="color:#ae81ff">60.0</span>  <span style="color:#ae81ff">23.0</span>  <span style="color:#ae81ff">846.0</span>  <span style="color:#ae81ff">30.1</span>  <span style="color:#ae81ff">0.398</span>  <span style="color:#ae81ff">59</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">14</span>   <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">166.0</span>  <span style="color:#ae81ff">72.0</span>  <span style="color:#ae81ff">19.0</span>  <span style="color:#ae81ff">175.0</span>  <span style="color:#ae81ff">25.8</span>  <span style="color:#ae81ff">0.587</span>  <span style="color:#ae81ff">51</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">15</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">100.0</span>   NaN   NaN    NaN  <span style="color:#ae81ff">30.0</span>  <span style="color:#ae81ff">0.484</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">16</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">118.0</span>  <span style="color:#ae81ff">84.0</span>  <span style="color:#ae81ff">47.0</span>  <span style="color:#ae81ff">230.0</span>  <span style="color:#ae81ff">45.8</span>  <span style="color:#ae81ff">0.551</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">17</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">107.0</span>  <span style="color:#ae81ff">74.0</span>   NaN    NaN  <span style="color:#ae81ff">29.6</span>  <span style="color:#ae81ff">0.254</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">18</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">103.0</span>  <span style="color:#ae81ff">30.0</span>  <span style="color:#ae81ff">38.0</span>   <span style="color:#ae81ff">83.0</span>  <span style="color:#ae81ff">43.3</span>  <span style="color:#ae81ff">0.183</span>  <span style="color:#ae81ff">33</span>  <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">19</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">115.0</span>  <span style="color:#ae81ff">70.0</span>  <span style="color:#ae81ff">30.0</span>   <span style="color:#ae81ff">96.0</span>  <span style="color:#ae81ff">34.6</span>  <span style="color:#ae81ff">0.529</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
+</code></pre></div><p>Sau khi đã đánh dấu Missing Data với giá trị NaN, ta có thể tính toán được số lượng Missing Data trong mỗi cột bằng hàm <em>isnull()</em> kết hợp với hàm <em>sum()</em> như dưới đây:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of marking missing values with nan values</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
+dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
+<span style="color:#75715e"># count the number of nan values in each column</span>
+<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum())
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">5</span>
+<span style="color:#ae81ff">2</span>     <span style="color:#ae81ff">35</span>
+<span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">227</span>
+<span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">374</span>
+<span style="color:#ae81ff">5</span>     <span style="color:#ae81ff">11</span>
+<span style="color:#ae81ff">6</span>      <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">7</span>      <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">8</span>      <span style="color:#ae81ff">0</span>
+dtype: int64
+</code></pre></div><p>Ta thấy cột thứ 3 và 4 có rất nhiều Missing Data, trong khi cột thứ 1 và thứ 5 chỉ có một vài Missing Data.</p>
+<h3 id="3-các-phương-pháp-xử-lý-missing-data">3. Các phương pháp xử lý Missing Data</h3>
+<p>Có rất nhiều cách để xử lý loại bỏ vấn đề Missing Data. Chúng ta sẽ đi sâu, tìm hiểu 4 phương pháp phổ biến nhất.</p>
+<p>Trước khi đi vào tìm hiểu các phương pháp đó, chúng ta sẽ thực hiện mô hình hóa một thuật toán với dữ liệu chứa Missing Data để xem kết quả ra sao. Kết quả này, sau đó được đem ra so sánh với kết quả mô hình hóa cùng thuật toán trên dữ liệu đã loại bỏ Missing Data theo từng phương pháp.</p>
+<p>Mình chọn mô hình hóa thuật toán LDA sử dụng 3-Fold Cross-validation. Code thực hiện như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example where missing values cause errors</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.discriminant_analysis <span style="color:#f92672">import</span> LinearDiscriminantAnalysis
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> KFold
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#75715e"># load the dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
+dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
+<span style="color:#75715e"># split dataset into inputs and outputs</span>
+values <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+X <span style="color:#f92672">=</span> values[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">8</span>]
+y <span style="color:#f92672">=</span> values[:,<span style="color:#ae81ff">8</span>]
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> LinearDiscriminantAnalysis()
+<span style="color:#75715e"># define the model evaluation procedure</span>
+cv <span style="color:#f92672">=</span> KFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, shuffle<span style="color:#f92672">=</span>True, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># evaluate the model</span>
+result <span style="color:#f92672">=</span> cross_val_score(model, X, y, cv<span style="color:#f92672">=</span>cv, scoring<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;accuracy&#39;</span>)
+<span style="color:#75715e"># report the mean performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> result<span style="color:#f92672">.</span>mean())
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a6e22e">ValueError</span>: Input contains NaN, infinity <span style="color:#f92672">or</span> a value too large <span style="color:#66d9ef">for</span> dtype(<span style="color:#e6db74">&#39;float64&#39;</span>)<span style="color:#f92672">.</span>
+</code></pre></div><p>Có lỗi xảy ra đúng như mình đã nói từ đầu, phần lớn các thuật toán ML không thể làm việc được với Missing Data. OK, giờ là lúc chúng ta đi vào tìm hiểu chi tiết từng phương pháp xử lý Missing Data.</p>
+<h4 id="31-xóa-các-hàngcột-chứa-missing-data">3.1 Xóa các hàng/cột chứa Missing Data</h4>
+<p>Đây là phương pháp đơn giản nhất để loại bỏ Missing Data. Tuy nhiên, nếu số lượng Missing Data quá nhiều mà ta lại xóa hết di thì phần còn lại sẽ không đủ để mô hình hóa dữ liệu đó. Thông thường, nếu tỉ lệ Missing Data nhỏ hơn 5% trên tổng số thì ta nên xóa chúng.</p>
+<p>Để xóa hàng/cột chứa Missing Data, ta sẽ sử dụng hàm <em>dropna()</em> của Pandas. Tham số <em>axis=0/1</em> chỉ ra là xóa hàng/cột, mặc định là xóa hàng. Tham số <em>inplace=True/False</em> chỉ ra việc lưu/không lưu thay đổi vào Dataframe ban đầu, mặc định là False. Code thực hiện như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of removing rows that contain missing values</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#75715e"># load the dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># summarize the shape of the raw data</span>
+<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>shape)
+<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
+dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
+<span style="color:#75715e"># drop rows with missing values</span>
+dataset<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
+<span style="color:#75715e"># summarize the shape of the data with missing rows removed</span>
+<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(<span style="color:#ae81ff">768</span>, <span style="color:#ae81ff">9</span>)
+(<span style="color:#ae81ff">392</span>, <span style="color:#ae81ff">9</span>)
+</code></pre></div><p>Từ 768 hàng, sau khi xóa các hàng có chứa Missing Data, chỉ còn lại 392 hàng.</p>
+<p>Chúng ta sẽ thực hiện lại việc mô hình hóa thuật toán LDA trên tập dữ liệu đã loại bỏ Missing Data:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate model on data after rows with missing data are removed</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.discriminant_analysis <span style="color:#f92672">import</span> LinearDiscriminantAnalysis
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> KFold
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#75715e"># load the dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
+dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
+<span style="color:#75715e"># drop rows with missing values</span>
+dataset<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
+<span style="color:#75715e"># split dataset into inputs and outputs</span>
+values <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+X <span style="color:#f92672">=</span> values[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">8</span>]
+y <span style="color:#f92672">=</span> values[:,<span style="color:#ae81ff">8</span>]
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> LinearDiscriminantAnalysis()
+<span style="color:#75715e"># define the model evaluation procedure</span>
+cv <span style="color:#f92672">=</span> KFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, shuffle<span style="color:#f92672">=</span>True, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># evaluate the model</span>
+result <span style="color:#f92672">=</span> cross_val_score(model, X, y, cv<span style="color:#f92672">=</span>cv, scoring<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;accuracy&#39;</span>)
+<span style="color:#75715e"># report the mean performance</span>
+<span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> result<span style="color:#f92672">.</span>mean())
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.781</span>
+</code></pre></div><p>Như vậy là chúng ta đã mô hình hóa thành công thuật toán LDA sau khi đã xóa bỏ Missing Data trong bộ dữ liệu của chúng ta.</p>
+<h3 id="3-kết-luận">3. Kết luận</h3>
+<p>Bài hôm nay cũng đã khá dài,mình sẽ kết thúc tại đây. Chúng ta đã cùng nhau tìm hiểu về hiện tượng Missing Data là gì? tác hại của nó ra sao? Cách nhận biết và thống kê nó. Chúng ta cũng đã tìm hiểu được một phương pháp đơn giản nhất để loại bỏ Missing Data, đó là xóa các hàng/cột có chứa Missing Data.</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Preparation_for_ML/tree/master/02_Data_Cleaning/Missing_Data/Mark_and_Remove">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ tìm hiểu về phương pháp tiếp theo trong việc xử lý Missing Data, đó là Statisticcal Imputation. Mời các bạn đón đọc.</p>
+<h3 id="4-tham-khảo">4. Tham khảo</h3>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
