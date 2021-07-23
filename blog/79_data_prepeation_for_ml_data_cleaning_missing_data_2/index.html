@@ -156,208 +156,262 @@
         <a href="/categories/data-preparation"
           class="text-primary">Data Preparation</a>
         
-        <h2>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 1</h2>
+        <h2>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 2</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>21 July 2021</span>
+          <span>23 July 2021</span>
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/79_missing_data.jpg" class="img-fluid w-100 mb-4" alt="Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 1">
+        <img src="https://tiensu.github.io/images/featured-post/79_missing_data.png" class="img-fluid w-100 mb-4" alt="Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 2">
         
         <div class="content mb-5">
-          <p>Bài thứ 4 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu về vấn đề Missing Data.</p>
-<h3 id="1-missing-data-là-gì">1. Missing Data là gì?</h3>
-<p>Missing Data là hiện tượng thiếu hụt một vài giá trị trong tập dữ liệu. Những vị trí thiếu đó có thể được thể hiện bởi số 0, số âm, khoảng trắng, hoặc một ký tự đặc biệt nào đó (<em>dấu ? chẳng hạn</em>).</p>
-<p>Nguyên nhân dẫn đến hiện tượng này có thể là do có sai sót trong quá trình thu thập dữ liệu, hoặc dữ liệu bị hỏng (<em>corruption</em>) trong quá trình lưu trữ và trao đổi.</p>
-<p>Phần lớn các thuật toán ML không thể làm việc được với Missing Data, hoặc nếu có thì kết quả cũng không đáng tin cậy. Vì thế, chúng ta cần loại bỏ vấn đề này trước khi thực hiện các bước mô hình hóa dữ liệu.</p>
-<h3 id="2-nhận-diện-và-đánh-dấu-missing-data">2. Nhận diện và đánh dấu Missing Data</h3>
-<p>Trước tiên, bạn hãy tải bộ dữ liệu Diabetes tại <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.csv">đây</a> để thực hành trong phần này.</p>
-<p>Để nhận diện Missing Data, các hay dùng nhất là sử dụng các hàm thống kê. Xem code dưới đây:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># load and summarize the dataset</span>
+          <p>Bài thứ 5 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Statistical Imputation.</p>
+<p>Imputation, nói chung là các phương pháp thay thế các Missing Data bằng một giá trị khác. Có 3 phương pháp Imputation phổ biến là Statistical Imputation, KNN Imputation, và Iterative Imputation. Phương pháp đầu tiên sẽ được tìm hiểu trong bài này.</p>
+<h3 id="1-statistic-imputation">1. Statistic Imputation</h3>
+<p>Đây là phương pháp sử dụng các giá trị thống kê để thay thế cho Missing Data. Ưu điểm của nó là đơn giản, tính toán nhanh. Một số phương án thay thế Missing Data bằng giá trị thống kê có thể sử dụng ở đây là:</p>
+<ul>
+<li>Thay thế Missing Data trong 1 cột bằng giá trị trung bình của cột chứa Missing Data đó.</li>
+<li>Thay thế Missing Data trong 1 cột bằng giá trị trung vị của cột chứa Missing Data đó.</li>
+<li>Thay thế Missing Data trong 1 cột bằng giá trị xuất hiện nhiều nhất (<em>mode</em>) trong cột chứa Missing Data đó.</li>
+<li>Thay thế Missing Data trong 1 cột bằng giá trị là hằng số khác.</li>
+</ul>
+<h3 id="2-thực-hàng-statistical-imputation">2. Thực hàng Statistical Imputation</h3>
+<p>Chúng ta sẽ thử thực hành phương pháp Statistical Imputation trên một bộ dữ liệu cụ thể.</p>
+<h4 id="21-giới-thiệu-bộ-dữ-liệu-horse-colic-dataset">2.1 Giới thiệu bộ dữ liệu Horse Colic Dataset</h4>
+<p><a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/horse-colic.csv">Horse Colic Dataset</a> là bộ dữ liệu mô tả các đặc điểm y học của những con ngựa bị đau bụng và cho ra kết quả là chúng còn sống hay đã chết. Có tổng cộng 300 con ngựa, mỗi con có 26 đặc điểm được ghi nhận. Thông tin chi tiết về các trường dữ liệu được trình bày trong <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/horse-colic.names">file này</a>. Đây là bài toán Binary Classification, kết quả dự đoán là 1 nếu con ngựa còn sống và 2 nếu con ngựa đã chết. Tập dữ liệu có nhiều giá trị bị thiếu được đánh dấu bằng một ký tự dấu chấm hỏi (“?”).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">530101</span>,<span style="color:#ae81ff">38.50</span>,<span style="color:#ae81ff">66</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">45.00</span>,<span style="color:#ae81ff">8.40</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">11300</span>,<span style="color:#ae81ff">00000</span>,<span style="color:#ae81ff">00000</span>,<span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">534817</span>,<span style="color:#ae81ff">39.2</span>,<span style="color:#ae81ff">88</span>,<span style="color:#ae81ff">20</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">85</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0220</span><span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">00000</span>,<span style="color:#ae81ff">00000</span>,<span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">530334</span>,<span style="color:#ae81ff">38.30</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">33.00</span>,<span style="color:#ae81ff">6.70</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">00000</span>,<span style="color:#ae81ff">00000</span>,<span style="color:#ae81ff">00000</span>,<span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5290409</span>,<span style="color:#ae81ff">39.10</span>,<span style="color:#ae81ff">164</span>,<span style="color:#ae81ff">84</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5.00</span>,<span style="color:#ae81ff">3</span>,<span style="color:#960050;background-color:#1e0010">?</span>,<span style="color:#ae81ff">48.00</span>,<span style="color:#ae81ff">7.20</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5.30</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0220</span><span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">00000</span>,<span style="color:#ae81ff">00000</span>,<span style="color:#ae81ff">1</span>
+<span style="color:#f92672">...</span>
+</code></pre></div><p>Mình sẽ tiến hành đọc bộ dữ liệu này vào một Dataframe, thay thế Missing Data bằng giá trị NaN, sau đó đếm số lượng Missing Data trong mỗi cột kèm theo phần trăm tương ứng:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># summarize the horse colic dataset</span>
 <span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#75715e"># load the dataset</span>
-dataset <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
-<span style="color:#75715e"># summarize the dataset</span>
-<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>describe())
-</code></pre></div><p>Đoạn code trên đọc Diabetes dataset và hiển thị các thông tin tóm tắt thống kê của nó:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">                <span style="color:#ae81ff">0</span>           <span style="color:#ae81ff">1</span>           <span style="color:#ae81ff">2</span>           <span style="color:#ae81ff">3</span>           <span style="color:#ae81ff">4</span>           <span style="color:#ae81ff">5</span>           <span style="color:#ae81ff">6</span>           <span style="color:#ae81ff">7</span>           <span style="color:#ae81ff">8</span>
-count  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>  <span style="color:#ae81ff">768.000000</span>
-mean     <span style="color:#ae81ff">3.845052</span>  <span style="color:#ae81ff">120.894531</span>   <span style="color:#ae81ff">69.105469</span>   <span style="color:#ae81ff">20.536458</span>   <span style="color:#ae81ff">79.799479</span>   <span style="color:#ae81ff">31.992578</span>    <span style="color:#ae81ff">0.471876</span>   <span style="color:#ae81ff">33.240885</span>    <span style="color:#ae81ff">0.348958</span>
-std      <span style="color:#ae81ff">3.369578</span>   <span style="color:#ae81ff">31.972618</span>   <span style="color:#ae81ff">19.355807</span>   <span style="color:#ae81ff">15.952218</span>  <span style="color:#ae81ff">115.244002</span>    <span style="color:#ae81ff">7.884160</span>    <span style="color:#ae81ff">0.331329</span>   <span style="color:#ae81ff">11.760232</span>    <span style="color:#ae81ff">0.476951</span>
-min      <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.078000</span>   <span style="color:#ae81ff">21.000000</span>    <span style="color:#ae81ff">0.000000</span>
-<span style="color:#ae81ff">25</span><span style="color:#f92672">%</span>      <span style="color:#ae81ff">1.000000</span>   <span style="color:#ae81ff">99.000000</span>   <span style="color:#ae81ff">62.000000</span>    <span style="color:#ae81ff">0.000000</span>    <span style="color:#ae81ff">0.000000</span>   <span style="color:#ae81ff">27.300000</span>    <span style="color:#ae81ff">0.243750</span>   <span style="color:#ae81ff">24.000000</span>    <span style="color:#ae81ff">0.000000</span>
-<span style="color:#ae81ff">50</span><span style="color:#f92672">%</span>      <span style="color:#ae81ff">3.000000</span>  <span style="color:#ae81ff">117.000000</span>   <span style="color:#ae81ff">72.000000</span>   <span style="color:#ae81ff">23.000000</span>   <span style="color:#ae81ff">30.500000</span>   <span style="color:#ae81ff">32.000000</span>    <span style="color:#ae81ff">0.372500</span>   <span style="color:#ae81ff">29.000000</span>    <span style="color:#ae81ff">0.000000</span>
-<span style="color:#ae81ff">75</span><span style="color:#f92672">%</span>      <span style="color:#ae81ff">6.000000</span>  <span style="color:#ae81ff">140.250000</span>   <span style="color:#ae81ff">80.000000</span>   <span style="color:#ae81ff">32.000000</span>  <span style="color:#ae81ff">127.250000</span>   <span style="color:#ae81ff">36.600000</span>    <span style="color:#ae81ff">0.626250</span>   <span style="color:#ae81ff">41.000000</span>    <span style="color:#ae81ff">1.000000</span>
-max     <span style="color:#ae81ff">17.000000</span>  <span style="color:#ae81ff">199.000000</span>  <span style="color:#ae81ff">122.000000</span>   <span style="color:#ae81ff">99.000000</span>  <span style="color:#ae81ff">846.000000</span>   <span style="color:#ae81ff">67.100000</span>    <span style="color:#ae81ff">2.420000</span>   <span style="color:#ae81ff">81.000000</span>    <span style="color:#ae81ff">1.000000</span>
-</code></pre></div><p>Quan sát kết quả hiển thị bên trên, ta có thể thấy rằng có một vài cột có chứa giá trị 0 (<em>thể hiện ở việc giá trị nhỏ nhất của cột đó là 0</em>). Theo kiến thức chuyên môn trong lĩnh vực y học về bệnh tiểu đường thì 0 là giá trị không hợp lệ ở đây. Điều đó có nghĩa là, tại các vị trí có giá trị 0 chính là Missing Data.</p>
-<p>Cụ thể hơn, Missing Data nằm ở các cột [1, 2, 3, 4, 5] tương ứng với [Plasma glucose concentration, Diastolic blood pressur, Triceps skinfold thickness, 2-Hour serum insulin, Body mass index]. Tại cột đầu tiên, giá trị 0 là hợp lệ.</p>
-<p>Thử xác nhận lại điều này bằng cách kiểm tra 20 hàng đầu tiên của bộ dữ liệu:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># load the dataset and review rows</span>
-<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#75715e"># load the dataset</span>
-dataset <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
-<span style="color:#75715e"># summarize the first 20 rows of data</span>
-<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">20</span>))
-</code></pre></div><p>Kết quả:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">4</span>     <span style="color:#ae81ff">5</span>      <span style="color:#ae81ff">6</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">8</span>
-<span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">148</span>  <span style="color:#ae81ff">72</span>  <span style="color:#ae81ff">35</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">33.6</span>  <span style="color:#ae81ff">0.627</span>  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">85</span>  <span style="color:#ae81ff">66</span>  <span style="color:#ae81ff">29</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">26.6</span>  <span style="color:#ae81ff">0.351</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">183</span>  <span style="color:#ae81ff">64</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">23.3</span>  <span style="color:#ae81ff">0.672</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">89</span>  <span style="color:#ae81ff">66</span>  <span style="color:#ae81ff">23</span>   <span style="color:#ae81ff">94</span>  <span style="color:#ae81ff">28.1</span>  <span style="color:#ae81ff">0.167</span>  <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">137</span>  <span style="color:#ae81ff">40</span>  <span style="color:#ae81ff">35</span>  <span style="color:#ae81ff">168</span>  <span style="color:#ae81ff">43.1</span>  <span style="color:#ae81ff">2.288</span>  <span style="color:#ae81ff">33</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">116</span>  <span style="color:#ae81ff">74</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">25.6</span>  <span style="color:#ae81ff">0.201</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">3</span>   <span style="color:#ae81ff">78</span>  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">32</span>   <span style="color:#ae81ff">88</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">0.248</span>  <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">7</span>   <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">115</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">35.3</span>  <span style="color:#ae81ff">0.134</span>  <span style="color:#ae81ff">29</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">8</span>    <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">197</span>  <span style="color:#ae81ff">70</span>  <span style="color:#ae81ff">45</span>  <span style="color:#ae81ff">543</span>  <span style="color:#ae81ff">30.5</span>  <span style="color:#ae81ff">0.158</span>  <span style="color:#ae81ff">53</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">125</span>  <span style="color:#ae81ff">96</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0.0</span>  <span style="color:#ae81ff">0.232</span>  <span style="color:#ae81ff">54</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">10</span>   <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">110</span>  <span style="color:#ae81ff">92</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">37.6</span>  <span style="color:#ae81ff">0.191</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">11</span>  <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">168</span>  <span style="color:#ae81ff">74</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">38.0</span>  <span style="color:#ae81ff">0.537</span>  <span style="color:#ae81ff">34</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">12</span>  <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">139</span>  <span style="color:#ae81ff">80</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">27.1</span>  <span style="color:#ae81ff">1.441</span>  <span style="color:#ae81ff">57</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">13</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">189</span>  <span style="color:#ae81ff">60</span>  <span style="color:#ae81ff">23</span>  <span style="color:#ae81ff">846</span>  <span style="color:#ae81ff">30.1</span>  <span style="color:#ae81ff">0.398</span>  <span style="color:#ae81ff">59</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">14</span>   <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">166</span>  <span style="color:#ae81ff">72</span>  <span style="color:#ae81ff">19</span>  <span style="color:#ae81ff">175</span>  <span style="color:#ae81ff">25.8</span>  <span style="color:#ae81ff">0.587</span>  <span style="color:#ae81ff">51</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">15</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">100</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">30.0</span>  <span style="color:#ae81ff">0.484</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">16</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">118</span>  <span style="color:#ae81ff">84</span>  <span style="color:#ae81ff">47</span>  <span style="color:#ae81ff">230</span>  <span style="color:#ae81ff">45.8</span>  <span style="color:#ae81ff">0.551</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">17</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">107</span>  <span style="color:#ae81ff">74</span>   <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">29.6</span>  <span style="color:#ae81ff">0.254</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">18</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">103</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">38</span>   <span style="color:#ae81ff">83</span>  <span style="color:#ae81ff">43.3</span>  <span style="color:#ae81ff">0.183</span>  <span style="color:#ae81ff">33</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">19</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">115</span>  <span style="color:#ae81ff">70</span>  <span style="color:#ae81ff">30</span>   <span style="color:#ae81ff">96</span>  <span style="color:#ae81ff">34.6</span>  <span style="color:#ae81ff">0.529</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
-</code></pre></div><p>Khi làm việc với dữ liệu có Missing Data, chúng ta nên đánh dấu (<em>mark</em>) chúng bằng một giá trị là NaN, bởi vì các thư viện Pandas, Numpy, Scikit-learn đều bỏ qua giá trị này trong các tính toán của chúng. Để làm việc này, ta sử dụng hàm <em>replace()</em> của Pandas.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of review data with missing values marked with a nan</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
-<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#75715e"># load the dataset</span>
-dataset <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39; pima-indians-diabetes.csv &#39;</span> , header<span style="color:#f92672">=</span>None)
-<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
-dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
-<span style="color:#75715e"># summarize the first 20 rows of data</span>
-<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">20</span>))
-</code></pre></div><p>Kết quả hiển thị:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">     <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">2</span>     <span style="color:#ae81ff">3</span>      <span style="color:#ae81ff">4</span>     <span style="color:#ae81ff">5</span>      <span style="color:#ae81ff">6</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">8</span>
-<span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">148.0</span>  <span style="color:#ae81ff">72.0</span>  <span style="color:#ae81ff">35.0</span>    NaN  <span style="color:#ae81ff">33.6</span>  <span style="color:#ae81ff">0.627</span>  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">85.0</span>  <span style="color:#ae81ff">66.0</span>  <span style="color:#ae81ff">29.0</span>    NaN  <span style="color:#ae81ff">26.6</span>  <span style="color:#ae81ff">0.351</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">183.0</span>  <span style="color:#ae81ff">64.0</span>   NaN    NaN  <span style="color:#ae81ff">23.3</span>  <span style="color:#ae81ff">0.672</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">89.0</span>  <span style="color:#ae81ff">66.0</span>  <span style="color:#ae81ff">23.0</span>   <span style="color:#ae81ff">94.0</span>  <span style="color:#ae81ff">28.1</span>  <span style="color:#ae81ff">0.167</span>  <span style="color:#ae81ff">21</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">137.0</span>  <span style="color:#ae81ff">40.0</span>  <span style="color:#ae81ff">35.0</span>  <span style="color:#ae81ff">168.0</span>  <span style="color:#ae81ff">43.1</span>  <span style="color:#ae81ff">2.288</span>  <span style="color:#ae81ff">33</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">116.0</span>  <span style="color:#ae81ff">74.0</span>   NaN    NaN  <span style="color:#ae81ff">25.6</span>  <span style="color:#ae81ff">0.201</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">3</span>   <span style="color:#ae81ff">78.0</span>  <span style="color:#ae81ff">50.0</span>  <span style="color:#ae81ff">32.0</span>   <span style="color:#ae81ff">88.0</span>  <span style="color:#ae81ff">31.0</span>  <span style="color:#ae81ff">0.248</span>  <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">7</span>   <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">115.0</span>   NaN   NaN    NaN  <span style="color:#ae81ff">35.3</span>  <span style="color:#ae81ff">0.134</span>  <span style="color:#ae81ff">29</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">8</span>    <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">197.0</span>  <span style="color:#ae81ff">70.0</span>  <span style="color:#ae81ff">45.0</span>  <span style="color:#ae81ff">543.0</span>  <span style="color:#ae81ff">30.5</span>  <span style="color:#ae81ff">0.158</span>  <span style="color:#ae81ff">53</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">125.0</span>  <span style="color:#ae81ff">96.0</span>   NaN    NaN   NaN  <span style="color:#ae81ff">0.232</span>  <span style="color:#ae81ff">54</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">10</span>   <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">110.0</span>  <span style="color:#ae81ff">92.0</span>   NaN    NaN  <span style="color:#ae81ff">37.6</span>  <span style="color:#ae81ff">0.191</span>  <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">11</span>  <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">168.0</span>  <span style="color:#ae81ff">74.0</span>   NaN    NaN  <span style="color:#ae81ff">38.0</span>  <span style="color:#ae81ff">0.537</span>  <span style="color:#ae81ff">34</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">12</span>  <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">139.0</span>  <span style="color:#ae81ff">80.0</span>   NaN    NaN  <span style="color:#ae81ff">27.1</span>  <span style="color:#ae81ff">1.441</span>  <span style="color:#ae81ff">57</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">13</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">189.0</span>  <span style="color:#ae81ff">60.0</span>  <span style="color:#ae81ff">23.0</span>  <span style="color:#ae81ff">846.0</span>  <span style="color:#ae81ff">30.1</span>  <span style="color:#ae81ff">0.398</span>  <span style="color:#ae81ff">59</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">14</span>   <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">166.0</span>  <span style="color:#ae81ff">72.0</span>  <span style="color:#ae81ff">19.0</span>  <span style="color:#ae81ff">175.0</span>  <span style="color:#ae81ff">25.8</span>  <span style="color:#ae81ff">0.587</span>  <span style="color:#ae81ff">51</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">15</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">100.0</span>   NaN   NaN    NaN  <span style="color:#ae81ff">30.0</span>  <span style="color:#ae81ff">0.484</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">16</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">118.0</span>  <span style="color:#ae81ff">84.0</span>  <span style="color:#ae81ff">47.0</span>  <span style="color:#ae81ff">230.0</span>  <span style="color:#ae81ff">45.8</span>  <span style="color:#ae81ff">0.551</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">17</span>   <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">107.0</span>  <span style="color:#ae81ff">74.0</span>   NaN    NaN  <span style="color:#ae81ff">29.6</span>  <span style="color:#ae81ff">0.254</span>  <span style="color:#ae81ff">31</span>  <span style="color:#ae81ff">1</span>
-<span style="color:#ae81ff">18</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">103.0</span>  <span style="color:#ae81ff">30.0</span>  <span style="color:#ae81ff">38.0</span>   <span style="color:#ae81ff">83.0</span>  <span style="color:#ae81ff">43.3</span>  <span style="color:#ae81ff">0.183</span>  <span style="color:#ae81ff">33</span>  <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">19</span>   <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">115.0</span>  <span style="color:#ae81ff">70.0</span>  <span style="color:#ae81ff">30.0</span>   <span style="color:#ae81ff">96.0</span>  <span style="color:#ae81ff">34.6</span>  <span style="color:#ae81ff">0.529</span>  <span style="color:#ae81ff">32</span>  <span style="color:#ae81ff">1</span>
-</code></pre></div><p>Sau khi đã đánh dấu Missing Data với giá trị NaN, ta có thể tính toán được số lượng Missing Data trong mỗi cột bằng hàm <em>isnull()</em> kết hợp với hàm <em>sum()</em> như dưới đây:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of marking missing values with nan values</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
-<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#75715e"># load the dataset</span>
-dataset <span style="color:#f92672">=</span> read_csv( <span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
-<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
-dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
-<span style="color:#75715e"># count the number of nan values in each column</span>
-<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum())
+<span style="color:#75715e"># load dataset</span>
+dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span> , header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;?&#39;</span>)
+<span style="color:#75715e"># summarize the first few rows</span>
+<span style="color:#66d9ef">print</span>(dataframe<span style="color:#f92672">.</span>head())
+<span style="color:#75715e"># summarize the number of rows with missing values for each column</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(dataframe<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]):
+    <span style="color:#75715e"># count number of rows with missing values</span>
+    n_miss <span style="color:#f92672">=</span> dataframe[[i]]<span style="color:#f92672">.</span>isnull()<span style="color:#f92672">.</span>sum()
+    perc <span style="color:#f92672">=</span> n_miss <span style="color:#f92672">/</span> dataframe<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt; </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, Missing: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.1f%%</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (i, n_miss, perc))
 </code></pre></div><p>Kết quả thực hiện:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">5</span>
-<span style="color:#ae81ff">2</span>     <span style="color:#ae81ff">35</span>
-<span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">227</span>
-<span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">374</span>
-<span style="color:#ae81ff">5</span>     <span style="color:#ae81ff">11</span>
-<span style="color:#ae81ff">6</span>      <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">7</span>      <span style="color:#ae81ff">0</span>
-<span style="color:#ae81ff">8</span>      <span style="color:#ae81ff">0</span>
-dtype: int64
-</code></pre></div><p>Ta thấy cột thứ 3 và 4 có rất nhiều Missing Data, trong khi cột thứ 1 và thứ 5 chỉ có một vài Missing Data.</p>
-<h3 id="3-các-phương-pháp-xử-lý-missing-data">3. Các phương pháp xử lý Missing Data</h3>
-<p>Có rất nhiều cách để xử lý loại bỏ vấn đề Missing Data. Chúng ta sẽ đi sâu, tìm hiểu 4 phương pháp phổ biến nhất.</p>
-<p>Trước khi đi vào tìm hiểu các phương pháp đó, chúng ta sẽ thực hiện mô hình hóa một thuật toán với dữ liệu chứa Missing Data để xem kết quả ra sao. Kết quả này, sau đó được đem ra so sánh với kết quả mô hình hóa cùng thuật toán trên dữ liệu đã loại bỏ Missing Data theo từng phương pháp.</p>
-<p>Mình chọn mô hình hóa thuật toán LDA sử dụng 3-Fold Cross-validation. Code thực hiện như sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example where missing values cause errors</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">1</span>        <span style="color:#ae81ff">2</span>     <span style="color:#ae81ff">3</span>      <span style="color:#ae81ff">4</span>     <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">8</span>    <span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">10</span>   <span style="color:#ae81ff">11</span>   <span style="color:#ae81ff">12</span>   <span style="color:#ae81ff">13</span>   <span style="color:#ae81ff">14</span>   <span style="color:#ae81ff">15</span>   <span style="color:#ae81ff">16</span>   <span style="color:#ae81ff">17</span>    <span style="color:#ae81ff">18</span>    <span style="color:#ae81ff">19</span>   <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">21</span>   <span style="color:#ae81ff">22</span>  <span style="color:#ae81ff">23</span>     <span style="color:#ae81ff">24</span>  <span style="color:#ae81ff">25</span>  <span style="color:#ae81ff">26</span>  <span style="color:#ae81ff">27</span>
+<span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">2.0</span>   <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">530101</span>  <span style="color:#ae81ff">38.5</span>   <span style="color:#ae81ff">66.0</span>  <span style="color:#ae81ff">28.0</span>  <span style="color:#ae81ff">3.0</span>  <span style="color:#ae81ff">3.0</span>  NaN  <span style="color:#ae81ff">2.0</span>  <span style="color:#ae81ff">5.0</span>  <span style="color:#ae81ff">4.0</span>  <span style="color:#ae81ff">4.0</span>  NaN  NaN  NaN  <span style="color:#ae81ff">3.0</span>  <span style="color:#ae81ff">5.0</span>  <span style="color:#ae81ff">45.0</span>   <span style="color:#ae81ff">8.4</span>  NaN  NaN  <span style="color:#ae81ff">2.0</span>   <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">11300</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">1.0</span>   <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">534817</span>  <span style="color:#ae81ff">39.2</span>   <span style="color:#ae81ff">88.0</span>  <span style="color:#ae81ff">20.0</span>  NaN  NaN  <span style="color:#ae81ff">4.0</span>  <span style="color:#ae81ff">1.0</span>  <span style="color:#ae81ff">3.0</span>  <span style="color:#ae81ff">4.0</span>  <span style="color:#ae81ff">2.0</span>  NaN  NaN  NaN  <span style="color:#ae81ff">4.0</span>  <span style="color:#ae81ff">2.0</span>  <span style="color:#ae81ff">50.0</span>  <span style="color:#ae81ff">85.0</span>  <span style="color:#ae81ff">2.0</span>  <span style="color:#ae81ff">2.0</span>  <span style="color:#ae81ff">3.0</span>   <span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">2208</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">2</span>
+<span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">2.0</span>   <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">530334</span>  <span style="color:#ae81ff">38.3</span>   <span style="color:#ae81ff">40.0</span>  <span style="color:#ae81ff">24.0</span>  <span style="color:#ae81ff">1.0</span>  <span style="color:#ae81ff">1.0</span>  <span style="color:#ae81ff">3.0</span>  <span style="color:#ae81ff">1.0</span>  <span style="color:#ae81ff">3.0</span>  <span style="color:#ae81ff">3.0</span>  <span style="color:#ae81ff">1.0</span>  NaN  NaN  NaN  <span style="color:#ae81ff">1.0</span>  <span style="color:#ae81ff">1.0</span>  <span style="color:#ae81ff">33.0</span>   <span style="color:#ae81ff">6.7</span>  NaN  NaN  <span style="color:#ae81ff">1.0</span>   <span style="color:#ae81ff">2</span>      <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">1.0</span>   <span style="color:#ae81ff">9</span>  <span style="color:#ae81ff">5290409</span>  <span style="color:#ae81ff">39.1</span>  <span style="color:#ae81ff">164.0</span>  <span style="color:#ae81ff">84.0</span>  <span style="color:#ae81ff">4.0</span>  <span style="color:#ae81ff">1.0</span>  <span style="color:#ae81ff">6.0</span>  <span style="color:#ae81ff">2.0</span>  <span style="color:#ae81ff">2.0</span>  <span style="color:#ae81ff">4.0</span>  <span style="color:#ae81ff">4.0</span>  <span style="color:#ae81ff">1.0</span>  <span style="color:#ae81ff">2.0</span>  <span style="color:#ae81ff">5.0</span>  <span style="color:#ae81ff">3.0</span>  NaN  <span style="color:#ae81ff">48.0</span>   <span style="color:#ae81ff">7.2</span>  <span style="color:#ae81ff">3.0</span>  <span style="color:#ae81ff">5.3</span>  <span style="color:#ae81ff">2.0</span>   <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2208</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2.0</span>   <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">530255</span>  <span style="color:#ae81ff">37.3</span>  <span style="color:#ae81ff">104.0</span>  <span style="color:#ae81ff">35.0</span>  NaN  NaN  <span style="color:#ae81ff">6.0</span>  <span style="color:#ae81ff">2.0</span>  NaN  NaN  NaN  NaN  NaN  NaN  NaN  NaN  <span style="color:#ae81ff">74.0</span>   <span style="color:#ae81ff">7.4</span>  NaN  NaN  <span style="color:#ae81ff">2.0</span>   <span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">4300</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">2</span>
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>, Missing: <span style="color:#ae81ff">1</span> (<span style="color:#ae81ff">0.3</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>, Missing: <span style="color:#ae81ff">0</span> (<span style="color:#ae81ff">0.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>, Missing: <span style="color:#ae81ff">0</span> (<span style="color:#ae81ff">0.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>, Missing: <span style="color:#ae81ff">60</span> (<span style="color:#ae81ff">20.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">4</span>, Missing: <span style="color:#ae81ff">24</span> (<span style="color:#ae81ff">8.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>, Missing: <span style="color:#ae81ff">58</span> (<span style="color:#ae81ff">19.3</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">6</span>, Missing: <span style="color:#ae81ff">56</span> (<span style="color:#ae81ff">18.7</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">7</span>, Missing: <span style="color:#ae81ff">69</span> (<span style="color:#ae81ff">23.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">8</span>, Missing: <span style="color:#ae81ff">47</span> (<span style="color:#ae81ff">15.7</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">9</span>, Missing: <span style="color:#ae81ff">32</span> (<span style="color:#ae81ff">10.7</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>, Missing: <span style="color:#ae81ff">55</span> (<span style="color:#ae81ff">18.3</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span>, Missing: <span style="color:#ae81ff">44</span> (<span style="color:#ae81ff">14.7</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">12</span>, Missing: <span style="color:#ae81ff">56</span> (<span style="color:#ae81ff">18.7</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">13</span>, Missing: <span style="color:#ae81ff">104</span> (<span style="color:#ae81ff">34.7</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">14</span>, Missing: <span style="color:#ae81ff">106</span> (<span style="color:#ae81ff">35.3</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">15</span>, Missing: <span style="color:#ae81ff">247</span> (<span style="color:#ae81ff">82.3</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">16</span>, Missing: <span style="color:#ae81ff">102</span> (<span style="color:#ae81ff">34.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">17</span>, Missing: <span style="color:#ae81ff">118</span> (<span style="color:#ae81ff">39.3</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">18</span>, Missing: <span style="color:#ae81ff">29</span> (<span style="color:#ae81ff">9.7</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">19</span>, Missing: <span style="color:#ae81ff">33</span> (<span style="color:#ae81ff">11.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span>, Missing: <span style="color:#ae81ff">165</span> (<span style="color:#ae81ff">55.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">21</span>, Missing: <span style="color:#ae81ff">198</span> (<span style="color:#ae81ff">66.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">22</span>, Missing: <span style="color:#ae81ff">1</span> (<span style="color:#ae81ff">0.3</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">23</span>, Missing: <span style="color:#ae81ff">0</span> (<span style="color:#ae81ff">0.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">24</span>, Missing: <span style="color:#ae81ff">0</span> (<span style="color:#ae81ff">0.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">25</span>, Missing: <span style="color:#ae81ff">0</span> (<span style="color:#ae81ff">0.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">26</span>, Missing: <span style="color:#ae81ff">0</span> (<span style="color:#ae81ff">0.0</span><span style="color:#f92672">%</span>)
+<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">27</span>, Missing: <span style="color:#ae81ff">0</span> (<span style="color:#ae81ff">0.0</span><span style="color:#f92672">%</span>)
+</code></pre></div><p>Có thể thấy rằng, chỉ có cột 1, 2, 23, 24, 25, 25, 27 là không có Missing Data. Các cột còn lại đều có. Đặc biệt, cột cột 15 và 21, số lượng Missing Data chiếm phần lớn.</p>
+<h4 id="22-thực-hiện-statistical-imputation">2.2 Thực hiện Statistical Imputation</h4>
+<p>Thư viện Scikit-learn cung cấp lớp <em>SimpleImputer</em> giúp chúng ta thực hiện Statistical Imputation rất dễ dàng.</p>
+<h5 id="a-simpleimputer-và-data-transform">a, SimpleImputer và Data Transform</h5>
+<p>Đầu tiên, khai báo một Instance của lớp <em>SimpleImputer</em>, truyền vào loại thống kê muốn sử dụng: mean, median, mode, &hellip;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># define imputer</span>
+imputer <span style="color:#f92672">=</span> SimpleImputer(strategy<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mean&#39;</span>)
+</code></pre></div><p>Tiếp theo, dùng <em>imputer</em> vừa khai báo <em>fit</em> trên tập dữ liệu để tính toán trung bình của mỗi cột.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># fit on the dataset</span>
+imputer<span style="color:#f92672">.</span>fit(X)
+</code></pre></div><p>Cuối cùng, mang <em>imputer</em> áp dụng lên toàn bộ tập dữ liệu để tạo ra một phiên bản mới của tập dữ liệu, trong đó, tất cả Missing Data được thay thể bởi giá trị trung bình của cột chứa nó.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># transform the dataset</span>
+Xtrans <span style="color:#f92672">=</span> imputer<span style="color:#f92672">.</span>transform(X)
+</code></pre></div><p>Code đầy đủ áp dụng vào tập dữ liệu Horse Colic Dataset như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># statistical imputation transform for the horse colic dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> isnan
 <span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#f92672">from</span> sklearn.discriminant_analysis <span style="color:#f92672">import</span> LinearDiscriminantAnalysis
-<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> KFold
+<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> SimpleImputer
+
+<span style="color:#75715e"># load dataset</span>
+dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span> , header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;?&#39;</span> )
+<span style="color:#75715e"># split into input and output elements. #23 is label column</span>
+data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
+ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
+X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
+<span style="color:#75715e"># summarize total missing</span>
+<span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39;Missing: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> sum(isnan(X)<span style="color:#f92672">.</span>flatten()))
+<span style="color:#75715e"># define imputer</span>
+imputer <span style="color:#f92672">=</span> SimpleImputer(strategy<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mean&#39;</span> )
+<span style="color:#75715e"># fit on the dataset</span>
+imputer<span style="color:#f92672">.</span>fit(X)
+<span style="color:#75715e"># transform the dataset</span>
+Xtrans <span style="color:#f92672">=</span> imputer<span style="color:#f92672">.</span>transform(X)
+<span style="color:#75715e"># summarize total missing</span>
+<span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39;Missing: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> sum(isnan(Xtrans)<span style="color:#f92672">.</span>flatten()))
+</code></pre></div><p>Kết quả thực thi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Missing: <span style="color:#ae81ff">1605</span>
+Missing: <span style="color:#ae81ff">0</span>
+</code></pre></div><p>Ban đầu, có 1605 Missing Data. Sau khi thực hiện Statistical Imputation, không còn Missing Data nữa.</p>
+<h5 id="b-simpleimputer-và-model-evaluation">b, SimpleImputer và Model Evaluation</h5>
+<p>Phần này, chúng ta sẽ thực hiện đầy đủ việc áp dụng Statistical Imputation vào mô hình hóa thuật toán RandomForest trên tập dữ liệu Horse Colic Dataset theo phương pháp k-Fold Cross-validation.</p>
+<p>Hãy nhớ lại cách tiếp cận chuẩn khi thực hiện Data Preparation mà chúng ta đã đề cập ở bài đầu tiên. Cụ thể, với bài toán này, các bước thực hiện sẽ như sau:</p>
+<ul>
+<li>Chia tập dữ liệu thành 2 tập Train và Test theo kiểu k-Fold Cross-validation.</li>
+<li>Tính toán giá trị Statistic trên mỗi cột của tập Train.</li>
+<li>Áp dụng phần tính toán đó vào cả 2 tập Train và Test.</li>
+</ul>
+<p>Để thực hiện các công viêc này một cách đơn giản, mình sẽ sử dụng lớp <em>Pipeline</em> của Scikit-learn. Có thể hiểu đó là một cách thực hiện các bước tuần tự nhau theo một thứ tự được quy định trước. Như ví dụ dưới đây, <em>Pipeline</em> gồm 2 bước: bước 1 là khai báo SimpleImputer, bước 2 là khai báo RandomForest model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># define modeling pipeline</span>
+model <span style="color:#f92672">=</span> RandomForestClassifier()
+imputer <span style="color:#f92672">=</span> SimpleImputer(strategy<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mean&#39;</span>)
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span> , imputer), (<span style="color:#e6db74">&#39;m&#39;</span> , model)])
+</code></pre></div><p>Code đây đủ của bài toán như dưới đây:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate mean imputation and random forest for the horse colic dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> SimpleImputer
 <span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
-<span style="color:#75715e"># load the dataset</span>
-dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
-<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
-dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
-<span style="color:#75715e"># split dataset into inputs and outputs</span>
-values <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
-X <span style="color:#f92672">=</span> values[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">8</span>]
-y <span style="color:#f92672">=</span> values[:,<span style="color:#ae81ff">8</span>]
-<span style="color:#75715e"># define the model</span>
-model <span style="color:#f92672">=</span> LinearDiscriminantAnalysis()
-<span style="color:#75715e"># define the model evaluation procedure</span>
-cv <span style="color:#f92672">=</span> KFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, shuffle<span style="color:#f92672">=</span>True, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-<span style="color:#75715e"># evaluate the model</span>
-result <span style="color:#f92672">=</span> cross_val_score(model, X, y, cv<span style="color:#f92672">=</span>cv, scoring<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;accuracy&#39;</span>)
-<span style="color:#75715e"># report the mean performance</span>
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> result<span style="color:#f92672">.</span>mean())
-</code></pre></div><p>Kết quả thực hiện:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a6e22e">ValueError</span>: Input contains NaN, infinity <span style="color:#f92672">or</span> a value too large <span style="color:#66d9ef">for</span> dtype(<span style="color:#e6db74">&#39;float64&#39;</span>)<span style="color:#f92672">.</span>
-</code></pre></div><p>Có lỗi xảy ra đúng như mình đã nói từ đầu, phần lớn các thuật toán ML không thể làm việc được với Missing Data. OK, giờ là lúc chúng ta đi vào tìm hiểu chi tiết từng phương pháp xử lý Missing Data.</p>
-<h4 id="31-xóa-các-hàngcột-chứa-missing-data">3.1 Xóa các hàng/cột chứa Missing Data</h4>
-<p>Đây là phương pháp đơn giản nhất để loại bỏ Missing Data. Tuy nhiên, nếu số lượng Missing Data quá nhiều mà ta lại xóa hết di thì phần còn lại sẽ không đủ để mô hình hóa dữ liệu đó. Thông thường, nếu tỉ lệ Missing Data nhỏ hơn 5% trên tổng số thì ta nên xóa chúng.</p>
-<p>Để xóa hàng/cột chứa Missing Data, ta sẽ sử dụng hàm <em>dropna()</em> của Pandas. Tham số <em>axis=0/1</em> chỉ ra là xóa hàng/cột, mặc định là xóa hàng. Tham số <em>inplace=True/False</em> chỉ ra việc lưu/không lưu thay đổi vào Dataframe ban đầu, mặc định là False. Code thực hiện như sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of removing rows that contain missing values</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+
+<span style="color:#75715e"># load dataset</span>
+dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span> , header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;?&#39;</span>)
+<span style="color:#75715e"># split into input and output elements</span>
+data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
+ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
+X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
+<span style="color:#75715e"># define modeling pipeline</span>
+model <span style="color:#f92672">=</span> RandomForestClassifier()
+imputer <span style="color:#f92672">=</span> SimpleImputer(strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mean&#39;</span>)
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span> , imputer), (<span style="color:#e6db74">&#39;m&#39;</span> , model)])
+<span style="color:#75715e"># define model evaluation</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># evaluate model</span>
+scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;accuracy&#39;</span> , cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Mean Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(scores), std(scores)))
+</code></pre></div><p>Pipeline được đánh giá sử dụng 3 lần lặp của 10-Fold Cross-validation. Độ chính xác trung bình đo được là khoảng 86.4%, một kết quả tương đối tốt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Mean Accuracy: <span style="color:#ae81ff">0.864</span> (<span style="color:#ae81ff">0.054</span>)
+</code></pre></div><p>Chú ý rằng kết quả thực hiện của bạn có thể không giống ở đây. Nên chạy thử vài lần để tính kết quá trung bình.</p>
+<h5 id="c-so-sánh-các-loại-statistical-imputation-khác-nhau">c, So sánh các loại Statistical Imputation khác nhau</h5>
+<p>Như đã nói ở trên, Statistical Imputation có thể sử dụng Mean, Median, Mode, Constant &hellip; để thay thế cho Missing Data. Câu hỏi đặt ra là làm sao biết được cái nào là tốt nhất đối với bài toán của chúng ta? Câu trả lời là chúng ta không thể khẳng định ngay được, mà phải thông qua phép <em>thử-sai</em> mới có được kết quả chính xác.</p>
+<p>Code dưới đây thực hiện áp dụng 4 loại Statistical Imputation khác nhau cho bài toán ở mục b, sau đó so sách các độ chính xác trung bình của mỗi loại với nhau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># compare statistical imputation strategies for the horse colic dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
 <span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#75715e"># load the dataset</span>
-dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
-<span style="color:#75715e"># summarize the shape of the raw data</span>
-<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>shape)
-<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
-dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
-<span style="color:#75715e"># drop rows with missing values</span>
-dataset<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
-<span style="color:#75715e"># summarize the shape of the data with missing rows removed</span>
-<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>shape)
-</code></pre></div><p>Kết quả thực hiện:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(<span style="color:#ae81ff">768</span>, <span style="color:#ae81ff">9</span>)
-(<span style="color:#ae81ff">392</span>, <span style="color:#ae81ff">9</span>)
-</code></pre></div><p>Từ 768 hàng, sau khi xóa các hàng có chứa Missing Data, chỉ còn lại 392 hàng.</p>
-<p>Chúng ta sẽ thực hiện lại việc mô hình hóa thuật toán LDA trên tập dữ liệu đã loại bỏ Missing Data:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate model on data after rows with missing data are removed</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
-<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#f92672">from</span> sklearn.discriminant_analysis <span style="color:#f92672">import</span> LinearDiscriminantAnalysis
-<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> KFold
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> SimpleImputer
 <span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
-<span style="color:#75715e"># load the dataset</span>
-dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;pima-indians-diabetes.csv&#39;</span> , header<span style="color:#f92672">=</span>None)
-<span style="color:#75715e"># replace &#39; 0 &#39; values with &#39; nan &#39;</span>
-dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]] <span style="color:#f92672">=</span> dataset[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]]<span style="color:#f92672">.</span>replace(<span style="color:#ae81ff">0</span>, nan)
-<span style="color:#75715e"># drop rows with missing values</span>
-dataset<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True)
-<span style="color:#75715e"># split dataset into inputs and outputs</span>
-values <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
-X <span style="color:#f92672">=</span> values[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">8</span>]
-y <span style="color:#f92672">=</span> values[:,<span style="color:#ae81ff">8</span>]
-<span style="color:#75715e"># define the model</span>
-model <span style="color:#f92672">=</span> LinearDiscriminantAnalysis()
-<span style="color:#75715e"># define the model evaluation procedure</span>
-cv <span style="color:#f92672">=</span> KFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, shuffle<span style="color:#f92672">=</span>True, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-<span style="color:#75715e"># evaluate the model</span>
-result <span style="color:#f92672">=</span> cross_val_score(model, X, y, cv<span style="color:#f92672">=</span>cv, scoring<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;accuracy&#39;</span>)
-<span style="color:#75715e"># report the mean performance</span>
-<span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> result<span style="color:#f92672">.</span>mean())
-</code></pre></div><p>Kết quả:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.781</span>
-</code></pre></div><p>Như vậy là chúng ta đã mô hình hóa thành công thuật toán LDA sau khi đã xóa bỏ Missing Data trong bộ dữ liệu của chúng ta.</p>
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+
+<span style="color:#75715e"># load dataset</span>
+dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span> , header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;?&#39;</span>)
+<span style="color:#75715e"># split into input and output elements</span>
+data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
+ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
+X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
+<span style="color:#75715e"># evaluate each strategy on the dataset</span>
+results <span style="color:#f92672">=</span> list()
+strategies <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;mean&#39;</span> , <span style="color:#e6db74">&#39;median&#39;</span> , <span style="color:#e6db74">&#39;most_frequent&#39;</span> , <span style="color:#e6db74">&#39;constant&#39;</span>]
+<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> strategies:
+    <span style="color:#75715e"># create the modeling pipeline</span>
+    pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span> , SimpleImputer(strategy<span style="color:#f92672">=</span>s)), (<span style="color:#e6db74">&#39;m&#39;</span>, RandomForestClassifier())])
+    <span style="color:#75715e"># evaluate the model</span>
+    cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+    scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;accuracy&#39;</span> , cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#75715e"># store results</span>
+    results<span style="color:#f92672">.</span>append(scores)
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (s, mean(scores), std(scores)))
+<span style="color:#75715e"># plot model performance for comparison</span>
+pyplot<span style="color:#f92672">.</span>boxplot(results, labels<span style="color:#f92672">=</span>strategies, showmeans<span style="color:#f92672">=</span>True)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><ul>
+<li>Kết quả so sánh độ chính xác trung bình:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span>mean <span style="color:#ae81ff">0.868</span> (<span style="color:#ae81ff">0.055</span>)
+<span style="color:#f92672">&gt;</span>median <span style="color:#ae81ff">0.870</span> (<span style="color:#ae81ff">0.055</span>)
+<span style="color:#f92672">&gt;</span>most_frequent <span style="color:#ae81ff">0.873</span> (<span style="color:#ae81ff">0.056</span>)
+<span style="color:#f92672">&gt;</span>constant <span style="color:#ae81ff">0.880</span> (<span style="color:#ae81ff">0.048</span>)
+</code></pre></div><p>Khá ngạc nhiên là Statictical Imputation với hằng số 0 lại cho kết quả cao nhất, 88%.</p>
+<ul>
+<li>Kết quả so sánh sự phân phối kết quả:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/79_missing_data_1.png">
+</div>
+
+
+<p>Quan sát đồ thị <em>box-plot</em> ta thấy Statistical Imputation với hằng số 0 có độ phân tán kết quả thấp nhất giữa các lần thực hiện của nó.</p>
+<p>Từ 2 nhận xét trên, có thể kết luận rằng Statistical Imputation với hằng số 0 là chiến thuật phù hợp nhất đối với bài toán của chúng ta.</p>
+<h5 id="d-simpleimputer-transform-khi-thực-hiện-dự-đoán-dữ-liệu-mới">d, SimpleImputer Transform khi thực hiện dự đoán dữ liệu mới</h5>
+<p>Sau khi đã biết được loại Statistical Imputation phù hợp nhất, chúng ta mong muốn sử dụng nó để thực hiện việc dự đoán trên mẫu dữ liệu mới. Điều này có thể đạt được bằng cách định nghĩa một Pipeline, <em>fitting</em> nó trên toàn bộ dữ liệu, sau đó gọi hàm <em>predict()</em> và truyền vào mẫu dữ liệu mới cần dự đoán nhãn.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># constant imputation strategy and prediction for the horse colic dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
+<span style="color:#f92672">import</span> joblib
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> SimpleImputer
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span>, header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;?&#39;</span>)
+<span style="color:#75715e"># split into input and output elements</span>
+data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
+ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
+X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
+<span style="color:#75715e"># create the modeling pipeline</span>
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span>, SimpleImputer(strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;constant&#39;</span>)), (<span style="color:#e6db74">&#39;m&#39;</span>, RandomForestClassifier())])
+<span style="color:#75715e"># fit the model</span>
+pipeline<span style="color:#f92672">.</span>fit(X, y)
+
+<span style="color:#75715e"># save pipeline as model file</span>
+joblib<span style="color:#f92672">.</span>dump(pipeline, <span style="color:#e6db74">&#39;model.mod&#39;</span>) 
+<span style="color:#75715e"># load model from file</span>
+model <span style="color:#f92672">=</span> joblib<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;model.mod&#39;</span>)
+
+<span style="color:#75715e"># define new data</span>
+row <span style="color:#f92672">=</span> [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">530101</span>, <span style="color:#ae81ff">38.50</span>, <span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, nan, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>, nan, nan, nan, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">45.00</span>, <span style="color:#ae81ff">8.40</span>, nan, nan, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">11300</span>, <span style="color:#ae81ff">00000</span>, <span style="color:#ae81ff">00000</span>, <span style="color:#ae81ff">2</span>]
+<span style="color:#75715e"># make a prediction</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict([row])
+<span style="color:#75715e"># summarize prediction</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Predicted Class: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> yhat[<span style="color:#ae81ff">0</span>])
+</code></pre></div><p>Chạy code trên thu được kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Predicted Class: <span style="color:#ae81ff">2</span>
+</code></pre></div><p>Chú ý quan trọng là Missing Data trong mẫu dữ liệu mới phải được đánh dấu là nan thì model mới có thể hiểu được.</p>
 <h3 id="3-kết-luận">3. Kết luận</h3>
-<p>Bài hôm nay cũng đã khá dài,mình sẽ kết thúc tại đây. Chúng ta đã cùng nhau tìm hiểu về hiện tượng Missing Data là gì? tác hại của nó ra sao? Cách nhận biết và thống kê nó. Chúng ta cũng đã tìm hiểu được một phương pháp đơn giản nhất để loại bỏ Missing Data, đó là xóa các hàng/cột có chứa Missing Data.</p>
-<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Preparation_for_ML/tree/master/02_Data_Cleaning/Missing_Data/Mark_and_Remove">đây</a>.</p>
-<p>Trong bài tiếp theo, chúng ta sẽ tìm hiểu về phương pháp tiếp theo trong việc xử lý Missing Data, đó là Statisticcal Imputation. Mời các bạn đón đọc.</p>
+<p>Hôm nay, chúng ta đã tìm hiểu về phương pháp Statistical Imputation trong việc giải quyết vấn đề Missing Data. Đây là một phương pháp đơn giản, dễ thực hiện, và tỏ ra hiệu quả cao trong một số trường hợp cụ thể.</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Preparation_for_ML/tree/master/02_Data_Cleaning/Missing_Data/Statistical_Imputation">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ tìm hiểu về phương pháp tiếp theo trong việc xử lý Missing Data, đó là kNn Imputation. Mời các bạn đón đọc.</p>
 <h3 id="4-tham-khảo">4. Tham khảo</h3>
 <p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
 

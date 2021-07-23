@@ -6,22 +6,22 @@
     <description>Recent content in Machine Learning on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 2</title>
+      <link>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data_2/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data_2/</guid>
+      <description>Bài thứ 5 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Statistical Imputation.</description>
+    </item>
+    
     <item>
       <title>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 1</title>
       <link>https://tiensu.github.io/blog/78_data_prepeation_for_ml_data_cleaning_missing_data_1/</link>
       <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/78_data_prepeation_for_ml_data_cleaning_missing_data_1/</guid>
-      <description>Bài thứ 4 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu về vấn đề Missing Data.</description>
-    </item>
-    
-    <item>
-      <title>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 1</title>
-      <link>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data_2/</link>
-      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data_2/</guid>
       <description>Bài thứ 4 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu về vấn đề Missing Data.</description>
     </item>
     
