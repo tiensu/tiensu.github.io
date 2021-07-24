@@ -4,82 +4,67 @@
   
   <url>
     <loc>https://tiensu.github.io/categories/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data_2/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+    <loc>https://tiensu.github.io/blog/81_data_prepeation_for_ml_data_cleaning_missing_data_4/</loc>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/tags/data-preparation/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/categories/data-preparation/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/tags/machine-learning/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/categories/machine-learning/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/tags/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/80_data_prepeation_for_ml_data_cleaning_missing_data_3/</loc>
+    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data_2/</loc>
+    <lastmod>2021-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/blog/78_data_prepeation_for_ml_data_cleaning_missing_data_1/</loc>
-    <lastmod>2021-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/blog/76_data_prepeation_for_ml_data_cleaning_basic/</loc>
-    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/blog/77_data_prepeation_for_ml_data_cleaning_outlier/</loc>
-    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/blog/75_data_prepeation_for_ml_foundation/</loc>
-    <lastmod>2021-07-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/tags/recommender-system/</loc>
-    <lastmod>2021-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/categories/recommender-system/</loc>
-    <lastmod>2021-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/blog/74_recommender_system_3/</loc>
-    <lastmod>2021-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/blog/73_recommender_system_2/</loc>
-    <lastmod>2021-07-05T00:00:00+00:00</lastmod>
+    <loc>https://tiensu.github.io/blog/76_data_prepeation_for_ml_data_cleaning_basic/</loc>
+    <lastmod>2021-06-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -89,11 +74,6 @@
   
   <url>
     <loc>https://tiensu.github.io/categories/audio-classification/</loc>
-    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/blog/72_recommender_system_1/</loc>
     <lastmod>2021-06-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -123,8 +103,38 @@
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/blog/71_audio_deep_learning_part_5/</loc>
+    <loc>https://tiensu.github.io/blog/75_data_prepeation_for_ml_foundation/</loc>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/recommender-system/</loc>
+    <lastmod>2021-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/recommender-system/</loc>
+    <lastmod>2021-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/74_recommender_system_3/</loc>
+    <lastmod>2021-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/73_recommender_system_2/</loc>
+    <lastmod>2021-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/72_recommender_system_1/</loc>
     <lastmod>2021-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/71_audio_deep_learning_part_5/</loc>
+    <lastmod>2021-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>

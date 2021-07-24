@@ -161,7 +161,7 @@
           <span>By SuNT</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>23 July 2021</span>
+          <span>06 July 2021</span>
           
         </div>
         
@@ -355,7 +355,7 @@ strategies <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#3
 pyplot<span style="color:#f92672">.</span>boxplot(results, labels<span style="color:#f92672">=</span>strategies, showmeans<span style="color:#f92672">=</span>True)
 pyplot<span style="color:#f92672">.</span>show()
 </code></pre></div><ul>
-<li>Kết quả so sánh độ chính xác trung bình:</li>
+<li>Kết quả so sánh độ chính xác trung bình và độ lệch chuẩn:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span>mean <span style="color:#ae81ff">0.868</span> (<span style="color:#ae81ff">0.055</span>)
 <span style="color:#f92672">&gt;</span>median <span style="color:#ae81ff">0.870</span> (<span style="color:#ae81ff">0.055</span>)
@@ -374,7 +374,7 @@ pyplot<span style="color:#f92672">.</span>show()
 
 <p>Quan sát đồ thị <em>box-plot</em> ta thấy Statistical Imputation với hằng số 0 có độ phân tán kết quả thấp nhất giữa các lần thực hiện của nó.</p>
 <p>Từ 2 nhận xét trên, có thể kết luận rằng Statistical Imputation với hằng số 0 là chiến thuật phù hợp nhất đối với bài toán của chúng ta.</p>
-<h5 id="d-simpleimputer-transform-khi-thực-hiện-dự-đoán-dữ-liệu-mới">d, SimpleImputer Transform khi thực hiện dự đoán dữ liệu mới</h5>
+<h5 id="d-sử-dụng-simpleimputer-transform-khi-dự-đoán-dữ-liệu-mới">d, Sử dụng SimpleImputer Transform khi dự đoán dữ liệu mới</h5>
 <p>Sau khi đã biết được loại Statistical Imputation phù hợp nhất, chúng ta mong muốn sử dụng nó để thực hiện việc dự đoán trên mẫu dữ liệu mới. Điều này có thể đạt được bằng cách định nghĩa một Pipeline, <em>fitting</em> nó trên toàn bộ dữ liệu, sau đó gọi hàm <em>predict()</em> và truyền vào mẫu dữ liệu mới cần dự đoán nhãn.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># constant imputation strategy and prediction for the horse colic dataset</span>
 <span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
@@ -407,11 +407,11 @@ yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</sp
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Predicted Class: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> yhat[<span style="color:#ae81ff">0</span>])
 </code></pre></div><p>Chạy code trên thu được kết quả:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Predicted Class: <span style="color:#ae81ff">2</span>
-</code></pre></div><p>Chú ý quan trọng là Missing Data trong mẫu dữ liệu mới phải được đánh dấu là nan thì model mới có thể hiểu được.</p>
+</code></pre></div><p>Chú ý quan trọng là Missing Data trong mẫu dữ liệu mới phải được đánh dấu là <em>nan</em> thì model mới có thể hiểu được.</p>
 <h3 id="3-kết-luận">3. Kết luận</h3>
 <p>Hôm nay, chúng ta đã tìm hiểu về phương pháp Statistical Imputation trong việc giải quyết vấn đề Missing Data. Đây là một phương pháp đơn giản, dễ thực hiện, và tỏ ra hiệu quả cao trong một số trường hợp cụ thể.</p>
 <p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Preparation_for_ML/tree/master/02_Data_Cleaning/Missing_Data/Statistical_Imputation">đây</a>.</p>
-<p>Trong bài tiếp theo, chúng ta sẽ tìm hiểu về phương pháp tiếp theo trong việc xử lý Missing Data, đó là kNn Imputation. Mời các bạn đón đọc.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ tìm hiểu về phương pháp tiếp theo trong việc xử lý Missing Data, đó là kNN Imputation. Mời các bạn đón đọc.</p>
 <h3 id="4-tham-khảo">4. Tham khảo</h3>
 <p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
 

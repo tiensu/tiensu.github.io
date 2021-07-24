@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/data-preparation"
+          class="text-primary">Data Preparation</a>
+        
+        <h2>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 3</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>09 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/79_missing_data.png" class="img-fluid w-100 mb-4" alt="Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 3">
+        
+        <div class="content mb-5">
+          <p>Bài thứ 6 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp kNN Imputation.</p>
+<h3 id="1-k-nearest-neighbor-knn-imputation">1. k-Nearest Neighbor (kNN) Imputation</h3>
+<p>Nhắc đến kNN, chắc hẳn mọi người đều biết đó là một thuật toán supervised-learning đơn giản nhất (<em>nhưng lại có hiệu quả đối với một số trường hợp</em>) trong Machine Learning. Khi training, thuật toán này không học một điều gì từ dữ liệu training (*đây cũng là lý do thuật toán này được xếp vào loại <a href="https://en.wikipedia.org/wiki/Lazy_learning*">lazy learning</a>, mọi tính toán được thực hiện khi nó cần dự đoán kết quả của dữ liệu mới. kNN có thể áp dụng được vào cả hai loại của bài toán Supervised Learning là Classification và Regression. Nó cũng được gọi là một thuật toán Instance-based hay Memory-based Learning.</p>
+<p>Để giải quyết vấn đề Missing Data, một cách hiệu quả là sử dụng một mô hình để dự đoán giá trị cho Missing Data đó, dựa vào những giá trị tồn tại trong tập dữ liệu. Về lý thuyết, chúng ta có thể sử dụng bất kỳ thuật toán ML Classification/Regression nào để thực hiện việc Imputation cho Missing Data, nhưng thực tế chứng minh rằng kNN mang lại hiệu quả tốt hơn, cả về khía cạnh độ chính xác và mức độ phức tạp khi thực hiện.</p>
+<p>Việc cấu hình cho kNN thường bao gồm việc lựa chọn 2 giá trị là loại metric đo khoảng cách giữa các mẫu dữ liệu (<em>Euclidean, Cosine, &hellip;</em>) và số lượng mẫu (<em>k</em>) lân cận với mẫu cần xác định giá trị/lớp.</p>
+<h3 id="2-thực-hành-knn-imputation">2. Thực hành kNN Imputation</h3>
+<p>Chúng ta sẽ thực hành phương pháp kNN Imputation trên bộ dữ liệu <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/horse-colic.csv">Horse Colic Dataset</a> giống như bài trước.</p>
+<p>Thư viện Scikit-learn cung cấp lớp <em>KNNImputer</em> giúp chúng ta dễ dàng thực hiện kNN Imputation.</p>
+<h4 id="21-knnimputer-và-data-transform">2.1 KNNImputer và Data Transform</h4>
+<p>Cũng giống như <em>SimpleImputer</em>, khi sử dụng <em>KNNImputer</em>, nó sẽ tạo ra một phiên bản khác của tập dữ liệu ban đầu mà ở đó, các Missing Data đã được thay thế bởi các giá trị sinh ra từ thuật toán kNN (<em>Data Transform</em>). Các bước thực hiện Data Transform sử dụng <em>KNNImputer</em> như sau:</p>
+<h5 id="a-khai-báo-một-instance-của-knnimputer">a, Khai báo một <em>Instance</em> của <em>KNNImputer</em></h5>
+<p>Khi khởi tạo Instance cho <em>KNNImputer</em> cần quan tâm đến 3 tham số truyền vào:</p>
+<ul>
+<li>
+<p>Số lượng mẫu dữ liệu lân cận (<em>n_neighbors</em>)</p>
+</li>
+<li>
+<p>Loại khoảng cách (<em>metric</em>): mặc định là &lsquo;nan_euclidean&rsquo;, tức là Euclidean nhưng bỏ qua các Missing Data*)</p>
+</li>
+<li>
+<p>Trọng số (<em>weight</em>): sử dụng trọng số giữa các mẫu dữ liệu lân cận khi tính khoảng cách. Giá trị mặc định là &lsquo;uniform&rsquo;, tức là tất cả trọng số đều bằng nhau. Để <em>sát sao</em> hơn, ta có thể sử dụng giá trị &lsquo;distance&rsquo;, tức là mẫu dữ liệu nào càng gần mẫu dữ liệu cần dự đoán thì trọng số càng cao.</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># define imputer</span>
+imputer <span style="color:#f92672">=</span> KNNImputer(n_neighbors<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, weights<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;distance&#39;</span> , metric<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;nan_euclidean&#39;</span>)
+</code></pre></div><h5 id="b-tính-toán-giá-trị-cho-missing-data-trên-tập-dữ-liệu">b, Tính toán giá trị cho Missing Data trên tập dữ liệu</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># fit on the dataset</span>
+imputer<span style="color:#f92672">.</span>fit(X)
+</code></pre></div><h5 id="c-tạo-ra-transform-data">c, Tạo ra Transform Data</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># transform the dataset</span>
+Xtrans <span style="color:#f92672">=</span> imputer<span style="color:#f92672">.</span>transform(X)
+</code></pre></div><p>Để kiểm chứng lại hiệu quả làm việc của <em>KNNImputer</em>, chúng ta sẽ áp dụng lên tập dữ liệu Horse Colic Dataset, xem trước và sau khi áp dụng <em>KNNImputer</em> có gì thay đổi:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># knn imputation transform for the horse colic dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> isnan
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> KNNImputer
+<span style="color:#75715e"># load dataset</span>
+dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span> , header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;?&#39;</span>)
+<span style="color:#75715e"># split into input and output elements</span>
+data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
+ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
+X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
+<span style="color:#75715e"># summarize total missing</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Missing: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> sum(isnan(X)<span style="color:#f92672">.</span>flatten()))
+<span style="color:#75715e"># define imputer</span>
+imputer <span style="color:#f92672">=</span> KNNImputer()
+<span style="color:#75715e"># fit on the dataset</span>
+imputer<span style="color:#f92672">.</span>fit(X)
+<span style="color:#75715e"># transform the dataset</span>
+Xtrans <span style="color:#f92672">=</span> imputer<span style="color:#f92672">.</span>transform(X)
+<span style="color:#75715e"># summarize total missing</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Missing: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> sum(isnan(Xtrans)<span style="color:#f92672">.</span>flatten()))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Missing: <span style="color:#ae81ff">1605</span>
+Missing: <span style="color:#ae81ff">0</span>
+</code></pre></div><p>Ban đầu có 1605 Missing Data. Sau khi áp dụng <em>KNNImputer</em>, số lượng Missing Data giảm về 0, chứng tỏ rằng nó đã thành công trong việc xóa bỏ Missing Data.</p>
+<h4 id="22-knnimputer-và-model-evaluation">2.2 KNNImputer và Model Evaluation</h4>
+<p>Phần này chúng ta sẽ áp dụng kNN Imputation vào việc mô hình hóa thuật toán RandomForest trên tập dữ liệu Horse Colic Dataset. k-Fold Cross-validation và Pipleline cũng sẽ được sử dụng tương tự như bài trước.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn imputation and random forest for the horse colic dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> KNNImputer
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span>, header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;?&#39;</span>)
+<span style="color:#75715e"># split into input and output elements</span>
+data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
+ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
+X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
+<span style="color:#75715e"># define modeling pipeline</span>
+model <span style="color:#f92672">=</span> RandomForestClassifier()
+imputer <span style="color:#f92672">=</span> KNNImputer(n_neighbors<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, weights<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;distance&#39;</span> , metric<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;nan_euclidean&#39;</span>)
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span>, imputer), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+<span style="color:#75715e"># define model evaluation</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># evaluate model</span>
+scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Mean Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(scores), std(scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Mean Accuracy: <span style="color:#ae81ff">0.871</span> (<span style="color:#ae81ff">0.051</span>)
+</code></pre></div><h4 id="23-tuning-n_neighbors-parameter">2.3 Tuning n_neighbors parameter</h4>
+<p>Như đã trình bày ở phần trên, <em>n_neighbors</em> là một tham số quan trọng ảnh hưởng đến độ chính xác của kNN. Chúng ta không thể biết chính xác giá trị phù hợp nhất của nó đối với mỗi bộ dữ liệu. Cách dễ nhất để tìm ra nó là <em>thử-sai</em>, tức là chọn một khoảng giá trị của nó và thử lần lượt từng giá trị trong khoảng đó xem giá trị nào tốt nhất. Code dưới đây đánh giá độ chính xác trung bình của kNN cho mỗi trường hợp giá trị của <em>n_neighbors</em> thay đôi từ 1 đến 21.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># compare knn imputation strategies for the horse colic dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> KNNImputer
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># load dataset</span>
+dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span>, header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;?&#39;</span>)
+<span style="color:#75715e"># split into input and output elements</span>
+data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
+ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
+X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
+<span style="color:#75715e"># evaluate each strategy on the dataset</span>
+results <span style="color:#f92672">=</span> list()
+strategies <span style="color:#f92672">=</span> [str(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">21</span>):
+<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> strategies:
+	<span style="color:#75715e"># create the modeling pipeline</span>
+	pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span>, KNNImputer(n_neighbors<span style="color:#f92672">=</span>int(s))), (<span style="color:#e6db74">&#39;m&#39;</span>, RandomForestClassifier())])
+	<span style="color:#75715e"># evaluate the model</span>
+	cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+	scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+	<span style="color:#75715e"># store results</span>
+	results<span style="color:#f92672">.</span>append(scores)
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (s, mean(scores), std(scores)))
+<span style="color:#75715e"># plot model performance for comparison</span>
+pyplot<span style="color:#f92672">.</span>boxplot(results, labels<span style="color:#f92672">=</span>strategies, showmeans<span style="color:#f92672">=</span>True)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả chạy:</p>
+<ul>
+<li>Độ chính xác trung bình và độ lệch chuẩn.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0.868</span> (<span style="color:#ae81ff">0.048</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2</span> <span style="color:#ae81ff">0.861</span> (<span style="color:#ae81ff">0.047</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span> <span style="color:#ae81ff">0.859</span> (<span style="color:#ae81ff">0.051</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">4</span> <span style="color:#ae81ff">0.863</span> (<span style="color:#ae81ff">0.052</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">5</span> <span style="color:#ae81ff">0.864</span> (<span style="color:#ae81ff">0.056</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">6</span> <span style="color:#ae81ff">0.866</span> (<span style="color:#ae81ff">0.060</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">7</span> <span style="color:#ae81ff">0.872</span> (<span style="color:#ae81ff">0.056</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">8</span> <span style="color:#ae81ff">0.864</span> (<span style="color:#ae81ff">0.056</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">9</span> <span style="color:#ae81ff">0.868</span> (<span style="color:#ae81ff">0.053</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span> <span style="color:#ae81ff">0.868</span> (<span style="color:#ae81ff">0.053</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">11</span> <span style="color:#ae81ff">0.864</span> (<span style="color:#ae81ff">0.053</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">12</span> <span style="color:#ae81ff">0.862</span> (<span style="color:#ae81ff">0.051</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">13</span> <span style="color:#ae81ff">0.861</span> (<span style="color:#ae81ff">0.049</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">14</span> <span style="color:#ae81ff">0.868</span> (<span style="color:#ae81ff">0.051</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">15</span> <span style="color:#ae81ff">0.862</span> (<span style="color:#ae81ff">0.054</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">16</span> <span style="color:#ae81ff">0.863</span> (<span style="color:#ae81ff">0.048</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">17</span> <span style="color:#ae81ff">0.863</span> (<span style="color:#ae81ff">0.054</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">18</span> <span style="color:#ae81ff">0.862</span> (<span style="color:#ae81ff">0.057</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">19</span> <span style="color:#ae81ff">0.866</span> (<span style="color:#ae81ff">0.051</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">20</span> <span style="color:#ae81ff">0.869</span> (<span style="color:#ae81ff">0.055</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">21</span> <span style="color:#ae81ff">0.866</span> (<span style="color:#ae81ff">0.057</span>)
+</code></pre></div><p>Theo kết quả này, độ chính xác khi <em>n_neighbors = 7</em> cao nhất, nhưng độ lệch chuẩn cũng khá cao. <em>n_neighbors = 1</em> cho ra độ chính xác tương đối cao, độ lệch chuẩn gần nhỏ nhất.</p>
+<ul>
+<li>Phân phối kết quả</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/80_missing_data_1.png">
+</div>
+
+
+<p>Mức độ phân phối trong trường hợp <em>n_neighbors = 1</em> là nhỏ nhất.</p>
+<p>Kết hợp các nhận xét trên, có thể nhận định <em>n_neighbors = 1</em> là giá trị tối ưu của bài toán này.</p>
+<h4 id="24-sử-dụng-knnimputer-transform-khi-dự-đoán-dữ-liệu-mới">2.4 Sử dụng KNNImputer Transform khi dự đoán dữ liệu mới.</h4>
+<p>Chúng ta sẽ sử dụng các kết quả phân tích từ phần trên để tạo ra model, sau đó dự dự đoán trên một mẫu dữ liệu mới. Code hoàn chỉnh như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># knn imputation strategy and prediction for the horse colic dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
+<span style="color:#f92672">import</span> joblib
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> KNNImputer
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span>, header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;?&#39;</span>)
+<span style="color:#75715e"># split into input and output elements</span>
+data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
+ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
+X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
+<span style="color:#75715e"># create the modeling pipeline</span>
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span>, KNNImputer(n_neighbors<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, weights<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;distance&#39;</span>)), (<span style="color:#e6db74">&#39;m&#39;</span>, RandomForestClassifier())])
+<span style="color:#75715e"># fit the model</span>
+pipeline<span style="color:#f92672">.</span>fit(X, y)
+
+<span style="color:#75715e"># save pipeline as model file</span>
+joblib<span style="color:#f92672">.</span>dump(pipeline, <span style="color:#e6db74">&#39;model.mod&#39;</span>) 
+<span style="color:#75715e"># load model from file</span>
+model <span style="color:#f92672">=</span> joblib<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;model.mod&#39;</span>)
+
+
+<span style="color:#75715e"># define new data</span>
+row <span style="color:#f92672">=</span> [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">530101</span>, <span style="color:#ae81ff">38.50</span>, <span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, nan, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>, nan, nan, nan, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">45.00</span>, <span style="color:#ae81ff">8.40</span>, nan, nan, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">11300</span>, <span style="color:#ae81ff">00000</span>, <span style="color:#ae81ff">00000</span>, <span style="color:#ae81ff">2</span>]
+<span style="color:#75715e"># make a prediction</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict([row])
+<span style="color:#75715e"># summarize prediction</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Predicted Class: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> yhat[<span style="color:#ae81ff">0</span>])
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Predicted Class: <span style="color:#ae81ff">2</span>
+</code></pre></div><p>Chú ý quan trọng là Missing Data trong mẫu dữ liệu mới phải được đánh dấu là <em>nan</em> thì model mới có thể hiểu được.</p>
+<h3 id="3-kết-luận">3. Kết luận</h3>
+<p>Hôm nay, chúng ta đã tìm hiểu về phương pháp kNN Imputation trong việc giải quyết vấn đề Missing Data. Đây là một phương pháp đơn giản vì nó chỉ dựa trên các mẫu dữ liệu lân cận để tìm ra giá trị mới thay thế cho Missing Data. Cũng giống như Statistical Imputation, kNN Imputation tỏ ra hiệu quả cao trong một số trường hợp cụ thể.</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Preparation_for_ML/tree/master/02_Data_Cleaning/Missing_Data/kNN_Imputation">đây</a>.</p>
+<p>Trong bài tiếp theo, chúng ta sẽ tìm hiểu về phương pháp tiếp theo trong việc xử lý Missing Data, đó là Iteratove Imputation. Mời các bạn đón đọc.</p>
+<h3 id="4-tham-khảo">4. Tham khảo</h3>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
