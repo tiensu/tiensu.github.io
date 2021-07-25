@@ -6,7 +6,16 @@
     <description>Recent content in Data Preparation on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/data-preparation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/data-preparation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 4</title>
+      <link>https://tiensu.github.io/blog/82_data_prepeation_for_ml_data_cleaning_feature_selection/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/82_data_prepeation_for_ml_data_cleaning_feature_selection/</guid>
+      <description>Bài thứ 7 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Iterative Imputation.</description>
+    </item>
+    
     <item>
       <title>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 4</title>
       <link>https://tiensu.github.io/blog/81_data_prepeation_for_ml_data_cleaning_missing_data_4/</link>
