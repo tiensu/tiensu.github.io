@@ -156,7 +156,7 @@
         <a href="/categories/data-preparation"
           class="text-primary">Data Preparation</a>
         
-        <h2>Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 4</h2>
+        <h2>DP4ML - Feature Selection - Phần 1 - Giới thiệu chung</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
@@ -165,258 +165,52 @@
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/81_missing_data.jpg" class="img-fluid w-100 mb-4" alt="Chuẩn bị dữ liệu cho Machine Learning model - Missing Data - Phần 4">
+        <img src="https://tiensu.github.io/images/featured-post/82_feature_selection.png" class="img-fluid w-100 mb-4" alt="DP4ML - Feature Selection - Phần 1 - Giới thiệu chung">
         
         <div class="content mb-5">
-          <p>Bài thứ 7 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Iterative Imputation.</p>
-<h3 id="1-iterative-imputation">1. Iterative Imputation</h3>
-<p>Iterative Imputation là quá trình trong đó mỗi feature được mô hình hóa như một hàm của các features khác. Mỗi feature được xác định một cách tuần tự, lần lượt, cho phép các features đã xác định trước đó được sử dụng như làm một phần đầu vào của mô hình trong việc dự đoán các features tiếp theo. Quá trình này được lặp lại nhiều lần, cho phép các ước tính luôn được cải thiện. Cách tiếp cận này được gọi chung là Fully Conditional Specification (FCS) hoặc Multivariate Imputation by Chained Equations (MICE).</p>
-<p>Về mặt lý thuyết, các thuật toán Regressions đều có thể sử dụng để ước lượng các Missing Data. Nhưng thực tế thì Linear Regression được sử dụng phổ biến vì tính đơn giản của nó. Số lượng vòng lặp cũng không cần quá lớn, thường là 10. Cuối cùng, thứ tự các features được ước lượng tuần tự cũng cần được xem xét. Có thể là từ các features có ít đến các features có nhiều Missing Data, hoặc là ngược lại.</p>
-<h3 id="2-thực-hành-iterative-imputation">2. Thực hành Iterative Imputation</h3>
-<p>Chúng ta sẽ thực hành phương pháp Iterative Imputation trên bộ dữ liệu <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/horse-colic.csv">Horse Colic Dataset</a> giống như bài trước.</p>
-<p>Thư viện Scikit-learn cung cấp lớp <em>IterativeImputer</em> giúp chúng ta dễ dàng thực hiện Iterative Imputation.</p>
-<h4 id="21-iterativeimputer-và-data-transform">2.1 IterativeImputer và Data Transform</h4>
-<p>Cũng giống như <em>SimpleImputer</em> và <em>kNNImputer</em>, khi sử dụng <em>IterativeImputer</em>, nó sẽ tạo ra một phiên bản khác của tập dữ liệu ban đầu mà ở đó, các Missing Data đã được thay thế bởi các giá trị sinh ra từ thuật toán ước lượng (<em>Data Transform</em>). Các bước thực hiện Data Transform sử dụng <em>IterativeImputer</em> như sau:</p>
-<h5 id="a-khai-báo-một-instance-của-iterativeimputer">a, Khai báo một <em>Instance</em> của <em>IterativeImputer</em></h5>
-<p>Khi khởi tạo Instance cho <em>IterativeImputer</em> cần quan tâm đến 3 tham số truyền vào:</p>
+          <p>Bài thứ 8 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ chuyển tiếp sang tìm hiểu một nhiệm vụ khác của Data Preparation, đó là Feature Selection.</p>
+<h3 id="1-feature-selection-là-gì">1. Feature Selection là gì?</h3>
+<p>Feature Selection là quá trình giảm số lượng features khi phát triển các ML model. Việc làm này xuất phát từ 2 nguyên nhân chính:</p>
 <ul>
-<li>
-<p>Thuật toán ước lượng (<em>estimator</em>): mặc định là &lsquo;BayesianRidge&rsquo;.</p>
-</li>
-<li>
-<p>Thứ tự thực hiện ước lượng (<em>imputation_order</em>): mặc định là &lsquo;ascending&rsquo;, tức là từ các features có ít đến các features có nhiều Missing Data. Ngoài ra còn có các giá trị khác như: descending - từ các features có nhiều đến các features có ít Missing Data, roman - từ trái sang phải, arabic - từ phải sang trái, random - ngẫu nhiên.</p>
-</li>
-<li>
-<p>Số lượng vòng lặp (<em>max_iter</em>): mặc định là 10.</p>
-</li>
+<li>Giảm thời gian tính toán, huấn luyện mô hình.</li>
+<li>Tăng hiệu năng của các mô hình.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
-<span style="color:#75715e"># define imputer</span>
-imputer <span style="color:#f92672">=</span> IterativeImputer(estimator<span style="color:#f92672">=</span>BayesianRidge(), imputation_order<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ascending&#39;</span>)
-</code></pre></div><h5 id="b-ước-lượng-giá-trị-cho-missing-data-trên-tập-dữ-liệu">b, Ước lượng giá trị cho Missing Data trên tập dữ liệu</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
-<span style="color:#75715e"># fit on the dataset</span>
-imputer<span style="color:#f92672">.</span>fit(X)
-</code></pre></div><h5 id="c-tạo-ra-transform-data">c, Tạo ra Transform Data</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
-<span style="color:#75715e"># transform the dataset</span>
-Xtrans <span style="color:#f92672">=</span> imputer<span style="color:#f92672">.</span>transform(X)
-</code></pre></div><p>Để kiểm chứng lại hiệu quả làm việc của <em>IterativeImputer</em>, chúng ta sẽ áp dụng lên tập dữ liệu Horse Colic Dataset, xem trước và sau khi áp dụng <em>IterativeImputer</em> có gì thay đổi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># iterative imputation transform for the horse colic dataset</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> isnan
-<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#f92672">from</span> sklearn.experimental <span style="color:#f92672">import</span> enable_iterative_imputer
-<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> IterativeImputer
-<span style="color:#75715e"># load dataset</span>
-dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span>, header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;?&#39;</span>)
-<span style="color:#75715e"># split into input and output elements</span>
-data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
-ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
-X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
-<span style="color:#75715e"># summarize total missing</span>
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Missing: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> sum(isnan(X)<span style="color:#f92672">.</span>flatten()))
-<span style="color:#75715e"># define imputer</span>
-imputer <span style="color:#f92672">=</span> IterativeImputer()
-<span style="color:#75715e"># fit on the dataset</span>
-imputer<span style="color:#f92672">.</span>fit(X)
-<span style="color:#75715e"># transform the dataset</span>
-Xtrans <span style="color:#f92672">=</span> imputer<span style="color:#f92672">.</span>transform(X)
-<span style="color:#75715e"># summarize total missing</span>
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Missing: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> sum(isnan(Xtrans)<span style="color:#f92672">.</span>flatten()))
-</code></pre></div><p>Kết quả:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Missing: <span style="color:#ae81ff">1605</span>
-Missing: <span style="color:#ae81ff">0</span>
-</code></pre></div><p>Ban đầu có 1605 Missing Data. Sau khi áp dụng <em>IterativeImputer</em>, số lượng Missing Data giảm về 0, chứng tỏ rằng nó đã thành công trong việc xóa bỏ Missing Data.</p>
-<h4 id="22-iterativeimputer-và-model-evaluation">2.2 IterativeImputer và Model Evaluation</h4>
-<p>Phần này chúng ta sẽ áp dụng Iterative Imputation vào việc mô hình hóa thuật toán RandomForest trên tập dữ liệu Horse Colic Dataset. k-Fold Cross-validation và Pipleline cũng sẽ được sử dụng tương tự như bài trước.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate iterative imputation and random forest for the horse colic dataset</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
-<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
-<span style="color:#f92672">from</span> sklearn.experimental <span style="color:#f92672">import</span> enable_iterative_imputer
-<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> IterativeImputer
-<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
-<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
-<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
-<span style="color:#75715e"># load dataset</span>
-dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span>, header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;?&#39;</span>)
-<span style="color:#75715e"># split into input and output elements</span>
-data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
-ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
-X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
-<span style="color:#75715e"># define modeling pipeline</span>
-model <span style="color:#f92672">=</span> RandomForestClassifier()
-imputer <span style="color:#f92672">=</span> IterativeImputer()
-pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span>, imputer), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
-<span style="color:#75715e"># define model evaluation</span>
-cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-<span style="color:#75715e"># evaluate model</span>
-scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Mean Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(scores), std(scores)))
-</code></pre></div><p>Kết quả thực hiện:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Mean Accuracy: <span style="color:#ae81ff">0.871</span> (<span style="color:#ae81ff">0.052</span>)
-</code></pre></div><h4 id="23-tuning-imputation_order-parameter">2.3 Tuning imputation_order parameter</h4>
-<p>Như đã trình bày ở phần trên, <em>imputation_order</em> là một tham số quan trọng ảnh hưởng đến độ chính xác của IterativeImputer. Chúng ta không thể biết chính xác giá trị phù hợp nhất của nó đối với mỗi bộ dữ liệu. Cách dễ nhất để tìm ra nó là <em>thử-sai</em>, tức là chọn các giá trị có thể có của nó và thử lần lượt từng giá trị đó xem giá trị nào tốt nhất. Code dưới đây đánh giá độ chính xác trung bình của RandomForest cho mỗi trường hợp giá trị của <em>imputation_order</em>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># compare iterative imputation strategies for the horse colic dataset</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
-<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
-<span style="color:#f92672">from</span> sklearn.experimental <span style="color:#f92672">import</span> enable_iterative_imputer
-<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> IterativeImputer
-<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
-<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
-<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
-<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
-<span style="color:#75715e"># load dataset</span>
-dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span>, header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;?&#39;</span>)
-<span style="color:#75715e"># split into input and output elements</span>
-data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
-ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
-X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
-<span style="color:#75715e"># evaluate each strategy on the dataset</span>
-results <span style="color:#f92672">=</span> list()
-strategies <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;ascending&#39;</span>, <span style="color:#e6db74">&#39;descending&#39;</span>, <span style="color:#e6db74">&#39;roman&#39;</span>, <span style="color:#e6db74">&#39;arabic&#39;</span>, <span style="color:#e6db74">&#39;random&#39;</span>]
-<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> strategies:
-	<span style="color:#75715e"># create the modeling pipeline</span>
-	pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span>, IterativeImputer(imputation_order<span style="color:#f92672">=</span>s)), (<span style="color:#e6db74">&#39;m&#39;</span>, RandomForestClassifier())])
-	<span style="color:#75715e"># evaluate the model</span>
-	cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-	scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
-	<span style="color:#75715e"># store results</span>
-	results<span style="color:#f92672">.</span>append(scores)
-	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (s, mean(scores), std(scores)))
-<span style="color:#75715e"># plot model performance for comparison</span>
-pyplot<span style="color:#f92672">.</span>boxplot(results, labels<span style="color:#f92672">=</span>strategies, showmeans<span style="color:#f92672">=</span>True)
-pyplot<span style="color:#f92672">.</span>show()
-</code></pre></div><p>Kết quả chạy:</p>
+<p>Feature Selection, đôi khi hay bị hiểu nhầm thành Dimensionality Reduction. Thực ra, chúng đều là các công việc phải thực hiện trong quá trình chuẩn bị dữ liệu cho các ML model. Chúng vừa có sự giống nhau, vừa có sự khác nhau:</p>
 <ul>
-<li>Độ chính xác trung bình và độ lệch chuẩn.</li>
+<li>Giống: Về bản chất, 2 cái đều giảm số lượng chiều của dữ liệu, từ cao xuống thấp.</li>
+<li>Khác: Feature Selection giảm chiều dữ liệu bằng cách loại bớt một số features không liên quan đi, chỉ giữ lại các features liên quan nhất đến mục đích cần dự đoán. Trong khi đó, Dimensionality Reduction giảm chiều dữ liệu bằng cách ánh xạ tất cả các features hiện có sang một miền không gian có số chiều nhỏ hơn miên không gian ban đầu. Đối với Feature Selection, các features còn lại đều là các features cũ, nằm trong số các features ban đầu. Còn đối với Dimentionality Reduction, các features còn lại đều là các features mới hoàn toàn.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span>ascending <span style="color:#ae81ff">0.871</span> (<span style="color:#ae81ff">0.054</span>)
-<span style="color:#f92672">&gt;</span>descending <span style="color:#ae81ff">0.868</span> (<span style="color:#ae81ff">0.051</span>)
-<span style="color:#f92672">&gt;</span>roman <span style="color:#ae81ff">0.866</span> (<span style="color:#ae81ff">0.054</span>)
-<span style="color:#f92672">&gt;</span>arabic <span style="color:#ae81ff">0.864</span> (<span style="color:#ae81ff">0.052</span>)
-<span style="color:#f92672">&gt;</span>random <span style="color:#ae81ff">0.867</span> (<span style="color:#ae81ff">0.049</span>)
-</code></pre></div><p>Theo kết quả này, độ chính xác khi <em>imputation_order = &lsquo;ascending&rsquo;</em> cao nhất, nhưng độ lệch chuẩn cũng khá cao. <em>imputation_order = &lsquo;arabic</em> cho ra độ chính xác thấp nhất, độ lệch chuẩn cao gần nhất.</p>
+<h3 id="2-các-phương-pháp-thực-hiện-feature-selection">2. Các phương pháp thực hiện Feature Selection</h3>
+<p>Có 2 phương pháp chính để thực hiện Feature Selection là: Supervised và Unsupervised.</p>
+<h4 id="21-supervised">2.1 Supervised</h4>
+<p>Đây là phương pháp Feature Selection mà có sử dụng đến Target Variable (<em>nhãn</em>). Nó lại được chia thành 3 loại nhỏ hơn:</p>
+<h5 id="a-intrinsic">a, Intrinsic</h5>
+<p>Là các thuật toán thực hiện Feature Selection trong quá trình huấn luyện mô hình.</p>
+<h5 id="b-filter">b, Filter</h5>
+<p>Loại này sẽ lựa chọn một tập nhỏ các features dựa trên mối quan hệ của các features đó với Target Variable. Để xác định mối quan hệ này, chúng ta có thể sử dụng một số phương pháp thống kê khác nhau (<em>sẽ được đề cập chi tiết bên dưới</em>). Nói chung, đây là cách thức được sử dụng rất rộng rãi để thực hiện Feature Selection.</p>
+<h5 id="c-wrapper">c, Wrapper</h5>
+<p>Wraper tạo ra nhiều tập con của các features, mỗi tập con đó được sử dụng để huấn luyện một mô hình riêng. Kết quả cuối cùng là tổng hợp của các models đó.</p>
+<h4 id="22-unsupervised">2.2 Unsupervised</h4>
+<p>Đây là phương pháp Feature Selection mà không sử dụng đến Target Variable.</p>
+<h3 id="3-các-phương-pháp-thống-kê-sử-dụng-cho-feature-selection">3. Các phương pháp thống kê sử dụng cho Feature Selection</h3>
+<p>Người ta thường sử dụng các phép đo thống kê kiểu tương quan giữa các biến đầu vào và đầu ra để làm cơ sở cho việc lựa chọn các features. Mỗi một kiểu dữ liệu sẽ có các phép đo tương ứng khác nhau. Có 2 kiểu dữ liệu thường gặp là <strong>numerical</strong> (<em>integer, float, &hellip;</em>) và <strong>categorical</strong> (<em>boolean, ordinal, nominal, &hellip;</em>).</p>
+<p>Chúng ta định nghĩa 2 khái niệm sau để thuận tiện sử dụng trong các bài viết thuộc chuỗi chủ đề Data Preparation này:</p>
 <ul>
-<li>Phân phối kết quả</li>
+<li>Input Variable: Là tất cả các features có thể được sử dụng để huấn luyện mô hình.</li>
+<li>Ouput Variable: Là kết quả được dự đoán bởi mô hình. Nó còn có thể được gọi bằng cái tên khác là Target Variable.</li>
 </ul>
+<p>Sơ đồ cây dưới đây khái quát các phương pháp thống kê tương ứng với các kiểu của Input/Output Variable.</p>
 
 
 <div style="text-align:center">
-   <img style="height:auto" src="/images/post/81_missing_data_1.png">
+   <img style="height:auto" src="/images/post/82_feature_selection_1.png">
 </div>
 
 
-<p>Mức độ phân phối trong trường hợp <em>imputation_order = &lsquo;ascending&rsquo;</em> là lớn nhất.</p>
-<p>Kết hợp các nhận xét trên, có thể nhận định <em>imputation_order = &lsquo;ascending&rsquo;</em> là giá trị tối ưu của bài toán này.</p>
-<h4 id="24-tuning-max_iter-parameter">2.4 Tuning max_iter parameter</h4>
-<p>Ngoài <em>imputation_order</em> thì <em>max_iter</em> cũng là 1 tham số ảnh hưởng đến độ chính xác của IterativeImputer. Code dưới đây đánh giá độ chính xác trung bình của RandomForest cho mỗi trường hợp giá trị của <em>max_iter</em>, từ 1 đến 20.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># compare iterative imputation number of iterations for the horse colic dataset</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
-<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
-<span style="color:#f92672">from</span> sklearn.experimental <span style="color:#f92672">import</span> enable_iterative_imputer
-<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> IterativeImputer
-<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
-<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
-<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
-<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
-<span style="color:#75715e"># load dataset</span>
-dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span>, header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;?&#39;</span>)
-<span style="color:#75715e"># split into input and output elements</span>
-data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
-ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
-X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
-<span style="color:#75715e"># evaluate each strategy on the dataset</span>
-results <span style="color:#f92672">=</span> list()
-strategies <span style="color:#f92672">=</span> [str(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">21</span>)]
-<span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> strategies:
-	<span style="color:#75715e"># create the modeling pipeline</span>
-	pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span>, IterativeImputer(max_iter<span style="color:#f92672">=</span>int(s))), (<span style="color:#e6db74">&#39;m&#39;</span>, RandomForestClassifier())])
-	<span style="color:#75715e"># evaluate the model</span>
-	cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-	scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
-	<span style="color:#75715e"># store results</span>
-	results<span style="color:#f92672">.</span>append(scores)
-	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (s, mean(scores), std(scores)))
-<span style="color:#75715e"># plot model performance for comparison</span>
-pyplot<span style="color:#f92672">.</span>boxplot(results, labels<span style="color:#f92672">=</span>strategies, showmeans<span style="color:#f92672">=</span>True)
-pyplot<span style="color:#f92672">.</span>show()
-</code></pre></div><p>Kết quả chạy:</p>
-<ul>
-<li>Độ chính xác trung bình và độ lệch chuẩn.</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0.869</span> (<span style="color:#ae81ff">0.052</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2</span> <span style="color:#ae81ff">0.873</span> (<span style="color:#ae81ff">0.053</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span> <span style="color:#ae81ff">0.869</span> (<span style="color:#ae81ff">0.052</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">4</span> <span style="color:#ae81ff">0.876</span> (<span style="color:#ae81ff">0.053</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">5</span> <span style="color:#ae81ff">0.874</span> (<span style="color:#ae81ff">0.051</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">6</span> <span style="color:#ae81ff">0.873</span> (<span style="color:#ae81ff">0.051</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">7</span> <span style="color:#ae81ff">0.870</span> (<span style="color:#ae81ff">0.050</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">8</span> <span style="color:#ae81ff">0.870</span> (<span style="color:#ae81ff">0.050</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">9</span> <span style="color:#ae81ff">0.866</span> (<span style="color:#ae81ff">0.047</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span> <span style="color:#ae81ff">0.874</span> (<span style="color:#ae81ff">0.059</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">11</span> <span style="color:#ae81ff">0.870</span> (<span style="color:#ae81ff">0.050</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">12</span> <span style="color:#ae81ff">0.867</span> (<span style="color:#ae81ff">0.049</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">13</span> <span style="color:#ae81ff">0.873</span> (<span style="color:#ae81ff">0.053</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">14</span> <span style="color:#ae81ff">0.873</span> (<span style="color:#ae81ff">0.055</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">15</span> <span style="color:#ae81ff">0.871</span> (<span style="color:#ae81ff">0.056</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">16</span> <span style="color:#ae81ff">0.869</span> (<span style="color:#ae81ff">0.050</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">17</span> <span style="color:#ae81ff">0.874</span> (<span style="color:#ae81ff">0.052</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">18</span> <span style="color:#ae81ff">0.869</span> (<span style="color:#ae81ff">0.056</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">19</span> <span style="color:#ae81ff">0.876</span> (<span style="color:#ae81ff">0.053</span>)
-<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">20</span> <span style="color:#ae81ff">0.874</span> (<span style="color:#ae81ff">0.055</span>)
-</code></pre></div><p>Theo kết quả này, độ chính xác khi <em>max_iter = 4 hoặc 19</em> cao nhất.</p>
-<ul>
-<li>Phân phối kết quả</li>
-</ul>
-
-
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/81_missing_data_2.png">
-</div>
-
-
-<p>Mức độ phân phối trong trường hợp <em>max_iter = 4&rsquo;</em> nhỏ hơn so với <em>max_iter = 4</em>.</p>
-<p>Kết hợp các nhận xét trên, có thể nhận định <em>max_iter = 19'</em> là giá trị tối ưu của bài toán này.</p>
-<h4 id="25-sử-dụng-iterativeimputer-transform-khi-dự-đoán-dữ-liệu-mới">2.5 Sử dụng IterativeImputer Transform khi dự đoán dữ liệu mới.</h4>
-<p>Chúng ta sẽ sử dụng các kết quả phân tích từ phần trên để tạo ra model, sau đó dự dự đoán trên một mẫu dữ liệu mới. Code hoàn chỉnh như sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># compare iterative imputation number of iterations for the horse colic dataset</span>
-<span style="color:#75715e"># iterative imputation strategy and prediction for the horse colic dataset</span>
-<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> nan
-<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
-<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
-<span style="color:#f92672">from</span> sklearn.experimental <span style="color:#f92672">import</span> enable_iterative_imputer
-<span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> IterativeImputer
-<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
-<span style="color:#75715e"># load dataset</span>
-dataframe <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;horse-colic.csv&#39;</span>, header<span style="color:#f92672">=</span>None, na_values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;?&#39;</span>)
-<span style="color:#75715e"># split into input and output elements</span>
-data <span style="color:#f92672">=</span> dataframe<span style="color:#f92672">.</span>values
-ix <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">23</span>]
-X, y <span style="color:#f92672">=</span> data[:, ix], data[:, <span style="color:#ae81ff">23</span>]
-<span style="color:#75715e"># create the modeling pipeline</span>
-pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;i&#39;</span>, IterativeImputer(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">19</span>, imputation_order<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ascending&#39;</span>)), (<span style="color:#e6db74">&#39;m&#39;</span>, RandomForestClassifier())])
-<span style="color:#75715e"># fit the model</span>
-pipeline<span style="color:#f92672">.</span>fit(X, y)
-<span style="color:#75715e"># define new data</span>
-row <span style="color:#f92672">=</span> [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">530101</span>, <span style="color:#ae81ff">38.50</span>, <span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, nan, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>, nan, nan, nan, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">45.00</span>, <span style="color:#ae81ff">8.40</span>, nan, nan, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">11300</span>, <span style="color:#ae81ff">00000</span>, <span style="color:#ae81ff">00000</span>, <span style="color:#ae81ff">2</span>]
-<span style="color:#75715e"># make a prediction</span>
-yhat <span style="color:#f92672">=</span> pipeline<span style="color:#f92672">.</span>predict([row])
-<span style="color:#75715e"># summarize prediction</span>
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Predicted Class: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> yhat[<span style="color:#ae81ff">0</span>])
-</code></pre></div><p>Kết quả thực hiện:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Predicted Class: <span style="color:#ae81ff">2</span>
-</code></pre></div><p>Chú ý quan trọng là Missing Data trong mẫu dữ liệu mới phải được đánh dấu là <em>nan</em> thì model mới có thể hiểu được.</p>
-<h3 id="3-kết-luận">3. Kết luận</h3>
-<p>Hôm nay, chúng ta đã tìm hiểu về phương pháp Iterative Imputation trong việc giải quyết vấn đề Missing Data. Đây là một phương pháp phức tạp hơn 3 phương pháp trước đó, nhưng thường mang lại hiệu quả cao hơn.</p>
-<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Preparation_for_ML/tree/master/02_Data_Cleaning/Missing_Data/Iterative_Imputation">đây</a>.</p>
-<p>Trong bài tiếp theo, chúng ta sẽ chuyển sang tìm hiểu một vấn đề mới của quá trình Data Prepration, đó là Feature Selection. Mời các bạn đón đọc.</p>
-<h3 id="4-tham-khảo">4. Tham khảo</h3>
+<p>Nãy giờ chúng ta mới chỉ đề cập đến phương pháp thống kê cho dữ liệu thuộc một trong hai kiểu Numerical hoặc Categorical. Nhưng trong thực tế, bộ dữ liệu của chúng ta có thể bao gồm cả 2 loại đó. Khi gặp tình huống như vậy, chúng ta phải sử dụng thuật toán <em>ColumnTransformer</em>. Chúng ta sẽ tìm hiểu thuật toán này trong các bài về sau trong cùng chủ đề Data Preparation này.</p>
+<h3 id="4-kết-luận">4. Kết luận</h3>
+<p>OK, bài đầu tiên về Feature Selection chỉ ngắn như vậy thôi. Mình đã giới thiệu khái quát qua về Feature Selection để cho các bạn có cái nhìn tổng thể về nó. Trong các bài tiếp theo, mình sẽ đi chi tiết vào từng phương pháp. Mời các bạn đón đọc.</p>
+<h3 id="5-tham-khảo">5. Tham khảo</h3>
 <p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
 
         </div>
