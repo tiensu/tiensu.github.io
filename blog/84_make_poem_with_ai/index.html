@@ -193,11 +193,27 @@
 <li>Chatbot - Hay còn gọi là hệ thống Question-Answer. Siri hay Alexa là ví dụ thực tế.</li>
 </ul>
 <p>Về kiến trúc, mô hình Seq2Seq bao gồm 2 thành phần: Encoder và Decoder. Mỗi một thành phần bao gồm nhiều NN Layers xếp chồng lên nhau (stack). NN Layer có thể là CNN, RNN, LSTM. GRU, …</p>
-<!-- raw HTML omitted -->
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="https://tiensu.github.io/images/post/encoder_decoder.png">
+   </div>
+
+
+<ul>
+<li>Encoder làm nhiệm vụ mã hóa các Input Sequences thành các vectors trong miền không gian đa chiều (Latent Space). Mỗi vectors này được gọi là Internal State của Input Sequence tuơng ứng.</li>
+<li>Decoder làm nhiệm vụ chuyển đổi các Internal States sang các Target Sequences.</li>
+</ul>
 <p>Chi tiết hơn về mô hình Seq2Seq, cách làm việc cũng như hạn chế và cách khác phục hạn chế của nó, mời các bạn tham khảo trong bài viết của mình tại <a href="https://tiensu.github.io/blog/58_attention/">đây</a>. Còn ở bài này, mình chỉ tập trung vào phần thực hành thôi.</p>
 <h3 id="2-chuẩn-bị-dữ-liệu">2. Chuẩn bị dữ liệu</h3>
 <p>Bất kỳ bài toán AI nào cũng vậy, dữ liệu là yếu tố quyết định lớn đến sự thành công. Để huấn luyện mô hình <em>làm thơ</em>, mình sẽ sử dụng các câu thơ trong tác phẩm <a href="https://vi.wikipedia.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u">Truyện Kiều của đại thi hào dân tộc Nguyễn Du</a>.</p>
-<!-- raw HTML omitted -->
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="https://palda.vn/wp-content/uploads/2021/04/nguyen-du-768x490.jpg">
+   </div>
+
+
 <p>Copy toàn bộ phần nội dung của Truyện Kiều tại <a href="https://palda.vn/truyen-kieu-nguyen-du/">đây</a> hoặc một nơi nào đó tùy bạn, vào file tên là <em>truyenkieu.txt</em>. Có 2 phiên bản của Truyện Kiều, bản Kinh có 3258 câu, bản Phường có 3254 câu. Mình không nhớ là copy ở đâu về nhưng của mình là bản Kinh. Bạn sử dụng bản nào cũng được vì số lượng chỉ hơn kém nhau 2 câu, không đáng kể.</p>
 <h4 id="21-đọc-dữ-liệu">2.1 Đọc dữ liệu</h4>
 <p>Trước tiên, chúng ta sẽ đọc vào dữ liệu vừa copy về để bắt đầu quá trình xử lý.</p>
@@ -448,9 +464,21 @@ decoder_outputs <span style="color:#f92672">=</span> decoder_dense(decoder_conca
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Define the model</span>
 model <span style="color:#f92672">=</span> Model([encoder_inputs, decoder_inputs], decoder_outputs) 
 model<span style="color:#f92672">.</span>summary()
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/84_ai_gen_poem_3.png">
+   </div>
+
+
 <p>Để có cái nhìn trực quan hơn về kiến trúc thành phần và sự liên kết giữa các lớp, chúng ta sẽ thể hiện nó dưới dạng hình ảnh như dưới đây.</p>
-<!-- raw HTML omitted -->
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/84_ai_gen_poem_1.png">
+   </div>
+
+
 <h4 id="32-huấn-luyện-mô-hình">3.2 Huấn luyện mô hình</h4>
 <p>Chúng ta sẽ huấn luyện mô hình theo các tham số sau:</p>
 <ul>
@@ -465,16 +493,22 @@ model<span style="color:#f92672">.</span>summary()
     batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span>,
     epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>)
 </code></pre></div><p>Kết quả huấn luyện:</p>
-<!-- raw HTML omitted -->
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/84_ai_gen_poem_2.png">
+   </div>
+
+
 <p>Độ chính xác đạt được là ~88.6%, loss = ~0.1482%.</p>
 <h4 id="33-lưu-mô-hình">3.3 Lưu mô hình</h4>
 <p>Hãy tiến hành lưu lại mô hình để</p>
 <p>sử dụng trong tuơng lai.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model_json <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>to_json()
-<span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;output/PoemGen_2.json&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>) <span style="color:#66d9ef">as</span> json_file:
+<span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;output/PoemGen.json&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>) <span style="color:#66d9ef">as</span> json_file:
     json_file<span style="color:#f92672">.</span>write(model_json)
 <span style="color:#75715e"># serialize weights to HDF5</span>
-model<span style="color:#f92672">.</span>save_weights(<span style="color:#e6db74">&#34;output/PoemGen_model_weight_2.h5&#34;</span>)
+model<span style="color:#f92672">.</span>save_weights(<span style="color:#e6db74">&#34;output/PoemGen_model_weight.h5&#34;</span>)
 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Saved model to disk&#34;</span>)
 </code></pre></div><h4 id="34-kiểm-tra-mô-hình">3.4 Kiểm tra mô hình</h4>
 <p>Chúng ta sẽ thử sử dụng mô hình vừa huấn luyện để sinh ra thử một vài câu thơ xem sao. Code thực hiện như sau:</p>
