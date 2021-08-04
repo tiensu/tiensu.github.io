@@ -6,22 +6,31 @@
     <description>Recent content in Categories on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Machine Learning</title>
-      <link>https://tiensu.github.io/categories/machine-learning/</link>
-      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      <title>Deep Learning</title>
+      <link>https://tiensu.github.io/categories/deep-learning/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/categories/machine-learning/</guid>
+      <guid>https://tiensu.github.io/categories/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>NNL</title>
-      <link>https://tiensu.github.io/categories/nnl/</link>
+      <title>Human Action Recognition</title>
+      <link>https://tiensu.github.io/categories/human-action-recognition/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/human-action-recognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NLP</title>
+      <link>https://tiensu.github.io/categories/nlp/</link>
       <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/categories/nnl/</guid>
+      <guid>https://tiensu.github.io/categories/nlp/</guid>
       <description></description>
     </item>
     
@@ -40,6 +49,15 @@
       <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/categories/data-preparation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://tiensu.github.io/categories/machine-learning/</link>
+      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/machine-learning/</guid>
       <description></description>
     </item>
     
@@ -193,15 +211,6 @@
       <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/categories/mlops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Deep Learning</title>
-      <link>https://tiensu.github.io/categories/deep-learning/</link>
-      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/deep-learning/</guid>
       <description></description>
     </item>
     

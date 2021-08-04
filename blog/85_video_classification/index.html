@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/human-action-recognition"
+          class="text-primary">Human action recognition</a>
+        
+        <h2>Nhận diện hành vi của con người sử dụng Deep Learning</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>27 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/85_video_classification.png" class="img-fluid w-100 mb-4" alt="Nhận diện hành vi của con người sử dụng Deep Learning">
+        
+        <div class="content mb-5">
+          <p>Trong bài viết này, chúng ta cùng tìm hiểu về Video Classification. Chúng ta sẽ điểm danh sơ lược một số phương pháp tiếp cận để giải quyết bài toán này.</p>
+<h3 id="1-video-classification-là-gì">1. Video Classification là gì?</h3>
+<p>Nếu nói đến Image Classification thì chắc các bạn đều biết, còn Video Classification thì có thể nhiều người chưa nghe qua. Về bản chất, video là tập hợp các frame ảnh được hiển thị liên tiếp nhau với tốc độ khoảng 24 ảnh/giây. Điều này làm cho mắt người có cảm giác sự việc diễn ra trong video là liên tục. Video Classification tức là phân loại, dự đoán xem đối tượng, sự vật, sự việc trong một đoạn video là gì.</p>
+<p>Nếu bạn sử dụng những kỹ thuật của Image Classification vào bài toán Video Classification thì &hellip; cũng có thể đúng trong 1 số trường hợp, khi mà cái cần phân lại trong video tương đối rõ ràng, ko có sự nhập nhằng, liên kết giữa các frames với nhau. Ví dụ, phân biệt hành vi đứng và ngồi của người trong video.</p>
+<p>Tuy nhiên, với những bài toán mà thông tin cần xác định trải dài qua nhiều frames, nếu chúng ta chỉ sử dụng một frame để nhận biết thì sẽ dẫn đến kết quả sai lầm. Ví dụ, phân biệt hành vi đang đứng, đang ngồi của người trong video. Hay phân biệt hành vi lấy hàng, trả hàng lên kệ trong siêu thị, &hellip;</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="images/post/85_video_classification.gif">
+   </div>
+
+
+<p>Đối với những tình huống kiểu như vậy, chúng ta phải kết hợp nhiều frames lại với nhau, đồng thời có tính đến thứ tự theo thời gian xuất hiện của chúng mới có thể giải quyết được.</p>
+<h3 id="2-các-phương-pháp-video-classification">2. Các phương pháp Video Classification</h3>
+<h4 id="21-phương-pháp-single-frame-cnn">2.1 Phương pháp Single-Frame CNN</h4>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="images/post/85_video_classification_1.jpg">
+   </div>
+
+
+<p>Đây chính xác là cách tiếp cận sử dụng kỹ thuật của bài toán Image Classification. Chúng ta cho lần lượt từng frame của video chạy qua mô hình Image Classification. Kết quả cuối cùng là trung bình của tất các kết quả dự đoán trên mỗi frame. Tất nhiên, chúng ta có thể chỉ dùng 1 số lượng frames nhất định chứ không cần toàn bộ frames trong video. Giá trị này gọi là <em>window_size</em>.</p>
+<h4 id="22-phương-pháp-late-fusion">2.2 Phương pháp Late Fusion</h4>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="images/post/85_video_classification_2.jpg">
+   </div>
+
+
+<p>Về cơ bản, phương pháp Late Fusion rất giống với phương pháp Single-Frame CNN nhưng phức tạp hơn một chút. Sự khác biệt ở đây là trong phương pháp Single-Frame CNN, việc tính trung bình trên tất cả các xác suất dự đoán được thực hiện sau khi mô hình đã hoàn thành công việc của nó, nhưng trong phương pháp Late Fusion, quá trình lấy trung bình (hoặc một số kỹ thuật Fusion khác) được tích hợp luôn vào kiến trúc mạng của chính nó. Do đó, cấu trúc thời gian của chuỗi frame được duy trì.</p>
+<p>Cụ thể, một Fusion layer được sử dụng để hợp nhất các kết quả đầu ra của của các mạng riêng biệt, những cái hoạt động trên các frames khác nhau. Layer này thường được xây dựng bằng một số kỹ thuật như Max Pooling, Average Pooling, hay Flattening.</p>
+<p>Phương pháp Late Fusion được cho là có thể học được các thông tin về không gian và thời gian của những đối tượng, hành động xuất hiện trong video. Do đó, độ chính xác cũng cao hơn phương pháp Single-Frame CNN.</p>
+<h4 id="23-phương-pháp-early-fusion">2.3 Phương pháp Early Fusion</h4>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="images/post/85_video_classification_3.jpg">
+   </div>
+
+
+<p>Cách tiếp cận của phương pháp này ngược với phương pháp Late Fusion. Thông tin về thời gian và không gian của các frames được hợp nhất trước khi chuyển đến cho mô hình. Mô hình sẽ học để xác định sự chuyển động của các pixels giữa các frames liền kề nhau.</p>
+<p>Một video có kích thước <em>T x 3 x H x W</em>, trong đó T à khoảng thời gian, 3 kênh RGB, chiều dài H và chiều rộng W, sau khi được Early Fusion sẽ trở thành một Tensor có kích thước <em>3T x H x W</em>.</p>
+<h4 id="24-phương-pháp-crnn">2.4 Phương pháp CRNN</h4>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="images/post/85_video_classification_4.jpg">
+   </div>
+
+
+<p>Ý tưởng của phương pháp này là sử dụng một mạng CNN để trích xuất các đặc trưng của mỗi frame. Đầu ra của các mạng này sau đó được cung cấp cho một mạng LSTM đa lớp Many-to-One để kết hợp và đưa ra kết quả dự đoán. LSTM là kiến trúc mạng lý tưởng cho việc xử lý dữ liệu dạng chuỗi, có liên quan đến yếu tố thời gian.</p>
+<p>Bạn có thể đọc chi tiết về phương pháp này trong bài báo <a href="https://ieeexplore.ieee.org/abstract/document/8121994">Action Recognition in Video Sequences using Deep Bi-Directional LSTM With CNN Features</a> của Amin Ullah (IEEE 2017).</p>
+<h4 id="25-phương-pháp-pose-detection--lstm">2.5 Phương pháp Pose Detection + LSTM</h4>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="images/post/85_video_classification_5.png">
+   </div>
+
+
+<p>Một ý tưởng thú vị khác là sử dụng một mô hình Pose Detection để nhận về các Key Points từ cơ thể con người trong mỗi frame. Sau đó, đưa các Key Points này đi qua mạng LSTM đề quyết định hành vi của người đó trong video. Một số mô hình Pose Detection nổi tiếng có thể sử dụng là Open Pose, Detectron2, &hellip;Trong bài tiếp theo, chúng ta sẽ sử dụng phương pháp này đề nhận diện các hành vi của con người.</p>
+<h4 id="26-phương-pháp-optical-flow--cnn">2.6 Phương pháp Optical Flow + CNN</h4>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="images/post/85_video_classification_6.jpg">
+   </div>
+
+
+<p>Optical Flow là một mô hình mô tả sự chuyển động có thể nhìn thấy được của các đối tượng trong các frames của video. Sự chuyển động này được thể hiện thông qua một vector chuyển động. Optical Flow được sử dụng rất hiệu quả trong các ứng dụng theo dõi chuyển động. Sẽ là một ý tưởng không tồi nếu kết hợp Optical Flow với mạng CNN để lấy được các thông tin về sự chuyển động (<em>thông tin thời gian</em>) và thông tin về không gian của các đối tượng trong video. Bài báo <a href="https://www.mdpi.com/2076-3417/7/1/110">A Comprehensive Review on Handcrafted and Learning-Based Action Representation Approaches for Human Activity Recognition</a> của Allah Bux Sargano (2017) đề cập chi tiết đến phương pháp này.</p>
+<p>Mô tả qua về cách thức hoạt động. Sẽ có 2 CNN Networks hoạt động đồng thời.</p>
+<ul>
+<li>Network thứ nhất là Spatial ConvNet. Nó nhận một frame đơn lẻ để xử lý và sinh ra kết quả dự đoán dựa trên thông tin không gian.</li>
+<li>Network thứ hai là Temporal ConvNet. Nó nhận vào một chuỗi các frame liên tiếp để tính toán vector chuyển động của đối tượng. Sử dụng vector này để sinh ra kết quả dự đoán.</li>
+</ul>
+<p>Trung bình dự đoán của 2 Networks được sử dụng làm kết quả cuối cùng.</p>
+<h4 id="37-phương-pháp-slowfast">3.7 Phương pháp SlowFast</h4>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="images/post/85_video_classification_7.png">
+   </div>
+
+
+<p>Tương tự như phương pháp Optical Flow + CNN, phương pháp này cũng sử dụng song song 2 Networks. Một Network hoạt động trên luồng video có độ phân giải thấp gọi là Slow branch, một Network hoạt động trên video có độ phân giải cao hơn gọi là Fast branch. Đầu ra của mỗi branch được kết hợp lại để sinh ra kết quả dự đoán cuối cùng.</p>
+<p>Chi tiết về phương pháp này có thể tham khảo ở bài báo <a href="https://openaccess.thecvf.com/content_ICCV_2019/html/Feichtenhofer_SlowFast_Networks_for_Video_Recognition_ICCV_2019_paper.html">SlowFast Networks for Video Recognition</a> của Christoph Feichtenhofer ( ICCV 2019).</p>
+<h4 id="28-phương-pháp-3d-cnn--slow-fusion">2.8 Phương pháp 3D CNN ( Slow Fusion)</h4>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="images/post/85_video_classification_8.jpg">
+   </div>
+
+
+<p>Phương pháp này sử dụng 3D CNN để xử lý đồng thời cả thông tin không gian và thời gian trong cùng 1 mạng duy nhất. Tên khác của nó là Slow Fusion. Không giống như Late/Early Fusion, nó kết hợp luôn thông tin thời gian và không gian tại mỗi lớp Conv xuyên suốt toàn mạng 3D CNN. Dữ liệu đầu vào, do đó cũng phải có 4 chiều <em>T x C x W x H</em>.</p>
+<p>Nhược điểm của phương pháp này là nó yêu cầu tài nguyên tính toán lớn bởi vì nó làm việc với dữ liệu 4 chiều. Chi tiết hơn, các bạn có thể xem tại bài báo <a href="https://ieeexplore.ieee.org/abstract/document/6165309">3D Convolutional Neural Networks for Human Action Recognition</a>.</p>
+<p>Một paper khác so sánh toàn bộ các phương pháp mình vừa nêu tên ở đây là <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2014/html/Karpathy_Large-scale_Video_Classification_2014_CVPR_paper.html">Large-scale Video Classification with Convolutional Neural Networks</a>. Bài báo này của tác giả Andrej Karpathy và đựơc trình bày tại hội nghị CVPR năm 2014.</p>
+<h3 id="3-kết-luận">3. Kết luận</h3>
+<p>Bài này mình đã giới thiệu qua cho các bạn một số phương pháp để giải quyết bài toán Video Classification. Bài tiếp theo, chúng ta sẽ thực hành phân loại một số hành động của con người trong video sử dụng một trong các phương pháp đó!</p>
+<p>Mời các bạn đón đọc.!</p>
+<h3 id="4-tham-khảo">4. Tham khảo</h3>
+<p>[1] Taha Anwar, “Introduction to Video Classification and Human Activity Recognition”, Available online: <a href="https://learnopencv.com/introduction-to-video-classification-and-human-activity-recognition/">https://learnopencv.com/introduction-to-video-classification-and-human-activity-recognition/</a> (Accessed on 30 Jul 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
