@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/nnl"
+          class="text-primary">N n l</a>
+        
+        <a href="/categories/text-generation"
+          class="text-primary">Text generation</a>
+        
+        <h2>Làm thơ bằng AI</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>23 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/84_ai_poem_gen.jpg" class="img-fluid w-100 mb-4" alt="Làm thơ bằng AI">
+        
+        <div class="content mb-5">
+          <p>Viết hơi nhiều về chủ đề DP4ML rồi, mình tạm dừng 1 chút để chuyển qua làm 1 cái gì đấy cho đỡ chán.</p>
+<pre><code>        Chiều chiều nắng xế bên sông
+  Có cô em gái ngóng trông đợi chờ
+     Đợi chờ biết đến bao giờ?
+  ...
+</code></pre>
+<p>Có thể bạn đã biết về AI và những ứng dụng của nó trong nhiều lĩnh vực của cuộc sống: Y tế, giáo dục, giao thông, nông nghiệp, công nghiệp, &hellip; Nhưng liệu bạn có biết là AI còn tham gia vào cả các lĩnh vực mà đòi hỏi sự sáng tạo của con người như sáng tác thơ, nhạc, truyện, vẽ tranh, &hellip; những việc tưởng chừng như không thể thay thế được của con người?</p>
+<p>Trong bài này, mình sẽ cùng các bạn xây dựng một model AI đơn giản để sáng tác thơ thử xem sao ha! :D</p>
+<h3 id="1-giới-thiệu-mô-hình-seq2seq-trong-các-bài-toán-nlp">1. Giới thiệu mô hình Seq2Seq trong các bài toán NLP</h3>
+<p>Text Generation và Machine Translation là hai trong số các bài toán điển hình của NLP. Nếu như Text Generation có nhiệm vụ sinh ra các văn bản mới thì Machine Translation lại chịu trách nhiệm dịch văn bản từ một ngôn ngữ gốc sang các ngôn ngữ khác nhau. Ví dụ, từ tiếng Việt sang tiếng Nhật, từ tiếng Việt sang tiếng Anh, &hellip; Cả 2 bài toán này đều có một đặc điểm chung là nhận dữ liệu đầu vào là một chuỗi các từ (input sequence) và sinh ra một chuỗi các từ khác (target sequence). Chính vì thế mà kiến trúc mô hình để giải quyết các dạng bài toán như thế này được gọi là Seq2Seq.</p>
+<p>Mô hình Seq2Seq được giới thiệu lần đầu vào năm 2014 bởi Google. Mục đích của nó là ánh xạ một Input Sequence Data thành một Output Sequence Data. Chiều dài của 2 Sequence Data không nhất thiết phải giống nhau. Ví dụ khi dịch câu có 5 từ What are you doing now? từ tiếng Anh sang câu có 7 ký tự 今天你在做什麼？ trong tiếng Trung Quốc.</p>
+<p>Ngoài hai bài toán kể trên thì mô hình Seq2Seq còn có thể giải quyết các bài toán sau:</p>
+<ul>
+<li>Text Summarization - Đây là bài toán tóm tắt nội dung của một văn bản dài thành một đoạn văn bản ngắn hơn. Kể từ khi được Google giới thiệu năm 2014, nó đã trở nên khá phổ biến.</li>
+<li>Machine Translation - Dịch văn bản giữa các ngôn ngữ khác nhau. Google Translate chính là một sản phẩm của bài toán này.</li>
+<li>Image/Video Captioning - Đưa cho máy tính một bức ảnh hoặc một video, nó sẽ trả lại cho bạn một (hoặc một vài) câu miêu tả nội dung của bức ảnh / Video đó. Mình đang nghĩ rằng phần thi đầu tiên của kỳ thi TOEIC (phần thi miêu tả tranh) có thể chính là một ứng dụng thực tế của bài toán này.</li>
+<li>Speech Recognition - Bài toán trong lĩnh vực Audio, còn được gọi là Speech To Text, tức chuyển đổi âm thanh thành văn bản.</li>
+<li>Music Generation - Đây là một bài toán rất thú vị, máy tính có thể sáng tác nhạc cho bạn. Nghe chắc sẽ rất ngầu! :D</li>
+<li>Recommendation Engine - Hệ thống khuyến nghị có lẽ đã không còn xa lạ với mọi người. Có rất nhiều các để tạo ra nó, và mô hình Seq2Seq với kiến trúc Encoder-Decoder cũng là một trong số đó, cho kết quả rất khả quan.</li>
+<li>Chatbot - Hay còn gọi là hệ thống Question-Answer. Siri hay Alexa là ví dụ thực tế.</li>
+</ul>
+<p>Về kiến trúc, mô hình Seq2Seq bao gồm 2 thành phần: Encoder và Decoder. Mỗi một thành phần bao gồm nhiều NN Layers xếp chồng lên nhau (stack). NN Layer có thể là CNN, RNN, LSTM. GRU, …</p>
+<!-- raw HTML omitted -->
+<p>Chi tiết hơn về mô hình Seq2Seq, cách làm việc cũng như hạn chế và cách khác phục hạn chế của nó, mời các bạn tham khảo trong bài viết của mình tại <a href="https://tiensu.github.io/blog/58_attention/">đây</a>. Còn ở bài này, mình chỉ tập trung vào phần thực hành thôi.</p>
+<h3 id="2-chuẩn-bị-dữ-liệu">2. Chuẩn bị dữ liệu</h3>
+<p>Bất kỳ bài toán AI nào cũng vậy, dữ liệu là yếu tố quyết định lớn đến sự thành công. Để huấn luyện mô hình <em>làm thơ</em>, mình sẽ sử dụng các câu thơ trong tác phẩm <a href="https://vi.wikipedia.org/wiki/Truy%E1%BB%87n_Ki%E1%BB%81u">Truyện Kiều của đại thi hào dân tộc Nguyễn Du</a>.</p>
+<!-- raw HTML omitted -->
+<p>Copy toàn bộ phần nội dung của Truyện Kiều tại <a href="https://palda.vn/truyen-kieu-nguyen-du/">đây</a> hoặc một nơi nào đó tùy bạn, vào file tên là <em>truyenkieu.txt</em>. Có 2 phiên bản của Truyện Kiều, bản Kinh có 3258 câu, bản Phường có 3254 câu. Mình không nhớ là copy ở đâu về nhưng của mình là bản Kinh. Bạn sử dụng bản nào cũng được vì số lượng chỉ hơn kém nhau 2 câu, không đáng kể.</p>
+<h4 id="21-đọc-dữ-liệu">2.1 Đọc dữ liệu</h4>
+<p>Trước tiên, chúng ta sẽ đọc vào dữ liệu vừa copy về để bắt đầu quá trình xử lý.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;truyenkieu.txt&#39;</span>,<span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+  data <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>read()
+<span style="color:#75715e"># separate data sentence by sentence and remove blank sentences</span>
+data_list <span style="color:#f92672">=</span> [line <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> data<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">if</span> line <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;&#39;</span>]
+<span style="color:#75715e"># display 10 first sentences</span>
+data_list[:<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">---</span>
+[<span style="color:#e6db74">&#39;01.Trăm năm trong cõi người ta,&#39;</span>,
+ <span style="color:#e6db74">&#39;Chữ tài chữ mệnh khéo là ghét nhau.&#39;</span>,
+ <span style="color:#e6db74">&#39;Trải qua một cuộc bể dâu,&#39;</span>,
+ <span style="color:#e6db74">&#39;Những điều trông thấy mà đau đớn lòng.&#39;</span>,
+ <span style="color:#e6db74">&#39;Lạ gì bỉ sắc tư phong,&#39;</span>,
+ <span style="color:#e6db74">&#39;Trời xanh quen thói má hồng đánh ghen.&#39;</span>,
+ <span style="color:#e6db74">&#39;Cảo thơm lần giở trước đèn,&#39;</span>,
+ <span style="color:#e6db74">&#39;Phong tình có lục còn truyền sử xanh.&#39;</span>,
+ <span style="color:#e6db74">&#39;Rằng năm Gia Tĩnh triều Minh,&#39;</span>,
+ <span style="color:#e6db74">&#39;Bốn phương phẳng lặng, hai kinh vững vàng.&#39;</span>]
+</code></pre></div><h4 id="22-làm-sạch-dữ-liệu">2.2 Làm sạch dữ liệu</h4>
+<p>Có thể quan sát thấy dữ liệu còn đang rất <em>bẩn, lộn xộn</em>, chúng ta cần phải làm sạch trước khi đưa cho model để học. Một số bước tiền xử lý làm sạch dữ liệu như sau:</p>
+<h5 id="a-chuyển-chữ-hoa-thành-chữ-thường">a, Chuyển chữ hoa thành chữ thường</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data_list <span style="color:#f92672">=</span> [x<span style="color:#f92672">.</span>lower() <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> data_list]
+data_list[:<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">---</span>
+[<span style="color:#e6db74">&#39;01.trăm năm trong cõi người ta,&#39;</span>,
+ <span style="color:#e6db74">&#39;chữ tài chữ mệnh khéo là ghét nhau.&#39;</span>,
+ <span style="color:#e6db74">&#39;trải qua một cuộc bể dâu,&#39;</span>,
+ <span style="color:#e6db74">&#39;những điều trông thấy mà đau đớn lòng.&#39;</span>,
+ <span style="color:#e6db74">&#39;lạ gì bỉ sắc tư phong,&#39;</span>,
+ <span style="color:#e6db74">&#39;trời xanh quen thói má hồng đánh ghen.&#39;</span>,
+ <span style="color:#e6db74">&#39;cảo thơm lần giở trước đèn,&#39;</span>,
+ <span style="color:#e6db74">&#39;phong tình có lục còn truyền sử xanh.&#39;</span>,
+ <span style="color:#e6db74">&#39;rằng năm gia tĩnh triều minh,&#39;</span>,
+ <span style="color:#e6db74">&#39;bốn phương phẳng lặng, hai kinh vững vàng.&#39;</span>]
+</code></pre></div><h5 id="b-loại-bỏ-dấu-câu">b, Loại bỏ dấu câu</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">remove_digits <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span>maketrans(<span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, string<span style="color:#f92672">.</span>digits)
+removed_digits_text <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> sent <span style="color:#f92672">in</span> tk_text_:
+    sentance <span style="color:#f92672">=</span> [w<span style="color:#f92672">.</span>translate(remove_digits) <span style="color:#66d9ef">for</span> w <span style="color:#f92672">in</span> sent<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; &#39;</span>)]
+    removed_digits_text<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(sentance))
+tk_text_ <span style="color:#f92672">=</span> removed_digits_text
+tk_text_[:<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">---</span>
+[<span style="color:#e6db74">&#39;01trăm năm trong cõi người ta&#39;</span>,
+ <span style="color:#e6db74">&#39;chữ tài chữ mệnh khéo là ghét nhau&#39;</span>,
+ <span style="color:#e6db74">&#39;trải qua một cuộc bể dâu&#39;</span>,
+ <span style="color:#e6db74">&#39;những điều trông thấy mà đau đớn lòng&#39;</span>,
+ <span style="color:#e6db74">&#39;lạ gì bỉ sắc tư phong&#39;</span>,
+ <span style="color:#e6db74">&#39;trời xanh quen thói má hồng đánh ghen&#39;</span>,
+ <span style="color:#e6db74">&#39;cảo thơm lần giở trước đèn&#39;</span>,
+ <span style="color:#e6db74">&#39;phong tình có lục còn truyền sử xanh&#39;</span>,
+ <span style="color:#e6db74">&#39;rằng năm gia tĩnh triều minh&#39;</span>,
+ <span style="color:#e6db74">&#39;bốn phương phẳng lặng hai kinh vững vàng&#39;</span>]
+</code></pre></div><h5 id="c-loại-bỏ-số">c, Loại bỏ số</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">remove_digits <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span>maketrans(<span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, string<span style="color:#f92672">.</span>digits)
+removed_digits_text <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> sent <span style="color:#f92672">in</span> tk_text_:
+    sentance <span style="color:#f92672">=</span> [w<span style="color:#f92672">.</span>translate(remove_digits) <span style="color:#66d9ef">for</span> w <span style="color:#f92672">in</span> sent<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; &#39;</span>)]
+    removed_digits_text<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(sentance))
+tk_text_ <span style="color:#f92672">=</span> removed_digits_text
+tk_text_[:<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">---</span>
+[<span style="color:#e6db74">&#39;trăm năm trong cõi người ta&#39;</span>,
+ <span style="color:#e6db74">&#39;chữ tài chữ mệnh khéo là ghét nhau&#39;</span>,
+ <span style="color:#e6db74">&#39;trải qua một cuộc bể dâu&#39;</span>,
+ <span style="color:#e6db74">&#39;những điều trông thấy mà đau đớn lòng&#39;</span>,
+ <span style="color:#e6db74">&#39;lạ gì bỉ sắc tư phong&#39;</span>,
+ <span style="color:#e6db74">&#39;trời xanh quen thói má hồng đánh ghen&#39;</span>,
+ <span style="color:#e6db74">&#39;cảo thơm lần giở trước đèn&#39;</span>,
+ <span style="color:#e6db74">&#39;phong tình có lục còn truyền sử xanh&#39;</span>,
+ <span style="color:#e6db74">&#39;rằng năm gia tĩnh triều minh&#39;</span>,
+ <span style="color:#e6db74">&#39;bốn phương phẳng lặng hai kinh vững vàng&#39;</span>]
+</code></pre></div><h5 id="d-loại-bỏ-khoảng-trắng-đầu-và-cuối-mỗi-câu">d, Loại bỏ khoảng trắng đầu và cuối mỗi câu</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># removing the starting and ending whitespaces</span>
+tk_text_ <span style="color:#f92672">=</span> [x<span style="color:#f92672">.</span>strip() <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> tk_text_]
+tk_text_[:<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">---</span>
+[<span style="color:#e6db74">&#39;trăm năm trong cõi người ta&#39;</span>,
+ <span style="color:#e6db74">&#39;chữ tài chữ mệnh khéo là ghét nhau&#39;</span>,
+ <span style="color:#e6db74">&#39;trải qua một cuộc bể dâu&#39;</span>,
+ <span style="color:#e6db74">&#39;những điều trông thấy mà đau đớn lòng&#39;</span>,
+ <span style="color:#e6db74">&#39;lạ gì bỉ sắc tư phong&#39;</span>,
+ <span style="color:#e6db74">&#39;trời xanh quen thói má hồng đánh ghen&#39;</span>,
+ <span style="color:#e6db74">&#39;cảo thơm lần giở trước đèn&#39;</span>,
+ <span style="color:#e6db74">&#39;phong tình có lục còn truyền sử xanh&#39;</span>,
+ <span style="color:#e6db74">&#39;rằng năm gia tĩnh triều minh&#39;</span>,
+ <span style="color:#e6db74">&#39;bốn phương phẳng lặng hai kinh vững vàng&#39;</span>]
+</code></pre></div><h5 id="e-kiểm-tra-hiện-tượng-2-câu-nằm-cùng-1-dòng">e, Kiểm tra hiện tượng 2 câu nằm cùng 1 dòng</h5>
+<p>Lỗi này thường xuất hiện do lỗi copy Truyện Kiều từ trên website về file txt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># check to see if there is 2 sentences are same line</span>
+<span style="color:#66d9ef">for</span> ins <span style="color:#f92672">in</span> tk_text_:
+    <span style="color:#66d9ef">if</span> len(ins<span style="color:#f92672">.</span>split()) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">8</span>:
+      <span style="color:#66d9ef">print</span>(ins)
+</code></pre></div><p>Nếu thấy có dòng nào được in ra thì chúng ta tìm đến dòng đó để sửa trong file <em>truyenkieu.txt</em>.</p>
+<h4 id="23-chuẩn-bị-dữ-liệu">2.3 Chuẩn bị dữ liệu</h4>
+<h5 id="a-chia-dữ-liệu-thành-inputtarget-sequences">a, Chia dữ liệu thành Input/Target Sequences</h5>
+<p>Chúng ta sẽ chia 3258 câu thơ thành 2 phần:</p>
+<ul>
+<li>Input Sentenses: là những câu có 6 từ.</li>
+<li>Target Sentences: là những câu có 8 từ.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create pair of input/output sequence</span>
+input_sentences, target_sentences <span style="color:#f92672">=</span> [], []
+<span style="color:#66d9ef">for</span> index, seq_txt <span style="color:#f92672">in</span> enumerate(tk_text_):
+    <span style="color:#66d9ef">if</span> index<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        input_sentences<span style="color:#f92672">.</span>append(seq_txt)
+    <span style="color:#66d9ef">else</span>:
+        target_sentences<span style="color:#f92672">.</span>append(seq_txt)
+<span style="color:#66d9ef">print</span>(len(input_sentences), len(target_sentences))
+<span style="color:#f92672">---</span>
+(<span style="color:#ae81ff">1629</span>, <span style="color:#ae81ff">1629</span>)
+</code></pre></div><p>Ngoài ra, theo cách hoạt động của mô hình Seq2Seq, mỗi Target Sentence cần được thêm token báo hiệu bắt đầu và kết thúc.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># add start and end token to target sequences</span>
+target_sentences <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;start &#39;</span><span style="color:#f92672">+</span> ts <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; end&#39;</span> <span style="color:#66d9ef">for</span> ts <span style="color:#f92672">in</span> target_sentences]
+</code></pre></div><h5 id="b-thực-hiện-tokenize-đối-với-inputtarget-sentences">b, Thực hiện Tokenize đối với Input/Target Sentences</h5>
+<p>Các mô hình AI chỉ làm việc với dữ liệu ở dạng số, vì thế chúng ta phải chuyển các Input/Target Sentences từ dạng chuỗi văn bản sang dạng số tuơng ứng. Mình sẽ sử dụng lớp <em>Tokenizer()</em> của thư viện Keras để làm việc này.</p>
+<ul>
+<li>Input Sentences</li>
+</ul>
+<p>Xây dựng bộ từ điển (<em>vocabulary</em>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># prepare the tokenizer on the input sentence</span>
+input_tokenizer <span style="color:#f92672">=</span> Tokenizer()
+input_tokenizer<span style="color:#f92672">.</span>fit_on_texts(input_sentences)
+<span style="color:#f92672">---</span>
+Input Vocabulary Size: <span style="color:#ae81ff">1866</span>
+</code></pre></div><p>Thực hiện Tokenize:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># perform tokenize on input setences</span>
+input_seq <span style="color:#f92672">=</span> input_tokenizer<span style="color:#f92672">.</span>texts_to_sequences(input_sentences)
+max_len_input_seq <span style="color:#f92672">=</span> max([len(seq) <span style="color:#66d9ef">for</span> seq <span style="color:#f92672">in</span> input_seq])
+input_seq <span style="color:#f92672">=</span> pad_sequences(input_seq, maxlen<span style="color:#f92672">=</span>max_len_input_seq, padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pre&#39;</span>)
+input_seq[:<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">---</span>
+array([[ <span style="color:#ae81ff">183</span>,  <span style="color:#ae81ff">102</span>,   <span style="color:#ae81ff">13</span>,  <span style="color:#ae81ff">665</span>,    <span style="color:#ae81ff">6</span>,   <span style="color:#ae81ff">64</span>],
+       [ <span style="color:#ae81ff">865</span>,  <span style="color:#ae81ff">125</span>,    <span style="color:#ae81ff">2</span>,  <span style="color:#ae81ff">538</span>,  <span style="color:#ae81ff">152</span>,  <span style="color:#ae81ff">453</span>],
+       [ <span style="color:#ae81ff">103</span>,  <span style="color:#ae81ff">274</span>,  <span style="color:#ae81ff">866</span>,  <span style="color:#ae81ff">167</span>,  <span style="color:#ae81ff">275</span>,  <span style="color:#ae81ff">104</span>],
+       [<span style="color:#ae81ff">1183</span>,  <span style="color:#ae81ff">666</span>,  <span style="color:#ae81ff">126</span>,  <span style="color:#ae81ff">276</span>,   <span style="color:#ae81ff">41</span>,  <span style="color:#ae81ff">277</span>],
+       [   <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">102</span>,   <span style="color:#ae81ff">73</span>,  <span style="color:#ae81ff">867</span>,  <span style="color:#ae81ff">454</span>,  <span style="color:#ae81ff">184</span>],
+       [   <span style="color:#ae81ff">7</span>,   <span style="color:#ae81ff">10</span>,  <span style="color:#ae81ff">868</span>,  <span style="color:#ae81ff">455</span>,  <span style="color:#ae81ff">246</span>,  <span style="color:#ae81ff">278</span>],
+       [   <span style="color:#ae81ff">2</span>,  <span style="color:#ae81ff">667</span>,   <span style="color:#ae81ff">57</span>,  <span style="color:#ae81ff">869</span>, <span style="color:#ae81ff">1184</span>,   <span style="color:#ae81ff">11</span>],
+       [ <span style="color:#ae81ff">115</span>,   <span style="color:#ae81ff">11</span>,   <span style="color:#ae81ff">58</span>,  <span style="color:#ae81ff">539</span>,  <span style="color:#ae81ff">870</span>,  <span style="color:#ae81ff">456</span>],
+       [  <span style="color:#ae81ff">87</span>,  <span style="color:#ae81ff">540</span>,  <span style="color:#ae81ff">247</span>,  <span style="color:#ae81ff">541</span>,  <span style="color:#ae81ff">318</span>,  <span style="color:#ae81ff">248</span>],
+       [ <span style="color:#ae81ff">384</span>,  <span style="color:#ae81ff">153</span>,  <span style="color:#ae81ff">668</span>,  <span style="color:#ae81ff">385</span>,  <span style="color:#ae81ff">669</span>,  <span style="color:#ae81ff">319</span>]], dtype<span style="color:#f92672">=</span>int32)
+</code></pre></div><p>Ngoài ra, hãy nhớ rằng bắt buộc các Input Sequences phải có độ dài bằng nhau. Vì vậy, chúng ta sẽ thêm các ký tự ‘0’ để tạo chuỗi có cùng độ dài. Điều này sẽ được thực hiện bởi <em>pad_sequence</em>.</p>
+<ul>
+<li>Target Sentences</li>
+</ul>
+<p>Xây dựng từ điển:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># prepare the tokenizer on the target sentence</span>
+target_tokenizer <span style="color:#f92672">=</span> Tokenizer()
+target_tokenizer<span style="color:#f92672">.</span>fit_on_texts(target_sentences)
+<span style="color:#f92672">---</span>
+Target Vocabulary Size: <span style="color:#ae81ff">1987</span>
+</code></pre></div><p>Thực hiện Tokenize:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># perform tokenize on target setences</span>
+target_seq <span style="color:#f92672">=</span> target_tokenizer<span style="color:#f92672">.</span>texts_to_sequences(target_sentences)
+max_len_target_seq <span style="color:#f92672">=</span> max([len(seq) <span style="color:#66d9ef">for</span> seq <span style="color:#f92672">in</span> target_seq])
+target_seq <span style="color:#f92672">=</span> pad_sequences(target_seq, maxlen<span style="color:#f92672">=</span>max_len_target_seq, padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pre&#39;</span>)
+target_seq[:<span style="color:#ae81ff">10</span>]
+<span style="color:#f92672">---</span>
+array([[   <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">111</span>,  <span style="color:#ae81ff">137</span>,  <span style="color:#ae81ff">111</span>,  <span style="color:#ae81ff">258</span>,  <span style="color:#ae81ff">317</span>,    <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1304</span>,   <span style="color:#ae81ff">99</span>,    <span style="color:#ae81ff">2</span>],
+       [   <span style="color:#ae81ff">1</span>,   <span style="color:#ae81ff">61</span>,  <span style="color:#ae81ff">126</span>,   <span style="color:#ae81ff">85</span>,   <span style="color:#ae81ff">46</span>,   <span style="color:#ae81ff">16</span>,  <span style="color:#ae81ff">178</span>,  <span style="color:#ae81ff">773</span>,    <span style="color:#ae81ff">8</span>,    <span style="color:#ae81ff">2</span>],
+       [   <span style="color:#ae81ff">1</span>,   <span style="color:#ae81ff">48</span>,   <span style="color:#ae81ff">90</span>,  <span style="color:#ae81ff">402</span>,  <span style="color:#ae81ff">774</span>,  <span style="color:#ae81ff">354</span>,   <span style="color:#ae81ff">64</span>,  <span style="color:#ae81ff">355</span>,  <span style="color:#ae81ff">356</span>,    <span style="color:#ae81ff">2</span>],
+       [   <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">155</span>,   <span style="color:#ae81ff">26</span>,   <span style="color:#ae81ff">12</span>,  <span style="color:#ae81ff">645</span>,   <span style="color:#ae81ff">17</span>,  <span style="color:#ae81ff">646</span>, <span style="color:#ae81ff">1305</span>,   <span style="color:#ae81ff">90</span>,    <span style="color:#ae81ff">2</span>],
+       [   <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">127</span>,  <span style="color:#ae81ff">481</span>, <span style="color:#ae81ff">1306</span>,  <span style="color:#ae81ff">775</span>,   <span style="color:#ae81ff">49</span>,  <span style="color:#ae81ff">179</span>,  <span style="color:#ae81ff">647</span>,   <span style="color:#ae81ff">35</span>,    <span style="color:#ae81ff">2</span>],
+       [   <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">280</span>,  <span style="color:#ae81ff">776</span>,  <span style="color:#ae81ff">100</span>,    <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">259</span>,  <span style="color:#ae81ff">259</span>, <span style="color:#ae81ff">1307</span>,  <span style="color:#ae81ff">777</span>,    <span style="color:#ae81ff">2</span>],
+       [   <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">197</span>,  <span style="color:#ae81ff">128</span>,    <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">111</span>,  <span style="color:#ae81ff">357</span>,  <span style="color:#ae81ff">558</span>,  <span style="color:#ae81ff">990</span>,  <span style="color:#ae81ff">280</span>,    <span style="color:#ae81ff">2</span>],
+       [   <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">559</span>,  <span style="color:#ae81ff">281</span>,    <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">282</span>,  <span style="color:#ae81ff">231</span>,    <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">559</span>,  <span style="color:#ae81ff">232</span>,    <span style="color:#ae81ff">2</span>],
+       [   <span style="color:#ae81ff">1</span>,    <span style="color:#ae81ff">3</span>,    <span style="color:#ae81ff">5</span>,    <span style="color:#ae81ff">3</span>,  <span style="color:#ae81ff">318</span>,  <span style="color:#ae81ff">129</span>,  <span style="color:#ae81ff">358</span>,  <span style="color:#ae81ff">648</span>,  <span style="color:#ae81ff">129</span>,    <span style="color:#ae81ff">2</span>],
+       [   <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">482</span>,   <span style="color:#ae81ff">86</span>,  <span style="color:#ae81ff">198</span>, <span style="color:#ae81ff">1308</span>,  <span style="color:#ae81ff">403</span>,  <span style="color:#ae81ff">991</span>,  <span style="color:#ae81ff">649</span>,  <span style="color:#ae81ff">992</span>,    <span style="color:#ae81ff">2</span>]],
+      dtype<span style="color:#f92672">=</span>int32)
+</code></pre></div><h5 id="c--tạo-inputoutput-cho-model">c,  Tạo Input/Output cho model</h5>
+<p>Mô hình Seq2Seq yêu cầu 2 Inputs là <em>Encoder Input</em>, <em>Decoder Input</em> và một Output là <em>Decoder Output</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create encoder/decoder input/output</span>
+<span style="color:#66d9ef">for</span> i, (input_text, target_text) <span style="color:#f92672">in</span> enumerate(zip(input_sentences, target_sentences)):
+    <span style="color:#66d9ef">for</span> t, word <span style="color:#f92672">in</span> enumerate(input_text<span style="color:#f92672">.</span>split()):
+        encoder_input_data[i, t] <span style="color:#f92672">=</span> input_word2index[word]
+    <span style="color:#66d9ef">for</span> t, word <span style="color:#f92672">in</span> enumerate(target_text<span style="color:#f92672">.</span>split()):
+        <span style="color:#75715e"># decoder_target_data is ahead of decoder_input_data by one timestep</span>
+        decoder_input_data[i, t] <span style="color:#f92672">=</span> target_word2index[word]
+        <span style="color:#66d9ef">if</span> t <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#75715e"># decoder_target_data will be ahead by one timestep</span>
+            <span style="color:#75715e"># and will not include the start character.</span>
+            decoder_target_data[i, t <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, target_word2index[word]] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.</span>
+</code></pre></div><p>OK, như vậy là phần chuẩn bị dữ liệu đã xong. Chúng ta chuyển qua phần xây dựng mô hình AI.</p>
+<h3 id="3-xây-dựng-mô-hình-seq2seq">3. Xây dựng mô hình Seq2Seq</h3>
+<h4 id="31-định-nghĩa-kiến-trúc-mô-hình">3.1 Định nghĩa kiến trúc mô hình</h4>
+<p>Mô hình Seq2Seq thông thường có những hạn chế nhất định của nó, nên ở đây mình sẽ sử dụng thêm cơ chế Attention để tăng hiệu quả của mô hình.</p>
+<p>Các thư viện Keras, Tensorflow hay Pytorch đều chưa chính thức tích hợp Attention (<em>mình tin điều này sẽ xảy ra sớm thôi</em>). Vì vậy, chúng ta sẽ sử dụng lớp Attention được xây dựng tại <a href="https://github.com/thushv89/attention_keras/blob/master/layers/attention.py">đây</a>. Download nó về và đặt trong cùng thư mực dự án.</p>
+<ul>
+<li>Định nghĩa Encoder</li>
+</ul>
+<p>Encoder sẽ bao gồm 1 lớp Embedding và 3 lớp LSTM xếp chồng liên tiếp nhau. Lớp Embedding làm nhiệm vụ chuyển các Input Sequences thành các Embedded Vectors sử dụng thuật toán Word2Vec hoặc GloVe.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Encoder </span>
+encoder_inputs <span style="color:#f92672">=</span> Input(shape<span style="color:#f92672">=</span>(max_len_input_sentence,)) 
+enc_emb <span style="color:#f92672">=</span> Embedding(input_vocab_size, latent_dim, trainable<span style="color:#f92672">=</span>True)(encoder_inputs) 
+
+<span style="color:#75715e">#LSTM 1 </span>
+encoder_lstm1 <span style="color:#f92672">=</span> LSTM(latent_dim, return_sequences<span style="color:#f92672">=</span>True, return_state<span style="color:#f92672">=</span>True) 
+encoder_output1, state_h1, state_c1 <span style="color:#f92672">=</span> encoder_lstm1(enc_emb) 
+
+<span style="color:#75715e">#LSTM 2 </span>
+encoder_lstm2 <span style="color:#f92672">=</span> LSTM(latent_dim, return_sequences<span style="color:#f92672">=</span>True, return_state<span style="color:#f92672">=</span>True) 
+encoder_output2, state_h2, state_c2 <span style="color:#f92672">=</span> encoder_lstm2(encoder_output1) 
+
+<span style="color:#75715e">#LSTM 3 </span>
+encoder_lstm3 <span style="color:#f92672">=</span> LSTM(latent_dim, return_state<span style="color:#f92672">=</span>True, return_sequences<span style="color:#f92672">=</span>True) 
+encoder_outputs, state_h, state_c<span style="color:#f92672">=</span> encoder_lstm3(encoder_output2) 
+</code></pre></div><p>Chú ý rằng, tại các lớp LSTM cần đặt tham số <em>return_sequences=True, return_state=True</em> để nó trả về <em>hidden_state</em> và <em>cell_state</em> tại mỗi <em>time_step</em>.</p>
+<ul>
+<li>Định nghĩa Decoder</li>
+</ul>
+<p>Decoder cũng gồm 1 lớp Embedding và 1 lớp LSTM.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Set up the decoder. </span>
+decoder_inputs <span style="color:#f92672">=</span> Input(shape<span style="color:#f92672">=</span>(None,)) 
+dec_emb_layer <span style="color:#f92672">=</span> Embedding(target_vocab_size, latent_dim,trainable<span style="color:#f92672">=</span>True) 
+dec_emb <span style="color:#f92672">=</span> dec_emb_layer(decoder_inputs) 
+
+<span style="color:#75715e">#LSTM using encoder_states as initial state</span>
+decoder_lstm <span style="color:#f92672">=</span> LSTM(latent_dim, return_sequences<span style="color:#f92672">=</span>True, return_state<span style="color:#f92672">=</span>True) 
+decoder_outputs,decoder_fwd_state, decoder_back_state <span style="color:#f92672">=</span> decoder_lstm(dec_emb,initial_state<span style="color:#f92672">=</span>[state_h, state_c]) 
+</code></pre></div><p>Tuơng tự Encoder, lớp LSTM của Decoder cũng phải thiết lập 2 tham số <em>return_sequences=True, return_state=True</em>. Ngoài ra, trạng thái khởi tạo của Decoder được gán bằng giá trị <em>cell_state</em> và <em>hidden_state</em> của ở đầu ra của Encoder.</p>
+<ul>
+<li>Định nghĩa  Attention layer</li>
+</ul>
+<p>Lớp Attention được khởi tạo với 2 tham số là <em>encoder_outputs</em> của Encoder và <em>decoder_outputs</em> của Decoder.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Attention Layer</span>
+attn_layer <span style="color:#f92672">=</span> AttentionLayer(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;attention_layer&#39;</span>) 
+attn_out, attn_states <span style="color:#f92672">=</span> attn_layer([encoder_outputs, decoder_outputs]) 
+</code></pre></div><ul>
+<li>Kết hợp Output của Decoder và Attention</li>
+</ul>
+<p>Output của Decoder và Attention được kết hợp lại thành một Output duy nhất:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Concat attention output and decoder LSTM output </span>
+decoder_concat_input <span style="color:#f92672">=</span> Concatenate(axis<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;concat_layer&#39;</span>)([decoder_outputs, attn_out])
+</code></pre></div><ul>
+<li>Định nghĩa TimeDistributed</li>
+</ul>
+<p>Đây là lớp chịu trách nhiệm sinh ra kết quả cuối cùng của mô hình.  Định nghĩa nó bằng cách sử dụng lớp TimeDistributed của Keras và truyền tham số là <em>decoder_concat_input</em>. Hàm <em>softmax</em> trả về xác suất của mỗi từ trong <em>vocabulary</em>. Từ nào có xác suất lớn nhất sẽ được chọn.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Dense layer</span>
+decoder_dense <span style="color:#f92672">=</span> TimeDistributed(Dense(target_vocab_size, activation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;softmax&#39;</span>)) 
+decoder_outputs <span style="color:#f92672">=</span> decoder_dense(decoder_concat_input) 
+</code></pre></div><ul>
+<li>Mô hình đầy đủ</li>
+</ul>
+<p>Kết hợp đầy đủ Input/Output của Encoder/Decoder với lớp Model của Keras, ta có được mô hình đầy đủ như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Define the model</span>
+model <span style="color:#f92672">=</span> Model([encoder_inputs, decoder_inputs], decoder_outputs) 
+model<span style="color:#f92672">.</span>summary()
+</code></pre></div><!-- raw HTML omitted -->
+<p>Để có cái nhìn trực quan hơn về kiến trúc thành phần và sự liên kết giữa các lớp, chúng ta sẽ thể hiện nó dưới dạng hình ảnh như dưới đây.</p>
+<!-- raw HTML omitted -->
+<h4 id="32-huấn-luyện-mô-hình">3.2 Huấn luyện mô hình</h4>
+<p>Chúng ta sẽ huấn luyện mô hình theo các tham số sau:</p>
+<ul>
+<li>x = [encoder_input_data, decoder_input_data]</li>
+<li>y = decoder_target_data,</li>
+<li>epoch: 500</li>
+<li>batch_size: 64</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">history <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>fit(
+    x<span style="color:#f92672">=</span>[encoder_input_data, decoder_input_data],
+    y<span style="color:#f92672">=</span>decoder_target_data,
+    batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span>,
+    epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>)
+</code></pre></div><p>Kết quả huấn luyện:</p>
+<!-- raw HTML omitted -->
+<p>Độ chính xác đạt được là ~88.6%, loss = ~0.1482%.</p>
+<h4 id="33-lưu-mô-hình">3.3 Lưu mô hình</h4>
+<p>Hãy tiến hành lưu lại mô hình để</p>
+<p>sử dụng trong tuơng lai.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model_json <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>to_json()
+<span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;output/PoemGen_2.json&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>) <span style="color:#66d9ef">as</span> json_file:
+    json_file<span style="color:#f92672">.</span>write(model_json)
+<span style="color:#75715e"># serialize weights to HDF5</span>
+model<span style="color:#f92672">.</span>save_weights(<span style="color:#e6db74">&#34;output/PoemGen_model_weight_2.h5&#34;</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Saved model to disk&#34;</span>)
+</code></pre></div><h4 id="34-kiểm-tra-mô-hình">3.4 Kiểm tra mô hình</h4>
+<p>Chúng ta sẽ thử sử dụng mô hình vừa huấn luyện để sinh ra thử một vài câu thơ xem sao. Code thực hiện như sau:</p>
+<h5 id="a-load-mô-hình">a, Load mô hình</h5>
+<p>Trước tiên, load mô hình đã được lưu trước đó:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># loading the model architecture and asigning the weights</span>
+json_file <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;output/PoemGen_2.json&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>)
+loaded_model_json <span style="color:#f92672">=</span> json_file<span style="color:#f92672">.</span>read()
+json_file<span style="color:#f92672">.</span>close()
+model_loaded <span style="color:#f92672">=</span> model_from_json(loaded_model_json, custom_objects<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;AttentionLayer&#39;</span>: AttentionLayer})
+<span style="color:#75715e"># load weights into new model</span>
+model_loaded<span style="color:#f92672">.</span>load_weights(<span style="color:#e6db74">&#34;output/PoemGen_model_weight_2.h5&#34;</span>)
+</code></pre></div><h5 id="b-thực-hiện-inference">b, Thực hiện Inference</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># encoder inference</span>
+encoder_inputs <span style="color:#f92672">=</span> model_loaded<span style="color:#f92672">.</span>input[<span style="color:#ae81ff">0</span>]  <span style="color:#75715e">#loading encoder_inputs</span>
+encoder_outputs, state_h, state_c <span style="color:#f92672">=</span> model_loaded<span style="color:#f92672">.</span>layers[<span style="color:#ae81ff">6</span>]<span style="color:#f92672">.</span>output <span style="color:#75715e">#loading encoder_outputs</span>
+<span style="color:#75715e"># print(encoder_inputs.shape)</span>
+encoder_model <span style="color:#f92672">=</span> Model(inputs<span style="color:#f92672">=</span>encoder_inputs,outputs<span style="color:#f92672">=</span>[encoder_outputs, state_h, state_c])
+
+<span style="color:#75715e"># decoder inference</span>
+<span style="color:#75715e"># Below tensors will hold the states of the previous time step</span>
+decoder_state_input_h <span style="color:#f92672">=</span> Input(shape<span style="color:#f92672">=</span>(latent_dim,))
+decoder_state_input_c <span style="color:#f92672">=</span> Input(shape<span style="color:#f92672">=</span>(latent_dim,))
+decoder_hidden_state_input <span style="color:#f92672">=</span> Input(shape<span style="color:#f92672">=</span>(max_len_input_seq,latent_dim))
+
+<span style="color:#75715e"># Get the embeddings of the decoder sequence</span>
+decoder_inputs <span style="color:#f92672">=</span> model_loaded<span style="color:#f92672">.</span>layers[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">.</span>output
+<span style="color:#75715e">#print(decoder_inputs.shape)</span>
+dec_emb_layer <span style="color:#f92672">=</span> model_loaded<span style="color:#f92672">.</span>layers[<span style="color:#ae81ff">5</span>]
+dec_emb2<span style="color:#f92672">=</span> dec_emb_layer(decoder_inputs)
+<span style="color:#75715e"># To predict the next word in the sequence, set the initial states to the states from the previous time step</span>
+decoder_lstm <span style="color:#f92672">=</span> model_loaded<span style="color:#f92672">.</span>layers[<span style="color:#ae81ff">7</span>]
+decoder_outputs2, state_h2, state_c2 <span style="color:#f92672">=</span> decoder_lstm(dec_emb2, initial_state<span style="color:#f92672">=</span>[decoder_state_input_h, decoder_state_input_c])
+
+<span style="color:#75715e">#attention inference</span>
+attn_layer <span style="color:#f92672">=</span> model_loaded<span style="color:#f92672">.</span>layers[<span style="color:#ae81ff">8</span>]
+attn_out_inf, attn_states_inf <span style="color:#f92672">=</span> attn_layer([decoder_hidden_state_input, decoder_outputs2])
+concate <span style="color:#f92672">=</span> model_loaded<span style="color:#f92672">.</span>layers[<span style="color:#ae81ff">9</span>]
+decoder_inf_concat <span style="color:#f92672">=</span> concate([decoder_outputs2, attn_out_inf])
+
+<span style="color:#75715e"># A dense softmax layer to generate prob dist. over the target vocabulary</span>
+decoder_dense <span style="color:#f92672">=</span> model_loaded<span style="color:#f92672">.</span>layers[<span style="color:#ae81ff">10</span>]
+decoder_outputs2 <span style="color:#f92672">=</span> decoder_dense(decoder_inf_concat)
+
+<span style="color:#75715e"># Final decoder model</span>
+decoder_model <span style="color:#f92672">=</span> Model(
+[decoder_inputs] <span style="color:#f92672">+</span> [decoder_hidden_state_input,decoder_state_input_h, decoder_state_input_c],
+[decoder_outputs2] <span style="color:#f92672">+</span> [state_h2, state_c2])
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decode_sequence</span>(input_seq):
+    <span style="color:#75715e"># Encode the input as state vectors.</span>
+    e_out, e_h, e_c <span style="color:#f92672">=</span> encoder_model<span style="color:#f92672">.</span>predict(input_seq)
+
+    <span style="color:#75715e"># Generate empty target sequence of length 1.</span>
+    target_seq <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+
+    <span style="color:#75715e"># Chose the &#39;start&#39; word as the first word of the target sequence</span>
+    target_seq[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> target_word2index[<span style="color:#e6db74">&#39;start&#39;</span>]
+
+    stop_condition <span style="color:#f92672">=</span> False
+    decoded_sentence <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">not</span> stop_condition:
+        output_tokens, h, c <span style="color:#f92672">=</span> decoder_model<span style="color:#f92672">.</span>predict([target_seq] <span style="color:#f92672">+</span> [e_out, e_h, e_c])
+
+        <span style="color:#75715e"># Sample a token</span>
+        sampled_token_index <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>argmax(output_tokens[<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, :])
+        <span style="color:#66d9ef">if</span> sampled_token_index <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">else</span>:
+            sampled_token <span style="color:#f92672">=</span> target_index2word[sampled_token_index]
+            <span style="color:#66d9ef">if</span>(sampled_token <span style="color:#f92672">!=</span><span style="color:#e6db74">&#39;end&#39;</span>):
+                decoded_sentence <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">+</span> sampled_token
+                
+            <span style="color:#75715e"># Exit condition: either hit max length or find stop word.</span>
+            <span style="color:#66d9ef">if</span> (sampled_token <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;end&#39;</span> <span style="color:#f92672">or</span> len(decoded_sentence<span style="color:#f92672">.</span>split()) <span style="color:#f92672">&gt;=</span> (max_len_target_seq)):
+                stop_condition <span style="color:#f92672">=</span> True
+
+            <span style="color:#75715e"># Update the ta`rget sequence (of length 1).</span>
+            target_seq <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+            target_seq[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> sampled_token_index
+
+            <span style="color:#75715e"># Update internal states</span>
+            e_h, e_c <span style="color:#f92672">=</span> h, c
+
+    <span style="color:#66d9ef">return</span> decoded_sentence
+</code></pre></div><p>Thực hiện Inference với 1 vài câu thơ trong tập dữ liệu ban đầu:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> seq_index <span style="color:#f92672">in</span> [<span style="color:#ae81ff">141</span>, <span style="color:#ae81ff">2001</span>, <span style="color:#ae81ff">3002</span>]:
+  input_seq <span style="color:#f92672">=</span> encoder_input_data[seq_index: seq_index <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]
+  decoded_sentence <span style="color:#f92672">=</span> decode_sequence(input_seq)
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;-&#39;</span>)
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Input sentence:&#39;</span>, input_sentences[seq_index: seq_index <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>])
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Decoded sentence:&#39;</span>, decoded_sentence)
+  <span style="color:#f92672">---</span>
+  <span style="color:#f92672">-</span>
+Input sentence: [<span style="color:#e6db74">&#39;song hồ nửa khép cánh mây&#39;</span>]
+Decoded sentence:  tường <span style="color:#960050;background-color:#1e0010">đô</span>ng ghé mắt ngày ngày hằng trông
+<span style="color:#f92672">-</span>
+Input sentence: [<span style="color:#e6db74">&#39;khen “tài nhả ngọc phun châu&#39;</span>]
+Decoded sentence:  nàng ban <span style="color:#960050;background-color:#1e0010">ả</span> tạ cũng <span style="color:#960050;background-color:#1e0010">đâ</span>u thế này
+<span style="color:#f92672">-</span>
+Input sentence: [<span style="color:#e6db74">&#39;duyên hội ngộ đức cù lao&#39;</span>]
+Decoded sentence:  bâng khuâng nào <span style="color:#960050;background-color:#1e0010">đã</span> biết ai mà nhìn
+</code></pre></div><p>Ta thấy câu thơ sinh ra đúng như trong bộ dữ liệu ban đầu.</p>
+<p>Hàm sinh ra câu thơ mới dựa trên một Input Sentence người dùng nhập vào.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_a_poem_sentence</span>(input_txt):
+  input_seq <span style="color:#f92672">=</span> []
+  <span style="color:#66d9ef">for</span> t, word <span style="color:#f92672">in</span> enumerate(input_txt<span style="color:#f92672">.</span>split()):
+    input_seq<span style="color:#f92672">.</span>append(input_word2index[word])
+
+  input_seq <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(input_seq)
+  input_seq <span style="color:#f92672">=</span> pad_sequences([input_seq], maxlen<span style="color:#f92672">=</span>max_len_input_seq, padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pre&#39;</span>)
+  decoded_txt <span style="color:#f92672">=</span> decode_sequence(input_seq)
+  <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Generated poem sentence:&#39;</span>, decoded_txt)
+</code></pre></div><p>Kiểm tra thử kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">input_txt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;hạ về xanh biếc trên sông&#39;</span>
+make_a_poem_sentence(input_txt)
+<span style="color:#f92672">---</span>
+Generated poem sentence:  một thanh còn <span style="color:#960050;background-color:#1e0010">để</span> mấy mùa chia trăng
+</code></pre></div><p>Nghe vẻ cũng &ldquo;xuôi xuôi&rdquo; nhỉ! :D</p>
+<h4 id="4-hướng-phát-triển">4. Hướng phát triển</h4>
+<p>Mặc dù mô hình đạt đuợc độ chính xác khá cao nhưng vẫn còn nhiều hạn chế. Một số phuơng hướng để nâng cao chất lượng của mô hình như sau:</p>
+<ul>
+<li>Thu thập thêm nhiều dữ liệu hơn nữa. Càng nhiều càng tốt.</li>
+<li>Sử dụng kiến trúc tiên tiến hơn, Transformer chẳng hạn.</li>
+<li>Sử dụng Dropout và một số phuơng pháp Regularization để giảm Overfitting.</li>
+<li>Thực hiện Hyper-parameter Tuning: learning rate, batch size, &hellip; Sử dụng Bidirectional LSTM thay vì LSTM, sử dụng thêm nhiều lớp LSTM, &hellip;</li>
+<li>Sử dụng Beam Search thay vì Greedy Search.</li>
+</ul>
+<h4 id="5-kết-luận">5. Kết luận</h4>
+<p>Vậy là chúng ta vừa cùng nhau hoàn thành xây dựng một AI model để giúp chúng ta có thể tạo ra được nhưng câu thơ hay, thú vị. Hi vọng bạn có thể học được một chút gì đó từ bài viết này của mình.</p>
+<p>Mô hình vẫn còn nhiều hạn chế cần cải thiện để có thể sử dụng được trong thực tế. Nếu bạn có hứng thú, có thể liên hệ với mình để cùng nhau tiếp tục phát triển thêm.</p>
+<p>Và cuối cùng, mình bật mí rằng bài thơ ở phần đầu bài viết này là sản phẩm của sự kết hợp giữa AI và con người, chứ không phải hoàn toàn bằng AI đâu nhé! Để AI có thể sáng tác được một bài thơ &ldquo;mượt mà&rdquo; như thế chắc sẽ cần phải làm thêm nhiều việc nữa. :D</p>
+<p>Cảm ơn các bạn đã đọc bài!</p>
+<h4 id="6-tham-khảo">6. Tham khảo</h4>
+<p>[1] SuNT, “Tìm hiểu cơ chế Attention trong mô hình Seq2Seq”, Available online: <a href="https://tiensu.github.io/blog/58_attention/">https://tiensu.github.io/blog/58_attention/</a> (Accessed on 30 Jul 2021).
+[2] Thushan Ganegedara, “Attention in Deep Networks with Keras”, Available online: <a href="https://towardsdatascience.com/light-on-math-ml-attention-with-keras-dc8dbc1fad39">https://towardsdatascience.com/light-on-math-ml-attention-with-keras-dc8dbc1fad39</a> (Accessed on 30 Jul 2021).
+[3] Harshil Patel, “Neural Machine Translation (NMT) with Attention Mechanism”, Available online: <a href="https://towardsdatascience.com/neural-machine-translation-nmt-with-attention-mechanism-5e59b57bd2ac">https://towardsdatascience.com/neural-machine-translation-nmt-with-attention-mechanism-5e59b57bd2ac</a> (Accessed on 30 Jul 2021).</p>
+<h3 id="4-kết-luận">4. Kết luận</h3>
+<p>OK, bài đầu tiên về Feature Selection chỉ ngắn như vậy thôi. Mình đã giới thiệu khái quát qua về Feature Selection để cho các bạn có cái nhìn tổng thể về nó. Trong các bài tiếp theo, mình sẽ đi chi tiết vào từng phương pháp. Mời các bạn đón đọc.</p>
+<h3 id="5-tham-khảo">5. Tham khảo</h3>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nnl">Nnl</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

@@ -6,13 +6,22 @@
     <description>Recent content in Data Preparation on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/data-preparation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/data-preparation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DP4ML - Feature Selection - Phần 2 - Select Categorical Input Features</title>
+      <link>https://tiensu.github.io/blog/83_data_prepeation_for_ml_feature_selection_2/</link>
+      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/83_data_prepeation_for_ml_feature_selection_2/</guid>
+      <description>Bài thứ 9 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp lựa chọn features đối với dữ liệu có Input Variance thuộc kiểu Categorical.</description>
+    </item>
+    
     <item>
       <title>DP4ML - Feature Selection - Phần 1 - Giới thiệu chung</title>
-      <link>https://tiensu.github.io/blog/82_data_prepeation_for_ml_data_cleaning_feature_selection/</link>
+      <link>https://tiensu.github.io/blog/82_data_prepeation_for_ml_feature_selection_1/</link>
       <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/blog/82_data_prepeation_for_ml_data_cleaning_feature_selection/</guid>
+      <guid>https://tiensu.github.io/blog/82_data_prepeation_for_ml_feature_selection_1/</guid>
       <description>Bài thứ 8 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ chuyển tiếp sang tìm hiểu một nhiệm vụ khác của Data Preparation, đó là Feature Selection.</description>
     </item>
     

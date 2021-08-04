@@ -6,22 +6,40 @@
     <description>Recent content in Categories on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data Preparation</title>
-      <link>https://tiensu.github.io/categories/data-preparation/</link>
-      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <title>Machine Learning</title>
+      <link>https://tiensu.github.io/categories/machine-learning/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/categories/data-preparation/</guid>
+      <guid>https://tiensu.github.io/categories/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Machine Learning</title>
-      <link>https://tiensu.github.io/categories/machine-learning/</link>
-      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <title>NNL</title>
+      <link>https://tiensu.github.io/categories/nnl/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tiensu.github.io/categories/machine-learning/</guid>
+      <guid>https://tiensu.github.io/categories/nnl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Generation</title>
+      <link>https://tiensu.github.io/categories/text-generation/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/text-generation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Preparation</title>
+      <link>https://tiensu.github.io/categories/data-preparation/</link>
+      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/data-preparation/</guid>
       <description></description>
     </item>
     

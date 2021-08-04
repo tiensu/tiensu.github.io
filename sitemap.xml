@@ -4,41 +4,71 @@
   
   <url>
     <loc>https://tiensu.github.io/categories/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tiensu.github.io/tags/data-preparation/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/categories/data-preparation/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tiensu.github.io/blog/82_data_prepeation_for_ml_data_cleaning_feature_selection/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+    <loc>https://tiensu.github.io/blog/84_make_poem_with_ai/</loc>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/tags/machine-learning/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/categories/machine-learning/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/nnl/</loc>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/nnl/</loc>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/</loc>
-    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tiensu.github.io/tags/</loc>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/text-generation/</loc>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/text-generation/</loc>
+    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/tags/data-preparation/</loc>
+    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/categories/data-preparation/</loc>
+    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/83_data_prepeation_for_ml_feature_selection_2/</loc>
+    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tiensu.github.io/blog/82_data_prepeation_for_ml_feature_selection_1/</loc>
     <lastmod>2021-07-15T00:00:00+00:00</lastmod>
   </url>
   
