@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/human-action-recognition"
+          class="text-primary">Human action recognition</a>
+        
+        <h2>Nhận diện hành động của người sử dụng Deep Learning</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>04 August 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/87_human_action_reg.png" class="img-fluid w-100 mb-4" alt="Nhận diện hành động của người sử dụng Deep Learning">
+        
+        <div class="content mb-5">
+          <p>Human Action Recognition (<em>HAR</em>) là quá trình sử dụng những cảnh quay trong video để nhận diện, phân loại các hành động khác nhau được thực hiện bởi người trong video đó. Nó được ứng dụng rất rộng rãi trong các lĩnh vực như giám sát, thể dục, thể thao, &hellip;</p>
+<p>Giả sử, bạn muốn tạo một ứng dụng dạy học Yoga trực tuyến. Trước tiên, bạn cần quay các video hướng dẫn để người học theo dõi và làm theo. Sau đó, mỗi người học tự tập và quay lại video của mình. Họ gửi các video đó lên ứng dụng của bạn. Dựa vào video nhận được, ứng dụng có thể đánh giá được mức độ chính xác trong mỗi động tác của người học. Từ đó đưa ra gợi ý cải thiện, &hellip; Thật tuyệt vời phải không?</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/87_har_1.gif">
+   </div>
+
+
+<p>Trong bài này, chúng ta sẽ cùng nhau tạo ra một model để nhận diện một số hành dộng của người, sử dụng <strong>pose estimation</strong> và mạng LSTM. Pytorch_Lightning được sử dụng trong bài này.</p>
+<h3 id="1-tổng-quan-sơ-đồ-kiến-trúc">1. Tổng quan sơ đồ kiến trúc</h3>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/87_har_4.jpg">
+   </div>
+
+
+<p>Để phân loại một hành động, trước tiên chúng ta cần xác định vị trí các bộ phận cơ thể khác nhau trong mọi khung hình, sau đó phân tích chuyển động của các bộ phận đó theo thời gian.</p>
+<p>Bước đầu tiên đạt được bằng cách sử dụng Detectron2, nó xuất ra tư thế của cơ thể (17 Keypoints) sau khi quan sát một khung hình trong video.</p>
+<p>Bước thứ hai là phân tích chuyển động của cơ thể theo thời gian và đưa ra dự đoán được thực hiện bằng mạng LSTM. Đầu vào là các Keypoints từ một chuỗi khung được, đầu ra là loại hành đồng được dự đoán.</p>
+<h3 id="2-chuẩn-bị-dữ-liệu">2. Chuẩn bị dữ liệu</h3>
+<p>Đối với ứng dụng này, chúng ta chỉ cần huấn luyện mạng LSTM để phân loại các hành động, còn phần Pose Estimation thì chúng ta sẽ sử dụng pre-trained có sẵn cung cấp bởi Detectron2.</p>
+<p>Bộ dữ liệu được dùng để huấn luyện mạng LSTM được tạo thành bằng cách sử dụng <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">OpenPose</a> trên các video của tập dữ liệu <a href="http://tele-immersion.citris-uc.org/berkeley_mhad">Berkeley Multimodal Human Action Database (MHAD)</a>. Sử dụng cách thức tương tự, chúng ta cũng có thể tạo ra bộ dữ liệu của riêng mình.</p>
+<p>Download bộ dữ liệu tại <a href="https://github.com/stuarteiffert/RNN-for-Human-Activity-Recognition-using-2D-Pose-Input#dataset-overview">đây</a>. Nó bao gồm 6 hành động: JUMPING, JUMPING_JACKS, BOXING, WAVING_2HANDS, WAVING_1HAND, CLAPPING_HANDS.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/87_har_3.jpg">
+   </div>
+
+
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/87_har_2.jpg">
+   </div>
+
+
+<p>Training Data bao gồm các chuỗi 17 Keypoints kết hợp với một nhãn tương ứng. Mỗi Keypoint là một cặp tọa độ (x,y). Mỗi lần phân loại, chúng ta sẽ sử dụng 32 frames liên tiếp nhau. Như vậy thì kích thước dữ liệu của một Input Data sẽ là <em>32x34</em>:</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/87_har_4.png">
+   </div>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">!</span>head <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span> RNN<span style="color:#f92672">-</span>HAR<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>D<span style="color:#f92672">-</span>Pose<span style="color:#f92672">-</span>database<span style="color:#f92672">/</span>X_train<span style="color:#f92672">.</span>txt
+<span style="color:#f92672">---</span>
+<span style="color:#ae81ff">295.914</span>,<span style="color:#ae81ff">161.579</span>,<span style="color:#ae81ff">307.693</span>,<span style="color:#ae81ff">203.413</span>,<span style="color:#ae81ff">281.546</span>,<span style="color:#ae81ff">203.368</span>,<span style="color:#ae81ff">274.997</span>,<span style="color:#ae81ff">251.562</span>,<span style="color:#ae81ff">267.194</span>,<span style="color:#ae81ff">293.253</span>,<span style="color:#ae81ff">337.619</span>,<span style="color:#ae81ff">204.669</span>,<span style="color:#ae81ff">347.958</span>,<span style="color:#ae81ff">255.443</span>,<span style="color:#ae81ff">341.541</span>,<span style="color:#ae81ff">295.866</span>,<span style="color:#ae81ff">286.81</span>,<span style="color:#ae81ff">289.393</span>,<span style="color:#ae81ff">297.196</span>,<span style="color:#ae81ff">355.832</span>,<span style="color:#ae81ff">297.22</span>,<span style="color:#ae81ff">405.371</span>,<span style="color:#ae81ff">321.967</span>,<span style="color:#ae81ff">291.959</span>,<span style="color:#ae81ff">327.143</span>,<span style="color:#ae81ff">358.408</span>,<span style="color:#ae81ff">328.528</span>,<span style="color:#ae81ff">411.922</span>,<span style="color:#ae81ff">294.546</span>,<span style="color:#ae81ff">156.42</span>,<span style="color:#ae81ff">305.002</span>,<span style="color:#ae81ff">156.418</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">318.083</span>,<span style="color:#ae81ff">161.632</span>
+<span style="color:#ae81ff">295.855</span>,<span style="color:#ae81ff">161.6</span>,<span style="color:#ae81ff">307.684</span>,<span style="color:#ae81ff">203.408</span>,<span style="color:#ae81ff">281.529</span>,<span style="color:#ae81ff">203.385</span>,<span style="color:#ae81ff">274.989</span>,<span style="color:#ae81ff">251.574</span>,<span style="color:#ae81ff">267.191</span>,<span style="color:#ae81ff">291.961</span>,<span style="color:#ae81ff">337.615</span>,<span style="color:#ae81ff">204.646</span>,<span style="color:#ae81ff">347.974</span>,<span style="color:#ae81ff">254.209</span>,<span style="color:#ae81ff">344.093</span>,<span style="color:#ae81ff">295.816</span>,<span style="color:#ae81ff">286.803</span>,<span style="color:#ae81ff">289.377</span>,<span style="color:#ae81ff">297.165</span>,<span style="color:#ae81ff">355.827</span>,<span style="color:#ae81ff">297.205</span>,<span style="color:#ae81ff">404.095</span>,<span style="color:#ae81ff">323.248</span>,<span style="color:#ae81ff">290.652</span>,<span style="color:#ae81ff">324.564</span>,<span style="color:#ae81ff">358.409</span>,<span style="color:#ae81ff">328.493</span>,<span style="color:#ae81ff">410.63</span>,<span style="color:#ae81ff">293.252</span>,<span style="color:#ae81ff">157.686</span>,<span style="color:#ae81ff">303.706</span>,<span style="color:#ae81ff">157.706</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">318.024</span>,<span style="color:#ae81ff">161.654</span>
+</code></pre></div><p>Bởi vì OpenPose trả về kết quả là 18 Keypoints, trong khi kết quả của Detectron2 chỉ là 17 Keypoints nên chúng ta sẽ phải thực hiện một bước chuyển đổi trước khi sử dụng bộ dữ liệu này.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">WINDOW_SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">32</span>  <span style="color:#75715e"># 32 continuous frames</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PoseDataset</span>(Dataset):
+    <span style="color:#66d9ef">def</span> __init__(self, X, Y):
+        self<span style="color:#f92672">.</span>X <span style="color:#f92672">=</span> X
+        self<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> Y
+
+    <span style="color:#66d9ef">def</span> __len__(self):
+        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>y)
+
+    <span style="color:#66d9ef">def</span> __getitem__(self, idx):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>X[idx], self<span style="color:#f92672">.</span>y[idx]
+
+openpose_to_detectron_mapping <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>]
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PoseDataModule</span>(pl<span style="color:#f92672">.</span>LightningDataModule):
+    <span style="color:#66d9ef">def</span> __init__(self, data_root, batch_size):
+        super()<span style="color:#f92672">.</span>__init__()
+        self<span style="color:#f92672">.</span>data_root <span style="color:#f92672">=</span> data_root
+        self<span style="color:#f92672">.</span>batch_size <span style="color:#f92672">=</span> batch_size
+        self<span style="color:#f92672">.</span>X_train_path <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>data_root <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;X_train.txt&#34;</span>
+        self<span style="color:#f92672">.</span>X_test_path <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>data_root <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;X_test.txt&#34;</span>
+        self<span style="color:#f92672">.</span>y_train_path <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>data_root <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;Y_train.txt&#34;</span>
+        self<span style="color:#f92672">.</span>y_test_path <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>data_root <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;Y_test.txt&#34;</span>
+
+
+    <span style="color:#75715e"># Detectron2 produces only 17 key points while OpenPose produces 18 (or more) key points.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">convert_to_detectron_format</span>(self, row):
+        row <span style="color:#f92672">=</span> row<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;,&#39;</span>)
+        <span style="color:#75715e"># filtering out coordinate of neck joint from the training/validation set originally generated using OpenPose.</span>
+        temp <span style="color:#f92672">=</span> row[:<span style="color:#ae81ff">2</span>] <span style="color:#f92672">+</span> row[<span style="color:#ae81ff">4</span>:]
+        <span style="color:#75715e"># change to Detectron2 order of key points</span>
+        temp <span style="color:#f92672">=</span> [temp[i] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> openpose_to_detectron_mapping]
+        <span style="color:#66d9ef">return</span> temp
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_X</span>(self, X_path):
+        file <span style="color:#f92672">=</span> open(X_path, <span style="color:#e6db74">&#39;r&#39;</span>)
+        X <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(
+            [elem <span style="color:#66d9ef">for</span> elem <span style="color:#f92672">in</span> [
+                self<span style="color:#f92672">.</span>convert_to_detectron_format(row) <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> file
+            ]],
+            dtype<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>float32
+        )
+        file<span style="color:#f92672">.</span>close()
+        blocks <span style="color:#f92672">=</span> int(len(X) <span style="color:#f92672">/</span> WINDOW_SIZE)
+        X_ <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(np<span style="color:#f92672">.</span>split(X, blocks))
+        <span style="color:#66d9ef">return</span> X_
+
+    <span style="color:#75715e"># Load the networks outputs</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_y</span>(self, y_path):
+        file <span style="color:#f92672">=</span> open(y_path, <span style="color:#e6db74">&#39;r&#39;</span>)
+        y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(
+            [elem <span style="color:#66d9ef">for</span> elem <span style="color:#f92672">in</span> [
+                row<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;  &#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>)<span style="color:#f92672">.</span>strip()<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; &#39;</span>) <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> file
+            ]],
+            dtype<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>int32
+        )
+        file<span style="color:#f92672">.</span>close()
+        <span style="color:#75715e"># for 0-based indexing</span>
+        <span style="color:#66d9ef">return</span> y <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_data</span>(self):
+        <span style="color:#66d9ef">pass</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">setup</span>(self, stage<span style="color:#f92672">=</span>None):
+        X_train <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>load_X(self<span style="color:#f92672">.</span>X_train_path)
+        X_test <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>load_X(self<span style="color:#f92672">.</span>X_test_path)
+        y_train <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>load_y(self<span style="color:#f92672">.</span>y_train_path)
+        y_test <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>load_y(self<span style="color:#f92672">.</span>y_test_path)
+        self<span style="color:#f92672">.</span>train_dataset <span style="color:#f92672">=</span> PoseDataset(X_train, y_train)
+        self<span style="color:#f92672">.</span>val_dataset <span style="color:#f92672">=</span> PoseDataset(X_test, y_test)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train_dataloader</span>(self):
+        <span style="color:#75715e"># train loader</span>
+        train_loader <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>DataLoader(
+            self<span style="color:#f92672">.</span>train_dataset,
+            batch_size<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>batch_size,
+            shuffle<span style="color:#f92672">=</span>True
+        )
+        <span style="color:#66d9ef">return</span> train_loader
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">val_dataloader</span>(self):
+        <span style="color:#75715e"># validation loader</span>
+        val_loader <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>DataLoader(
+            self<span style="color:#f92672">.</span>val_dataset,
+            batch_size<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>batch_size,
+            shuffle<span style="color:#f92672">=</span>False
+        )
+        <span style="color:#66d9ef">return</span> val_loader
+
+<span style="color:#75715e"># We have 6 output action classes.</span>
+TOT_ACTION_CLASSES <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+
+<span style="color:#75715e">#lstm classifier definition</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ActionClassificationLSTM</span>(pl<span style="color:#f92672">.</span>LightningModule):
+    <span style="color:#75715e"># initialise method</span>
+    <span style="color:#66d9ef">def</span> __init__(self, input_features, hidden_dim, learning_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">0.001</span>):
+        super()<span style="color:#f92672">.</span>__init__()
+        <span style="color:#75715e"># save hyperparameters</span>
+        self<span style="color:#f92672">.</span>save_hyperparameters()
+        <span style="color:#75715e"># The LSTM takes word embeddings as inputs, and outputs hidden states</span>
+        <span style="color:#75715e"># with dimensionality hidden_dim.</span>
+        self<span style="color:#f92672">.</span>lstm <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>LSTM(input_features, hidden_dim, batch_first<span style="color:#f92672">=</span>True)
+        <span style="color:#75715e"># The linear layer that maps from hidden state space to classes</span>
+        self<span style="color:#f92672">.</span>linear <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(hidden_dim, TOT_ACTION_CLASSES)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+        <span style="color:#75715e"># invoke lstm layer</span>
+        lstm_out, (ht, ct) <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>lstm(x)
+        <span style="color:#75715e"># invoke linear layer</span>
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>linear(ht[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">training_step</span>(self, batch, batch_idx):
+        <span style="color:#75715e"># get data and labels from batch</span>
+        x, y <span style="color:#f92672">=</span> batch
+        <span style="color:#75715e"># reduce dimension</span>
+        y <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>squeeze(y)
+        <span style="color:#75715e"># convert to long</span>
+        y <span style="color:#f92672">=</span> y<span style="color:#f92672">.</span>long()
+        <span style="color:#75715e"># get prediction</span>
+        y_pred <span style="color:#f92672">=</span> self(x)
+        <span style="color:#75715e"># calculate loss</span>
+        loss <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>cross_entropy(y_pred, y)
+        <span style="color:#75715e"># get probability score using softmax</span>
+        prob <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>softmax(y_pred, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+        <span style="color:#75715e"># get the index of the max probability</span>
+        pred <span style="color:#f92672">=</span> prob<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>max(dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">1</span>]
+        <span style="color:#75715e"># calculate accuracy</span>
+        acc <span style="color:#f92672">=</span> torchmetrics<span style="color:#f92672">.</span>functional<span style="color:#f92672">.</span>accuracy(pred, y)
+        dic <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;batch_train_loss&#39;</span>: loss,
+            <span style="color:#e6db74">&#39;batch_train_acc&#39;</span>: acc
+        }
+        <span style="color:#75715e"># log the metrics for pytorch lightning progress bar or any other operations</span>
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;batch_train_loss&#39;</span>, loss, prog_bar<span style="color:#f92672">=</span>True)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;batch_train_acc&#39;</span>, acc, prog_bar<span style="color:#f92672">=</span>True)
+        <span style="color:#75715e">#return loss and dict</span>
+        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;loss&#39;</span>: loss, <span style="color:#e6db74">&#39;result&#39;</span>: dic}
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">training_epoch_end</span>(self, training_step_outputs):
+        <span style="color:#75715e"># calculate average training loss end of the epoch</span>
+        avg_train_loss <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([x[<span style="color:#e6db74">&#39;result&#39;</span>][<span style="color:#e6db74">&#39;batch_train_loss&#39;</span>] <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> training_step_outputs])<span style="color:#f92672">.</span>mean()
+        <span style="color:#75715e"># calculate average training accuracy end of the epoch</span>
+        avg_train_acc <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([x[<span style="color:#e6db74">&#39;result&#39;</span>][<span style="color:#e6db74">&#39;batch_train_acc&#39;</span>] <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> training_step_outputs])<span style="color:#f92672">.</span>mean()
+        <span style="color:#75715e"># log the metrics for pytorch lightning progress bar and any further processing</span>
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;train_loss&#39;</span>, avg_train_loss, prog_bar<span style="color:#f92672">=</span>True)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;train_acc&#39;</span>, avg_train_acc, prog_bar<span style="color:#f92672">=</span>True)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">validation_step</span>(self, batch, batch_idx):
+        <span style="color:#75715e"># get data and labels from batch</span>
+        x, y <span style="color:#f92672">=</span> batch
+        <span style="color:#75715e"># reduce dimension</span>
+        y <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>squeeze(y)
+        <span style="color:#75715e"># convert to long</span>
+        y <span style="color:#f92672">=</span> y<span style="color:#f92672">.</span>long()
+        <span style="color:#75715e"># get prediction</span>
+        y_pred <span style="color:#f92672">=</span> self(x)
+        <span style="color:#75715e"># calculate loss</span>
+        loss <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>cross_entropy(y_pred, y)
+        <span style="color:#75715e"># get probability score using softmax</span>
+        prob <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>softmax(y_pred, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+        <span style="color:#75715e"># get the index of the max probability</span>
+        pred <span style="color:#f92672">=</span> prob<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>max(dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">1</span>]
+        <span style="color:#75715e"># calculate accuracy</span>
+        acc <span style="color:#f92672">=</span> torchmetrics<span style="color:#f92672">.</span>functional<span style="color:#f92672">.</span>accuracy(pred, y)
+        dic <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;batch_val_loss&#39;</span>: loss,
+            <span style="color:#e6db74">&#39;batch_val_acc&#39;</span>: acc
+        }
+        <span style="color:#75715e"># log the metrics for pytorch lightning progress bar and any further processing</span>
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;batch_val_loss&#39;</span>, loss, prog_bar<span style="color:#f92672">=</span>True)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;batch_val_acc&#39;</span>, acc, prog_bar<span style="color:#f92672">=</span>True)
+        <span style="color:#75715e">#return dict</span>
+        <span style="color:#66d9ef">return</span> dic
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">validation_epoch_end</span>(self, validation_step_outputs):
+        <span style="color:#75715e"># calculate average validation loss end of the epoch</span>
+        avg_val_loss <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([x[<span style="color:#e6db74">&#39;batch_val_loss&#39;</span>]
+                                     <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> validation_step_outputs])<span style="color:#f92672">.</span>mean()
+        <span style="color:#75715e"># calculate average validation accuracy end of the epoch</span>
+        avg_val_acc <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([x[<span style="color:#e6db74">&#39;batch_val_acc&#39;</span>]
+                                    <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> validation_step_outputs])<span style="color:#f92672">.</span>mean()
+        <span style="color:#75715e"># log the metrics for pytorch lightning progress bar and any further processing</span>
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;val_loss&#39;</span>, avg_val_loss, prog_bar<span style="color:#f92672">=</span>True)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;val_acc&#39;</span>, avg_val_acc, prog_bar<span style="color:#f92672">=</span>True)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">configure_optimizers</span>(self):
+        <span style="color:#75715e"># adam optimiser</span>
+        optimizer <span style="color:#f92672">=</span> optim<span style="color:#f92672">.</span>Adam(self<span style="color:#f92672">.</span>parameters(), lr<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>hparams<span style="color:#f92672">.</span>learning_rate)
+        <span style="color:#75715e"># learning rate reducer scheduler</span>
+        scheduler <span style="color:#f92672">=</span> optim<span style="color:#f92672">.</span>lr_scheduler<span style="color:#f92672">.</span>ReduceLROnPlateau(optimizer, mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;min&#39;</span>, factor<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>, patience<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, min_lr<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-15</span>, verbose<span style="color:#f92672">=</span>True)
+        <span style="color:#75715e"># scheduler reduces learning rate based on the value of val_loss metric</span>
+        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;optimizer&#34;</span>: optimizer,
+                <span style="color:#e6db74">&#34;lr_scheduler&#34;</span>: {<span style="color:#e6db74">&#34;scheduler&#34;</span>: scheduler, <span style="color:#e6db74">&#34;interval&#34;</span>: <span style="color:#e6db74">&#34;epoch&#34;</span>, <span style="color:#e6db74">&#34;frequency&#34;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;monitor&#34;</span>: <span style="color:#e6db74">&#34;val_loss&#34;</span>}}
+</code></pre></div><h3 id="3-xây-dựng-mô-hình">3. Xây dựng mô hình</h3>
+<h4 id="31-human-pose-estimation-model">3.1 Human Pose Estimation model</h4>
+<p>Phần này, chúng ta sử dụng pre-trained <em>R50-FPN</em> model từ <a href="https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md#coco-person-keypoint-detection-baselines-with-keypoint-r-cnn.">Detectron2 Model Zoo</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># obtain detectron2&#39;s default config</span>
+cfg <span style="color:#f92672">=</span> get_cfg()
+<span style="color:#75715e"># load the pre trained model from Detectron2 model zoo</span>
+cfg<span style="color:#f92672">.</span>merge_from_file(model_zoo<span style="color:#f92672">.</span>get_config_file(<span style="color:#e6db74">&#34;COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml&#34;</span>))
+<span style="color:#75715e"># set confidence threshold for this model</span>
+cfg<span style="color:#f92672">.</span>MODEL<span style="color:#f92672">.</span>ROI_HEADS<span style="color:#f92672">.</span>SCORE_THRESH_TEST <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span> 
+<span style="color:#75715e"># load model weights</span>
+cfg<span style="color:#f92672">.</span>MODEL<span style="color:#f92672">.</span>WEIGHTS <span style="color:#f92672">=</span> model_zoo<span style="color:#f92672">.</span>get_checkpoint_url(<span style="color:#e6db74">&#34;COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml&#34;</span>)
+<span style="color:#75715e"># create the predictor for pose estimation using the config</span>
+pose_detector <span style="color:#f92672">=</span> DefaultPredictor(cfg)
+</code></pre></div><h4 id="32-định-nghĩa-lstm-model">3.2 Định nghĩa LSTM model</h4>
+<p>LSTM model sẽ được khởi tạo với hidden_dim = 50, optimizer là Adam và sử dụng ReduceLROnPlateau scheduler để giảm learning_rate. Ở đây, mình chỉ sử dụng 1 LSTM layer, bạn có thể thí nghiệm với nhiều LSTM layers hơn.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># We have 6 output action classes.</span>
+TOT_ACTION_CLASSES <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+
+<span style="color:#75715e">#lstm classifier definition</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ActionClassificationLSTM</span>(pl<span style="color:#f92672">.</span>LightningModule):
+    <span style="color:#75715e"># initialise method</span>
+    <span style="color:#66d9ef">def</span> __init__(self, input_features, hidden_dim, learning_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">0.001</span>):
+        super()<span style="color:#f92672">.</span>__init__()
+        <span style="color:#75715e"># save hyperparameters</span>
+        self<span style="color:#f92672">.</span>save_hyperparameters()
+        <span style="color:#75715e"># The LSTM takes word embeddings as inputs, and outputs hidden states</span>
+        <span style="color:#75715e"># with dimensionality hidden_dim.</span>
+        self<span style="color:#f92672">.</span>lstm <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>LSTM(input_features, hidden_dim, num_layers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, batch_first<span style="color:#f92672">=</span>True)
+        <span style="color:#75715e"># The linear layer that maps from hidden state space to classes</span>
+        self<span style="color:#f92672">.</span>linear <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(hidden_dim, TOT_ACTION_CLASSES)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+        <span style="color:#75715e"># invoke lstm layer</span>
+        lstm_out, (ht, ct) <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>lstm(x)
+        <span style="color:#75715e"># invoke linear layer</span>
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>linear(ht[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">training_step</span>(self, batch, batch_idx):
+        <span style="color:#75715e"># get data and labels from batch</span>
+        x, y <span style="color:#f92672">=</span> batch
+        <span style="color:#75715e"># reduce dimension</span>
+        y <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>squeeze(y)
+        <span style="color:#75715e"># convert to long</span>
+        y <span style="color:#f92672">=</span> y<span style="color:#f92672">.</span>long()
+        <span style="color:#75715e"># get prediction</span>
+        y_pred <span style="color:#f92672">=</span> self(x)
+        <span style="color:#75715e"># calculate loss</span>
+        loss <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>cross_entropy(y_pred, y)
+        <span style="color:#75715e"># get probability score using softmax</span>
+        prob <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>softmax(y_pred, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+        <span style="color:#75715e"># get the index of the max probability</span>
+        pred <span style="color:#f92672">=</span> prob<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>max(dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">1</span>]
+        <span style="color:#75715e"># calculate accuracy</span>
+        acc <span style="color:#f92672">=</span> torchmetrics<span style="color:#f92672">.</span>functional<span style="color:#f92672">.</span>accuracy(pred, y)
+        dic <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;batch_train_loss&#39;</span>: loss,
+            <span style="color:#e6db74">&#39;batch_train_acc&#39;</span>: acc
+        }
+        <span style="color:#75715e"># log the metrics for pytorch lightning progress bar or any other operations</span>
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;batch_train_loss&#39;</span>, loss, prog_bar<span style="color:#f92672">=</span>True)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;batch_train_acc&#39;</span>, acc, prog_bar<span style="color:#f92672">=</span>True)
+        <span style="color:#75715e">#return loss and dict</span>
+        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;loss&#39;</span>: loss, <span style="color:#e6db74">&#39;result&#39;</span>: dic}
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">training_epoch_end</span>(self, training_step_outputs):
+        <span style="color:#75715e"># calculate average training loss end of the epoch</span>
+        avg_train_loss <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([x[<span style="color:#e6db74">&#39;result&#39;</span>][<span style="color:#e6db74">&#39;batch_train_loss&#39;</span>] <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> training_step_outputs])<span style="color:#f92672">.</span>mean()
+        <span style="color:#75715e"># calculate average training accuracy end of the epoch</span>
+        avg_train_acc <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([x[<span style="color:#e6db74">&#39;result&#39;</span>][<span style="color:#e6db74">&#39;batch_train_acc&#39;</span>] <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> training_step_outputs])<span style="color:#f92672">.</span>mean()
+        <span style="color:#75715e"># log the metrics for pytorch lightning progress bar and any further processing</span>
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;train_loss&#39;</span>, avg_train_loss, prog_bar<span style="color:#f92672">=</span>True)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;train_acc&#39;</span>, avg_train_acc, prog_bar<span style="color:#f92672">=</span>True)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">validation_step</span>(self, batch, batch_idx):
+        <span style="color:#75715e"># get data and labels from batch</span>
+        x, y <span style="color:#f92672">=</span> batch
+        <span style="color:#75715e"># reduce dimension</span>
+        y <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>squeeze(y)
+        <span style="color:#75715e"># convert to long</span>
+        y <span style="color:#f92672">=</span> y<span style="color:#f92672">.</span>long()
+        <span style="color:#75715e"># get prediction</span>
+        y_pred <span style="color:#f92672">=</span> self(x)
+        <span style="color:#75715e"># calculate loss</span>
+        loss <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>cross_entropy(y_pred, y)
+        <span style="color:#75715e"># get probability score using softmax</span>
+        prob <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>softmax(y_pred, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+        <span style="color:#75715e"># get the index of the max probability</span>
+        pred <span style="color:#f92672">=</span> prob<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>max(dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">1</span>]
+        <span style="color:#75715e"># calculate accuracy</span>
+        acc <span style="color:#f92672">=</span> torchmetrics<span style="color:#f92672">.</span>functional<span style="color:#f92672">.</span>accuracy(pred, y)
+        dic <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;batch_val_loss&#39;</span>: loss,
+            <span style="color:#e6db74">&#39;batch_val_acc&#39;</span>: acc
+        }
+        <span style="color:#75715e"># log the metrics for pytorch lightning progress bar and any further processing</span>
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;batch_val_loss&#39;</span>, loss, prog_bar<span style="color:#f92672">=</span>True)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;batch_val_acc&#39;</span>, acc, prog_bar<span style="color:#f92672">=</span>True)
+        <span style="color:#75715e">#return dict</span>
+        <span style="color:#66d9ef">return</span> dic
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">validation_epoch_end</span>(self, validation_step_outputs):
+        <span style="color:#75715e"># calculate average validation loss end of the epoch</span>
+        avg_val_loss <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([x[<span style="color:#e6db74">&#39;batch_val_loss&#39;</span>]
+                                     <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> validation_step_outputs])<span style="color:#f92672">.</span>mean()
+        <span style="color:#75715e"># calculate average validation accuracy end of the epoch</span>
+        avg_val_acc <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([x[<span style="color:#e6db74">&#39;batch_val_acc&#39;</span>]
+                                    <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> validation_step_outputs])<span style="color:#f92672">.</span>mean()
+        <span style="color:#75715e"># log the metrics for pytorch lightning progress bar and any further processing</span>
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;val_loss&#39;</span>, avg_val_loss, prog_bar<span style="color:#f92672">=</span>True)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#39;val_acc&#39;</span>, avg_val_acc, prog_bar<span style="color:#f92672">=</span>True)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">configure_optimizers</span>(self):
+        <span style="color:#75715e"># adam optimiser</span>
+        optimizer <span style="color:#f92672">=</span> optim<span style="color:#f92672">.</span>Adam(self<span style="color:#f92672">.</span>parameters(), lr<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>hparams<span style="color:#f92672">.</span>learning_rate)
+        <span style="color:#75715e"># learning rate reducer scheduler</span>
+        scheduler <span style="color:#f92672">=</span> optim<span style="color:#f92672">.</span>lr_scheduler<span style="color:#f92672">.</span>ReduceLROnPlateau(optimizer, mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;min&#39;</span>, factor<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>, patience<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, min_lr<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-15</span>, verbose<span style="color:#f92672">=</span>True)
+        <span style="color:#75715e"># scheduler reduces learning rate based on the value of val_loss metric</span>
+        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;optimizer&#34;</span>: optimizer,
+                <span style="color:#e6db74">&#34;lr_scheduler&#34;</span>: {<span style="color:#e6db74">&#34;scheduler&#34;</span>: scheduler, <span style="color:#e6db74">&#34;interval&#34;</span>: <span style="color:#e6db74">&#34;epoch&#34;</span>, <span style="color:#e6db74">&#34;frequency&#34;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;monitor&#34;</span>: <span style="color:#e6db74">&#34;val_loss&#34;</span>}}
+</code></pre></div><h3 id="4-huấn-luyện-mô-hình">4. Huấn luyện mô hình</h3>
+<p>Sử dụng ModelCheckpoint callback và LearningRateMonitor, chúng ta sẽ huấn luyện mạng LSTM như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">do_training_validation</span>():
+   pl<span style="color:#f92672">.</span>seed_everything(<span style="color:#ae81ff">21</span>)    
+   parser <span style="color:#f92672">=</span> ArgumentParser()
+   parser <span style="color:#f92672">=</span> pl<span style="color:#f92672">.</span>Trainer<span style="color:#f92672">.</span>add_argparse_args(parser)
+   parser <span style="color:#f92672">=</span> configuration_parser(parser)
+   <span style="color:#75715e"># args = parser.parse_args()</span>
+   args, unknown <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_known_args()
+   <span style="color:#75715e"># init model    </span>
+   hidden_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>
+   WINDOW_SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">32</span>
+   model <span style="color:#f92672">=</span> ActionClassificationLSTM(WINDOW_SIZE, hidden_dim, learning_rate<span style="color:#f92672">=</span>args<span style="color:#f92672">.</span>learning_rate)
+   data_module <span style="color:#f92672">=</span> PoseDataModule(data_root<span style="color:#f92672">=</span>args<span style="color:#f92672">.</span>data_root,
+                                       batch_size<span style="color:#f92672">=</span>args<span style="color:#f92672">.</span>batch_size)    
+   <span style="color:#75715e">#save only the top 1 model based on val_loss</span>
+   checkpoint_callback <span style="color:#f92672">=</span> ModelCheckpoint(save_top_k<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, monitor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;val_loss&#39;</span>)
+   lr_monitor <span style="color:#f92672">=</span> LearningRateMonitor(logging_interval<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;step&#39;</span>)  
+   <span style="color:#75715e">#trainer</span>
+   trainer <span style="color:#f92672">=</span> pl<span style="color:#f92672">.</span>Trainer<span style="color:#f92672">.</span>from_argparse_args(args,
+      <span style="color:#75715e"># fast_dev_run=True,</span>
+      max_epochs<span style="color:#f92672">=</span>args<span style="color:#f92672">.</span>epochs, 
+      deterministic<span style="color:#f92672">=</span>True, 
+      gpus<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, 
+      progress_bar_refresh_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, 
+      callbacks<span style="color:#f92672">=</span>[EarlyStopping(monitor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;train_loss&#39;</span>, patience<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>), checkpoint_callback, lr_monitor])    
+   trainer<span style="color:#f92672">.</span>fit(model, data_module)    
+   <span style="color:#66d9ef">return</span> model
+</code></pre></div><p>Kết quả huấn luyện model:</p>
+<ul>
+<li>
+<p>Train Accuracy:
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/87_har_5.svg">
+   </div>
+
+</p>
+</li>
+<li>
+<p>Train Loss:</p>
+</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/87_har_6.svg">
+   </div>
+
+
+<ul>
+<li>Validation Accuracy:</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/87_har_7.svg">
+   </div>
+
+
+<ul>
+<li>Validation Loss:</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/87_har_8.svg">
+   </div>
+
+
+<h3 id="5-thực-hiên-inference">5. Thực hiên Inference</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># how many frames to skip while inferencing</span>
+<span style="color:#75715e"># configuring a higher value will result in better FPS (frames per rate), but accuracy might get impacted</span>
+SKIP_FRAME_COUNT <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+
+<span style="color:#75715e"># analyse the video</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">analyse_video</span>(pose_detector, lstm_classifier, video_path):
+    <span style="color:#75715e"># open the video</span>
+    cap <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>VideoCapture(video_path)
+    <span style="color:#75715e"># width of image frame</span>
+    width <span style="color:#f92672">=</span> int(cap<span style="color:#f92672">.</span>get(cv2<span style="color:#f92672">.</span>CAP_PROP_FRAME_WIDTH))
+    <span style="color:#75715e"># height of image frame</span>
+    height <span style="color:#f92672">=</span> int(cap<span style="color:#f92672">.</span>get(cv2<span style="color:#f92672">.</span>CAP_PROP_FRAME_HEIGHT))
+    <span style="color:#75715e"># frames per second of the input video</span>
+    fps <span style="color:#f92672">=</span> int(cap<span style="color:#f92672">.</span>get(cv2<span style="color:#f92672">.</span>CAP_PROP_FPS))
+    <span style="color:#75715e"># total number of frames in the video</span>
+    tot_frames <span style="color:#f92672">=</span> int(cap<span style="color:#f92672">.</span>get(cv2<span style="color:#f92672">.</span>CAP_PROP_FRAME_COUNT))
+    <span style="color:#75715e"># video output codec</span>
+    fourcc <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>VideoWriter_fourcc(<span style="color:#f92672">*</span><span style="color:#e6db74">&#39;mp4v&#39;</span>)
+    <span style="color:#75715e"># extract the file name from video path</span>
+    file_name <span style="color:#f92672">=</span> ntpath<span style="color:#f92672">.</span>basename(video_path)
+    <span style="color:#75715e"># video writer</span>
+    vid_writer <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>VideoWriter(<span style="color:#e6db74">&#39;res_{}&#39;</span><span style="color:#f92672">.</span>format(
+        file_name), fourcc, <span style="color:#ae81ff">30</span>, (width, height))
+    <span style="color:#75715e"># counter</span>
+    counter <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#75715e"># buffer to keep the output of detectron2 pose estimation</span>
+    buffer_window <span style="color:#f92672">=</span> []
+    <span style="color:#75715e"># start time</span>
+    start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+    label <span style="color:#f92672">=</span> None
+    <span style="color:#75715e"># iterate through the video</span>
+    <span style="color:#66d9ef">while</span> True:
+        <span style="color:#75715e"># read the frame</span>
+        ret, frame <span style="color:#f92672">=</span> cap<span style="color:#f92672">.</span>read()
+        <span style="color:#75715e"># return if end of the video</span>
+        <span style="color:#66d9ef">if</span> ret <span style="color:#f92672">==</span> False:
+            <span style="color:#66d9ef">break</span>
+        <span style="color:#75715e"># make a copy of the frame</span>
+        img <span style="color:#f92672">=</span> frame<span style="color:#f92672">.</span>copy()
+        <span style="color:#66d9ef">if</span>(counter <span style="color:#f92672">%</span> (SKIP_FRAME_COUNT<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>):
+            <span style="color:#75715e"># predict pose estimation on the frame</span>
+            outputs <span style="color:#f92672">=</span> pose_detector(frame)
+            <span style="color:#75715e"># filter the outputs with a good confidence score</span>
+            persons, pIndicies <span style="color:#f92672">=</span> filter_persons(outputs)
+            <span style="color:#66d9ef">if</span> len(persons) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>:
+                <span style="color:#75715e"># pick only pose estimation results of the first person.</span>
+                <span style="color:#75715e"># actually, we expect only one person to be present in the video.</span>
+                p <span style="color:#f92672">=</span> persons[<span style="color:#ae81ff">0</span>]
+                <span style="color:#75715e"># draw the body joints on the person body</span>
+                draw_keypoints(p, img)
+                <span style="color:#75715e"># input feature array for lstm</span>
+                features <span style="color:#f92672">=</span> []
+                <span style="color:#75715e"># add pose estimate results to the feature array</span>
+                <span style="color:#66d9ef">for</span> i, row <span style="color:#f92672">in</span> enumerate(p):
+                    features<span style="color:#f92672">.</span>append(row[<span style="color:#ae81ff">0</span>])
+                    features<span style="color:#f92672">.</span>append(row[<span style="color:#ae81ff">1</span>])
+
+                <span style="color:#75715e"># append the feature array into the buffer</span>
+                <span style="color:#75715e"># not that max buffer size is 32 and buffer_window operates in a sliding window fashion</span>
+                <span style="color:#66d9ef">if</span> len(buffer_window) <span style="color:#f92672">&lt;</span> WINDOW_SIZE:
+                    buffer_window<span style="color:#f92672">.</span>append(features)
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#75715e"># convert input to tensor</span>
+                    model_input <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>Tensor(np<span style="color:#f92672">.</span>array(buffer_window, dtype<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>float32))
+                    <span style="color:#75715e"># add extra dimension</span>
+                    model_input <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>unsqueeze(model_input, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+                    <span style="color:#75715e"># predict the action class using lstm</span>
+                    y_pred <span style="color:#f92672">=</span> lstm_classifier(model_input)
+                    prob <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>softmax(y_pred, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+                    <span style="color:#75715e"># get the index of the max probability</span>
+                    pred_index <span style="color:#f92672">=</span> prob<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>max(dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">1</span>]
+                    <span style="color:#75715e"># pop the first value from buffer_window and add the new entry in FIFO fashion, to have a sliding window of size 32.</span>
+                    buffer_window<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)
+                    buffer_window<span style="color:#f92672">.</span>append(features)
+                    label <span style="color:#f92672">=</span> LABELS[pred_index<span style="color:#f92672">.</span>numpy()[<span style="color:#ae81ff">0</span>]]
+                    <span style="color:#75715e">#print(&#34;Label detected &#34;, label)</span>
+
+        <span style="color:#75715e"># add predicted label into the frame</span>
+        <span style="color:#66d9ef">if</span> label <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> None:
+            cv2<span style="color:#f92672">.</span>putText(img, <span style="color:#e6db74">&#39;Action: {}&#39;</span><span style="color:#f92672">.</span>format(label),
+                        (int(width<span style="color:#f92672">-</span><span style="color:#ae81ff">400</span>), height<span style="color:#f92672">-</span><span style="color:#ae81ff">50</span>), cv2<span style="color:#f92672">.</span>FONT_HERSHEY_COMPLEX, <span style="color:#ae81ff">0.9</span>, (<span style="color:#ae81ff">102</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>), <span style="color:#ae81ff">2</span>)
+        <span style="color:#75715e"># increment counter</span>
+        counter <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#75715e"># write the frame into the result video</span>
+        vid_writer<span style="color:#f92672">.</span>write(img)
+        <span style="color:#75715e"># compute the completion percentage</span>
+        percentage <span style="color:#f92672">=</span> int(counter<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span><span style="color:#f92672">/</span>tot_frames)
+        <span style="color:#75715e"># return the completion percentage</span>
+        <span style="color:#75715e"># yield &#34;data:&#34; + str(percentage) + &#34;\n\n&#34;</span>
+
+        <span style="color:#75715e"># show video results</span>
+        cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#34;image&#34;</span>, img)
+        <span style="color:#75715e"># Press Q on keyboard to  exit</span>
+        <span style="color:#66d9ef">if</span> cv2<span style="color:#f92672">.</span>waitKey(<span style="color:#ae81ff">25</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xFF</span> <span style="color:#f92672">==</span> ord(<span style="color:#e6db74">&#39;q&#39;</span>):
+            <span style="color:#66d9ef">break</span>
+</code></pre></div><p>Kết quả thực hiện trên video:</p>
+
+
+<video width="320" height="240" controls>
+  <source src="res_sunt_video_2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+<h3 id="3-kết-luận">3. Kết luận</h3>
+<p>Trong bài này, chúng ta đã cùng nhau thực hành xây dựng một mô hình để nhận diện hành động của người trong video bằng cách sử dụng kết hợp Detectron2 cho Pose Estimation và LSTM cho phân loại. Có rất nhiều thứ có thể cải tiến để có được kết quả tốt hơn mà bạn có thể thử nếu áp dụng vào bài toán thực tế:</p>
+<ul>
+<li>Tăng FPS để có thể chạy được realtime: Tối ưu hóa model (<em>pruning, quantization</em>), loại bỏ bớt frame khi nhận diện, sử dụng multi-threading, &hellip;</li>
+<li>Sử dụng các Pose Estimation model khác như AlphaPose, OpenPose, &hellip;</li>
+</ul>
+<p>Toàn bộ source code của bài này, các bạn xem tại <a href="https://github.com/tiensu/Computer_Vision/tree/master/Deep_Learning/Human-Action-Recognition">đây</a></p>
+<p>Mời các bạn đón đọc.!</p>
+<h3 id="4-tham-khảo">4. Tham khảo</h3>
+<p>[1] Taha Anwar, “Introduction to Video Classification and Human Activity Recognition”, Available online: <a href="https://learnopencv.com/introduction-to-video-classification-and-human-activity-recognition/">https://learnopencv.com/introduction-to-video-classification-and-human-activity-recognition/</a> (Accessed on 30 Jul 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

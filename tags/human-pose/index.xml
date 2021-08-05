@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Human Pose on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/tags/human-pose/</link>
+    <description>Recent content in Human Pose on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/human-pose/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giới thiệu Human Pose Estimation và Detectron2 platform</title>
+      <link>https://tiensu.github.io/blog/86_human_pose_estimation/</link>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/86_human_pose_estimation/</guid>
+      <description>1. Giới thiệu Human Pose Estimation (HPE) 1.1 Định nghĩa Human Pose Human Pose là sự thể hiện định hướng của một người ở định dạng đồ họa (khung xương).</description>
+    </item>
+    
+  </channel>
+</rss>

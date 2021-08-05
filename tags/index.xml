@@ -6,11 +6,11 @@
     <description>Recent content in Tags on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deep Learning</title>
       <link>https://tiensu.github.io/tags/deep-learning/</link>
-      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/tags/deep-learning/</guid>
       <description></description>
@@ -19,9 +19,18 @@
     <item>
       <title>Human Action Recognition</title>
       <link>https://tiensu.github.io/tags/human-action-recognition/</link>
-      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/tags/human-action-recognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Human Pose</title>
+      <link>https://tiensu.github.io/tags/human-pose/</link>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/tags/human-pose/</guid>
       <description></description>
     </item>
     

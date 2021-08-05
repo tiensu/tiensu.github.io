@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/human-pose"
+          class="text-primary">Human pose</a>
+        
+        <h2>Giới thiệu Human Pose Estimation và Detectron2 platform</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>31 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/86_human_pose.png" class="img-fluid w-100 mb-4" alt="Giới thiệu Human Pose Estimation và Detectron2 platform">
+        
+        <div class="content mb-5">
+          <h3 id="1-giới-thiệu-human-pose-estimation-hpe">1. Giới thiệu Human Pose Estimation (HPE)</h3>
+<h4 id="11-định-nghĩa-human-pose">1.1 Định nghĩa Human Pose</h4>
+<p>Human Pose là sự thể hiện định hướng của một người ở định dạng đồ họa (<em>khung xương</em>). Về cơ bản, nó là một tập hợp các tọa độ có thể được kết nối để mô tả tư thế của một người. Mỗi phối hợp trong khung xương được gọi là một bộ phận (<em>hoặc một khớp - joint, một điểm chính - keypoint</em>). Một kết nối hợp lệ giữa hai phần được gọi là một cặp (<em>hoặc một chi - limb</em>). Lưu ý rằng, không phải tất cả các kết hợp bộ phận đều tạo ra các cặp hợp lệ. Dưới đây là một ví dụ:</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_1.png">
+   </div>
+
+
+<h4 id="12-ứng-dụng-của-human-pose-estimation">1.2 Ứng dụng của Human Pose Estimation</h4>
+<p>Biết được định hướng của một người sẽ mở ra con đường cho một số ứng dụng trong thực tế:</p>
+<ul>
+<li>Nhận diện hành động của người.</li>
+</ul>
+<p>Theo dõi các tư thế khác nhau của một người trong một khoảng thời gian để nhận dạng hoạt động.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_1_1.png">
+   </div>
+
+
+<ul>
+<li>Motion Capture and Augmented Reality</li>
+</ul>
+<p>Đây là ứng dụng liên quan đến lĩnh vực đồ họa. Bằng việc biết được Pose của của một người, hệ thống có thể sinh ra các <em>đạo cụ, trang phục</em> vừa vặn với người trong video.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_2.jpeg">
+   </div>
+
+
+<ul>
+<li>Huấn luyện Robots</li>
+</ul>
+<p>Bằng việc xác định Human Pose, Robots có thể hiểu được những chỉ dẫn của con người và thực hiện các hành động theo chỉ dẫn đó.</p>
+<ul>
+<li>Motion Tracking for Consoles</li>
+</ul>
+<p>Đây cũng là ứng dụng trong lĩnh vực đồ họa. Tư thế, hành động của người có thể được nhận diện, sau đó được mô phỏng lại bằng một nhân vật ảo trong game, phim, &hellip;</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_3.png">
+   </div>
+
+
+<h4 id="13-multi-person-pose-estimation">1.3 Multi-Person Pose Estimation</h4>
+<p>Multi-Person Pose Estimation sẽ khó hơn nhiều so với Single-Person Pose Estimation, bởi vì chúng ta không biết vị trí của mỗi người dẫn đến việc nhẫm lẫn giữa các bộ phận của mỗi người với nhau. Gọi là <em>râu ông nọ cắm cằm bà kia</em>. Để giải quyết vấn đề này, có thể tiếp cận 1 trong 2 cách sau:</p>
+<ul>
+<li>Top-Down: Đầu tiên, sử dụng kỹ thuật Object Detection để xác định vị trí của từng người trước, sau đó mới thực hiện Pose Estimation cho mỗi người trong từng vị trí cụ thể đó. Ưu điểm của cách này là đơn giản, dễ thực hiện. Còn độ chính xác thì còn tùy vào từng ngữ cảnh.</li>
+<li>Down-Top: Ngược lại với cách trên, cách này sẽ phát hiện toàn bộ các bộ phận của mọi người trong ảnh trước, sau đó mới liên kết lại với nhau để xác định Pose của mỗi người.</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_4.jpeg">
+   </div>
+
+
+<h4 id="14-một-số-phương-pháp-thực-hiện-human-pose-estimation">1.4 Một số phương pháp thực hiện Human Pose Estimation</h4>
+<h5 id="a-openpose">a, OpenPose</h5>
+<p><a href="https://arxiv.org/pdf/1812.08008.pdf">OpenPose</a> có lẽ là phương thức phổ biến nhất dành cho HPE bởi vì tài liệu hướng dẫn của nó được tổ chức khá chi tiết, rõ ràng trên <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">github</a>. Sử dụng cách tiếp cận bottom-up, đầu tiên, OpenPose sẽ phát hiện tất cả các keypoints của mọi người trong ảnh, sau đó mới phân chia mỗi keypoint về từng người cụ thể.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_5.png">
+   </div>
+
+
+<p>VGG19 trong OpenPose chịu trách nhiệm trích xuất các đặc trưng từ hình ảnh. Các đặc trưng này sau đó được đưa vào hai nhánh song song của các lớp Conv. Nhánh đầu tiên dự đoán 18 phần của bộ xương tư thế người. Nhánh thứ hai dự đoán một tập hợp 38 Part Affinity Fields (PAFs) thể hiện mức độ liên kết giữa các bộ phận đó.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_6.png">
+   </div>
+
+
+<p>Các giai đoạn kế tiếp được sử dụng để tinh chỉnh các dự đoán được thực hiện bởi mỗi nhánh. Để được giải thích kỹ hơn về thuật toán, bạn có thể tham khảo bài báo của họ và <a href="https://arvrjourney.com/human-pose-estimation-using-openpose-with-tensorflow-part-2-e78ab9104fc8">bài đăng trên blog này</a>.</p>
+<h5 id="b-deepcut">b, DeepCut</h5>
+<p><a href="https://arxiv.org/abs/1511.06645">DeepCut</a> cũng sử dụng chiến lược bottom-up đối với trường hợp Multi-Person Pose Estimation.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_7.png">
+   </div>
+
+
+<h5 id="c-rmpe-alphapose">c, RMPE (AlphaPose)</h5>
+<p><a href="https://arxiv.org/abs/1612.00137">RMPE</a> là một đại diện phổ biến của HPE theo chiến lược top-bottom. Phương pháp thường phụ thuộc vào độ chính xác của thuật toán phát hiện người trước đó. Nếu việc phát hiện đối tượng người không chính xác thì hiệu quả của HPE cũng theo đó mà giảm xuống.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_8.png">
+   </div>
+
+
+<h5 id="d-mask-rcnn">d, Mask RCNN</h5>
+<p>Mask RCNN là một kiến trúc phổ biến để thực Semantic và Instance Segmantation. Mô hình này dự đoán song song cả vị trí của các đối tượng khác nhau trong hình ảnh và Mask của đối tượng về mặt ngữ nghĩa. Kiến trúc cơ bản có thể được mở rộng khá dễ dàng để ước tính tư thế của con người.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_9.png">
+   </div>
+
+
+<p>Mask RCNN hiện tại đã được tích hợp vào Detectron2 platform của Facebook, giúp các nhà phát triển dễ dàng sử dụng nó.</p>
+<h3 id="2-detectron2-platform">2. Detectron2 platform</h3>
+<h4 id="21-giới-thiệu">2.1 Giới thiệu</h4>
+<p><a href="https://github.com/facebookresearch/detectron2">Detectron2</a> là một platform của <a href="https://ai.facebook.com/">Facebook AI Research (FAIR)</a> dành cho các tác vụ Object Detection, Human Pose, Segmentation,&hellip; Platform này được phát triển bằng Pytorch và cung cấp dưới dạng mã nguồn mở cho các nhà phát triển. Phiên bản trước đó, <a href="https://github.com/facebookresearch/Detectron">Detectron</a> được xây dựng bằng Caffe2 framework.</p>
+<p>FAIR tuyên bố như sau:</p>
+<p><em>“We builtDetectron2 to meet the research needs of Facebook AI and to provide the foundation for object detection in production use cases at Facebook. We are now using Detectron2 to rapidly design and train the next-generation pose detection models that power Smart Camera, the AI camera system in Facebook’s Portal video-calling devices. By relying on Detectron2 as the unified library for object detection across research and production use cases, we are able to rapidly move research ideas into production models that are deployed at scale.”</em></p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_10.gif">
+   </div>
+
+
+<p>Bạn có thể tìm thấy các pre-trained model của mà Detectron2 cung cấp tại <a href="https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md">Detectron2 Model Zoo</a>.</p>
+<p>Bên cạnh đó, FAIR cũng mới phát hành <a href="https://github.com/facebookresearch/d2go">Detectron2go</a> với sự bổ sung thêm một số tính năng giúp triển khai các model dễ dàng hơn trong sản phẩm thực tế.</p>
+<h4 id="22-thực-hành-với-detectron2">2.2 Thực hành với Detectron2</h4>
+<h5 id="a-giới-thiệu-wrapper-detectron2-project">a, Giới thiệu Wrapper Detectron2 project</h5>
+<p>Detectron2 có thể được sử dụng trực tiếp từ code trên github của nó. Tuy nhiên, ở đây mình hướng dẫn các bạn sử dụng thông qua một <code>wrapper-detectron2-project</code> tên là <code>detectron2-pipeline</code>. Project này có những ưu điểm sau:</p>
+<ul>
+<li>Dễ dàng tích hợp với các model khác nhau từ Detectron2 Model Zoo.</li>
+<li>Tăng tốc độ xử lý video, hình ảnh bằng việc chia xử lý ra nhiều threads khác nhau.</li>
+<li>Tối ưu hóa tốc độ train/inference bằng việc tận dụng tối đa sức mạnh của GPU/CPU.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> git clone git:<span style="color:#f92672">//</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>jagin<span style="color:#f92672">/</span>detectron2<span style="color:#f92672">-</span>pipeline<span style="color:#f92672">.</span>git
+<span style="color:#960050;background-color:#1e0010">$</span> cd detectron2<span style="color:#f92672">-</span>pipeline
+</code></pre></div><p>Cấu trúc của project này như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">├──</span> assets
+<span style="color:#960050;background-color:#1e0010">├──</span> configs
+<span style="color:#960050;background-color:#1e0010">├──</span> environment<span style="color:#f92672">.</span>yml
+<span style="color:#960050;background-color:#1e0010">├──</span> LICENSE
+<span style="color:#960050;background-color:#1e0010">├──</span> output
+<span style="color:#960050;background-color:#1e0010">├──</span> pipeline
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> annotate_image<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> annotate_video<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> async_predict<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> capture_image<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> capture_images<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> capture_video<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> display_video<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> __init__<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> libs
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> async_predictor<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> file_video_capture<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> __init__<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">└──</span> webcam_video_capture<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> pipeline<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> predict<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> save_image<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> save_video<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">├──</span> separate_background<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>   <span style="color:#960050;background-color:#1e0010">└──</span> utils
+<span style="color:#960050;background-color:#1e0010">│</span>       <span style="color:#960050;background-color:#1e0010">├──</span> colors<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>       <span style="color:#960050;background-color:#1e0010">├──</span> detectron<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>       <span style="color:#960050;background-color:#1e0010">├──</span> fs<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>       <span style="color:#960050;background-color:#1e0010">├──</span> __init__<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>       <span style="color:#960050;background-color:#1e0010">├──</span> text<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">│</span>       <span style="color:#960050;background-color:#1e0010">└──</span> timeme<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">├──</span> process_images<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">├──</span> process_video<span style="color:#f92672">.</span>py
+<span style="color:#960050;background-color:#1e0010">├──</span> pytest<span style="color:#f92672">.</span>ini
+<span style="color:#960050;background-color:#1e0010">├──</span> README<span style="color:#f92672">.</span>md
+<span style="color:#960050;background-color:#1e0010">└──</span> tests
+</code></pre></div><p>Các folders/files dùng chung:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">-</span> utils<span style="color:#f92672">/</span>: common utility scripts,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>file_video_capture<span style="color:#f92672">.</span>py: video file capturing helper <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">utilizing</span> threading <span style="color:#f92672">and</span> the queue to obtain FPS speedup,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>webcam_video_capture<span style="color:#f92672">.</span>py: helper <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">for</span> capturing webcam <span style="color:#f92672">in</span> a separate thread,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>capture_image<span style="color:#f92672">.</span>py: pipeline task to capture single image file,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>capture_images<span style="color:#f92672">.</span>py: pipeline task to capture images <span style="color:#f92672">from</span> a directory,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>capture_video<span style="color:#f92672">.</span>py: pipeline task to capture video stream <span style="color:#f92672">from</span> file or webcam using a faster, threaded method <span style="color:#66d9ef">for</span> reading video frames<span style="color:#f92672">.</span>
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>display_video<span style="color:#f92672">.</span>py: pipeline task to display images <span style="color:#66d9ef">as</span> a video,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>pipeline<span style="color:#f92672">.</span>py: common pipeline <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">fo</span> all pipeline tasks,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>save_image<span style="color:#f92672">.</span>py: pipeline task to save images,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>save_video<span style="color:#f92672">.</span>py: pipeline task to save a video<span style="color:#f92672">.</span>
+</code></pre></div><p>Các files dưới đây là nơi chúng ta sẽ sử dụng, chỉnh sửa để áp dụng vào bài toán cụ thể:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>annotate_image<span style="color:#f92672">.</span>py: pipeline task <span style="color:#66d9ef">for</span> image annotation,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>annotate_video<span style="color:#f92672">.</span>py: pipeline task <span style="color:#66d9ef">for</span> video annotation,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>async_predictor<span style="color:#f92672">.</span>py: asynchronous predictor utilizing multiprocessing to run the inferences <span style="color:#f92672">in</span> parallel <span style="color:#f92672">in</span> separate processes,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>predict<span style="color:#f92672">.</span>py: pipeline task to perform a prediction,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>async_predict<span style="color:#f92672">.</span>py: pipeline task to perform prediction asynchronously using multiprocessing,
+<span style="color:#f92672">-</span> pipeline<span style="color:#f92672">/</span>separate_background<span style="color:#f92672">.</span>py: custom pipeline task to separate the background <span style="color:#f92672">from</span> foreground instances as an example use of the semantic segmentation model from Detectron2.
+</code></pre></div><p>Các files cấu hình models:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">├──</span> configs
+<span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">├──</span> COCO<span style="color:#f92672">-</span>Detection
+<span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">├──</span> faster_rcnn_R_50_FPN_3x<span style="color:#f92672">.</span>yaml
+<span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">└──</span> retinanet_R_50_FPN_3x<span style="color:#f92672">.</span>yaml
+<span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">├──</span> COCO<span style="color:#f92672">-</span>InstanceSegmentation
+<span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">└──</span> mask_rcnn_R_50_FPN_3x<span style="color:#f92672">.</span>yaml
+<span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">├──</span> COCO<span style="color:#f92672">-</span>Keypoints
+<span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">└──</span> keypoint_rcnn_R_50_FPN_3x<span style="color:#f92672">.</span>yaml
+<span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">└──</span> COCO<span style="color:#f92672">-</span>PanopticSegmentation
+<span style="color:#960050;background-color:#1e0010">│</span> <span style="color:#960050;background-color:#1e0010">└──</span> panoptic_fpn_R_50_3x<span style="color:#f92672">.</span>yaml
+</code></pre></div><h5 id="b-tạo-môi-trường-ảo-bằng-conda">b, Tạo môi trường ảo bằng Conda</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> conda env create <span style="color:#f92672">-</span>f environment<span style="color:#f92672">.</span>yml
+<span style="color:#960050;background-color:#1e0010">$</span> conda activate detectron2<span style="color:#f92672">-</span>pipeline
+</code></pre></div><h5 id="c-cài-đặt-detectron2">c, Cài đặt Detectron2</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> cd <span style="color:#f92672">..</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git clone https:<span style="color:#f92672">//</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>facebookresearch<span style="color:#f92672">/</span>detectron2<span style="color:#f92672">.</span>git
+<span style="color:#960050;background-color:#1e0010">$</span> cd detectron2
+<span style="color:#960050;background-color:#1e0010">$</span> git checkout <span style="color:#ae81ff">3</span>def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4
+<span style="color:#960050;background-color:#1e0010">$</span> python setup<span style="color:#f92672">.</span>py build develop
+</code></pre></div><p>Commit <em>3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4</em> là phiên bản ổn định để sử dụng.</p>
+<h5 id="d-image-processing">d, Image Processing</h5>
+<ul>
+<li>Các options:</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_11.png">
+   </div>
+
+
+<ul>
+<li>Ví dụ với InstanceSegmentation model (<em>mặc định</em>):</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python process_images<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>i assets<span style="color:#f92672">/</span>images<span style="color:#f92672">/</span>others <span style="color:#f92672">-</span>p
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_12.jpeg">
+   </div>
+
+
+<ul>
+<li>Ví dụ với Human Pose Estimation model:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python process_images<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>i assets<span style="color:#f92672">/</span>images<span style="color:#f92672">/</span>others<span style="color:#f92672">/</span>couple<span style="color:#f92672">.</span>jpg <span style="color:#f92672">-</span>p <span style="color:#f92672">--</span>config<span style="color:#f92672">-</span>file configs<span style="color:#f92672">/</span>COCO<span style="color:#f92672">-</span>Keypoints<span style="color:#f92672">/</span>keypoint_rcnn_R_50_FPN_3x<span style="color:#f92672">.</span>yaml
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_13.jpeg">
+   </div>
+
+
+<h5 id="e-video-processing">e, Video Processing</h5>
+<ul>
+<li>Các options:</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_14.png">
+   </div>
+
+
+<ul>
+<li>Ví dụ với InstanceSegmentation model (<em>mặc định</em>) sử dụng webcam/camera:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python process_video<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>i <span style="color:#ae81ff">0</span> <span style="color:#f92672">-</span>d <span style="color:#f92672">-</span>p
+</code></pre></div><ul>
+<li>Ví dụ với InstanceSegmentation model (<em>mặc định</em>) sử dụng video file:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python process_video<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>i assets<span style="color:#f92672">/</span>videos<span style="color:#f92672">/</span>walk<span style="color:#f92672">.</span>small<span style="color:#f92672">.</span>mp4 <span style="color:#f92672">-</span>p <span style="color:#f92672">-</span>d <span style="color:#f92672">-</span>ov walk<span style="color:#f92672">.</span>avi
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_15.gif">
+   </div>
+
+
+<ul>
+<li>Ví dụ với PanopticSegmentation model sử dụng video file:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python process_video<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>i assets<span style="color:#f92672">/</span>videos<span style="color:#f92672">/</span>traffic<span style="color:#f92672">.</span>small<span style="color:#f92672">.</span>mp4 <span style="color:#f92672">-</span>p <span style="color:#f92672">-</span>d <span style="color:#f92672">-</span>ov traffic<span style="color:#f92672">.</span>avi <span style="color:#f92672">--</span>config<span style="color:#f92672">-</span>file configs<span style="color:#f92672">/</span>COCO<span style="color:#f92672">-</span>PanopticSegmentation<span style="color:#f92672">/</span>panoptic_fpn_R_50_3x<span style="color:#f92672">.</span>yaml
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_16.gif">
+   </div>
+
+
+<ul>
+<li>Ví dụ với Human Pose Estimation model sử dụng video file:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python process_video<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>i assets<span style="color:#f92672">/</span>videos<span style="color:#f92672">/</span>walk<span style="color:#f92672">.</span>small<span style="color:#f92672">.</span>mp4 <span style="color:#f92672">-</span>p <span style="color:#f92672">-</span>d <span style="color:#f92672">--</span>config<span style="color:#f92672">-</span>file configs<span style="color:#f92672">/</span>COCO<span style="color:#f92672">-</span>Keypoints<span style="color:#f92672">/</span>keypoint_rcnn_R_50_FPN_3x<span style="color:#f92672">.</span>yaml
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_19.gif">
+   </div>
+
+
+<h5 id="f-human-pose-tracking">f, Human Pose Tracking</h5>
+<p><a href="https://github.com/YuliangXiu/PoseFlow">PoseFlow</a> là một phương pháp tracking cho Human Pose rất hiệu quả. Nó được mô tả trong bài báo <a href="https://arxiv.org/abs/1802.00977">PoseFlow: Efficient Online Pose Tracking</a> của Yuliang Xiu, Jiefeng Li, Haoyu Wang, Yinghong Fang, Cewu Lu.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_20.png">
+   </div>
+
+
+<p>Mình cảm thấy bài báo hơi khó đọc 1 chút. Tuy nhiên mình không đi quá chi tiết vào thuật toán mà đơn giản chỉ muốn sử dụng nó.</p>
+<p>PoseFlow cũng đã được tích hợp vào AlphaPose, bạn có thể thử. Còn ở đây mình sẽ áp dụng nó với Mask RCNN trong Detectron2.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> process_video<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>i assets<span style="color:#f92672">/</span>videos<span style="color:#f92672">/</span>walk<span style="color:#f92672">.</span>small<span style="color:#f92672">.</span>mp4 <span style="color:#f92672">-</span>p <span style="color:#f92672">-</span>d <span style="color:#f92672">--</span>config<span style="color:#f92672">-</span>file configs<span style="color:#f92672">/</span>COCO<span style="color:#f92672">-</span>Keypoints<span style="color:#f92672">/</span>keypoint_rcnn_R_50_FPN_3x<span style="color:#f92672">.</span>yaml <span style="color:#f92672">-</span>tp
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_21.gif">
+   </div>
+
+
+<p>Kết quả cuối cùng sẽ phụ thuộc vào một số yếu tố:</p>
+<ul>
+<li>ĐỘ chính xác của model phát hiện người.</li>
+<li>Độ chính xác của model Pose Estimation.</li>
+<li>Chất lượng của hình ảnh.</li>
+<li>Các options khác nhau của tracking (<em>xem trong file processing_video.py, dòng 51-60</em>)</li>
+</ul>
+<h5 id="f-background-separation">f, Background Separation</h5>
+<p>Một ứng dụng thú vị khác của Detectron2 là Background Separation, giống như viêc chụp ảnh làm mờ hậu cảnh, chỉ tập trung vào tượng chính. Thuật toán được diễn giải như sơ đồ dưới đây:</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_17.png">
+   </div>
+
+
+<ul>
+<li>Ví dụ với hình ảnh:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python process_images<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>i assets<span style="color:#f92672">/</span>images<span style="color:#f92672">/</span>others<span style="color:#f92672">/</span>couple<span style="color:#f92672">.</span>jpg <span style="color:#f92672">-</span>sb
+</code></pre></div><ul>
+<li>Ví dụ với video:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python process_video<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>i assets<span style="color:#f92672">/</span>videos<span style="color:#f92672">/</span>walk<span style="color:#f92672">.</span>small<span style="color:#f92672">.</span>mp4 <span style="color:#f92672">-</span>sb <span style="color:#f92672">-</span>d
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_18.gif">
+   </div>
+
+
+<h3 id="3-kết-luận">3. Kết luận</h3>
+<p>Nếu xét riêng về Human Pose Estimation, các model trong Detectron2 có thể không phải là tốt nhất, xem bảng so sánh sau:</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/86_hpe_21.png">
+   </div>
+
+
+<p>Từ bảng trên, có thể thấy AlphaPose cho kết quả tốt hơn so với 2 phương pháp OpenPose (CMU-Pose) và Detectron2 (Mask RCNN). Tuy nhiên, bù lại thì Detectron2 (Mask RCNN) lại dễ dàng sử dụng hơn. Tùy vào yêu cầu bài toán cụ thể mà bạn có thể chọn lựa phương pháp phù hợp cho mình.</p>
+<p>Như vậy, bài này mình đã giới thiệu qua cho các bạn về Human Pose Estimation và cách sử dụng Detectron2 platform. Bài tiếp theo, chúng ta sẽ thực hành phân loại một số hành động của con người trong video sử dụng những kiến thức đã đề cập trong bài hôm nay.</p>
+<p>Mời các bạn đón đọc.!</p>
+<h3 id="4-tham-khảo">4. Tham khảo</h3>
+<p>[1] Bharath Raj, “An Overview of Human Pose Estimation with Deep Learning”, Available online: <a href="https://medium.com/beyondminds/an-overview-of-human-pose-estimation-with-deep-learning-d49eb656739b">https://medium.com/beyondminds/an-overview-of-human-pose-estimation-with-deep-learning-d49eb656739b</a> (Accessed on 31 Jul 2021).</p>
+<p>[2] Jarosław Gilewski, “How to embed Detectron2 in your computer vision project”, Available online:https://medium.com/deepvisionguru/how-to-embed-detectron2-in-your-computer-vision-project-817f29149461 (Accessed on 31 Jul 2021).</p>
+<p>[3] Jarosław Gilewski, “PoseFlow — real-time pose tracking”, Available online: <a href="https://medium.com/deepvisionguru/poseflow-real-time-pose-tracking-7f8062a7c996">https://medium.com/deepvisionguru/poseflow-real-time-pose-tracking-7f8062a7c996</a> (Accessed on 31 Jul 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
