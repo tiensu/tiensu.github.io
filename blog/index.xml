@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>DP4ML - Data Transform - Phần 7 - How to Transform the Target in Regression</title>
+      <title>DP4ML - Data Transform - Phần 8 - How to Save and Load Data Transforms</title>
       <link>https://tiensu.github.io/blog/99_data_prepeation_for_ml_data_transforms_8/</link>
       <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
       
@@ -193,7 +193,7 @@
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/83_data_prepeation_for_ml_feature_selection_2/</guid>
-      <description>Bài thứ 9 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp lựa chọn features đối với dữ liệu có Input Variance thuộc kiểu Categorical thông qua việc thực hành trên một bộ dữ liệu cụ thể.</description>
+      <description>Bài thứ 9 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 2 về Feature Selection.</description>
     </item>
     
     <item>
@@ -202,7 +202,7 @@
       <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/82_data_prepeation_for_ml_feature_selection_1/</guid>
-      <description>Bài thứ 8 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ chuyển tiếp sang tìm hiểu một nhiệm vụ khác của Data Preparation, đó là Feature Selection.</description>
+      <description>Bài thứ 8 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài đầu tiên về Feature Selection.</description>
     </item>
     
     <item>
@@ -211,7 +211,7 @@
       <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/81_data_prepeation_for_ml_data_cleaning_missing_data_4/</guid>
-      <description>Bài thứ 7 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Iterative Imputation.</description>
+      <description>Bài thứ 7 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 4 về chủ đề Missing Data.</description>
     </item>
     
     <item>
@@ -220,7 +220,7 @@
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/80_data_prepeation_for_ml_data_cleaning_missing_data_3/</guid>
-      <description>Bài thứ 6 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp kNN Imputation.</description>
+      <description>Bài thứ 6 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 3 về chủ đề Missing Data.</description>
     </item>
     
     <item>
@@ -229,7 +229,7 @@
       <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data_2/</guid>
-      <description>Bài thứ 5 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Statistical Imputation.</description>
+      <description>Bài thứ 5 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 2 về chủ đề Missing Data.</description>
     </item>
     
     <item>
@@ -238,7 +238,7 @@
       <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/78_data_prepeation_for_ml_data_cleaning_missing_data_1/</guid>
-      <description>Bài thứ 4 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu về vấn đề Missing Data.</description>
+      <description>Bài thứ 4 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài đầu tiên về Missing Data.</description>
     </item>
     
     <item>

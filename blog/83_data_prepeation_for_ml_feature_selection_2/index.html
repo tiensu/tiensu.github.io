@@ -168,7 +168,7 @@
         <img src="https://tiensu.github.io/images/featured-post/83_feature_selection.png" class="img-fluid w-100 mb-4" alt="DP4ML - Feature Selection - Phần 2 - Select Categorical Input Features">
         
         <div class="content mb-5">
-          <p>Bài thứ 9 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp lựa chọn features đối với dữ liệu có Input Variance thuộc kiểu Categorical thông qua việc thực hành trên một bộ dữ liệu cụ thể.</p>
+          <p>Bài thứ 9 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 2 về Feature Selection. Trong bài này, chúng ta sẽ tìm hiểu phương pháp lựa chọn features đối với dữ liệu có Input Variance thuộc kiểu Categorical thông qua việc thực hành trên một bộ dữ liệu cụ thể.</p>
 <h3 id="1-breast-cancer-categorical-dataset">1. Breast Cancer Categorical Dataset</h3>
 <p><a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/breast-cancer.csv">Breast Cancer Categorical Dataset</a> là bộ dữ liệu thường được dùng cho việc nghiên cứu các thuật toán ML từ thập niên 80s. Nó bao gồm 286 mẫu dữ liệu đại diện cho các bệnh nhân, và 9 Input Variables. Thông tin về các Input Variables được miêu tả ở <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/breast-cancer.names">đây</a>. Đây là bài toán Binary Classification, mỗi bệnh nhân thuộc 1 trong 2 nhãn là có bệnh hoặc không có bệnh.</p>
 <p>Code dưới đây đọc vào dữ liệu, in ra một vài samples, chia dữ liệu thành Input/Output Variables, sau đó lại chia thành 2 tập train/test.</p>
@@ -590,7 +590,9 @@ accuracy <span style="color:#f92672">=</span> accuracy_score(y_test_enc, yhat)
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">76.84</span>
 </code></pre></div><p>Theo các kết quả thu được từ 3 lần thí nghiệm thì có thể thấy rằng Mutual Information mang lại kết quả tốt nhất. Để kết quả được <em>tin cậy</em> hơn, bạn có thể sử dụng k-Fold Cross-Validation thay vì chỉ chia Train/Test thông thường.</p>
 <h3 id="5-kết-luận">5. Kết luận</h3>
-<p>Bài thứ 2 về chủ đề Feature Selection, mình đã giới thiệu 2 kỹ thuật Chi-Squared Statistic và Mutual Information áp dụng cho Input Variables dạng Categorical. Bài tiếp theo sẽ là các kỹ thuật Feature Selection áp dụng cho Input Variables dạng Numerical. Mời các bạn đón đọc.</p>
+<p>Bài thứ 2 về chủ đề Feature Selection, mình đã giới thiệu 2 kỹ thuật Chi-Squared Statistic và Mutual Information áp dụng cho Input Variables dạng Categorical.</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Preparation_for_ML/tree/master/03_Feature_Selection/Categorical_Input_Variable">đây</a>.</p>
+<p>Bài tiếp theo sẽ là các kỹ thuật Feature Selection áp dụng cho Input Variables dạng Numerical. Mời các bạn đón đọc.</p>
 <h3 id="6-tham-khảo">6. Tham khảo</h3>
 <p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
 

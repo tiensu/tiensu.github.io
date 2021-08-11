@@ -168,7 +168,7 @@
         <img src="https://tiensu.github.io/images/featured-post/81_missing_data.jpg" class="img-fluid w-100 mb-4" alt="DP4ML - Missing Data - Phần 4 - Iterative Imputation">
         
         <div class="content mb-5">
-          <p>Bài thứ 7 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Iterative Imputation.</p>
+          <p>Bài thứ 7 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 4 về chủ đề Missing Data. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Iterative Imputation.</p>
 <h3 id="1-iterative-imputation">1. Iterative Imputation</h3>
 <p>Iterative Imputation là quá trình trong đó mỗi feature được mô hình hóa như một hàm của các features khác. Mỗi feature được xác định một cách tuần tự, lần lượt, cho phép các features đã xác định trước đó được sử dụng như làm một phần đầu vào của mô hình trong việc dự đoán các features tiếp theo. Quá trình này được lặp lại nhiều lần, cho phép các ước tính luôn được cải thiện. Cách tiếp cận này được gọi chung là Fully Conditional Specification (FCS) hoặc Multivariate Imputation by Chained Equations (MICE).</p>
 <p>Về mặt lý thuyết, các thuật toán Regressions đều có thể sử dụng để ước lượng các Missing Data. Nhưng thực tế thì Linear Regression được sử dụng phổ biến vì tính đơn giản của nó. Số lượng vòng lặp cũng không cần quá lớn, thường là 10. Cuối cùng, thứ tự các features được ước lượng tuần tự cũng cần được xem xét. Có thể là từ các features có ít đến các features có nhiều Missing Data, hoặc là ngược lại.</p>
