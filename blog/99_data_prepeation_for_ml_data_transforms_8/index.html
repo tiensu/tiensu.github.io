@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/data-preparation"
+          class="text-primary">Data Preparation</a>
+        
+        <h2>DP4ML - Data Transform - Phần 7 - How to Transform the Target in Regression</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>06 August 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/99_data_transforms.jpeg" class="img-fluid w-100 mb-4" alt="DP4ML - Data Transform - Phần 7 - How to Transform the Target in Regression">
+        
+        <div class="content mb-5">
+          <p>Bài thứ 21 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 8 về về Data Transforms. Trong bài này, chúng ta sẽ tìm hiểu cách thức save và load Data Transforms. Chúng ta cũng sẽ thực hành trên bộ dữ liệu giả ngẫu nhiên được sinh ra.</p>
+<p>Một điều rất quan trọng khi giải quyết bài toán ML là các kỹ thuật DP4ML nào áp dụng cho Training Data thì cũng phải được áp dụng cho New Data trong tương lai. Nếu mỗi lần cần dự đoán, lại phải thực hiện lại việc fitting các kỹ thuật DP4ML trên tập train thì sẽ rất mất thời gian. Một cách giải quyết hiệu quả là lưu lại các kỹ thuật DP4ML đó thành 1 file, khi nào cần thì chỉ việc load lên và sử dụng.</p>
+<h3 id="1-tạo-dataset">1. Tạo Dataset</h3>
+<p>Chúng ta sẽ sử dụng hàm <em>make_blobs()</em> để tạo ra tập dữ liệu gồm 1000 mẫu, mỗi mẫu có 10 features, và thuộc một trong 2 lớp.</p>
+<pre><code class="language-pythonk" data-lang="pythonk"># example of creating a test dataset and splitting it into train and test sets
+from sklearn.datasets import make_blobs
+from sklearn.model_selection import train_test_split
+# prepare dataset
+X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
+# split data into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=1)
+# summarize the scale of each input variable
+for i in range(X_test.shape[1]):
+	print('&gt;%d, train: min=%.3f, max=%.3f, test: min=%.3f, max=%.3f' %
+		(i, X_train[:, i].min(), X_train[:, i].max(),
+			X_test[:, i].min(), X_test[:, i].max()))
+</code></pre><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>, train: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">4.532</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.496</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">4.208</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.502</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">1.161</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">8.365</span>, test: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.514</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">6.835</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2</span>, train: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">12.799</span>, max<span style="color:#f92672">=-</span><span style="color:#ae81ff">2.350</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">13.251</span>, max<span style="color:#f92672">=-</span><span style="color:#ae81ff">2.298</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span>, train: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">6.736</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">10.176</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">6.540</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">10.960</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">4</span>, train: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">12.151</span>, max<span style="color:#f92672">=-</span><span style="color:#ae81ff">3.827</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">12.747</span>, max<span style="color:#f92672">=-</span><span style="color:#ae81ff">4.879</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">5</span>, train: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">10.774</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">5.887</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">11.169</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">6.068</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">6</span>, train: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">8.694</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.201</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">8.426</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.204</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">7</span>, train: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">5.880</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">3.847</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">5.524</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">3.553</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">8</span>, train: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">10.177</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">0.464</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">10.118</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.256</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">9</span>, train: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">8.925</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">4.209</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">8.630</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">3.078</span>
+</code></pre></div><p>Ta thấy rằng các features có khoảng giá trị khác nhau, ngụ ý rằng chúng ta phải thực hiện một số kỹ thuật DP4ML đối với nó.</p>
+<h3 id="2-scale-the-datase">2. Scale the Datase</h3>
+<p>Ta sẽ sử dụng MinMaxScaler để scale các features:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of scaling the dataset</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_blobs
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> MinMaxScaler
+<span style="color:#75715e"># prepare dataset</span>
+X, y <span style="color:#f92672">=</span> make_blobs(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, centers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split data into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define scaler</span>
+scaler <span style="color:#f92672">=</span> MinMaxScaler()
+<span style="color:#75715e"># fit scaler on the training dataset</span>
+scaler<span style="color:#f92672">.</span>fit(X_train)
+<span style="color:#75715e"># transform both datasets</span>
+X_train_scaled <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>transform(X_train)
+X_test_scaled <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>transform(X_test)
+<span style="color:#75715e"># summarize the scale of each input variable</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(X_test<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, train: min=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">, max=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">, test: min=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">, max=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span>
+		(i, X_train_scaled[:, i]<span style="color:#f92672">.</span>min(), X_train_scaled[:, i]<span style="color:#f92672">.</span>max(),
+			X_test_scaled[:, i]<span style="color:#f92672">.</span>min(), X_test_scaled[:, i]<span style="color:#f92672">.</span>max()))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.054</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.001</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.090</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">0.788</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.043</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.005</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.012</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.046</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">4</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.072</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">0.874</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">5</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.024</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.011</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">6</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.027</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">7</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.037</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">0.970</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">8</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.006</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.075</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">9</span>, train: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>, test: min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.022</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">0.914</span>
+</code></pre></div><p>Tất cả các features bây giờ đều đã nằm trong khoảng [0,1].</p>
+<h3 id="3-save-model-and-data-scaler">3. Save Model and Data Scaler</h3>
+<p>Sử dụng LogisticRegression, ta sẽ mô hình hóa tập dữ liệu này. Sau đó, cả model và MaxMinScaler sẽ được lưu lại thành file, sử dụng <em>pickle</em> framework.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of fitting a model on the scaled dataset</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_blobs
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> MinMaxScaler
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LogisticRegression
+<span style="color:#f92672">from</span> pickle <span style="color:#f92672">import</span> dump
+<span style="color:#75715e"># prepare dataset</span>
+X, y <span style="color:#f92672">=</span> make_blobs(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, centers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split data into train and test sets</span>
+X_train, _, y_train, _ <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define scaler</span>
+scaler <span style="color:#f92672">=</span> MinMaxScaler()
+<span style="color:#75715e"># fit scaler on the training dataset</span>
+scaler<span style="color:#f92672">.</span>fit(X_train)
+<span style="color:#75715e"># transform the training dataset</span>
+X_train_scaled <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>transform(X_train)
+<span style="color:#75715e"># define model</span>
+model <span style="color:#f92672">=</span> LogisticRegression(solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
+model<span style="color:#f92672">.</span>fit(X_train_scaled, y_train)
+<span style="color:#75715e"># save the model</span>
+dump(model, open(<span style="color:#e6db74">&#39;model.pkl&#39;</span>, <span style="color:#e6db74">&#39;wb&#39;</span>))
+<span style="color:#75715e"># save the scaler</span>
+dump(scaler, open(<span style="color:#e6db74">&#39;scaler.pkl&#39;</span>, <span style="color:#e6db74">&#39;wb&#39;</span>))
+</code></pre></div><p>Sau khi chạy đoạn chương trình trên, 2 files <em>model.pkl</em> và <em>scaler.pkl</em> được sinh ra.</p>
+<h4 id="4-load-model-and-data-scaler">4. Load Model and Data Scaler</h4>
+<p>Phần này, ta sẽ tiến hành load model và scaler object để thực hiện dự đoán trên một dữ liệu mới.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># load model and scaler and make predictions on new data</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_blobs
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+<span style="color:#f92672">from</span> pickle <span style="color:#f92672">import</span> load
+<span style="color:#75715e"># prepare dataset</span>
+X, y <span style="color:#f92672">=</span> make_blobs(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, centers<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split data into train and test sets</span>
+_, X_test, _, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># load the model</span>
+model <span style="color:#f92672">=</span> load(open(<span style="color:#e6db74">&#39;model.pkl&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>))
+<span style="color:#75715e"># load the scaler</span>
+scaler <span style="color:#f92672">=</span> load(open(<span style="color:#e6db74">&#39;scaler.pkl&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>))
+<span style="color:#75715e"># check scale of the test set before scaling</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Raw test set range&#39;</span>)
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(X_test<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, min=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">, max=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i, X_test[:, i]<span style="color:#f92672">.</span>min(), X_test[:, i]<span style="color:#f92672">.</span>max()))
+<span style="color:#75715e"># transform the test dataset</span>
+X_test_scaled <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>transform(X_test)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Scaled test set range&#39;</span>)
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(X_test_scaled<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, min=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">, max=</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i, X_test_scaled[:, i]<span style="color:#f92672">.</span>min(), X_test_scaled[:, i]<span style="color:#f92672">.</span>max()))
+<span style="color:#75715e"># make predictions on the test set</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test_scaled)
+<span style="color:#75715e"># evaluate accuracy</span>
+acc <span style="color:#f92672">=</span> accuracy_score(y_test, yhat)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Test Accuracy:&#39;</span>, acc)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Raw test set range
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">4.208</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.502</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>, min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.514</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">6.835</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">13.251</span>, max<span style="color:#f92672">=-</span><span style="color:#ae81ff">2.298</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">6.540</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">10.960</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">4</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">12.747</span>, max<span style="color:#f92672">=-</span><span style="color:#ae81ff">4.879</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">5</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">11.169</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">6.068</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">6</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">8.426</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.204</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">7</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">5.524</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">3.553</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">8</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">10.118</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.256</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">9</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">8.630</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">3.078</span>
+Scaled test set range
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.025</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.024</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.245</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">0.996</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.147</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.306</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span>, min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.012</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.106</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">4</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.082</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.000</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">5</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.060</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.078</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">6</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.054</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.154</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">7</span>, min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.000</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.168</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">8</span>, min<span style="color:#f92672">=</span><span style="color:#ae81ff">0.013</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.140</span>
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">9</span>, min<span style="color:#f92672">=-</span><span style="color:#ae81ff">0.106</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">1.011</span>
+Test Accuracy: <span style="color:#ae81ff">1.0</span>
+</code></pre></div><p>Đoạn chương trình này có thể coi như template cho các bài toán tương tự.</p>
+<h3 id="5-kết-luận">5. Kết luận</h3>
+<p>Bài thứ 8 cũng là bài cuối cùng về chủ đề Data Transforms. Trong bài này mình đã giới thiệu cách thức save và load model cũng như Transform Object để thuận tiện trong việc sử dụng. Bài tiếp theo chúng ta sẽ chuyển sang tìm hiểu về nhiệm vụ Dimensionality Reduction. Mời các bạn đón đọc.</p>
+<h3 id="5-tham-khảo">5. Tham khảo</h3>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

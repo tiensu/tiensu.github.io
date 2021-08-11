@@ -6,20 +6,155 @@
     <description>Recent content in Data Preparation on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/data-preparation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/data-preparation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DP4ML - Data Transform - Phần 2 - How to Perform LDA and PCA Dimensionality Reduction</title>
+      <link>https://tiensu.github.io/blog/101_data_prepeation_for_ml_dimensionality_reduction_2/</link>
+      <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/101_data_prepeation_for_ml_dimensionality_reduction_2/</guid>
+      <description>Bài thứ 23 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 2 về về Dimensionality Reduction.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 1 - Giới thiệu Dimensionality Reduction</title>
+      <link>https://tiensu.github.io/blog/100_data_prepeation_for_ml_dimensionality_reduction_1/</link>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/100_data_prepeation_for_ml_dimensionality_reduction_1/</guid>
+      <description>Bài thứ 22 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài đầu tiên về về Dimensionality Reduction.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 3 - How to Perform PCA Dimensionality Reduction</title>
+      <link>https://tiensu.github.io/blog/102_data_prepeation_for_ml_dimensionality_reduction_3/</link>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/102_data_prepeation_for_ml_dimensionality_reduction_3/</guid>
+      <description>Bài thứ 24 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 3 về về Dimensionality Reduction.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 7 - How to Transform the Target in Regression</title>
+      <link>https://tiensu.github.io/blog/99_data_prepeation_for_ml_data_transforms_8/</link>
+      <pubDate>Fri, 06 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/99_data_prepeation_for_ml_data_transforms_8/</guid>
+      <description>Bài thứ 21 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 8 về về Data Transforms.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 7 - How to Transform the Target in Regression</title>
+      <link>https://tiensu.github.io/blog/98_data_prepeation_for_ml_data_transforms_7/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/98_data_prepeation_for_ml_data_transforms_7/</guid>
+      <description>Bài thứ 20 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 7 về về Data Transforms.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 6 - How to Transform Numerical and Categorical Data</title>
+      <link>https://tiensu.github.io/blog/97_data_prepeation_for_ml_data_transforms_6/</link>
+      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/97_data_prepeation_for_ml_data_transforms_6/</guid>
+      <description>Bài thứ 19 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 6 về về Data Transforms.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 5 - How to Derive New Input Variables</title>
+      <link>https://tiensu.github.io/blog/96_data_prepeation_for_ml_data_transforms_5/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/96_data_prepeation_for_ml_data_transforms_5/</guid>
+      <description>Bài thứ 18 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 5 về về Data Transforms.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 4 - How to Transform Numerical to Categorical Data</title>
+      <link>https://tiensu.github.io/blog/95_data_prepeation_for_ml_data_transforms_4/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/95_data_prepeation_for_ml_data_transforms_4/</guid>
+      <description>Bài thứ 17 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 4 về về Data Transforms.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 3 - How to Make Distributions More Gaussian</title>
+      <link>https://tiensu.github.io/blog/94_data_prepeation_for_ml_data_transforms_3/</link>
+      <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/94_data_prepeation_for_ml_data_transforms_3/</guid>
+      <description>Bài thứ 16 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 3 về về Data Transforms.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 2 - How to Encode Categorical Data</title>
+      <link>https://tiensu.github.io/blog/93_data_prepeation_for_ml_data_transforms_2/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/93_data_prepeation_for_ml_data_transforms_2/</guid>
+      <description>Bài thứ 15 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 2 về về Data Transforms.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Data Transform - Phần 1 - How to Scale Numerical Data</title>
+      <link>https://tiensu.github.io/blog/92_data_prepeation_for_ml_data_transforms_1/</link>
+      <pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/92_data_prepeation_for_ml_data_transforms_1/</guid>
+      <description>Bài thứ 14 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài đầu tiên về về Data Transforms.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Feature Selection - Phần 6 - How to Use Feature Importance</title>
+      <link>https://tiensu.github.io/blog/91_data_prepeation_for_ml_feature_selection_6/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/91_data_prepeation_for_ml_feature_selection_6/</guid>
+      <description>Bài thứ 13 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 6 về Feature Selection.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Feature Selection - Phần 5 - Use RFE for Feature Selection</title>
+      <link>https://tiensu.github.io/blog/90_data_prepeation_for_ml_feature_selection_5/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/90_data_prepeation_for_ml_feature_selection_5/</guid>
+      <description>Bài thứ 12 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 5 về Feature Selection.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Feature Selection - Phần 4 - Select Features for Numerical Output</title>
+      <link>https://tiensu.github.io/blog/89_data_prepeation_for_ml_feature_selection_4/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/89_data_prepeation_for_ml_feature_selection_4/</guid>
+      <description>Bài thứ 11 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 4 về Feature Selection.</description>
+    </item>
+    
+    <item>
+      <title>DP4ML - Feature Selection - Phần 3 - Select Numerical Input Features</title>
+      <link>https://tiensu.github.io/blog/88_data_prepeation_for_ml_feature_selection_3/</link>
+      <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/88_data_prepeation_for_ml_feature_selection_3/</guid>
+      <description>Bài thứ 10 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 3 về Feature Selection.</description>
+    </item>
+    
     <item>
       <title>DP4ML - Feature Selection - Phần 2 - Select Categorical Input Features</title>
       <link>https://tiensu.github.io/blog/83_data_prepeation_for_ml_feature_selection_2/</link>
-      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/83_data_prepeation_for_ml_feature_selection_2/</guid>
-      <description>Bài thứ 9 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp lựa chọn features đối với dữ liệu có Input Variance thuộc kiểu Categorical.</description>
+      <description>Bài thứ 9 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp lựa chọn features đối với dữ liệu có Input Variance thuộc kiểu Categorical thông qua việc thực hành trên một bộ dữ liệu cụ thể.</description>
     </item>
     
     <item>
       <title>DP4ML - Feature Selection - Phần 1 - Giới thiệu chung</title>
       <link>https://tiensu.github.io/blog/82_data_prepeation_for_ml_feature_selection_1/</link>
-      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/82_data_prepeation_for_ml_feature_selection_1/</guid>
       <description>Bài thứ 8 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ chuyển tiếp sang tìm hiểu một nhiệm vụ khác của Data Preparation, đó là Feature Selection.</description>
@@ -28,7 +163,7 @@
     <item>
       <title>DP4ML - Missing Data - Phần 4 - Iterative Imputation</title>
       <link>https://tiensu.github.io/blog/81_data_prepeation_for_ml_data_cleaning_missing_data_4/</link>
-      <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/81_data_prepeation_for_ml_data_cleaning_missing_data_4/</guid>
       <description>Bài thứ 7 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Iterative Imputation.</description>
@@ -37,7 +172,7 @@
     <item>
       <title>DP4ML - Missing Data - Phần 3 - kNN Imputation</title>
       <link>https://tiensu.github.io/blog/80_data_prepeation_for_ml_data_cleaning_missing_data_3/</link>
-      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/80_data_prepeation_for_ml_data_cleaning_missing_data_3/</guid>
       <description>Bài thứ 6 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp kNN Imputation.</description>
@@ -46,7 +181,7 @@
     <item>
       <title>DP4ML - Missing Data - Phần 2 - Statistical Imputation</title>
       <link>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data_2/</link>
-      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/79_data_prepeation_for_ml_data_cleaning_missing_data_2/</guid>
       <description>Bài thứ 5 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp tiếp theo để giải quyết vấn đề Missing Data, đó là phương pháp Statistical Imputation.</description>
@@ -55,7 +190,7 @@
     <item>
       <title>DP4ML - Missing Data - Phần 1 - Giới thiệu chung</title>
       <link>https://tiensu.github.io/blog/78_data_prepeation_for_ml_data_cleaning_missing_data_1/</link>
-      <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/78_data_prepeation_for_ml_data_cleaning_missing_data_1/</guid>
       <description>Bài thứ 4 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu về vấn đề Missing Data.</description>
@@ -64,7 +199,7 @@
     <item>
       <title>DP4ML - Outlier</title>
       <link>https://tiensu.github.io/blog/77_data_prepeation_for_ml_data_cleaning_outlier/</link>
-      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/77_data_prepeation_for_ml_data_cleaning_outlier/</guid>
       <description>Bài thứ 3 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu về Outlier Data, mà tiếng việt của chúng ta gọi là dữ liệu ngoại lệ.</description>
@@ -73,7 +208,7 @@
     <item>
       <title>DP4ML - Data Cleaning - Các xử lý cơ bản</title>
       <link>https://tiensu.github.io/blog/76_data_prepeation_for_ml_data_cleaning_basic/</link>
-      <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/76_data_prepeation_for_ml_data_cleaning_basic/</guid>
       <description>Bài thứ 2 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ bàn về nhiệm vụ Data Cleaning, tiếng việt gọi là làm sạch dữ liệu.</description>
@@ -82,7 +217,7 @@
     <item>
       <title>DP4ML - Những kiến thức cơ bản</title>
       <link>https://tiensu.github.io/blog/75_data_prepeation_for_ml_foundation/</link>
-      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/75_data_prepeation_for_ml_foundation/</guid>
       <description>Series các bài viết tiếp theo, mình sẽ tập trung vào chủ đề chuẩn bị dữ liệu (Data Preparation) để huấn luyện các mô hình ML (DP4ML).</description>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/data-preparation"
+          class="text-primary">Data Preparation</a>
+        
+        <h2>DP4ML - Data Transform - Phần 4 - How to Transform Numerical to Categorical Data</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>25 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/95_data_transforms.png" class="img-fluid w-100 mb-4" alt="DP4ML - Data Transform - Phần 4 - How to Transform Numerical to Categorical Data">
+        
+        <div class="content mb-5">
+          <p>Bài thứ 17 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 4 về về Data Transforms. Trong bài này, chúng ta sẽ tìm hiểu cách thức thực hiện Transforms để chuyển đổi dữ liệu từ dạng numerical sang dạng categorical. Chúng ta cũng sẽ thực hành trên bộ dữ liệu thực tế.</p>
+<h3 id="1-discretization-transforms">1. Discretization Transforms</h3>
+<p>Các features dạng numerical thường có phân phối ngẫu nhiên bất kỳ. Ngoài cách đưa chúng về gần với phân phối Gaussian như bài trước thì chúng ta có thể áp dụng phép biến đổi Discretization để chuyển phân phối của chúng sang một dạng khác mà có thể giúp các mô hình học dễ hơn.</p>
+<p>Discretization Transforms hay Categorization Transforms là một cách gom các giá trị của feature thành một số hữu hạn các nhóm, hay <em>bin</em>.</p>
+<p>Ví dụ: Feature <em>Age</em> có giá trị nằm trong khoảng từ 1-100, ta chia thành 3 bins: 1-30, 31-60, 61-100.</p>
+<p>Có 3 kỹ thuật thực hiện Discretization Transforms:</p>
+<ul>
+<li>Uniform: Chiều rộng của mỗi bin trên trục X là bằng nhau.</li>
+<li>Quantile: Số lượng phần tử trong mỗi bin là bằng nhau.</li>
+<li>Clustered: Mỗi bin có một điểm trung tâm.</li>
+</ul>
+<p>Trong scikit-learn, Discretization Transforms được implemented bởi lớp <em>KBinsDiscretizer()</em>. 3 tham số:</p>
+<ul>
+<li><em>strategy</em>: chỉ ra tên kỹ thuật thực hiện (<em>uniform, quantile, clustered</em>),</li>
+<li><em>n_bins</em>: chỉ ra số lượng bin được tạo ra,</li>
+<li><em>encode</em>: quy định cách thức chuyển đổi (<em>ordinal, one-hot</em>).</li>
+</ul>
+<p>Ví dụ về việc sử dụng KBinsDiscretizer():</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># demonstration of the discretization transform</span>
+<span style="color:#f92672">from</span> numpy.random <span style="color:#f92672">import</span> randn
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> KBinsDiscretizer
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># generate gaussian data sample</span>
+data <span style="color:#f92672">=</span> randn(<span style="color:#ae81ff">1000</span>)
+<span style="color:#75715e"># histogram of the raw data</span>
+pyplot<span style="color:#f92672">.</span>hist(data, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>)
+pyplot<span style="color:#f92672">.</span>show()
+<span style="color:#75715e"># reshape data to have rows and columns</span>
+data <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>reshape((len(data),<span style="color:#ae81ff">1</span>))
+<span style="color:#75715e"># discretization transform the raw data</span>
+kbins <span style="color:#f92672">=</span> KBinsDiscretizer(n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, encode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ordinal&#39;</span>, strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;uniform&#39;</span>)
+data_trans <span style="color:#f92672">=</span> kbins<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># summarize first few rows</span>
+<span style="color:#66d9ef">print</span>(data_trans[:<span style="color:#ae81ff">10</span>, :])
+<span style="color:#75715e"># histogram of the transformed data</span>
+pyplot<span style="color:#f92672">.</span>hist(data_trans, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<ul>
+<li>Dữ liệu ban đầu:</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/95_data_transforms_1.png">
+   </div>
+
+
+<ul>
+<li>Dữ liệu sau khi thực hiện Discretization:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">[[<span style="color:#ae81ff">5.</span>]
+ [<span style="color:#ae81ff">6.</span>]
+ [<span style="color:#ae81ff">4.</span>]
+ [<span style="color:#ae81ff">6.</span>]
+ [<span style="color:#ae81ff">5.</span>]
+ [<span style="color:#ae81ff">5.</span>]
+ [<span style="color:#ae81ff">4.</span>]
+ [<span style="color:#ae81ff">4.</span>]
+ [<span style="color:#ae81ff">5.</span>]
+ [<span style="color:#ae81ff">5.</span>]]
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/95_data_transforms_2.png">
+   </div>
+
+
+<h3 id="2-thực-hành-discretization-trên-tập-dữ-liệu-sonar">2. Thực hành Discretization trên tập dữ liệu Sonar</h3>
+<h4 id="21-uniform-discretization-transform">2.1 Uniform Discretization Transform</h4>
+<h5 id="a-áp-dụng-uniform-discretization-transform-trên-tập-dữ-liệu-sonar">a, Áp dụng Uniform Discretization Transform trên tập dữ liệu Sonar</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># visualize a uniform ordinal discretization transform of the sonar dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> DataFrame
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> KBinsDiscretizer
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># retrieve just the numeric input values</span>
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># perform a uniform discretization transform of the dataset</span>
+trans <span style="color:#f92672">=</span> KBinsDiscretizer(n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, encode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ordinal&#39;</span>, strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;uniform&#39;</span>)
+data <span style="color:#f92672">=</span> trans<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># convert the array back to a dataframe</span>
+dataset <span style="color:#f92672">=</span> DataFrame(data)
+<span style="color:#75715e"># histograms of the variables</span>
+fig <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>hist(xlabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, ylabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+[x<span style="color:#f92672">.</span>title<span style="color:#f92672">.</span>set_size(<span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> fig<span style="color:#f92672">.</span>ravel()]
+<span style="color:#75715e"># show the plot</span>
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/95_data_transforms_3.png">
+   </div>
+
+
+<p>Ta thấy hình dạng histogram của các features sau khi biến đổi gần giống như của dữ liệu ban đầu.</p>
+<h5 id="b-mô-hình-hóa-thuật-toán-knn-trên-dữ-liệu-đã-biến-đổi">b, Mô hình hóa thuật toán kNN trên dữ liệu đã biến đổi</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn on the sonar dataset with uniform ordinal discretization transform</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> KBinsDiscretizer
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># separate into input and output columns</span>
+X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+<span style="color:#75715e"># define the pipeline</span>
+trans <span style="color:#f92672">=</span> KBinsDiscretizer(n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, encode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ordinal&#39;</span>, strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;uniform&#39;</span>)
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;t&#39;</span>, trans), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+<span style="color:#75715e"># evaluate the pipeline</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+n_scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># report pipeline performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(n_scores), std(n_scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.829</span> (<span style="color:#ae81ff">0.079</span>)
+</code></pre></div><p>Hãy nhớ lại bài trước, độ chính xác khi mô hình hóa tập Sonar khi chưa áp dụng bất kỳ phép biến đổi nào là 79.7%. Với việc áp dụng Uniform Discretization Transform, độ chính xác đã tăng lên 82.9%.</p>
+<h4 id="22-clustered-discretization-transform">2.2 Clustered Discretization Transform</h4>
+<h5 id="a-áp-dụng-clustered-discretization-transform-trên-tập-dữ-liệu-sonar">a, Áp dụng Clustered Discretization Transform trên tập dữ liệu Sonar</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># visualize a k-means ordinal discretization transform of the sonar dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> DataFrame
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> KBinsDiscretizer
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># retrieve just the numeric input values</span>
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># perform a k-means discretization transform of the dataset</span>
+trans <span style="color:#f92672">=</span> KBinsDiscretizer(n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, encode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ordinal&#39;</span>, strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kmeans&#39;</span>)
+data <span style="color:#f92672">=</span> trans<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># convert the array back to a dataframe</span>
+dataset <span style="color:#f92672">=</span> DataFrame(data)
+<span style="color:#75715e"># histograms of the variables</span>
+fig <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>hist(xlabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, ylabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+[x<span style="color:#f92672">.</span>title<span style="color:#f92672">.</span>set_size(<span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> fig<span style="color:#f92672">.</span>ravel()]
+<span style="color:#75715e"># show the plot</span>
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/95_data_transforms_4.png">
+   </div>
+
+
+<p>Chúng ta có thể thấy rằng các các features được tổ chức thành ba nhóm, một số nhóm trong số đó có vẻ khá đồng đều về mặt quan sát, và một số khác thì ít hơn.</p>
+<h5 id="b-mô-hình-hóa-thuật-toán-knn-trên-dữ-liệu-đã-biến-đổi-1">b, Mô hình hóa thuật toán kNN trên dữ liệu đã biến đổi</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn on the sonar dataset with k-means ordinal discretization transform</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> KBinsDiscretizer
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># separate into input and output columns</span>
+X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+<span style="color:#75715e"># define the pipeline</span>
+trans <span style="color:#f92672">=</span> KBinsDiscretizer(n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, encode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ordinal&#39;</span>, strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kmeans&#39;</span>)
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;t&#39;</span>, trans), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+<span style="color:#75715e"># evaluate the pipeline</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+n_scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># report pipeline performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(n_scores), std(n_scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.814</span> (<span style="color:#ae81ff">0.084</span>)
+</code></pre></div><p>Ta thấy độ chính xác giảm đi một chút so với khi áp dụng Uniform Discretization Transform, chỉ còn 81.4%.</p>
+<h4 id="23-quantile-discretization-transform">2.3 Quantile Discretization Transform</h4>
+<h5 id="a-áp-dụng-quantile-discretization-transform-trên-tập-dữ-liệu-sonar">a, Áp dụng Quantile Discretization Transform trên tập dữ liệu Sonar</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># visualize a quantile ordinal discretization transform of the sonar dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> DataFrame
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> KBinsDiscretizer
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># retrieve just the numeric input values</span>
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># perform a quantile discretization transform of the dataset</span>
+trans <span style="color:#f92672">=</span> KBinsDiscretizer(n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, encode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ordinal&#39;</span>, strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quantile&#39;</span>)
+data <span style="color:#f92672">=</span> trans<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># convert the array back to a dataframe</span>
+dataset <span style="color:#f92672">=</span> DataFrame(data)
+<span style="color:#75715e"># histograms of the variables</span>
+fig <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>hist(xlabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, ylabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+[x<span style="color:#f92672">.</span>title<span style="color:#f92672">.</span>set_size(<span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> fig<span style="color:#f92672">.</span>ravel()]
+<span style="color:#75715e"># show the plot</span>
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/95_data_transforms_5.png">
+   </div>
+
+
+<p>Ta thấy tất các features sau khi biến đổi đều có cùng kiểu phân phối và chúng được sắp xếp vào 10 bins khác nhau, số lượng giá trị của mỗi bin là như nhau.</p>
+<h5 id="b-mô-hình-hóa-thuật-toán-knn-trên-dữ-liệu-đã-biến-đổi-2">b, Mô hình hóa thuật toán kNN trên dữ liệu đã biến đổi</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn on the sonar dataset with quantile ordinal discretization transform</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> KBinsDiscretizer
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># separate into input and output columns</span>
+X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+<span style="color:#75715e"># define the pipeline</span>
+trans <span style="color:#f92672">=</span> KBinsDiscretizer(n_bins<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, encode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ordinal&#39;</span>, strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quantile&#39;</span>)
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;t&#39;</span>, trans), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+<span style="color:#75715e"># evaluate the pipeline</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+n_scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># report pipeline performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(n_scores), std(n_scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.840</span> (<span style="color:#ae81ff">0.072</span>)
+</code></pre></div><p>Độ chính xác trong trường  hợp này là cao nhất so với 2 trường hợp kia.</p>
+<h4 id="c-tune-số-lượng-bins">c, Tune số lượng bins</h4>
+<p><em>n_bins</em> là tham số có ảnh hưởng lớn đến khả năng học hỏi của model. Ta thử đi tuning chúng xem sao.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># explore number of discrete bins on classification accuracy</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> KBinsDiscretizer
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+
+<span style="color:#75715e"># get the dataset</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_dataset</span>():
+	<span style="color:#75715e"># load dataset</span>
+	dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+	data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+	<span style="color:#75715e"># separate into input and output columns</span>
+	X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+	X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+	y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+	<span style="color:#66d9ef">return</span> X, y
+
+<span style="color:#75715e"># get a list of models to evaluate</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_models</span>():
+	models <span style="color:#f92672">=</span> dict()
+	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">11</span>):
+		<span style="color:#75715e"># define the pipeline</span>
+		trans <span style="color:#f92672">=</span> KBinsDiscretizer(n_bins<span style="color:#f92672">=</span>i, encode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ordinal&#39;</span>, strategy<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;quantile&#39;</span>)
+		model <span style="color:#f92672">=</span> KNeighborsClassifier()
+		models[str(i)] <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;t&#39;</span>, trans), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+	<span style="color:#66d9ef">return</span> models
+
+<span style="color:#75715e"># evaluate a given model using cross-validation</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">evaluate_model</span>(model, X, y):
+	cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+	scores <span style="color:#f92672">=</span> cross_val_score(model, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+	<span style="color:#66d9ef">return</span> scores
+
+<span style="color:#75715e"># get the dataset</span>
+X, y <span style="color:#f92672">=</span> get_dataset()
+<span style="color:#75715e"># get the models to evaluate</span>
+models <span style="color:#f92672">=</span> get_models()
+<span style="color:#75715e"># evaluate the models and store results</span>
+results, names <span style="color:#f92672">=</span> list(), list()
+<span style="color:#66d9ef">for</span> name, model <span style="color:#f92672">in</span> models<span style="color:#f92672">.</span>items():
+	scores <span style="color:#f92672">=</span> evaluate_model(model, X, y)
+	results<span style="color:#f92672">.</span>append(scores)
+	names<span style="color:#f92672">.</span>append(name)
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (name, mean(scores), std(scores)))
+<span style="color:#75715e"># plot model performance for comparison</span>
+pyplot<span style="color:#f92672">.</span>boxplot(results, labels<span style="color:#f92672">=</span>names, showmeans<span style="color:#f92672">=</span>True)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2</span> <span style="color:#ae81ff">0.822</span> (<span style="color:#ae81ff">0.066</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span> <span style="color:#ae81ff">0.869</span> (<span style="color:#ae81ff">0.073</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">4</span> <span style="color:#ae81ff">0.838</span> (<span style="color:#ae81ff">0.078</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">5</span> <span style="color:#ae81ff">0.838</span> (<span style="color:#ae81ff">0.070</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">6</span> <span style="color:#ae81ff">0.836</span> (<span style="color:#ae81ff">0.071</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">7</span> <span style="color:#ae81ff">0.852</span> (<span style="color:#ae81ff">0.072</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">8</span> <span style="color:#ae81ff">0.837</span> (<span style="color:#ae81ff">0.077</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">9</span> <span style="color:#ae81ff">0.841</span> (<span style="color:#ae81ff">0.069</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span> <span style="color:#ae81ff">0.840</span> (<span style="color:#ae81ff">0.072</span>)
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/95_data_transforms_6.png">
+   </div>
+
+
+<p>Khá ngạc nhiên là khi <em>n_bins=3</em> ta thu được độ chính xác cao nhất 86.9%. Tuy nhiên khi nhìn vào biểu đồ Box thì phân phối của nó đang hơi lệch về bên phải.</p>
+<h3 id="3-kết-luận">3. Kết luận</h3>
+<p>Bài thứ 4 về chủ đề Data Transforms, mình đã giới thiệu 3 kỹ thuật thực hiện Data Transforms để chuyển features dạng numerical sang dạng categorical, đó là Uniform Discretization, Clustered Discretization, và Quantile Discretization. Việc chuyển đổi này nhằm mục đích thay đổi phân phối của các features mà trong 1 số trường hợp nó sẽ mang lại hiệu quả cho model. Bài tiếp theo chúng ta sẽ tìm hiểu cách thức sinh thêm features mới sử dụng kỹ thuật Polynominal/Interaction. Mời các bạn đón đọc.</p>
+<h3 id="4-tham-khảo">4. Tham khảo</h3>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

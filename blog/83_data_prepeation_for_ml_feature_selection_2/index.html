@@ -161,56 +161,437 @@
           <span>By SuNT</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>18 July 2021</span>
+          <span>22 June 2021</span>
           
         </div>
         
         <img src="https://tiensu.github.io/images/featured-post/83_feature_selection.png" class="img-fluid w-100 mb-4" alt="DP4ML - Feature Selection - Phần 2 - Select Categorical Input Features">
         
         <div class="content mb-5">
-          <p>Bài thứ 9 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp lựa chọn features đối với dữ liệu có Input Variance thuộc kiểu Categorical.</p>
-<h3 id="1-feature-selection-là-gì">1. Feature Selection là gì?</h3>
-<p>Feature Selection là quá trình giảm số lượng features khi phát triển các ML model. Việc làm này xuất phát từ 2 nguyên nhân chính:</p>
-<ul>
-<li>Giảm thời gian tính toán, huấn luyện mô hình.</li>
-<li>Tăng hiệu năng của các mô hình.</li>
-</ul>
-<p>Feature Selection, đôi khi hay bị hiểu nhầm thành Dimensionality Reduction. Thực ra, chúng đều là các công việc phải thực hiện trong quá trình chuẩn bị dữ liệu cho các ML model. Chúng vừa có sự giống nhau, vừa có sự khác nhau:</p>
-<ul>
-<li>Giống: Về bản chất, 2 cái đều giảm số lượng chiều của dữ liệu, từ cao xuống thấp.</li>
-<li>Khác: Feature Selection giảm chiều dữ liệu bằng cách loại bớt một số features không liên quan đi, chỉ giữ lại các features liên quan nhất đến mục đích cần dự đoán. Trong khi đó, Dimensionality Reduction giảm chiều dữ liệu bằng cách ánh xạ tất cả các features hiện có sang một miền không gian có số chiều nhỏ hơn miên không gian ban đầu. Đối với Feature Selection, các features còn lại đều là các features cũ, nằm trong số các features ban đầu. Còn đối với Dimentionality Reduction, các features còn lại đều là các features mới hoàn toàn.</li>
-</ul>
-<h3 id="2-các-phương-pháp-thực-hiện-feature-selection">2. Các phương pháp thực hiện Feature Selection</h3>
-<p>Có 2 phương pháp chính để thực hiện Feature Selection là: Supervised và Unsupervised.</p>
-<h4 id="21-supervised">2.1 Supervised</h4>
-<p>Đây là phương pháp Feature Selection mà có sử dụng đến Target Variable (<em>nhãn</em>). Nó lại được chia thành 3 loại nhỏ hơn:</p>
-<h5 id="a-intrinsic">a, Intrinsic</h5>
-<p>Là các thuật toán thực hiện Feature Selection trong quá trình huấn luyện mô hình.</p>
-<h5 id="b-filter">b, Filter</h5>
-<p>Loại này sẽ lựa chọn một tập nhỏ các features dựa trên mối quan hệ của các features đó với Target Variable. Để xác định mối quan hệ này, chúng ta có thể sử dụng một số phương pháp thống kê khác nhau (<em>sẽ được đề cập chi tiết bên dưới</em>). Nói chung, đây là cách thức được sử dụng rất rộng rãi để thực hiện Feature Selection.</p>
-<h5 id="c-wrapper">c, Wrapper</h5>
-<p>Wraper tạo ra nhiều tập con của các features, mỗi tập con đó được sử dụng để huấn luyện một mô hình riêng. Kết quả cuối cùng là tổng hợp của các models đó.</p>
-<h4 id="22-unsupervised">2.2 Unsupervised</h4>
-<p>Đây là phương pháp Feature Selection mà không sử dụng đến Target Variable.</p>
-<h3 id="3-các-phương-pháp-thống-kê-sử-dụng-cho-feature-selection">3. Các phương pháp thống kê sử dụng cho Feature Selection</h3>
-<p>Người ta thường sử dụng các phép đo thống kê kiểu tương quan giữa các biến đầu vào và đầu ra để làm cơ sở cho việc lựa chọn các features. Mỗi một kiểu dữ liệu sẽ có các phép đo tương ứng khác nhau. Có 2 kiểu dữ liệu thường gặp là <strong>numerical</strong> (<em>integer, float, &hellip;</em>) và <strong>categorical</strong> (<em>boolean, ordinal, nominal, &hellip;</em>).</p>
-<p>Chúng ta định nghĩa 2 khái niệm sau để thuận tiện sử dụng trong các bài viết thuộc chuỗi chủ đề Data Preparation này:</p>
-<ul>
-<li>Input Variable: Là tất cả các features có thể được sử dụng để huấn luyện mô hình.</li>
-<li>Ouput Variable: Là kết quả được dự đoán bởi mô hình. Nó còn có thể được gọi bằng cái tên khác là Target Variable.</li>
-</ul>
-<p>Sơ đồ cây dưới đây khái quát các phương pháp thống kê tương ứng với các kiểu của Input/Output Variable.</p>
+          <p>Bài thứ 9 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML. Trong bài này, chúng ta sẽ tìm hiểu phương pháp lựa chọn features đối với dữ liệu có Input Variance thuộc kiểu Categorical thông qua việc thực hành trên một bộ dữ liệu cụ thể.</p>
+<h3 id="1-breast-cancer-categorical-dataset">1. Breast Cancer Categorical Dataset</h3>
+<p><a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/breast-cancer.csv">Breast Cancer Categorical Dataset</a> là bộ dữ liệu thường được dùng cho việc nghiên cứu các thuật toán ML từ thập niên 80s. Nó bao gồm 286 mẫu dữ liệu đại diện cho các bệnh nhân, và 9 Input Variables. Thông tin về các Input Variables được miêu tả ở <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/breast-cancer.names">đây</a>. Đây là bài toán Binary Classification, mỗi bệnh nhân thuộc 1 trong 2 nhãn là có bệnh hoặc không có bệnh.</p>
+<p>Code dưới đây đọc vào dữ liệu, in ra một vài samples, chia dữ liệu thành Input/Output Variables, sau đó lại chia thành 2 tập train/test.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#75715e"># load the dataset</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_dataset</span>(filename):
+<span style="color:#75715e"># load the dataset</span>
+   data <span style="color:#f92672">=</span> read_csv(filename, header<span style="color:#f92672">=</span>None)
+   <span style="color:#75715e"># display some samples</span>
+   <span style="color:#66d9ef">print</span>(data<span style="color:#f92672">.</span>head())
+   <span style="color:#75715e"># retrieve array</span>
+   dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+   <span style="color:#75715e"># split into input and output variables</span>
+   X <span style="color:#f92672">=</span> dataset[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+   y <span style="color:#f92672">=</span> dataset[:,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+   <span style="color:#75715e"># format all fields as string</span>
+   X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(str)
+   <span style="color:#66d9ef">return</span> X, y
+   <span style="color:#75715e"># load the dataset</span>
+   X, y <span style="color:#f92672">=</span> load_dataset( <span style="color:#e6db74">&#39; breast-cancer.csv &#39;</span> )
+   <span style="color:#75715e"># split into train and test sets</span>
+   X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+   <span style="color:#75715e"># summarize</span>
+   <span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39; Train &#39;</span> , X_train<span style="color:#f92672">.</span>shape, y_train<span style="color:#f92672">.</span>shape
+   <span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39; Test &#39;</span> , X_test<span style="color:#f92672">.</span>shape, y_test<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">         <span style="color:#ae81ff">0</span>          <span style="color:#ae81ff">1</span>        <span style="color:#ae81ff">2</span>      <span style="color:#ae81ff">3</span>      <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">5</span>        <span style="color:#ae81ff">6</span>           <span style="color:#ae81ff">7</span>      <span style="color:#ae81ff">8</span>                       <span style="color:#ae81ff">9</span>
+<span style="color:#ae81ff">0</span>  <span style="color:#e6db74">&#39;40-49&#39;</span>  <span style="color:#e6db74">&#39;premeno&#39;</span>  <span style="color:#e6db74">&#39;15-19&#39;</span>  <span style="color:#e6db74">&#39;0-2&#39;</span>  <span style="color:#e6db74">&#39;yes&#39;</span>  <span style="color:#e6db74">&#39;3&#39;</span>  <span style="color:#e6db74">&#39;right&#39;</span>   <span style="color:#e6db74">&#39;left_up&#39;</span>   <span style="color:#e6db74">&#39;no&#39;</span>     <span style="color:#e6db74">&#39;recurrence-events&#39;</span>
+<span style="color:#ae81ff">1</span>  <span style="color:#e6db74">&#39;50-59&#39;</span>     <span style="color:#e6db74">&#39;ge40&#39;</span>  <span style="color:#e6db74">&#39;15-19&#39;</span>  <span style="color:#e6db74">&#39;0-2&#39;</span>   <span style="color:#e6db74">&#39;no&#39;</span>  <span style="color:#e6db74">&#39;1&#39;</span>  <span style="color:#e6db74">&#39;right&#39;</span>   <span style="color:#e6db74">&#39;central&#39;</span>   <span style="color:#e6db74">&#39;no&#39;</span>  <span style="color:#e6db74">&#39;no-recurrence-events&#39;</span>
+<span style="color:#ae81ff">2</span>  <span style="color:#e6db74">&#39;50-59&#39;</span>     <span style="color:#e6db74">&#39;ge40&#39;</span>  <span style="color:#e6db74">&#39;35-39&#39;</span>  <span style="color:#e6db74">&#39;0-2&#39;</span>   <span style="color:#e6db74">&#39;no&#39;</span>  <span style="color:#e6db74">&#39;2&#39;</span>   <span style="color:#e6db74">&#39;left&#39;</span>  <span style="color:#e6db74">&#39;left_low&#39;</span>   <span style="color:#e6db74">&#39;no&#39;</span>     <span style="color:#e6db74">&#39;recurrence-events&#39;</span>
+<span style="color:#ae81ff">3</span>  <span style="color:#e6db74">&#39;40-49&#39;</span>  <span style="color:#e6db74">&#39;premeno&#39;</span>  <span style="color:#e6db74">&#39;35-39&#39;</span>  <span style="color:#e6db74">&#39;0-2&#39;</span>  <span style="color:#e6db74">&#39;yes&#39;</span>  <span style="color:#e6db74">&#39;3&#39;</span>  <span style="color:#e6db74">&#39;right&#39;</span>  <span style="color:#e6db74">&#39;left_low&#39;</span>  <span style="color:#e6db74">&#39;yes&#39;</span>  <span style="color:#e6db74">&#39;no-recurrence-events&#39;</span>
+<span style="color:#ae81ff">4</span>  <span style="color:#e6db74">&#39;40-49&#39;</span>  <span style="color:#e6db74">&#39;premeno&#39;</span>  <span style="color:#e6db74">&#39;30-34&#39;</span>  <span style="color:#e6db74">&#39;3-5&#39;</span>  <span style="color:#e6db74">&#39;yes&#39;</span>  <span style="color:#e6db74">&#39;2&#39;</span>   <span style="color:#e6db74">&#39;left&#39;</span>  <span style="color:#e6db74">&#39;right_up&#39;</span>   <span style="color:#e6db74">&#39;no&#39;</span>     <span style="color:#e6db74">&#39;recurrence-events&#39;</span>
+Train (<span style="color:#ae81ff">191</span>, <span style="color:#ae81ff">9</span>) (<span style="color:#ae81ff">191</span>,)
+Test (<span style="color:#ae81ff">95</span>, <span style="color:#ae81ff">9</span>) (<span style="color:#ae81ff">95</span>,)
+</code></pre></div><h3 id="2-transform-data">2. Transform Data</h3>
+<p>Có thể nhận ra rằng, tất cả Input Variables đều có dạng Categorical. Vì thế chúng ta cần chuyển chúng sang dạng Integer để model có thể học được. Lớp <em>OridinalEncoder</em> trong Scikit-learn giúp chúng ta thực hiện việc này.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># prepare input data</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_inputs</span>(X_train, X_test):
+   oe <span style="color:#f92672">=</span> OrdinalEncoder()
+   oe<span style="color:#f92672">.</span>fit(X_train)
+   X_train_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_train)
+   X_test_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_test)
+<span style="color:#66d9ef">return</span> X_train_enc, X_test_enc
+</code></pre></div><p>Output Variable cũng phải chuyển sang Integer. Vì đây là bài toán Binary Classification nên ánh xạ hai nhãn thành 0 và 1. Sử dụng lớp <em>LabelEncoder</em> của Scikit-learn để thực hiện.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># prepare target</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_targets</span>(y_train, y_test):
+   le <span style="color:#f92672">=</span> LabelEncoder()
+   le<span style="color:#f92672">.</span>fit(y_train)
+   y_train_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_train)
+   y_test_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_test)
+   <span style="color:#66d9ef">return</span> y_train_enc, y_test_enc
+</code></pre></div><p>Code đầy đủ như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of loading and preparing the breast cancer dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> OrdinalEncoder
+
+<span style="color:#75715e"># load the dataset</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_dataset</span>(filename):
+	<span style="color:#75715e"># load the dataset</span>
+	data <span style="color:#f92672">=</span> read_csv(filename, header<span style="color:#f92672">=</span>None)
+	<span style="color:#75715e"># retrieve array</span>
+	dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+	<span style="color:#75715e"># split into input and output variables</span>
+	X <span style="color:#f92672">=</span> dataset[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	y <span style="color:#f92672">=</span> dataset[:,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	<span style="color:#75715e"># format all fields as string</span>
+	X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(str)
+	<span style="color:#66d9ef">return</span> X, y
+
+<span style="color:#75715e"># prepare input data</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_inputs</span>(X_train, X_test):
+	oe <span style="color:#f92672">=</span> OrdinalEncoder()
+	oe<span style="color:#f92672">.</span>fit(X_train)
+	X_train_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_train)
+	X_test_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_enc, X_test_enc
+
+<span style="color:#75715e"># prepare target</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_targets</span>(y_train, y_test):
+	le <span style="color:#f92672">=</span> LabelEncoder()
+	le<span style="color:#f92672">.</span>fit(y_train)
+	y_train_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_train)
+	y_test_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_test)
+	<span style="color:#66d9ef">return</span> y_train_enc, y_test_enc
+
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> load_dataset(<span style="color:#e6db74">&#39;breast-cancer.csv&#39;</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># prepare input data</span>
+X_train_enc, X_test_enc <span style="color:#f92672">=</span> prepare_inputs(X_train, X_test)
+<span style="color:#75715e"># prepare output data</span>
+y_train_enc, y_test_enc <span style="color:#f92672">=</span> prepare_targets(y_train, y_test)
+<span style="color:#75715e"># summarize</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Train&#39;</span>, X_train_enc<span style="color:#f92672">.</span>shape, y_train_enc<span style="color:#f92672">.</span>shape)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Test&#39;</span>, X_test_enc<span style="color:#f92672">.</span>shape, y_test_enc<span style="color:#f92672">.</span>shape)
+</code></pre></div><h3 id="3-categorical-feature-selection">3. Categorical Feature Selection</h3>
+<p>Có 2 kỹ thuật có thể áp dụng cho Input Variables dạng Categorical trong việc Feature Selection là <em>Chi-Squared Statistic</em> và <em>Mutual Information Statistic</em>.</p>
+<h4 id="31-chi-squared-statistic">3.1 Chi-Squared Statistic</h4>
+<p>Chi-Squared Statistic - Kiểm định giả thuyết thống kê chi bình phương ($\chi^2$) là một ví dụ về kiểm định tính độc lập giữa các biến phân loại. Kết quả của thử nghiệm này có thể được sử dụng để lựa chọn các Input Variables. Nếu Input Variables độc lập với Output Variables thì chúng có thể bị xóa khỏi tập dữ liệu.</p>
+<p>Scikit-learn thực hiện Chi-Squared Statistic thông qua hàm <em>chi2()</em>. Kết hợp với hàm <em>SelectKBest()</em>, ta có thể lựa chọn được các features mong muốn như code dưới đây:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>chi2, k<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>)
+fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+</code></pre></div><p>Muốn biêt và so sánh Score của mỗi feature, chúng ta có thể thể hiện chúng lên đồ thị. Score càng lớn càng tốt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># what are scores for the features</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fs<span style="color:#f92672">.</span>scores_)):
+   <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i, fs<span style="color:#f92672">.</span>scores_[i]))
+<span style="color:#75715e"># plot the scores</span>
+pyplot<span style="color:#f92672">.</span>bar([i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fs<span style="color:#f92672">.</span>scores_))], fs<span style="color:#f92672">.</span>scores_)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Code đầy đủ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of chi squared feature selection for categorical data</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> OrdinalEncoder
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectKBest
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> chi2
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+
+<span style="color:#75715e"># load the dataset</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_dataset</span>(filename):
+	<span style="color:#75715e"># load the dataset as a pandas DataFrame</span>
+	data <span style="color:#f92672">=</span> read_csv(filename, header<span style="color:#f92672">=</span>None)
+	<span style="color:#75715e"># retrieve numpy array</span>
+	dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+	<span style="color:#75715e"># split into input (X) and output (y) variables</span>
+	X <span style="color:#f92672">=</span> dataset[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	y <span style="color:#f92672">=</span> dataset[:,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	<span style="color:#75715e"># format all fields as string</span>
+	X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(str)
+	<span style="color:#66d9ef">return</span> X, y
+
+<span style="color:#75715e"># prepare input data</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_inputs</span>(X_train, X_test):
+	oe <span style="color:#f92672">=</span> OrdinalEncoder()
+	oe<span style="color:#f92672">.</span>fit(X_train)
+	X_train_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_train)
+	X_test_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_enc, X_test_enc
+
+<span style="color:#75715e"># prepare target</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_targets</span>(y_train, y_test):
+	le <span style="color:#f92672">=</span> LabelEncoder()
+	le<span style="color:#f92672">.</span>fit(y_train)
+	y_train_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_train)
+	y_test_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_test)
+	<span style="color:#66d9ef">return</span> y_train_enc, y_test_enc
+
+<span style="color:#75715e"># feature selection</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_features</span>(X_train, y_train, X_test):
+	fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>chi2, k<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>)
+	fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+	X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+	X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_fs, X_test_fs, fs
+
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> load_dataset(<span style="color:#e6db74">&#39;breast-cancer.csv&#39;</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># prepare input data</span>
+X_train_enc, X_test_enc <span style="color:#f92672">=</span> prepare_inputs(X_train, X_test)
+<span style="color:#75715e"># prepare output data</span>
+y_train_enc, y_test_enc <span style="color:#f92672">=</span> prepare_targets(y_train, y_test)
+<span style="color:#75715e"># feature selection</span>
+X_train_fs, X_test_fs, fs <span style="color:#f92672">=</span> select_features(X_train_enc, y_train_enc, X_test_enc)
+<span style="color:#75715e"># what are scores for the features</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fs<span style="color:#f92672">.</span>scores_)):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i, fs<span style="color:#f92672">.</span>scores_[i]))
+<span style="color:#75715e"># plot the scores</span>
+pyplot<span style="color:#f92672">.</span>bar([i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fs<span style="color:#f92672">.</span>scores_))], fs<span style="color:#f92672">.</span>scores_)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature <span style="color:#ae81ff">0</span>: <span style="color:#ae81ff">0.472553</span>
+Feature <span style="color:#ae81ff">1</span>: <span style="color:#ae81ff">0.029193</span>
+Feature <span style="color:#ae81ff">2</span>: <span style="color:#ae81ff">2.137658</span>
+Feature <span style="color:#ae81ff">3</span>: <span style="color:#ae81ff">29.381059</span>
+Feature <span style="color:#ae81ff">4</span>: <span style="color:#ae81ff">8.222601</span>
+Feature <span style="color:#ae81ff">5</span>: <span style="color:#ae81ff">8.100183</span>
+Feature <span style="color:#ae81ff">6</span>: <span style="color:#ae81ff">1.273822</span>
+Feature <span style="color:#ae81ff">7</span>: <span style="color:#ae81ff">0.950682</span>
+Feature <span style="color:#ae81ff">8</span>: <span style="color:#ae81ff">3.699989</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/83_feature_selection_1.png">
+   </div>
 
 
-<div style="text-align:center">
-   <img style="height:auto" src="/images/post/82_feature_selection_1.png">
-</div>
+<p>Theo kết quả này thì có lẽ 4/9 feature <em>liên quan</em> nhất đến Output Variables là các features 3, 4, 5, 8. Do đó, ta sẽ chọn <em>k=4</em> để lấy ra 4 features này.</p>
+<h4 id="32-mutual-information-feature-selection">3.2 Mutual Information Feature Selection</h4>
+<p>Mutual Information xuất phát từ lĩnh vực Lý thuyết Thông tin. Nó đo đặc mức độ suy giảm của một biến khi đã biết giá trị của một biến khác. Trong Scikit-learn, Mutual Information được implement trong hàm <em>mutual info classif()</em>. Cách sử dụng cũng tương tự như Chi-Squared Statistic.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># feature selection</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_features</span>(X_train, y_train, X_test):
+	fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>mutual_info_classif, k<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>)
+	fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+	X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+	X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_fs, X_test_fs, fs
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature <span style="color:#ae81ff">0</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">1</span>: <span style="color:#ae81ff">0.045906</span>
+Feature <span style="color:#ae81ff">2</span>: <span style="color:#ae81ff">0.063114</span>
+Feature <span style="color:#ae81ff">3</span>: <span style="color:#ae81ff">0.018165</span>
+Feature <span style="color:#ae81ff">4</span>: <span style="color:#ae81ff">0.007357</span>
+Feature <span style="color:#ae81ff">5</span>: <span style="color:#ae81ff">0.041046</span>
+Feature <span style="color:#ae81ff">6</span>: <span style="color:#ae81ff">0.049755</span>
+Feature <span style="color:#ae81ff">7</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">8</span>: <span style="color:#ae81ff">0.024087</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/83_feature_selection_2.png">
+   </div>
 
 
-<p>Nãy giờ chúng ta mới chỉ đề cập đến phương pháp thống kê cho dữ liệu thuộc một trong hai kiểu Numerical hoặc Categorical. Nhưng trong thực tế, bộ dữ liệu của chúng ta có thể bao gồm cả 2 loại đó. Khi gặp tình huống như vậy, chúng ta phải sử dụng thuật toán <em>ColumnTransformer</em>. Chúng ta sẽ tìm hiểu thuật toán này trong các bài về sau trong cùng chủ đề Data Preparation này.</p>
-<h3 id="4-kết-luận">4. Kết luận</h3>
-<p>OK, bài đầu tiên về Feature Selection chỉ ngắn như vậy thôi. Mình đã giới thiệu khái quát qua về Feature Selection để cho các bạn có cái nhìn tổng thể về nó. Trong các bài tiếp theo, mình sẽ đi chi tiết vào từng phương pháp. Mời các bạn đón đọc.</p>
-<h3 id="5-tham-khảo">5. Tham khảo</h3>
+<p>Theo Mutual Information thì các features 2, 3, 5, 6 có mức độ <em>liên quan</em> đến Output Variables nhất. Chọn <em>k=4</em>.</p>
+<h3 id="4-modeling-with-selected-features">4. Modeling With Selected Features</h3>
+<p>Sử dụng 2 kỹ thuật bên trên, chúng ta sẽ đi đánh giá độ chính xác của Logistic Regression model trên tập dữ liệu Breast Cancer Categorical Dataset.</p>
+<h4 id="41-model-built-using-all-features">4.1 Model Built using All Features</h4>
+<p>Đầu tiên, chúng ta sẽ xây dựng Base model làm cơ sở để so sánh, đánh giá. Các model về sau được mong đợi phải có độ chính xác cao hơn độ chính xác của Base model này.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluation of a model using all input features</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> OrdinalEncoder
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LogisticRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+
+<span style="color:#75715e"># load the dataset</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_dataset</span>(filename):
+	<span style="color:#75715e"># load the dataset as a pandas DataFrame</span>
+	data <span style="color:#f92672">=</span> read_csv(filename, header<span style="color:#f92672">=</span>None)
+	<span style="color:#75715e"># retrieve numpy array</span>
+	dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+	<span style="color:#75715e"># split into input (X) and output (y) variables</span>
+	X <span style="color:#f92672">=</span> dataset[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	y <span style="color:#f92672">=</span> dataset[:,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	<span style="color:#75715e"># format all fields as string</span>
+	X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(str)
+	<span style="color:#66d9ef">return</span> X, y
+
+<span style="color:#75715e"># prepare input data</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_inputs</span>(X_train, X_test):
+	oe <span style="color:#f92672">=</span> OrdinalEncoder()
+	oe<span style="color:#f92672">.</span>fit(X_train)
+	X_train_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_train)
+	X_test_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_enc, X_test_enc
+
+<span style="color:#75715e"># prepare target</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_targets</span>(y_train, y_test):
+	le <span style="color:#f92672">=</span> LabelEncoder()
+	le<span style="color:#f92672">.</span>fit(y_train)
+	y_train_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_train)
+	y_test_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_test)
+	<span style="color:#66d9ef">return</span> y_train_enc, y_test_enc
+
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> load_dataset(<span style="color:#e6db74">&#39;breast-cancer.csv&#39;</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># prepare input data</span>
+X_train_enc, X_test_enc <span style="color:#f92672">=</span> prepare_inputs(X_train, X_test)
+<span style="color:#75715e"># prepare output data</span>
+y_train_enc, y_test_enc <span style="color:#f92672">=</span> prepare_targets(y_train, y_test)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LogisticRegression(solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
+model<span style="color:#f92672">.</span>fit(X_train_enc, y_train_enc)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test_enc)
+<span style="color:#75715e"># evaluate predictions</span>
+accuracy <span style="color:#f92672">=</span> accuracy_score(y_test_enc, yhat)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">75.79</span>
+</code></pre></div><h4 id="42-model-built-using-chi-squared-features">4.2 Model Built Using Chi-Squared Features</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluation of a model fit using chi squared input features</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> OrdinalEncoder
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectKBest
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> chi2
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LogisticRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+
+<span style="color:#75715e"># load the dataset</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_dataset</span>(filename):
+	<span style="color:#75715e"># load the dataset as a pandas DataFrame</span>
+	data <span style="color:#f92672">=</span> read_csv(filename, header<span style="color:#f92672">=</span>None)
+	<span style="color:#75715e"># retrieve numpy array</span>
+	dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+	<span style="color:#75715e"># split into input (X) and output (y) variables</span>
+	X <span style="color:#f92672">=</span> dataset[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	y <span style="color:#f92672">=</span> dataset[:,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	<span style="color:#75715e"># format all fields as string</span>
+	X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(str)
+	<span style="color:#66d9ef">return</span> X, y
+
+<span style="color:#75715e"># prepare input data</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_inputs</span>(X_train, X_test):
+	oe <span style="color:#f92672">=</span> OrdinalEncoder()
+	oe<span style="color:#f92672">.</span>fit(X_train)
+	X_train_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_train)
+	X_test_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_enc, X_test_enc
+
+<span style="color:#75715e"># prepare target</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_targets</span>(y_train, y_test):
+	le <span style="color:#f92672">=</span> LabelEncoder()
+	le<span style="color:#f92672">.</span>fit(y_train)
+	y_train_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_train)
+	y_test_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_test)
+	<span style="color:#66d9ef">return</span> y_train_enc, y_test_enc
+
+<span style="color:#75715e"># feature selection</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_features</span>(X_train, y_train, X_test):
+	fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>chi2, k<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+	fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+	X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+	X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_fs, X_test_fs
+
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> load_dataset(<span style="color:#e6db74">&#39;breast-cancer.csv&#39;</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># prepare input data</span>
+X_train_enc, X_test_enc <span style="color:#f92672">=</span> prepare_inputs(X_train, X_test)
+<span style="color:#75715e"># prepare output data</span>
+y_train_enc, y_test_enc <span style="color:#f92672">=</span> prepare_targets(y_train, y_test)
+<span style="color:#75715e"># feature selection</span>
+X_train_fs, X_test_fs <span style="color:#f92672">=</span> select_features(X_train_enc, y_train_enc, X_test_enc)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LogisticRegression(solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
+model<span style="color:#f92672">.</span>fit(X_train_fs, y_train_enc)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test_fs)
+<span style="color:#75715e"># evaluate predictions</span>
+accuracy <span style="color:#f92672">=</span> accuracy_score(y_test_enc, yhat)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">74.74</span>
+</code></pre></div><h4 id="43-model-built-using-mutual-information-features">4.3 Model Built Using Mutual Information Features</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluation of a model fit using mutual information input features</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> OrdinalEncoder
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectKBest
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> mutual_info_classif
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LogisticRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+
+<span style="color:#75715e"># load the dataset</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_dataset</span>(filename):
+	<span style="color:#75715e"># load the dataset as a pandas DataFrame</span>
+	data <span style="color:#f92672">=</span> read_csv(filename, header<span style="color:#f92672">=</span>None)
+	<span style="color:#75715e"># retrieve numpy array</span>
+	dataset <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values
+	<span style="color:#75715e"># split into input (X) and output (y) variables</span>
+	X <span style="color:#f92672">=</span> dataset[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	y <span style="color:#f92672">=</span> dataset[:,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	<span style="color:#75715e"># format all fields as string</span>
+	X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(str)
+	<span style="color:#66d9ef">return</span> X, y
+
+<span style="color:#75715e"># prepare input data</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_inputs</span>(X_train, X_test):
+	oe <span style="color:#f92672">=</span> OrdinalEncoder()
+	oe<span style="color:#f92672">.</span>fit(X_train)
+	X_train_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_train)
+	X_test_enc <span style="color:#f92672">=</span> oe<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_enc, X_test_enc
+
+<span style="color:#75715e"># prepare target</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_targets</span>(y_train, y_test):
+	le <span style="color:#f92672">=</span> LabelEncoder()
+	le<span style="color:#f92672">.</span>fit(y_train)
+	y_train_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_train)
+	y_test_enc <span style="color:#f92672">=</span> le<span style="color:#f92672">.</span>transform(y_test)
+	<span style="color:#66d9ef">return</span> y_train_enc, y_test_enc
+
+<span style="color:#75715e"># feature selection</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_features</span>(X_train, y_train, X_test):
+	fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>mutual_info_classif, k<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+	fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+	X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+	X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_fs, X_test_fs
+
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> load_dataset(<span style="color:#e6db74">&#39;breast-cancer.csv&#39;</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># prepare input data</span>
+X_train_enc, X_test_enc <span style="color:#f92672">=</span> prepare_inputs(X_train, X_test)
+<span style="color:#75715e"># prepare output data</span>
+y_train_enc, y_test_enc <span style="color:#f92672">=</span> prepare_targets(y_train, y_test)
+<span style="color:#75715e"># feature selection</span>
+X_train_fs, X_test_fs <span style="color:#f92672">=</span> select_features(X_train_enc, y_train_enc, X_test_enc)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LogisticRegression(solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lbfgs&#39;</span>)
+model<span style="color:#f92672">.</span>fit(X_train_fs, y_train_enc)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test_fs)
+<span style="color:#75715e"># evaluate predictions</span>
+accuracy <span style="color:#f92672">=</span> accuracy_score(y_test_enc, yhat)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">76.84</span>
+</code></pre></div><p>Theo các kết quả thu được từ 3 lần thí nghiệm thì có thể thấy rằng Mutual Information mang lại kết quả tốt nhất. Để kết quả được <em>tin cậy</em> hơn, bạn có thể sử dụng k-Fold Cross-Validation thay vì chỉ chia Train/Test thông thường.</p>
+<h3 id="5-kết-luận">5. Kết luận</h3>
+<p>Bài thứ 2 về chủ đề Feature Selection, mình đã giới thiệu 2 kỹ thuật Chi-Squared Statistic và Mutual Information áp dụng cho Input Variables dạng Categorical. Bài tiếp theo sẽ là các kỹ thuật Feature Selection áp dụng cho Input Variables dạng Numerical. Mời các bạn đón đọc.</p>
+<h3 id="6-tham-khảo">6. Tham khảo</h3>
 <p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
 
         </div>

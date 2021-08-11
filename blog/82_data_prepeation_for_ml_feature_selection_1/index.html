@@ -161,7 +161,7 @@
           <span>By SuNT</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>15 July 2021</span>
+          <span>20 June 2021</span>
           
         </div>
         
@@ -196,8 +196,8 @@
 <p>Người ta thường sử dụng các phép đo thống kê kiểu tương quan giữa các biến đầu vào và đầu ra để làm cơ sở cho việc lựa chọn các features. Mỗi một kiểu dữ liệu sẽ có các phép đo tương ứng khác nhau. Có 2 kiểu dữ liệu thường gặp là <strong>numerical</strong> (<em>integer, float, &hellip;</em>) và <strong>categorical</strong> (<em>boolean, ordinal, nominal, &hellip;</em>).</p>
 <p>Chúng ta định nghĩa 2 khái niệm sau để thuận tiện sử dụng trong các bài viết thuộc chuỗi chủ đề Data Preparation này:</p>
 <ul>
-<li>Input Variable: Là tất cả các features có thể được sử dụng để huấn luyện mô hình.</li>
-<li>Ouput Variable: Là kết quả được dự đoán bởi mô hình. Nó còn có thể được gọi bằng cái tên khác là Target Variable.</li>
+<li>Input Variable: Là tất cả các features có thể được sử dụng để huấn luyện mô hình. Có thể gọi bằng những cái tên Input Variables, Features, Input Features.</li>
+<li>Ouput Variable: Là kết quả được dự đoán bởi mô hình. Nó còn có thể được gọi bằng cái tên khác là Target Variable, Target.</li>
 </ul>
 <p>Sơ đồ cây dưới đây khái quát các phương pháp thống kê tương ứng với các kiểu của Input/Output Variable.</p>
 
@@ -207,10 +207,20 @@
 </div>
 
 
+<p>Chúng ta sẽ lần lượt tìm hiểu những thuật toán này trong các bài viết tiếp theo.</p>
 <p>Nãy giờ chúng ta mới chỉ đề cập đến phương pháp thống kê cho dữ liệu thuộc một trong hai kiểu Numerical hoặc Categorical. Nhưng trong thực tế, bộ dữ liệu của chúng ta có thể bao gồm cả 2 loại đó. Khi gặp tình huống như vậy, chúng ta phải sử dụng thuật toán <em>ColumnTransformer</em>. Chúng ta sẽ tìm hiểu thuật toán này trong các bài về sau trong cùng chủ đề Data Preparation này.</p>
-<h3 id="4-kết-luận">4. Kết luận</h3>
+<h3 id="4-một-số-câu-hỏi-thường-gặp">4. Một số câu hỏi thường gặp</h3>
+<h4 id="41-làm-cách-nào-để-chọn-ra-được-những-input-variables-cần-thiết">4.1 Làm cách nào để chọn ra được những Input Variables cần thiết?</h4>
+<p>Trả lời:</p>
+<ul>
+<li>Sắp xếp các Input Variables theo thứ tự giảm dần của Score hoặc Percentage (<em>cụ thể Score và Percentage là gì thì phụ thuộc vào thuật toán sử dụng</em>).</li>
+<li>Lựa chọn các Input Variables mong muốn sử dụng một trong hai classes của thư viện Scikit-learn: SelectKbest (<em>sử dụng cho Score</em>), SelectPercentile (<em>sử dụng cho Percentage</em>).</li>
+</ul>
+<h4 id="42-làm-thế-nào-biết-được-phương-pháp-feature-selection-nào-là-tốt-nhất">4.2 Làm thế nào biết được phương pháp Feature Selection nào là tốt nhất?</h4>
+<p>Trả lời: Không thể biết trước. Bạn phải dựa vào kinh nghiệm, sự hiểu biết về bài toán, cũng như ưu/nhược điểm của các thuật toán. Nếu vẫn không thể chọn được thì sử dụng phương án <em>thử-sai</em>, tức chọn một số phương pháp khả dĩ, rồi so sánh kết quả của chúng với nhau.</p>
+<h3 id="5-kết-luận">5. Kết luận</h3>
 <p>OK, bài đầu tiên về Feature Selection chỉ ngắn như vậy thôi. Mình đã giới thiệu khái quát qua về Feature Selection để cho các bạn có cái nhìn tổng thể về nó. Trong các bài tiếp theo, mình sẽ đi chi tiết vào từng phương pháp. Mời các bạn đón đọc.</p>
-<h3 id="5-tham-khảo">5. Tham khảo</h3>
+<h3 id="6-tham-khảo">6. Tham khảo</h3>
 <p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
 
         </div>

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/data-preparation"
+          class="text-primary">Data Preparation</a>
+        
+        <h2>DP4ML - Data Transform - Phần 3 - How to Make Distributions More Gaussian</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>22 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/94_data_transforms.jpg" class="img-fluid w-100 mb-4" alt="DP4ML - Data Transform - Phần 3 - How to Make Distributions More Gaussian">
+        
+        <div class="content mb-5">
+          <p>Bài thứ 16 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 3 về về Data Transforms. Trong bài này, chúng ta sẽ tìm hiểu cách thức thực hiện Transforms làm cho phân phối của các features trở nên gần với Gaussian hơn. Chúng ta cũng sẽ thực hành trên bộ dữ liệu thực tế.</p>
+<h3 id="1-make-data-more-gaussian">1. Make Data More Gaussian</h3>
+<p>Các thuật toán ML như Linear Regression, Gaussian Naive Bayes giả định các features có phân phối xác suất Gaussian. Trong khi đó, dữ liệu của bạn có thể không có phân phối Gaussian hoặc chỉ gần giống Gaussian do có giá trị outlier. Nếu chúng ta có thể làm cho phân phối của dữ liệu gần với Gaussian hơn thì độ chính xác của mô hình có thể được tăng lên đáng kể. Power Transform như Box-Cox transform và Yeo-Johnson transform, Quantile Transforms như Normal Quantile transform và Uniform Quantile transform là các giải pháp tự động giúp bạn thực hiện các biến đổi này.</p>
+<h4 id="11-ví-dụ-sử-dụng-power-transforms-trong-scikit-learn">1.1 Ví dụ sử dụng Power Transforms trong scikit-learn</h4>
+<p>Power Transforms được cung cấp trong thư viện scikit-learn thông qua lớp <em>PowerTransformer()</em>. Tham số <em>method</em> sẽ chỉ ra phương pháp thực hiện Power Transforms là Box-Cox hay Yeo-Johnson.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># demonstration of the power transform on data with a skew</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> exp
+<span style="color:#f92672">from</span> numpy.random <span style="color:#f92672">import</span> randn
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> PowerTransformer
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># generate gaussian data sample</span>
+data <span style="color:#f92672">=</span> randn(<span style="color:#ae81ff">1000</span>)
+<span style="color:#75715e"># add a skew to the data distribution</span>
+data <span style="color:#f92672">=</span> exp(data)
+<span style="color:#75715e"># histogram of the raw data with a skew</span>
+pyplot<span style="color:#f92672">.</span>hist(data, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>)
+pyplot<span style="color:#f92672">.</span>show()
+<span style="color:#75715e"># reshape data to have rows and columns</span>
+data <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>reshape((len(data),<span style="color:#ae81ff">1</span>))
+<span style="color:#75715e"># power transform the raw data</span>
+power <span style="color:#f92672">=</span> PowerTransformer(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;yeo-johnson&#39;</span>, standardize<span style="color:#f92672">=</span>True)
+data_trans <span style="color:#f92672">=</span> power<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># histogram of the transformed data</span>
+pyplot<span style="color:#f92672">.</span>hist(data_trans, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><ul>
+<li>Phân phối dữ liệu ban đầu:</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_1.png">
+   </div>
+
+
+<ul>
+<li>Phân phối dữ liệu sau khi thực hiện Power Transforms</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_2.png">
+   </div>
+
+
+<h4 id="12-ví-dụ-sử-dụng-quantile-transforms-trong-scikit-learn">1.2 Ví dụ sử dụng Quantile Transforms trong scikit-learn</h4>
+<p>Quantile Transforms được cung cấp trong thư viện scikit-learn thông qua lớp <em>QuantileTransformer()</em>. Tham số <em>output_distribution</em> sẽ chỉ ra phương pháp thực hiện Power Transforms là normal hay uniform. Tham số <em>n_quantiles</em> chỉ ra số lượng <em>quantile</em> sử dụng, nó không được lớn hơn số lượng mẫu trong dataset.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># demonstration of the quantile transform</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> exp
+<span style="color:#f92672">from</span> numpy.random <span style="color:#f92672">import</span> randn
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> QuantileTransformer
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># generate gaussian data sample</span>
+data <span style="color:#f92672">=</span> randn(<span style="color:#ae81ff">1000</span>)
+<span style="color:#75715e"># add a skew to the data distribution</span>
+data <span style="color:#f92672">=</span> exp(data)
+<span style="color:#75715e"># histogram of the raw data with a skew</span>
+pyplot<span style="color:#f92672">.</span>hist(data, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>)
+pyplot<span style="color:#f92672">.</span>show()
+<span style="color:#75715e"># reshape data to have rows and columns</span>
+data <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>reshape((len(data),<span style="color:#ae81ff">1</span>))
+<span style="color:#75715e"># quantile transform the raw data</span>
+quantile <span style="color:#f92672">=</span> QuantileTransformer(output_distribution<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;normal&#39;</span>)
+data_trans <span style="color:#f92672">=</span> quantile<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># histogram of the transformed data</span>
+pyplot<span style="color:#f92672">.</span>hist(data_trans, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><ul>
+<li>Phân phối dữ liệu ban đầu</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_6.png">
+   </div>
+
+
+<ul>
+<li>Phân phối dữ liệu sau khi thực hiện Quantile Transforms</li>
+</ul>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_7.png">
+   </div>
+
+
+<p>Ta thấy, dữ liệu trước và sau khi thực hiện Transforms đã có sự biến đổi rõ rệt. Dữ liệu ban đầu có phân phối lệch hẳn về bên trái, còn dữ liệu sau có phân phối tương đối Gaussian với mean ~ 0 và std ~ 1.</p>
+<h3 id="2-thực-hành-power-transforms">2. Thực hành Power Transforms</h3>
+<h4 id="21-sonar-dataset">2.1 Sonar Dataset</h4>
+<p>Sonar Dataset là bộ dữ liệu cho bài toán Binary Classification. Nó gồm 208 mẫu dữ liệu, mỗi mẫu có 60 features và 1 target. Baseline model đạt được độ chính xác là 53.4%. 88% là độ chính xác cao nhất có thể đạt được trên tập dữ liệu này đến hiện tại. Bạn có thể download và tìm hiểu thêm về nó tại <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/sonar.csv">đây</a> và tại <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/sonar.names">đây</a>.</p>
+<p>Load và kiểm tra thử tập dữ liệu này:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># load and summarize the sonar dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># summarize the shape of the dataset</span>
+<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>shape)
+<span style="color:#75715e"># summarize each variable</span>
+<span style="color:#66d9ef">print</span>(dataset<span style="color:#f92672">.</span>describe())
+<span style="color:#75715e"># histograms of the variables</span>
+fig <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>hist(xlabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, ylabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+[x<span style="color:#f92672">.</span>title<span style="color:#f92672">.</span>set_size(<span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> fig<span style="color:#f92672">.</span>ravel()]
+<span style="color:#75715e"># show the plot</span>
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(<span style="color:#ae81ff">208</span>, <span style="color:#ae81ff">61</span>)
+               <span style="color:#ae81ff">0</span>           <span style="color:#ae81ff">1</span>           <span style="color:#ae81ff">2</span>           <span style="color:#ae81ff">3</span>           <span style="color:#ae81ff">4</span>           <span style="color:#ae81ff">5</span>           <span style="color:#ae81ff">6</span>           <span style="color:#ae81ff">7</span>   <span style="color:#f92672">...</span>          <span style="color:#ae81ff">52</span>          <span style="color:#ae81ff">53</span>          <span style="color:#ae81ff">54</span>          <span style="color:#ae81ff">55</span>          <span style="color:#ae81ff">56</span>          <span style="color:#ae81ff">57</span>          <span style="color:#ae81ff">58</span>          <span style="color:#ae81ff">59</span>
+count  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#f92672">...</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>  <span style="color:#ae81ff">208.000000</span>
+mean     <span style="color:#ae81ff">0.029164</span>    <span style="color:#ae81ff">0.038437</span>    <span style="color:#ae81ff">0.043832</span>    <span style="color:#ae81ff">0.053892</span>    <span style="color:#ae81ff">0.075202</span>    <span style="color:#ae81ff">0.104570</span>    <span style="color:#ae81ff">0.121747</span>    <span style="color:#ae81ff">0.134799</span>  <span style="color:#f92672">...</span>    <span style="color:#ae81ff">0.010709</span>    <span style="color:#ae81ff">0.010941</span>    <span style="color:#ae81ff">0.009290</span>    <span style="color:#ae81ff">0.008222</span>    <span style="color:#ae81ff">0.007820</span>    <span style="color:#ae81ff">0.007949</span>    <span style="color:#ae81ff">0.007941</span>    <span style="color:#ae81ff">0.006507</span>
+std      <span style="color:#ae81ff">0.022991</span>    <span style="color:#ae81ff">0.032960</span>    <span style="color:#ae81ff">0.038428</span>    <span style="color:#ae81ff">0.046528</span>    <span style="color:#ae81ff">0.055552</span>    <span style="color:#ae81ff">0.059105</span>    <span style="color:#ae81ff">0.061788</span>    <span style="color:#ae81ff">0.085152</span>  <span style="color:#f92672">...</span>    <span style="color:#ae81ff">0.007060</span>    <span style="color:#ae81ff">0.007301</span>    <span style="color:#ae81ff">0.007088</span>    <span style="color:#ae81ff">0.005736</span>    <span style="color:#ae81ff">0.005785</span>    <span style="color:#ae81ff">0.006470</span>    <span style="color:#ae81ff">0.006181</span>    <span style="color:#ae81ff">0.005031</span>
+min      <span style="color:#ae81ff">0.001500</span>    <span style="color:#ae81ff">0.000600</span>    <span style="color:#ae81ff">0.001500</span>    <span style="color:#ae81ff">0.005800</span>    <span style="color:#ae81ff">0.006700</span>    <span style="color:#ae81ff">0.010200</span>    <span style="color:#ae81ff">0.003300</span>    <span style="color:#ae81ff">0.005500</span>  <span style="color:#f92672">...</span>    <span style="color:#ae81ff">0.000500</span>    <span style="color:#ae81ff">0.001000</span>    <span style="color:#ae81ff">0.000600</span>    <span style="color:#ae81ff">0.000400</span>    <span style="color:#ae81ff">0.000300</span>    <span style="color:#ae81ff">0.000300</span>    <span style="color:#ae81ff">0.000100</span>    <span style="color:#ae81ff">0.000600</span>
+<span style="color:#ae81ff">25</span><span style="color:#f92672">%</span>      <span style="color:#ae81ff">0.013350</span>    <span style="color:#ae81ff">0.016450</span>    <span style="color:#ae81ff">0.018950</span>    <span style="color:#ae81ff">0.024375</span>    <span style="color:#ae81ff">0.038050</span>    <span style="color:#ae81ff">0.067025</span>    <span style="color:#ae81ff">0.080900</span>    <span style="color:#ae81ff">0.080425</span>  <span style="color:#f92672">...</span>    <span style="color:#ae81ff">0.005075</span>    <span style="color:#ae81ff">0.005375</span>    <span style="color:#ae81ff">0.004150</span>    <span style="color:#ae81ff">0.004400</span>    <span style="color:#ae81ff">0.003700</span>    <span style="color:#ae81ff">0.003600</span>    <span style="color:#ae81ff">0.003675</span>    <span style="color:#ae81ff">0.003100</span>
+<span style="color:#ae81ff">50</span><span style="color:#f92672">%</span>      <span style="color:#ae81ff">0.022800</span>    <span style="color:#ae81ff">0.030800</span>    <span style="color:#ae81ff">0.034300</span>    <span style="color:#ae81ff">0.044050</span>    <span style="color:#ae81ff">0.062500</span>    <span style="color:#ae81ff">0.092150</span>    <span style="color:#ae81ff">0.106950</span>    <span style="color:#ae81ff">0.112100</span>  <span style="color:#f92672">...</span>    <span style="color:#ae81ff">0.009550</span>    <span style="color:#ae81ff">0.009300</span>    <span style="color:#ae81ff">0.007500</span>    <span style="color:#ae81ff">0.006850</span>    <span style="color:#ae81ff">0.005950</span>    <span style="color:#ae81ff">0.005800</span>    <span style="color:#ae81ff">0.006400</span>    <span style="color:#ae81ff">0.005300</span>
+<span style="color:#ae81ff">75</span><span style="color:#f92672">%</span>      <span style="color:#ae81ff">0.035550</span>    <span style="color:#ae81ff">0.047950</span>    <span style="color:#ae81ff">0.057950</span>    <span style="color:#ae81ff">0.064500</span>    <span style="color:#ae81ff">0.100275</span>    <span style="color:#ae81ff">0.134125</span>    <span style="color:#ae81ff">0.154000</span>    <span style="color:#ae81ff">0.169600</span>  <span style="color:#f92672">...</span>    <span style="color:#ae81ff">0.014900</span>    <span style="color:#ae81ff">0.014500</span>    <span style="color:#ae81ff">0.012100</span>    <span style="color:#ae81ff">0.010575</span>    <span style="color:#ae81ff">0.010425</span>    <span style="color:#ae81ff">0.010350</span>    <span style="color:#ae81ff">0.010325</span>    <span style="color:#ae81ff">0.008525</span>
+max      <span style="color:#ae81ff">0.137100</span>    <span style="color:#ae81ff">0.233900</span>    <span style="color:#ae81ff">0.305900</span>    <span style="color:#ae81ff">0.426400</span>    <span style="color:#ae81ff">0.401000</span>    <span style="color:#ae81ff">0.382300</span>    <span style="color:#ae81ff">0.372900</span>    <span style="color:#ae81ff">0.459000</span>  <span style="color:#f92672">...</span>    <span style="color:#ae81ff">0.039000</span>    <span style="color:#ae81ff">0.035200</span>    <span style="color:#ae81ff">0.044700</span>    <span style="color:#ae81ff">0.039400</span>    <span style="color:#ae81ff">0.035500</span>    <span style="color:#ae81ff">0.044000</span>    <span style="color:#ae81ff">0.036400</span>    <span style="color:#ae81ff">0.043900</span>
+
+[<span style="color:#ae81ff">8</span> rows x <span style="color:#ae81ff">60</span> columns]
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_3.png">
+   </div>
+
+
+<p>Có thể thấy, hầu hết các phân phối của các features đều bị lệch, không giống với Gaussian.</p>
+<p>Thử mô hình hóa tập dữ liệu này bằng thuật toán kNN:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn on the raw sonar dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># separate into input and output columns</span>
+X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+<span style="color:#75715e"># define and configure the model</span>
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+<span style="color:#75715e"># evaluate the model</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+n_scores <span style="color:#f92672">=</span> cross_val_score(model, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># report model performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(n_scores), std(n_scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.797</span> (<span style="color:#ae81ff">0.073</span>)
+</code></pre></div><h4 id="22-box-cox-transform">2.2 Box-Cox Transform</h4>
+<p>Box-Cox transform được đặt theo tên hai tác giả của phương pháp này. Nó chỉ áp dụng cho các giá trị dương.</p>
+<p>Bởi vì tập dữ liệu Sonar có chứa giá trị 0 nên không thể sử dụng trực tiếp cho Box-Cox được. Nếu bạn cố tình thực hiện sẽ sinh ra lỗi <em>ValueError: The Box-Cox transformation can only be applied to strictly positive data</em>.</p>
+<p>Để giải quyết vấn đề này, ta sử dụng thêm một phép biến đổi normalization với <em>feature_range=(1,2)</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># visualize a box-cox transform of the scaled sonar dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> DataFrame
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> PowerTransformer
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> MinMaxScaler
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># Load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># retrieve just the numeric input values</span>
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># perform a box-cox transform of the dataset</span>
+scaler <span style="color:#f92672">=</span> MinMaxScaler(feature_range<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>))
+power <span style="color:#f92672">=</span> PowerTransformer(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;box-cox&#39;</span>)
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;s&#39;</span>, scaler),(<span style="color:#e6db74">&#39;p&#39;</span>, power)])
+data <span style="color:#f92672">=</span> pipeline<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># convert the array back to a dataframe</span>
+dataset <span style="color:#f92672">=</span> DataFrame(data)
+<span style="color:#75715e"># histograms of the variables</span>
+fig <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>hist(xlabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, ylabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+[x<span style="color:#f92672">.</span>title<span style="color:#f92672">.</span>set_size(<span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> fig<span style="color:#f92672">.</span>ravel()]
+<span style="color:#75715e"># show the plot</span>
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_4.png">
+   </div>
+
+
+<p>Ta thấy rằng phân phối của các features đã giống Gaussian hơn rất nhiều.</p>
+<p>Thử mô hình hóa tập dữ liệu sau khi thực hiện Power Transforms này với thuật toán kNN:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn on the box-cox sonar dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> PowerTransformer
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> MinMaxScaler
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># separate into input and output columns</span>
+X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+<span style="color:#75715e"># define the pipeline</span>
+scaler <span style="color:#f92672">=</span> MinMaxScaler(feature_range<span style="color:#f92672">=</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>))
+power <span style="color:#f92672">=</span> PowerTransformer(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;box-cox&#39;</span>)
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;s&#39;</span>, scaler),(<span style="color:#e6db74">&#39;p&#39;</span>, power), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+<span style="color:#75715e"># evaluate the pipeline</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+n_scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># report pipeline performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(n_scores), std(n_scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.811</span> (<span style="color:#ae81ff">0.085</span>)
+</code></pre></div><p>Độ chính xác đã tăng lên 1 chút, từ 79.7% lên thành 81.1%.</p>
+<h4 id="23-yeo-johnson-transform">2.3 Yeo-Johnson transform</h4>
+<p>Yeo-Johnson transform cũng được đặt tên theo 2 tác giả của nó. Khác với Box-Cox là Yeo-Johnson không yêu cầu dữ liệu phải dương. Nó hỗ trợ cả giá trị âm và 0.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># visualize a yeo-johnson transform of the sonar dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> DataFrame
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> PowerTransformer
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># Load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># retrieve just the numeric input values</span>
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># perform a yeo-johnson transform of the dataset</span>
+pt <span style="color:#f92672">=</span> PowerTransformer(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;yeo-johnson&#39;</span>)
+data <span style="color:#f92672">=</span> pt<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># convert the array back to a dataframe</span>
+dataset <span style="color:#f92672">=</span> DataFrame(data)
+<span style="color:#75715e"># histograms of the variables</span>
+fig <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>hist(xlabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, ylabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+[x<span style="color:#f92672">.</span>title<span style="color:#f92672">.</span>set_size(<span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> fig<span style="color:#f92672">.</span>ravel()]
+<span style="color:#75715e"># show the plot</span>
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_5.png">
+   </div>
+
+
+<p>Giống như Box-Cox, phân phối của các features giống Gaussian hơn rất nhiều so với dữ liệu gốc ban đầu.</p>
+<p>Mô hình hóa tập dữ liệu này sau khi thực hiện Power Transforms với thuật toán kNN:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn on the yeo-johnson sonar dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> PowerTransformer
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># separate into input and output columns</span>
+X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+<span style="color:#75715e"># define the pipeline</span>
+power <span style="color:#f92672">=</span> PowerTransformer(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;yeo-johnson&#39;</span>)
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;p&#39;</span>, power), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+<span style="color:#75715e"># evaluate the pipeline</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+n_scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># report pipeline performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(n_scores), std(n_scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.808</span> (<span style="color:#ae81ff">0.082</span>)
+</code></pre></div><p>Độ chính cũng đc cải thiện hơn một chút so với mốc 79.7% ban đầu, lên thành 80.8%.</p>
+<p>Hãy nhớ lại bài trước, Standardization cũng giúp ta đưa dữ liệu về phân phối gần Gaussian. Thử kết hợp cả 2 kỹ thuật này xem sao.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn on the yeo-johnson standardized sonar dataset</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> PowerTransformer
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> StandardScaler
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># separate into input and output columns</span>
+X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+<span style="color:#75715e"># define the pipeline</span>
+scaler <span style="color:#f92672">=</span> StandardScaler()
+power <span style="color:#f92672">=</span> PowerTransformer(method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;yeo-johnson&#39;</span>)
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;s&#39;</span>, scaler), (<span style="color:#e6db74">&#39;p&#39;</span>, power), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+<span style="color:#75715e"># evaluate the pipeline</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+n_scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># report pipeline performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(n_scores), std(n_scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.816</span> (<span style="color:#ae81ff">0.077</span>)
+</code></pre></div><p>Thật vui là độ chính xác đã tăng lên một chút, thành 81.6%.</p>
+<h3 id="3-thực-hành-quantile-transforms">3. Thực hành Quantile Transforms</h3>
+<h4 id="31-normal-quantile-transform">3.1 Normal Quantile Transform</h4>
+<p>Áp dụng Normal Quantile Transform trên tập Sonar.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># visualize a normal quantile transform of the sonar dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> DataFrame
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> QuantileTransformer
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># retrieve just the numeric input values</span>
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># perform a normal quantile transform of the dataset</span>
+trans <span style="color:#f92672">=</span> QuantileTransformer(n_quantiles<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, output_distribution<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;normal&#39;</span>)
+data <span style="color:#f92672">=</span> trans<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># convert the array back to a dataframe</span>
+dataset <span style="color:#f92672">=</span> DataFrame(data)
+<span style="color:#75715e"># histograms of the variables</span>
+fig <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>hist(xlabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, ylabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+[x<span style="color:#f92672">.</span>title<span style="color:#f92672">.</span>set_size(<span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> fig<span style="color:#f92672">.</span>ravel()]
+<span style="color:#75715e"># show the plot</span>
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_8.png">
+   </div>
+
+
+<p>Phân phối của các features sau khi thực hiện Normal Quantile Transform đã giống Gaussian hơn rất nhiều.</p>
+<p>Mô hình hóa tập dữ liệu với thuật toán kNN:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn on the sonar dataset with normal quantile transform</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> QuantileTransformer
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># separate into input and output columns</span>
+X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+<span style="color:#75715e"># define the pipeline</span>
+trans <span style="color:#f92672">=</span> QuantileTransformer(n_quantiles<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, output_distribution<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;normal&#39;</span>)
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;t&#39;</span>, trans), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+<span style="color:#75715e"># evaluate the pipeline</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+n_scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># report pipeline performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(n_scores), std(n_scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.817</span> (<span style="color:#ae81ff">0.087</span>)
+</code></pre></div><p>Độ chính xác trong trường hợp này cao hơn tất cả các trường hợp của Power Transforms một chút.</p>
+<h4 id="32-uniform-quantile-transform">3.2 Uniform Quantile Transform</h4>
+<p>Áp dụng Normal Quantile Transform trên tập Sonar.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># visualize a uniform quantile transform of the sonar dataset</span>
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> DataFrame
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> QuantileTransformer
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># retrieve just the numeric input values</span>
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># perform a uniform quantile transform of the dataset</span>
+trans <span style="color:#f92672">=</span> QuantileTransformer(n_quantiles<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, output_distribution<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;uniform&#39;</span>)
+data <span style="color:#f92672">=</span> trans<span style="color:#f92672">.</span>fit_transform(data)
+<span style="color:#75715e"># convert the array back to a dataframe</span>
+dataset <span style="color:#f92672">=</span> DataFrame(data)
+<span style="color:#75715e"># histograms of the variables</span>
+fig <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>hist(xlabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, ylabelsize<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+[x<span style="color:#f92672">.</span>title<span style="color:#f92672">.</span>set_size(<span style="color:#ae81ff">4</span>) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> fig<span style="color:#f92672">.</span>ravel()]
+<span style="color:#75715e"># show the plot</span>
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_9.png">
+   </div>
+
+
+<p>Ta thấy phân phối của các features gần như đồng nhất (<em>uniform</em>) sau khi thực hiện Uniform Quantile Transform.</p>
+<p>Mô hình hóa tập dữ liệu với thuật toán kNN:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluate knn on the sonar dataset with uniform quantile transform</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> QuantileTransformer
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#75715e"># load dataset</span>
+dataset <span style="color:#f92672">=</span> read_csv(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>, header<span style="color:#f92672">=</span>None)
+data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+<span style="color:#75715e"># separate into input and output columns</span>
+X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+<span style="color:#75715e"># define the pipeline</span>
+trans <span style="color:#f92672">=</span> QuantileTransformer(n_quantiles<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, output_distribution<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;uniform&#39;</span>)
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;t&#39;</span>, trans), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+<span style="color:#75715e"># evaluate the pipeline</span>
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+n_scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># report pipeline performance</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (mean(n_scores), std(n_scores)))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">0.845</span> (<span style="color:#ae81ff">0.074</span>)
+</code></pre></div><p>Độ chính xác đã tăng lên khá nhiều so với các kỹ thuật transforms khác, lên đến 84.5%.</p>
+<p>Đối với Uniform Quantile Transform thì <em>n_quantiles</em> là tham số có thể ảnh hưởng đến hiệu năng của model. Ta thử đi tune nó xem sao:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># explore number of quantiles on classification accuracy</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> pandas <span style="color:#f92672">import</span> read_csv
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedStratifiedKFold
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> QuantileTransformer
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelEncoder
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+
+<span style="color:#75715e"># get the dataset</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_dataset</span>(filename):
+	<span style="color:#75715e"># load dataset</span>
+	dataset <span style="color:#f92672">=</span> read_csv(filename, header<span style="color:#f92672">=</span>None)
+	data <span style="color:#f92672">=</span> dataset<span style="color:#f92672">.</span>values
+	<span style="color:#75715e"># separate into input and output columns</span>
+	X, y <span style="color:#f92672">=</span> data[:, :<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], data[:, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+	<span style="color:#75715e"># ensure inputs are floats and output is an integer label</span>
+	X <span style="color:#f92672">=</span> X<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;float32&#39;</span>)
+	y <span style="color:#f92672">=</span> LabelEncoder()<span style="color:#f92672">.</span>fit_transform(y<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;str&#39;</span>))
+	<span style="color:#66d9ef">return</span> X, y
+
+<span style="color:#75715e"># get a list of models to evaluate</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_models</span>():
+	models <span style="color:#f92672">=</span> dict()
+	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">100</span>):
+		<span style="color:#75715e"># define the pipeline</span>
+		trans <span style="color:#f92672">=</span> QuantileTransformer(n_quantiles<span style="color:#f92672">=</span>i, output_distribution<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;uniform&#39;</span>)
+		model <span style="color:#f92672">=</span> KNeighborsClassifier()
+		models[str(i)] <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;t&#39;</span>, trans), (<span style="color:#e6db74">&#39;m&#39;</span>, model)])
+	<span style="color:#66d9ef">return</span> models
+
+<span style="color:#75715e"># evaluate a given model using cross-validation</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">evaluate_model</span>(model, X, y):
+	cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+	scores <span style="color:#f92672">=</span> cross_val_score(model, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+	<span style="color:#66d9ef">return</span> scores
+
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> get_dataset(<span style="color:#e6db74">&#39;sonar.csv&#39;</span>)
+<span style="color:#75715e"># get the models to evaluate</span>
+models <span style="color:#f92672">=</span> get_models()
+<span style="color:#75715e"># evaluate the models and store results</span>
+results <span style="color:#f92672">=</span> list()
+<span style="color:#66d9ef">for</span> name, model <span style="color:#f92672">in</span> models<span style="color:#f92672">.</span>items():
+	scores <span style="color:#f92672">=</span> evaluate_model(model, X, y)
+	results<span style="color:#f92672">.</span>append(mean(scores))
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (name, mean(scores), std(scores)))
+<span style="color:#75715e"># plot model performance for comparison</span>
+pyplot<span style="color:#f92672">.</span>plot(results)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0.534</span> (<span style="color:#ae81ff">0.016</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">2</span> <span style="color:#ae81ff">0.813</span> (<span style="color:#ae81ff">0.085</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">3</span> <span style="color:#ae81ff">0.840</span> (<span style="color:#ae81ff">0.080</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">4</span> <span style="color:#ae81ff">0.854</span> (<span style="color:#ae81ff">0.075</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">5</span> <span style="color:#ae81ff">0.848</span> (<span style="color:#ae81ff">0.072</span>)
+<span style="color:#f92672">...</span> 
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">95</span> <span style="color:#ae81ff">0.843</span> (<span style="color:#ae81ff">0.074</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">96</span> <span style="color:#ae81ff">0.845</span> (<span style="color:#ae81ff">0.074</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">97</span> <span style="color:#ae81ff">0.846</span> (<span style="color:#ae81ff">0.073</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">98</span> <span style="color:#ae81ff">0.843</span> (<span style="color:#ae81ff">0.073</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">99</span> <span style="color:#ae81ff">0.846</span> (<span style="color:#ae81ff">0.075</span>)
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/94_data_transforms_10.png">
+   </div>
+
+
+<p>84,6% là kết quả tốt nhất đạt được khi <em>n_quantiles=100</em>.</p>
+<h3 id="4-kết-luận">4. Kết luận</h3>
+<p>Bài thứ 3 về chủ đề Data Transforms, mình đã giới thiệu 4 kỹ thuật thực hiện Data Transforms để làm cho dữ liệu có phân phối gần với Gaussian hơn là Box-Cox, Yeo-Johnson, Normal Quantile, Uniform Quantile, từ đó nâng cao hiệu năng của model. Bài tiếp theo chúng ta sẽ tìm hiểu cách thức thực hiện Data Transforms để chuyển đổi features từ numerical sang categorical. Mời các bạn đón đọc.</p>
+<h3 id="5-tham-khảo">5. Tham khảo</h3>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/data-preparation"
+          class="text-primary">Data Preparation</a>
+        
+        <h2>DP4ML - Feature Selection - Phần 4 - Select Features for Numerical Output</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>07 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/89_feature_selection.png" class="img-fluid w-100 mb-4" alt="DP4ML - Feature Selection - Phần 4 - Select Features for Numerical Output">
+        
+        <div class="content mb-5">
+          <p>Bài thứ 11 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 4 về Feature Selection. Trong bài này, chúng ta sẽ tìm hiểu phương pháp lựa chọn features đối với dữ liệu có Ouput Variance thuộc kiểu Numberical thông qua việc thực hành trên một bộ dữ liệu giả được sinh ra ngẫu nhiên.</p>
+<h3 id="1-regression-dataset">1. Regression Dataset</h3>
+<p>Chúng ta sẽ sử dụng tập dữ liệu Regresion (<em>tức dữ liệu có Ouput Variance ở dạng Numerical</em>) làm cơ sở của bài thực hành này. Nhớ lại rằng một bài toán hồi quy là một bài toán mà chúng ta muốn dự đoán một giá trị số cụ thể. Trong trường hợp này, chúng ta cũng sẽ tạo ra một tập dữ liệu mà các Input Variables cũng có dạng Numerical. Hàm <em>make regression()</em> từ thư viện scikit-learn có thể được sử dụng để định nghĩa một tập dữ liệu như vậy. Nó cung cấp khả năng kiểm soát số lượng mẫu, số lượng các Input Variables và quan trọng là số lượng các Input Variables đó có liên quan và không liên quan đến Output Variable. Điều này rất quan trọng vì chúng ta đặc biệt mong muốn một tập dữ liệu mà chúng ta biết trước có một số Input Variables không liên quan đến Output Variable. Cụ thể ở bài này, mình sẽ tạo ra một tập dữ liệu với 1.000 mẫu, mỗi mẫu có 100 Input Variables, trong đó 10 mẫu là thông tin liên quan và 90 mẫu còn lại là không liên quan đến Output Variable.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<span style="color:#75715e"># generate regression dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, noise<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</code></pre></div><p>Chúng ta hy vọng là các kỹ thuật Feature Selection có thể xác định đúng hoặc gần đúng các Input Variables có liên quan đến Output Variable như chúng ta đã định nghĩa từ đầu. Sau khi được xác định điều đó, chúng ta có thể tiến hành chia dữ liệu thành các train/test để tạo ra mô hình dự đoán.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># load and summarize the dataset</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#75715e"># generate regression dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, noise<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># summarize</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Train&#39;</span>, X_train<span style="color:#f92672">.</span>shape, y_train<span style="color:#f92672">.</span>shape)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Test&#39;</span>, X_test<span style="color:#f92672">.</span>shape, y_test<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Train (<span style="color:#ae81ff">670</span>, <span style="color:#ae81ff">100</span>) (<span style="color:#ae81ff">670</span>,)
+Test (<span style="color:#ae81ff">330</span>, <span style="color:#ae81ff">100</span>) (<span style="color:#ae81ff">330</span>,)
+</code></pre></div><h3 id="2-numerical-feature-selection">2. Numerical Feature Selection</h3>
+<p>Có 2 kỹ thuật Feature Selection phổ biến có thể sử dụng cho Numerical Input/Output Variables, đó là Correlation Statistic và Mutual Information.</p>
+<h4 id="21-correlation-statistic">2.1 Correlation Statistic</h4>
+<p>Correlation (<em>sự tương quan</em>) là thước đo mức độ thay đổi của hai biến số cùng nhau. Có lẽ thước đo Correlation phổ biến nhất là Pearson&rsquo;s Correlation. Nó giả định phân phối Gauss cho mỗi biến và báo cáo về mối quan hệ tuyến tính của chúng.</p>
+<p>Điểm tương quan tuyến tính thường là một giá trị từ -1 đến 1 với 0 thể hiện không có mối quan hệ nào. Đối với việc lựa chọn Input Variables, chúng ta thường quan tâm đến giá trị dương càng lớn càng tốt, bởi vì đó mối quan hệ càng lớn và nhiều khả năng Input Variable đó nên được chọn để huấn luyện mô hình. Như vậy, mối tương quan tuyến tính có thể được chuyển đổi thành một thống kê tương quan chỉ với các giá trị dương.</p>
+<p>Correlation Statistic được implement trong scikit-learn bằng hàm <em>f_regression()</em>. Cách sử dụng nó tương tự như các bài trước.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of correlation feature selection for numerical data</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectKBest
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> f_regression
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+
+<span style="color:#75715e"># feature selection</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_features</span>(X_train, y_train, X_test):
+	<span style="color:#75715e"># configure to select all features</span>
+	fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>f_regression, k<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>)
+	<span style="color:#75715e"># learn relationship from training data</span>
+	fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+	<span style="color:#75715e"># transform train input data</span>
+	X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+	<span style="color:#75715e"># transform test input data</span>
+	X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_fs, X_test_fs, fs
+
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, noise<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># feature selection</span>
+X_train_fs, X_test_fs, fs <span style="color:#f92672">=</span> select_features(X_train, y_train, X_test)
+<span style="color:#75715e"># what are scores for the features</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fs<span style="color:#f92672">.</span>scores_)):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i, fs<span style="color:#f92672">.</span>scores_[i]))
+<span style="color:#75715e"># plot the scores</span>
+pyplot<span style="color:#f92672">.</span>bar([i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fs<span style="color:#f92672">.</span>scores_))], fs<span style="color:#f92672">.</span>scores_)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature <span style="color:#ae81ff">0</span>: <span style="color:#ae81ff">0.009419</span>
+Feature <span style="color:#ae81ff">1</span>: <span style="color:#ae81ff">1.018881</span>
+Feature <span style="color:#ae81ff">2</span>: <span style="color:#ae81ff">1.205187</span>
+Feature <span style="color:#ae81ff">3</span>: <span style="color:#ae81ff">0.000138</span>
+Feature <span style="color:#ae81ff">4</span>: <span style="color:#ae81ff">0.167511</span>
+Feature <span style="color:#ae81ff">5</span>: <span style="color:#ae81ff">5.985083</span>
+Feature <span style="color:#ae81ff">6</span>: <span style="color:#ae81ff">0.062405</span>
+Feature <span style="color:#ae81ff">7</span>: <span style="color:#ae81ff">1.455257</span>
+Feature <span style="color:#ae81ff">8</span>: <span style="color:#ae81ff">0.420384</span>
+Feature <span style="color:#ae81ff">9</span>: <span style="color:#ae81ff">101.392225</span>
+Feature <span style="color:#ae81ff">10</span>: <span style="color:#ae81ff">0.387091</span>
+Feature <span style="color:#ae81ff">11</span>: <span style="color:#ae81ff">1.581124</span>
+Feature <span style="color:#ae81ff">12</span>: <span style="color:#ae81ff">3.014463</span>
+Feature <span style="color:#ae81ff">13</span>: <span style="color:#ae81ff">0.232705</span>
+Feature <span style="color:#ae81ff">14</span>: <span style="color:#ae81ff">0.076281</span>
+Feature <span style="color:#ae81ff">15</span>: <span style="color:#ae81ff">4.299652</span>
+Feature <span style="color:#ae81ff">16</span>: <span style="color:#ae81ff">1.497530</span>
+Feature <span style="color:#ae81ff">17</span>: <span style="color:#ae81ff">0.261242</span>
+Feature <span style="color:#ae81ff">18</span>: <span style="color:#ae81ff">5.960005</span>
+Feature <span style="color:#ae81ff">19</span>: <span style="color:#ae81ff">0.523219</span>
+Feature <span style="color:#ae81ff">20</span>: <span style="color:#ae81ff">0.003365</span>
+Feature <span style="color:#ae81ff">21</span>: <span style="color:#ae81ff">0.024178</span>
+Feature <span style="color:#ae81ff">22</span>: <span style="color:#ae81ff">0.220958</span>
+Feature <span style="color:#ae81ff">23</span>: <span style="color:#ae81ff">0.576770</span>
+Feature <span style="color:#ae81ff">24</span>: <span style="color:#ae81ff">0.627198</span>
+Feature <span style="color:#ae81ff">25</span>: <span style="color:#ae81ff">0.350687</span>
+Feature <span style="color:#ae81ff">26</span>: <span style="color:#ae81ff">0.281877</span>
+Feature <span style="color:#ae81ff">27</span>: <span style="color:#ae81ff">0.584210</span>
+Feature <span style="color:#ae81ff">28</span>: <span style="color:#ae81ff">52.196337</span>
+Feature <span style="color:#ae81ff">29</span>: <span style="color:#ae81ff">0.046855</span>
+Feature <span style="color:#ae81ff">30</span>: <span style="color:#ae81ff">0.147323</span>
+Feature <span style="color:#ae81ff">31</span>: <span style="color:#ae81ff">0.368485</span>
+Feature <span style="color:#ae81ff">32</span>: <span style="color:#ae81ff">0.077631</span>
+Feature <span style="color:#ae81ff">33</span>: <span style="color:#ae81ff">0.698140</span>
+Feature <span style="color:#ae81ff">34</span>: <span style="color:#ae81ff">45.744046</span>
+Feature <span style="color:#ae81ff">35</span>: <span style="color:#ae81ff">2.047376</span>
+Feature <span style="color:#ae81ff">36</span>: <span style="color:#ae81ff">0.786270</span>
+Feature <span style="color:#ae81ff">37</span>: <span style="color:#ae81ff">0.996190</span>
+Feature <span style="color:#ae81ff">38</span>: <span style="color:#ae81ff">2.733533</span>
+Feature <span style="color:#ae81ff">39</span>: <span style="color:#ae81ff">63.957656</span>
+Feature <span style="color:#ae81ff">40</span>: <span style="color:#ae81ff">231.885540</span>
+Feature <span style="color:#ae81ff">41</span>: <span style="color:#ae81ff">1.372448</span>
+Feature <span style="color:#ae81ff">42</span>: <span style="color:#ae81ff">0.581860</span>
+Feature <span style="color:#ae81ff">43</span>: <span style="color:#ae81ff">1.072930</span>
+Feature <span style="color:#ae81ff">44</span>: <span style="color:#ae81ff">1.066976</span>
+Feature <span style="color:#ae81ff">45</span>: <span style="color:#ae81ff">0.344656</span>
+Feature <span style="color:#ae81ff">46</span>: <span style="color:#ae81ff">13.951551</span>
+Feature <span style="color:#ae81ff">47</span>: <span style="color:#ae81ff">3.575080</span>
+Feature <span style="color:#ae81ff">48</span>: <span style="color:#ae81ff">0.007299</span>
+Feature <span style="color:#ae81ff">49</span>: <span style="color:#ae81ff">0.004651</span>
+Feature <span style="color:#ae81ff">50</span>: <span style="color:#ae81ff">1.094585</span>
+Feature <span style="color:#ae81ff">51</span>: <span style="color:#ae81ff">0.241065</span>
+Feature <span style="color:#ae81ff">52</span>: <span style="color:#ae81ff">0.355137</span>
+Feature <span style="color:#ae81ff">53</span>: <span style="color:#ae81ff">0.020294</span>
+Feature <span style="color:#ae81ff">54</span>: <span style="color:#ae81ff">0.154567</span>
+Feature <span style="color:#ae81ff">55</span>: <span style="color:#ae81ff">2.592512</span>
+Feature <span style="color:#ae81ff">56</span>: <span style="color:#ae81ff">0.300175</span>
+Feature <span style="color:#ae81ff">57</span>: <span style="color:#ae81ff">0.357798</span>
+Feature <span style="color:#ae81ff">58</span>: <span style="color:#ae81ff">3.060090</span>
+Feature <span style="color:#ae81ff">59</span>: <span style="color:#ae81ff">0.890357</span>
+Feature <span style="color:#ae81ff">60</span>: <span style="color:#ae81ff">122.132164</span>
+Feature <span style="color:#ae81ff">61</span>: <span style="color:#ae81ff">2.029982</span>
+Feature <span style="color:#ae81ff">62</span>: <span style="color:#ae81ff">0.091551</span>
+Feature <span style="color:#ae81ff">63</span>: <span style="color:#ae81ff">1.081123</span>
+Feature <span style="color:#ae81ff">64</span>: <span style="color:#ae81ff">0.056041</span>
+Feature <span style="color:#ae81ff">65</span>: <span style="color:#ae81ff">2.930717</span>
+Feature <span style="color:#ae81ff">66</span>: <span style="color:#ae81ff">0.054886</span>
+Feature <span style="color:#ae81ff">67</span>: <span style="color:#ae81ff">1.332787</span>
+Feature <span style="color:#ae81ff">68</span>: <span style="color:#ae81ff">0.145579</span>
+Feature <span style="color:#ae81ff">69</span>: <span style="color:#ae81ff">0.986331</span>
+Feature <span style="color:#ae81ff">70</span>: <span style="color:#ae81ff">0.092661</span>
+Feature <span style="color:#ae81ff">71</span>: <span style="color:#ae81ff">0.083219</span>
+Feature <span style="color:#ae81ff">72</span>: <span style="color:#ae81ff">0.198847</span>
+Feature <span style="color:#ae81ff">73</span>: <span style="color:#ae81ff">2.065792</span>
+Feature <span style="color:#ae81ff">74</span>: <span style="color:#ae81ff">0.236594</span>
+Feature <span style="color:#ae81ff">75</span>: <span style="color:#ae81ff">0.512608</span>
+Feature <span style="color:#ae81ff">76</span>: <span style="color:#ae81ff">1.095650</span>
+Feature <span style="color:#ae81ff">77</span>: <span style="color:#ae81ff">0.015359</span>
+Feature <span style="color:#ae81ff">78</span>: <span style="color:#ae81ff">2.193730</span>
+Feature <span style="color:#ae81ff">79</span>: <span style="color:#ae81ff">1.574530</span>
+Feature <span style="color:#ae81ff">80</span>: <span style="color:#ae81ff">5.360863</span>
+Feature <span style="color:#ae81ff">81</span>: <span style="color:#ae81ff">0.041874</span>
+Feature <span style="color:#ae81ff">82</span>: <span style="color:#ae81ff">5.717705</span>
+Feature <span style="color:#ae81ff">83</span>: <span style="color:#ae81ff">0.436560</span>
+Feature <span style="color:#ae81ff">84</span>: <span style="color:#ae81ff">5.594438</span>
+Feature <span style="color:#ae81ff">85</span>: <span style="color:#ae81ff">0.000065</span>
+Feature <span style="color:#ae81ff">86</span>: <span style="color:#ae81ff">0.026748</span>
+Feature <span style="color:#ae81ff">87</span>: <span style="color:#ae81ff">0.408422</span>
+Feature <span style="color:#ae81ff">88</span>: <span style="color:#ae81ff">2.092557</span>
+Feature <span style="color:#ae81ff">89</span>: <span style="color:#ae81ff">9.568498</span>
+Feature <span style="color:#ae81ff">90</span>: <span style="color:#ae81ff">0.642445</span>
+Feature <span style="color:#ae81ff">91</span>: <span style="color:#ae81ff">0.065794</span>
+Feature <span style="color:#ae81ff">92</span>: <span style="color:#ae81ff">198.705931</span>
+Feature <span style="color:#ae81ff">93</span>: <span style="color:#ae81ff">0.073807</span>
+Feature <span style="color:#ae81ff">94</span>: <span style="color:#ae81ff">1.048605</span>
+Feature <span style="color:#ae81ff">95</span>: <span style="color:#ae81ff">0.004106</span>
+Feature <span style="color:#ae81ff">96</span>: <span style="color:#ae81ff">0.042110</span>
+Feature <span style="color:#ae81ff">97</span>: <span style="color:#ae81ff">0.034228</span>
+Feature <span style="color:#ae81ff">98</span>: <span style="color:#ae81ff">0.792433</span>
+Feature <span style="color:#ae81ff">99</span>: <span style="color:#ae81ff">0.015365</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/89_feature_selection_1.png">
+   </div>
+
+
+<p>Correlation Score của mỗi features và target được tính toán và hiển thị lên đồ thị. Quan sát ta thấy, có khoảng 8 đến 10 features là có mức đó <em>liên quan</em> nhiều nhất đến target. Set <em>k=10</em> khi sử dụng Correlation Statistic với <em>SelectKBest()</em>.</p>
+<h4 id="22-mutual-information-feature-selection">2.2 Mutual Information Feature Selection</h4>
+<p>Vẫn lại là Mutual Information, nó vẫn được sử dụng ở đây. Tuy nhiên, khác với các lần trước là bài toán Binary Classification (<em>sử dụng hàm mutual_info_classif</em>) thì lần này là bài toán Regression nên hàm implement của Mutual Information là <em>mutual_info_regression</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># example of mutual information feature selection for numerical input data</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectKBest
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> mutual_info_regression
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+
+<span style="color:#75715e"># feature selection</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_features</span>(X_train, y_train, X_test):
+	<span style="color:#75715e"># configure to select all features</span>
+	fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>mutual_info_regression, k<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>)
+	<span style="color:#75715e"># learn relationship from training data</span>
+	fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+	<span style="color:#75715e"># transform train input data</span>
+	X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+	<span style="color:#75715e"># transform test input data</span>
+	X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_fs, X_test_fs, fs
+
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, noise<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># feature selection</span>
+X_train_fs, X_test_fs, fs <span style="color:#f92672">=</span> select_features(X_train, y_train, X_test)
+<span style="color:#75715e"># what are scores for the features</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fs<span style="color:#f92672">.</span>scores_)):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i, fs<span style="color:#f92672">.</span>scores_[i]))
+<span style="color:#75715e"># plot the scores</span>
+pyplot<span style="color:#f92672">.</span>bar([i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(fs<span style="color:#f92672">.</span>scores_))], fs<span style="color:#f92672">.</span>scores_)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature <span style="color:#ae81ff">0</span>: <span style="color:#ae81ff">0.045484</span>
+Feature <span style="color:#ae81ff">1</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">2</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">3</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">4</span>: <span style="color:#ae81ff">0.024816</span>
+Feature <span style="color:#ae81ff">5</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">6</span>: <span style="color:#ae81ff">0.022659</span>
+Feature <span style="color:#ae81ff">7</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">8</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">9</span>: <span style="color:#ae81ff">0.074320</span>
+Feature <span style="color:#ae81ff">10</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">11</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">12</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">13</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">14</span>: <span style="color:#ae81ff">0.020390</span>
+Feature <span style="color:#ae81ff">15</span>: <span style="color:#ae81ff">0.004307</span>
+Feature <span style="color:#ae81ff">16</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">17</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">18</span>: <span style="color:#ae81ff">0.016566</span>
+Feature <span style="color:#ae81ff">19</span>: <span style="color:#ae81ff">0.003688</span>
+Feature <span style="color:#ae81ff">20</span>: <span style="color:#ae81ff">0.007579</span>
+Feature <span style="color:#ae81ff">21</span>: <span style="color:#ae81ff">0.018640</span>
+Feature <span style="color:#ae81ff">22</span>: <span style="color:#ae81ff">0.025206</span>
+Feature <span style="color:#ae81ff">23</span>: <span style="color:#ae81ff">0.017967</span>
+Feature <span style="color:#ae81ff">24</span>: <span style="color:#ae81ff">0.069173</span>
+Feature <span style="color:#ae81ff">25</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">26</span>: <span style="color:#ae81ff">0.022232</span>
+Feature <span style="color:#ae81ff">27</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">28</span>: <span style="color:#ae81ff">0.007849</span>
+Feature <span style="color:#ae81ff">29</span>: <span style="color:#ae81ff">0.012849</span>
+Feature <span style="color:#ae81ff">30</span>: <span style="color:#ae81ff">0.017402</span>
+Feature <span style="color:#ae81ff">31</span>: <span style="color:#ae81ff">0.008083</span>
+Feature <span style="color:#ae81ff">32</span>: <span style="color:#ae81ff">0.047321</span>
+Feature <span style="color:#ae81ff">33</span>: <span style="color:#ae81ff">0.002829</span>
+Feature <span style="color:#ae81ff">34</span>: <span style="color:#ae81ff">0.028968</span>
+Feature <span style="color:#ae81ff">35</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">36</span>: <span style="color:#ae81ff">0.071652</span>
+Feature <span style="color:#ae81ff">37</span>: <span style="color:#ae81ff">0.027969</span>
+Feature <span style="color:#ae81ff">38</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">39</span>: <span style="color:#ae81ff">0.064796</span>
+Feature <span style="color:#ae81ff">40</span>: <span style="color:#ae81ff">0.137695</span>
+Feature <span style="color:#ae81ff">41</span>: <span style="color:#ae81ff">0.008732</span>
+Feature <span style="color:#ae81ff">42</span>: <span style="color:#ae81ff">0.003983</span>
+Feature <span style="color:#ae81ff">43</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">44</span>: <span style="color:#ae81ff">0.009387</span>
+Feature <span style="color:#ae81ff">45</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">46</span>: <span style="color:#ae81ff">0.038385</span>
+Feature <span style="color:#ae81ff">47</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">48</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">49</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">50</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">51</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">52</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">53</span>: <span style="color:#ae81ff">0.008130</span>
+Feature <span style="color:#ae81ff">54</span>: <span style="color:#ae81ff">0.041779</span>
+Feature <span style="color:#ae81ff">55</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">56</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">57</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">58</span>: <span style="color:#ae81ff">0.031228</span>
+Feature <span style="color:#ae81ff">59</span>: <span style="color:#ae81ff">0.002689</span>
+Feature <span style="color:#ae81ff">60</span>: <span style="color:#ae81ff">0.146192</span>
+Feature <span style="color:#ae81ff">61</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">62</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">63</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">64</span>: <span style="color:#ae81ff">0.018194</span>
+Feature <span style="color:#ae81ff">65</span>: <span style="color:#ae81ff">0.021368</span>
+Feature <span style="color:#ae81ff">66</span>: <span style="color:#ae81ff">0.046071</span>
+Feature <span style="color:#ae81ff">67</span>: <span style="color:#ae81ff">0.034707</span>
+Feature <span style="color:#ae81ff">68</span>: <span style="color:#ae81ff">0.033530</span>
+Feature <span style="color:#ae81ff">69</span>: <span style="color:#ae81ff">0.002262</span>
+Feature <span style="color:#ae81ff">70</span>: <span style="color:#ae81ff">0.018332</span>
+Feature <span style="color:#ae81ff">71</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">72</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">73</span>: <span style="color:#ae81ff">0.074876</span>
+Feature <span style="color:#ae81ff">74</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">75</span>: <span style="color:#ae81ff">0.004429</span>
+Feature <span style="color:#ae81ff">76</span>: <span style="color:#ae81ff">0.002617</span>
+Feature <span style="color:#ae81ff">77</span>: <span style="color:#ae81ff">0.031354</span>
+Feature <span style="color:#ae81ff">78</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">79</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">80</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">81</span>: <span style="color:#ae81ff">0.033931</span>
+Feature <span style="color:#ae81ff">82</span>: <span style="color:#ae81ff">0.010400</span>
+Feature <span style="color:#ae81ff">83</span>: <span style="color:#ae81ff">0.019373</span>
+Feature <span style="color:#ae81ff">84</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">85</span>: <span style="color:#ae81ff">0.033191</span>
+Feature <span style="color:#ae81ff">86</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">87</span>: <span style="color:#ae81ff">0.028745</span>
+Feature <span style="color:#ae81ff">88</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">89</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">90</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">91</span>: <span style="color:#ae81ff">0.017698</span>
+Feature <span style="color:#ae81ff">92</span>: <span style="color:#ae81ff">0.129797</span>
+Feature <span style="color:#ae81ff">93</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">94</span>: <span style="color:#ae81ff">0.002171</span>
+Feature <span style="color:#ae81ff">95</span>: <span style="color:#ae81ff">0.029995</span>
+Feature <span style="color:#ae81ff">96</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">97</span>: <span style="color:#ae81ff">0.014428</span>
+Feature <span style="color:#ae81ff">98</span>: <span style="color:#ae81ff">0.000000</span>
+Feature <span style="color:#ae81ff">99</span>: <span style="color:#ae81ff">0.000000</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/89_feature_selection_2.png">
+   </div>
+
+
+<p>Trong trường hợp này thì số lượng features có sự <em>liên quan</em> nhiều đến target lớn hơn con số 10. Điều này có lẽ do ảnh hưởng của nhiễu mà ta thêm vào khi tạo dữ liệu.</p>
+<h3 id="3-modeling-with-selected-features">3. Modeling With Selected Features</h3>
+<h4 id="31-base-model">3.1 Base model</h4>
+<p>Base model được xây dựng với tất cả dữ liệu mặc định.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluation of a model using all input features</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LinearRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> mean_absolute_error
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, noise<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LinearRegression()
+model<span style="color:#f92672">.</span>fit(X_train, y_train)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test)
+<span style="color:#75715e"># evaluate predictions</span>
+mae <span style="color:#f92672">=</span> mean_absolute_error(y_test, yhat)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;MAE: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> mae)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">MAE: <span style="color:#ae81ff">0.086</span>
+</code></pre></div><h4 id="32-model-built-using-correlation-features">3.2 Model Built Using Correlation Features</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluation of a model using 10 features chosen with correlation</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectKBest
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> f_regression
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LinearRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> mean_absolute_error
+
+<span style="color:#75715e"># feature selection</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_features</span>(X_train, y_train, X_test):
+	<span style="color:#75715e"># configure to select a subset of features</span>
+	fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>f_regression, k<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+	<span style="color:#75715e"># learn relationship from training data</span>
+	fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+	<span style="color:#75715e"># transform train input data</span>
+	X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+	<span style="color:#75715e"># transform test input data</span>
+	X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_fs, X_test_fs, fs
+
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, noise<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># feature selection</span>
+X_train_fs, X_test_fs, fs <span style="color:#f92672">=</span> select_features(X_train, y_train, X_test)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LinearRegression()
+model<span style="color:#f92672">.</span>fit(X_train_fs, y_train)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test_fs)
+<span style="color:#75715e"># evaluate predictions</span>
+mae <span style="color:#f92672">=</span> mean_absolute_error(y_test, yhat)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;MAE: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> mae)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">MAE: <span style="color:#ae81ff">2.74</span>
+</code></pre></div><p>Trong trường hợp này, chúng ta thấy rằng mô hình đạt được MAE khoảng 2.7, lớn hơn nhiều so với Base model (0.086). Mặc dù đã nhận ra được các features nào là quan trọng cần chọn, nhưng việc xây dựng một mô hình từ những features này lại không tạo ra một mô hình có kết quả tốt hơn. Điều này có thể là do các features quan trọng đối với mục tiêu đã bị bỏ qua, có nghĩa là phương pháp Correlation Statistic đang bị đánh lừa về những gì là quan trọng khi lựa chọn features.</p>
+<p>Chúng ta sẽ thử lại bằng cách tăng số lượng features được lựa chọn lên thành 90. Kết quả thu được MAE = 0.085, tốt hơn một chút so với Base model.</p>
+<h4 id="33-model-built-using-mutual-information-features">3.3 Model Built Using Mutual Information Features</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluation of a model using 88 features chosen with mutual information</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectKBest
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> mutual_info_regression
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LinearRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> mean_absolute_error
+
+<span style="color:#75715e"># feature selection</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_features</span>(X_train, y_train, X_test):
+	<span style="color:#75715e"># configure to select a subset of features</span>
+	fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>mutual_info_regression, k<span style="color:#f92672">=</span><span style="color:#ae81ff">88</span>)
+	<span style="color:#75715e"># learn relationship from training data</span>
+	fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+	<span style="color:#75715e"># transform train input data</span>
+	X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+	<span style="color:#75715e"># transform test input data</span>
+	X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_fs, X_test_fs, fs
+
+<span style="color:#75715e"># load the dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, noise<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># feature selection</span>
+X_train_fs, X_test_fs, fs <span style="color:#f92672">=</span> select_features(X_train, y_train, X_test)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LinearRegression()
+model<span style="color:#f92672">.</span>fit(X_train_fs, y_train)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test_fs)
+<span style="color:#75715e"># evaluate predictions</span>
+mae <span style="color:#f92672">=</span> mean_absolute_error(y_test, yhat)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;MAE: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> mae)
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">MAE: <span style="color:#ae81ff">0.084</span>
+</code></pre></div><p>Model lần này có kết quả tốt hơn hai lần trước một chút, vẫn lựa chọn 88 features.</p>
+<h4 id="34-tune-the-number-of-selected-features">3.4 Tune the Number of Selected Features</h4>
+<p>Biết được rằng Mutual Information cho kết quả tốt nhất rồi. Ta tiếp tục thử xem liệu có giá nào của <em>k</em> để thu được model tốt hơn nữa không bằng cách thực thiện tune giá trị của <em>k</em>. Lần này chúng ta sẽ sử dụng metric <em>neg_mean_absolute_error</em> để đánh giá.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># compare different numbers of features selected using mutual information</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedKFold
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectKBest
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> mutual_info_regression
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LinearRegression
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> GridSearchCV
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, noise<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the evaluation method</span>
+cv <span style="color:#f92672">=</span> RepeatedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the pipeline to evaluate</span>
+model <span style="color:#f92672">=</span> LinearRegression()
+fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>mutual_info_regression)
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;sel&#39;</span>,fs), (<span style="color:#e6db74">&#39;lr&#39;</span>, model)])
+<span style="color:#75715e"># define the grid</span>
+grid <span style="color:#f92672">=</span> dict()
+grid[<span style="color:#e6db74">&#39;sel__k&#39;</span>] <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(X<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">20</span>, X<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+<span style="color:#75715e"># define the grid search</span>
+search <span style="color:#f92672">=</span> GridSearchCV(pipeline, grid, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;neg_mean_absolute_error&#39;</span>, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>, cv<span style="color:#f92672">=</span>cv)
+<span style="color:#75715e"># perform the search</span>
+results <span style="color:#f92672">=</span> search<span style="color:#f92672">.</span>fit(X, y)
+<span style="color:#75715e"># summarize best</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Best MAE: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> results<span style="color:#f92672">.</span>best_score_)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Best Config: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> results<span style="color:#f92672">.</span>best_params_)
+<span style="color:#75715e"># summarize all</span>
+means <span style="color:#f92672">=</span> results<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;mean_test_score&#39;</span>]
+params <span style="color:#f92672">=</span> results<span style="color:#f92672">.</span>cv_results_[<span style="color:#e6db74">&#39;params&#39;</span>]
+<span style="color:#66d9ef">for</span> mean, param <span style="color:#f92672">in</span> zip(means, params):
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> with: </span><span style="color:#e6db74">%r</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (mean, param))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Best MAE: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.082</span>
+Best Config: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">81</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">1.100</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">80</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.082</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">81</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.082</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">82</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.082</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">83</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.082</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">84</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.082</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">85</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.082</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">86</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.082</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">87</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.082</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">88</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">89</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">90</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">91</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">92</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">93</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">94</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">95</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">96</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">97</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">98</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">99</span>}
+<span style="color:#f92672">&gt;-</span><span style="color:#ae81ff">0.083</span> <span style="color:#66d9ef">with</span>: {<span style="color:#e6db74">&#39;sel__k&#39;</span>: <span style="color:#ae81ff">100</span>}
+</code></pre></div><p>Rất may là ta đã đi đúng hướng, không lãng phí thời gian vì ta đã tìm được model tốt hơn, MAE=0.082 với <em>k=81</em>.</p>
+<p>Cuối cùng, nếu muốn xem cụ thể giá trị MAE là bao nhiêu đối với từng giá trị của <em>k</em>, ta code như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># compare different numbers of features selected using mutual information</span>
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> mean
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> std
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> cross_val_score
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> RepeatedKFold
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectKBest
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> mutual_info_regression
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LinearRegression
+<span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, noise<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define number of features to evaluate</span>
+num_features <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(X<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, X<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+<span style="color:#75715e"># enumerate each number of features</span>
+results <span style="color:#f92672">=</span> list()
+<span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> num_features:
+	<span style="color:#75715e"># create pipeline</span>
+	model <span style="color:#f92672">=</span> LinearRegression()
+	fs <span style="color:#f92672">=</span> SelectKBest(score_func<span style="color:#f92672">=</span>mutual_info_regression, k<span style="color:#f92672">=</span>k)
+	pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;sel&#39;</span>,fs), (<span style="color:#e6db74">&#39;lr&#39;</span>, model)])
+	<span style="color:#75715e"># evaluate the model</span>
+	cv <span style="color:#f92672">=</span> RepeatedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+	scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;neg_mean_absolute_error&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+	results<span style="color:#f92672">.</span>append(scores)
+	<span style="color:#75715e"># summarize the results</span>
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&gt;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (k, mean(scores), std(scores)))
+<span style="color:#75715e"># plot model performance for comparison</span>
+pyplot<span style="color:#f92672">.</span>boxplot(results, labels<span style="color:#f92672">=</span>num_features, showmeans<span style="color:#f92672">=</span>True)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">81</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.082</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">82</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.082</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">83</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.082</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">84</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.082</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">85</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.082</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">86</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.082</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">87</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.082</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">88</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.082</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">89</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">90</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">91</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">92</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">93</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">94</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">95</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">96</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">97</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">98</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">99</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.083</span> (<span style="color:#ae81ff">0.006</span>)
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/89_feature_selection_2.png">
+   </div>
+
+
+<h3 id="4-kết-luận">4. Kết luận</h3>
+<p>Bài thứ 4 về chủ đề Feature Selection, mình đã giới thiệu 2 kỹ thuật Correlation Statistic t và Mutual Information áp dụng cho Input/Output Variables dạng Numerical. Bài tiếp theo sẽ là cách sử dụng thuật toán Recursive Feature Elimination (RFE) trong việc Feature Selection. Mời các bạn đón đọc.</p>
+<h3 id="5-tham-khảo">5. Tham khảo</h3>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

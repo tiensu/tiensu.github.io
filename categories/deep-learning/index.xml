@@ -6,11 +6,11 @@
     <description>Recent content in Deep Learning on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nhận diện hành động của người sử dụng Deep Learning</title>
       <link>https://tiensu.github.io/blog/87_human_action_recognition_using_deep_learning/</link>
-      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/87_human_action_recognition_using_deep_learning/</guid>
       <description>Human Action Recognition (HAR) là quá trình sử dụng những cảnh quay trong video để nhận diện, phân loại các hành động khác nhau được thực hiện bởi người trong video đó.</description>
@@ -19,7 +19,7 @@
     <item>
       <title>Giới thiệu Human Pose Estimation và Detectron2 platform</title>
       <link>https://tiensu.github.io/blog/86_human_pose_estimation/</link>
-      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/86_human_pose_estimation/</guid>
       <description>1. Giới thiệu Human Pose Estimation (HPE) 1.1 Định nghĩa Human Pose Human Pose là sự thể hiện định hướng của một người ở định dạng đồ họa (khung xương).</description>
@@ -28,7 +28,7 @@
     <item>
       <title>Các phương pháp Video Classification</title>
       <link>https://tiensu.github.io/blog/85_video_classification/</link>
-      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 26 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/85_video_classification/</guid>
       <description>Trong bài viết này, chúng ta cùng tìm hiểu về Video Classification. Chúng ta sẽ điểm danh sơ lược một số phương pháp tiếp cận để giải quyết bài toán này.</description>
@@ -37,7 +37,7 @@
     <item>
       <title>AI for Fun: Làm thơ cùng AI</title>
       <link>https://tiensu.github.io/blog/84_make_poem_with_ai/</link>
-      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/84_make_poem_with_ai/</guid>
       <description>Viết hơi nhiều về chủ đề DP4ML rồi, mình tạm dừng 1 chút để chuyển qua làm 1 cái gì đấy cho đỡ chán.</description>

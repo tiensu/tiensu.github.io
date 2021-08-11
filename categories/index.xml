@@ -6,56 +6,11 @@
     <description>Recent content in Categories on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Deep Learning</title>
-      <link>https://tiensu.github.io/categories/deep-learning/</link>
-      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Human Action Recognition</title>
-      <link>https://tiensu.github.io/categories/human-action-recognition/</link>
-      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/human-action-recognition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Human Pose</title>
-      <link>https://tiensu.github.io/categories/human-pose/</link>
-      <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/human-pose/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>NLP</title>
-      <link>https://tiensu.github.io/categories/nlp/</link>
-      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/nlp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Text Generation</title>
-      <link>https://tiensu.github.io/categories/text-generation/</link>
-      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/categories/text-generation/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 11 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Preparation</title>
       <link>https://tiensu.github.io/categories/data-preparation/</link>
-      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/categories/data-preparation/</guid>
       <description></description>
@@ -64,9 +19,36 @@
     <item>
       <title>Machine Learning</title>
       <link>https://tiensu.github.io/categories/machine-learning/</link>
-      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://tiensu.github.io/categories/deep-learning/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Human Action Recognition</title>
+      <link>https://tiensu.github.io/categories/human-action-recognition/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/human-action-recognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Human Pose</title>
+      <link>https://tiensu.github.io/categories/human-pose/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/human-pose/</guid>
       <description></description>
     </item>
     
@@ -98,9 +80,27 @@
     </item>
     
     <item>
+      <title>NLP</title>
+      <link>https://tiensu.github.io/categories/nlp/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Generation</title>
+      <link>https://tiensu.github.io/categories/text-generation/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/categories/text-generation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Recommender System</title>
       <link>https://tiensu.github.io/categories/recommender-system/</link>
-      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/categories/recommender-system/</guid>
       <description></description>

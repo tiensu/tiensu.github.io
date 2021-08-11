@@ -19,7 +19,7 @@
     <item>
       <title>Tìm hiểu bài toán Automatic Speech Recognition (ASR)</title>
       <link>https://tiensu.github.io/blog/71_audio_deep_learning_part_5/</link>
-      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/71_audio_deep_learning_part_5/</guid>
       <description>Đây là bài cuối cùng trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tìm hiểu về bài toán Automatic Speech Recognition (ASR) hay Speech-to-Text: kiến trúc, cách thức làm việc, &amp;hellip;</description>
@@ -28,7 +28,7 @@
     <item>
       <title>Thực hành huấn luyện Audio Classification model</title>
       <link>https://tiensu.github.io/blog/70_audio_deep_learning_part_4/</link>
-      <pubDate>Sat, 05 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/70_audio_deep_learning_part_4/</guid>
       <description>Đây là bài thứ 4 trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ code thực hành huấn luyện một mô hình phân loại Audio.</description>
@@ -37,7 +37,7 @@
     <item>
       <title>Audio Data Preparation - Một số kỹ thuật nâng cao</title>
       <link>https://tiensu.github.io/blog/69_audio_deep_learning_part_3/</link>
-      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/69_audio_deep_learning_part_3/</guid>
       <description>Đây là bài thứ 3 trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tiến thêm một bước sâu hơn là tìm cách nâng cao chất lượng của Mel Spectrogram thông qua tinh chỉnh các Hyper-parameters của nó.</description>
@@ -46,7 +46,7 @@
     <item>
       <title>Xử lý dữ liệu Audio trong Python. Tìm hiểu về Mel Spectrogram</title>
       <link>https://tiensu.github.io/blog/68_audio_deep_learning_part_2/</link>
-      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/68_audio_deep_learning_part_2/</guid>
       <description>Đây là bài thứ 2 trong chuỗi 5 bài về Audio Deep Learning. Trong bài này, chúng ta sẽ tìm hiểu cách xử lý dữ liệu Audio bằng các thư viện của Python.</description>

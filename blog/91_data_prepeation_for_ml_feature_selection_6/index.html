@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/machine-learning"
+          class="text-primary">Machine Learning</a>
+        
+        <a href="/categories/data-preparation"
+          class="text-primary">Data Preparation</a>
+        
+        <h2>DP4ML - Feature Selection - Phần 6 - How to Use Feature Importance</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>13 July 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/91_feature_selection.png" class="img-fluid w-100 mb-4" alt="DP4ML - Feature Selection - Phần 6 - How to Use Feature Importance">
+        
+        <div class="content mb-5">
+          <p>Bài thứ 13 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 6 về Feature Selection. Trong bài này, chúng ta sẽ tìm hiểu về Feature Importance và cách sử dụng nó để lựa chọn features thông qua việc thực hành trên một bộ dữ liệu giả được sinh ra ngẫu nhiên.</p>
+<h3 id="1-feature-importance-score-fis">1. Feature Importance Score (FIS)</h3>
+<p>Feature Importance đề cập đến các kỹ thuật xác định điểm số - score cho các features dựa trên cách mối liên hệ của chúng với target. Có nhiều loại và cách tính score cho các features như Statistic Correlation Score, Coeficients Score, Permutatation Score, &hellip; FIS đóng một vai trò quan trọng trong việc mô hình hóa dữ liệu, nó giúp chúng ta có cái nhìn sâu sắc về dữ liệu, về mô hình và là cơ sở để thực hiện Feature Selection.</p>
+<p>Trong bài này, chúng ta sẽ thực hiện tính toán FIS theo ba cách:</p>
+<ul>
+<li>FIS from model coefficients</li>
+<li>FIS from Decision Tree</li>
+<li>FIS from Permutation Testing</li>
+</ul>
+<h3 id="2-create-test-data">2. Create Test Data</h3>
+<p>Trước tiên, chúng ta sẽ tạo ra 2 bộ dữ liệu để thực hành. Một bộ cho bài toán Classification và 1 bộ cho bài toán Regression. Cả 2 bộ đều có 1000 mẫu, mỗi mầu có 10 features, 5 features trong số đó là <em>informative</em>, còn lại là <em>redundant</em>.</p>
+<h4 id="21-classification-dataset">2.1 Classification Dataset</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># test classification dataset</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_classification
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_classification(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, n_redundant<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># summarize the dataset</span>
+<span style="color:#66d9ef">print</span>(X<span style="color:#f92672">.</span>shape, y<span style="color:#f92672">.</span>shape)
+</code></pre></div><h4 id="22-regression-dataset">2.2 Regression Dataset</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># test regression dataset</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># summarize the dataset</span>
+<span style="color:#66d9ef">print</span>(X<span style="color:#f92672">.</span>shape, y<span style="color:#f92672">.</span>shape)
+</code></pre></div><h3 id="3-coefficients-as-feature-importance">3. Coefficients as Feature Importance</h3>
+<p>Tất cả các thuật toán Regression/Classification như Linear Regression, Logistic Regression, Ridge Regression, LASSO, Elastic Net, &hellip; đều sử dụng phương pháp đánh trọng số cho các features để thực hiện phép dự đoán. Các trọng số (<em>coeficients</em>) này có thể được coi là một loại FIS.</p>
+<h4 id="31-linear-regression-feature-importance">3.1 Linear Regression Feature Importance</h4>
+<p>Chúng ta sẽ thực hiện fit LinearRegression model trên tập Regression dataset và xem các coefficients của nó:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># linear regression feature importance</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LinearRegression
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> LinearRegression()
+<span style="color:#75715e"># fit the model</span>
+model<span style="color:#f92672">.</span>fit(X, y)
+<span style="color:#75715e"># get importance</span>
+importance <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>coef_
+<span style="color:#75715e"># summarize feature importance</span>
+<span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(importance):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature: </span><span style="color:#e6db74">%0d</span><span style="color:#e6db74">, Score: </span><span style="color:#e6db74">%.5f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i,v))
+<span style="color:#75715e"># plot feature importance</span>
+pyplot<span style="color:#f92672">.</span>bar([x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(len(importance))], importance)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature: <span style="color:#ae81ff">0</span>, Score: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.00000</span>
+Feature: <span style="color:#ae81ff">1</span>, Score: <span style="color:#ae81ff">12.44483</span>
+Feature: <span style="color:#ae81ff">2</span>, Score: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.00000</span>
+Feature: <span style="color:#ae81ff">3</span>, Score: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.00000</span>
+Feature: <span style="color:#ae81ff">4</span>, Score: <span style="color:#ae81ff">93.32225</span>
+Feature: <span style="color:#ae81ff">5</span>, Score: <span style="color:#ae81ff">86.50811</span>
+Feature: <span style="color:#ae81ff">6</span>, Score: <span style="color:#ae81ff">26.74607</span>
+Feature: <span style="color:#ae81ff">7</span>, Score: <span style="color:#ae81ff">3.28535</span>
+Feature: <span style="color:#ae81ff">8</span>, Score: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.00000</span>
+Feature: <span style="color:#ae81ff">9</span>, Score: <span style="color:#ae81ff">0.00000</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/91_feature_selection_1.png">
+   </div>
+
+
+<p>Kết quả này nói cho ta biết rằng model tìm thấy 5 Important Features, những features khác có thể được loại bỏ khi mô hình hóa dữ liệu.</p>
+<h4 id="32-logistic-regression-feature-importance">3.2 Logistic Regression Feature Importance</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># logistic regression for feature importance</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_classification
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LogisticRegression
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_classification(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, n_redundant<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> LogisticRegression()
+<span style="color:#75715e"># fit the model</span>
+model<span style="color:#f92672">.</span>fit(X, y)
+<span style="color:#75715e"># get importance</span>
+importance <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>coef_[<span style="color:#ae81ff">0</span>]
+<span style="color:#75715e"># summarize feature importance</span>
+<span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(importance):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature: </span><span style="color:#e6db74">%0d</span><span style="color:#e6db74">, Score: </span><span style="color:#e6db74">%.5f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i,v))
+<span style="color:#75715e"># plot feature importance</span>
+pyplot<span style="color:#f92672">.</span>bar([x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(len(importance))], importance)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature: <span style="color:#ae81ff">0</span>, Score: <span style="color:#ae81ff">0.16320</span>
+Feature: <span style="color:#ae81ff">1</span>, Score: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.64301</span>
+Feature: <span style="color:#ae81ff">2</span>, Score: <span style="color:#ae81ff">0.48497</span>
+Feature: <span style="color:#ae81ff">3</span>, Score: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.46190</span>
+Feature: <span style="color:#ae81ff">4</span>, Score: <span style="color:#ae81ff">0.18432</span>
+Feature: <span style="color:#ae81ff">5</span>, Score: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.11978</span>
+Feature: <span style="color:#ae81ff">6</span>, Score: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.40602</span>
+Feature: <span style="color:#ae81ff">7</span>, Score: <span style="color:#ae81ff">0.03772</span>
+Feature: <span style="color:#ae81ff">8</span>, Score: <span style="color:#f92672">-</span><span style="color:#ae81ff">0.51785</span>
+Feature: <span style="color:#ae81ff">9</span>, Score: <span style="color:#ae81ff">0.26540</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/91_feature_selection_2.png">
+   </div>
+
+
+<p>Đối với bài toán Classification và thuật toán Logistic Regression thì các coefficients có cả giá trị âm và dương. Giá trị âm chỉ ra rằng feature đó dự đoán cho class 0, còn giá trị dương chỉ ra rằng feature đó dự đoán cho class 1. Các giá trị coefficients ở đây không thể coi là FIS và không được sử dụng để thực hiện Feature Selection.</p>
+<h3 id="4-decision-tree-feature-importance">4. Decision Tree Feature Importance</h3>
+<p>Chúng ta sử dụng thuật toán CART được implemented trong scikit-learn (<em>DecisionTreeRegressor và DecisionTreeClassifier</em>). Sau khi fit, model cung cấp thuộc tính *feature_importances_* có thể được sử dụng như là FIS.</p>
+<h4 id="41-cart-feature-importance">4.1 CART Feature Importance</h4>
+<h5 id="a-cart-regression-feature-importance">a, CART Regression Feature Importance</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># decision tree for feature importance on a regression problem</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.tree <span style="color:#f92672">import</span> DecisionTreeRegressor
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> DecisionTreeRegressor()
+<span style="color:#75715e"># fit the model</span>
+model<span style="color:#f92672">.</span>fit(X, y)
+<span style="color:#75715e"># get importance</span>
+importance <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>feature_importances_
+<span style="color:#75715e"># summarize feature importance</span>
+<span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(importance):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature: </span><span style="color:#e6db74">%0d</span><span style="color:#e6db74">, Score: </span><span style="color:#e6db74">%.5f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i,v))
+<span style="color:#75715e"># plot feature importance</span>
+pyplot<span style="color:#f92672">.</span>bar([x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(len(importance))], importance)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature: <span style="color:#ae81ff">0</span>, Score: <span style="color:#ae81ff">0.00280</span>
+Feature: <span style="color:#ae81ff">1</span>, Score: <span style="color:#ae81ff">0.00485</span>
+Feature: <span style="color:#ae81ff">2</span>, Score: <span style="color:#ae81ff">0.00243</span>
+Feature: <span style="color:#ae81ff">3</span>, Score: <span style="color:#ae81ff">0.00200</span>
+Feature: <span style="color:#ae81ff">4</span>, Score: <span style="color:#ae81ff">0.51685</span>
+Feature: <span style="color:#ae81ff">5</span>, Score: <span style="color:#ae81ff">0.43703</span>
+Feature: <span style="color:#ae81ff">6</span>, Score: <span style="color:#ae81ff">0.02744</span>
+Feature: <span style="color:#ae81ff">7</span>, Score: <span style="color:#ae81ff">0.00259</span>
+Feature: <span style="color:#ae81ff">8</span>, Score: <span style="color:#ae81ff">0.00297</span>
+Feature: <span style="color:#ae81ff">9</span>, Score: <span style="color:#ae81ff">0.00103</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/91_feature_selection_3.png">
+   </div>
+
+
+<p>Kết quả chỉ ra có 3/10 Important Features.</p>
+<h5 id="b-cart-classification-feature-importance">b, CART Classification Feature Importance</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># decision tree for feature importance on a classification problem</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_classification
+<span style="color:#f92672">from</span> sklearn.tree <span style="color:#f92672">import</span> DecisionTreeClassifier
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_classification(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, n_redundant<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> DecisionTreeClassifier()
+<span style="color:#75715e"># fit the model</span>
+model<span style="color:#f92672">.</span>fit(X, y)
+<span style="color:#75715e"># get importance</span>
+importance <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>feature_importances_
+<span style="color:#75715e"># summarize feature importance</span>
+<span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(importance):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature: </span><span style="color:#e6db74">%0d</span><span style="color:#e6db74">, Score: </span><span style="color:#e6db74">%.5f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i,v))
+<span style="color:#75715e"># plot feature importance</span>
+pyplot<span style="color:#f92672">.</span>bar([x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(len(importance))], importance)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature: <span style="color:#ae81ff">0</span>, Score: <span style="color:#ae81ff">0.02155</span>
+Feature: <span style="color:#ae81ff">1</span>, Score: <span style="color:#ae81ff">0.01029</span>
+Feature: <span style="color:#ae81ff">2</span>, Score: <span style="color:#ae81ff">0.17994</span>
+Feature: <span style="color:#ae81ff">3</span>, Score: <span style="color:#ae81ff">0.29655</span>
+Feature: <span style="color:#ae81ff">4</span>, Score: <span style="color:#ae81ff">0.08793</span>
+Feature: <span style="color:#ae81ff">5</span>, Score: <span style="color:#ae81ff">0.01210</span>
+Feature: <span style="color:#ae81ff">6</span>, Score: <span style="color:#ae81ff">0.18119</span>
+Feature: <span style="color:#ae81ff">7</span>, Score: <span style="color:#ae81ff">0.05454</span>
+Feature: <span style="color:#ae81ff">8</span>, Score: <span style="color:#ae81ff">0.12754</span>
+Feature: <span style="color:#ae81ff">9</span>, Score: <span style="color:#ae81ff">0.02837</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/91_feature_selection_4.png">
+   </div>
+
+
+<p>Kết quả chỉ ra có 4-5/10 Important Features.</p>
+<h4 id="42-random-forest-feature-importance">4.2 Random Forest Feature Importance</h4>
+<h5 id="a-random-forest-regression-feature-importance">a, Random Forest Regression Feature Importance</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># random forest for feature importance on a regression problem</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestRegressor
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> RandomForestRegressor()
+<span style="color:#75715e"># fit the model</span>
+model<span style="color:#f92672">.</span>fit(X, y)
+<span style="color:#75715e"># get importance</span>
+importance <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>feature_importances_
+<span style="color:#75715e"># summarize feature importance</span>
+<span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(importance):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature: </span><span style="color:#e6db74">%0d</span><span style="color:#e6db74">, Score: </span><span style="color:#e6db74">%.5f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i,v))
+<span style="color:#75715e"># plot feature importance</span>
+pyplot<span style="color:#f92672">.</span>bar([x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(len(importance))], importance)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature: <span style="color:#ae81ff">0</span>, Score: <span style="color:#ae81ff">0.00307</span>
+Feature: <span style="color:#ae81ff">1</span>, Score: <span style="color:#ae81ff">0.00553</span>
+Feature: <span style="color:#ae81ff">2</span>, Score: <span style="color:#ae81ff">0.00292</span>
+Feature: <span style="color:#ae81ff">3</span>, Score: <span style="color:#ae81ff">0.00271</span>
+Feature: <span style="color:#ae81ff">4</span>, Score: <span style="color:#ae81ff">0.52968</span>
+Feature: <span style="color:#ae81ff">5</span>, Score: <span style="color:#ae81ff">0.42187</span>
+Feature: <span style="color:#ae81ff">6</span>, Score: <span style="color:#ae81ff">0.02528</span>
+Feature: <span style="color:#ae81ff">7</span>, Score: <span style="color:#ae81ff">0.00298</span>
+Feature: <span style="color:#ae81ff">8</span>, Score: <span style="color:#ae81ff">0.00320</span>
+Feature: <span style="color:#ae81ff">9</span>, Score: <span style="color:#ae81ff">0.00275</span>
+</code></pre></div><p>Kết quả chỉ ra chỉ có 2-3/10 Important Features.</p>
+
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/91_feature_selection_5.png">
+   </div>
+
+
+<h5 id="b-random-forest-classification-feature-importance">b, Random Forest Classification Feature Importance</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># random forest for feature importance on a classification problem</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_classification
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_classification(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, n_redundant<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> RandomForestClassifier()
+<span style="color:#75715e"># fit the model</span>
+model<span style="color:#f92672">.</span>fit(X, y)
+<span style="color:#75715e"># get importance</span>
+importance <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>feature_importances_
+<span style="color:#75715e"># summarize feature importance</span>
+<span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(importance):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature: </span><span style="color:#e6db74">%0d</span><span style="color:#e6db74">, Score: </span><span style="color:#e6db74">%.5f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i,v))
+<span style="color:#75715e"># plot feature importance</span>
+pyplot<span style="color:#f92672">.</span>bar([x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(len(importance))], importance)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature: <span style="color:#ae81ff">0</span>, Score: <span style="color:#ae81ff">0.05545</span>
+Feature: <span style="color:#ae81ff">1</span>, Score: <span style="color:#ae81ff">0.11714</span>
+Feature: <span style="color:#ae81ff">2</span>, Score: <span style="color:#ae81ff">0.14782</span>
+Feature: <span style="color:#ae81ff">3</span>, Score: <span style="color:#ae81ff">0.17944</span>
+Feature: <span style="color:#ae81ff">4</span>, Score: <span style="color:#ae81ff">0.08900</span>
+Feature: <span style="color:#ae81ff">5</span>, Score: <span style="color:#ae81ff">0.11283</span>
+Feature: <span style="color:#ae81ff">6</span>, Score: <span style="color:#ae81ff">0.11459</span>
+Feature: <span style="color:#ae81ff">7</span>, Score: <span style="color:#ae81ff">0.04678</span>
+Feature: <span style="color:#ae81ff">8</span>, Score: <span style="color:#ae81ff">0.09017</span>
+Feature: <span style="color:#ae81ff">9</span>, Score: <span style="color:#ae81ff">0.04678</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/91_feature_selection_6.png">
+   </div>
+
+
+<p>Kết quả chỉ ra có 4-5/10 Important Features.</p>
+<h3 id="5-permutation-feature-importance">5. Permutation Feature Importance</h3>
+<h4 id="51-permutation-feature-importance-for-regression">5.1 Permutation Feature Importance for Regression</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># permutation feature importance with knn for regression</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_regression
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsRegressor
+<span style="color:#f92672">from</span> sklearn.inspection <span style="color:#f92672">import</span> permutation_importance
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_regression(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> KNeighborsRegressor()
+<span style="color:#75715e"># fit the model</span>
+model<span style="color:#f92672">.</span>fit(X, y)
+<span style="color:#75715e"># perform permutation importance</span>
+results <span style="color:#f92672">=</span> permutation_importance(model, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;neg_mean_squared_error&#39;</span>)
+<span style="color:#75715e"># get importance</span>
+importance <span style="color:#f92672">=</span> results<span style="color:#f92672">.</span>importances_mean
+<span style="color:#75715e"># summarize feature importance</span>
+<span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(importance):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature: </span><span style="color:#e6db74">%0d</span><span style="color:#e6db74">, Score: </span><span style="color:#e6db74">%.5f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i,v))
+<span style="color:#75715e"># plot feature importance</span>
+pyplot<span style="color:#f92672">.</span>bar([x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(len(importance))], importance)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature: <span style="color:#ae81ff">0</span>, Score: <span style="color:#ae81ff">203.08837</span>
+Feature: <span style="color:#ae81ff">1</span>, Score: <span style="color:#ae81ff">299.90705</span>
+Feature: <span style="color:#ae81ff">2</span>, Score: <span style="color:#ae81ff">155.87319</span>
+Feature: <span style="color:#ae81ff">3</span>, Score: <span style="color:#ae81ff">31.30704</span>
+Feature: <span style="color:#ae81ff">4</span>, Score: <span style="color:#ae81ff">9642.31128</span>
+Feature: <span style="color:#ae81ff">5</span>, Score: <span style="color:#ae81ff">8482.24184</span>
+Feature: <span style="color:#ae81ff">6</span>, Score: <span style="color:#ae81ff">869.35524</span>
+Feature: <span style="color:#ae81ff">7</span>, Score: <span style="color:#ae81ff">148.71948</span>
+Feature: <span style="color:#ae81ff">8</span>, Score: <span style="color:#ae81ff">86.35811</span>
+Feature: <span style="color:#ae81ff">9</span>, Score: <span style="color:#ae81ff">85.22271</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/91_feature_selection_7.png">
+   </div>
+
+
+<p>Kết quả chỉ ra có 2-3/10 Important Features.</p>
+<h4 id="52-permutation-feature-importance-for-classification">5.2 Permutation Feature Importance for Classification</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># permutation feature importance with knn for classification</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_classification
+<span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+<span style="color:#f92672">from</span> sklearn.inspection <span style="color:#f92672">import</span> permutation_importance
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#75715e"># define dataset</span>
+X, y <span style="color:#f92672">=</span> make_classification(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, n_redundant<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># define the model</span>
+model <span style="color:#f92672">=</span> KNeighborsClassifier()
+<span style="color:#75715e"># fit the model</span>
+model<span style="color:#f92672">.</span>fit(X, y)
+<span style="color:#75715e"># perform permutation importance</span>
+results <span style="color:#f92672">=</span> permutation_importance(model, X, y, scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>)
+<span style="color:#75715e"># get importance</span>
+importance <span style="color:#f92672">=</span> results<span style="color:#f92672">.</span>importances_mean
+<span style="color:#75715e"># summarize feature importance</span>
+<span style="color:#66d9ef">for</span> i,v <span style="color:#f92672">in</span> enumerate(importance):
+	<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Feature: </span><span style="color:#e6db74">%0d</span><span style="color:#e6db74">, Score: </span><span style="color:#e6db74">%.5f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (i,v))
+<span style="color:#75715e"># plot feature importance</span>
+pyplot<span style="color:#f92672">.</span>bar([x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(len(importance))], importance)
+pyplot<span style="color:#f92672">.</span>show()
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Feature: <span style="color:#ae81ff">0</span>, Score: <span style="color:#ae81ff">0.04860</span>
+Feature: <span style="color:#ae81ff">1</span>, Score: <span style="color:#ae81ff">0.06240</span>
+Feature: <span style="color:#ae81ff">2</span>, Score: <span style="color:#ae81ff">0.05600</span>
+Feature: <span style="color:#ae81ff">3</span>, Score: <span style="color:#ae81ff">0.09520</span>
+Feature: <span style="color:#ae81ff">4</span>, Score: <span style="color:#ae81ff">0.05200</span>
+Feature: <span style="color:#ae81ff">5</span>, Score: <span style="color:#ae81ff">0.05840</span>
+Feature: <span style="color:#ae81ff">6</span>, Score: <span style="color:#ae81ff">0.07580</span>
+Feature: <span style="color:#ae81ff">7</span>, Score: <span style="color:#ae81ff">0.05880</span>
+Feature: <span style="color:#ae81ff">8</span>, Score: <span style="color:#ae81ff">0.06000</span>
+Feature: <span style="color:#ae81ff">9</span>, Score: <span style="color:#ae81ff">0.03020</span>
+</code></pre></div>
+
+   <div style="text-align:center">
+      <img style="height:auto" src="/images/post/91_feature_selection_8.png">
+   </div>
+
+
+<p>Kết quả chỉ ra có 2-3/10 Important Features.</p>
+<h3 id="6-feature-selection-with-importance">6. Feature Selection with Importance</h3>
+<p>Phần này, chúng ta sẽ sử dụng FIS để thực hiện Feature Selection, sau đó sẽ tiến hành mô hình hóa dữ liệu theo các features đã được chọn.</p>
+<h4 id="61-base-model">6.1 Base model</h4>
+<p>Base model sử dụng tất cả features:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluation of a model using all features</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_classification
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LogisticRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+<span style="color:#75715e"># define the dataset</span>
+X, y <span style="color:#f92672">=</span> make_classification(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, n_redundant<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LogisticRegression(solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;liblinear&#39;</span>)
+model<span style="color:#f92672">.</span>fit(X_train, y_train)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test)
+<span style="color:#75715e"># evaluate predictions</span>
+accuracy <span style="color:#f92672">=</span> accuracy_score(y_test, yhat)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">84.55</span>
+</code></pre></div><h4 id="62-model-with-selected-features">6.2 Model with Selected Features</h4>
+<p>Ta có thể sử dụng bấy kì phương pháp tính FIS bên trên để lựa chọn features. Ở đây, mình sẽ dùng FIS cung cấp bởi Random Forest. Lớp <em>SelectFromModel</em>
+định nghĩa cả model mà ta muốn sử dụng để tính FIS (RandomForestClassifier) và số lượng tối đa features chúng ta muốn chọn.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># evaluation of a model using 5 features chosen with random forest importance</span>
+<span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> make_classification
+<span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+<span style="color:#f92672">from</span> sklearn.feature_selection <span style="color:#f92672">import</span> SelectFromModel
+<span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+<span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LogisticRegression
+<span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> accuracy_score
+
+<span style="color:#75715e"># feature selection</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_features</span>(X_train, y_train, X_test):
+	<span style="color:#75715e"># configure to select a subset of features</span>
+	fs <span style="color:#f92672">=</span> SelectFromModel(RandomForestClassifier(n_estimators<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>), max_features<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+	<span style="color:#75715e"># learn relationship from training data</span>
+	fs<span style="color:#f92672">.</span>fit(X_train, y_train)
+	<span style="color:#75715e"># transform train input data</span>
+	X_train_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_train)
+	<span style="color:#75715e"># transform test input data</span>
+	X_test_fs <span style="color:#f92672">=</span> fs<span style="color:#f92672">.</span>transform(X_test)
+	<span style="color:#66d9ef">return</span> X_train_fs, X_test_fs, fs
+
+<span style="color:#75715e"># define the dataset</span>
+X, y <span style="color:#f92672">=</span> make_classification(n_samples<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>, n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_informative<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, n_redundant<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># split into train and test sets</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.33</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#75715e"># feature selection</span>
+X_train_fs, X_test_fs, fs <span style="color:#f92672">=</span> select_features(X_train, y_train, X_test)
+<span style="color:#75715e"># fit the model</span>
+model <span style="color:#f92672">=</span> LogisticRegression(solver<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;liblinear&#39;</span>)
+model<span style="color:#f92672">.</span>fit(X_train_fs, y_train)
+<span style="color:#75715e"># evaluate the model</span>
+yhat <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test_fs)
+<span style="color:#75715e"># evaluate predictions</span>
+accuracy <span style="color:#f92672">=</span> accuracy_score(y_test, yhat)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Accuracy: </span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (accuracy<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))
+</code></pre></div><p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Accuracy: <span style="color:#ae81ff">84.55</span>
+</code></pre></div><p>Trong trường hợp này thì độc chính xác đạt được khi sử dụng các features từ FIS đúng bằng độ chính xác của Base model.</p>
+<h3 id="7-kết-luận">7. Kết luận</h3>
+<p>Bài thứ 6 về chủ đề Feature Selection, mình đã giới thiệu cách sử dụng Feature Importance Score trong việc Feature Selection. Bài tiếp theo chúng ta sẽ chuyển sang nhiệm vụ mới của Data Preparation, đó là Data Transforms. Mời các bạn đón đọc.</p>
+<h3 id="8-tham-khảo">8. Tham khảo</h3>
+<p>[1] Jason Brownlee, &ldquo;Data Preparation for Machine Learning&rdquo;, Book: <a href="https://machinelearningmastery.com/data-preparation-for-machine-learning/">https://machinelearningmastery.com/data-preparation-for-machine-learning/</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
