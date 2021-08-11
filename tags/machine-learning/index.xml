@@ -17,21 +17,12 @@
     </item>
     
     <item>
-      <title>DP4ML - Data Transform - Phần 1 - Giới thiệu Dimensionality Reduction</title>
+      <title>DP4ML - Dimensionality Reduction - Phần 1 - Giới thiệu Dimensionality Reduction</title>
       <link>https://tiensu.github.io/blog/100_data_prepeation_for_ml_dimensionality_reduction_1/</link>
       <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tiensu.github.io/blog/100_data_prepeation_for_ml_dimensionality_reduction_1/</guid>
       <description>Bài thứ 22 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài đầu tiên về về Dimensionality Reduction.</description>
-    </item>
-    
-    <item>
-      <title>DP4ML - Data Transform - Phần 3 - How to Perform PCA Dimensionality Reduction</title>
-      <link>https://tiensu.github.io/blog/102_data_prepeation_for_ml_dimensionality_reduction_3/</link>
-      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tiensu.github.io/blog/102_data_prepeation_for_ml_dimensionality_reduction_3/</guid>
-      <description>Bài thứ 24 trong chuỗi các bài viết về chủ đề Data Preparation cho các mô hình ML và là bài thứ 3 về về Dimensionality Reduction.</description>
     </item>
     
     <item>
