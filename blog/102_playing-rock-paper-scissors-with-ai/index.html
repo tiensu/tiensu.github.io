@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/deep-learning"
+          class="text-primary">Deep Learning</a>
+        
+        <a href="/categories/game"
+          class="text-primary">Game</a>
+        
+        <h2>AI for Fun: Chơi Oản Tù Tì với AI</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>14 August 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/102_one_two_three_game.webp" class="img-fluid w-100 mb-4" alt="AI for Fun: Chơi Oản Tù Tì với AI">
+        
+        <div class="content mb-5">
+          <p>Hà Nội, ngày giãn cách xã hội thứ 22, năm 2021!</p>
+<p>Hà Nội và cả nước VN những ngày này đang oằn mình chống chọi với đại dịch COVID-19. Mọi công dân được chính quyền yêu cầu ở nhà, chỉ được phép ra đường trong những trường hợp đặc biệt &hellip;</p>
+<p>Đây có lẽ là lúc mà chúng ta có nhiều thời gian rảnh nhất. Bạn thường làm gì khi tự nhiên có nhiều thời gian rảnh như vậy? Xem phim, đọc sách, ngủ, ăn, chơi game, &hellip;</p>
+<p>Nói về chơi game, có một trò mà từ người lớn đến con nít đều biết. Không chỉ có ở VN, mà ở Nhật, ở Philippines, ỏ Trung Quốc, ở Ấn Độ &hellip; đều có. Đó là trò chơi <em>Oẳn Tù Tì</em>. Người Nhật gọi là <em>じゃんけんぽん</em>, người Trung Quốc gọi là <em>剪刀 、 石頭 、 布</em>, còn người Philippines gọi là <em>jack en poy</em>, &hellip; Ban đầu mình cứ nghĩ trò này xuất phát từ các nước Á châu, và chỉ những nước này mới chơi nó. Nhưng theo <a href="https://vi.wikipedia.org/wiki/O%E1%BA%B3n_t%C3%B9_t%C3%AC">Wikipedia</a> thì <em>&ldquo;Oẳn tù tì&rdquo; ở Việt Nam là phát âm trại từ tiếng Anh: one, two, three (một, hai, ba) ở miền Nam trước 1975, có lẽ vì trò chơi này du nhập khi người Mỹ xuất hiện vào đầu thập niên 1960. Trò chơi tồn tại đến tận ngày nay với tên gọi &ldquo;Oẳn tù tì&rdquo;.</em> Thật ngạc nhiên phải không?</p>
+<p><em>Oẳn tù tì</em> là trò chơi đơn giản, dễ chơi, nhanh chóng có kết quả nên hay được sử dụng để quyết định thắng thua mang tính may rủi, giống như trò tung đồng xu vậy.</p>
+<p>Hôm nay, mình sẽ hướng dẫn mọi người tạo ra game <em>Ỏăn tù tì</em> để chơi với máy tính cho đỡ buồn chán trong những ngày giãn cách xã hội. Đặc biệt game này có sử dụng công nghệ AI nha mọi người! :D</p>
+<p>Cách thực hiện bao gồm các bước nhau sau:</p>
+<ul>
+<li>Thu thập dữ liệu các cử chỉ tay tương ứng với: Kéo, Búa, Giấy.</li>
+<li>Huấn luyện AI model để nhận diện các cử chỉ tay bên trên.</li>
+<li>Cho máy tính sinh ra ngẫu nhiên một cử chỉ khi bạn đưa cử chỉ của bạn ra.</li>
+<li>Quyết định người thắng dựa theo luật của game.</li>
+</ul>
+<p>Ok, bắt tay vào công việc thôi! Mình sẽ đưa luôn toàn bộ code vào trong bài để mọi người dễ theo dõi.</p>
+<p>Bài viết được chia thành 2 phần:</p>
+<ul>
+<li>Phần 1: Huấn luyện AI model để nhận diện các ký hiệu tay: Búa - rock, giấy - paper, kéo - scrissor, và không gì cả - nothing.</li>
+<li>Phân 2: Tạo game.</li>
+</ul>
+<h3 id="1-huấn-luyện-ai-model">1. Huấn luyện AI model</h3>
+<p>Đầu tiên, hãy import các thư viện sử dụng:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_1.png">
+</div>
+
+
+<p>Một số biến, hàm dùng chung để hiển thị giao diện:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_2.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_3.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_4.png">
+</div>
+
+
+<h4 id="11-thu-thập-dữ-liệu">1.1 Thu thập dữ liệu</h4>
+<p>Dữ liệu ở đây bao gồm hình ảnh của 3 loại cử chỉ của tay (<em>búa, giấy, kéo</em>) và 1 loại không có gì (<em>nothing</em>). Mỗi loại có 100 hình ảnh. Mình test thử thì thấy 100 hình ảnh cho ta model nhận diện khá tốt rồi. Bạn có thể thử với số lượng khác.</p>
+<p>Chúng ta sẽ thiết kế một <em>giao diên</em> đơn giản bằng OpenCV để thu thập dữ liệu này. Người chơi được yêu cầu giơ tay theo từng loại cử chỉ vào khu vực ROI có kích thước 224x224 (<em>bằng kích thước input vào model</em>) và nhấn các phím theo chỉ dẫn trên màn hình. Ảnh trong vùng ROI sẽ được lưu lại làm dữ liệu huấn luyện model.</p>
+<p>Code thực hiện:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_5.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_6.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_7.png">
+</div>
+
+
+<p>Khi thực thi code trên sẽ như sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_1.gif">
+</div>
+
+
+<p>Một số lưu ý:</p>
+<ul>
+<li>
+<p>Trong quá trình máy tính chụp ảnh các ký hiệu tay của bạn, cố gắng di chuyển tay lại gần, ra xa, sang trái, sang phải, xoay, &hellip; nhưng không ra khỏi vùng ROI. Mục đích là để có thể thu được dữ liệu đa dạng hơn, giúp cho mô hình AI học tốt hơn.</p>
+</li>
+<li>
+<p>Mặc dù chỉ có 3 ký hiệu tay nhưng chúng ta cần tạo thêm một lớp dữ liệu nữa, đó là <em>nothing</em>. Điều này là bởi vì khi chúng ta không chơi (<em>đưa tay ra khỏi vùng ROI</em>) thì mô hình AI vẫn sẽ cố gắng dự đoán ra một trong các lớp mà ta đã huấn luyện. Như thế thì máy tính sẽ tưởng là chúng ta đang chơi và sẽ xử lý sai logic mà ta mong muốn. Dữ liệu của lớp <em>nothing</em> này, lý tưởng nhất là tập các hình ảnh được chụp một cách ngẫu nhiên. Trong bài này, để cho đơn giản, mình chỉ lấy 100 ảnh tĩnh tại vị trí mình đang ngồi. Cách làm này có thể dẫn đến việc mô hình AI sẽ dự đoán sai khi chúng ta chơi ở một nơi khác. Mình sẽ đưa ra một số gợi ý để cải thiện độ chính xác của mô hình AI ở phần cuối bài này.</p>
+</li>
+<li>
+<p>Hình ảnh chụp được từ camera sẽ không được lưu xuống ổ cứng máy tính mà vẫn giữ nguyên trong bộ nhớ RAM. Mình làm thế là để giảm thời gian đọc/ghi (<em>I/O latency</em>). Nếu bạn muốn chụp nhiều ảnh hơn, dung lượng RAM hạn chế, hoặc muốn sử dụng lại về sau thì nên xem xét lưu chúng vào HDD.</p>
+</li>
+</ul>
+<p>Vì không lưu vào HDD nên để chắc chắn là đã lấy được dữ liệu chính xác thì ta sẽ thử hiển thị ngẫu nhiên 8 ảnh của mỗi lớp:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_8.png">
+</div>
+
+
+<h4 id="12-tiền-xử-lý-dữ-liệu">1.2 Tiền xử lý dữ liệu</h4>
+<p>Ở bước này, chúng ta sẽ kết hợp tất cả hình ảnh vào một mảng, tất cả nhãn vào một mảng tương ứng. Sau đó tiến hành một số cac xử lý để phù hợp với yêu cầu của mô hình AI như: normalization, label encoder, &hellip; Cuối cùng là chia dữ liệu thành các tập train và test.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_9.png">
+</div>
+
+
+<h4 id="13-train-ai-model">1.3 Train AI model</h4>
+<p>Mình sẽ chọn một <a href="https://keras.io/api/applications/">pre-trained model trong Keras </a> để thực hiện fine-tune theo phương pháp <a href="https://tiensu.github.io/blog/34_transfer_learning/">Transfer Learning</a>. Để cân bằng giữa tốc độ và độ chính xác, MobileNetV2 sẽ được sử dụng.</p>
+<p>Download MobileNetV2 model và loại bỏ phần head của nó:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_10.png">
+</div>
+
+
+<p>Thêm mới các lớp FC vào để tạo thành model hoàn chỉnh theo yêu cầu của chúng ta. Dropout và Global Average Pooling được thêm vào để hạn chế Overfitting. Số lượng node ở lớp đầu ra của model phải là 4 (<em>= số lớp cần dự đoán</em>).</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_11.png">
+</div>
+
+
+<p>Sử dụng thêm kỹ thụât Augmentation để hạn chế Overfitting:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_12.png">
+</div>
+
+
+<p>Model sẽ được train với optimizer là <em>Adam</em>, loss function là <em>categorical_crossentropy</em> vì đây là bài toán phân loại nhiều lớp. <em>Accuracy</em> là metric mà chúng ta cần quan tâm.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_13.png">
+</div>
+
+
+<p>Tiến hành train model với 15 epochs và batch_size 20.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_14.png">
+</div>
+
+
+<p>Kết quả train:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_15.png">
+</div>
+
+
+<p>Model rất nhanh đã hội tụ và đạt độ chính xác cao. Có lẽ vì dữ liệu của chúng ta khá đơn giản.</p>
+<p>Lưu lại model để sử dụng về sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_16.png">
+</div>
+
+
+<h4 id="14-kiểm-tra-hoạt-động-của-ai-model">1.4 Kiểm tra hoạt động của AI model</h4>
+<p>Chúng ta thử test độ chính xác của model vừa huấn luyện trên camera video.</p>
+<p>Load model lên:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_17.png">
+</div>
+
+
+<p>Hàm dự đoán. Chú ý rằng mỗi frame của video cần phải được xử lý chính xác như lúc huấn luyện mô hình.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_18.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_19.png">
+</div>
+
+
+<p>Đọc camera video và đưa vào model để dự đoán:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_20.png">
+</div>
+
+
+<p>Mình tết quả như trong video sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_2.gif">
+</div>
+
+
+<p>OK, như vậy là chúng ta đã có được model AI để dự đoán ký hiệu tay của người chơi. Chúng ta sẽ chuyển qua xây dựng logic chơi game.</p>
+<h3 id="2-tạo-game">2. Tạo Game</h3>
+<p>Phần này thì chủ yếu là vận dụng kiến thức về xử lý ảnh và cách sử dụng thư viện OpenCV. Kết quả dự đoán của AI model đã được huấn luyện ở phần 1 sẽ là input cho game.</p>
+<p>Luật chơi của game sẽ đơn giản như sau:</p>
+<ul>
+<li>Áp dụng luật chơi chuẩn của game <em>Oẳn tù tì</em>: Kéo thắng Giấy, Búa thắng Kéo, &hellip;</li>
+<li>Mgười và máy tính sẽ chơi với nhau 10 lần, mỗi lần thắng được cộng 1 điểm, hòa thì không có điểm.</li>
+<li>Sau 10 lần chơi, số điểm của bên nào lớn hơn thì người đó thắng cả game.</li>
+</ul>
+<p>Mỗi lần người chơi đưa ra một ký hiệu tay thì máy tính cũng sẽ lựa chọn ngẫu nhiên một ký hiệu tay để chơi cùng.</p>
+<p>Về phần dự đoán của AI model, để tăng độ chính xác thì kết quả dự đoán cuối cùng sẽ được căn cứ theo kết quả của 5 lần dự đoán liên tiếp. Trong 5 lần đó, nhãn nào chiếm đa số sẽ là nhãn được chọn.</p>
+<p>Import các thư viện cần sử dụng:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_21.png">
+</div>
+
+
+<p>Khai báo các biến toàn cục sử dụng trong toàn bộ chương trình:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_22.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_23.png">
+</div>
+
+
+<p>Các hàm tạo UI thì vẫn như phần 1:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_24.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_25.png">
+</div>
+
+
+<p>Tiếp theo là load AI model đã huấn luyện lên để chuẩn bị sử dụng:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_26.png">
+</div>
+
+
+<p>Hàm tạo đoán từ AI model. Hàm này có khác một chút so với hàm cùng tên ở phần 1, vì chúng ta cần nhiều giá trị trả về hơn để phục vụ việc tính toán logic game.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_27.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_28.png">
+</div>
+
+
+<p>Hàm tìm người chiến thắng trong mỗi lần chơi. Đây chính xác là hàm mô tả luật chơi kinh điển của game <em>Oẳn tù tì</em>:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_29.png">
+</div>
+
+
+<p>Hàm quyết định người chơi chiến thắng cuối cùng và trả về hình ảnh tương ứng để hiển thị lên giao diện:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_30.png">
+</div>
+
+
+<p>Hàm hiển thị hình ảnh <em>hand sign</em> của máy tính mỗi lần chơi.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_31.png">
+</div>
+
+
+<p>Hàm hiển thị ảnh của người chiến thắng lên giao diện:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_32.png">
+</div>
+
+
+<p>Hàm tính điểm mỗi lần chơi:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_33.png">
+</div>
+
+
+<p>Hàm cập nhật thông tin điểm, hướng dẫn chơi game lên giao diện:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_34.png">
+</div>
+
+
+<p>Hàm chơi game:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_35.png">
+</div>
+
+
+<p>Cuối cùng là vòng lặp main, đọc frame từ camera video và gọi các hàm khác để tạo thành game đầy đủ chức năng:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_36.png">
+</div>
+
+
+<p>Đây là video mình chơi thử:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/102_3.gif">
+</div>
+
+
+<p>Khá thú vị phải không các bạn? :D</p>
+<h3 id="3-hướng-cải-tiến-và-phát-triển-tiếp-theo">3. Hướng cải tiến và phát triển tiếp theo</h3>
+<h4 id="31-cải-tiến-ai-model">3.1 Cải tiến AI model</h4>
+<p>Đây là hạn chế lớn nhất cần giải quyết nếu muốn phát triển sâu hơn game này. Vì dữ liệu được thu thập trong một không gian cố định nên khả năng bị overfitting là rất lớn (<em>bạn có thể mang thử ra một địa điể khá để kiểm tra</em>). Cách cải tiến thì rất đơn giản nhưng cũng mất rất nhiều thời gian, đó là tập hơn thêm thật nhiều ảnh của cả 4 nhãn ở các địa điểm, môi trường, không gian, thời gian, &hellip; khác nhau,c àng đa dạng càng tốt. Sau đó huấn luyện lại model AI trên dữ liệu đó.</p>
+<h4 id="32-cải-tiến-giao-diện-người-chơi">3.2 Cải tiến giao diện người chơi</h4>
+<p>Vì bài này mình chủ yếu minh họa cách sử dụng mô hình AI và kỹ thuật xử lý ảnh nên không chú trọng vào giao diện. Nếu muốn phát triển sâu hơn, thu hút nhiều người chơi hơn thì chắc chắn phần UI/UX phải được cải tiến theo hướng đơn giản, đẹp mắt, dễ sử dụng. Chi tiết về các kỹ thuật tạo UX/UI mình xin phép không bàn sâu thêm trong bài này.</p>
+<h4 id="33-đưa-game-lên-các-thiết-bị-mobile">3.3 Đưa game lên các thiết bị mobile</h4>
+<p>Nếu bạn muốn kiếm tiền bằng game này (<em>có khả năng lắm chứ</em>), có thể nghĩ đến việc triển khai nó lên điện thoại, máy tính bảng để thu hút nhiều người chơi. Cách làm chắc cũng đơn giản thôi vì các framework Tensorflow và Keras đều hỗ trợ việc porting AI model của nó lên các thiết bị đầu cuối cho cả 2 hệ điều hành là Android và iOS.</p>
+<h3 id="4-kết-luận">4. Kết luận</h3>
+<p>Vậy là chúng ta đã hoàn thành việc xây dựng game <em>Oẳn tù tì</em> với AI và Computer Vision. Mình nghĩ là có khá nhiều kiến thức thú vị mà bạn đã học được thông qua bài này. Cảm ơn các bạn đã theo dõi!</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Games/tree/master/Playing-rock-paper-scissors-with-AI">đây</a>.</p>
+<h3 id="5-tham-khảo">5. Tham khảo</h3>
+<p>[1] Taha Anwar, &ldquo;Playing Rock, Paper, Scissors with AI&rdquo;, Available online: <a href="https://learnopencv.com/playing-rock-paper-scissors-with-ai/">https://learnopencv.com/playing-rock-paper-scissors-with-ai/</a> (Accessed on 10 Aug 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/game">Game</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
