@@ -6,7 +6,16 @@
     <description>Recent content on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tạo Bút Ảo với OpenCV</title>
+      <link>https://tiensu.github.io/blog/103_create_virtual_pen/</link>
+      <pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/103_create_virtual_pen/</guid>
+      <description>Hồi bé, khi xem mấy bộ phim viễn tưởng, thấy các diễn viên huơ huơ tay trong không khi và viết ra những chữ loằng ngoằng trên màn hình, mình thấy thật cool ngầu.</description>
+    </item>
+    
     <item>
       <title>AI for Fun: Chơi Oản Tù Tì với AI</title>
       <link>https://tiensu.github.io/blog/102_playing-rock-paper-scissors-with-ai/</link>
