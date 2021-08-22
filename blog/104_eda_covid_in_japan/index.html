@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/data-science"
+          class="text-primary">Data Science</a>
+        
+        <a href="/categories/eda"
+          class="text-primary">E d a</a>
+        
+        <h2>Phân tích tình hình Covid-19 tại Nhật Bản</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>22 August 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/103_virtual_pen.jpeg" class="img-fluid w-100 mb-4" alt="Phân tích tình hình Covid-19 tại Nhật Bản">
+        
+        <div class="content mb-5">
+          <p>Nhật Bản là một trong những quốc gia phải gánh chịu hậu quả nặng nề của đại dịch Covdid-19. Tính từ tháng 03/2020 đến này đã có hơn một triệu ca mắc Covid-19, hàng trăm nghìn người phải nhập viên, và hàng chục nghìn người tử vong. Những con số còn lớn hơn cả thiệt hai của trận sóng thần năm 2011.</p>
+<p>Trong bài hôm nay, chúng ta sẽ cùng nhau phân tích cụ thể, chi tiết hơn về tình hình này thông qua các bảng biểu đồ thị, nhận xét, đánh giá. Dữ liệu để phân tích là dữ liệu thực tế được cập nhật đến ngày &hellip;</p>
+<p>Nội dung bài viết bao gồm các phần:</p>
+<ul>
+<li>Chuẩn bị và tìm hiểu dữ liệu.</li>
+<li>Phân tích dữ liệu: phần này sẽ được chia thành 4 hạng mục nhỏ hơn:
+<ul>
+<li>Phân tích dữ liệu trên toàn lãnh thổ Nhật Bản theo 3 khu vực: Nội địa, Sân bay và Khu vực cách ly những người từ nước ngoài trở về.</li>
+<li>Phân tích dữ liệu chi tiết khu vực nội địa.</li>
+<li>Phân tích dữ liệu trên toàn lãnh thổ Nhật Bản theo 47 tỉnh thành phố.</li>
+<li>Phân tích dữ liệu chi tiết tại thành phố Tokyo.</li>
+</ul>
+</li>
+</ul>
+<p>OK, hãy cùng bắt đầu!</p>
+<h3 id="1-chuân-bị-dữ-liệu">1. Chuân bị dữ liệu</h3>
+<p>Trước tiên, hãy download dữ liệu tại <a href="https://www.kaggle.com/lisphilar/covid19-dataset-in-japan">đây</a> và tại <a href="https://www.kaggle.com/japandata509/covid19-in-tokyo-japan">đây</a>.</p>
+<p>Có tất cả 5 files như mô tả trong bảng sau:</p>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Tên file</th>
+<th>Mô tả</th>
+<th>Cập nhật mới nhất</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>covid_jpn_total.csv</td>
+<td>Thống kê số lượng người mắc bênh, tử vong, cần nhập viện, &hellip;  theo 3 khu vực: Nội địa, sân bay và khu vực cách ly người trở về.</td>
+<td>22-8-2021</td>
+<td>Không bao gồm bệnh nhân trên tàu Diamond Princess (Yokahama) và tàu Costa Atlantica (Kanasaki)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>covid_jpn_prefecture.csv</td>
+<td>Thống kê số lượng người mắc bênh, tử vong, cần nhập viện, &hellip; theo từng tỉnh, thành phố.</td>
+<td>21-8-2021</td>
+<td>Không bao gồm bệnh nhân trên tàu Diamond Princess (Yokahama) và tàu Costa Atlantica (Kanasaki)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>covid_jpn_metadata.csv</td>
+<td>Một số thông tin  bổ sung như mật độ dân cư, số giường bệnh, &hellip; của mỗi tỉnh, thành phố.</td>
+<td>22-8-2021</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>tokyo_cases_byarea.csv</td>
+<td>Thống kê số lượng người mắc bệnh theo từng quận của Tokyo.</td>
+<td>09-01-2021</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>tokyo_covid19_patients.csv</td>
+<td>Thống kê thông tin về giới tính, độ tuổi, tình trạng sức khỏe của các bệnh nhân ở Tokyo.</td>
+<td>09-01-2021</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Hơi tiếc một chút là hai file cuối cùng chỉ được cập nhật đến ngày 09-01-2021.</p>
+<p>Số liệu thống kê trong mỗi ngày là kết quả tích lũy từ những ngày trước đó.</p>
+<p>Chi tiết từng trường thông tin trong mỗi file như sau:</p>
+<ul>
+<li>File covid_jpn_total.csv:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Tên Feature</th>
+<th>Ý nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Date</td>
+<td>Ngày thu thập dữ liệu</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Location</td>
+<td>Nơi kiểm tra: Domestic, Airport hoặc Returnee</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Positive</td>
+<td>Số ca duơng tính</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Tested</td>
+<td>Số lượng người được thử nghiệm</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Symptomatic</td>
+<td>Số ca bệnh có triệu chứng rõ ràng</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Asymptomatic</td>
+<td>Số ca bệnh không có triệu chứng rõ ràng</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Sym-unknown</td>
+<td>Số ca bệnh mà không biết có triệu chứng hay không</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Hosp_require</td>
+<td>Số ca bệnh cần nhập viện điều trị</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Hosp_mild</td>
+<td>Số ca bệnh có triệu chứng nhẹ</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Hosp_severe</td>
+<td>Số ca bệnh trong tình trạng nguy kịch</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Hosp_unknown</td>
+<td>Số ca bệnh mà không biết có triệu chứng hay không</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Hosp_waiting</td>
+<td>Số ca bệnh cần nhập viện nhưng không được đáp ứng</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Discharged</td>
+<td>Số ca khỏi bệnh được xuất viện</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Fatal</td>
+<td>Số người tử vong</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Vacinated_1st</td>
+<td>Số người được tiêm vacine mũi thứ nhất</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Vacinated_2nd</td>
+<td>Số người được tiêm vacine mũi thứ hai</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>File covid_jpn_prefecture.csv:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Tên Feature</th>
+<th>Ý nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Date</td>
+<td>Ngày thu thập dữ liệu</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Prefecture</td>
+<td>Tên tỉnh thành (47 tỉnh, thành phố)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Positive</td>
+<td>Số ca duơng tính</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Tested</td>
+<td>Số lượng người được thử nghiệm</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Discharged</td>
+<td>Số ca khỏi bệnh được xuất viện</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Fatal</td>
+<td>Số ca bệnh tử vong</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Hosp_require</td>
+<td>Số ca bệnh cần nhập viện điều trị</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Hosp_severe</td>
+<td>Số ca bệnh trong tình trạng nguy kịch</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>File covid_jpn_metadata.csv:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Tên Feature</th>
+<th>Ý nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Prefecture</td>
+<td>Tên tỉnh thành (47 tỉnh, thành phố)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Category</td>
+<td>Các nhóm thông tin: Dân số,  Giường bệnh, &hellip;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Item</td>
+<td>Sub-category: Total, Care, &hellip;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Value</td>
+<td>Giá trị tuơng ứng với các categories, sub-categories</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Date</td>
+<td>Ngày thu thập dữ liệu</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Primary_source</td>
+<td>Nguồn thu thập dữ liệu thứ nhất</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Secondary_source</td>
+<td>Nguồn thu thập dữ liệu thứ hai</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>File tokyo_cases_byarea.csv:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Tên Feature</th>
+<th>Ý nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>#No</td>
+<td>Số thứ tự</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Date</td>
+<td>Ngày thu thập dữ liệu</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Date (Onset)</td>
+<td>Ngày bắt đầu có triệu chứng</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Region</td>
+<td>Khu vực nơi mà bệnh nhân sinh sống</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Age</td>
+<td>Độ tuổi của bệnh nhân</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Gender</td>
+<td>Giới tính của bệnh nhân</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Situation</td>
+<td>Tình trạng của bệnh nhân</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>File tokyo_covid19_patients.csv:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Tên Feature</th>
+<th>Ý nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Are</td>
+<td>Khu vực mà thành phố thộc về: Tama area, Special ward area</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Municipality</td>
+<td>Tên thành phố</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Positive Case</td>
+<td>Số ca duơng tính</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Region</td>
+<td>Khu vực nơi mà bệnh nhân sinh sống</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Code</td>
+<td>Mã thành phố</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-phân-tích-dữ-liệu">2. Phân tích dữ liệu</h3>
+<h4 id="21-phân-tích-dữ-liệu-trên-toàn-lãnh-thổ-nhật-bản">2.1 Phân tích dữ liệu trên toàn lãnh thổ Nhật Bản</h4>
+<p>Đầu tiên, import các thư viện cần thiết:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_1.png">
+</div>
+
+</p>
+<h6 id="a-load-dữ-liệu">a, Load dữ liệu</h6>
+<ul>
+<li>Load dữ liệu từ file csv và hiển thị một vài dữ liệu mẫu</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_2.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_3.png">
+</div>
+
+
+<ul>
+<li>Hiển thị thông tin chi tiết hơn dữ liệu</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_4.png">
+</div>
+
+
+<p>Ta thấy có 16 features như trong phần mô tả bên trên. Điều cần chú ý ở đây là đa số các features đều có missing data. Thậm chí một số features có số lượng missing data rất lớn, vượt quá 50%: Symptomatic, Asymptomatic, Sym-unknown, Hosp_mild, Hosp_unknown, Hosp_waiting, Vaccinated_1st, Vaccinated_2nd. Ta sẽ cần giải quyết vấn đề này trong phần Data Cleaning trước khi tiến hành phân tích.</p>
+<h5 id="b-data-cleaning">b, Data Cleaning</h5>
+<p>Đầu tiên, tạo một bản sao của dữ liệu gốc. Đây là dữ liệu mà ta sẽ làm việc trên đó:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_5.png">
+</div>
+
+
+<p>Tiếp theo, tiến hành một số bước làm sạch dữ liệu như sau:</p>
+<ul>
+<li>Loại bỏ tất cả các hàng mà toàn bộ giá trị của nó đều là Null/NaN.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_6.png">
+</div>
+
+
+<ul>
+<li>Loại bỏ tất cả các features mà chứa số lượng missing data vượt quá 50%:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_7.png">
+</div>
+
+
+<ul>
+<li>Đặt lại tên cho các features để cho dễ hiểu hơn:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_8.png">
+</div>
+
+
+<ul>
+<li>Chuyển feature &lsquo;Date&rsquo; từ dạng Object sang dạng Datetime để dễ dàng thực hiện các theo tác về sau:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_9.png">
+</div>
+
+
+<ul>
+<li>Bổ sung thêm các ngày còn thiếu vào dữ liệu</li>
+</ul>
+<p>Không phải tất cả các ngày đều có mặt trong dữ liệu. Để cho đầy đủ, ta sẽ thêm chúng vào bằng cách sử dụng kỹ thuật Resample dữ liệu theo ngày.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_10.png">
+</div>
+
+
+<ul>
+<li>Sắp xếp lại dữ liệu theo chiều giảm dần giá trị của feature &lsquo;Date&rsquo;</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_11.png">
+</div>
+
+
+<ul>
+<li>Thay thế các missing data bởi các giá trị sinh ra bằng phương pháp nội suy::</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_12.png">
+</div>
+
+
+<ul>
+<li>Tạo ra một feature mới là tỉ lệ giữa số ca dương tính trên số người được xét nghiệm. Feature này được sử dụng thay thể cho feature &lsquo;Tested&rsquo; bởi vì các giá trị của feature &lsquo;Tested&rsquo; thường lớn hơn rất nhiều lần so với các giá trị của các features khác. Điều này làm cho việc so sánh trên đồ thị không thực sự mang lại nhiều thông tin.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_13.png">
+</div>
+
+
+<ul>
+<li>Cuối cùng là xóa feature &lsquo;Tested&rsquo;.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_14.png">
+</div>
+
+
+<h5 id="c-tiến-hành-eda">c, Tiến hành EDA</h5>
+<ul>
+<li>So sánh sự thay đổi về số ca mắc Covid-19 tại 3 khu vực: Domestic, Airport, và Returnee</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_15.png">
+</div>
+
+
+<ul>
+<li>Quan sát thấy số cả dương tính trong ngày 13/08/2021 tại khu vực Domestic cao một các bất thường. Khả năng cao là có sự nhầm lẫn ở đây. Vì vậy, cách tốt nhất là loại bỏ nó đi để tránh làm Outlie dữ liệu:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_16.png">
+</div>
+
+
+<ul>
+<li>Đồ thị thể hiện</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_17.png">
+</div>
+
+
+<p>Khu vực nội địa của Nhật Bản có sự tăng về só ca nhiễm Covid-19 nhanh nhất so với các khu vực còn lại.</p>
+<ul>
+<li>So sánh sự thay đổi về số lượng bệnh nhân Covid-19 tử vọng tại 3 khu vực: Domestic, Airport, và Returnee</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_18.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_19.png">
+</div>
+
+
+<p>Rất dễ hiểu khi số ca bệnh không qua khỏi tại khu vực Domestic tăng nhanh nhất so với các khu vực còn lại, phù hợp với logic bên trên.</p>
+<h4 id="22-phân-tích-chi-tiết-dữ-liệu-trong-khu-vực-nội-địa-của-nhật-bản">2.2 Phân tích chi tiết dữ liệu trong khu vực nội địa của Nhật Bản</h4>
+<h5 id="ab-load-data--date-cleaning">a,b Load Data &amp; Date Cleaning</h5>
+<p>Hai phần này giống hệt mục 2.1 vì phần này sử dụng chung file dataset với phần 2.1.</p>
+<h5 id="c-tiến-hành-eda-1">c, Tiến hành EDA</h5>
+<ul>
+<li>Đầu tiên, lựa chọn những mẫu dữ liệu thuộc khu vực Domestic:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_20.png">
+</div>
+
+
+<ul>
+<li>Chuyển Date feature thành index của dataset để thuận tiện trong việc vẽ biểu đồ:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_21.png">
+</div>
+
+
+<ul>
+<li>So sánh sự thay đổi về số ca dương tính, số ca dương tính trên số ca xét nghiệm, số ca tử vong, số ca cần nhập viện, số ca có triệu chứng nặng, và số ca khỏi bệnh được xuất viện</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_22.png">
+</div>
+
+
+<p>Đồ thị dạng Line:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_23.png">
+</div>
+
+
+<p>Nhận thấy số ca dương tính và số bệnh nhân được chữa khỏi đều tăng nhanh, nhưng khoảng cách giữa hai nhóm được duy trì khá tốt. Đây có thể coi làm một tín hiệu đáng mừng.</p>
+<p>Đồ thị dạnh Bar trong video:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_24.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1.gif">
+</div>
+
+
+<ul>
+<li>Để có cái nhìn rõ hơn về sự thay đổi của từng nhóm người bên trên, ta có thể thể hiện riêng số liệu của các nhóm đó lên đồ thị. Ví dụ:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_25.png">
+</div>
+
+
+<p>Số ca tử vong cũng tăng rất nhanh, liên tục từ 03/2020 đến hiện tại, đặc biệt là từ đầu năm 2021.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_26.png">
+</div>
+
+
+<p>Số lượng người bệnh cần nhập viện có lúc tăng, lúc giảm nhưng xu hướng chung đến hiện tại vẫn là tăng.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_27.png">
+</div>
+
+
+<p>Tỉ lệ giữa số ca dương tính và số người được xét nghiệm có xu hướng giảm từ 03/2020 đến 07/2020, sau đó duy trì ở mức tương đối ổn định đến nay.</p>
+<ul>
+<li>Phân tích tình hình hiện tại (<strong>ngày 22/08/2021</strong>)</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_28.png">
+</div>
+
+
+<p>So sánh số ca dương tính, số ca dương tính trên số ca xét nghiệm, số ca tử vong, số ca cần nhập viện, số ca có triệu chứng nặng, và số ca khỏi bệnh được xuất viện</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_29.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_30.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f1_31.png">
+</div>
+
+
+<p>Tính đến ngày 21/08/2021, tổng số ca dương tính được ghi nhận là 1273652, số ca chữa khỏi là 1048617, số bênh nhân cần nhập viện là203540, và số bệnh nhân tử vong là 15589.</p>
+<h4 id="23--phân-tích-dữ-liệu-của-47-tỉnh-thành-phố">2.3  Phân tích dữ liệu của 47 tỉnh, thành phố.</h4>
+<p>Import thư viện:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_1.png">
+</div>
+
+
+<h5 id="a-load-dữ-liệu-1">a, Load dữ liệu</h5>
+<ul>
+<li>Load dữ liệu từ file csv và hiển thị ví dụ một số mẫu</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_2.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_3.png">
+</div>
+
+
+<ul>
+<li>Hiển thị thông tin về các features:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_4.png">
+</div>
+
+
+<ul>
+<li>Hiển thị danh sách 47 tỉnh:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_5.png">
+</div>
+
+
+<h5 id="b-data-cleaning-1">b, Data Cleaning</h5>
+<ul>
+<li>Tạo một bản copy của dữ liệu gốc:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_6.png">
+</div>
+
+
+<ul>
+<li>Đổi tên các features để cho dễ nhớ hơn:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_7.png">
+</div>
+
+
+<ul>
+<li>Xóa các hàng mà toàn bộ giá trị là missing data:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_8.png">
+</div>
+
+
+<ul>
+<li>Chuyển feature &lsquo;Date&rsquo; sang dạng DateTime để thuận tiện xử lý về sau:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_9.png">
+</div>
+
+
+<ul>
+<li>Bổ sung thêm các ngày còn thiếu vào dữ liệu</li>
+</ul>
+<p>Không phải tất cả các ngày đều có mặt trong dữ liệu. Để cho đầy đủ, ta sẽ thêm chúng vào bằng cách sử dụng kỹ thuật Resample dữ liệu theo ngày.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_10.png">
+</div>
+
+
+<ul>
+<li>Sắp xếp lại dữ liệu theo chiều giảm dần giá trị của feature &lsquo;Date&rsquo;</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_11.png">
+</div>
+
+
+<ul>
+<li>Thay thế các missing data bởi các giá trị sinh ra bằng phương pháp nội suy::</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_12.png">
+</div>
+
+
+<h5 id="c-tiến-hành-eda-2">c, Tiến hành EDA</h5>
+<ul>
+<li>So sánh sự thay đổi về số ca dương tính của 47 tỉnh, thành theo thời gian.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_13.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_14.png">
+</div>
+
+
+<p>Tất cả các tỉnh thành đều chứng kiến sự tăng về số ca dương tính với Covid-19. Trong đó, Tokyo là thành phố có tốc độ tăng nhanh nhất so với các tình thành còn lại.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_15.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2.gif">
+</div>
+
+
+<ul>
+<li>So sánh sự thay đổi về số người chết vì Covid-19 của 47 tỉnh, thành theo thời gian.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_16.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_17.png">
+</div>
+
+
+<p>Tương ứng với số ca dương tính thì số người chết cũng có xu hướng tăng ở cả 47 tỉnh, thành. Từ tháng 03/2020 đến nửa đầu tháng 06/2021, Tokyo luôn có số ca bệnh tử vong cao nhất cả nước, nhưng sau đó thì Osaka đã vượt lên dẫn đầu.</p>
+<ul>
+<li>So sánh sự thay đổi về số bệnh nhân khỏi bệnh được xuất viện của 47 tỉnh, thành theo thời gian.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_18.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_19.png">
+</div>
+
+
+<p>Tokyo vẫn là địa phương dẫn đầu và bỏ khá xa các địa phương khác về co số này. Sau Tokyo là Osaka.</p>
+<p><strong>$$$ Phân tích số liệu mới nhất (ngày 21/08/2021)</strong></p>
+<ul>
+<li>Chọn ra các số liệu ghi nhận trong ngày 21/08/2021 của 47 tỉnh, thành.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_20.png">
+</div>
+
+
+<ul>
+<li>Thêm mới feature &lsquo;Dead Rate&rsquo; thể hiện tỉ lệ giữa số người chết và số người mắc bệnh.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_21.png">
+</div>
+
+
+<ul>
+<li>Sắp xếp dữ liệu theo chiều giảm dần của số ca dương tính.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_22.png">
+</div>
+
+
+<ul>
+<li>So sánh số lượng bênh nhân Covid-19 giữa các tỉnh, thành:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_23.png">
+</div>
+
+
+<p>Hiện tại thì Tokyo đang có số ca bệnh Covid-19 lớn nhất, gần gấp đôi con số của địa phương xếp ngay sau là Osaka.</p>
+<ul>
+<li>So sánh số người chết giữa các tỉnh, thành:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_25.png">
+</div>
+
+
+<p>Tuy nhiên, đáng ngạc nhiên là con số người chết tại Osaka lại vượt lên Tokyo.</p>
+<ul>
+<li>So sánh số người phải nhập viện vì Covid-19 giữa các tỉnh, thành:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_26.png">
+</div>
+
+
+<p>Số bệnh nhân cần nhập viện điều trị tại Tokyo cũng đang là rất lớn, lên đến hơn 40.000 ca, gần gấp đôi so với Saitama.</p>
+<ul>
+<li>So sánh tỉ lệ giữa số ca tử vong và số ca bệnh:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f2_27.png">
+</div>
+
+
+<p>Về tỉ lệ này thì địa phương đứng đầu là Tokushima, tiếp theo là Hokkaido.</p>
+<h4 id="23_--phân-tích-dữ-liệu-của-47-tỉnh-thành-phố-về-mật-độ-dân-cư-và-số-giường-bệnh-mở-rộng">2.3_*  Phân tích dữ liệu của 47 tỉnh thành phố, về mật độ dân cư và số giường bệnh (Mở rộng)</h4>
+<p>Trong dataset của chúng ta còn có một file chứa thông tin về dân cư và cơ sở hạ tầng ý tế của các tỉnh thành ở Nhật Bản. Mặc dù dữ liệu hơi cũ (<em>thống kê từ năm 2020</em>) nhưng cũng đáng để chúng ta xem xét.</p>
+<p>Import thư viện sử dụng:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_1.png">
+</div>
+
+
+<h5 id="a-load-dữ-liệu-2">a, Load dữ liệu</h5>
+<ul>
+<li>Load dữ liệu từ file csv và hiển thị một vài dữ liệu</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_2.png">
+</div>
+
+
+<ul>
+<li>Hiển thị thông tin chi tiết hơn của dữ liệu</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_3.png">
+</div>
+
+
+<h5 id="b-data-cleaning-2">b, Data Cleaning</h5>
+<ul>
+<li>Tạo bản sao của dữ liệu gốc:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_4.png">
+</div>
+
+
+<ul>
+<li>Xóa bỏ 2 features có nhiều missing data, và không có nhiều ý nghĩa trong phân tích lần này:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_5.png">
+</div>
+
+
+<ul>
+<li>Hợp nhất hai features &lsquo;Category&rsquo; và &lsquo;Item&rsquo; thành feature mới là &lsquo;Title&rsquo; bởi vì chúng mang ý nghĩa tương tự nhau:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_6.png">
+</div>
+
+
+<ul>
+<li>Chuyển feature &lsquo;Date&rsquo; sang dạng DateTime và sắp xếp dữ liệu theo chiều giảm của nó:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_7.png">
+</div>
+
+
+<ul>
+<li>Tạo bảng pivot_table chỉ chứa thông tin dùng để phân tích trong bài này: Prefecture, Title, và Value</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_8.png">
+</div>
+
+
+<ul>
+<li>Chuyển một số features tự dạng object về dạng integer/float để thuận tiện xử lý</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_9.png">
+</div>
+
+
+<h5 id="c-tiến-hành-eda-3">c, Tiến hành EDA</h5>
+<ul>
+<li>So sánh mật độ dân cư trên tổng diện tích, mật độ dân cư trên diện tích có khả năng sinh sống của 47 tỉnh, thành.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_10.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_11.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_12.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_13.png">
+</div>
+
+
+<ul>
+<li>So sánh số giường bệnh có thể điều trị bênh nhân Covid-19 của 47 tỉnh, thành</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_14.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_15.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f3_16.png">
+</div>
+
+
+<h4 id="24-phân-tích-dữ-liệu-tại-tokyo">2.4 Phân tích dữ liệu tại Tokyo</h4>
+<p>Dữ liệu tại Tokyo nằm chung trong file <em>covid_jpn_prefecture.csv</em>, nên phần load và làm sạch dữ liệu giống như phần 2.3. Sau đó, ta sẽ lọc ra các mẫu thuộc Tokyo để phân tích.</p>
+<h5 id="a-load-dữ-liệu-3">a, Load dữ liệu</h5>
+<h5 id="b-data-cleaning-3">b, Data Cleaning</h5>
+<ul>
+<li>Lọc danh sách mẫu dữ liệu thuộc khu vực Tokyo:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_12.png">
+</div>
+
+
+<ul>
+<li>Thêm mới feature <em>Positive_Tested_Rate</em> thể hiện tỉ lệ giữa số ca mắc Covid-19 trên số lượng người được xét nghiệm.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_13.png">
+</div>
+
+
+<h5 id="c-tiến-hành-eda-4">c, Tiến hành EDA</h5>
+<ul>
+<li>Hiển thị danh sách dữ liệu dạng bảng:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_14.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_15.png">
+</div>
+
+
+<ul>
+<li>So sánh sự thay đổi về số ca dương tính, tỉ lệ mắc Covid-19 trên số người được xét nghiệm, số bệnh nhân khỏi bệnh được xuất viện, số ca tử vong theo thời gian:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_16.png">
+</div>
+
+
+<p>Nhận thấy số ca dương tính và số bệnh nhân được công bố khỏi bệnh tăng tương đối đều nhau, khoảng cách giữa chúng được duy trì khá ổn đỉnh. Đây có thể xem là tín hiệu tốt.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_17.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4.gif">
+</div>
+
+
+<ul>
+<li>Sự thay đổi của số ca dương tính theo thời gian</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_18.png">
+</div>
+
+
+<p>Số người dương tính với Covid-19 đang tăng cao, đặc biệt là từ đầu năm 2021 đến nay.</p>
+<ul>
+<li>Sự thay đổi về số lượng người được xét nghiệm Covid-19</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_19.png">
+</div>
+
+
+<p>Con số này cũng tăng rất nhanh, gần như là tuyến tính. Có lẽ Tokyo đang tăng cường, tập trung xét nghiệm để bóc tách F0 ra khỏi cộng đồng.</p>
+<ul>
+<li>Sự thay đổi về tỉ lệ giữa số ca mắc Covid-19 và số người được xét nghiệm</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_20.png">
+</div>
+
+
+<p>Từ tháng 03/2020 đến tháng 06/2020, tỉ lệ này rất cao, khoảng 0.35. Từ tháng 07/2020 trở đi thì tỉ lệ này giảm và duy trì trong khoảng 0.06 đến 0.09. Đây cũng là một tín hiệu tích cực.</p>
+<ul>
+<li>Sự thay đổi về số lượng bệnh nhân nặng, cần nhập viện điều trị</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_21.png">
+</div>
+
+
+<p>Bình thường nếu F0 không có triệu chứng, hoặc triệu chứng nhẹ thì sẽ được cách ly và theo dõi tại nhà. Nếu trở nặng thì sẽ được nhập viện để điều trị tích cực. Con số này tăng vọt vào tháng 02/2021 và hiện tại (08/2021).</p>
+<ul>
+<li>Sự thay đổi về số người được chữa khỏi.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_22.png">
+</div>
+
+
+<p>Số người được công bố hết bệnh tăng tương tự với số người mắc Covid-19.</p>
+<ul>
+<li>Sự thay đổi về số lượng người chết vì Covid-19</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_23.png">
+</div>
+
+
+<p>Đối với thống kê này, có thể thấy từ cuối tháng 02/2021 đến nay, số lượng người chết tăng rất nhanh. Hiện tại đã lên đến gần 3000 người.</p>
+<ul>
+<li>Phân tích số liệu hiện tại của Tokyo</li>
+</ul>
+<p>Lấy dữ liệu trong ngày thống kê mới nhất, <strong>21/08/2021</strong>:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_24.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_25.png">
+</div>
+
+
+<p>Thể hiện kết quả lên đồ thị Pie:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_26.png">
+</div>
+
+
+<p>Thể hiện kết quả lên đồ thị Bar:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f4_27.png">
+</div>
+
+
+<p>Theo thống kê mới nhất vừa cập nhật cách đây khoảng 2h cho ngày 21/08/2021 thì số ca dương tính là 307870, số người được xét nghiệm là 3119292, số bệnh nhân được công bố khỏi bệnh là 260043, và số người cần nhập viện điều trị là 45456.</p>
+<h4 id="24_a-phân-tích-dữ-liệu-thông-tin-bệnh-nhân-tại-tokyo">2.4_a Phân tích dữ liệu thông tin bệnh nhân tại Tokyo</h4>
+<p>Thông tin chi tiết về các bệnh nhân mắc Covid-19 được lưu ở một file dữ liệu riêng. Thông tin này được cập nhật đến ngày 02/02/2021. Ta sẽ đi phân tích nó.</p>
+<p>Import thư viện sử dụng:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_1.png">
+</div>
+
+
+<h5 id="a-load-dữ-liệu-4">a, Load dữ liệu</h5>
+<ul>
+<li>Load dữ liệu từ file csv và hiển thị một vài dữ liệu</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_2.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_3.png">
+</div>
+
+
+<ul>
+<li>Hiển thị thông tin chi tiết hơn về dữ liệu</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_4.png">
+</div>
+
+
+<h5 id="b-data-cleaning-4">b, Data Cleaning</h5>
+<ul>
+<li>Tạo một bản sao của dữ liệu gốc</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_5.png">
+</div>
+
+
+<ul>
+<li>Xóa feature <em>Date (Onset)</em> bởi vì nó là dữ liệu bị missing quá nhiều</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_6.png">
+</div>
+
+
+<ul>
+<li>Chuyển feature <em>Date</em> sang dạng DateTime để thuận tiện xử lý</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_7.png">
+</div>
+
+
+<ul>
+<li>Thay thể các missing data bằng các giá trị mới sinh ra bằng phương pháp nội suy</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_8.png">
+</div>
+
+
+<h5 id="c-tiến-hành-eda-5">c, Tiến hành EDA</h5>
+<ul>
+<li>Phân tích tuổi của bệnh nhân</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_9.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_10.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_11.png">
+</div>
+
+
+<p>Có thể số bênh nhân trong độ tuổi 20-30 chiếm tỉ lệ lớn nhất. Tỉ lệ này giảm dần khi số tuổi tăng lên. Người trên 100 tuổi vẫn có nguy cơ mắc Covid-19. Không thấy báo cáo về tỉ lệ nhiễm bệnh của trẻ em và thanh thiếu nên dưới 20 tuổi.</p>
+<ul>
+<li>Phân tích giới tính của bệnh nhân</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_12.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_13.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f5_14.png">
+</div>
+
+
+<p>Nam giới dường như có nguy cơ mắc Covid-19 nhiều hơn so với nữ giới, mặc dù co số chênh lệch không quá lớn.</p>
+<h4 id="24_b-so-sánh-số-ca-mắc-covid-19-tại-23-quận-của-tokyo">2.4_b So sánh số ca mắc Covid-19 tại 23 quận của Tokyo</h4>
+<p>Dữ liệu về Covid-19 tại các quận của Tokyo cũng được thống kê trong một file khác. Tuy nhiên, nó chỉ cập nhật đến tháng 01/2021. Ta sẽ đi phân tích nó.</p>
+<p>Import thư viện sử dụng:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_1.png">
+</div>
+
+
+<h5 id="a-load-dữ-liệu-5">a, Load dữ liệu</h5>
+<ul>
+<li>Load dữ liệu từ file csv và hiển thị một vài dữ liệu</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_2.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_3.png">
+</div>
+
+
+<ul>
+<li>Hiển thị thông tin chi tiết hơn dữ liệu</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_4.png">
+</div>
+
+
+<ul>
+<li>Ta cũng load thêm thông tin địa lý về các quận của Tokyo phục vụ mục đích hiển thị dữ liệu lên bản đồ.</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_5.png">
+</div>
+
+
+<h5 id="b-data-cleaning-5">b, Data Cleaning</h5>
+<p>Các dữ liệu trong file csv không có missing data, nên ta chỉ cần bỏ đi feature không cần thiết và sắp xếp lại dữ liệu.</p>
+<ul>
+<li>Tạo bản sao của dữ liệu gốc</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_6.png">
+</div>
+
+
+<ul>
+<li>Loại bỏ feature <em>Area</em> bởi vì ta sẽ không cần dùng đến nó</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_7.png">
+</div>
+
+
+<ul>
+<li>Sắp xếp lại dữ liệu theo chiều giảm dần của số ca dương tính với Covid-19</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_8.png">
+</div>
+
+
+<ul>
+<li>Đối với dữ liệu về địa lý thì cần phải chỉnh lý một chút theo khuyến nghị từ tác giả:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_9.png">
+</div>
+
+
+<h5 id="c-tiến-hành-eda-6">c, Tiến hành EDA</h5>
+<ul>
+<li>So sánh số ca mắc Covid-19 tại 23 quận trên bảng dữ liệu:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_10.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_11.png">
+</div>
+
+
+<ul>
+<li>So sánh số ca mắc Covid-19 tại 23 quận trên đồ thị Bar:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_12.png">
+</div>
+
+
+<ul>
+<li>So sánh số ca dương tính với Covid-19 trên bản đồ:</li>
+</ul>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/104_f6_13.png">
+</div>
+
+
+<p>Setagaya đang là quận có số ca mắc Covid-19 cao nhất, tiếp sau đó là Shinjuku.</p>
+<h3 id="3-kết-luận">3. Kết luận</h3>
+<p>Vậy là chúng ta đã hoàn thành việc phân tích dữ liệu thống kê về tình hình Covid-19 tại Nhật Bản. Đây là dữ liệu thực tế, cập nhật nóng hổi đến hiện tại giúp chúng ta có thể áp dụng những kiến thức về Data Science vào trong bài toán thực tế. Mình nghĩ là có khá nhiều kiến thức thú vị mà bạn đã học được thông qua bài này. Cảm ơn các bạn đã theo dõi!</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Science/tree/master/Japan_Covid-19">đây</a>.</p>
+<h3 id="4-tham-khảo">4. Tham khảo</h3>
+<p>[1] Taha Anwar, &ldquo;Creating a Virtual Pen And Eraser with OpenCV&rdquo;, Available online: <a href="https://learnopencv.com/creating-a-virtual-pen-and-eraser-with-opencv/">https://learnopencv.com/creating-a-virtual-pen-and-eraser-with-opencv/</a> (Accessed on 15 Aug 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/eda">Eda</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/game">Game</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
