@@ -312,7 +312,14 @@ fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>b
              labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;Ward Name&#39;</span>: <span style="color:#e6db74">&#39;Wards&#39;</span>, <span style="color:#e6db74">&#39;Price Avg (JPY/Sq.M)&#39;</span>: <span style="color:#e6db74">&#39;Average Land Price ((JPY/Sq.M)&#39;</span>},
              text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Price Avg (JPY/Sq.M)&#39;</span>
 )
-</code></pre></div><p>Quận có giá đất đắt đỏ nhất là Chiyoda với gần 2.8 triệu Yên/$Km^2$, và Shinagawa là quận rẻ nhất, chỉ khoảng 78 Man Yên/$Km^2$. Chắc có lẽ vì Shinagawa có nhiều đất quá, :D. Các vị trí tiếp theo sau vị trí đứng đầu là Minato, Chuo, Shibuya, Shinjuku, và Meguro.</p>
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_8.png">
+</div>
+
+
+<p>Quận có giá đất đắt đỏ nhất là Chiyoda với gần 2.8 triệu Yên/$Km^2$, và Shinagawa là quận rẻ nhất, chỉ khoảng 78 Man Yên/$Km^2$. Chắc có lẽ vì Shinagawa có nhiều đất quá, :D. Các vị trí tiếp theo sau vị trí đứng đầu là Minato, Chuo, Shibuya, Shinjuku, và Meguro.</p>
 <h4 id="44-hiển-thị-vị-trí-của-các-quận-lên-bản-đồ">4.4 Hiển thị vị trí của các quận lên bản đồ</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create map of Tokyo with 5 major districts are displayed</span>
 tko_map <span style="color:#f92672">=</span> folium<span style="color:#f92672">.</span>Map(location<span style="color:#f92672">=</span>[tko_lat, tko_lng], zoom_start<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
