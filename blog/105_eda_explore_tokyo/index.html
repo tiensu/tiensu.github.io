@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/data-science"
+          class="text-primary">Data Science</a>
+        
+        <a href="/categories/eda"
+          class="text-primary">E d a</a>
+        
+        <h2>Khám phá thành phố Tokyo xinh đẹp</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>28 August 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/105_explore_tokyo.jpg" class="img-fluid w-100 mb-4" alt="Khám phá thành phố Tokyo xinh đẹp">
+        
+        <div class="content mb-5">
+          <p>Gần 3 năm trước, mình có tham gia học/thi để lấy chứng chỉ <em>IBM Data Science Professional Certificate</em> do IBM cấp thông qua nền tảng học trực tuyến Coursera. Người tham gia phải học đủ 9 courses xoay quanh các kiến thức về Data Science (<em>bây giờ số lượng courses đã tăng lên 10</em>). Cuối mỗi courses là các bài tập về kiểm tra, mà người học phải làm và gửi lên hệ thống để được chấm điểm. Đặc biệt là courses cuối cùng, đó là một dạng bài tập lớn, một dự án tổng hợp, áp dụng các kiến thức đã được học trong suốt quá trình (<em>Capstone Project</em>) để giải quyết một dự án Data Science trong thực tế. Nếu vượt qua được dự án này thì người học sẽ được cấp chứng chỉ <em>chuyên gia Data Science</em> của IBM. Nếu bạn quan tâm có thể tìm hiểu và học tại <a href="https://www.coursera.org/professional-certificates/ibm-data-science">đây</a>.</p>
+<p>Trong bài này mình sẽ trình bày về dự án đó của mình để chia sẻ cùng mọi người!</p>
+<h3 id="1-định-nghĩa-vấn-đề-cần-giải-quyết">1. Định nghĩa vấn đề cần giải quyết</h3>
+<p>Theo báo cáo xếp hạng chỉ số kinh tế toàn cầu, Nhật Bản hiện đang là nước đứng thứ 3, chỉ sau Mỹ và Trung Quốc. Tokyo, nơi mà mình may mắn có dịp được sống và làm việc trong gần 2 năm (2017-2018), cũng là một trong những thành phố hiện đại và năng động nhất trên thế giới. Vì thế, sẽ không có gì ngạc nhiên khi ngày càng có nhiều doanh nhân, nhà đầu tư chọn Tokyo là điểm đến lý tưởng cho các dự án đầy tham vọng của mình. Nếu bạn cũng là một người trong số đó, hay thậm chí chỉ đơn giản là muốn mở một <em>start up business</em> nhỏ nhỏ của mình thì bài viết này có thể hữu ích cho bạn.</p>
+<p>Nói đến Tokyo, bên cạnh những thắng cảnh du lịch nổi tiếng thì mình ấn tượng mạnh với văn hóa ẩm thực tại đó. Các nhà hàng Sushi, Rame, Udon, &hellip; hay các quán Bar, Pub, &hellip; các của hàng Caffe, &hellip; luôn chật kín người vào thời gian nghỉ trong ngày. Bạn cũng không cần phải bỏ ra một số tiền quá lớn để có thể thưởng thức các món ăn đặc sắc ở đây. Một bữa trưa văn phòng, theo mình nhớ thì có giá tầm 500-1000 Yên (<em>hoặc có thể do mình ít tiền nên chọn quán rẻ tiền</em>). Sẽ là một ý tưởng không tồi nếu bạn muốn mở một nhà hàng tại Tokyo để phục vụ các món ăn ngon cho khách hàng. Theo thống kê, tỷ suất lợi nhuận cho một nhà hàng kinh doanh tốt dao động trong khoảng 15-20%. Thậm chí có thể lên đến 30% vào các dịp đặc biệt trong năm, như báo cáo tại <a href="https://www.ichefpos.com/en-sg/blog/japanese-restaurants-profits">đây</a>.</p>
+<p>Về mặt địa lý, Tokyo bao gồm 23 <em>quận đặc biệt - special wards - 東京都区部</em>, trong đó có 7 quận được coi là <a href="https://www.realestate-tokyo.com/office/tokyo-business-districts/">Business Wards</a> gồm &ndash; Chiyoda (千代田区), Chuo (中央区), Shinjuku (新宿区), Shibuya (渋谷区), Shinagawa (品川区), Minato (港区), và Meguro (目黒区) vì sự sầm uất trong kinh doan buôn bán của nó. Chúng ta sẽ tập trung vào phân tích số liệu của 7 quận đó trong bài này.</p>
+<p>Tóm lại, vấn đề cần giải quyết trong bài này là: Tìm ra một địa điểm thích hợp để mở một nhà hàng mới tại Tokyo.</p>
+<p>Nội dung bài viết bao gồm các phần:</p>
+<ul>
+<li>Chuẩn bị dữ liệu</li>
+<li>Phân tích dữ liệu</li>
+<li>Kết luận (<em>trả lời vấn đề nêu ra ở trên</em>)</li>
+</ul>
+<p>Không giống như bài trước, khi mà chúng ta đã có sẵn dataset, trong bài này, chúng ta phải tự đi cào dữ liệu từ trên Internet về để phân tích.</p>
+<h3 id="2-đối-tượng-độc-giả-hướng-đến">2. Đối tượng độc giả hướng đến</h3>
+<p>Nội dung của bài viết này sẽ phù hợp với những nhóm độc giả sau:</p>
+<ul>
+<li>Những người làm kinh doanh và đang quan tâm đến việc đầu tư hoặc mở một nhà hàng mới tại Tokyo.</li>
+<li>Những người đang muốn tìm các nhà hàng, quán xá vui chơi, ăn uống, nghỉ ngơi gần nhà, công ty của họ.</li>
+<li>Những người đang muốn trở thành một Data Scientist, bởi vì sẽ có rất nhiều kỹ thuật chuẩn bị, phân tích, đánh giá dữ liệu được sử dụng trong bài này.</li>
+</ul>
+<h3 id="3-data-preparation">3. Data Preparation</h3>
+<h4 id="31-tìm-thông-tin-địa-lý-về-các-quận-của-tokyo">3.1 Tìm thông tin địa lý về các quận của Tokyo</h4>
+<p>Thông tin địa lý của 23 quận thuộc thành phố Tokyo được cung cấp tại địa chỉ <a href="https://en.wikipedia.org/wiki/Special_wards_of_Tokyo">Special Wards of Tokyo</a> trên Wikipedia. Các thông tin này ở dạng bảng nên ta có thể dễ dàng lấy về bằng 2 thư viện <a href="https://2.python-requests.org//en/master/">request</a> và <a href="https://pypi.org/project/beautifulsoup4/">Beautifulsoup4</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># get html table code</span>
+response_obj <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;https://en.wikipedia.org/wiki/Special_wards_of_Tokyo&#39;</span>)<span style="color:#f92672">.</span>text
+soup <span style="color:#f92672">=</span> BeautifulSoup(response_obj,<span style="color:#e6db74">&#39;lxml&#39;</span>)
+tko_wards_table <span style="color:#f92672">=</span> soup<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#39;table&#39;</span>, {<span style="color:#e6db74">&#39;class&#39;</span>:<span style="color:#e6db74">&#39;wikitable sortable&#39;</span>})
+</code></pre></div><p>Sau một vài thao tác biến đổi thì ta có được thông tin về diện tích, dân số, các khu phố chính như sau:
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_1.png">
+</div>
+
+</p>
+<p>Tiếp theo, ta sẽ lấy thông tin kinh độ và vĩ độ của từng quận, sử dụng thư viện <a href="https://geopy.readthedocs.io/en/stable/">Geophy</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># get latitude &amp; longitude of major districts</span>
+geolocator <span style="color:#f92672">=</span> Nominatim(user_agent<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Tokyo_Explorer&#39;</span>)
+df_tko[<span style="color:#e6db74">&#39;Ward Coord&#39;</span>] <span style="color:#f92672">=</span> df_tko[<span style="color:#e6db74">&#39;Ward Name&#39;</span>]<span style="color:#f92672">.</span>apply(geolocator<span style="color:#f92672">.</span>geocode)<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: (x<span style="color:#f92672">.</span>latitude, x<span style="color:#f92672">.</span>longitude))
+<span style="color:#75715e"># separate latitude &amp; longtitude into 2 different columns</span>
+df_tko[[<span style="color:#e6db74">&#39;Ward Latitude&#39;</span>, <span style="color:#e6db74">&#39;Ward Longtitude&#39;</span>]] <span style="color:#f92672">=</span> df_tko[<span style="color:#e6db74">&#39;Ward Coord&#39;</span>]<span style="color:#f92672">.</span>apply(pd<span style="color:#f92672">.</span>Series)
+df_tko<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#39;Ward Coord&#39;</span>], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, inplace<span style="color:#f92672">=</span>True)
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_2.png">
+</div>
+
+
+<p>Chú ý là một số tên quận có cách viết khác so với bình thường (<em>VD: Chūō, Bunkyō, &hellip;</em>). Ta phải sửa lại cho đúng để có thể lấy được chính xác tọa độ của chúng như kết quả trong bảng trên.</p>
+<h4 id="32-tìm-thông-tin-về-giá-đất-tại-mỗi-quận">3.2 Tìm thông tin về giá đất tại mỗi quận</h4>
+<p>Giá đất tại mỗi quận cũng là một yếu tố quan trọng để quyết định nơi sẽ đặt nhà hàng mới. Do đó, ta sẽ lấy thêm thông tin này để phân tích từ trang thông tin tổng hợp <a href="https://utinokati.com/en/details/land-market-value/area/Tokyo/">land market value area in Tokyo</a>. Nó cũng ở dạng bảng nên ta vẫn dùng hai thư viện <em>requests</em> và <em>Beautifulsoup4</em> để cào về.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_3.png">
+</div>
+
+
+<p>Bạn có thể lưu lại các thông tin đã có vào file csv để dễ dàng sử dụng về sau.</p>
+<h4 id="33-chọn-ra-7-quận-để-tiến-hành-phân-tích">3.3 Chọn ra 7 quận để tiến hành phân tích</h4>
+<p>Như đã trình bày trong phần đặt vấn đề bên trên, chúng ta sẽ chỉ tập trung vào 7 <em>business wards</em> để phân tích trong bài này.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">business_wards <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Chiyoda&#39;</span>, <span style="color:#e6db74">&#39;Chuo&#39;</span>, <span style="color:#e6db74">&#39;Minato&#39;</span>, <span style="color:#e6db74">&#39;Shinjuku&#39;</span>, <span style="color:#e6db74">&#39;Shibuya&#39;</span>, <span style="color:#e6db74">&#39;Shinagawa&#39;</span>, <span style="color:#e6db74">&#39;Meguro&#39;</span>]
+df_tko_spe <span style="color:#f92672">=</span> df_tko<span style="color:#f92672">.</span>loc[df_tko[<span style="color:#e6db74">&#39;Ward Name&#39;</span>]<span style="color:#f92672">.</span>isin(business_wards)]<span style="color:#f92672">.</span>reset_index(drop<span style="color:#f92672">=</span>True)
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_4.png">
+</div>
+
+
+<h4 id="34-tìm-thông-tin-về-các-địa-điểm-của-từng-quận">3.4 Tìm thông tin về các địa điểm của từng quận</h4>
+<p>Có thể bạn đã biết, <a href="https://foursquare.com/">Foursquare</a> là mạng xã hội chia sẻ địa điểm hàng đầu trên thế giới. Trên đó có tương đối đầy đủ các địa điểm được chi sẻ bởi người dùng khắp nơi trên thế giới. Các địa điểm được phân chia thành các nhóm liên quan đến nhau để người dùng có thể dễ dàng tìm kiếm.</p>
+<p>Đối với các nhà phát triển, Foursquare cung cấp các API để cho các ứng dụng gọi đến và trả về danh sách các địa điểm dựa vào tọa độ được cung cấp. Để sử dụng được các API này, bạn phải đăng ký tài khoản, và lựa chọn <a href="https://developer.foursquare.com/docs/places-api/getting-started/">một trong 3 gói dịch vụ của Foursquare</a>.</p>
+<p>Sau khi thành công đang kí tài khoản và tạo dự án trên Foursquare thì chúng ta sẽ được cung cấp 2 thông tin là CLIENT_ID và SECRET_ID để sử dụng khi gọi API. API sử dụng trong bài này <a href="https://developer.foursquare.com/docs/api-reference/venues/explore/">Venue Recommendation</a>. Khi gọi API để lấy danh sách địa điểm mong muốn, chúng ta có thể đưa thêm các điều kiện như phạm vi tìm kiếm, số lượng tối đa, &hellip; và còn rất nhiều tham số khác để giúp ta lấy được các địa điểm sát với mong muốn hơn.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># function to get venues from foursquare through foursquare API</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getVenues</span>(latitude, longitude, radius<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>):
+    venues_100_list <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> lat, long <span style="color:#f92672">in</span> zip(latitude, longitude):
+        url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://api.foursquare.com/v2/venues/explore?&amp;client_id={}&amp;client_secret={}&amp;v={}&amp;ll={},{}&amp;radius={}&amp;limit={}&#39;</span><span style="color:#f92672">.</span>format(
+            CLIENT_ID, CLIENT_SECRET, VERSION, lat, long, radius, limit)
+
+        result <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url)<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#39;response&#39;</span>][<span style="color:#e6db74">&#39;groups&#39;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;items&#39;</span>]
+
+        venues_100_list<span style="color:#f92672">.</span>append(result)
+
+    <span style="color:#66d9ef">return</span> venues_100_list
+</code></pre></div><p>Ở đây, ta chọn 100 địa điểm trong vòng bán kính 1km của mỗi quận. Kết quả trả về dưới dạng Json, sau khi bóc tách ra các thông tin cần thiết thì ta được như sau:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_5.png">
+</div>
+
+
+<p>Như vậy là ta đã có đầy đủ dữ liệu. Mình cũng đã kiểm tra, dữ liệu mà ta cào từ trên Internet về tương đối chuẩn, không bị thiếu. Mặc dù có một vài sai sót nhỏ nhưng mình cũng đã chỉnh sửa luôn trong quá trình chuẩn bị gì liệu bên trên nên ta có thể tiến hành phân tích luôn mà không cần qua bước làm sạch dữ liệu.</p>
+<h3 id="4-explore-data-analysis">4. Explore Data Analysis</h3>
+<h4 id="41-so-sánh-diện-tích-giữa-các-quận">4.1 So sánh diện tích giữa các quận</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw pie chart</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>pie(df_tko_spe, 
+             values<span style="color:#f92672">=</span>df_tko_spe[<span style="color:#e6db74">&#39;Ward Area (Km2)&#39;</span>],
+             names<span style="color:#f92672">=</span>df_tko_spe[<span style="color:#e6db74">&#39;Ward Name&#39;</span>],
+             title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Percentage in area of 23 wards Tokyo&#39;</span>,
+             color_discrete_sequence<span style="color:#f92672">=</span>px<span style="color:#f92672">.</span>colors<span style="color:#f92672">.</span>sequential<span style="color:#f92672">.</span>Rainbow)
+fig<span style="color:#f92672">.</span>update_layout(margin<span style="color:#f92672">=</span>dict(t<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, l<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, r<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>))
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_6.png">
+</div>
+
+
+<p>Xét về diện tích thì quận lớn nhất là Shinagawa và quận nhỏ nhất là Chuo. Nếu giả sử Tokyo chỉ bao gồm 7 quận như đang xét thì 20.2% và 9.03% là phần trăm tương ứng mà Shinagawa và Chuo chiếm của Tokyo. Hai quận Shinjuku và Shibuya xếp ở vị trí thứ 3 và 4 với 16.1% và 13.4%.</p>
+<h4 id="42-so-sánh-dân-số-và-mật-độ-dân-cư">4.2 So sánh dân số và mật độ dân cư</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw group bar chart</span>
+fig <span style="color:#f92672">=</span> go<span style="color:#f92672">.</span>Figure(
+    data<span style="color:#f92672">=</span>[
+        go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Density&#34;</span>, x<span style="color:#f92672">=</span>df_tko_spe[<span style="color:#e6db74">&#39;Ward Name&#39;</span>], y<span style="color:#f92672">=</span>df_tko_spe[<span style="color:#e6db74">&#39;Density (/Km2)&#39;</span>], text<span style="color:#f92672">=</span>df_tko_spe[<span style="color:#e6db74">&#39;Density (/Km2)&#39;</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+        go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Population&#34;</span>, x<span style="color:#f92672">=</span>df_tko_spe[<span style="color:#e6db74">&#39;Ward Name&#39;</span>], y<span style="color:#f92672">=</span>df_tko_spe[<span style="color:#e6db74">&#39;Population&#39;</span>], text<span style="color:#f92672">=</span>df_tko_spe[<span style="color:#e6db74">&#39;Population&#39;</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+    ],
+    layout<span style="color:#f92672">=</span>go<span style="color:#f92672">.</span>Layout(title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Compare population and density of 7 wards&#34;</span>,
+                     yaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Value&#34;</span>, xaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Wards&#34;</span>)
+)
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_7.png">
+</div>
+
+
+<p>Xét về dân số thì Shinagawa vẫn là quận đứng đầu với gần 400 nghìn người. Tiếp đến là Shinjuku và Meguro, &hellip; Quận có dân số ít nhất là Chiyoda với chỉ gần 60 nghìn người.</p>
+<p>Xét về mật độ dân số, không ngoài dự tính khi Shinagawa có con số cao nhất, 2284 người/$Km^2$. Chiyoda và Chuo xấp xỉ nhau ở vị trí cuối cùng với các con số tương ứng là 1166 người/$Km^2$ và 1021 người/$Km^2$. Shinjuku và Shibuya là 2 quận khá nổi tiếng về mức độ sầm uất với các hoạt động vui chơi, giải trí hết sức hoành tráng nên không có gì ngạc nhiên khi mật độ dân số của chúng khá cao, 1862 người/$Km^2$ và 15080 người/$Km^2$.</p>
+<h4 id="43-so-sánh-giá-đất-trung-bình-của-các-quận">4.3 So sánh giá đất trung bình của các quận</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw bar chart</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>bar(df_tko_spe, 
+             x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Ward Name&#39;</span>, 
+             y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Price Avg (JPY/Sq.M)&#39;</span>,
+             color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Price Avg (JPY/Sq.M)&#39;</span>,
+             title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Average of land price in Tokyo&#34;</span>,
+             labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;Ward Name&#39;</span>: <span style="color:#e6db74">&#39;Wards&#39;</span>, <span style="color:#e6db74">&#39;Price Avg (JPY/Sq.M)&#39;</span>: <span style="color:#e6db74">&#39;Average Land Price ((JPY/Sq.M)&#39;</span>},
+             text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Price Avg (JPY/Sq.M)&#39;</span>
+)
+</code></pre></div><p>Quận có giá đất đắt đỏ nhất là Chiyoda với gần 2.8 triệu Yên/$Km^2$, và Shinagawa là quận rẻ nhất, chỉ khoảng 78 Man Yên/$Km^2$. Chắc có lẽ vì Shinagawa có nhiều đất quá, :D. Các vị trí tiếp theo sau vị trí đứng đầu là Minato, Chuo, Shibuya, Shinjuku, và Meguro.</p>
+<h4 id="44-hiển-thị-vị-trí-của-các-quận-lên-bản-đồ">4.4 Hiển thị vị trí của các quận lên bản đồ</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create map of Tokyo with 5 major districts are displayed</span>
+tko_map <span style="color:#f92672">=</span> folium<span style="color:#f92672">.</span>Map(location<span style="color:#f92672">=</span>[tko_lat, tko_lng], zoom_start<span style="color:#f92672">=</span><span style="color:#ae81ff">12</span>)
+
+<span style="color:#66d9ef">for</span> lat, long, label <span style="color:#f92672">in</span> zip(df_tko_spe[<span style="color:#e6db74">&#39;Ward Latitude&#39;</span>], df_tko_spe[<span style="color:#e6db74">&#39;Ward Longtitude&#39;</span>], df_tko_spe[<span style="color:#e6db74">&#39;Ward Name&#39;</span>]):
+    label <span style="color:#f92672">=</span> folium<span style="color:#f92672">.</span>Popup(label, parser_html<span style="color:#f92672">=</span>True)
+    folium<span style="color:#f92672">.</span>CircleMarker(
+        [lat, long],
+        radius<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>,
+        popup<span style="color:#f92672">=</span>label,
+        color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;magenta&#39;</span>,
+        fill<span style="color:#f92672">=</span>True,
+        fill_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#3186cc&#39;</span>,
+        fill_opacity<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>
+    )<span style="color:#f92672">.</span>add_to(tko_map)
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_9.png">
+</div>
+
+
+<h4 id="45-thống-kê-10-nhóm-địa-điểm-phổ-biến-nhất-tất-cả-các-quận">4.5 Thống kê 10 nhóm địa điểm phổ biến nhất tất cả các quận</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># statistic top 10 categories</span>
+df_tko_venues_top10 <span style="color:#f92672">=</span> df_tko_venues[<span style="color:#e6db74">&#39;Venue Category&#39;</span>]<span style="color:#f92672">.</span>value_counts()[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">10</span>]<span style="color:#f92672">.</span>to_frame(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Frequency&#39;</span>)<span style="color:#f92672">.</span>reset_index()
+df_tko_venues_top10<span style="color:#f92672">.</span>rename(index<span style="color:#f92672">=</span>str, columns<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;index&#39;</span>:<span style="color:#e6db74">&#39;Venue Category&#39;</span>}, inplace<span style="color:#f92672">=</span>True)
+
+<span style="color:#75715e"># draw bar chart</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>bar(df_tko_venues_top10, 
+             x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Venue Category&#39;</span>, 
+             y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Frequency&#39;</span>,
+             color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Frequency&#39;</span>,
+             title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Top 10 Most Frequency Occuring Venues in 7 wards of Tokyo&#34;</span>,
+             labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;Venue Category&#39;</span>: <span style="color:#e6db74">&#39;Venues Category&#39;</span>},
+             text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Frequency&#39;</span>
+) 
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_10.png">
+</div>
+
+
+<p>Xét về tổng thể, các nhà hàng kiểu/món Nhật chiếm đa số, tất nhiên rồi, vì đây là đất nước Nhật Bản mà. Tiếp theo là Ramen, một món ăn quá quen thuộc của người dân Nhật Bản. Hơi ngạc nhiên là nhà hàng Sushi không thấy xuất hiện trong danh sách này.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_ramen.jpeg">
+</div>
+
+
+<h4 id="46-thống-kê-nhóm-5-địa-điểm-phổ-biến-tại-mỗi-quận">4.6 Thống kê nhóm 5 địa điểm phổ biến tại mỗi quận</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># display top 5 venues common of each ward in bar charts</span>
+<span style="color:#66d9ef">for</span> df_top5 <span style="color:#f92672">in</span> df_tko_venues_top5_list:
+    <span style="color:#75715e"># draw bar chart</span>
+    fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>bar(df_top5[<span style="color:#ae81ff">1</span>], 
+                x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Venue Category&#39;</span>, 
+                y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Frequency Score&#39;</span>,
+                color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Frequency Score&#39;</span>,
+                title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Top 5 Most Frequency Occuring Venues in {} wards of Tokyo&#34;</span><span style="color:#f92672">.</span>format(df_top5[<span style="color:#ae81ff">0</span>]),
+                labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;Venue Category&#39;</span>: <span style="color:#e6db74">&#39;Venues Category&#39;</span>, <span style="color:#e6db74">&#39;Frequency Score&#39;</span>:<span style="color:#e6db74">&#39;Frequency Score&#39;</span>},
+                text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Frequency Score&#39;</span>
+    ) 
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_11.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_12.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_13.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_14.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_15.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_16.png">
+</div>
+
+
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_17.png">
+</div>
+
+
+<p>Caffe (2), Sushi, Convenience Store (2), Sake Bar, Japanese Restaurant là những nhóm địa điểm đứng đầu về mức độ phổ biến trong các quận. Ngoài ra còn có nhà hàng Tempura, các nhà hàng món ăn nước ngoài (Chinese, Italian, French, &hellip;), nhà hàng BBQ, nhà hàng Ramen, nhà hàng Soba, Book Store, &hellip;</p>
+<p>Bởi vì ta đang quan tâm đến việc mở nhà hàng mới, nên mình sẽ thu gọn lại chỉ xem xét nhóm địa điểm nhà hàng.</p>
+<h4 id="47-thống-kê-số-lượng-nhà-hàng-ở-mỗi-quận">4.7 Thống kê số lượng nhà hàng ở mỗi quận</h4>
+<p>Có nhiều cách để thể hiện số lượng nhà hàng của mỗi quận. Ở đây mình giới thiệu 3 cách cho các bạn tham khảo.</p>
+<ul>
+<li>Cách thứ nhất: Sử dụng đồ thị dạng Bar</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_tko_venues_rest <span style="color:#f92672">=</span> df_tko_venues[df_tko_venues[<span style="color:#e6db74">&#39;Venue Category&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>contains(<span style="color:#e6db74">&#39;Restaurant&#39;</span>)]
+df_tko_venues_rest <span style="color:#f92672">=</span> df_tko_venues_rest<span style="color:#f92672">.</span>reset_index(drop<span style="color:#f92672">=</span>True)
+<span style="color:#f92672">...</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>bar(df_tko_venues_rest_count, 
+            <span style="color:#75715e"># x=&#39;District&#39;, </span>
+            x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Ward Name&#39;</span>, 
+            y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Number of Rest&#39;</span>,
+            color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Number of Rest&#39;</span>,
+            title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Number of Restaurants in each Ward&#34;</span>,
+            labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;Ward Name&#39;</span>: <span style="color:#e6db74">&#39;Ward&#39;</span>, <span style="color:#e6db74">&#39;Number of Rest&#39;</span>:<span style="color:#e6db74">&#39;Number of Restaurant&#39;</span>},
+            text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Number of Rest&#39;</span>
+) 
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_18.png">
+</div>
+
+
+<p>Cách thứ 2: Sử dụng bản đồ HeadMap, màu càng đậm thì số lượng nhà hàng càng lớn và ngược lại.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">hm_data <span style="color:#f92672">=</span> df_tko_venues_rest_count[[<span style="color:#e6db74">&#39;Ward Latitude&#39;</span>, <span style="color:#e6db74">&#39;Ward Longtitude&#39;</span>, <span style="color:#e6db74">&#39;Number of Rest&#39;</span>]]
+hm_data <span style="color:#f92672">=</span> hm_data<span style="color:#f92672">.</span>values<span style="color:#f92672">.</span>tolist()
+<span style="color:#75715e"># hm_data[:5]</span>
+hmap <span style="color:#f92672">=</span> folium<span style="color:#f92672">.</span>Map(location<span style="color:#f92672">=</span>[tko_lat, tko_lng], control_scale<span style="color:#f92672">=</span>True, attr<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;USGS style&#39;</span>, zoom_start<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+HeatMap(hm_data, rasdius<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>add_to(hmap)
+<span style="color:#75715e"># hmap</span>
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_19.png">
+</div>
+
+
+<p>Trong vòng 1 Km từ trung tâm thì Chuo là quận có số nhà hàng nhiều nhất, 76. Tiếp đó là Minato, Chiyoda lần lượt là 54 và 45. 3 quận Shibuya, Shinagawa, và Shinjuku có số lượng nhà hàng xấp xỉ nhau (31, 30, 29). Đứng ở vị trí thấp nhất là Meguro, chỉ có 24 nhà hàng.</p>
+<p>Cách thứ 3: Sử dụng bản đồ kết hợp với CircleMarker. Bán kính của CirleMarker càng lớn thì số lượng nhà hàng càng nhiều và ngược lại.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> lat, lon, poi, cluster <span style="color:#f92672">in</span> zip(df_tko_spe_all[<span style="color:#e6db74">&#39;Ward Latitude&#39;</span>], 
+                                  df_tko_spe_all[<span style="color:#e6db74">&#39;Ward Longtitude&#39;</span>], 
+                                  df_tko_spe_all[<span style="color:#e6db74">&#39;Ward Name&#39;</span>], 
+                                  df_tko_spe_all[<span style="color:#e6db74">&#39;Cluster ID&#39;</span>]):
+    label <span style="color:#f92672">=</span> folium<span style="color:#f92672">.</span>Popup(str(poi) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; Cluster &#39;</span> <span style="color:#f92672">+</span> str(cluster), parse_html<span style="color:#f92672">=</span>True)
+    folium<span style="color:#f92672">.</span>CircleMarker(
+        [lat, lon],
+        radius<span style="color:#f92672">=</span>n_rest[wards<span style="color:#f92672">.</span>index(poi)]<span style="color:#f92672">*</span><span style="color:#ae81ff">0.5</span>,
+        popup<span style="color:#f92672">=</span>label,
+        color<span style="color:#f92672">=</span>rainbow[cluster<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+        fill<span style="color:#f92672">=</span>True,
+        fill_color<span style="color:#f92672">=</span>rainbow[cluster<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+        fill_opacity<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>)<span style="color:#f92672">.</span>add_to(map_clusters)
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_20.png">
+</div>
+
+
+<p>Cách thể hiện số 2&amp;3 còn cho ta biết cụ thể vị trí của mỗi quận trên bản đồ địa lý.</p>
+<p>Ngoài ra, ở cách số 3, mình cũng đưa thêm một thông tin nữa, đó là việc phân cụm các quận thành 3 cụm khác nhau dựa trên mức độ tương tự giữa các nhóm địa điểm của mỗi quận.  Theo đó thì Shibuya và Minato thuộc cụm số 1 (màu đỏ),  Shinjuku, Chiyoda và Shinagawa thuộc cụm số 2 (màu tím). Cuối cùng là Chuo và Meguro thuộc cụm số 3 (màu xanh).</p>
+<h3 id="5-tổng-kết-và-đánh-giá">5. Tổng kết và đánh giá</h3>
+<p>Theo như toàn bộ phân tích trên thì Shinagawa chắc chắc sẽ là nơi tiềm năng để bắt đầu một <em>business</em> mới, bởi vì:</p>
+<ul>
+<li>Giá đất của Shinagawa rẻ nhất so với các quận khác.</li>
+<li>Dân số của Shinagawa đông nhất so với các quận khác.</li>
+<li>Hiện nay, số lượng nhà hàng tại Shinagawa còn khá khiêm tốn, Convenience Store đang chiếm đa số tại đây.</li>
+</ul>
+<p>Do vậy, nếu bạn mở nhà hàng tại đây thì sẽ ít phải cạnh tranh với các đối thủ khác so với các quận còn lại.</p>
+<h3 id="6-thảo-luận">6. Thảo luận</h3>
+<p>Những phân tích và đánh giá trên đây mới chỉ đề cập đến một vài khía cạnh nhỏ của bài toán thực tế và còn nhiều hạn chê:</p>
+<ul>
+<li>Dữ liệu phụ thuộc vào Foursquare (đây là một nền tảng chia sẻ thông tin địa điểm của người dùng nên thông tin có thể chưa thực sự chính xác)</li>
+<li>Số lượng quận đươc đem ra phân tích ở đây mới là 7.</li>
+<li>Số lượng địa điểm và phạm vi tìm kiếm địa điểm vẫn còn hạn chế (100 địa điểm trong vòng 1km)</li>
+<li>Chưa xét đến các yếu tố khác như: lịch sử, văn hóa, giao thông, &hellip;</li>
+</ul>
+<p>Mặc dù vậy, những phân tích này vẫn rất có giá trị trong việc làm thông tin tham khảo và mở ra những hướng phân tích mới khi triển khai vào thực tế.</p>
+<h3 id="7-kết-luận">7. Kết luận</h3>
+<p>Theo thiết kế của IBM thì nếu người học dành ra khoảng 3h/tuần để học thì sẽ hoàn thành chương trình này trong 11 tháng. Mình thì tập trung học nên mất gần 2 tháng để có được chứng chỉ.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/105_ibm.png">
+</div>
+
+
+<p>Mình nghĩ đây là 1 chương trình học rất bổ ích và cần thiết cho những người muốn theo đuổi con đường trở thành một Data Scientist. Đặc biệt là Capstone Project, không dễ dàng để vượt qua nó nhưng khi đã làm được rồi thì cảm giác rất phấn khích. Như kiểu mình đã trở thành một Data Scientist thực thụ rồi, :D</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Science/tree/master/Tokyo_Exploring">đây</a>.</p>
+<h3 id="8-tham-khảo">8. Tham khảo</h3>
+<p>Link trong bài.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/eda">Eda</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/game">Game</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

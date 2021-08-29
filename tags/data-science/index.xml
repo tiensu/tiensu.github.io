@@ -6,7 +6,16 @@
     <description>Recent content in Data Science on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Khám phá thành phố Tokyo xinh đẹp</title>
+      <link>https://tiensu.github.io/blog/105_eda_explore_tokyo/</link>
+      <pubDate>Sat, 28 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/105_eda_explore_tokyo/</guid>
+      <description>Gần 3 năm trước, mình có tham gia học/thi để lấy chứng chỉ IBM Data Science Professional Certificate do IBM cấp thông qua nền tảng học trực tuyến Coursera.</description>
+    </item>
+    
     <item>
       <title>Phân tích tình hình Covid-19 tại Nhật Bản</title>
       <link>https://tiensu.github.io/blog/104_eda_covid_in_japan/</link>
