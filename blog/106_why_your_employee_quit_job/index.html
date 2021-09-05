@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/data-science"
+          class="text-primary">Data Science</a>
+        
+        <a href="/categories/eda"
+          class="text-primary">E d a</a>
+        
+        <h2>Tại sao nhân viên của bạn lại nghỉ việc?</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>05 September 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/106_quitjob.jpg" class="img-fluid w-100 mb-4" alt="Tại sao nhân viên của bạn lại nghỉ việc?">
+        
+        <div class="content mb-5">
+          <p>Ngành IT là một trong số các ngành có tỉ lệ cạnh tranh về mặt nhân sự tương đối cao hiện nay. Trong bối cảnh nhu cầu tuyển dụng của các công ty rất lớn, nhưng số lượng ứng viên chưa đáp ứng đủ thì các công ty luôn phải tìm mọi cách thu hút và giữ chân nhân tài để phục vụ cho mục tiêu tăng trưởng và phát triển của mình. Là chủ doanh nghiệp hay trưởng bộ phận nhân sự, bạn luôn phải trả lời 2 câu hỏi:</p>
+<ul>
+<li>Tại sao nhân viên lại nghỉ việc?</li>
+<li>Có thể dự đoán trước được nhân viên nào sẽ nghỉ việc hay không?</li>
+</ul>
+<p>Chúng ta sẽ cùng đi tìm trả lời cho 2 câu hỏi đó bằng việc phân tích dữ liệu thực tế một cách khoa học. Mình sẽ đi phân tích các nguyên nhân có thể dẫn đến quyết định đi hay ở của một nhân viên, sau đó sẽ xây dựng một ML model để dự đoán khả năng nghỉ việc của nhân viên đó.</p>
+<p>Vì nội dung cần trình bày khá dài nên mình quyết định chia thành 2 phần:</p>
+<ul>
+<li>Phần 1 (Tuần này): Trả lời câu hỏi số 1.</li>
+<li>Phần 2 (Tuần tiếp theo): Trả lời câu hỏi số 2.</li>
+</ul>
+<p>OK, let&rsquo;s go! Chúng ta sẽ đi luôn vào bài viết của tuần này.</p>
+<h3 id="1-chuẩn-bị-và-khảo-sát-dữ-liệu">1. Chuẩn bị và khảo sát dữ liệu</h3>
+<h4 id="11-chuẩn-bị-dữ-liệu">1.1 Chuẩn bị dữ liệu</h4>
+<p>Bộ dữ liệu chúng ta sử dụng trong bài hôm nay có tên là *HR_ comma_sep.csv*, được cung cấp bởi nền tảng Kaggle. Download nó tại <a href="https://www.kaggle.com/pankeshpatel/hrcommasep">đây</a>. Nó được tạo thành bởi cuộc khảo sát của khoảng 15.000 nhân viên đến từ các công ty khác nhau trên toàn thế giới. Các thông tin của nó được mô tả trong bảng dưới đây:</p>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Tên Features</th>
+<th>Ý Nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>satisfaction_level</td>
+<td>Mức độ thỏa mãn nói chung của nhân viên, có giá trị từ 0-1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>last_evaluation</td>
+<td>Kết quả đánh giá gần đây nhất của quản lý dành cho nhân viê đó, có giá trị 0-1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>number_project</td>
+<td>Số lượng dự án mà nhân viên đã và đang tham gia.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>average_montly_hourse</td>
+<td>Số giờ làm việc trung bình trong 1 tháng của nhân viên</td>
+</tr>
+<tr>
+<td>5</td>
+<td>time_spend_company</td>
+<td>Số năm làm viêc tại công ty của nhân viên</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Work_accident</td>
+<td>Nhân viên có gặp sự cố, tai nạn gì trong quá trình làm viện tại công ty hay không? 1 -  accident, 0 - no accident</td>
+</tr>
+<tr>
+<td>7</td>
+<td>left</td>
+<td>0 - nhân viên ở lại làm việc tại công ty, 1 - nhân viên nghỉ việc tại công ty. Đây là thông tin mà ta sẽ cần dự đoán</td>
+</tr>
+<tr>
+<td>8</td>
+<td>promotion_last_5years</td>
+<td>0 - nhân viên không được thăng tiến trong vòng 5 năm gần đây, 1 -  ngược lại</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Department</td>
+<td>Phòng/bộ phận làm việc của nhân viên</td>
+</tr>
+<tr>
+<td>10</td>
+<td>salary</td>
+<td>Mức lương mà nhân viên được nhận tại thời điểm khảo sát, chia theo 3 mức: thấp, trung bình, cao</td>
+</tr>
+</tbody>
+</table>
+<h4 id="12-khảo-sát-dữ-liệu">1.2 Khảo sát dữ liệu</h4>
+<h5 id="a-đọc-và-hiển-thị-dữ-liệu">a, Đọc và hiển thị dữ liệu</h5>
+<p>Trước tiên, ta sẽ đọc vào dữ liệu và hiển thị một vài mẫu để bước đầu hình dung về nó:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;dataset/HR_comma_sep.csv&#39;</span>)
+df_data<span style="color:#f92672">.</span>head()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_1.png">
+</div>
+
+
+<h5 id="b-xem-xét-các-thông-tin-thống-kê-của-dữ-liệu">b, Xem xét các thông tin thống kê của dữ liệu</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Summary train data&#39;</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;*&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">50</span>)
+
+<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;Shape: {df_data.shape}&#39;</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;*&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">50</span>)
+
+<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;Data description: </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> {df_data.describe()}&#39;</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;*&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">50</span>)
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Summary train data
+<span style="color:#f92672">**************************************************</span>
+Shape: (<span style="color:#ae81ff">14999</span>, <span style="color:#ae81ff">10</span>)
+<span style="color:#f92672">**************************************************</span>
+Data description: 
+        satisfaction_level  last_evaluation  number_project  \
+count        <span style="color:#ae81ff">14999.000000</span>     <span style="color:#ae81ff">14999.000000</span>    <span style="color:#ae81ff">14999.000000</span>   
+mean             <span style="color:#ae81ff">0.612834</span>         <span style="color:#ae81ff">0.716102</span>        <span style="color:#ae81ff">3.803054</span>   
+std              <span style="color:#ae81ff">0.248631</span>         <span style="color:#ae81ff">0.171169</span>        <span style="color:#ae81ff">1.232592</span>   
+min              <span style="color:#ae81ff">0.090000</span>         <span style="color:#ae81ff">0.360000</span>        <span style="color:#ae81ff">2.000000</span>   
+<span style="color:#ae81ff">25</span><span style="color:#f92672">%</span>              <span style="color:#ae81ff">0.440000</span>         <span style="color:#ae81ff">0.560000</span>        <span style="color:#ae81ff">3.000000</span>   
+<span style="color:#ae81ff">50</span><span style="color:#f92672">%</span>              <span style="color:#ae81ff">0.640000</span>         <span style="color:#ae81ff">0.720000</span>        <span style="color:#ae81ff">4.000000</span>   
+<span style="color:#ae81ff">75</span><span style="color:#f92672">%</span>              <span style="color:#ae81ff">0.820000</span>         <span style="color:#ae81ff">0.870000</span>        <span style="color:#ae81ff">5.000000</span>   
+max              <span style="color:#ae81ff">1.000000</span>         <span style="color:#ae81ff">1.000000</span>        <span style="color:#ae81ff">7.000000</span>   
+
+       average_montly_hours  time_spend_company  Work_accident          left  \
+count          <span style="color:#ae81ff">14999.000000</span>        <span style="color:#ae81ff">14999.000000</span>   <span style="color:#ae81ff">14999.000000</span>  <span style="color:#ae81ff">14999.000000</span>   
+mean             <span style="color:#ae81ff">201.050337</span>            <span style="color:#ae81ff">3.498233</span>       <span style="color:#ae81ff">0.144610</span>      <span style="color:#ae81ff">0.238083</span>   
+std               <span style="color:#ae81ff">49.943099</span>            <span style="color:#ae81ff">1.460136</span>       <span style="color:#ae81ff">0.351719</span>      <span style="color:#ae81ff">0.425924</span>   
+min               <span style="color:#ae81ff">96.000000</span>            <span style="color:#ae81ff">2.000000</span>       <span style="color:#ae81ff">0.000000</span>      <span style="color:#ae81ff">0.000000</span>   
+<span style="color:#ae81ff">25</span><span style="color:#f92672">%</span>              <span style="color:#ae81ff">156.000000</span>            <span style="color:#ae81ff">3.000000</span>       <span style="color:#ae81ff">0.000000</span>      <span style="color:#ae81ff">0.000000</span>   
+<span style="color:#ae81ff">50</span><span style="color:#f92672">%</span>              <span style="color:#ae81ff">200.000000</span>            <span style="color:#ae81ff">3.000000</span>       <span style="color:#ae81ff">0.000000</span>      <span style="color:#ae81ff">0.000000</span>   
+<span style="color:#ae81ff">75</span><span style="color:#f92672">%</span>              <span style="color:#ae81ff">245.000000</span>            <span style="color:#ae81ff">4.000000</span>       <span style="color:#ae81ff">0.000000</span>      <span style="color:#ae81ff">0.000000</span>   
+max              <span style="color:#ae81ff">310.000000</span>           <span style="color:#ae81ff">10.000000</span>       <span style="color:#ae81ff">1.000000</span>      <span style="color:#ae81ff">1.000000</span>   
+
+       promotion_last_5years  
+count           <span style="color:#ae81ff">14999.000000</span>  
+mean                <span style="color:#ae81ff">0.021268</span>  
+std                 <span style="color:#ae81ff">0.144281</span>  
+min                 <span style="color:#ae81ff">0.000000</span>  
+<span style="color:#ae81ff">25</span><span style="color:#f92672">%</span>                 <span style="color:#ae81ff">0.000000</span>  
+<span style="color:#ae81ff">50</span><span style="color:#f92672">%</span>                 <span style="color:#ae81ff">0.000000</span>  
+<span style="color:#ae81ff">75</span><span style="color:#f92672">%</span>                 <span style="color:#ae81ff">0.000000</span>  
+max                 <span style="color:#ae81ff">1.000000</span>  
+<span style="color:#f92672">**************************************************</span>
+</code></pre></div><p>Chính xác là có 14.999 mẫu dữ liệu. Ta có thể lướt qua các giá trị thống kê như mean, std, min, max, quantile, &hellip; của các features dạng numerical để sơ bộ nắm bắt được chúng.</p>
+<h5 id="c-kiểm-tra-xem-có-giá-trị-nào-bất-thường-hay-không">c, Kiểm tra xem có giá trị nào <em>bất thường</em> hay không?</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;--- Check feature by feature ---&#39;</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;*&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">50</span>)
+
+<span style="color:#66d9ef">for</span> fe <span style="color:#f92672">in</span> df_data<span style="color:#f92672">.</span>columns:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;-&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">20</span>)
+    <span style="color:#66d9ef">print</span>(df_data[fe]<span style="color:#f92672">.</span>value_counts())
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">---</span> Check feature by feature <span style="color:#f92672">---</span>
+<span style="color:#f92672">**************************************************</span>
+<span style="color:#f92672">--------------------</span>
+<span style="color:#ae81ff">0.10</span>    <span style="color:#ae81ff">358</span>
+<span style="color:#ae81ff">0.11</span>    <span style="color:#ae81ff">335</span>
+<span style="color:#ae81ff">0.74</span>    <span style="color:#ae81ff">257</span>
+<span style="color:#ae81ff">0.77</span>    <span style="color:#ae81ff">252</span>
+<span style="color:#ae81ff">0.84</span>    <span style="color:#ae81ff">247</span>
+       <span style="color:#f92672">...</span> 
+<span style="color:#ae81ff">0.25</span>     <span style="color:#ae81ff">34</span>
+<span style="color:#ae81ff">0.28</span>     <span style="color:#ae81ff">31</span>
+<span style="color:#ae81ff">0.27</span>     <span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">0.26</span>     <span style="color:#ae81ff">30</span>
+<span style="color:#ae81ff">0.12</span>     <span style="color:#ae81ff">30</span>
+Name: satisfaction_level, Length: <span style="color:#ae81ff">92</span>, dtype: int64
+<span style="color:#f92672">--------------------</span>
+<span style="color:#ae81ff">0.55</span>    <span style="color:#ae81ff">358</span>
+<span style="color:#ae81ff">0.50</span>    <span style="color:#ae81ff">353</span>
+<span style="color:#ae81ff">0.54</span>    <span style="color:#ae81ff">350</span>
+<span style="color:#ae81ff">0.51</span>    <span style="color:#ae81ff">345</span>
+<span style="color:#ae81ff">0.57</span>    <span style="color:#ae81ff">333</span>
+       <span style="color:#f92672">...</span> 
+<span style="color:#ae81ff">0.39</span>     <span style="color:#ae81ff">52</span>
+<span style="color:#ae81ff">0.43</span>     <span style="color:#ae81ff">50</span>
+<span style="color:#ae81ff">0.38</span>     <span style="color:#ae81ff">50</span>
+<span style="color:#ae81ff">0.44</span>     <span style="color:#ae81ff">44</span>
+<span style="color:#ae81ff">0.36</span>     <span style="color:#ae81ff">22</span>
+Name: last_evaluation, Length: <span style="color:#ae81ff">65</span>, dtype: int64
+<span style="color:#f92672">--------------------</span>
+<span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">4365</span>
+<span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">4055</span>
+<span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">2761</span>
+<span style="color:#ae81ff">2</span>    <span style="color:#ae81ff">2388</span>
+<span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">1174</span>
+<span style="color:#ae81ff">7</span>     <span style="color:#ae81ff">256</span>
+Name: number_project, dtype: int64
+<span style="color:#f92672">--------------------</span>
+<span style="color:#ae81ff">135</span>    <span style="color:#ae81ff">153</span>
+<span style="color:#ae81ff">156</span>    <span style="color:#ae81ff">153</span>
+<span style="color:#ae81ff">149</span>    <span style="color:#ae81ff">148</span>
+<span style="color:#ae81ff">151</span>    <span style="color:#ae81ff">147</span>
+<span style="color:#ae81ff">160</span>    <span style="color:#ae81ff">136</span>
+      <span style="color:#f92672">...</span> 
+<span style="color:#ae81ff">297</span>      <span style="color:#ae81ff">7</span>
+<span style="color:#ae81ff">288</span>      <span style="color:#ae81ff">6</span>
+<span style="color:#ae81ff">299</span>      <span style="color:#ae81ff">6</span>
+<span style="color:#ae81ff">96</span>       <span style="color:#ae81ff">6</span>
+<span style="color:#ae81ff">303</span>      <span style="color:#ae81ff">6</span>
+Name: average_montly_hours, Length: <span style="color:#ae81ff">215</span>, dtype: int64
+<span style="color:#f92672">--------------------</span>
+<span style="color:#ae81ff">3</span>     <span style="color:#ae81ff">6443</span>
+<span style="color:#ae81ff">2</span>     <span style="color:#ae81ff">3244</span>
+<span style="color:#ae81ff">4</span>     <span style="color:#ae81ff">2557</span>
+<span style="color:#ae81ff">5</span>     <span style="color:#ae81ff">1473</span>
+<span style="color:#ae81ff">6</span>      <span style="color:#ae81ff">718</span>
+<span style="color:#ae81ff">10</span>     <span style="color:#ae81ff">214</span>
+<span style="color:#ae81ff">7</span>      <span style="color:#ae81ff">188</span>
+<span style="color:#ae81ff">8</span>      <span style="color:#ae81ff">162</span>
+Name: time_spend_company, dtype: int64
+<span style="color:#f92672">--------------------</span>
+<span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">12830</span>
+<span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">2169</span>
+Name: Work_accident, dtype: int64
+<span style="color:#f92672">--------------------</span>
+<span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">11428</span>
+<span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">3571</span>
+Name: left, dtype: int64
+<span style="color:#f92672">--------------------</span>
+<span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">14680</span>
+<span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">319</span>
+Name: promotion_last_5years, dtype: int64
+<span style="color:#f92672">--------------------</span>
+sales          <span style="color:#ae81ff">4140</span>
+technical      <span style="color:#ae81ff">2720</span>
+support        <span style="color:#ae81ff">2229</span>
+IT             <span style="color:#ae81ff">1227</span>
+product_mng     <span style="color:#ae81ff">902</span>
+marketing       <span style="color:#ae81ff">858</span>
+RandD           <span style="color:#ae81ff">787</span>
+accounting      <span style="color:#ae81ff">767</span>
+hr              <span style="color:#ae81ff">739</span>
+management      <span style="color:#ae81ff">630</span>
+Name: Department, dtype: int64
+<span style="color:#f92672">--------------------</span>
+low       <span style="color:#ae81ff">7316</span>
+medium    <span style="color:#ae81ff">6446</span>
+high      <span style="color:#ae81ff">1237</span>
+Name: salary, dtype: int64
+</code></pre></div><p><em>Bất thường</em> ở đây tức là các giá trị tồn tại ở một dạng khác so với quy đinh. VD, đối với thông tin về mức lương, các giá trị quy định là <em>low, medium, high</em>. Nếu có một giá trị không nằm trong số các giá trị quy định kia thì đó là <em>bất thường</em>. Nếu có thì ta sẽ cần phải xử lý chúng.</p>
+<p>Đối với bộ dữ liệu này, ta thấy không có giá trị nào bất thường.</p>
+<h5 id="c-kiểm-tra-kiểu-dữ-liệu-và-xem-có-tồn-tại-missing-value-hay-không">c, Kiểm tra kiểu dữ liệu và xem có tồn tại <em>missing value</em> hay không?</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;Data information: {df_data.info()}&#39;</span>)
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">pandas</span><span style="color:#f92672">.</span>core<span style="color:#f92672">.</span>frame<span style="color:#f92672">.</span>DataFrame<span style="color:#e6db74">&#39;&gt;</span>
+RangeIndex: <span style="color:#ae81ff">14999</span> entries, <span style="color:#ae81ff">0</span> to <span style="color:#ae81ff">14998</span>
+Data columns (total <span style="color:#ae81ff">10</span> columns):
+ <span style="color:#75715e">#   Column                 Non-Null Count  Dtype  </span>
+<span style="color:#f92672">---</span>  <span style="color:#f92672">------</span>                 <span style="color:#f92672">--------------</span>  <span style="color:#f92672">-----</span>  
+ <span style="color:#ae81ff">0</span>   satisfaction_level     <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  float64
+ <span style="color:#ae81ff">1</span>   last_evaluation        <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  float64
+ <span style="color:#ae81ff">2</span>   number_project         <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">3</span>   average_montly_hours   <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">4</span>   time_spend_company     <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">5</span>   Work_accident          <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">6</span>   left                   <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">7</span>   promotion_last_5years  <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">8</span>   Department             <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  object 
+ <span style="color:#ae81ff">9</span>   salary                 <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  object 
+dtypes: float64(<span style="color:#ae81ff">2</span>), int64(<span style="color:#ae81ff">6</span>), object(<span style="color:#ae81ff">2</span>)
+memory usage: <span style="color:#ae81ff">1.1</span><span style="color:#f92672">+</span> MB
+Data information: None
+</code></pre></div><p>Các features thuộc một trong 3 kiểu dữ liệu: float64, int64, hoặc object và không có <em>missing value</em> nào tồn tại. Có thể nói đây là bộ dataset khá lý tưởng.</p>
+<h3 id="2-phân-tích-dữ-liệu---explore-data-analysis">2. Phân tích dữ liệu - Explore Data Analysis</h3>
+<p>Trong phần này, chúng ta sẽ đi phân tích chi tiết dữ liệu, đánh giá mức độ ảnh hưởng của từng thuộc tính để tìm ra cả trả lời cho câu hỏi: Đâu là nguyên nhân dẫn đến quyết định nghỉ việc hay không nghỉ việc của nhân viên?</p>
+<h4 id="21-xem-xét-mối-tương-quan-giữa-các-features">2.1 Xem xét mối tương quan giữa các features</h4>
+<p>Để tính toán mức độ tương quan giữa các features với nhau, mà cụ thể trong bài toán này, ta muốn biết các mức độ ảnh hưởng của các yếu tố đến quyết định nghỉ việc hay tiếp tục làm việc tại công ty, ta có thể sử dụng biểu đồ Heatmap như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create corrrelation matrix</span>
+df_corr <span style="color:#f92672">=</span> df_data<span style="color:#f92672">.</span>corr()
+df_corr_round <span style="color:#f92672">=</span> df_corr<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">3</span>)
+
+<span style="color:#75715e"># draw headmap</span>
+fig <span style="color:#f92672">=</span> ff<span style="color:#f92672">.</span>create_annotated_heatmap(
+            z<span style="color:#f92672">=</span>df_corr_round<span style="color:#f92672">.</span>to_numpy(),
+            x<span style="color:#f92672">=</span>df_corr<span style="color:#f92672">.</span>columns<span style="color:#f92672">.</span>tolist(),
+            y<span style="color:#f92672">=</span>df_corr<span style="color:#f92672">.</span>columns<span style="color:#f92672">.</span>tolist(),
+            zmax<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, zmin<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>,
+            showscale<span style="color:#f92672">=</span>True,
+            hoverongaps<span style="color:#f92672">=</span>True,
+            colorscale<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Viridis&#39;</span>,
+            annotation_text<span style="color:#f92672">=</span>df_corr_round<span style="color:#f92672">.</span>to_numpy()
+            )
+
+fig<span style="color:#f92672">.</span>update_layout(
+    margin <span style="color:#f92672">=</span> dict(t<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>,r<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>,b<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>,l<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>),
+    showlegend <span style="color:#f92672">=</span> False,
+    width <span style="color:#f92672">=</span> <span style="color:#ae81ff">800</span>, height <span style="color:#f92672">=</span> <span style="color:#ae81ff">600</span>
+)
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_2.png">
+</div>
+
+
+<p>Dựa vào đây, ta thấy rằng mức độ thỏa mãn và quyết định nghỉ việc không thực sự có mối liên hệ nhiều (<em>như ta nghĩ thông thường</em>). Khi mô hình hóa dữ liệu, nếu cần thiết, ta có thể bỏ qua feature này.</p>
+<p>Yếu tố ảnh hưởng nhiều nhất là số năm làm viêc tại công ty. Một cách chủ quan, ta có thể nhận định rằng những người làm càng lâu năm thì ít có khả năng nghỉ việc. Ta sẽ xem nhận xét này liệu có đúng hay không ở phần sau.</p>
+<p>Các yếu tố còn lại, sắp xếp theo thứ tự giảm dần mức độ ảnh hưởng là: average_montly_hours, Department, number_project, last_evaluation, salary, promotion_last_5years, Work_accident.</p>
+<h4 id="22-đánh-giá-sự-ảnh-hưởng-của-số-năm-làm-việc-tại-công-ty">2.2 Đánh giá sự ảnh hưởng của số năm làm việc tại công ty</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> go<span style="color:#f92672">.</span>Figure(data<span style="color:#f92672">=</span>[
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Stay&#39;</span>, x<span style="color:#f92672">=</span>df_tsc<span style="color:#f92672">.</span>index, y<span style="color:#f92672">=</span>df_tsc[<span style="color:#ae81ff">0</span>], text<span style="color:#f92672">=</span>df_tsc[<span style="color:#ae81ff">0</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Left&#39;</span>, x<span style="color:#f92672">=</span>df_tsc<span style="color:#f92672">.</span>index, y<span style="color:#f92672">=</span>df_tsc[<span style="color:#ae81ff">1</span>], text<span style="color:#f92672">=</span>df_tsc[<span style="color:#ae81ff">1</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+])
+<span style="color:#75715e"># Change the bar mode</span>
+fig<span style="color:#f92672">.</span>update_layout(barmode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;group&#39;</span>,
+                title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Statistic number of working years of employees&#34;</span>,
+                xaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Number of working years&#34;</span>,
+                yaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Number of employees&#34;</span>,
+                legend_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Employee Type&#34;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_3.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Những người làm việc từ 2 năm trở xuống và 6 năm trở nên hầu như không nghỉ việc.</li>
+<li>Những người làm việc được từ 3-5 năm xác suất nghỉ việc cao hơn.</li>
+</ul>
+<h4 id="23-đánh-giá-sự-ảnh-hưởng-của-thời-gian-làm-việc-trung-bình-trong-tháng">2.3 Đánh giá sự ảnh hưởng của thời gian làm việc trung bình trong tháng</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create dataframe with average monthly working hours and left information</span>
+df_mh <span style="color:#f92672">=</span> df_data[[<span style="color:#e6db74">&#39;average_montly_hours&#39;</span>, <span style="color:#e6db74">&#39;left&#39;</span>]]
+
+<span style="color:#75715e"># draw violin chart</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>violin(
+                df_mh, 
+                y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;average_montly_hours&#34;</span>, 
+                color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>, 
+                points<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>, 
+                box<span style="color:#f92672">=</span>True,
+                title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Influence of monthly working hours to left/stay company decision: 0 - Stay, 1 - Left&#39;</span>,
+                labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;average_montly_hours&#39;</span>: <span style="color:#e6db74">&#39;Average Monthly Working Hours&#39;</span>, <span style="color:#e6db74">&#39;left&#39;</span>:<span style="color:#e6db74">&#39;Left/Stay&#39;</span>})
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_4.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Những người có số giờ làm việc trung bình trong tháng ở mức cao, &gt; 220h(<em>chắc là OT nhiều</em>) có xu hướng nghi việc cao hơn.</li>
+<li>Những người có số giờ làm việc trung bình trong tháng ở mức thấp, &lt; 160h cũng là những người hay nghỉ việc. Có lẽ vì công việc nhàm chán quá chăng?</li>
+<li>Những người có số giờ làm việc trung bình trong tháng ở mức vừa phải,  150-260h, ít có khả năng nghỉ viêc hơn.</li>
+</ul>
+<h4 id="23-so-sánh-tỉ-lệ-nghỉ-việc-giữa-các-phòng-ban">2.3 So sánh tỉ lệ nghỉ việc giữa các phòng ban</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw bar chart</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>bar(df_dpm, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Percent&#39;</span>, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Percent&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Percent&#39;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_5.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>HR là phòng ban có tỉ lệ nhân viên nghỉ việc cao nhất. Tỉ lệ thấp nhất là bộ phần Manager.</li>
+<li>Các phòng ban khác, thứ tự giảm dần như sau: Accounting, Technical, Support, Sales, Marketing, IT, Product Managerment, R&amp;D.</li>
+</ul>
+<h4 id="24-đánh-giá-sự-ảnh-hưởng-của-số-lượng-dự-án-trung-bình-1-năm-mà-nhân-viên-đã-làm">2.4 Đánh giá sự ảnh hưởng của số lượng dự án trung bình 1 năm mà nhân viên đã làm</h4>
+<p>Trong dữ liệu gốc, không có thông tin về số lượng dự án trung bình mà nhân viên làm trong 1 năm. Thông tin này sẽ được tính bằng cách lấy tổng số dự án mà nhân viên đó đã làm, chia cho số năm nhân viên đó làm việc tại công ty. Sau đó lại phân thành 3 nhóm:</p>
+<ul>
+<li>Low: Từ 0-2 dự án một năm</li>
+<li>Medium: 2-4 dự án một năm</li>
+<li>High: &gt; 4 dự án một năm</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw bar chart</span>
+fig <span style="color:#f92672">=</span> go<span style="color:#f92672">.</span>Figure(data<span style="color:#f92672">=</span>[
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Stay&#39;</span>, x<span style="color:#f92672">=</span>df_project<span style="color:#f92672">.</span>index, y<span style="color:#f92672">=</span>df_project[<span style="color:#ae81ff">0</span>], text<span style="color:#f92672">=</span>df_project[<span style="color:#ae81ff">0</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Left&#39;</span>, x<span style="color:#f92672">=</span>df_project<span style="color:#f92672">.</span>index, y<span style="color:#f92672">=</span>df_project[<span style="color:#ae81ff">1</span>], text<span style="color:#f92672">=</span>df_project[<span style="color:#ae81ff">1</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+])
+fig<span style="color:#f92672">.</span>update_layout(barmode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;group&#39;</span>,
+                title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Statistic average number of projects a year  of employees&#34;</span>,
+                xaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Number of projects&#34;</span>,
+                yaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Number of employees&#34;</span>,
+                legend_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Employee Type&#34;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_6.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Nhân viên mà đã tham gia trung bình 2 dự án 1 năm có xu hướng nghỉ việc nhiều hơn. Đây là nhóm nhân viên mới làm viêc ở công ty 1-2 năm.</li>
+<li>Nhân viên mà đã tham gia trung bình nhiều hơn 2 dự án 1 năm hầu như không nghỉ việc. Đây là nhóm nhân viên làm viêc lâu năm tại công ty.</li>
+</ul>
+<h4 id="25-đánh-giá-sự-ảnh-hưởng-của-kết-quả-lần-đánh-giá--checkpoint-nhân-viên-gần-nhất">2.5 Đánh giá sự ảnh hưởng của kết quả lần đánh giá ( checkpoint) nhân viên gần nhất</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create dataframe with last evaluation and left information</span>
+df_le <span style="color:#f92672">=</span> df_data[[<span style="color:#e6db74">&#39;last_evaluation&#39;</span>, <span style="color:#e6db74">&#39;left&#39;</span>]]
+
+<span style="color:#75715e"># draw violin chart</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>violin(
+                df_le, 
+                y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;last_evaluation&#34;</span>, 
+                color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>, 
+                points<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>, 
+                box<span style="color:#f92672">=</span>True,
+                labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;last_evaluation&#39;</span>: <span style="color:#e6db74">&#39;Last Evaluation&#39;</span>, <span style="color:#e6db74">&#39;left&#39;</span>: <span style="color:#e6db74">&#39;Left/Stay&#39;</span>},
+                title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Influence of last evaluation to left/stay company decision: 0 - Stay, 1 - Left&#39;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_7.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Những người được đánh giá ở mức quá cao (&gt; 0.8) và hoặc quá thấp (&lt; 0.6) là những người dễ nghỉ việc. Có lẽ họ thấy rằng công việc hiện tại quá dễ dàng hoăc quá khó đôi với họ nên họ muốn thay đổi, tìm cơ hội mới.</li>
+<li>Những người được đánh giá ở mức trung bình thường sẽ không rời công ty.</li>
+</ul>
+<h4 id="26-đánh-giá-sư-ảnh-hưởng-của-mức-lương">2.6 Đánh giá sư ảnh hưởng của mức lương</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw bar chart</span>
+salary_level <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;High&#39;</span>, <span style="color:#e6db74">&#39;Low&#39;</span>, <span style="color:#e6db74">&#39;Medium&#39;</span>]
+fig <span style="color:#f92672">=</span> go<span style="color:#f92672">.</span>Figure(data<span style="color:#f92672">=</span>[
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Stay&#39;</span>, x<span style="color:#f92672">=</span>salary_level, y<span style="color:#f92672">=</span>df_salary[<span style="color:#ae81ff">0</span>], text<span style="color:#f92672">=</span>df_salary[<span style="color:#ae81ff">0</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Left&#39;</span>, x<span style="color:#f92672">=</span>salary_level, y<span style="color:#f92672">=</span>df_salary[<span style="color:#ae81ff">1</span>], text<span style="color:#f92672">=</span>df_salary[<span style="color:#ae81ff">1</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+])
+fig<span style="color:#f92672">.</span>update_layout(barmode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;group&#39;</span>,
+                title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Statistic salary of employees&#34;</span>,
+                xaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Salary Level&#34;</span>,
+                yaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Number of employees&#34;</span>,
+                legend_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Employee Type&#34;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_8.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Những người có mức lương cao thì ít nghỉ việc hơn.</li>
+<li>Những người có mức lương thấp hoặc trung bình rất dễ nghỉ việc.</li>
+</ul>
+<p>Điều này chứng tỏ lương vẫn là yếu tố quan trọng để giữ chân nhân viên. :D</p>
+<h4 id="27-đánh-giá-sự-ảnh-hưởng-của-việc-thăng-tiến-trong-vòng-5-năm">2.7 Đánh giá sự ảnh hưởng của việc thăng tiến trong vòng 5 năm</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw bar chart</span>
+fig <span style="color:#f92672">=</span> go<span style="color:#f92672">.</span>Figure(data<span style="color:#f92672">=</span>[
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Stay&#39;</span>, x<span style="color:#f92672">=</span>df_pl5<span style="color:#f92672">.</span>index, y<span style="color:#f92672">=</span>df_pl5[<span style="color:#ae81ff">0</span>], text<span style="color:#f92672">=</span>df_pl5[<span style="color:#ae81ff">0</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Left&#39;</span>, x<span style="color:#f92672">=</span>df_pl5<span style="color:#f92672">.</span>index, y<span style="color:#f92672">=</span>df_pl5[<span style="color:#ae81ff">1</span>], text<span style="color:#f92672">=</span>df_pl5[<span style="color:#ae81ff">1</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+])
+fig<span style="color:#f92672">.</span>update_layout(barmode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;group&#39;</span>,
+                title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Statistic promotion last 5 years of employees&#34;</span>,
+                xaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Promotion last 5 years&#34;</span>,
+                yaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Number of employees&#34;</span>,
+                legend_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Employee Type&#34;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_9.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Sau 5 năm làm việc, nếu không có sự thăng tiến nào thì rất nhiều nhân viên sẽ nghỉ việc.</li>
+<li>Ngược lại, nếu có sự phát triển về chức vụ sau 5 năm thì số người nghỉ việc sẽ ít hơn.</li>
+</ul>
+<h4 id="28-đánh-giá-sự-ảnh-hưởng-của-sự-cố-trong-công-việc">2.8 Đánh giá sự ảnh hưởng của sự cố trong công việc</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> go<span style="color:#f92672">.</span>Figure(data<span style="color:#f92672">=</span>[
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Stay&#39;</span>, x<span style="color:#f92672">=</span>df_wa<span style="color:#f92672">.</span>index, y<span style="color:#f92672">=</span>df_wa[<span style="color:#ae81ff">0</span>], text<span style="color:#f92672">=</span>df_wa[<span style="color:#ae81ff">0</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+    go<span style="color:#f92672">.</span>Bar(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Left&#39;</span>, x<span style="color:#f92672">=</span>df_wa<span style="color:#f92672">.</span>index, y<span style="color:#f92672">=</span>df_wa[<span style="color:#ae81ff">1</span>], text<span style="color:#f92672">=</span>df_wa[<span style="color:#ae81ff">1</span>], textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;auto&#39;</span>),
+])
+<span style="color:#75715e"># Change the bar mode</span>
+fig<span style="color:#f92672">.</span>update_layout(barmode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;group&#39;</span>,
+                title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Statistic working accident of employees&#34;</span>,
+                xaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Woking Accident&#34;</span>,
+                yaxis_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Number of employees&#34;</span>,
+                legend_title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Employee Type&#34;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_10.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Những người gặp sự cố nghỉ việc ít hơn những người không gặp sự cố.</li>
+</ul>
+<p>Điều này khiến ta có vẻ hơi ngạc nhiên một chút, nhưng nếu phân tích kỹ càng hơn thì có thể sự cố trong công việc không phải lúc nào cũng ảnh hưởng tiêu cực. Nó có thể khiến cho công việc bớt nhàm chán, đơn điệu hơn. Vì thế mà dẫn đến kết quả nêu trên.</p>
+<h4 id="29-đánh-giá-sự-ảnh-hưởng-của-mức-độ-thỏa-mãn">2.9 Đánh giá sự ảnh hưởng của mức độ thỏa mãn</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create dataframe with satisfaction level and left information</span>
+df_sl <span style="color:#f92672">=</span> df_data[[<span style="color:#e6db74">&#39;satisfaction_level&#39;</span>, <span style="color:#e6db74">&#39;left&#39;</span>]]
+
+<span style="color:#75715e"># draw violin chart</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>violin(
+                df_sl, 
+                y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;satisfaction_level&#39;</span>, 
+                color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;left&#39;</span>, 
+                points<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>, 
+                box<span style="color:#f92672">=</span>True,
+                labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;satisfaction_level&#39;</span>: <span style="color:#e6db74">&#39;Satisfaction Level&#39;</span>, <span style="color:#e6db74">&#39;left&#39;</span>:<span style="color:#e6db74">&#39;Left/Stay&#39;</span>},
+                title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Influence of sastisfaction level to left/stay company decision: 0 - Stay, 1 - Left&#39;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_11.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Những người nghỉ việc là những người có mức độ thỏa mãn nằm trong các khoảng: &lt; 0.2, 0.3-0.5, và 0.6-0.8.</li>
+<li>Với mức độ thoả mãn &lt; 0.2 thì đa số nhân viên nghỉ việc.</li>
+</ul>
+<p>Tại sao nhân viên có mức độ thoả mãn cao lại nghỉ việc? Thông thường thì đó sẽ phải là nhóm người gắn bó lâu nhất chứ nhỉ? Ta tiếp tục phân tích sâu hơn.</p>
+<h4 id="210-phân-nhóm-nhân-viên-theo-mức-độ-thỏa-mãn-và-kết-quả-checkpoint">2.10 Phân nhóm nhân viên theo mức độ thỏa mãn và kết quả checkpoint</h4>
+<h5 id="a-đối-với-các-nhân-viên-nghỉ-việc">a, Đối với các nhân viên nghỉ việc</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw scatter chart with satisfaction level and last evaluation information of people who leave company</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>scatter(
+                    df_data, 
+                    x<span style="color:#f92672">=</span>df_data[<span style="color:#e6db74">&#39;satisfaction_level&#39;</span>][df_data[<span style="color:#e6db74">&#39;left&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>], 
+                    y<span style="color:#f92672">=</span>df_data[<span style="color:#e6db74">&#39;last_evaluation&#39;</span>][df_data[<span style="color:#e6db74">&#39;left&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>], 
+                    width<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>,
+                    height<span style="color:#f92672">=</span><span style="color:#ae81ff">800</span>,
+                    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Employees who left&#39;</span>,
+                    labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;x&#39;</span>:<span style="color:#e6db74">&#39;Satisfaction level&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>:<span style="color:#e6db74">&#39;Last Evaluation&#39;</span>}
+                )
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_12.png">
+</div>
+
+
+<p>Nhận xét: Quan sát ta thấy, dựa theo mức độ thỏa mãn và kết quả checkpoint thì các nhân viên có thể phân chia các nhân viên nghỉ việc vào một trong 3 nhóm:</p>
+<ul>
+<li>Nhóm 1: Những người được đánh giá cao nhưng lại có mức độ thỏa mãn thấp. Đây có lẽ là những người giỏi trong công ty, họ làm được việc nhưng không cảm thấy hài lòng với công việc hiện tại nên nghỉ việc. Công ty nên tập trung vào nhóm đối tượng này.</li>
+<li>Nhóm 2: Những người bị đánh giá thấp, và bản thân họ cũng cảm thấy không vui khi làm việc tại công ty. Đối với những nhân viên thuộc nhóm này thì họ có nghỉ việc chắc cũng không phải là vấn đề quá lớn.</li>
+<li>Nhóm 3: Những người được đánh giá cao, và lại cũng đang cảm thấy rất thỏa mãn. Nhưng họ cũng nghỉ việc? Tại sao?  Nhóm này đang chiếm số lượng nhân viên khá lớn. Phải chăng là do họ tìm được một cơ hội mới tốt hơn hẳn so với công ty hiện tại?</li>
+</ul>
+<p>Ta thử áp dụng thuật toán phân cụm Kmeans với số cụm là 3 lên các nhân viên này xem sao:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create dataframe with satisfaction level and last evaluation information</span>
+df_kmeans <span style="color:#f92672">=</span> df_data[df_data<span style="color:#f92672">.</span>left <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#39;number_project&#39;</span>,
+       <span style="color:#e6db74">&#39;average_montly_hours&#39;</span>, <span style="color:#e6db74">&#39;time_spend_company&#39;</span>, <span style="color:#e6db74">&#39;Work_accident&#39;</span>,
+       <span style="color:#e6db74">&#39;left&#39;</span>, <span style="color:#e6db74">&#39;promotion_last_5years&#39;</span>, <span style="color:#e6db74">&#39;Department&#39;</span>, <span style="color:#e6db74">&#39;salary&#39;</span>], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+
+<span style="color:#75715e"># cluster people who leave company base on satisfaction level and last evaluation information</span>
+kmeans <span style="color:#f92672">=</span> KMeans(n_clusters<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>fit(df_kmeans)
+<span style="color:#75715e"># print(kmeans.cluster_centers_)</span>
+<span style="color:#75715e"># print(kmeans.labels_)</span>
+
+<span style="color:#75715e"># add cluster ID into original dataset</span>
+df_left <span style="color:#f92672">=</span> df_data[df_data<span style="color:#f92672">.</span>left <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>]
+df_left[<span style="color:#e6db74">&#39;label&#39;</span>] <span style="color:#f92672">=</span> kmeans<span style="color:#f92672">.</span>labels_
+df_left[<span style="color:#e6db74">&#39;label&#39;</span>] <span style="color:#f92672">=</span> df_left[<span style="color:#e6db74">&#39;label&#39;</span>]<span style="color:#f92672">.</span>map({<span style="color:#ae81ff">0</span>:<span style="color:#e6db74">&#39;Group 2&#39;</span>, <span style="color:#ae81ff">1</span>:<span style="color:#e6db74">&#39;Group 3&#39;</span>, <span style="color:#ae81ff">2</span>:<span style="color:#e6db74">&#39;Group 1&#39;</span>})
+</code></pre></div><p>Kết quả:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_13.png">
+</div>
+
+
+<p>Lúc này 3 nhóm 1,2,3 đã trở nên rõ ràng hơn.</p>
+<p>Tiếp tục xem xét số giờ làm việc trung bình trong tháng của các nhóm này:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw displot chart</span>
+group1_month_hour <span style="color:#f92672">=</span> df_left[df_left<span style="color:#f92672">.</span>label <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Group 1&#39;</span>]<span style="color:#f92672">.</span>average_montly_hours
+group2_match_month_hour <span style="color:#f92672">=</span> df_left[df_left<span style="color:#f92672">.</span>label <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Group 2&#39;</span>]<span style="color:#f92672">.</span>average_montly_hours
+group3_month_hour <span style="color:#f92672">=</span> df_left[df_left<span style="color:#f92672">.</span>label <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Group 3&#39;</span>]<span style="color:#f92672">.</span>average_montly_hours
+
+hist_data <span style="color:#f92672">=</span> [group1_month_hour, group2_match_month_hour, group3_month_hour]
+group_labels <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Group 1&#39;</span>, <span style="color:#e6db74">&#39;Group 2&#39;</span>, <span style="color:#e6db74">&#39;Group 3&#39;</span>]
+
+fig <span style="color:#f92672">=</span> ff<span style="color:#f92672">.</span>create_distplot(hist_data, group_labels, bin_size<span style="color:#f92672">=</span><span style="color:#ae81ff">2.0</span>, show_curve<span style="color:#f92672">=</span>True, show_hist<span style="color:#f92672">=</span>True)
+fig<span style="color:#f92672">.</span>update_layout(title_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Leavers: Hours per month distribution&#39;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_14.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Nhóm 1 là nhóm có số giờ làm việc trung bình trong tháng cao nhất. Tiếp đến là nhóm 3, và thấp nhất là nhóm 2.</li>
+</ul>
+<p>Có lẽ nguyên nhân khiến cho nhóm 1 không được thỏa mãn cho lắm là vì họ phải OT quá nhiều. Nhóm 2 làm việc <em>lười nhất</em>, nên hiệu quả không cao là điều dễ hiểu. Còn nhóm 3, họ không phải OT nhiều nên mức độ thoả mãn cao, và củng cố thêm giả thuyết là họ tìm được cơ hội mới tốt hơn ở cty hiện tại nên họ nghỉ việc.</p>
+<p>Đối với công ty, nên tập trung vào nhóm 2 nhiều hơn, quan tâm đến họ hơn, làm cho họ thỏa mãn hơn thì chắc chắn hiệu quả công việc của họ sẽ cao hơn. Còn lý do họ tìm được cơ hội mới tốt hơn, được công ty khác offer lương cao hơn, &hellip; thì cũng rất khó để có thể giữ chân họ. :D</p>
+<h5 id="b-đối-với-các-nhân-viên-không-nghỉ-việc">b, Đối với các nhân viên không nghỉ việc</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># draw scatter chart with satisfaction level and last evaluation information of people who stay company</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>scatter(
+                    df_data, 
+                    x<span style="color:#f92672">=</span>df_data[<span style="color:#e6db74">&#39;satisfaction_level&#39;</span>][df_data[<span style="color:#e6db74">&#39;left&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>], 
+                    y<span style="color:#f92672">=</span>df_data[<span style="color:#e6db74">&#39;last_evaluation&#39;</span>][df_data[<span style="color:#e6db74">&#39;left&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>], 
+                    width<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>,
+                    height<span style="color:#f92672">=</span><span style="color:#ae81ff">800</span>,
+                    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Employees who stay&#39;</span>,
+                    labels<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;x&#39;</span>:<span style="color:#e6db74">&#39;Satisfaction level&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>:<span style="color:#e6db74">&#39;Last Evaluation&#39;</span>}
+                )
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/106_15.png">
+</div>
+
+
+<p>Các nhân viên này không có sự phân nhóm rõ rệt như trên nhưng nói chung vẫn tập trung khá nhiều vào vùng mà mức độ thỏa mãn, và điểm đánh giá cao. Chứng tỏ rằng, ko phải tất cả những nhân viên nhóm 3 bên trên đều nghỉ việc.</p>
+<h3 id="3-kết-luận">3. Kết luận</h3>
+<p>Như vậy là chúng ta đã cùng nhau phân tích khá chi tiết bộ dữ liệu khảo sát nhân viên. Các phân tích đều xoay quanh vấn đề tìm ra câu trả lời cho câu hỏi, tại sao nhân viên lại nghỉ việc?</p>
+<p>Tóm tắt lại một số kết luận như sau:</p>
+<ul>
+<li>Những người mới vào công ty hoặc những người làm từ 6 năm trở lên rất ít nghỉ việc. Nếu công ty có thể giữ chân được nhân viên làm việc được 6 năm thì gần như chắc chắn họ sẽ còn gắn bó lâu dài hơn.</li>
+<li>Nhân viên phải OT quá nhiều, hoặc công việc quá nhàn nhã thì họ cũng dễ nghỉ việc.</li>
+<li>HR là bộ phận có tỉ lệ nghỉ viêc cao nhất, còn thấp nhất là các cán bộ quản lý.</li>
+<li>Những nhân viên bị đánh giá thấp sẽ có khả năng nghỉ việc cao hơn.</li>
+<li>Mức lương càng cao thì càng ít nghỉ việc.</li>
+<li>Sau 5 năm, nếu nhân viên không có sự thăng tiến thì họ cũng nghỉ việc.</li>
+<li>Công việc quá nhàm chán cũng làm cho tỉ lệ nghỉ việc tăng cao.</li>
+<li>Cần tập trung vào nhóm nhân viên được đánh giá cao, nhưng họ lại đang không thỏa mãn với công việc.</li>
+</ul>
+<p>Mình hi vọng là đọc đến đây, bạn đã phân nào có được câu trả lời cho mình.</p>
+<p>Trong phần 2, mình sẽ hướng dẫn các bạn xây dựng mô hình ML dự đoán khả năng nghỉ việc của nhân viên, độ chính xác lên đến hơn 99%. Mời các bạn đón đọc vào tuần tiếp theo!</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Science/tree/master/HR_Analysis">đây</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/eda">Eda</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/game">Game</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
