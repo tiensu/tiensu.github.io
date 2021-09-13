@@ -6,7 +6,17 @@
     <description>Recent content in EDA on SuNT&#39;s Blog | AI in Practical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/eda/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/tags/eda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dự đoán nhân viên nào sẽ nghỉ việc</title>
+      <link>https://tiensu.github.io/blog/107_employee_quit_prediction/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/107_employee_quit_prediction/</guid>
+      <description>Tiếp tục bàn về câu chuyện nhân viên nghỉ việc, và đây là phần 2.
+Trong phần 2 này, chúng ta sẽ cùng nhau xây dựng một ML model để dự đoán xem liệu một nhân viên nào đó có khả năng nghỉ việc hay không?</description>
+    </item>
+    
     <item>
       <title>Tại sao nhân viên của bạn lại nghỉ việc?</title>
       <link>https://tiensu.github.io/blog/106_why_your_employee_quit_job/</link>

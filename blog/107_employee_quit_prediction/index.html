@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/data-science"
+          class="text-primary">Data Science</a>
+        
+        <a href="/categories/eda"
+          class="text-primary">E d a</a>
+        
+        <h2>Dự đoán nhân viên nào sẽ nghỉ việc</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>12 September 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/107_quitjob.jpg" class="img-fluid w-100 mb-4" alt="Dự đoán nhân viên nào sẽ nghỉ việc">
+        
+        <div class="content mb-5">
+          <p>Tiếp tục bàn về câu chuyện nhân viên nghỉ việc, và đây là phần 2.</p>
+<p>Trong phần 2 này, chúng ta sẽ cùng nhau xây dựng một ML model để dự đoán xem liệu một nhân viên nào đó có khả năng nghỉ việc hay không?</p>
+<h3 id="1-phương-pháp-tiếp-cận-khi-xây-dựng-một-ml-model">1. Phương pháp tiếp cận khi xây dựng một ML model</h3>
+<p>Có một vài phương pháp khác nhau giúp ta có thể xây dựng được một ML model tốt. Hai trong số những phương pháp đó, tương đối phổ biến và rất hay đuợc các Data Scientist trên thế giới sử dụng, đó là:</p>
+<ul>
+<li>Top-Down method:</li>
+</ul>
+<p>Trong phương pháp này, một model sẽ được lựa chọn từ đầu, sau đó tinh chỉnh dần dần dựa theo các đặc tính của dữ liệu, các tham số của model, &hellip; cho đến khi nào đạt được model đủ đáp ứng điều kiện bài toán.</p>
+<ul>
+<li>P2P Comparison method:</li>
+</ul>
+<p>Ngược lại với phương pháp trên, P2P Comparison không chọn cố định ngay một model nào từ đầu, mà sẽ so sánh, đánh giá để đưa ra kết luận. Kết quả của lần đánh giá đầu tiên được gọi là Base model. Model được lựa chọn sau đó sẽ được tinh chỉnh dần dần để ngày càng tốt hơn. Trong quá trình tinh chỉnh đó, nó luôn được so sánh với Base model để đảm bảo kết quả sau luôn tối ưu hơn kết quả trước.</p>
+<p>Nói chung thì phương pháp thứ 2 tỏ ra ưu việt hơn phương pháp thứ nhất trong đa số trường hợp, mặc dù nó sẽ làm ta mất nhiều thời gian hơn. Bởi vì trong phương pháp 1, nếu model được chọn từ đầu mà sai thì sẽ dẫn đến kết quả sau cùng cũng sai. Việc lựa chọn này đa số dựa vào kinh nghiệm của các Data Scientist.</p>
+<p>Trong bài này, mình sẽ áp dụng phương pháp thứ 2 đề thực hiện.</p>
+<h3 id="2-đánh-giá-lựa-chọn-base-model">2. Đánh giá, lựa chọn Base model</h3>
+<h4 id="21-đọc-và-kiểm-tra-dữ-liệu">2.1 Đọc và kiểm tra dữ liệu</h4>
+<p>Trước tiên ta sẽ đọc vào bộ dữ liệu:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;dataset/HR_comma_sep.csv&#39;</span>)
+df_data<span style="color:#f92672">.</span>head()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/107_1.png">
+</div>
+
+
+<p>Xem xét một số thông tin về dữ liệu:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_data<span style="color:#f92672">.</span>info()
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">pandas</span><span style="color:#f92672">.</span>core<span style="color:#f92672">.</span>frame<span style="color:#f92672">.</span>DataFrame<span style="color:#e6db74">&#39;&gt;</span>
+RangeIndex: <span style="color:#ae81ff">14999</span> entries, <span style="color:#ae81ff">0</span> to <span style="color:#ae81ff">14998</span>
+Data columns (total <span style="color:#ae81ff">10</span> columns):
+ <span style="color:#75715e">#   Column                 Non-Null Count  Dtype  </span>
+<span style="color:#f92672">---</span>  <span style="color:#f92672">------</span>                 <span style="color:#f92672">--------------</span>  <span style="color:#f92672">-----</span>  
+ <span style="color:#ae81ff">0</span>   satisfaction_level     <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  float64
+ <span style="color:#ae81ff">1</span>   last_evaluation        <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  float64
+ <span style="color:#ae81ff">2</span>   number_project         <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">3</span>   average_montly_hours   <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">4</span>   time_spend_company     <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">5</span>   Work_accident          <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">6</span>   left                   <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">7</span>   promotion_last_5years  <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  int64  
+ <span style="color:#ae81ff">8</span>   Department             <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  object 
+ <span style="color:#ae81ff">9</span>   salary                 <span style="color:#ae81ff">14999</span> non<span style="color:#f92672">-</span>null  object 
+dtypes: float64(<span style="color:#ae81ff">2</span>), int64(<span style="color:#ae81ff">6</span>), object(<span style="color:#ae81ff">2</span>)
+memory usage: <span style="color:#ae81ff">1.1</span><span style="color:#f92672">+</span> MB
+</code></pre></div><p>Chúng ta đã biết từ bài trước rằng bộ dữ liệu bao gồm 14999 mẫu, và không có <em>missing values</em>. Ở đây, ta quan tâm thêm một thông tin nữa đó là có 2 features đang ở dạng <em>categorical</em>, đó là <em>Department</em> và <em>salary</em>. Để các ML model có thể học được thì chúng phải được chuyển sang dạng <em>numerical</em>. Chi tiết thực hiện ở phần sau.</p>
+<h4 id="22-data-preparation">2.2 Data Preparation</h4>
+<p>Phần này sẽ bao gồm 2 việc:</p>
+<h5 id="a-phân-chia-dữ-liệu">a, Phân chia dữ liệu</h5>
+<p>Trước tiên, cần tách dữ liệu thành 2 phần khác nhau: input (<em>features</em>) và output (<em>target</em>).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># separate input (features) and output (target)</span>
+y <span style="color:#f92672">=</span> df_data[[<span style="color:#e6db74">&#39;left&#39;</span>]]
+X <span style="color:#f92672">=</span> df_data<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;left&#39;</span>, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</code></pre></div><p>Tiếp theo, lại chia tiếp mỗi phần thành 2 tập riêng biệt: Train và Test</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># separate train set and test set</span>
+X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split(X, y, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">42</span>, test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.25</span>)
+<span style="color:#66d9ef">print</span>(X_train<span style="color:#f92672">.</span>shape)
+<span style="color:#66d9ef">print</span>(X_test<span style="color:#f92672">.</span>shape)
+</code></pre></div><p>Ở đây, mình chia theo tỷ lệ Train:Test = 75%:25%. Kết quả là ta có 11249 mẫu trong tập Train và 3750 mẫu trong tập Test.</p>
+<h5 id="b-mã-hóa-các-categorical-features">b, Mã hóa các Categorical features</h5>
+<p>Như đã nói ở trên, các features ở dạng categorical cần phải được chuyển sang dạng numerical (<em>mã hóa</em>) thì các ML models mới có thể học được.</p>
+<p>Có một vài phương pháp trong thư viện Scikit-learn giúp ta thực hiện việc này như OrdinalEncoder, OneHotEncoder, &hellip; Mình sẽ chọn OrdinalEncoder.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># encode categorical features</span>
+encoder <span style="color:#f92672">=</span> OrdinalEncoder()
+encoder<span style="color:#f92672">.</span>fit(X_train[[<span style="color:#e6db74">&#39;salary&#39;</span>, <span style="color:#e6db74">&#39;Department&#39;</span>]])
+X_train[[<span style="color:#e6db74">&#39;salary&#39;</span>, <span style="color:#e6db74">&#39;Department&#39;</span>]] <span style="color:#f92672">=</span> encoder<span style="color:#f92672">.</span>transform(X_train[[<span style="color:#e6db74">&#39;salary&#39;</span>, <span style="color:#e6db74">&#39;Department&#39;</span>]])
+X_test[[<span style="color:#e6db74">&#39;salary&#39;</span>, <span style="color:#e6db74">&#39;Department&#39;</span>]] <span style="color:#f92672">=</span> encoder<span style="color:#f92672">.</span>transform(X_test[[<span style="color:#e6db74">&#39;salary&#39;</span>, <span style="color:#e6db74">&#39;Department&#39;</span>]])
+</code></pre></div><p>Sau khi khởi tạo instance của OrdinalEncoder thì ta sẽ dùng nó để fit trên toàn bộ tập Train đối với 2 categorical features. Cuối cùng, sử dụng instance đó để thực hiện phép <em>transform</em> để sinh ra dữ liệu mới tương ứng.</p>
+<p>2 công việc trên đây là yêu cầu tối thiểu, bắt buộc để có thể chuyển sang bước huấn luyện, đánh giá model.</p>
+<h4 id="23-đánh-giá-các-models">2.3 Đánh giá các models</h4>
+<p>Để chọn được model phù hợp nhất trong số các models có thể, chúng ta sẽ gom tất cả chúng lại và lần lượt đánh giá chúng. Model nào cho kết quả cao nhất thì sẽ được chọn.</p>
+<ul>
+<li>Định nghĩa các models:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create a dictionary of models</span>
+model_dict <span style="color:#f92672">=</span> {
+                <span style="color:#e6db74">&#39;LogisticRegression&#39;</span>: LogisticRegression(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>), 
+                <span style="color:#e6db74">&#39;GaussianNB&#39;</span>: GaussianNB(), 
+                <span style="color:#e6db74">&#39;KNeighborsClassifier&#39;</span>: KNeighborsClassifier(n_neighbors<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>), 
+                <span style="color:#e6db74">&#39;DecisionTreeClassifier&#39;</span>: DecisionTreeClassifier(min_samples_split<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>),
+                <span style="color:#e6db74">&#39;SVM&#39;</span>: svm<span style="color:#f92672">.</span>SVC(kernel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rbf&#39;</span>,probability<span style="color:#f92672">=</span>False),
+                <span style="color:#e6db74">&#39;RandomForestClassifier&#39;</span>: RandomForestClassifier(n_estimators <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, min_samples_split<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, max_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>),
+            }
+</code></pre></div><p>Vì đang xác định Base model nên chúng ta sử dụng các giá trị mặc định của các <em>hyper-parameters</em>.</p>
+<ul>
+<li>Đánh giá các models:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model_scores <span style="color:#f92672">=</span> []
+model_names <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> name, model <span style="color:#f92672">in</span> model_dict<span style="color:#f92672">.</span>items():
+    model<span style="color:#f92672">.</span>fit(X_train, np<span style="color:#f92672">.</span>ravel(y_train))
+    prediction <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X_test)
+    acc_score <span style="color:#f92672">=</span> accuracy_score(y_test, prediction)
+    model_scores<span style="color:#f92672">.</span>append(acc_score)
+    model_names<span style="color:#f92672">.</span>append(name)
+    
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;*&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;*&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;: {}&#39;</span><span style="color:#f92672">.</span>format(acc_score))
+</code></pre></div><p>Phương pháp đánh giá ở đây là huấn luyện các models trên tập Train, sau đó tính toán độ chính xác thông qua việc dự đoán trên tập Test. Kết quả thu được như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">**********</span>LogisticRegression<span style="color:#f92672">**********</span>: <span style="color:#ae81ff">0.7586666666666667</span>
+<span style="color:#f92672">**********</span>GaussianNB<span style="color:#f92672">**********</span>: <span style="color:#ae81ff">0.7994666666666667</span>
+<span style="color:#f92672">**********</span>KNeighborsClassifier<span style="color:#f92672">**********</span>: <span style="color:#ae81ff">0.9538666666666666</span>
+<span style="color:#f92672">**********</span>DecisionTreeClassifier<span style="color:#f92672">**********</span>: <span style="color:#ae81ff">0.9744</span>
+<span style="color:#f92672">**********</span>SVM<span style="color:#f92672">**********</span>: <span style="color:#ae81ff">0.7834666666666666</span>
+<span style="color:#f92672">**********</span>RandomForestClassifier<span style="color:#f92672">**********</span>: <span style="color:#ae81ff">0.9864</span>
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/107_1.png">
+</div>
+
+
+<p>Ta thấy, RandomForestClassifier đạt được độ chính xác cao nhất, 98.64%. Do đó, RandomForestClassifier với 98.64% độ chính xác là Base model của chúng ta.</p>
+<h3 id="3-tối-ưu-hóa-model">3. Tối ưu hóa model</h3>
+<p>Tối ưu hóa hay tinh chỉnh model là việc vận dụng các kỹ thuật xử lý dữ liệu, các kỹ thuật lựa chọn tham số để làm sao thu được model tốt nhất có thể. Tùy từng bài toán mà ta áp dụng một trong 2 loại kỹ thuật trên, hoặc có thể áp dụng đồng thời cả 2 loại đó.</p>
+<h4 id="31-xử-lý-dữ-liệu">3.1 Xử lý dữ liệu</h4>
+<p>Dữ liệu input ảnh hưởng khá nhiều đến chất lượng của model. Một số kỹ thuật thường được sử dụng để xử lý dữ liệu như: Remove outlier, Impute Missing values, Scale values, Balance data, Feature Selection, &hellip; Mỗi kỹ thuật sẽ giải quyết một vấn đề của dữ liệu.</p>
+<h5 id="a-remove-outlier">a, Remove outlier</h5>
+<p>Outlier còn gọi là dữ liệu ngoại lệ, hay dữ liệu bất thường. Để kiểm tra xem có tồn tại Outlier trong các numberical features hay không, ta sẽ vẽ đồ thị Distplot của chúng.</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/107_3.png">
+</div>
+
+
+<p>Quan sát đồ thị Displot ta thấy, các giá trị của các giá trị đều nằm trong các phạm vi hợp lệ nên không tồn tại Outlier ở đây.</p>
+<p>Còn đối với các categorical features, ta sử dụng phương pháp thống kê để kiểm tra:</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/107_4.png">
+</div>
+
+
+<p>Cũng không có Outlier nào ở đây, tất cả các giá trị đều hợp lệ.</p>
+<p>Tóm lại là chúng ta không cần áp dụng kỹ thuật Remove Outlier nào cho bộ dữ liệu này.</p>
+<h5 id="b-impute-missing-values">b, Impute Missing values</h5>
+<p>Ở phần đầu ta đã biết rằng không tồn tại Missing values, nên cũng không cần áp dụng kỹ thuật Impute Missing values.</p>
+<h4 id="c-balance-data">c, Balance data</h4>
+<p>Kiểm tra xem có tồn tại hiện tượng Imbalance data hay không?</p>
+
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/107_5.png">
+</div>
+
+
+<p>Rõ rằng là có tồn tại Imbalance data khi mà tỉ lệ giữa 2 lớp khá chệnh lệch, 23.81% - 76.19%. Để giải quyết vấn đề này, ta có nhiều cách: Oversample, Undersample, Classes Weight, &hellip; Mỗi cách lại có các thuật toán khác nhau như SMOTE, SMOTENC, &hellip;</p>
+<p>Trong bài này, ta sẽ sử dụng phương pháp Class Weight. Cách thực hiện rất đơn giản, khi khai báo model, ta chỉ cần thêm tham số <em>class_weight=&lsquo;balanced&rsquo;</em>.</p>
+<h6 id="d-scale-data">d, Scale data</h6>
+<p>Nếu giá trị của các features có sự khác biệt lớn về phạm vi, khi huấn luyện, model sẽ có xu hướng <em>thiên vị</em> hơn cho các features có giá trị lớn. Điều này làm giảm độ tin cậy của model. Scale data là phương pháp loại bỏ hiện tượng này, ở đó, các giá trị được đưa về cùng một phạm vi, thường là từ 0 đến 1.</p>
+<p>Có 2 kỹ thuật hay được sử dụng là Normalization và Standarlization. Mình sẽ áp dụng kỹ thuật Standarlization trong bài này.</p>
+<p>Chi tiết hơn về các kỹ thuật xử lý và chuẩn bị dữ liệu, các bạn có thể xem thêm các bài viết về chủ đề Data Preparation của mình tại <a href="https://tiensu.github.io/tags/data-preparation/">đây</a>.</p>
+<h4 id="32-huấn-luyện-models">3.2 Huấn luyện models</h4>
+<p>Theo như phương pháp P2P Comparison thì ta sẽ chỉ đi tối ưu cho Base model, tức là RandomForestClassifier. Tuy nhiên, ở đây mình sẽ thử đánh giá lại toàn bộ các models sau khi đã áp dụng các kỹ thuật xử lý dữ liệu, xem liệu có gì thay đổi hay không?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create a dictionary of models</span>
+model_dict <span style="color:#f92672">=</span> {
+                <span style="color:#e6db74">&#39;LogisticRegression&#39;</span>: LogisticRegression(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>, class_weight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;balanced&#39;</span>), 
+                <span style="color:#e6db74">&#39;GaussianNB&#39;</span>: GaussianNB(), 
+                <span style="color:#e6db74">&#39;KNeighborsClassifier&#39;</span>: KNeighborsClassifier(), 
+                <span style="color:#e6db74">&#39;DecisionTreeClassifier&#39;</span>: DecisionTreeClassifier(class_weight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;balanced&#39;</span>),
+                <span style="color:#e6db74">&#39;SVM&#39;</span>: svm<span style="color:#f92672">.</span>SVC(class_weight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;balanced&#39;</span>),
+                <span style="color:#e6db74">&#39;RandomForestClassifier&#39;</span>: RandomForestClassifier(class_weight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;balanced&#39;</span>),
+            }
+</code></pre></div><p>Ta vẫn khai báo danh sách các models như phần trước, có thay đổi một chút là thêm tham số <em>class_weight=&lsquo;balanced&rsquo;</em> như đã phân tích ở phần 3.1c. GaussianNB và KNeighborsClassifier là 2 models không hỗ trợ việc này.</p>
+<p>Tổng hợp lại từ đầu thì ngoài Balance data, ta cần thực hiện 2 kỹ thuật xử lý dữ liệu sau: Encoder Categorical features và Scale data.</p>
+<p>Thư viện Scikit-learn cung cấp cho chúng ta công cụ Pipeline giúp gom các phần xử lý này lại thành một pipeline. Về sau khi dự đoán trên mẫu dữ liệu mới, ta áp dụng đúng pipeline này cho mẫu đó thì sẽ đảm bảo dữ liệu test và dữ liệu train được xử lý giống hệt nhau.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># define ColumnTransformer to perform transform data</span>
+trans_list <span style="color:#f92672">=</span> [(<span style="color:#e6db74">&#39;cat&#39;</span>, OneHotEncoder(), categorical_ix), (<span style="color:#e6db74">&#39;num&#39;</span>, StandardScaler(), numerical_ix)]
+col_trans <span style="color:#f92672">=</span> ColumnTransformer(transformers<span style="color:#f92672">=</span>trans_list)
+<span style="color:#f92672">...</span>
+<span style="color:#66d9ef">for</span> name, model <span style="color:#f92672">in</span> model_dict<span style="color:#f92672">.</span>items():
+    pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;preparation&#39;</span>, col_trans), (<span style="color:#e6db74">&#39;model&#39;</span>, model)])
+    cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">42</span>)
+    scores <span style="color:#f92672">=</span> cross_val_score(pipeline, X, np<span style="color:#f92672">.</span>ravel(y), scoring<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;accuracy&#39;</span>, cv<span style="color:#f92672">=</span>cv, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+<span style="color:#f92672">...</span>
+</code></pre></div><p>Và để việc đánh giá các models được <em>khách quan</em> hơn, mình sẽ sử dụng phương pháp <a href="https://scikit-learn.org/stable/modules/cross_validation.html">Cross-validation</a>.</p>
+<p>Kết quả thực hiện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">**********</span>LogisticRegression<span style="color:#f92672">**********</span>
+<span style="color:#ae81ff">0.7598638247720703</span>
+<span style="color:#ae81ff">0.00971910352647794</span>
+<span style="color:#f92672">**********</span>GaussianNB<span style="color:#f92672">**********</span>
+<span style="color:#ae81ff">0.6595039092728485</span>
+<span style="color:#ae81ff">0.014364290029621824</span>
+<span style="color:#f92672">**********</span>KNeighborsClassifier<span style="color:#f92672">**********</span>
+<span style="color:#ae81ff">0.9455297175895042</span>
+<span style="color:#ae81ff">0.005250667653662472</span>
+<span style="color:#f92672">**********</span>DecisionTreeClassifier<span style="color:#f92672">**********</span>
+<span style="color:#ae81ff">0.9819988258839224</span>
+<span style="color:#ae81ff">0.003200161402127842</span>
+<span style="color:#f92672">**********</span>SVM<span style="color:#f92672">**********</span>
+<span style="color:#ae81ff">0.9559569134978875</span>
+<span style="color:#ae81ff">0.004905774407557175</span>
+<span style="color:#f92672">**********</span>RandomForestClassifier<span style="color:#f92672">**********</span>
+<span style="color:#ae81ff">0.9913393907049142</span>
+<span style="color:#ae81ff">0.0022560674653345505</span>
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/107_6.png">
+</div>
+
+
+<p>Ta thấy, hầu hết các models đều có sự cải thiện về độ chính xác so với phiên bản Base của chúng. Riêng đối với model RandomForestClassifier thì độ chính xác tăng từ 98.64% lên 99.14%.</p>
+<h4 id="33-tune-hyper-parameters-cho-randomforestclassifier-model">3.3 Tune hyper-parameters cho RandomForestClassifier model</h4>
+<p>Mỗi model đều có một số siêu tham số có thể cấu hình được để thay đổi cách thức học của model đó. Và chúng ta thường không thể biết được chính xác giá trị nào của các tham số đó làm cho model đạt được kết quả cao nhất.</p>
+<p>Có một vài phương pháp giúp chúng ta tự động hóa việc này: Grid Search, Random Search, &hellip; Các phương pháp đều có chung ý tưởng là từ một tập hợp các giá trị có thể có có từng tham số, các kết hợp giữa chúng được tạo ra và áp dụng vào việc huấn luyện model. Sự kết hợp nào mang lại kết quả tốt nhất sẽ được chọn.</p>
+<p>Từ phần trên chúng ta đã biết rằng RandomForestClassifier là model đang có độ chính xác cao nhất. Ta sẽ thực hiện Tuning các Hyper-parameters của model này xem liệu có thể thu được kết quả tốt hơn hay không?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">rf_model <span style="color:#f92672">=</span> RandomForestClassifier(random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">42</span>, class_weight<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;balanced&#39;</span>)
+pipeline <span style="color:#f92672">=</span> Pipeline(steps<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#39;preparation&#39;</span>, col_trans), (<span style="color:#e6db74">&#39;rf&#39;</span>, rf_model)])
+cv <span style="color:#f92672">=</span> RepeatedStratifiedKFold(n_splits<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, n_repeats<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">42</span>)
+</code></pre></div><p>Phần khai báo model và chuẩn bị dữ liệu trong pipeline vẫn giữ nguyên như trên.</p>
+<p>Phần quan trọng ở đây là bước lựa chọn tham số và các giá trị có thể có của chúng để đưa vào <em>search</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">param_grid <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;rf__n_estimators&#39;</span>: np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">10</span>),
+               <span style="color:#e6db74">&#39;rf__max_features&#39;</span>: [<span style="color:#e6db74">&#39;auto&#39;</span>, <span style="color:#e6db74">&#39;sqrt&#39;</span>, <span style="color:#e6db74">&#39;log2&#39;</span>],
+               <span style="color:#e6db74">&#39;rf__max_depth&#39;</span>: np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">10</span>),
+               <span style="color:#e6db74">&#39;rf__min_samples_split&#39;</span>: [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>],
+               <span style="color:#e6db74">&#39;rf__min_samples_leaf&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>],
+               <span style="color:#e6db74">&#39;rf__criterion&#39;</span> :[<span style="color:#e6db74">&#39;gini&#39;</span>, <span style="color:#e6db74">&#39;entropy&#39;</span>],
+               <span style="color:#e6db74">&#39;rf__bootstrap&#39;</span>: [True, False]}
+</code></pre></div><p>Bạn có thể lựa chọn tùy ý, càng nhiều giá trị thì thời gian huấn luyện sẽ càng lâu. Tuy nhiên, cũng không nên chọn các giá trị quá gần nhau, vì mức độ ảnh hưởng của chúng đến model không có sự khác biệt rõ rệt. Tốt nhất là mỗi giá trị nên cách nhau 5 đến 10. VD: <em>rf__n_estimators': np.arange(50, 150, 10),</em>.</p>
+<p>Bước cuối cùng là khai báo GridSeach và sử dụng nó để huấn luyện model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">grid_pipeline <span style="color:#f92672">=</span> GridSearchCV(pipeline, param_grid, scoring<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;accuracy&#39;</span>, n_jobs<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>, cv<span style="color:#f92672">=</span>cv)
+results <span style="color:#f92672">=</span> grid_pipeline<span style="color:#f92672">.</span>fit(X, np<span style="color:#f92672">.</span>ravel(y))
+<span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39; Best Mean Accuracy: </span><span style="color:#e6db74">%.3f</span><span style="color:#e6db74"> &#39;</span> <span style="color:#f92672">%</span> results<span style="color:#f92672">.</span>best_score_)
+<span style="color:#66d9ef">print</span>( <span style="color:#e6db74">&#39; Best Config: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> &#39;</span> <span style="color:#f92672">%</span> results<span style="color:#f92672">.</span>best_params_)
+</code></pre></div><p>Sau khoảng 25h train liên tục trên máy tính core i7, 64GB Ram, RTX 2080 (8GB) thì mình thu được kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> Best Mean Accuracy: <span style="color:#ae81ff">0.992</span> 
+ Best Config: {<span style="color:#e6db74">&#39;rf__bootstrap&#39;</span>: False, <span style="color:#e6db74">&#39;rf__criterion&#39;</span>: <span style="color:#e6db74">&#39;entropy&#39;</span>, <span style="color:#e6db74">&#39;rf__max_depth&#39;</span>: <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#39;rf__max_features&#39;</span>: <span style="color:#e6db74">&#39;auto&#39;</span>, <span style="color:#e6db74">&#39;rf__min_samples_leaf&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;rf__min_samples_split&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;rf__n_estimators&#39;</span>: <span style="color:#ae81ff">70</span>} 
+</code></pre></div><p>Độ chính xác cao nhất đạt được là 99.20%, cao hơn một chút so với con số 99.13% ở trên. Các giá trị của các tham số tương ứng cũng được liệt kê. Về sau, nếu muốn huấn luyện lại model, ta có thể sử dụng luôn bộ giá trị này.</p>
+<h3 id="4-sử-dụng-model-để-dự-đoán">4. Sử dụng model để dự đoán</h3>
+<h4 id="41-dự-đoán-trên-tập-test">4.1 Dự đoán trên tập Test</h4>
+<p>Sau khi có được model tốt nhất, ta thử sử dụng nó để dự đoán các mẫu có trong tập Test, và hiển thị kết quả dưới dạng <em>classification report</em> và <em>confusion matrix</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># actually, test set is used to train model. So, this is not really valuable.</span>
+y_pred <span style="color:#f92672">=</span> grid_pipeline<span style="color:#f92672">.</span>predict(X_test)
+
+<span style="color:#75715e"># create confusion matrix</span>
+cm <span style="color:#f92672">=</span> confusion_matrix(y_test, y_pred)
+<span style="color:#75715e"># display classification report</span>
+<span style="color:#66d9ef">print</span>(classification_report(y_test, y_pred))
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/107_7.png">
+</div>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># display confusion matrix</span>
+fig, ax <span style="color:#f92672">=</span> plot_confusion_matrix(conf_mat<span style="color:#f92672">=</span>cm,
+                                show_absolute<span style="color:#f92672">=</span>True,
+                                show_normed<span style="color:#f92672">=</span>True,
+                                colorbar<span style="color:#f92672">=</span>True)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/107_8.png">
+</div>
+
+
+<p>Ta thấy trên tập Test, độ chính xác đạt được là tuyệt đối, 100%. Điều này là bởi vì thực ra trong quá trình huấn luyện model, các mẫu trong tập Test cũng đã được đưa vào học thông qua cơ chế Cross-validation.</p>
+<h4 id="42-dự-đoán-trên-mẫu-dữ-liệu-mới">4.2 Dự đoán trên mẫu dữ liệu mới</h4>
+<p>Nếu có một mẫu dữ liệu mới thì sao, ta cần làm gì để đưa vào model dự đoán?</p>
+<p>Đầu tiên, cần đưa mẫu dữ liệu về dạng giống như lúc huấn luyện:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># create new sample</span>
+new_sample <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0.41</span>, <span style="color:#ae81ff">0.43</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">153</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;sales&#39;</span>, <span style="color:#e6db74">&#39;medium&#39;</span>]]
+df_new_sample <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(new_sample)
+df_new_sample<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;satisfaction_level&#39;</span>, <span style="color:#e6db74">&#39;last_evaluation&#39;</span>, <span style="color:#e6db74">&#39;number_project&#39;</span>, <span style="color:#e6db74">&#39;average_montly_hours&#39;</span>, <span style="color:#e6db74">&#39;time_spend_company&#39;</span>, <span style="color:#e6db74">&#39;Work_accident&#39;</span>, <span style="color:#e6db74">&#39;promotion_last_5years&#39;</span>, <span style="color:#e6db74">&#39;Department&#39;</span>, <span style="color:#e6db74">&#39;salary&#39;</span>]
+</code></pre></div><p>Đến bước dự đoán, ta có thể có 2 cách:</p>
+<ul>
+<li>Dự đoán trực tiếp ra nhãn của mẫu:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># get only predicted class</span>
+class_pred <span style="color:#f92672">=</span> grid_pipeline<span style="color:#f92672">.</span>predict(df_new_sample)[<span style="color:#ae81ff">0</span>]
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Class = {}&#39;</span><span style="color:#f92672">.</span>format(class_pred))
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Class <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</code></pre></div><ul>
+<li>Dự đoán xác suất của mỗi class:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># get predicted class and it&#39;s probably coresponding</span>
+pd<span style="color:#f92672">.</span>DataFrame(grid_pipeline<span style="color:#f92672">.</span>predict_proba(df_new_sample)<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>, columns<span style="color:#f92672">=</span>grid_pipeline<span style="color:#f92672">.</span>classes_)
+</code></pre></div><p>Kết quả:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">	<span style="color:#ae81ff">0</span>	         <span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">0</span>	<span style="color:#ae81ff">98.571429</span>	<span style="color:#ae81ff">1.428571</span>
+</code></pre></div><p>Xác suất của class 0 là 98.57%, còn của class 1 là 1.42%.</p>
+<h3 id="5-save-và-load-model">5. Save và Load model</h3>
+<p>Model đã huấn luyện nên được lưu lại để có thể sử dụng lại về sau.</p>
+<h4 id="51-save-model">5.1 Save model</h4>
+<p>Để lưu model, ta có thể sử dụng một trong 2 thư viện là <em>pickle</em> hoặc <em>joblib</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># way 1</span>
+pickle<span style="color:#f92672">.</span>dump(grid_pipeline, open(<span style="color:#e6db74">&#39;model.pkl&#39;</span>, <span style="color:#e6db74">&#39;wb&#39;</span>))
+<span style="color:#75715e"># pickle.dump(grid_pipeline.best_estimator_, open(&#39;model.pkl&#39;, &#39;wb&#39;))</span>
+
+<span style="color:#75715e"># way 2, same result as way 1</span>
+joblib<span style="color:#f92672">.</span>dump(grid_pipeline, <span style="color:#e6db74">&#39;model.pkl&#39;</span>)
+<span style="color:#75715e"># joblib.dump(grid_pipeline.best_estimator_, &#39;model.pkl&#39;)</span>
+</code></pre></div><p>Để load model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># way 1</span>
+model <span style="color:#f92672">=</span> pickle<span style="color:#f92672">.</span>load(open(<span style="color:#e6db74">&#39;model.pkl&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>))
+<span style="color:#75715e"># way 2, same result as way 1</span>
+model <span style="color:#f92672">=</span> joblib<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;model.pkl&#39;</span>)
+</code></pre></div><p>Kiểm tra lại model vừa load bằng cách sử dụng nó để tạo một dự đoán:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># use loaded model to make prediction</span>
+class_id <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(df_new_sample)[<span style="color:#ae81ff">0</span>]
+<span style="color:#66d9ef">print</span>(class_id)
+</code></pre></div><p>Kết quả: 0</p>
+<p>Như vậy là quá trình save và load model được thực hiện chính xác.</p>
+<h3 id="6-kết-luận">6. Kết luận</h3>
+<p>Trong phần thứ 2 của bài toán phân tích dữ liệu nhân viên, chúng ta đã cùng nhau xây dựng được một ML model <em>tối ưu</em> để có thể dự đoán liệu một nhân viên có khả năng nghỉ việc hay là không? Lần lượt từng bước tiếp cận, từ xây dựng Base model, xử lý dữ liệu, đến việc tối ưu model đều đã được trình bày chi tiết. Hi vọng là các bạn có thể nắm bắt được ý tưởng của mình.</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Science/tree/master/HR_Analysis">đây</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/eda">Eda</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/game">Game</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
