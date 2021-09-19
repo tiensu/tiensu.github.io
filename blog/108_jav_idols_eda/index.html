@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/data-science"
+          class="text-primary">Data Science</a>
+        
+        <a href="/categories/eda"
+          class="text-primary">E d a</a>
+        
+        <h2>Bạn có phải là fan của các JAV idols ???</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>17 September 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/180_jav.png" class="img-fluid w-100 mb-4" alt="Bạn có phải là fan của các JAV idols ???">
+        
+        <div class="content mb-5">
+          <p>Nhắc đến cụm từ JAV, mình dám chắc phải đến 99% thanh niên Việt Nam đều biết nó là gì? :D</p>
+<p>Tuy vậy, để được gọi là <em>fan</em> của JAV thì có lẽ không có nhiều người. Bởi vì để được coi là <em>fan</em> thì bạn phải am hiểu sâu sắc về JAV, từ thông tin diễn viên, nhà sản xuất, ngày phát hành, &hellip; chứ không phải là chỉ chăm chú xem không bỏ sót một tập phim nào đâu nhé!</p>
+<p>Bài hôm nay, mình sẽ giúp các bạn bổ sung thêm một số kiến thức còn thiếu nếu bạn là người đang mong muốn được trở thành <em>fan</em> của JAV, thông qua việc phân tích một số thông tin về các diễn viên JAV.</p>
+<h3 id="1-sự-phổ-biến-của-jav-trên-thế-giới">1. Sự phổ biến của JAV trên thế giới</h3>
+<p>Đầu tiên, chúng ta sẽ cùng nhau kiểm chứng xem JAV phổ biến trên thế giới như thế nào (tính từ tháng 09/2020 đến tháng 09/2021)? Có bao nhiêu nước/khu vực quan tâm đến JAV và đâu là nơi mà JAV được quan tâm nhiều nhất?</p>
+<p>Vào <a href="https://trends.google.com/">Google Trends</a> và gõ từ khóa <em>JAV</em>, kết quả:</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_1.png">
+</div>
+
+
+<p>JAV hiện diện ở 150 nước/khu vực và không ngạc nhiên lắm khi Việt Nam của chúng ta đứng đầu danh sách xét về mức độ quan tâm đến JAV. Tiếp sau đó là người bạn Đông Nam Á (<em>Myanmar</em>), các anh em Đông Dương (<em>Campuchia, Lào</em>). Nhà giàu Đông Á (<em>Hàn Quốc</em>) cũng nằm trong top 5. Điều thú vị là Myanmar và Indonesia, một nước theo Phật giáo và một nước theo Hồi giáo, đều rất cấm kị những sản phẩm tình dục, khiêu dâm, nhưng JAV lại rất phổ biến ở nước này. Thậm chí là với từ khóa <em>Yui Hatano</em> thì top 1 chính là Myanmar.
+Riêng Nhật Bản, quê hương của JAV, thì lại không thấy xuất hiện trong top 10 danh sách, có thể là do người dân Nhật Bản thường tìm kiếm bằng chữ Hiragana thay vì dùng chữ Latin như đa số các quốc gia và vùng lãnh thổ khác.</p>
+<p>Nếu muốn khám phá chi tiết hơn, bạn có thể click chuột vào Việt Nam, sẽ thu được kết quả:</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_2.png">
+</div>
+
+
+<p>Xét trong phạm vi lãnh thổ Việt Nam thì các anh em Yên Bái có sở thích mạnh mẽ nhất với JAV. Tiếp theo là Điện Biên, Thanh Hóa, Thái Bình, Hòa Bình trong top 5. Hà Nội và Hồ Chí Minh, hai thành phố lớn nhất nước, tốc độ Internet nhanh nhất nước nhưng lại có vẻ <em>thờ ơ</em> với món này. Hai vị trí tương ứng của 2 thành phố đó trên bảng xếp hạng lần lượt là 53 và 60. Có lẽ các thanh niên ở 2 thành phố này còn có nhiều thú vui khác ngoài JAV. :D</p>
+<h3 id="2-thu-thập-dữ-liệu">2. Thu thập dữ liệu</h3>
+<p>Thông tin về các diễn viên JAV được thu thập từ 2 nguồn, tại <a href="https://japanpornjav.com/jav/index.html">https://japanpornjav.com</a> và tại <a href="https://www.kaggle.com/twopothead/japanese-pornstars-and-adult-videos">https://www.kaggle.com/twopothead/japanese-pornstars-and-adult-videos</a>.</p>
+<p>Đối với nguồn thứ nhất thì mình phải viết code python, sử dụng thư viện Beautifulsoup4 để lấy về, còn nguồn thứ 2 thì chỉ đơn giản là download file csv. Sau đó, qua một số bước tiền xử lý, mình gộp kết quả từ 2 nguồn đó lại thành một dữ liệu chung duy nhất, ghi thành file <em>jp_actress_info.csv</em>, với các thông tin như sau:</p>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Tên Features</th>
+<th>Ý Nghĩa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Name</td>
+<td>Tên diễn viên  trong tiếng Nhật</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Image_URL</td>
+<td>Đường dẫn đến ảnh đại diện của diễn viên</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Birthday</td>
+<td>Ngày sinh của diễn viên</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Blood_Type</td>
+<td>Nhóm máu của diễn viên</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Breast_Size</td>
+<td>Kích thước vòng 1 của diễn viên</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Waist_Size</td>
+<td>Kích thước vòng 2 của diễn viên</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Height</td>
+<td>Chiều cao của diễn viên</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Number_HD_Video_Online</td>
+<td>Số lượng HD video trên trang <a href="https://japanpornjav.com">https://japanpornjav.com</a> của diễn viên</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Cup_Size</td>
+<td>Kích thước áo ngực của diễn viên</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Hips</td>
+<td>Kích thước vòng 3 của diễn viên</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Home_Town</td>
+<td>Quê hương của diễn viên</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Hobby</td>
+<td>Sở thích của diễn viên</td>
+</tr>
+</tbody>
+</table>
+<p>Có tất cả 1220 diễn viên JAV trong bộ dữ liệu này. Ví dụ thông tin của một vài diễn viên:</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_3.png">
+</div>
+
+
+<p>Theo quan sát  thống kê thì có khá nhiều thông tin bị thiếu trong mỗi feature:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Int64Index: <span style="color:#ae81ff">1220</span> entries, <span style="color:#ae81ff">0</span> to <span style="color:#ae81ff">1219</span>
+Data columns (total <span style="color:#ae81ff">12</span> columns):
+ <span style="color:#75715e">#   Column                  Non-Null Count  Dtype </span>
+<span style="color:#f92672">---</span>  <span style="color:#f92672">------</span>                  <span style="color:#f92672">--------------</span>  <span style="color:#f92672">-----</span> 
+ <span style="color:#ae81ff">0</span>   Name                    <span style="color:#ae81ff">1220</span> non<span style="color:#f92672">-</span>null   object
+ <span style="color:#ae81ff">1</span>   Image_URL               <span style="color:#ae81ff">1220</span> non<span style="color:#f92672">-</span>null   object
+ <span style="color:#ae81ff">2</span>   Birthday                <span style="color:#ae81ff">1143</span> non<span style="color:#f92672">-</span>null   object
+ <span style="color:#ae81ff">3</span>   Blood_Type              <span style="color:#ae81ff">608</span> non<span style="color:#f92672">-</span>null    object
+ <span style="color:#ae81ff">4</span>   Breast_Size             <span style="color:#ae81ff">1220</span> non<span style="color:#f92672">-</span>null   object
+ <span style="color:#ae81ff">5</span>   Waist_Size              <span style="color:#ae81ff">1220</span> non<span style="color:#f92672">-</span>null   object
+ <span style="color:#ae81ff">6</span>   Height                  <span style="color:#ae81ff">1220</span> non<span style="color:#f92672">-</span>null   object
+ <span style="color:#ae81ff">7</span>   Number_HD_Video_Online  <span style="color:#ae81ff">1220</span> non<span style="color:#f92672">-</span>null   int64 
+ <span style="color:#ae81ff">8</span>   Cup_Size                <span style="color:#ae81ff">342</span> non<span style="color:#f92672">-</span>null    object
+ <span style="color:#ae81ff">9</span>   Hips                    <span style="color:#ae81ff">406</span> non<span style="color:#f92672">-</span>null    object
+ <span style="color:#ae81ff">10</span>  Home_Town               <span style="color:#ae81ff">293</span> non<span style="color:#f92672">-</span>null    object
+ <span style="color:#ae81ff">11</span>  Hobby                   <span style="color:#ae81ff">343</span> non<span style="color:#f92672">-</span>null    object
+</code></pre></div><p>Để cho việc phân tích được sát với thực tế nhất thì mình sẽ chỉ sử dụng những features không bị thiếu.</p>
+<h3 id="3-tiến-hành-eda">3. Tiến hành EDA</h3>
+<h4 id="31-phân-tích-tuổi-của-các-diễn-viên">3.1 Phân tích tuổi của các diễn viên</h4>
+<p>Từ thông tin về ngày sinh, sau khi loại bỏ đi những diễn viên mà thiếu hoặc sai định dạng thông tin này, chúng ta sẽ tính toán tuổi của từng diễn viên tính đến thời điểm hiện tại.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_age <span style="color:#f92672">=</span> df_ja[[<span style="color:#e6db74">&#39;Name&#39;</span>, <span style="color:#e6db74">&#39;Image_URL&#39;</span>, <span style="color:#e6db74">&#39;Birthday&#39;</span>]]
+df_age[<span style="color:#e6db74">&#39;Birthday&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df_age[<span style="color:#e6db74">&#39;Birthday&#39;</span>], errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>)
+df_age <span style="color:#f92672">=</span> df_age<span style="color:#f92672">.</span>dropna(subset<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Birthday&#39;</span>])
+df_age[<span style="color:#e6db74">&#39;Age&#39;</span>] <span style="color:#f92672">=</span> df_age[<span style="color:#e6db74">&#39;Birthday&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: pd<span style="color:#f92672">.</span>to_datetime(<span style="color:#e6db74">&#39;today&#39;</span>)<span style="color:#f92672">.</span>year <span style="color:#f92672">-</span> x<span style="color:#f92672">.</span>year)
+<span style="color:#66d9ef">print</span>(df_age<span style="color:#f92672">.</span>shape)
+df_age<span style="color:#f92672">.</span>head()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_4.png">
+</div>
+
+
+<p>Còn 1141 diễn viên có đủ thông tin ngày sinh và độ tuổi.</p>
+<p>Xem xét phân bố độ tuổi của các diễn viên:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dist_data <span style="color:#f92672">=</span> df_age[df_age[<span style="color:#e6db74">&#39;Age&#39;</span>]<span style="color:#f92672">.</span>notnull()]
+
+fig <span style="color:#f92672">=</span> ff<span style="color:#f92672">.</span>create_distplot([dist_data[<span style="color:#e6db74">&#39;Age&#39;</span>]], group_labels <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Age of JA&#39;</span>])
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_5.png">
+</div>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># plot violin chart for Age feature</span>
+fig <span style="color:#f92672">=</span> go<span style="color:#f92672">.</span>Figure(data<span style="color:#f92672">=</span>go<span style="color:#f92672">.</span>Violin(
+                                y<span style="color:#f92672">=</span>df_age[<span style="color:#e6db74">&#39;Age&#39;</span>], 
+                                box_visible<span style="color:#f92672">=</span>True, 
+                                line_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>,
+                                meanline_visible<span style="color:#f92672">=</span>True, 
+                                opacity<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>,
+                                x0<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Age&#39;</span>,
+                                points<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>
+                            )
+                )
+
+fig<span style="color:#f92672">.</span>update_layout(
+                    height<span style="color:#f92672">=</span><span style="color:#ae81ff">600</span>,
+                    margin<span style="color:#f92672">=</span>dict(t<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, l<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, r<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+                )
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_6.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Phần lớn các diễn viên JAV có độ tuổi trong khoảng từ 24-31 tuổi. Độ tuổi trung bình là 27.8</li>
+<li>Số tuổi nhỏ nhất và lớn nhất của diễn viên JAV lần lượt là 19 và 64 tuổi. 19 tuổi tức là vừa mới tốt nghiệp cấp 3 đã <em>debut</em> luôn. Còn 64 tuổi đời thì ít nhất cũng phải 40 năm tuổi nghề. Thật đáng nể !!!</li>
+</ul>
+<p>Có 6 diễn viên ở độ tuổi 19: あまつか亜夢, 朝田ひまり, 北城希, 小野六花, 和知すばる, và 天ノうた.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_age_min <span style="color:#f92672">=</span> df_age[df_age[<span style="color:#e6db74">&#39;Age&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">19</span>]
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_age_min[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div><p>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/108_7.png">
+</div>
+
+
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_7a.png">
+</div>
+
+</p>
+<p>Còn diễn viên lớn tuổi nhất là 真梨邑ケイ:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_age_max <span style="color:#f92672">=</span> df_age[df_age[<span style="color:#e6db74">&#39;Age&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">64</span>]
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_age_max[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_8.png">
+</div>
+
+
+<p>Từ ngày sinh, chúng ta còn có thể suy ra <em>cung hoàng đạo</em> của mỗi diễn viên:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_age[<span style="color:#e6db74">&#39;Zodiac_Sign&#39;</span>] <span style="color:#f92672">=</span> df_age[<span style="color:#e6db74">&#39;Birthday&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: zodiac_sign(x<span style="color:#f92672">.</span>day, x<span style="color:#f92672">.</span>month))
+zodiac_signs <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(df_age[<span style="color:#e6db74">&#39;Zodiac_Sign&#39;</span>])
+font_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;font/NotoSerifCJKjp-Light.otf&#39;</span>
+mask <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;alice_mask.png&#39;</span>))
+<span style="color:#f92672">...</span>
+<span style="color:#75715e"># create a wordcloud </span>
+wordcloud <span style="color:#f92672">=</span> WordCloud(background_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;white&#39;</span>,
+               mask<span style="color:#f92672">=</span>mask,
+               font_path<span style="color:#f92672">=</span>font_path,
+               max_words<span style="color:#f92672">=</span><span style="color:#ae81ff">2000</span>,
+               contour_width<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,
+               contour_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;steelblue&#39;</span>,
+               stopwords<span style="color:#f92672">=</span>stopwords,
+               max_font_size<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>
+               )<span style="color:#f92672">.</span>generate(zodiac_signs)
+wordcloud<span style="color:#f92672">.</span>to_file(<span style="color:#e6db74">&#34;zodiac.png&#34;</span>)
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_9.png">
+</div>
+
+
+<p><em>Nhân Mã</em> là chòm sao phổ biến nhất trong các diễn viên được phân tích. Tiếp đến là <em>Cự Giải, Bạch Dương, Song Ngư, &hellip;</em>.</p>
+<h4 id="32-phân-tích-kích-thước-3-vòng-của-các-diễn-viên">3.2 Phân tích kích thước 3 vòng của các diễn viên</h4>
+<p>Chúng ta sẽ tách riêng thông tin về kích thước 3 vòng từ bộ dữ liệu ban đầu, và loại bỏ đi những thông tin thiếu, sai rồi tiến hành phân tích:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_bwh <span style="color:#f92672">=</span> df_ja[[<span style="color:#e6db74">&#39;Name&#39;</span>, <span style="color:#e6db74">&#39;Image_URL&#39;</span>, <span style="color:#e6db74">&#39;Breast_Size&#39;</span>, <span style="color:#e6db74">&#39;Waist_Size&#39;</span>, <span style="color:#e6db74">&#39;Hips&#39;</span>]]
+df_bwh<span style="color:#f92672">.</span>drop(df_bwh<span style="color:#f92672">.</span>index[df_bwh[<span style="color:#e6db74">&#34;Breast_Size&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#f92672">not</span> (x<span style="color:#f92672">.</span>strip()<span style="color:#f92672">.</span>isnumeric()))], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, inplace<span style="color:#f92672">=</span>True)
+df_bwh<span style="color:#f92672">.</span>drop(df_bwh<span style="color:#f92672">.</span>index[df_bwh[<span style="color:#e6db74">&#34;Waist_Size&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#f92672">not</span> (x<span style="color:#f92672">.</span>strip()<span style="color:#f92672">.</span>isnumeric()))], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, inplace<span style="color:#f92672">=</span>True)
+
+df_bwh[<span style="color:#e6db74">&#39;Breast_Size&#39;</span>] <span style="color:#f92672">=</span> df_bwh[<span style="color:#e6db74">&#39;Breast_Size&#39;</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float32)
+df_bwh[<span style="color:#e6db74">&#39;Waist_Size&#39;</span>] <span style="color:#f92672">=</span> df_bwh[<span style="color:#e6db74">&#39;Waist_Size&#39;</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float32)
+
+<span style="color:#75715e"># remove outlier</span>
+df_bwh <span style="color:#f92672">=</span> df_bwh[df_bwh[<span style="color:#e6db74">&#39;Waist_Size&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span>]
+df_bwh <span style="color:#f92672">=</span> df_bwh[df_bwh[<span style="color:#e6db74">&#39;Breast_Size&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">40</span>]
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_10.png">
+</div>
+
+
+<p>Có 1157 diễn viên JAV cho chúng ta phân tích. Riêng thông tin về vòng 3, nếu loại bỏ hết những giá trị NaN thì số lượng diễn viên còn lại khá khiêm tốn (406) nên mình sẽ để nguyên.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> go<span style="color:#f92672">.</span>Figure()
+<span style="color:#66d9ef">for</span> fe <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;Breast_Size&#39;</span>, <span style="color:#e6db74">&#39;Waist_Size&#39;</span>, <span style="color:#e6db74">&#39;Hips&#39;</span>]:
+    fig<span style="color:#f92672">.</span>add_trace(go<span style="color:#f92672">.</span>Violin(x<span style="color:#f92672">=</span>[fe]<span style="color:#f92672">*</span>df_bwh<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>],
+                            y<span style="color:#f92672">=</span>df_bwh[fe],
+                            text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Dist plot for &#39;</span> <span style="color:#f92672">+</span> fe<span style="color:#f92672">.</span>upper(),
+                            name<span style="color:#f92672">=</span>fe<span style="color:#f92672">.</span>upper(),
+                            box_visible<span style="color:#f92672">=</span>True,
+                            meanline_visible<span style="color:#f92672">=</span>True,
+                            points<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>))
+
+fig<span style="color:#f92672">.</span>update_layout(
+                    height<span style="color:#f92672">=</span><span style="color:#ae81ff">800</span>,
+                    margin<span style="color:#f92672">=</span>dict(t<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, l<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, r<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+                  )
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_11.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Vòng 1, 3 gần như luôn luôn lớn hơn vòng 2 (<em>điều này là tất nhiên rồi</em>).</li>
+<li>Kích thước lớn nhất của vòng 1 là 115cm, nhỏ nhất là 72cm, trung bình là 86,74cm, và phân bổ chủ yếu trong khoảng từ 83-89cm.</li>
+<li>Kích thước lớn nhất của vòng 2 là 70cm, nhỏ nhất là 49cm, trung bình là 58,2cm, và phân bố chủ yếu trong khoảng từ 57-59cm.</li>
+<li>Kích thước lớn nhất của vòng 3 là 97cm, nhỏ nhất là 75cm, trung bình là 85,6cm, và phân bố chủ yếu trong khoảng từ 83-88cm.</li>
+<li>Vùng phân bố kích thước vòng 1, 3 lớn hơn vòng 2.</li>
+<li>Hầu hết số đo 3 vòng của các JAV idols cũng chưa đạt được đến chuẩn 90 - 60 - 90.</li>
+</ul>
+<p>Thử xem có diễn viên nào đạt chuẩn số đo 3 vòng không?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_bwh_standard <span style="color:#f92672">=</span> df_bwh[(df_bwh[<span style="color:#e6db74">&#39;Breast_Size&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">90</span>) <span style="color:#f92672">&amp;</span> (df_bwh[<span style="color:#e6db74">&#39;Waist_Size&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">60</span>) <span style="color:#f92672">&amp;</span> (df_bwh[<span style="color:#e6db74">&#39;Hips&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">90</span>)]
+<span style="color:#66d9ef">print</span>(df_bwh_standard<span style="color:#f92672">.</span>Name)
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_bwh_standard[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div><p>Chỉ có 1 người duy nhất, đó là <em>白石茉莉奈</em>.</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_12.jpg">
+</div>
+
+
+<p>Còn đối với bộ số trung bình 3 vòng thì sao, liệu có bao nhiêu diễn viên?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_bwh_mean <span style="color:#f92672">=</span> df_bwh[(df_bwh[<span style="color:#e6db74">&#39;Breast_Size&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">86</span>) <span style="color:#f92672">&amp;</span> (df_bwh[<span style="color:#e6db74">&#39;Waist_Size&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">58</span>) <span style="color:#f92672">&amp;</span> (df_bwh[<span style="color:#e6db74">&#39;Hips&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">86</span>)]
+<span style="color:#66d9ef">print</span>(df_bwh_mean<span style="color:#f92672">.</span>Name)
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_bwh_mean[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div><p>Có 5 người: <em>吉沢明歩, 藤井シェリー, 水樹りさ, 初美沙希, 向井しほ</em>:</p>
+<p>
+
+<div style="text-align:center">
+   <img style="height:auto" src="/images/post/108_13.png">
+</div>
+
+
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_13a.png">
+</div>
+
+</p>
+<p>Tiếp tục xem cô nàng nào có vòng 1 lớn nhất?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_breast_max <span style="color:#f92672">=</span> df_bwh[df_bwh[<span style="color:#e6db74">&#39;Breast_Size&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">115</span>]
+<span style="color:#66d9ef">print</span>(df_breast_max<span style="color:#f92672">.</span>Name)
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_breast_max[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div><p>Đó là <em>夢野まりあ</em>, nhìn hình này thì quả là to thật, :D</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_14.png">
+</div>
+
+
+<p>Idol nào có vòng 2 nhỏ nhất?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_waist_min <span style="color:#f92672">=</span> df_bwh[df_bwh[<span style="color:#e6db74">&#39;Waist_Size&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">49</span>]
+<span style="color:#66d9ef">print</span>(df_waist_min<span style="color:#f92672">.</span>Name)
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_waist_min[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div><p>Câu trả lời là <em>もりの小鳥</em>:</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_15.png">
+</div>
+
+
+<p>Cuối cùng, diễn viên có vòng 3 lớn nhất là &hellip;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_hips_max <span style="color:#f92672">=</span> df_bwh[df_bwh[<span style="color:#e6db74">&#39;Hips&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">97</span>]
+<span style="color:#66d9ef">print</span>(df_hips_max<span style="color:#f92672">.</span>Name)
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_hips_max[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div><p><em>小口田桂子</em>:</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_16.png">
+</div>
+
+
+<h4 id="33-phân-tích-chiều-cao-của-các-diễn-viên">3.3 Phân tích chiều cao của các diễn viên</h4>
+<p>Ở VN, để trở thành người mẫu, <em>hot girl</em>, hay idol của giới trẻ thì chiều cao cũng là một yếu tố. Thử xem đối với các diễn viên JAV của chúng ta thì như nào.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_height <span style="color:#f92672">=</span> df_ja[[<span style="color:#e6db74">&#39;Name&#39;</span>, <span style="color:#e6db74">&#39;Image_URL&#39;</span>, <span style="color:#e6db74">&#39;Height&#39;</span>]]
+df_height<span style="color:#f92672">.</span>drop(df_height<span style="color:#f92672">.</span>index[df_height[<span style="color:#e6db74">&#34;Height&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#f92672">not</span> (x<span style="color:#f92672">.</span>strip()<span style="color:#f92672">.</span>isnumeric()))], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, inplace<span style="color:#f92672">=</span>True)
+
+df_height[<span style="color:#e6db74">&#39;Height&#39;</span>] <span style="color:#f92672">=</span> df_height[<span style="color:#e6db74">&#39;Height&#39;</span>]<span style="color:#f92672">.</span>fillna(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float32)<span style="color:#f92672">.</span>replace(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, np<span style="color:#f92672">.</span>nan)
+
+<span style="color:#66d9ef">print</span>(df_height<span style="color:#f92672">.</span>shape)
+df_height<span style="color:#f92672">.</span>head()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_17.png">
+</div>
+
+
+<p>Có 1163 diễn viên phục vụ cho việc phân tích này. Chiều cao của các diễn viên thể hiện qua đồ thị <em>distplot</em> và <em>violin</em> như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dist_data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(df_height[<span style="color:#e6db74">&#39;Height&#39;</span>])
+dist_data <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> dist_data <span style="color:#66d9ef">if</span> np<span style="color:#f92672">.</span>isnan(x) <span style="color:#f92672">==</span> False]
+fig <span style="color:#f92672">=</span> ff<span style="color:#f92672">.</span>create_distplot([dist_data], group_labels <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;distplot&#39;</span>])
+fig<span style="color:#f92672">.</span>update_layout(margin<span style="color:#f92672">=</span>dict(t<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, l<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, r<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>))
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_18.png">
+</div>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># plot violin chart for Height feature</span>
+fig <span style="color:#f92672">=</span> go<span style="color:#f92672">.</span>Figure(data<span style="color:#f92672">=</span>go<span style="color:#f92672">.</span>Violin(
+                                y<span style="color:#f92672">=</span>df_height[<span style="color:#e6db74">&#39;Height&#39;</span>], 
+                                box_visible<span style="color:#f92672">=</span>True, 
+                                line_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;green&#39;</span>,
+                                meanline_visible<span style="color:#f92672">=</span>True, 
+                                opacity<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>,
+                                x0<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Height&#39;</span>,
+                                points<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>
+                            )
+                )
+
+fig<span style="color:#f92672">.</span>update_layout(
+                    height<span style="color:#f92672">=</span><span style="color:#ae81ff">600</span>,
+                    margin<span style="color:#f92672">=</span>dict(t<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, l<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>, r<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+                )
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_19.png">
+</div>
+
+
+<p>Nhận xét:</p>
+<ul>
+<li>Chiều cao trung bình của các diễn viên JAV là 158,45cm. Cao nhất là 178cm, thấp nhất là 142cm.</li>
+<li>Đa số diễn viên có chiều cao trong khoảng 155-162cm.</li>
+</ul>
+<p>Với chiều cao như thế này, ta thấy nó khá tương đồng với chiều cao trung bình của người dân Nhật Bản. Từ đó có thể kết luận rằng chiều cao không phải là yếu tố cần thiết, quan trọng để trở thành một diễn viên JAV.</p>
+<p>Hai diễn viên có chiều cao lớn nhất (178cm) là <em>佐藤エル</em> và <em>司ミコト</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_height_max <span style="color:#f92672">=</span> df_height[df_height[<span style="color:#e6db74">&#39;Height&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">178</span>]
+<span style="color:#66d9ef">print</span>(df_height_max<span style="color:#f92672">.</span>Name)
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_height_max[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_20.png">
+</div>
+
+
+<p>Còn diễn viên có chiều cao thấp nhất (142cm) là <em>工藤ララ</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_height_min <span style="color:#f92672">=</span> df_height[df_height[<span style="color:#e6db74">&#39;Height&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">142</span>]
+<span style="color:#66d9ef">print</span>(df_height_min<span style="color:#f92672">.</span>Name)
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_height_min[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_21.png">
+</div>
+
+
+<h4 id="34-phân-tích-kích-thước-áo-ngực-của-các-diễn-viên">3.4 Phân tích kích thước áo ngực của các diễn viên</h4>
+<p>Kích thước áo ngực thông thường sẽ tỉ lệ thuận với kích thước vòng 1 của các chị em. Tuy nhiên, thực tế không hoàn toàn vậy, bởi vì một số chị em có sở thích <em>độn ngực</em> đó mà, :D</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_cup <span style="color:#f92672">=</span> df_ja[[<span style="color:#e6db74">&#39;Name&#39;</span>, <span style="color:#e6db74">&#39;Image_URL&#39;</span>, <span style="color:#e6db74">&#39;Cup_Size&#39;</span>]]
+df_cup<span style="color:#f92672">.</span>drop(df_cup<span style="color:#f92672">.</span>index[df_cup[<span style="color:#e6db74">&#34;Cup_Size&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: (pd<span style="color:#f92672">.</span>isna(x)))], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, inplace<span style="color:#f92672">=</span>True)
+<span style="color:#66d9ef">print</span>(df_cup<span style="color:#f92672">.</span>shape)
+df_cup<span style="color:#f92672">.</span>head()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_22.png">
+</div>
+
+
+<p>Thông tin về Cup_size không có nhiều, chỉ có 342 diễn viên có thông tin này trong bộ dữ liệu.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>bar(
+                df_cup_gr,
+                x<span style="color:#f92672">=</span>df_cup_gr<span style="color:#f92672">.</span>index,
+                y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Count&#39;</span>,
+                color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Count&#39;</span>,
+                text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Count&#39;</span>
+                )
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_23.png">
+</div>
+
+
+<p>Mình thì không rành về khoản kích thước áo ngực của hội chị e lắm, nhưng hình như là tăng dần theo thứ tự A, B, C, D, &hellip; Nhìn vào đồ thị thì ta thấy đa số các JAV idols của chúng ta có Cup_Size ở mức trung bình trở lên, tức là mức D, E, F, &hellip; Từ đó suy ra rằng, mặc dù kích thước vòng 1 có thể không to lắm, nhưng đa số các diễn viên đều thích sử dụng các áo ngực có kích thước lớn hơn, có lẽ là để trông <em>hấp dẫn</em> cánh đàn ông hơn, :D</p>
+<p><em>きみの奈津</em> và <em>きみの奈津</em> là hai diễn viên mặc áo ngực lớn nhất và nhỏ nhất, tương ứng.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_cup_size_max <span style="color:#f92672">=</span> df_cup[df_cup[<span style="color:#e6db74">&#39;Cup_Size&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;L&#39;</span>]
+<span style="color:#66d9ef">print</span>(df_cup_size_max<span style="color:#f92672">.</span>Name)
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_cup_size_max[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_24.png">
+</div>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_cup_size_min <span style="color:#f92672">=</span> df_cup[df_cup[<span style="color:#e6db74">&#39;Cup_Size&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;A&#39;</span>]
+<span style="color:#66d9ef">print</span>(df_cup_size_min<span style="color:#f92672">.</span>Name)
+ims <span style="color:#f92672">=</span> [Image<span style="color:#f92672">.</span>open(requests<span style="color:#f92672">.</span>get(url, stream<span style="color:#f92672">=</span>True)<span style="color:#f92672">.</span>raw) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> df_cup_size_min[<span style="color:#e6db74">&#39;Image_URL&#39;</span>]]
+ipyplot<span style="color:#f92672">.</span>plot_images(ims, max_images<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, img_width<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_25.png">
+</div>
+
+
+<h4 id="35-phân-tích-nhóm-máu-của-các-diễn-viên">3.5 Phân tích nhóm máu của các diễn viên</h4>
+<p>Liệu rằng nhóm máu có liên quan đến nghề nghiệp không nhỉ?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_blood <span style="color:#f92672">=</span> df_ja[[<span style="color:#e6db74">&#39;Name&#39;</span>, <span style="color:#e6db74">&#39;Image_URL&#39;</span>, <span style="color:#e6db74">&#39;Blood_Type&#39;</span>]]
+df_blood<span style="color:#f92672">.</span>drop(df_blood<span style="color:#f92672">.</span>index[df_blood[<span style="color:#e6db74">&#34;Blood_Type&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;O&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;AB&#39;</span>])], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, inplace<span style="color:#f92672">=</span>True)
+<span style="color:#66d9ef">print</span>(df_blood<span style="color:#f92672">.</span>shape)
+df_blood<span style="color:#f92672">.</span>head()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_26.png">
+</div>
+
+
+<p>Chúng ta có 605 diễn viên để phân tích.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_blood_gr <span style="color:#f92672">=</span> df_blood<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;Blood_Type&#39;</span>)[<span style="color:#e6db74">&#39;Name&#39;</span>]<span style="color:#f92672">.</span>count()
+df_blood_gr <span style="color:#f92672">=</span> df_blood_gr<span style="color:#f92672">.</span>to_frame()
+df_blood_gr<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Count&#39;</span>]
+df_blood_gr <span style="color:#f92672">=</span> df_blood_gr<span style="color:#f92672">.</span>sort_values(<span style="color:#e6db74">&#39;Count&#39;</span>, ascending<span style="color:#f92672">=</span>False)
+df_blood_gr<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>background_gradient(cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;plasma_r&#39;</span>)
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_27.png">
+</div>
+
+
+<p>Hai nhóm máu A và O có số lượng diễn viên nhiều nhất, tiếp đến là nhóm máu B và AB cuối cùng. Khả năng là những phụ nữ có nhóm máu A, O thường sẽ chọn nghề
+trở thành diễn viên JAV (<em>nếu họ ở Nhật Bản</em>) ???</p>
+<h4 id="36-phân-tích-sở-thích-của-các-diễn-viên">3.6 Phân tích sở thích của các diễn viên</h4>
+<p>Các JAV idols của chúng ta không phải chỉ có sở thích <em>đóng phim</em> đâu nhé. Thực ra, <em>đóng phim người lớn</em> là một công việc rất nặng nhọc. Vì thế mà các diễn viên cũng có rất nhiều sở thích, thú vui khác nhau để giải trí, làm dịu bớt mệt mỏi, căng thẳng.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_hobby <span style="color:#f92672">=</span> df_ja[df_ja[<span style="color:#e6db74">&#39;Hobby&#39;</span>]<span style="color:#f92672">.</span>notnull()]
+hobby_str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(df_hobby[<span style="color:#e6db74">&#39;Hobby&#39;</span>])
+font_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;font/NotoSerifCJKjp-Light.otf&#39;</span>
+mask <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;heart_mask.jpg&#39;</span>))
+<span style="color:#f92672">...</span>
+<span style="color:#75715e"># create a wordcloud </span>
+wordcloud <span style="color:#f92672">=</span> WordCloud(background_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;white&#39;</span>,
+               mask<span style="color:#f92672">=</span>mask,
+               font_path<span style="color:#f92672">=</span>font_path,
+               max_words<span style="color:#f92672">=</span><span style="color:#ae81ff">2000</span>,
+               contour_width<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,
+               contour_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;steelblue&#39;</span>,
+               stopwords<span style="color:#f92672">=</span>stopwords,
+               max_font_size<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>
+               )<span style="color:#f92672">.</span>generate(hobby_str)
+wordcloud<span style="color:#f92672">.</span>to_file(<span style="color:#e6db74">&#34;alice.png&#34;</span>)
+<span style="color:#75715e"># show worldcloud picture</span>
+plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">8</span>))
+plt<span style="color:#f92672">.</span>imshow(wordcloud, interpolation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bilinear&#39;</span>)
+plt<span style="color:#f92672">.</span>axis(<span style="color:#e6db74">&#34;off&#34;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_28.png">
+</div>
+
+
+<p>Có thể thấy các thú vui của diễn viên JAV cũng rất đa dạng, vừa đời thường, vửa thời thượng: Nấu ăn, đi mua sắm, hát Karaoke, chơi đàn Piano, khiêu vũ, xem phim, &hellip; và rất nhiều sở thích khác nữa.</p>
+<h4 id="37-phân-tích-quê-hương-của-các-diễn-viên">3.7 Phân tích quê hương của các diễn viên</h4>
+<p>Nếu như ở VN, mọi người thường nói, người Nghệ An, Hà Tĩnh thường học rất giỏi, nhiều người làm quan to, sếp lớn. Không biết liệu ở Nhật Bản, yếu tố quê hương có ảnh hưởng đến nghề nghiệp hay không?</p>
+<p>Trong bộ dữ liệu đã có thông tin về nơi sinh ra của các diễn viên JAV rồi, nhưng để có cái nhìn trực quan hơn thì chúng ta sẽ cần thêm thông tin về toạ độ địa lý của nơi đó, rồi hiển thị lên bản đồ.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># get latitude &amp; longitude</span>
+geolocator <span style="color:#f92672">=</span> Nominatim(user_agent<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Home_Town&#39;</span>)
+df_birthplace[<span style="color:#e6db74">&#39;Home_Town Coord&#39;</span>] <span style="color:#f92672">=</span> df_birthplace[<span style="color:#e6db74">&#39;Home_Town&#39;</span>]<span style="color:#f92672">.</span>apply(geolocator<span style="color:#f92672">.</span>geocode)<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: (x<span style="color:#f92672">.</span>latitude, x<span style="color:#f92672">.</span>longitude))
+<span style="color:#75715e"># separate latitude &amp; longtitude into 2 different columns</span>
+df_birthplace[[<span style="color:#e6db74">&#39;Latitude&#39;</span>, <span style="color:#e6db74">&#39;Longtitude&#39;</span>]] <span style="color:#f92672">=</span> df_birthplace[<span style="color:#e6db74">&#39;Home_Town Coord&#39;</span>]<span style="color:#f92672">.</span>apply(pd<span style="color:#f92672">.</span>Series)
+df_birthplace<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#39;Home_Town Coord&#39;</span>], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, inplace<span style="color:#f92672">=</span>True)
+df_birthplace<span style="color:#f92672">.</span>head()
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_29.png">
+</div>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">hmap <span style="color:#f92672">=</span> folium<span style="color:#f92672">.</span>Map(location<span style="color:#f92672">=</span>[<span style="color:#ae81ff">35.9</span>, <span style="color:#ae81ff">139.8</span>], control_scale<span style="color:#f92672">=</span>True, attr<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;USGS style&#39;</span>, zoom_start<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+HeatMap(hm_data, rasdius<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>add_to(hmap)
+</code></pre></div>
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_30.png">
+</div>
+
+
+<p>Tokyo là nơi sản sinh ra nhiều diễn viên JAV nhất. Điều này có vẻ không giống với Việt Nam. Ở Việt Nam thì thường các miền quê nghèo, không có việc làm thì các chị em mới chọn theo nghề này. Còn ở Nhật Bản, Tokyo là thành phố sầm uất bậc nhất lại là quê hương của rất nhiều JAV idols. Điều này có lẽ xuất phát từ văn hóa và pháp luật của Nhật Bản, khi mà JAV là một nghề nghiệp được coi là hợp pháp, và có thu nhập tương đối cao.</p>
+<h3 id="6-kết-luận">6. Kết luận</h3>
+<p>Trong phần thứ 2 của bài toán phân tích dữ liệu nhân viên, chúng ta đã cùng nhau xây dựng được một ML model <em>tối ưu</em> để có thể dự đoán liệu một nhân viên có khả năng nghỉ việc hay là không? Lần lượt từng bước tiếp cận, từ xây dựng Base model, xử lý dữ liệu, đến việc tối ưu model đều đã được trình bày chi tiết. Hi vọng là các bạn có thể nắm bắt được ý tưởng của mình.</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Science/tree/master/HR_Analysis">đây</a>.</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/eda">Eda</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/game">Game</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">Nlp</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>
