@@ -748,10 +748,43 @@ HeatMap(hm_data, rasdius<span style="color:#f92672">=</span><span style="color:#
 </div>
 
 
-<p>Tokyo là nơi sản sinh ra nhiều diễn viên JAV nhất. Điều này có vẻ không giống với Việt Nam. Ở Việt Nam thì thường các miền quê nghèo, không có việc làm thì các chị em mới chọn theo nghề này. Còn ở Nhật Bản, Tokyo là thành phố sầm uất bậc nhất lại là quê hương của rất nhiều JAV idols. Điều này có lẽ xuất phát từ văn hóa và pháp luật của Nhật Bản, khi mà JAV là một nghề nghiệp được coi là hợp pháp, và có thu nhập tương đối cao.</p>
-<h3 id="6-kết-luận">6. Kết luận</h3>
-<p>Trong phần thứ 2 của bài toán phân tích dữ liệu nhân viên, chúng ta đã cùng nhau xây dựng được một ML model <em>tối ưu</em> để có thể dự đoán liệu một nhân viên có khả năng nghỉ việc hay là không? Lần lượt từng bước tiếp cận, từ xây dựng Base model, xử lý dữ liệu, đến việc tối ưu model đều đã được trình bày chi tiết. Hi vọng là các bạn có thể nắm bắt được ý tưởng của mình.</p>
-<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Science/tree/master/HR_Analysis">đây</a>.</p>
+<p>Tokyo là nơi sản sinh ra nhiều diễn viên JAV nhất. Điều này có vẻ không giống với Việt Nam. Ở Việt Nam thì thường các miền quê nghèo, không có việc làm thì các chị em mới chọn theo nghề này. Còn ở Nhật Bản, Tokyo là thành phố sầm uất bậc nhất lại là quê hương của rất nhiều JAV idols. Điều này có lẽ xuất phát từ văn hóa và pháp luật của Nhật Bản, khi mà JAV là một nghề nghiệp được coi là hợp pháp, và có thu nhập tương đối cao. Và một lý do khác, rất có thể chốn đô thị xa hoa, lộng lẫy đã khiến nhiều cô gái muốn làm giàu nhanh chóng, thay vì phải ngồi làm công việc văn phòng với bàn giấy và máy tính tẻ nhạt.</p>
+<h4 id="38-phân-tích-mối-liên-hệ-giữa-tuổi-tác-và-kích-thước-3-vòng">3.8 Phân tích mối liên hệ giữa tuổi tác và kích thước 3 vòng</h4>
+<p>Thông thường, tuổi tác thường tỉ lệ nghịch với kích thước 3 vòng. Hãy xem điều đó có đúng với các diễn viên JAV hay không?</p>
+<p>Trước tiên, ta sẽ tạo ra một dataframe chỉ chứa các thông tin về tuổi và kích thước 3 vòng. Sau đó, phân chia tuổi thành cách nhóm A, B, C tương ứng với các khoảng 15-30, 30-40, và &gt; 40 tuổi.</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_31.png">
+</div>
+
+
+<p>Mối quan hệ giữa độ tuổi và kích thước 3 vòng được thể hiện trên đồ thị như sau:</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_32.png">
+</div>
+
+
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_33.png">
+</div>
+
+
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/108_34.png">
+</div>
+
+
+<p>Nhìn vào đây ta thấy, có vẻ như tuổi tác không ảnh hưởng quá nhiều đến kích thước 3 vòng, khi mà mức trung bình của cả 3 nhóm tuổi đều là 87cm, 85cm, và 87cm tương ứng với vòng 1, vòng 2, và vòng 3. Thậm chí là đối với vòng 1, nhóm diễn viên lớn tuổi có kích thước vòng 1 còn nhỉnh hơn 1 chút xíu so với nhóm nhỏ tuổi. Điều này cũng khá dễ hiểu thôi, bởi vì kích thước 3 vòng là yếu tố quan trọng để thu hút <em>khán giả</em> của cac diễn viên JAV, nên họ sẽ cực kỳ chăm chút. Nếu vì tuổi cao mà kích thước không đạt yêu cầu để hấp dẫn nữa thì chắc là họ sẽ giải nghệ.</p>
+<h3 id="4-kết-luận">4. Kết luận</h3>
+<p>Trên đây là bức tranh tổng quát về các JAV idols ở xứ sở mặt trời mọc. Hi vọng qua bài viết này, các bạn hiểu thêm được phần nào về nghành <em>công nghiệp phim người lớn</em> nói riêng và việc vận dụng Data Science để tìm ra <em>Insight</em> từ các dữ liệu nói chung. Sau khi đọc xong bài này, các nam thanh niên có thể tự tin chém gió về thần tượng của mình rồi đó !!!</p>
+<p>Toàn bộ code của bài này, các bạn có thể tham khảo tại <a href="https://github.com/tiensu/Data_Science/tree/master/Japanese_JAV">đây</a>.</p>
 
         </div>
 
