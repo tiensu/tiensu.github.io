@@ -156,7 +156,7 @@
         <a href="/categories/time-series"
           class="text-primary">Time Series</a>
         
-        <h2>Áp dụng Machine Learning trong dự đoán nhu cầu sản xuất</h2>
+        <h2>Áp dụng Machine Learning trong dự đoán nhu cầu thị trường</h2>
         <div class="mb-3 post-meta">
           <span>By SuNT</span>
           
@@ -165,17 +165,21 @@
           
         </div>
         
-        <img src="https://tiensu.github.io/images/featured-post/109_demand_forecasting.jpg" class="img-fluid w-100 mb-4" alt="Áp dụng Machine Learning trong dự đoán nhu cầu sản xuất">
+        <img src="https://tiensu.github.io/images/featured-post/109_demand_forecasting.jpg" class="img-fluid w-100 mb-4" alt="Áp dụng Machine Learning trong dự đoán nhu cầu thị trường">
         
         <div class="content mb-5">
-          <p>Dự đoán nhu cầu - <em>demand forecasting</em> là một phần không thể thiếu trong việc lập kế hoạch kinh doanh, phát triển của mọi công ty, doanh nghiệp, thuộc đủ các ngành nghề: sản xuất, phân phối, bán lẻ, vận chuyển, &hellip;. trong rất nhiều lĩnh vực khác nhau: CNTT, giáo dục, y tế, giao thông, thực phẩm, kinh tế, &hellip;  Ví dụ, với doanh nghiệp nhập khẩu &amp; phân phối quần áo thì cần dự đoán nhu cầu tiêu thụ của khách hàng trong từng quý/tháng của năm tiếp theo, với công ty sản xuất đồ gỗ nội thất thì cần dự đoán lượng nguyên vật liệu cần nhập về kho trong quý tiếp theo, &hellip;</p>
+          <p>Nhu cầu là chỉ số quan trọng mà mọi doanh nghiệp cần xem xét trước khi thực hiện bắt đầu, hay mở rộng bất cứ một lĩnh vực kinh doanh nào. Dự đoán nhu cầu - <em>demand forecasting</em>, là việc đánh giá số lượng hàng hóa và dịch vụ mà người tiêu dùng có thể sẽ mua trong tương lai. Các yếu tố kinh doanh quan trọng nhất như doanh thu, tỷ suất lợi nhuận, dòng tiền, chi tiêu vốn, đánh giá rủi ro, kế hoạch phát triển, hoạch định năng lực, v.v. phụ thuộc trực tiếp vào nhu cầu.</p>
 <p>Từ trước khi các kỹ thuật AI/ML ra đời, đã tồn tại một số phương pháp dự đoán khác nhau, trong đó chủ yếu là dựa vào thống kê toán học, hay dựa vào kinh nghiệm của những người làm lâu năm trong nghề. Các phương pháp này có ưu điểm là nhanh chóng, đơn giản nhưng thường cho ra kết quả với độ chính xác không cao, đặc biệt là khi thị trường có nhiều biến động bất thường như đại dịch Covid-19 hiện nay. Việc dự đoán kém chính xác tất yếu sẽ dẫn đến thất thoát, lãng phí thời gian, tiền bạc của các doanh nghiệp. Ví dụ, mọi người đều biết rằng, giai đoạn 1-2 tháng trước dịp lễ Trung thu, nhu cầu tiêu thụ các sản phẩm bánh kẹo sẽ tăng rất mạnh. Cái này gọi là kinh nghiệm. Nhưng để ra đuọc một con số cụ thể, sẽ có bao nhiêu sản phẩm mỗi loại có thể bán được đến tay khách hành, thì đó lại là phải dựa vào thống kê, đôi khi cũng rất cảm tính.</p>
-<p>Ngày nay, với sự bùng nổ của kỷ nguyên AI/ML, ngày càng có nhiều các công ty áp dụng các kỹ thuật AI/ML vào việc dự đoán nhu cầu của mình. Mặc dù không đơn giản như các phương pháp truyền thống và mất nhiều thời gian hơn để xây dựng được một mô hình dự đoán, nhưng kết quả dự đoán thường có độ chính xác cao, sát với tình hình thực tế, đặc biệt là có thể dự đoán được cả trong trường hợp xảy ra khủng hoảng, thay đổi đột biến của thị trường, xã hội.</p>
-<p>Trong bài viết này, chúng ta sẽ tìm hiểu cách thức mà các công ty, doanh nghiệp áp dụng AI/ML vào quá trình dự đoán nhu cầu và lập kế hoạch của họ! Bài viết chia thành 3 phần:</p>
+<p>Ngày nay, với sự bùng nổ của kỷ nguyên AI/ML, ngày càng có nhiều các công ty áp dụng các kỹ thuật AI/ML vào việc dự đoán nhu cầu của mình. Mặc dù không đơn giản như các phương pháp truyền thống và mất nhiều thời gian và công sức hơn để xây dựng được một mô hình dự đoán chất lượng, nhưng kết quả mang lại thường có độ chính xác cao, sát với tình hình thực tế hơn so với các phương pháp khác. Đặc biệt là nó có thể dự đoán được cả trong trường hợp xảy ra khủng hoảng, hay thay đổi đột biến của thị trường và xã hội.</p>
+<p>Trong bài viết này, chúng ta sẽ tìm hiểu một số khía cạnh của <em>demand forecasting</em> và cách thức mà các công ty, doanh nghiệp áp dụng AI/ML vào quá trình dự đoán nhu cầu và lập kế hoạch của họ! Bài viết chia thành 7 phần:</p>
 <ul>
 <li>Phần 1: Các yếu tố ảnh hưởng đến nhu cầu của khách hàng</li>
-<li>Phần 2: Các loại <em>demand forecasting</em> và ví dụ</li>
-<li>Phần 3: <em>Demand forecasting</em> với Machine Learning</li>
+<li>Phần 2: Các loại <em>demand forecasting</em></li>
+<li>Phần 3: Các phương pháp thực hiện <em>demand forecasting</em></li>
+<li>Phần 4: Một số ví dụ về <em>demand forecasting</em></li>
+<li>Phần 5: <em>Demand Forecasting</em> với Machine Learning</li>
+<li>Phần 6: <em>Demand forecasting</em> trong trường hợp có sự thay đổi đột ngột</li>
+<li>Phần 7: Một số <em>Case Study</em> thực hiện <em>demand forecasting</em> bằng Machine Learning</li>
 </ul>
 <p>Ok, bắt đầu thôi !!!</p>
 <h3 id="1-các-yếu-tố-ảnh-hưởng-đến-nhu-cầu-của-khách-hàng">1. Các yếu tố ảnh hưởng đến nhu cầu của khách hàng</h3>
@@ -245,7 +249,7 @@
 <p>Giả sử một thương hiệu mỹ phẩm đã bán được 10.000 đơn đặt hàng mỗi tháng trong một mùa nhất định trong năm. Xem xét dữ liệu lịch sử này, có thể dự đoán rằng xu hướng của dòng sản phẩm này sẽ tăng lên 30.000 mặt hàng được bán mỗi tháng trong năm tới.</p>
 <h4 id="44-ngành-công-nghiệp-bán-lẻ">4.4 Ngành công nghiệp bán lẻ</h4>
 <p>Hãy tưởng tượng bạn có một cửa hàng tồn kho bán khoảng 5.000 mặt hàng mỗi tháng. Một ngày bạn nhận thấy rằng không phải tất cả các mặt hàng đều được bán với số lượng như nhau. Một số sản phẩm bán nhanh và những sản phẩm khác vẫn còn trên kệ trong một thời gian dài. Trong trường hợp này, bạn có thể lập bản đồ <em>demand forecasting</em> trong ít nhất sáu tháng. Từ đó, bạn có thể giảm đáng kể số tiền phải bỏ ra để sản xuất những thứ mà khách hàng ít quan tâm.</p>
-<h3 id="5-demand-forecasting-với-machine-learning">5. Demand Forecasting với Machine Learning</h3>
+<h3 id="5-demand-forecasting-với-machine-learning">5. <em>Demand Forecasting</em> với Machine Learning</h3>
 <p>Phương pháp <em>demand forecasting</em> sử dụng ML thuộc nhóm <em>Quantitative</em>, nó dựa trên số liệu thống kê và các công thức toán học phức tạp, thay vì ý kiến ​​của các chuyên gia trong lĩnh vực này. Hiện nay, phương pháp này đang tỏ ra chiếm ưu thế hơn so với các phương pháp khác trong thế giới kinh doanh.</p>
 <p>ML thực hiện việc dự đoán từ dữ liệu lịch sử về doanh số bán hàng để xây dựng chiến lược và đủ chính xác để đạt được mục tiêu kinh doanh của các công ty, doanh nghiệp. Những gã khổng lồ Internet hàng đầu thế giới như IBM, Google và Amazon đều sử dụng các công cụ <em>demand forecasting</em> được hỗ trợ bởi ML.</p>
 <p>Điều đầu tiên bạn nên biết trước khi triển khai ML cho <em>demand forecasting</em> là các mô hình cần nhiều dữ liệu chất lượng từ các nguồn thông tin bên trong và bên ngoài doanh nghiệp của bạn. Các thuật toán thông minh có thể hoạt động với cả dữ liệu có cấu trúc và không có cấu trúc, chẳng hạn như báo cáo tài chính và bán hàng, các chỉ số kinh tế vĩ mô, cuộc thăm dò tiếp thị, nội dung truyền thông xã hội (ví dụ: lượt thích, lượt chia sẻ, Tweet), dự báo thời tiết, v.v.</p>
@@ -291,7 +295,7 @@
 
 
 <p>Để nâng cao độ chính xác và giảm thiểu sai sót, các mô hình học máy cần được nâng cấp theo các điều kiện thực tế đó. Cụ thể, khi sự biến động xảy ra đột ngột, sự thay đổi diễn ra nhanh, cần phải thu thập thêm dữ liệu và cập nhật mô hình dự đoán với tốc độ bằng hoặc lớn hơn tốc độ thay đổi của biến động. Dữ liệu cần thu thập thêm ở đây là những dữ liệu bên ngoài, tin tức, trạng thái thị trường hiện tại, chỉ số giá, tỷ giá hối đoái, các yếu tố kinh tế, các bài phân tích, bình luận trên các mạng xã hội, &hellip; Với mỗi loại dữ liệu khác nhau cũng cần phải áp dụng các kỹ thuật xử lý khác nhau để đạt được mục đích của mình.</p>
-<h3 id="7-một-case-study-khi-thực-hiện-demand-forecasting">7. Một <em>Case Study</em> khi thực hiện <em>demand forecasting</em></h3>
+<h3 id="7-một-số-case-study-thực-hiện-demand-forecasting-bằng-machine-learning">7. Một số <em>Case Study</em> thực hiện <em>demand forecasting</em> bằng Machine Learning</h3>
 <p>Dưới đây là 2 Case Studies áp dụng ML vào thực hiện <em>demand forecasting</em>:</p>
 <ul>
 <li>Case Study 1</li>
