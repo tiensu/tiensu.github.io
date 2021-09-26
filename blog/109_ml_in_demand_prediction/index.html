@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>SuNT&#39;s Blog | AI in Practical</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="SuNT">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/plugins/venobox/venobox.css ">
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/css/override.css">
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://tiensu.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://tiensu.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://tiensu.github.io/"><img class="img-fluid"
+          src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/tiensunguyen2103"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://tiensu.github.io/"><img class="img-fluid"
+            src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/blog">Post</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://tiensu.github.io/contact">Contact</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://tiensu.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <a href="/categories/data-science"
+          class="text-primary">Data Science</a>
+        
+        <a href="/categories/time-series"
+          class="text-primary">Time Series</a>
+        
+        <h2>Áp dụng Machine Learning trong dự đoán nhu cầu sản xuất</h2>
+        <div class="mb-3 post-meta">
+          <span>By SuNT</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>25 September 2021</span>
+          
+        </div>
+        
+        <img src="https://tiensu.github.io/images/featured-post/109_demand_forecasting.jpg" class="img-fluid w-100 mb-4" alt="Áp dụng Machine Learning trong dự đoán nhu cầu sản xuất">
+        
+        <div class="content mb-5">
+          <p>Dự đoán nhu cầu - <em>demand forecasting</em> là một phần không thể thiếu trong việc lập kế hoạch kinh doanh, phát triển của mọi công ty, doanh nghiệp, thuộc đủ các ngành nghề: sản xuất, phân phối, bán lẻ, vận chuyển, &hellip;. trong rất nhiều lĩnh vực khác nhau: CNTT, giáo dục, y tế, giao thông, thực phẩm, kinh tế, &hellip;  Ví dụ, với doanh nghiệp nhập khẩu &amp; phân phối quần áo thì cần dự đoán nhu cầu tiêu thụ của khách hàng trong từng quý/tháng của năm tiếp theo, với công ty sản xuất đồ gỗ nội thất thì cần dự đoán lượng nguyên vật liệu cần nhập về kho trong quý tiếp theo, &hellip;</p>
+<p>Từ trước khi các kỹ thuật AI/ML ra đời, đã tồn tại một số phương pháp dự đoán khác nhau, trong đó chủ yếu là dựa vào thống kê toán học, hay dựa vào kinh nghiệm của những người làm lâu năm trong nghề. Các phương pháp này có ưu điểm là nhanh chóng, đơn giản nhưng thường cho ra kết quả với độ chính xác không cao, đặc biệt là khi thị trường có nhiều biến động bất thường như đại dịch Covid-19 hiện nay. Việc dự đoán kém chính xác tất yếu sẽ dẫn đến thất thoát, lãng phí thời gian, tiền bạc của các doanh nghiệp. Ví dụ, mọi người đều biết rằng, giai đoạn 1-2 tháng trước dịp lễ Trung thu, nhu cầu tiêu thụ các sản phẩm bánh kẹo sẽ tăng rất mạnh. Cái này gọi là kinh nghiệm. Nhưng để ra đuọc một con số cụ thể, sẽ có bao nhiêu sản phẩm mỗi loại có thể bán được đến tay khách hành, thì đó lại là phải dựa vào thống kê, đôi khi cũng rất cảm tính.</p>
+<p>Ngày nay, với sự bùng nổ của kỷ nguyên AI/ML, ngày càng có nhiều các công ty áp dụng các kỹ thuật AI/ML vào việc dự đoán nhu cầu của mình. Mặc dù không đơn giản như các phương pháp truyền thống và mất nhiều thời gian hơn để xây dựng được một mô hình dự đoán, nhưng kết quả dự đoán thường có độ chính xác cao, sát với tình hình thực tế, đặc biệt là có thể dự đoán được cả trong trường hợp xảy ra khủng hoảng, thay đổi đột biến của thị trường, xã hội.</p>
+<p>Trong bài viết này, chúng ta sẽ tìm hiểu cách thức mà các công ty, doanh nghiệp áp dụng AI/ML vào quá trình dự đoán nhu cầu và lập kế hoạch của họ! Bài viết chia thành 3 phần:</p>
+<ul>
+<li>Phần 1: Các yếu tố ảnh hưởng đến nhu cầu của khách hàng</li>
+<li>Phần 2: Các loại <em>demand forecasting</em> và ví dụ</li>
+<li>Phần 3: <em>Demand forecasting</em> với Machine Learning</li>
+</ul>
+<p>Ok, bắt đầu thôi !!!</p>
+<h3 id="1-các-yếu-tố-ảnh-hưởng-đến-nhu-cầu-của-khách-hàng">1. Các yếu tố ảnh hưởng đến nhu cầu của khách hàng</h3>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/109_1.jpg">
+</div>
+
+
+<p>Có rất nhiều yếu tố có thể ảnh hưởng đến nhu cầu, đến quyết định bỏ tiền ra mua một sản phẩm của khách hàng. Trong đó, 5 yếu tố sau đây được xem là chủ đạo, có tác động lớn hơn so với các yếu tố khác:</p>
+<h4 id="11-giá-của-sản-phẩm">1.1 Giá của sản phẩm</h4>
+<p>Khi giá sản phẩm tăng, nhu cầu mua sắm sẽ giảm và ngược lại. Đó là nội dung của <em>quy luật nhu cầu</em> - <em>law of demand</em> nói với chúng ta. Quyết định rút hầu bao ra hay không của khách hàng sẽ được định hướng bởi giá cả của sản phầm nếu giả sử các yếu tố khác không có tác động hoặc tác động không đáng kể.</p>
+<h4 id="12-thu-nhập-của-khách-hàng">1.2 Thu nhập của khách hàng</h4>
+<p>Khi thu nhập tăng, nhu cầu mua sắm cũng tăng theo. Nhưng không phải lúc nào khách hàng cũng muốn mua gấp đôi một hàng hóa hoặc dịch vụ nhất định. Ví dụ, kiếm được nhiều hơn không có nghĩa là bạn cần hai, ba hoặc bốn cái máy giặt khác nhau, vì một chiếc là đủ để sử dụng hàng ngày rồi.</p>
+<h4 id="13-giá-của-hàng-hóa-hoặc-dịch-vụ-bổ-sung">1.3 Giá của hàng hóa hoặc dịch vụ bổ sung</h4>
+<p>Giá của hàng hóa và dịch vụ liên quan cũng sẽ làm tăng chi phí sử dụng sản phẩm mà khách hàng cần, vì vậy thông thường khách hàng sẽ ít muốn hơn. Ví dụ, giá mua một chiếc oto hạng trung ở Việt Nam là khoảng 500-700 triệu, nhưng chi phí đi kèm với nó là xăng dầu, là thuế phí, là dịch vụ sửa chữa, &hellip; khá cao. Điều này đã làm rất nhiều người <em>chần chừ</em> khi quyết định sở hữu một chiếc xe hơi cho riêng mình.</p>
+<h4 id="14-sở-thích-thị-hiếu-của-khách-hàng">1.4 Sở thích, thị hiếu của khách hàng</h4>
+<p>Nhu cầu cũng thay đổi lên khi thị hiếu, sở thích và mong muốn của người tiêu dùng thay đổi. Họ có thể đột nhiên bắt đầu thích hoặc không thích một sản phẩm nào đó. Quảng cáo là một phương pháp làm tác động và thay đổi đến mong muốn của người tiêu dùng đối với một sản phẩm.</p>
+<h4 id="15-yêu-cầu-mong-đợi-của-khách-hàng">1.5 Yêu cầu, mong đợi của khách hàng</h4>
+<p>Kỳ vọng, tức là mong muốn thực tế về sản phẩm, cũng ảnh hưởng đến mức độ nhu cầu. Đó là khi mọi người mong đợi rằng một sản phẩm sẽ có nhiều giá trị hơn, họ sẽ tăng nhu cầu về nó. Ví dụ, Apple vừa ra mắt Iphone 13, các <em>fan</em> của nhà Táo đã rất mong đợi là nó sẽ có nhiều tính năng mới, đột phá hơn so với các Iphone đời cũ. Nhưng sản phẩm thực tế đã làm họ thất vọng không ít, và chắc chắn lượng tiêu thụ của Iphone 13 sẽ không được như Apple kỳ vọng.</p>
+<h3 id="2-các-loại-demand-forecasting">2. Các loại <em>demand forecasting</em></h3>
+<p><em>Demand forecasting</em> có nhiều loại khác nhau, phụ thuộc vào nhiều yếu tố như khoảng thời gian, phạm vi thị trường hoặc mức độ chi tiết. Chúng được chia thành hai nhóm: dựa trên khoảng thời gian - <em>time period based</em> và dựa trên nền kinh tế - <em>economy based</em>.</p>
+<h4 id="21-time-period-based">2.1 Time period based</h4>
+<h5 id="a-short-term-forecasting">a, Short-term forecasting</h5>
+<p>Đây là loại <em>demand forecasting</em> khi bạn cần dự đoán nhu cầu trong một khoảng thời gian ngắn, khoảng từ 6 tháng đến 1 năm. Loại này phụ thuộc nhiều vào tính chất của ngành và thời điểm cần dự đoán. Và nó phù hợp với các quyết định nhanh chóng hơn là chiến lược lâu dài.</p>
+<h5 id="b-long-term-forecasting">b, Long-term forecasting</h5>
+<p><em>Long-term forecasting</em> là việc đưa ra các dự báo trong một khoảng thời gian dài, chẳng hạn như từ 2 đến 5 năm hoặc thậm chí dài hơn nữa. Loại dự báo này có thể cung cấp thông tin chiến lược có giá trị cho doanh nghiệp (ví dụ: chuyển sang phân khúc thị trường khác, mở rộng công suất của nhà máy, v.v.).</p>
+<h4 id="22-economy-based">2.2 Economy based</h4>
+<h5 id="a-macro-level-prediction">a, Macro-level prediction</h5>
+<p>Loại dự báo này xem xét môi trường kinh tế tổng thể, xử lý nền kinh tế được đo lường bằng chỉ số IIP (Index of Industrial Production), tỉ lệ thất nghiệp của đất nước, thu nhập của quốc gia, v.v.</p>
+<h5 id="b-industry-level-prediction">b, Industry-level prediction</h5>
+<p><em>Industry-level prediction</em>, giải quyết nhu cầu mà các sản phẩm của một ngành cụ thể sẽ có. Ví dụ, nhu cầu về ô tô điện ở Việt Nam 5 năm tới, nhu cầu về chuyển đổi số trong các doanh nghiệp nhà nước, v.v.</p>
+<h5 id="c-brand-level-forecasting">c, Brand-level forecasting</h5>
+<p><em>Brand-level forecasting</em> có nghĩa là dự đoán nhu cầu đối với các sản phẩm của một thương hiệu hoặc công ty cụ thể, chẳng hạn như VinHome, VTI, FPT, v.v.</p>
+<h3 id="3-các-phương-pháp-demand-forecasting">3. Các phương pháp <em>demand forecasting</em></h3>
+<p>Xét về phương pháp, có thể chia <em>demand forecasting</em> thành 2 nhóm, mỗi nhóm bao gồm một số phương pháp, kỹ thuật khác nhau:</p>
+<h4 id="31-phương-pháp-định-tính---qualitative-method">3.1 Phương pháp định tính - <em>Qualitative method</em></h4>
+<h5 id="a-the-delphi-technique">a, The Delphi Technique</h5>
+<p>Đây là kỹ thuật dựa trên ý kiến của các chuyên gia trong một lĩnh vực cụ thể. Mỗi chuyên gia đều được giao nhiệm vụ dự báo nhu cầu trong từng phân khúc cụ thể. Vòng dự báo ban đầu được tổ chức và sau đó mỗi chuyên gia đưa ra dự báo của mình để các chuyên gia khác có thể xem xét, đánh giá. Quá trình lặp lại cho đến khi tất cả các chuyên gia đi đến một quyết định tương tự.</p>
+<h5 id="b-sales-force-opinion-focus-group">b, Sales Force opinion (<em>Focus group</em>)</h5>
+<p>Các nhóm nhân viên bán hàng được hỏi về nhu cầu đầu vào dự kiến. Mỗi nhân viên bán hàng phải ước tính khu vực và loại sản phẩm có liên quan của riêng mình cũng như đưa ra báo cáo về nhu cầu của khách hàng mà họ đã làm việc cùng. Người quản lý bán hàng xem xét kết quả và thực hiện quyết định cuối cùng về việc dự báo nhu cầu sẽ như thế nào.</p>
+<h5 id="c-market-research">c, Market Research</h5>
+<p>Phương pháp này sử dụng ý kiến của khách hàng có được thông qua việc khảo sát ý kiến của họ về một sản phẩm, dịch vụ cụ thể. Các câu hỏi khảo sát thường là tổng hợp các thông tin nhân khẩu học, kinh tế và sở thích từ khách hàng. Phương pháp này có lợi khi có rất ít hoặc không có lịch sử bán hàng cho một sản phẩm, dịch vụ cụ thể nào đó.</p>
+<h4 id="32-phương-pháp-định-lượng---quantitative-method">3.2 Phương pháp định lượng - <em>Quantitative method</em></h4>
+<h5 id="a-moving-average-technique">a, Moving average technique</h5>
+<p><em>Moving average</em> là một kỹ thuật tính toán xu hướng tổng thể trong một tập dữ liệu. Trong <em>demand forecasting</em>, tập dữ liệu là doanh số bán hàng từ dữ liệu lịch sử của công ty. Kỹ thuật này rất hữu ích để dự báo các xu hướng ngắn hạn. Nó chỉ đơn giản là giá trị trung bình của một tập hợp các khoảng thời gian được chọn. Nó được gọi là <em>moving</em> bởi vì khi số lượng mẫu trong tập dữ liệu tăng lên, để giữ cho khoảng thời gian tính toán không đổi, ta cần loại bỏ các mẫu cũ nhất, và lấy các mẫu mới đó thay thế vào, nên sẽ có cảm giác <em>trượt</em> trên tập dữ liệu đó.</p>
+<h5 id="b-regression-analysis-method">b, Regression analysis method</h5>
+<p>Tiền đề là những thay đổi về giá trị của một biến chính (ví dụ: doanh thu của Sản phẩm A) có liên quan chặt chẽ với những thay đổi trong (các) biến khác (ví dụ, chi phí của Sản phẩm B). Vì vậy, sử dụng phương pháp hồi quy, nếu ta có thể ước tính giá trị của các biến khác này (chi phí của Sản phẩm B), thì nó cũng sẽ có thể dự báo biến chính (doanh thu của Sản phẩm A).</p>
+<h5 id="c-econometric-forecasting-technique">c, Econometric forecasting technique</h5>
+<p>Các phương trình toán học phức tạp và đường trung bình động tích hợp tự hồi quy được sử dụng trong kỹ thuật này để tạo ra các mối quan hệ giữa nhu cầu và các yếu tố liên quan đến nó. Các dự báo sẽ được tính toán dựa trên các giá trị đầu vào của phương trình.</p>
+<p>Hình dưới đây tổng hợp các phương pháp thực hiện <em>demand forecasting</em>.</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/109_2.png">
+</div>
+
+
+<h3 id="4-một-số-ví-dụ-về-demand-forecasting">4. Một số ví dụ về <em>demand forecasting</em></h3>
+<p>Dưới đây là một số ví dụ thực tế nơi mà <em>demand forecasting</em> có thể được áp dụng trong một các ngành nghề, lĩnh vực khác nhau:</p>
+<h4 id="41-thị-trường-xe-oto">4.1 Thị trường xe oto</h4>
+<p>Nếu một nhà sản xuất ô tô nổi tiếng có trong tay dữ liệu về giá trị doanh số bán hàng của năm ngoái với từng kiểu xe, loại động cơ và màu sắc, thì họ có thể đưa ra dự báo trong thời gian 12 tháng tới, mẫu xe nào sẽ được yêu cầu nhiều nhất.</p>
+<h4 id="42-ngành-công-nghiệp-thực-phẩm">4.2 Ngành công nghiệp thực phẩm</h4>
+<p>Nếu một công ty sản xuất thực phẩm hàng đầu có thông tin về doanh số bán các sản phẩm theo mùa trong hai năm qua, nó có thể được sử dụng để dự đoán hương vị ưa thích hoặc kích thước gói hàng trong một hoặc hai năm tới để lập kế hoạch mua hàng, sản xuất và tồn kho.</p>
+<h4 id="43-ngành-công-nghiệp-chăm-sóc-sắc-đẹp">4.3 Ngành công nghiệp chăm sóc sắc đẹp</h4>
+<p>Giả sử một thương hiệu mỹ phẩm đã bán được 10.000 đơn đặt hàng mỗi tháng trong một mùa nhất định trong năm. Xem xét dữ liệu lịch sử này, có thể dự đoán rằng xu hướng của dòng sản phẩm này sẽ tăng lên 30.000 mặt hàng được bán mỗi tháng trong năm tới.</p>
+<h4 id="44-ngành-công-nghiệp-bán-lẻ">4.4 Ngành công nghiệp bán lẻ</h4>
+<p>Hãy tưởng tượng bạn có một cửa hàng tồn kho bán khoảng 5.000 mặt hàng mỗi tháng. Một ngày bạn nhận thấy rằng không phải tất cả các mặt hàng đều được bán với số lượng như nhau. Một số sản phẩm bán nhanh và những sản phẩm khác vẫn còn trên kệ trong một thời gian dài. Trong trường hợp này, bạn có thể lập bản đồ <em>demand forecasting</em> trong ít nhất sáu tháng. Từ đó, bạn có thể giảm đáng kể số tiền phải bỏ ra để sản xuất những thứ mà khách hàng ít quan tâm.</p>
+<h3 id="5-demand-forecasting-với-machine-learning">5. Demand Forecasting với Machine Learning</h3>
+<p>Phương pháp <em>demand forecasting</em> sử dụng ML thuộc nhóm <em>Quantitative</em>, nó dựa trên số liệu thống kê và các công thức toán học phức tạp, thay vì ý kiến ​​của các chuyên gia trong lĩnh vực này. Hiện nay, phương pháp này đang tỏ ra chiếm ưu thế hơn so với các phương pháp khác trong thế giới kinh doanh.</p>
+<p>ML thực hiện việc dự đoán từ dữ liệu lịch sử về doanh số bán hàng để xây dựng chiến lược và đủ chính xác để đạt được mục tiêu kinh doanh của các công ty, doanh nghiệp. Những gã khổng lồ Internet hàng đầu thế giới như IBM, Google và Amazon đều sử dụng các công cụ <em>demand forecasting</em> được hỗ trợ bởi ML.</p>
+<p>Điều đầu tiên bạn nên biết trước khi triển khai ML cho <em>demand forecasting</em> là các mô hình cần nhiều dữ liệu chất lượng từ các nguồn thông tin bên trong và bên ngoài doanh nghiệp của bạn. Các thuật toán thông minh có thể hoạt động với cả dữ liệu có cấu trúc và không có cấu trúc, chẳng hạn như báo cáo tài chính và bán hàng, các chỉ số kinh tế vĩ mô, cuộc thăm dò tiếp thị, nội dung truyền thông xã hội (ví dụ: lượt thích, lượt chia sẻ, Tweet), dự báo thời tiết, v.v.</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/109_4.webp">
+</div>
+
+
+<p>ML rất mạnh mẽ bởi vì nó được thúc đẩy bởi các thuật toán toán phức tạp để có thể nhận ra các mối quan hệ ẩn phức tạp trong dữ liệu được trích xuất từ các nguồn được liệt kê ở trên. Các mô hình thông minh này không chỉ phân tích một lượng lớn dữ liệu sẵn có tại thời điểm huấn luyện mà còn có thể cập nhật trên cơ sở thông tin mới để điều chỉnh chúng theo các điều kiện thay đổi, từ đó dẫn đến các dự báo đáng tin cậy hơn.</p>
+<p>Mức độ chính xác của những dự báo này như thế nào? Các công ty đã áp dụng các giải pháp dựa trên ML báo cáo đã đạt được mức độ tin cậy dự đoán tăng từ 5% -15 +% so với các phương pháp thông thường. Trong một số trường hợp, độ chính xác cao tới 85% hoặc thậm chí 95%. ML áp dụng vào <em>demand forecasting</em> hoạt động tốt nhất trong lập kế hoạch ngắn hạn và trung hạn, môi trường thay đổi nhanh, đặc điểm nhu cầu dễ thay đổi và lập kế hoạch chiến dịch cho sản phẩm mới.</p>
+<p>Quá trình xây dựng một ML để dự báo nhu cầu cũng cần tuân thủ theo 6 bước trong vòng đời phát triển của bài toán AI/ML như đã đề cập đến tại <a href="https://tiensu.github.io/blog/01_ai-project-planing/">đây</a>. Có một vài điểm đặc biệt cần lưu ý như sau:</p>
+<ul>
+<li>Chỉ tiêu - <em>metric</em> đánh giá độ chính xác của ML model</li>
+</ul>
+<p>Trong lĩnh vực AI/ML, <em>Demand forecasting</em> thực chất là bài toán Regression, tức là model cần dự đoán ra một con số có giá trị cụ thể. Vì vậy, các chỉ tiêu để đánh giá độ chính xác của nó thường là MAE - <em>Mean Absolute Error</em>, MAPE  - <em>Mean Absolute Percentage Error</em>, hoặc một metric tự định nghĩa phù hợp với bài toán cụ thể.</p>
+<ul>
+<li>Lựa chọn cách thức tiếp cận và các kỹ thuật xử lý dữ liệu</li>
+</ul>
+<p>Dữ liệu của bài toán <em>demand forecasting</em> đa phần ở dạng <em>time series</em>, tức là chuỗi các mẫu dữ liệu xảy ra liên tiếp theo thời gian. Khi gặp loại dữ liệu này, cần áp dụng số kỹ thuật chuyên biệt, dành riêng để xử lý loaị dữ liệu này như Seasonality, Trend, Noise, &hellip;</p>
+<ul>
+<li>Lựa chọn thuật toán ML</li>
+</ul>
+<p>Sẽ không có một thuật toán ML nào phù hợp cho mọi vấn đề. Phụ thuộc vào mục tiêu của bài toán, loại dữ liệu, chất lượng và số lượng dữ liệu, khoảng thời gian, &hellip; mà ta cần chọn ra một thuật toán duy nhất.</p>
+<p>Đối với <em>demand forecasting</em>, các thuật toán thường hay được sử dụng là: ARIMA, SARIMA, Linear Regression, XGBoost, K-Nearest Neighbors Regression, Random Forest, LSTM, CNN, MLP, &hellip;</p>
+<h3 id="6-demand-forecasting-trong-trường-hợp-có-sự-thay-đổi-đột-ngột">6. <em>Demand forecasting</em> trong trường hợp có sự thay đổi đột ngột</h3>
+<p>Khi tiến hành <em>demand forecasting</em>, điều cần thiết là phải hiểu rằng chúng rất dễ bị ảnh hưởng bởi các yếu tố bất thường, khó dự đoán trước như đại dịch COVID-19 chẳng hạn. Bởi vì trong lịch sử không hề tồn tại dữ liệu nào tương tự như thế. Ví dụ, nếu như năm ngoái, chúng ta đưa ra một con số về nhu cầu đối với khẩu trang y tế và thuốc kháng vi rút thì năm nay, nó sẽ hoàn toàn khác.</p>
+<p>Ví dụ, <em>demand forecasting</em> trước khi đại dịch xảy ra:</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/109_5.webp">
+</div>
+
+
+<p>và đây là thực tế:</p>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/109_6.webp">
+</div>
+
+
+<p>Để nâng cao độ chính xác và giảm thiểu sai sót, các mô hình học máy cần được nâng cấp theo các điều kiện thực tế đó. Cụ thể, khi sự biến động xảy ra đột ngột, sự thay đổi diễn ra nhanh, cần phải thu thập thêm dữ liệu và cập nhật mô hình dự đoán với tốc độ bằng hoặc lớn hơn tốc độ thay đổi của biến động. Dữ liệu cần thu thập thêm ở đây là những dữ liệu bên ngoài, tin tức, trạng thái thị trường hiện tại, chỉ số giá, tỷ giá hối đoái, các yếu tố kinh tế, các bài phân tích, bình luận trên các mạng xã hội, &hellip; Với mỗi loại dữ liệu khác nhau cũng cần phải áp dụng các kỹ thuật xử lý khác nhau để đạt được mục đích của mình.</p>
+<h3 id="7-một-case-study-khi-thực-hiện-demand-forecasting">7. Một <em>Case Study</em> khi thực hiện <em>demand forecasting</em></h3>
+<p>Dưới đây là 2 Case Studies áp dụng ML vào thực hiện <em>demand forecasting</em>:</p>
+<ul>
+<li>Case Study 1</li>
+</ul>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/109_7.webp">
+</div>
+
+
+<ul>
+<li>Case Study 2</li>
+</ul>
+
+
+<div style="text-align:center; margin-bottom:20px">
+   <img style="height:auto" src="/images/post/109_8.webp">
+</div>
+
+
+<h3 id="8-kết-luận">8. Kết luận</h3>
+<p><em>Demand forecasting</em> là rất quan trọng đối với các doanh nghiệp thuộc mọi quy mô để tạo ra doanh thu và tránh thất thoát vốn. Sự cần thiết của <em>demand forecasting</em> là hiển nhiên trong nhiều ngành công nghiệp và các trường hợp sử dụng đa dạng khác nhau; đó là phương pháp tốt nhất để triển khai nhằm đưa ra các quyết định quản lý đúng đắn, mở rộng quy mô kinh doanh, tung ra sản phẩm mới hoặc dự đoán ngân sách.</p>
+<p>AI/ML đã và đang được áp dụng rất nhiều vào giải quyết bài toán <em>demand forecasting</em> bởi sự chính xác của nó so với các phương pháp truyền thống khác. Không chỉ vậy, sức mạnh của công nghệ này phụ thuộc vào việc chúng ta tận dụng nó tốt như thế nào. Ngày nay, các nhiệm vụ như dự báo mức độ tương tác của khách hàng, xu hướng tương lai, phát triển thương hiệu, chiến dịch tiếp thị, sử dụng tài nguyên, rủi ro tài chính, v.v. đều có thể được giải quyết bằng công nghệ AI/ML, mang lại giá trị gia tăng rất lớn cho các doanh nghiệp hiện đại. Với xu hướng ML mới mới nổi, tiềm năng tương lai của nó là vô cùng lớn, ngay từ bây giờ, các doanh nghiệp nên có sự đầu tư đúng đắn để từng bước áp dụng và phát triển công nghệ này để giải quyết các vấn đề của chính mình.</p>
+<h3 id="9-tham-khảo">9. Tham khảo</h3>
+<p>[1] Liudmyla Taranenko, &ldquo;How to apply machine learning to demand forecasting&rdquo;, Available online: <a href="https://mobidev.biz/blog/machine-learning-methods-demand-forecasting-retail">https://mobidev.biz/blog/machine-learning-methods-demand-forecasting-retail</a> (Accessed on 25 Sep 2021).</p>
+<p>[2] Roman Chuprina, &ldquo;The Complete Guide on Customer Demand Forecasting in Retail&rdquo;, Available online: <a href="https://spd.group/machine-learning/demand-forecasting/">https://spd.group/machine-learning/demand-forecasting/</a> (Accessed on 25 Sep 2021).</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-5">
+        <a href="https://tiensu.github.io/"><img src="https://tiensu.github.io/images/logo3.jpg" alt="SuNT&#39;s Blog | AI in Practical" style="height: auto"></a>
+      </div>
+               
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="tel:0869644890"><i
+                class="ti-mobile mr-3 text-primary"></i>0869644890</a></li>
+          
+                     
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Hanoi, Vietnam</li>
+          
+                     
+          <li class="mb-3"><a class="text-dark" href="mailto:tiensunguyen2103@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>tiensunguyen2103@gmail.com</a>
+          
+          </li>
+        </ul>
+      </div>
+      
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/tiensunguyen2103">Facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/su-nguyen-tien-aws%C2%AE-5ba74ba6/">Linkedin</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/algorithm-optimization">Algorithm Optimization</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/attention">Attention</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/audio-classification">Audio Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/autoencoder">Autoencoder</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/bert">BERT</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/cnn">CNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ctc">CTC</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-driff">Data Driff</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-imbalance">Data Imbalance</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-preparation">Data Preparation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/data-science">Data Science</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/deep-learning">Deep Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/docker">Docker</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ebook">Ebook</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/eda">EDA</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ensemble-learning">Ensemble Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/face-recognition">Face Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/game">Game</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-action-recognition">Human action recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/human-pose">Human pose</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/image-classification">Image Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/kubernetes">Kubernetes</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/lstm">LSTM</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/machine-learning">Machine Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/mlops">MLOps</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/neural-network">Neural Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/nlp">NLP</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/object-detection">Object Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/ocr">OCR</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/one-shot-learning">One Shot Learning</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/project-management">Project Management</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/recommender-system">Recommender System</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/rnn">RNN</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/scalability">Scalability</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/siamese-network">Siamese Network</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-recognition">Speech Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/speech-to-text">Speech To Text</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-classification">Text Classification</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-detection">Text Detection</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-generation">Text Generation</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/text-recognition">Text Recognition</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/time-series">Time Series</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/transformer">Transformer</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/xgboost">XGBoost</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/about">About</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/blog">Post</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://tiensu.github.io/contact">Contact</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2021 <a href="tiensu.github.io">SuNT</a>. All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://tiensu.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://tiensu.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/mark.js"></script>
+
+<script src="https://tiensu.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://tiensu.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

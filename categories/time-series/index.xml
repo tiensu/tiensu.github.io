@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time Series on SuNT&#39;s Blog | AI in Practical</title>
+    <link>https://tiensu.github.io/categories/time-series/</link>
+    <description>Recent content in Time Series on SuNT&#39;s Blog | AI in Practical</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://tiensu.github.io/categories/time-series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Áp dụng Machine Learning trong dự đoán nhu cầu sản xuất</title>
+      <link>https://tiensu.github.io/blog/109_ml_in_demand_prediction/</link>
+      <pubDate>Sat, 25 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiensu.github.io/blog/109_ml_in_demand_prediction/</guid>
+      <description>Dự đoán nhu cầu - demand forecasting là một phần không thể thiếu trong việc lập kế hoạch kinh doanh, phát triển của mọi công ty, doanh nghiệp, thuộc đủ các ngành nghề: sản xuất, phân phối, bán lẻ, vận chuyển, &amp;hellip;.</description>
+    </item>
+    
+  </channel>
+</rss>
